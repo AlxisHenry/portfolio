@@ -8,6 +8,8 @@
 
 <img src="CHARTE GRAPHIQUE\IMAGES\image-20211105161940028.png" height="300px" width="400px">
 
+
+
 - *Design d'Icons.*
 
 Ci-dessous, des designs temporaires d'icons, je vais choisir l'un deux pour servir d'Icon aux pages du portfolio.
