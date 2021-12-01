@@ -6,7 +6,9 @@
 
 - *Présentation de l'organisation du projet.*
 
-<img src="CHARTE GRAPHIQUE\IMAGES\image-20211105161940028.png">
+<img src="CHARTE GRAPHIQUE\IMAGES\image-20211105161940028.png" height="300px" width="400px">
+
+
 
 - *Présentation de la maquette (réalisée sur **excalidraw**)*
 
@@ -43,7 +45,6 @@ Lorsque l'utilisateur cliquera sur une des slides présentes sur la page d'accue
 
 
 <img src="CHARTE GRAPHIQUE\IMAGES\PRESRNTATION PROJET 1.png">
-
 
 <img src="CHARTE GRAPHIQUE\IMAGES\PP.png">
 
