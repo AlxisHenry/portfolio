@@ -6,7 +6,7 @@
 
 - *Présentation de l'organisation du projet.*
 
-<img src="CHARTE GRAPHIQUE\IMAGES\rangement.png" height="300px" width="400px">
+<img src="IMAGES\rangement.png" height="300px" width="400px">
 
 
 
@@ -16,19 +16,19 @@ Ci-dessous, des designs temporaires d'icons, je vais choisir l'un deux pour serv
 
 
 
-<img src="CHARTE GRAPHIQUE\ICONS\favicon-1.ico">
+<img src="ICONS\favicon-1.ico">
 
 
 
-<img src="CHARTE GRAPHIQUE\ICONS\favicon-2.ico">
+<img src="ICONS\favicon-2.ico">
 
 
 
-<img src="CHARTE GRAPHIQUE\ICONS\favicon-3.ico" height="80px" width="80px">
+<img src="ICONS\favicon-3.ico" height="80px" width="80px">
 
 
 
-<img src="CHARTE GRAPHIQUE\ICONS\favicon-4.ico">
+<img src="ICONS\favicon-4.ico">
 
 
 
@@ -38,17 +38,17 @@ Après avoir réfléchi, j'ai trouvé plusieurs palettes de couleurs qui m'ont i
 
 Je sélectionnerai la palette de couleurs définitive en fonction du rendu de celle-ci lors du développement du portfolio.
 
-<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 1.jpeg">
+<img src="IMAGES\PALETTES DE COULEURS\AC - Palette 1.jpeg">
 
-<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 2.jpeg">
+<img src="IMAGES\PALETTES DE COULEURS\AC - Palette 2.jpeg">
 
-<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 3.jpeg">
+<img src="IMAGES\PALETTES DE COULEURS\AC - Palette 3.jpeg">
 
-<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg">
+<img src="IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg">
 
-<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 5.jpeg">
+<img src="IMAGES\PALETTES DE COULEURS\AC - Palette 5.jpeg">
 
-<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 6.jpeg">
+<img src="IMAGES\PALETTES DE COULEURS\AC - Palette 6.jpeg">
 
 - *Présentation de la maquette (réalisée sur **excalidraw**)*
 
@@ -56,7 +56,7 @@ Je sélectionnerai la palette de couleurs définitive en fonction du rendu de ce
 
   *-- Page d'accueil* du site
 
-<img src="CHARTE GRAPHIQUE\IMAGES\Page d'arrivée.png">
+<img src="IMAGES\Page d'arrivée.png">
 
 - En haut à droite, il y a deux menus. 
   - Celui de droite, sera le menu déroulant : c'est-à-dire, que lorsque l'utilisateur cliquera sur ce bouton, un menu s'affichera.
@@ -67,11 +67,11 @@ Je sélectionnerai la palette de couleurs définitive en fonction du rendu de ce
   - La slide du milieu sera mise en valeur par rapport à celles de côtés,
   - Les slides de côtés seront floutées et accessible soit :
     - par une flèche qui permet d'aller à droite ou à gauche, ou soit changeront automatiquement au bout d'un certain délai.
-    - par un système de ce style:  <img src="CHARTE GRAPHIQUE\IMAGES\button.png"> , où le rond coché signifie la slide présente.
+    - par un système de ce style:  <img src="IMAGES\button.png"> , où le rond coché signifie la slide présente.
 
 *-- Menu déroulant*
 
-<img src="CHARTE GRAPHIQUE\IMAGES\Menu déroulant.png" />
+<img src="IMAGES\Menu déroulant.png" />
 
 Ci-dessus, un aperçu du menu déroulant voulu. Les catégories '*Présentations*', '*Comprendre mon site*' et '*JOIN MY DISCORD*' seront présentes. Pour ce qui est de la catégorie '*MES PROJETS*', elle peut paraître inutile, vu que tous les projets sont accessibles via la page d'accueil. Cela sera à voir plus tard. Je n'ai pas encore prévu de design pour les pages présentes dans le menu déroulant.
 
@@ -85,15 +85,15 @@ Lorsque l'utilisateur cliquera sur une des slides présentes sur la page d'accue
 
 -- Premier design (pas vraiment recherché...
 )
-<img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 1.png">
+<img src="IMAGES\Page présentation 1.png">
 
 
 -- Second design, plus complexe mais beaucoup plus agréable.
 
-<img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 2.1.png">
+<img src="IMAGES\Page présentation 2.1.png">
 
 
-<img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 2.png">
+<img src="IMAGES\Page présentation 2.png">
 
 
 
