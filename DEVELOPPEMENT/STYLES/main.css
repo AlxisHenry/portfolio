@@ -1,0 +1,23 @@
+body {
+    background-color: #64779e;
+
+    /*
+
+    background-color: #374666;
+    background-color: #64779e;
+    background-color: #263147;
+    background-color: #563f63;
+    background-color: #382442;
+    background-color: #8d6e9c;
+
+    */
+}
+
+#bu-menu {
+    margin-left: 95%;
+}
+
+#menu {
+    width: 100%;
+    height: 100%;
+}

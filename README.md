@@ -6,9 +6,7 @@
 
 - *Présentation de l'organisation du projet.*
 
-<img src="C:\Users\Alexis\AppData\Roaming\Typora\typora-user-images\image-20211105161940028.png" alt="image-20211105161940028" style="zoom: 67%;" />
-
-
+<img src="CHARTE GRAPHIQUE\IMAGES\image-20211105161940028.png">
 
 - *Présentation de la maquette (réalisée sur **excalidraw**)*
 
@@ -16,7 +14,7 @@
 
   *-- Page d'accueil* du site
 
-![PAGE D'ACCUEIL](Z:\CCI BTS COURS 2021\Ateliers de Professionnalisation\ATELIER 1 -- PORTFOLIO\CCI-2021-PORTFOLIO\CHARTE GRAPHIQUE\IMAGES\PAGE D'ACCUEIL.png)
+<img src="CHARTE GRAPHIQUE\IMAGES\PAGE D'ACCUEIL.png">
 
 - En haut à droite, il y a deux menus. 
   - Celui de droite, sera le menu déroulant : c'est-à-dire, que lorsque l'utilisateur cliquera sur ce bouton, un menu s'affichera.
@@ -27,11 +25,11 @@
   - La slide du milieu sera mise en valeur par rapport à celles de côtés,
   - Les slides de côtés seront floutées et accessible soit :
     - par une flèche qui permet d'aller à droite ou à gauche, ou soit changeront automatiquement au bout d'un certain délai.
-    - par un système de ce style:     ![image-20211105165018115](C:\Users\Alexis\AppData\Roaming\Typora\typora-user-images\image-20211105165018115.png)  , où le rond coché signifie la slide présente.
+    - par un système de ce style:  <img src="CHARTE GRAPHIQUE\IMAGES\image-20211105165018115.png"> , où le rond coché signifie la slide présente.
 
 *-- Menu déroulant*
 
-<img src="Z:\CCI BTS COURS 2021\Ateliers de Professionnalisation\ATELIER 1 -- PORTFOLIO\CCI-2021-PORTFOLIO\CHARTE GRAPHIQUE\IMAGES\Menu déroulant.png" alt="Menu déroulant" style="zoom:67%;" />
+<img src="" />
 
 Ci-dessus, un aperçu du menu déroulant voulu. Les catégories '*Présentations*', '*Comprendre mon site*' et '*JOIN MY DISCORD*' seront présentes. Pour ce qui est de la catégorie '*MES PROJETS*', elle peut paraître inutile, vu que tous les projets sont accessibles via la page d'accueil. Cela sera à voir plus tard. Je n'ai pas encore prévu de design pour les pages présentes dans le menu déroulant.
 
@@ -43,10 +41,17 @@ Lorsque l'utilisateur cliquera sur une des slides présentes sur la page d'accue
 
 - J'ai pensé deux types de design pour la page de présentation. Je verrais laquelle rendra le mieux.
 
-![PRESRNTATION PROJET 1](Z:\CCI BTS COURS 2021\Ateliers de Professionnalisation\ATELIER 1 -- PORTFOLIO\CCI-2021-PORTFOLIO\CHARTE GRAPHIQUE\IMAGES\PRESRNTATION PROJET 1.png)
 
-![PP](Z:\CCI BTS COURS 2021\Ateliers de Professionnalisation\ATELIER 1 -- PORTFOLIO\CCI-2021-PORTFOLIO\CHARTE GRAPHIQUE\IMAGES\PP.png)
-
+<img src="CHARTE GRAPHIQUE\IMAGES\PRESRNTATION PROJET 1.png">
 
 
-![PRESENTATION PROJET 2](Z:\CCI BTS COURS 2021\Ateliers de Professionnalisation\ATELIER 1 -- PORTFOLIO\CCI-2021-PORTFOLIO\CHARTE GRAPHIQUE\IMAGES\PRESENTATION PROJET 2.png)
+<img src="CHARTE GRAPHIQUE\IMAGES\PP.png">
+
+<img src="CHARTE GRAPHIQUE\IMAGES\PRESENTATION PROJET 2.png">
+
+
+
+
+
+
+
