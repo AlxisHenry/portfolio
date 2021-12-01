@@ -1,13 +1,14 @@
-    function MenuEffect() {
+    function BackHomeImage() {
     // Change l'image du menu au clique droit sur celui-ci
+    let chemin = "../../CHARTE GRAPHIQUE/ICONS"
 
-    const IMGS = ["../../favicon (1).ico", "../../favicon (2).ico", "../../favicon.ico"];
+    const IMGS = [ chemin + "/favicon-1.ico", chemin + "/favicon-2.ico", chemin + "/favicon-3.ico", chemin + "/favicon-4.ico"];
 
     const RandomIMGS = IMGS[Math.floor(Math.random() * IMGS.length)];
 
     console.log(RandomIMGS);
 
-    document.getElementById("img-bu-menu").src = RandomIMGS;
+    document.getElementById("img-retour-accueil").src = RandomIMGS;
 
 }
 

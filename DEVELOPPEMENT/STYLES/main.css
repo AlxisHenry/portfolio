@@ -1,7 +1,7 @@
 body {
     background-color: #64779e;
-
-    /*
+    cursor: pointer;
+        /*
 
     background-color: #374666;
     background-color: #64779e;
@@ -13,11 +13,27 @@ body {
     */
 }
 
-#bu-menu {
-    margin-left: 95%;
+#retour-accueil {
+    position:absolute;
+    right: 6%;
+    max-width: 30px;
+    max-height: 30px;
+    width:30px;
+    height: 30px;
+    background-color:#a0bcf5 ;
+    border-color: black;
+    border-radius:100em 100em 100em 100em;
+    white-space:nowrap;
 }
 
-#menu {
-    width: 100%;
-    height: 100%;
+
+.button-accueil {
+    background: url(favicon-2.ico);
 }
+
+#retour-accueil:hover {
+    box-shadow:3px 12px 3px 12px #b6cbf5 inset ;
+}
+
+
+
