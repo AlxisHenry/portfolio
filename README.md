@@ -29,7 +29,7 @@
 
 *-- Menu déroulant*
 
-<img src="" />
+<img src="CHARTE GRAPHIQUE\IMAGES\Menu déroulant.png" />
 
 Ci-dessus, un aperçu du menu déroulant voulu. Les catégories '*Présentations*', '*Comprendre mon site*' et '*JOIN MY DISCORD*' seront présentes. Pour ce qui est de la catégorie '*MES PROJETS*', elle peut paraître inutile, vu que tous les projets sont accessibles via la page d'accueil. Cela sera à voir plus tard. Je n'ai pas encore prévu de design pour les pages présentes dans le menu déroulant.
 
