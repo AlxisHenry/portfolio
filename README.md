@@ -8,6 +8,26 @@
 
 <img src="CHARTE GRAPHIQUE\IMAGES\image-20211105161940028.png" height="300px" width="400px">
 
+- *Design d'Icons.*
+
+Ci-dessous, des designs temporaires d'icons, je vais choisir l'un deux pour servir d'Icon aux pages du portfolio.
+
+
+
+<img src="CHARTE GRAPHIQUE\ICONS\favicon-1.ico">
+
+
+
+<img src="CHARTE GRAPHIQUE\ICONS\favicon-2.ico">
+
+
+
+<img src="CHARTE GRAPHIQUE\ICONS\favicon-3.ico" height="80px" width="80px">
+
+
+
+<img src="CHARTE GRAPHIQUE\ICONS\favicon-4.ico">
+
 
 
 - *Présentation de la maquette (réalisée sur **excalidraw**)*
@@ -49,8 +69,6 @@ Lorsque l'utilisateur cliquera sur une des slides présentes sur la page d'accue
 <img src="CHARTE GRAPHIQUE\IMAGES\PP.png">
 
 <img src="CHARTE GRAPHIQUE\IMAGES\PRESENTATION PROJET 2.png">
-
-
 
 
 
