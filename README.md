@@ -6,7 +6,7 @@
 
 - *Présentation de l'organisation du projet.*
 
-<img src="CHARTE GRAPHIQUE\IMAGES\image-20211105161940028.png" height="300px" width="400px">
+<img src="CHARTE GRAPHIQUE\IMAGES\rangement.png" height="300px" width="400px">
 
 
 
@@ -32,13 +32,31 @@ Ci-dessous, des designs temporaires d'icons, je vais choisir l'un deux pour serv
 
 
 
+- *Palette de couleurs utilisées* 
+
+Après avoir réfléchi, j'ai trouvé plusieurs palettes de couleurs qui m'ont intéressées, 
+
+Je sélectionnerai la palette de couleurs définitive en fonction du rendu de celle-ci lors du développement du portfolio.
+
+<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 1.jpeg">
+
+<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 2.jpeg">
+
+<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 3.jpeg">
+
+<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg">
+
+<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 5.jpeg">
+
+<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 6.jpeg">
+
 - *Présentation de la maquette (réalisée sur **excalidraw**)*
 
   ​	
 
   *-- Page d'accueil* du site
 
-<img src="CHARTE GRAPHIQUE\IMAGES\PAGE D'ACCUEIL.png">
+<img src="CHARTE GRAPHIQUE\IMAGES\Page d'arrivée.png">
 
 - En haut à droite, il y a deux menus. 
   - Celui de droite, sera le menu déroulant : c'est-à-dire, que lorsque l'utilisateur cliquera sur ce bouton, un menu s'affichera.
@@ -49,7 +67,7 @@ Ci-dessous, des designs temporaires d'icons, je vais choisir l'un deux pour serv
   - La slide du milieu sera mise en valeur par rapport à celles de côtés,
   - Les slides de côtés seront floutées et accessible soit :
     - par une flèche qui permet d'aller à droite ou à gauche, ou soit changeront automatiquement au bout d'un certain délai.
-    - par un système de ce style:  <img src="CHARTE GRAPHIQUE\IMAGES\image-20211105165018115.png"> , où le rond coché signifie la slide présente.
+    - par un système de ce style:  <img src="CHARTE GRAPHIQUE\IMAGES\button.png"> , où le rond coché signifie la slide présente.
 
 *-- Menu déroulant*
 
@@ -65,12 +83,17 @@ Lorsque l'utilisateur cliquera sur une des slides présentes sur la page d'accue
 
 - J'ai pensé deux types de design pour la page de présentation. Je verrais laquelle rendra le mieux.
 
+-- Premier design (pas vraiment recherché...
+)
+<img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 1.png">
 
-<img src="CHARTE GRAPHIQUE\IMAGES\PRESRNTATION PROJET 1.png">
 
-<img src="CHARTE GRAPHIQUE\IMAGES\PP.png">
+-- Second design, plus complexe mais beaucoup plus agréable.
 
-<img src="CHARTE GRAPHIQUE\IMAGES\PRESENTATION PROJET 2.png">
+<img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 2.1.png">
+
+
+<img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 2.png">
 
 
 
