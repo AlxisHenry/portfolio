@@ -1,39 +1,25 @@
 body {
-    background-color: #64779e;
-    cursor: pointer;
-        /*
-
-    background-color: #374666;
-    background-color: #64779e;
-    background-color: #263147;
-    background-color: #563f63;
-    background-color: #382442;
-    background-color: #8d6e9c;
-
-    */
+    background-color: #083A59;
 }
-
-#retour-accueil {
+/* #bt-retour-accueil {
     position:absolute;
     right: 6%;
     max-width: 30px;
     max-height: 30px;
-    width:30px;
-    height: 30px;
-    background-color:#a0bcf5 ;
-    border-color: black;
-    border-radius:100em 100em 100em 100em;
+    width:28px;
+    height:28px;
+    border-color: rgb(190, 190, 190);
+    /* border-radius:100em 100em 100em 100em; 
+    border-radius:10px 10px 10px 10px;
     white-space:nowrap;
+    background-color: transparent;
+    background: url(CCI-2021-PORTFOLIO/DEVELOPPEMENT/STYLES/user-astronaut-solid.svg);
+    
 }
-
-
-.button-accueil {
-    background: url(favicon-2.ico);
+#bt-retour-accueil:hover {
+    -webkit-box-shadow: 0px 0px 2px 2px #000000; 
+    box-shadow: 0px 0px 2px 2px #000000;
+    transform: scale(1.1);
+    filter:brightness(5);
 }
-
-#retour-accueil:hover {
-    box-shadow:3px 12px 3px 12px #b6cbf5 inset ;
-}
-
-
-
+*/

@@ -1,0 +1,140 @@
+/* GoogleFont */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
+
+/* Constantes : Couleurs */
+
+:root {
+    --pink-color: #D0ABB3;
+    --darkpink-color: #534447;
+    --white-color: #FBFBFB;
+    --darkwhite-color: #EEEEEE;
+    --grey-color: #434343;
+}
+
+
+/* Configuration generale */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--white-color);
+    color: var(--darkpink-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================== */
+
+
+/* STICKY HEADER */
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--white-color);
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    box-shadow: 0px 0px 10px black;
+}
+
+.nav {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin-right: 15%;
+}
+
+.logo {
+    flex: 1 1 auto;
+    margin-left: 10%;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--darkpink-color);
+}
+
+.logo i {
+    color: var(--pink-color);
+}
+
+.nav a {
+    margin: 0 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--darkpink-color);
+}
+
+
+/* BANNIERE */
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 8px black;
+}
+
+
+/* TEXT CONTAINERS (About, Experiences, Projects) */
+
+.about,
+.experiences,
+.projects {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 700px;
+}
+
+.container {
+    width: 65%;
+    height: 100%;
+}
+
+.container h2 {
+    font-size: 45px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
+
+.container p {
+    font-size: 1em;
+    line-height: 35px;
+}
+
+.experiences,
+.footer {
+    background: var(--darkwhite-color);
+}
+
+
+/* ABOUT */
+
+
+/* EXPERIENCES */
+
+
+/* PROJETS */
