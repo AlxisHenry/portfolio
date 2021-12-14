@@ -14,6 +14,8 @@
 
 Ci-dessous, des designs temporaires d'icons, je vais choisir l'un deux pour servir d'Icon aux pages du portfolio.
 
+<center>
+
 
 
 <img src="DEVELOPPEMENT\@ico\favicon-1.ico">
@@ -30,7 +32,7 @@ Ci-dessous, des designs temporaires d'icons, je vais choisir l'un deux pour serv
 
 <img src="DEVELOPPEMENT\@ico\favicon-4.ico">
 
-
+</center>
 
 - *Palette de couleurs utilisées* 
 
