@@ -16,19 +16,19 @@ Ci-dessous, des designs temporaires d'icons, je vais choisir l'un deux pour serv
 
 
 
-<img src="\DEVELOPPEMENT\@ico\favicon-1.ico">
+<img src="DEVELOPPEMENT\@ico\favicon-1.ico">
 
 
 
-<img src="\DEVELOPPEMENT\@ico\favicon-2.ico">
+<img src="DEVELOPPEMENT\@ico\favicon-2.ico">
 
 
 
-<img src="\DEVELOPPEMENT\@ico\favicon-3.ico" height="80px" width="80px">
+<img src="DEVELOPPEMENT\@ico\favicon-3.ico" height="80px" width="80px">
 
 
 
-<img src="\DEVELOPPEMENT\@ico\favicon-4.ico">
+<img src="DEVELOPPEMENT\@ico\favicon-4.ico">
 
 
 
