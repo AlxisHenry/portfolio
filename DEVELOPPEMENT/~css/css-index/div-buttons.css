@@ -28,7 +28,7 @@
 .fa-backward {
     font-size: 28px;
     color: rgb(190, 190, 190);
-    right: 5%; /* Décalage de l'icon à 5% du bord droit */
+    right: 1.5%; /* Décalage de l'icon à 5% du bord droit */
     top: 1%;
     position: absolute;
     display: flex;
