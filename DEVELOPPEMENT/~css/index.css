@@ -1,0 +1,115 @@
+/* Fonts */
+
+/* Import de plusieurs polices avec Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@600&family=Secular+One&family=Vujahday+Script&family=Yuji+Hentaigana+Akari&display=swap');
+
+/* 
+
+Pour utiliser une police, utilisée la commande voulue:
+
+font-family: 'Abril Fatface', cursive;
+
+font-family: 'Cinzel', serif;
+
+font-family: 'Secular One', sans-serif;
+
+font-family: 'Vujahday Script', cursive;
+
+font-family: 'Yuji Hentaigana Akari', cursive;
+
+*/
+
+/* END */
+
+/* Body */
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #083A59;
+    /* background-color: transparent; */
+
+}
+
+/* END */
+
+/* ICONS */
+
+.fa-chevron-circle-down,
+.fa-backward,
+.fa-home
+{
+    font-size: 3em;
+    color: rgb(190, 190, 190);
+    background-color: transparent;
+}
+
+.fa-chevron-circle-down {
+    transform: rotateZ(180deg);
+}
+
+.fa-backward,
+.fa-chevron-circle-down {
+    margin: auto 0.2em;
+}
+
+#header {
+    display: flex;
+    justify-content: right;
+    /* haut | droit | bas | gauche */
+    margin: 0.3em 0.5em;
+    flex-wrap: nowrap;
+    padding: 0.2%;
+    flex-direction: row-reverse;
+}
+
+.fa-backward:hover,
+.fa-home:hover 
+{
+    color: white;
+    transform: scale(1.09);
+    transition: All 0.9s;
+}
+
+.fa-chevron-circle-down:hover {
+    color: white;
+    transform: rotateY(180deg);
+    transition: 1.6s;
+    transform: scale(1.09);
+    transition: 1.6s;
+}
+
+/* END */
+
+/* MENU DÉROULANT */
+
+#menu-principal-div {
+    display: none;
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 10px 20px ;
+    text-align: end;     */
+}
+
+#menu-principal:hover ~ #menu-principal-div {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 10px 20px ;
+    text-align: end;    
+
+}
+
+/* #menu-principal-div:hover {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 10px auto;
+} */
+
+
+
