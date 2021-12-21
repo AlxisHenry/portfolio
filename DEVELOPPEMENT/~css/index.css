@@ -113,3 +113,43 @@ body {
 
 
 
+
+/* RECTANGLE CENTRAL CONTENANT MON PRENOM AINSI QU'UN LOGO */
+
+#rectangle {
+   margin: 0.6em auto;
+   /* border-style:solid;
+   border-color: black; */
+   display: flex;
+   max-width: 80%;
+   max-height: 400px;
+   height: 150px;
+
+}
+
+#prenom {
+    color: white;
+    display: flex;
+    justify-content: left;
+    margin: auto 0.1em;
+}
+
+#nom {
+    display: flex;
+    margin: auto 3.4em;
+    color: brown;
+}
+
+#prenom,
+#nom {
+    font-size: 9em;
+    font-family: 'Vujahday Script', cursive;
+}
+
+#img {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    margin: auto;
+    margin-top: -9%;
+}
