@@ -72,6 +72,8 @@ body {
     color: white;
     transform: scale(1.09);
     transition: All 0.9s;
+    text-shadow: -2px 0 black, 0 1px black,
+    1px 0 black, 0 -1px black;
 }
 
 .fa-chevron-circle-down:hover {
@@ -81,6 +83,8 @@ body {
     transition: 0.5s;
     -webkit-transition: all 0.5s ease;
 	-moz-transition:  all 0.5s ease;
+  text-shadow: -2px 0 black, 0 1px black,
+  1px 0 black, 0 -1px black;
 }
 
 /* END */
