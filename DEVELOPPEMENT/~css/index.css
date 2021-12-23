@@ -128,28 +128,32 @@ ul.drop ul {
 ul.drop li ul
 {
   width: 1000%;
+  max-width: 265px;
       /* haut | droit | bas | gauche */
-  margin:6px -39.5em;
+  margin:6px -12.5em;
 }
 
 ul.drop li.menuhover:hover > ul {
     visibility: visible;
+    /* background-color: red; */
 }
    
 header div#header .header-nav ul li ul li a
 {
   color:white;
   text-decoration: none;
+  
 
 }
 
 header div#header .header-nav ul li ul li a:hover {
 
-    background-color: red;
+    background-color: #083A59;
     zoom:1.1;
-
+    text-shadow: -2px 0 black, 0 1px black,
+    1px 0 black, 0 -1px black;
 }
 
 /* END - MENU DÉROULANT */
 
-
+/* RESPONSIVE */
