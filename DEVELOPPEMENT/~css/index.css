@@ -47,7 +47,7 @@ body {
 }
 
 .fa-chevron-circle-down {
-    transform: rotateZ(180deg);
+    transform: rotateZ(90deg);
 }
 
 .fa-backward,
@@ -59,9 +59,9 @@ body {
     display: flex;
     justify-content: right;
     /* haut | droit | bas | gauche */
-    margin: 0.3em 0.5em;
+    margin: 0.3em 4.5em;
     flex-wrap: nowrap;
-    padding: 0.2%;
+    padding: 0.1%;
     flex-direction: row-reverse;
 }
 
@@ -75,34 +75,115 @@ body {
 
 .fa-chevron-circle-down:hover {
     color: white;
-    transform: rotateY(180deg);
-    transition: 1.6s;
+
     transform: scale(1.09);
-    transition: 1.6s;
+    transition: 0.5s;
 }
 
 /* END */
 
 /* MENU DÉROULANT */
 
-#menu-principal-div {
-    display: none;
+ 
+ul.drop a {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+ 
+ul.drop,
+ul.drop li,
+ul.drop ul {
+  list-style:none;
+  margin: 0;
+  padding: 0;
+  color: black;
+  text-align: end;
+}
+ 
+ul.drop {
+  position: absolute;
+  z-index: 597;
+  float: left;
+}
+ 
+ul.drop li {
+    line-height: 1.5em;
+    vertical-align: middle;
+    zoom: 1;
+    padding: 1.08px;
+  }
+ 
+ 
+ul.drop ul {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 598;
+  }
+
+ul.drop li ul
+{
+  width: 1000%;
+      /* haut | droit | bas | gauche */
+  margin:6px -39.5em;
+}
+
+ul.drop li.menuhover:hover > ul {
+    visibility: visible;
+}
+   
+header div#header .header-nav ul li ul li a
+{
+  color:white;
+  text-decoration: underline;
+
+}
+
+header div#header .header-nav ul li ul li a:hover {
+
+    background-color: red;
+    zoom:1.1;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #menu-principal-div {
+    display: none; */
     /* display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     margin: 10px 20px ;
     text-align: end;     */
-}
+/* } */
+/* 
+.menu-principal:hover ~ #menu-principal-div {
 
-#menu-principal:hover ~ #menu-principal-div {
 
-    display: flex;
+    display:flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin: 10px 20px ;
+    margin: 3.5em 0px ;
     text-align: end;    
-
-}
+    background-color: #083A59;
+    position:fixed;
+    max-width: 150vh;
+} */
 
 /* #menu-principal-div:hover {
     display: flex;
