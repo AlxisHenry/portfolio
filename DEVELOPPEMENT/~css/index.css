@@ -48,6 +48,7 @@ body {
 
 .fa-chevron-circle-down {
     transform: rotateZ(90deg);
+    transition: 0.5s;
 }
 
 .fa-backward,
@@ -75,16 +76,17 @@ body {
 
 .fa-chevron-circle-down:hover {
     color: white;
-
+    opacity: 1;
     transform: scale(1.09);
     transition: 0.5s;
+    -webkit-transition: all 0.5s ease;
+	-moz-transition:  all 0.5s ease;
 }
 
 /* END */
 
 /* MENU DÉROULANT */
 
- 
 ul.drop a {
   font-family: 'Abril Fatface', cursive;
   font-size: 1.2em;
@@ -95,7 +97,7 @@ ul.drop,
 ul.drop li,
 ul.drop ul {
   list-style:none;
-  margin: 0;
+  margin: -0.4px;
   padding: 0;
   color: black;
   text-align: end;
@@ -137,7 +139,7 @@ ul.drop li.menuhover:hover > ul {
 header div#header .header-nav ul li ul li a
 {
   color:white;
-  text-decoration: underline;
+  text-decoration: none;
 
 }
 
@@ -148,50 +150,6 @@ header div#header .header-nav ul li ul li a:hover {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* #menu-principal-div {
-    display: none; */
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin: 10px 20px ;
-    text-align: end;     */
-/* } */
-/* 
-.menu-principal:hover ~ #menu-principal-div {
-
-
-    display:flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin: 3.5em 0px ;
-    text-align: end;    
-    background-color: #083A59;
-    position:fixed;
-    max-width: 150vh;
-} */
-
-/* #menu-principal-div:hover {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin: 10px auto;
-} */
-
-
+/* END - MENU DÉROULANT */
 
 
