@@ -21,14 +21,34 @@ font-family: 'Yuji Hentaigana Akari', cursive;
 
 /* END */
 
+/* DÉCLARATION DES VARIABLES */
+
+:root
+{
+  /* Couleurs charte graphiques: */
+   --main-color: #083A59;
+   --icon-color: #bebebe;
+
+  /* Couleurs externes */
+   --black: #000000;
+   --white: #ffffff;
+   --temp-red: #ff0000;
+   --temp-purple: #ee82ee;
+
+}
+
+/* END */
+
+/* INDEX.HTML */
+
 /* BODY */
 
 body 
 {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #083A59;
+  overflow-x:  hidden;
+  background-color: var(--main-color);
   /* background-color: transparent; */
 }
 
@@ -41,7 +61,7 @@ body
 .fa-home
 {
   font-size: 3em;
-  color: rgb(190, 190, 190);
+  color: var(--icon-color);
   background-color: transparent;
 }
 
@@ -71,23 +91,23 @@ body
 .fa-backward:hover,
 .fa-home:hover 
 {
-  color: white;
+  color: var(--white);
   transform: scale(1.09);
   transition: All 0.9s;
-  text-shadow: -2px 0 black, 0 1px black,
-  1px 0 black, 0 -1px black;
+  text-shadow: -2px 0 var(--black), 0 1px var(--black),
+  1px 0 var(--black), 0 -1px var(--black);
 }
 
 .fa-chevron-circle-down:hover 
 {
-  color: white;
+  color: var(--white);
   opacity: 1;
   transform: scale(1.09);
   transition: 0.5s;
   -webkit-transition: all 0.5s ease;
 	-moz-transition:  all 0.5s ease;
-  text-shadow: -2px 0 black, 0 1px black,
-  1px 0 black, 0 -1px black;
+  text-shadow: -2px 0 var(--black), 0 1px var(--black),
+  1px 0 var(--black), 0 -1px var(--black);
 }
 
 /* END */
@@ -108,7 +128,7 @@ ul.drop ul
   list-style:none;
   margin: -0.4px;
   padding: 0;
-  color: black;
+  color: var(--black);
   text-align: end;
 }
  
@@ -152,16 +172,16 @@ ul.drop li.menuhover:hover > ul
    
 header div#header .header-nav ul li ul li a
 {
-  color:white;
+  color:var(--white);
   text-decoration: none;
 }
 
 header div#header .header-nav ul li ul li a:hover 
 {
-  background-color: #083A59;
+  background-color: var(--main-color);
   zoom:1.1;
-  text-shadow: -2px 0 black, 0 1px black,
-  1px 0 black, 0 -1px black;
+  text-shadow: -2px 0 var(--black), 0 1px var(--black),
+  1px 0 var(--black), 0 -1px var(--black);
 }
 
 /* END - MENU DÉROULANT */
@@ -171,7 +191,7 @@ header div#header .header-nav ul li ul li a:hover
 .fa-circle 
 {
   font-size: 1.5em;
-  color: rgb(190, 190, 190);
+  color: var(--icon-color);
   background-color: transparent;
 }
 
@@ -193,7 +213,7 @@ header div#header .header-nav ul li ul li a:hover
 .fa-circle:hover 
 {
   transform: scale(1.15);
-  color:violet;
+  color:var(--temp-purple);
 }
 
 #src-img-centrale 
@@ -210,14 +230,14 @@ header div#header .header-nav ul li ul li a:hover
   width: 800px;
   height: 350px;
   border-radius: 22.5px 22.5px 22.5px 22.5px;
-  box-shadow: 1.8px 1.8px black;
+  box-shadow: 1.8px 1.8px var(--black);
   /* animation: bounce 0.7s ease infinite alternate;  */
 }
 
 #img-centrale:hover 
 {
   zoom:1.005;
-  box-shadow: 0.5px 0.5px BLACK;
+  box-shadow: 0.5px 0.5px var(--black);
   cursor:help;
   /* animation: bounce 0.5s ease infinite alternate;  */
 }
@@ -295,12 +315,14 @@ display: flex;
 justify-content: center;
 margin: auto;
 margin-top: 45px;
-border: white;
-border-style:inset;
+border: var(--white);
+/* border-style:inset; */
 height: 150px;
 width: 80%;
 max-width: 100%;
 }
+
+
 
 
 /* END */
@@ -309,7 +331,7 @@ max-width: 100%;
 
 /* 
 
-Le fait d'avoir les deux images sur le côtés quand on est sur petit écran n'est absolument pas pratique,
+Le fait d'avoir les deux images sur le côté quand on est sur petit écran n'est absolument pas pratique,
 
 Donc sachant que les images tournent toute façons aléatoirement, ainsi que le fait qu'il y ait des bouttons permettant de changer d'images,
 
@@ -326,11 +348,11 @@ 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
 {
   header div#header .header-nav ul li ul li a 
   {
-      background-color: red;
+      background-color: var(--temp-red);
   }
   header div#header .header-nav ul li ul li a:hover
   {
-      background-color: white;
+      background-color: var(--white);
   }
   #menu-central 
   {
@@ -359,11 +381,11 @@ Tant que l'écran n'est pas en full screen sur un écran supérieur à 1670px, l
 */
 
 {
-#src-img-scnd, 
-#src-img-thrd 
-{
-  display: none;
-}
+  #src-img-scnd, 
+  #src-img-thrd 
+  {
+     display: none;
+  }
 }
 
 @media screen and (min-width: 1671px) /* OK */
@@ -386,12 +408,16 @@ Mise en évidence du menu déroulant, ainsi qu'à l'hover des liens.
   }  
   header div#header .header-nav ul li ul li a /* MENU DÉROULANT */
   {
-      background-color: red;
+      background-color: var(--temp-red);
   }
   header div#header .header-nav ul li ul li a:hover /* HOVER SUR CHAQUE LIENS */
   {
-      background-color: white;
+      background-color: var(--white);
   }
 }
 
 /* END */
+
+/* END INDEX.HTML */
+
+/* */

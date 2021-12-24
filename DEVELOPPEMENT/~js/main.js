@@ -16,6 +16,7 @@ function change1() { // Image principale : projet Timken > Renvoi vers page proj
     document.querySelector(".src").onclick = function () {
         document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projet-timken.html"; // Modification du href
     }
+    console.log("change1() utilisée");
 }
 function change2() { // Image secondaire : portfolio > Renvoi vers page projet Portfolio
     document.querySelector(".img1").classList.remove('fas');
@@ -30,6 +31,7 @@ function change2() { // Image secondaire : portfolio > Renvoi vers page projet P
     document.querySelector(".src").onclick = function () {
         document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projet-portfolio.html";
     }
+    console.log("change2() utilisée");
 }
 function change3() { // Troisième image 'No Projet Found' > Renvoi vers page de projets
     
@@ -52,6 +54,7 @@ function change3() { // Troisième image 'No Projet Found' > Renvoi vers page de
         let random_path_selector = path_table[Math.floor(Math.random() * path_table.length)];
         document.getElementById("href-img").href = random_path_selector;
     }
+    console.log("change3() utilisée");
 }
 
 
