@@ -68,11 +68,6 @@ function change_interval() {
 setInterval("change_interval()", 25000)
 
 
-
-
-
-
-
 // Fonctions utilisées sur 'comprendre.html'
 
 // Fonctions utilisées sur 'presentation.html'

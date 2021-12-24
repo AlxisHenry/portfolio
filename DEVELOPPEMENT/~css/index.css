@@ -169,6 +169,17 @@ header div#header .header-nav ul li ul li a:hover {
 
 /* MENU CENTRALE */
 
+.fa-circle {
+  font-size: 1.5em;
+  color: rgb(190, 190, 190);
+  background-color: transparent;
+}
+
+.fa-circle:hover {
+  transform: scale(1.15);
+  color:violet;
+}
+
 #src-img-centrale {
  max-height: 400px;
  max-width: 200px;
@@ -182,12 +193,12 @@ header div#header .header-nav ul li ul li a:hover {
   height: 400px;
   border-radius: 22.5px 22.5px 22.5px 22.5px;
   box-shadow: 1.8px 1.8px black;
+  /* animation: bounce 0.7s ease infinite alternate;  */
 }
 
 #img-centrale:hover {
   zoom:1.005;
   box-shadow: 0.5px 0.5px BLACK;
-  /* cursor:zoom-in; */
   cursor:help;
 }
 
@@ -205,6 +216,8 @@ header div#header .header-nav ul li ul li a:hover {
   width: 250px;
   height: 250px;
   display: flex;
+  animation: bounce 1s ease infinite alternate; 
+
 }
 
 #img-scnd:hover,
@@ -239,6 +252,15 @@ header div#header .header-nav ul li ul li a:hover {
   margin: auto 0.7vh;
 }
 
+
+@keyframes bounce{ 
+  from {
+    transform: translateY(0);
+  } to {
+    transform: translateY(-5px);
+  }  
+}
+
 /* END */
 
 /* IMAGE CENTRALE (LOGO + IDENTITÉ) */
@@ -248,11 +270,11 @@ header div#header .header-nav ul li ul li a:hover {
 display: flex;
 justify-content: center;
 margin: auto;
-margin-top: 100px;
-border: black;
+margin-top: 50px;
+border: white;
 border-style:inset;
 width: 1000px;
-height: 200px;
+height: 250px;
 }
 
 
