@@ -21,7 +21,7 @@ font-family: 'Yuji Hentaigana Akari', cursive;
 
 /* END */
 
-/* Body */
+/* BODY */
 
 body 
 {
@@ -193,7 +193,7 @@ header div#header .header-nav ul li ul li a:hover
 #img-centrale 
 {
   width: 800px;
-  height: 400px;
+  height: 350px;
   border-radius: 22.5px 22.5px 22.5px 22.5px;
   box-shadow: 1.8px 1.8px black;
   /* animation: bounce 0.7s ease infinite alternate;  */
@@ -211,8 +211,9 @@ header div#header .header-nav ul li ul li a:hover
 #src-img-thrd 
 {
   max-height: 400px;
-  max-width: 130px;
+  max-width: 130px; 
   filter: blur(4.5px);
+  display: flex;
 }
 
 #img-scnd,
@@ -220,8 +221,8 @@ header div#header .header-nav ul li ul li a:hover
 {
   width: 250px;
   height: 250px;
-  display: flex;
   animation: bounce 1s ease infinite alternate; 
+  display: flex;
 }
 
 #img-scnd:hover,
@@ -233,7 +234,7 @@ header div#header .header-nav ul li ul li a:hover
 #img-scnd 
 {
   justify-content: left;
-  position: absolute;
+  /* position: absolute; */
   margin: -23em 4em;
 }
 
@@ -247,7 +248,7 @@ header div#header .header-nav ul li ul li a:hover
 {
   display: flex;
   justify-content: center;
-  margin: 30em auto;
+  margin: -10px 48%;
 }
 
 .img2 
@@ -278,12 +279,91 @@ header div#header .header-nav ul li ul li a:hover
 display: flex;
 justify-content: center;
 margin: auto;
-margin-top: 50px;
+margin-top: 45px;
 border: white;
 border-style:inset;
-width: 1000px;
-height: 250px;
+/* width: 50%; */
+height: 150px;
+width: 80%;
+max-width: 100%;
 }
 
+/* END */
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1200px) 
+{
+  #menu-central 
+  {
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 1280px) 
+{
+  header div#header .header-nav ul li ul li a 
+  {
+      background-color: red;
+  }
+  header div#header .header-nav ul li ul li a:hover
+  {
+      background-color: white;
+  }
+  #menu-central 
+  {
+      width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) 
+{
+  #menu-central 
+  {
+      width: 80%;
+  }
+  #img-centrale  
+  {
+      width: 100%;
+      height: 100%;
+  }
+}
+
+@media screen and (max-width: 860px) 
+{
+#src-img-scnd, 
+#src-img-thrd 
+{
+  display: none;
+}
+}
+
+
+
+@media screen and (min-width: 1280px) /* OK */
+
+/* 
+
+Les deux autres images appraissent seulement sur un écran de min-width: 1280px 
+
+
+*/
+
+{
+  #menu-central 
+  {
+      width: 80%;
+      height: 300px;
+      margin-bottom: 85px;
+  }  
+  header div#header .header-nav ul li ul li a 
+  {
+      background-color: red;
+  }
+  header div#header .header-nav ul li ul li a:hover
+  {
+      background-color: white;
+  }
+}
 
 /* END */
