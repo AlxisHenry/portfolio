@@ -174,7 +174,7 @@ header div#header .header-nav ul li ul li a:hover {
  max-width: 200px;
  display: flex;
  justify-content: center;
- margin: 21em auto 3em;
+ margin: 4em auto 3em;
 } 
 
 #img-centrale {
@@ -185,6 +185,8 @@ header div#header .header-nav ul li ul li a:hover {
 #img-centrale:hover {
   zoom:1.005;
   box-shadow: 0.5px 0.5px 0.5px 0.5px;
+  /* cursor:zoom-in; */
+  cursor:help;
 }
 
 #src-img-scnd, 
@@ -203,6 +205,12 @@ header div#header .header-nav ul li ul li a:hover {
   display: flex;
 }
 
+#img-scnd:hover,
+#img-thrd:hover
+{
+  cursor:zoom-in;
+}
+
 #img-scnd {
   justify-content: left;
   position: absolute;
@@ -219,7 +227,7 @@ header div#header .header-nav ul li ul li a:hover {
 .btn-select-img {
   display: flex;
   justify-content: center;
-  margin: 20vh auto;
+  margin: 30em auto;
 }
 
 .img2 {
@@ -229,5 +237,26 @@ header div#header .header-nav ul li ul li a:hover {
 .img4 {
   margin: auto 0.7vh;
 }
+
+/* END */
+
+/* IMAGE CENTRALE (LOGO + IDENTITÉ) */
+
+#menu-central 
+{
+display: flex;
+justify-content: center;
+margin: auto;
+margin-top: 100px;
+border: black;
+border-style:inset;
+width: 1000px;
+height: 200px;
+}
+
+
+
+
+
 
 /* END */
