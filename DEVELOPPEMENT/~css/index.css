@@ -164,6 +164,7 @@ header div#header .header-nav ul li ul li a:hover {
 
 /* RESPONSIVE */
 
+
 /* END */
 
 /* MENU CENTRALE */
@@ -173,7 +174,7 @@ header div#header .header-nav ul li ul li a:hover {
  max-width: 200px;
  display: flex;
  justify-content: center;
- margin: 5em auto 3em;
+ margin: 21em auto 3em;
 } 
 
 #img-centrale {
@@ -186,45 +187,47 @@ header div#header .header-nav ul li ul li a:hover {
   box-shadow: 0.5px 0.5px 0.5px 0.5px;
 }
 
-#src-img-scnd {
-  max-height: 90px;
-  max-width: 50px;
-  display: flex;
-  justify-content: left;
-  margin: -12em 4em ;
-}
-#img-scnd {
-  width: 80px;
-  height: 40px;
+#src-img-scnd, 
+#src-img-thrd 
+{
+  max-height: 400px;
+  max-width: 130px;
+  filter: blur(0.5rem);
 }
 
-#src-img-thrd {
-  max-height: 90px;
-  max-width: 50px;
+#img-scnd,
+#img-thrd 
+{
+  width: 130px;
+  height: 400px;
   display: flex;
-  justify-content: right;
-  margin: auto 90em;
+}
+
+#img-scnd {
+  justify-content: left;
+  position: absolute;
+  margin: -28em 4em;
+
 }
 
 #img-thrd {
-  width: 80px;
-  height: 40px;
+  justify-content: right;
+  margin: -28em 90em;
 }
 
 
 .btn-select-img {
   display: flex;
   justify-content: center;
-  margin: 2vh auto;
+  margin: 20vh auto;
 }
+
 .img2 {
   margin: auto 0.7vh;
 }
+
 .img4 {
   margin: auto 0.7vh;
 }
 
-
-
-
-/*  */
+/* END */
