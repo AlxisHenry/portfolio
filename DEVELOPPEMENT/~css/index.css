@@ -175,6 +175,21 @@ header div#header .header-nav ul li ul li a:hover
   background-color: transparent;
 }
 
+.img1 
+{
+  animation: bounce 1.2s ease infinite alternate;
+}
+
+.img2
+{
+  animation: bounce 1.3s ease infinite alternate; 
+}
+
+.img3 
+{
+  animation: bounce 1.4s ease infinite alternate; 
+}
+
 .fa-circle:hover 
 {
   transform: scale(1.15);
@@ -221,7 +236,7 @@ header div#header .header-nav ul li ul li a:hover
 {
   width: 250px;
   height: 250px;
-  animation: bounce 1s ease infinite alternate; 
+  /* animation: bounce 1s ease infinite alternate;  */
   display: flex;
 }
 
@@ -291,6 +306,17 @@ max-width: 100%;
 /* END */
 
 /* RESPONSIVE */
+
+/* 
+
+Le fait d'avoir les deux images sur le côtés quand on est sur petit écran n'est absolument pas pratique,
+
+Donc sachant que les images tournent toute façons aléatoirement, ainsi que le fait qu'il y ait des bouttons permettant de changer d'images,
+
+J'ai décidé de les rendre invisibles lors que l'utilisateurs n'est plus sur un écran assez grand.
+
+
+*/
 
 
 @media screen and (max-width: 1280px) 
