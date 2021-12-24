@@ -1,25 +1,29 @@
 // Fonctions utilisées sur 'main.html'
 
-function BackHomeImage() {
-
-    let chemin = "../../CHARTE GRAPHIQUE/ICONS"
-
-    const IMGS = [ chemin + "/favicon-1.ico", chemin + "/favicon-2.ico", chemin + "/favicon-3.ico", chemin + "/favicon-4.ico"];
-
-    const RandomIMGS = IMGS[Math.floor(Math.random() * IMGS.length)];
-
-    console.log(RandomIMGS);
-
-    document.getElementById("img-retour-accueil").src = RandomIMGS;
-
-}
-
-function change() {
-
+function change1() { // Image principale : projet Timken > Renvoi vers page projet Timken
+    document.querySelector(".img3").classList.remove('fas');
+    document.querySelector(".img2").classList.remove('fas');
     document.querySelector(".img1").classList.add('fas');
-    document.getElementById("img-centrale").src = "./@img/mpd-logo-300h.png";
-
+    document.getElementById("img-centrale").src = "./DEVELOPPEMENT/@img/Timken.png";
+    document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projets-timken.html";
 }
+function change2() { // Image secondaire : portfolio > Renvoi vers page projet Portfolio
+    document.querySelector(".img1").classList.remove('fas');
+    document.querySelector(".img1").classList.add('far');
+    document.querySelector(".img3").classList.remove('fas');
+    document.querySelector(".img2").classList.add('fas');
+    document.getElementById("img-centrale").src = "./DEVELOPPEMENT/@img/Snipe-IT-logo.png";
+    document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projets-portfolio.html";
+}
+function change3() { // Troisième image 'No Projet Found' > Renvoi vers page de projets
+    document.querySelector(".img1").classList.remove('fas');
+    document.querySelector(".img1").classList.add('far');
+    document.querySelector(".img2").classList.remove('fas');
+    document.querySelector(".img3").classList.add('fas');
+    document.getElementById("img-centrale").src = "./DEVELOPPEMENT/@img/téléchargement (1).png";
+    document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projets.html";
+}
+
 
 // Fonctions utilisées sur 'comprendre.html'
 
