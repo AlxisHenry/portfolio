@@ -180,11 +180,13 @@ header div#header .header-nav ul li ul li a:hover {
 #img-centrale {
   width: 800px;
   height: 400px;
+  border-radius: 22.5px 22.5px 22.5px 22.5px;
+  box-shadow: 1.8px 1.8px black;
 }
 
 #img-centrale:hover {
   zoom:1.005;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px;
+  box-shadow: 0.5px 0.5px BLACK;
   /* cursor:zoom-in; */
   cursor:help;
 }
@@ -194,14 +196,14 @@ header div#header .header-nav ul li ul li a:hover {
 {
   max-height: 400px;
   max-width: 130px;
-  filter: blur(0.5rem);
+  filter: blur(4.5px);
 }
 
 #img-scnd,
 #img-thrd 
 {
-  width: 130px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   display: flex;
 }
 
@@ -214,15 +216,14 @@ header div#header .header-nav ul li ul li a:hover {
 #img-scnd {
   justify-content: left;
   position: absolute;
-  margin: -28em 4em;
+  margin: -23em 4em;
 
 }
 
 #img-thrd {
   justify-content: right;
-  margin: -28em 90em;
+  margin: -23em 86em;
 }
-
 
 .btn-select-img {
   display: flex;
