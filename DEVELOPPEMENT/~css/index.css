@@ -292,13 +292,6 @@ max-width: 100%;
 
 /* RESPONSIVE */
 
-@media screen and (max-width: 1200px) 
-{
-  #menu-central 
-  {
-      width: 100%;
-  }
-}
 
 @media screen and (max-width: 1280px) 
 {
@@ -329,7 +322,13 @@ max-width: 100%;
   }
 }
 
-@media screen and (max-width: 860px) 
+@media screen and (max-width: 1670px) /* OK */
+/* 
+
+Tant que l'écran n'est pas en full screen sur un écran supérieur à 1670px, les deux images de côtés sont mis en display: none;
+
+*/
+
 {
 #src-img-scnd, 
 #src-img-thrd 
@@ -338,29 +337,29 @@ max-width: 100%;
 }
 }
 
-
-
-@media screen and (min-width: 1280px) /* OK */
+@media screen and (min-width: 1671px) /* OK */
 
 /* 
 
 Les deux autres images appraissent seulement sur un écran de min-width: 1280px 
 
+Aide à l'affichage du menu, celui-ci étant caché par la div centrale, 
+Mise en évidence du menu déroulant, ainsi qu'à l'hover des liens.
 
 */
 
 {
-  #menu-central 
+  #menu-central /* MENU CENTRALE */
   {
       width: 80%;
       height: 300px;
       margin-bottom: 85px;
   }  
-  header div#header .header-nav ul li ul li a 
+  header div#header .header-nav ul li ul li a /* MENU DÉROULANT */
   {
       background-color: red;
   }
-  header div#header .header-nav ul li ul li a:hover
+  header div#header .header-nav ul li ul li a:hover /* HOVER SUR CHAQUE LIENS */
   {
       background-color: white;
   }
