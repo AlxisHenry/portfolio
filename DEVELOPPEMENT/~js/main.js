@@ -12,7 +12,10 @@ function change1() { // Image principale : projet Timken > Renvoi vers page proj
     document.getElementById("img-centrale").src = "./DEVELOPPEMENT/@img/Timken.png"; // Modification de l'image
     document.getElementById("img-scnd").src = "./DEVELOPPEMENT/@img/Snipe-IT-logo.png"; // Modification de l'image
     document.getElementById("img-thrd").src = "./DEVELOPPEMENT/@img/téléchargement (1).png";
-    document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projets-timken.html"; // Modification du href
+    // document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projets-timken.html"; // Modification du href
+    document.querySelector(".src").onclick = function () {
+        document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projets-timken.html"; // Modification du href
+    }
 }
 function change2() { // Image secondaire : portfolio > Renvoi vers page projet Portfolio
     document.querySelector(".img1").classList.remove('fas');
@@ -23,9 +26,18 @@ function change2() { // Image secondaire : portfolio > Renvoi vers page projet P
     document.getElementById("img-centrale").src = "./DEVELOPPEMENT/@img/Snipe-IT-logo.png";
     document.getElementById("img-scnd").src = "./DEVELOPPEMENT/@img/Timken.png";
     document.getElementById("img-thrd").src = "./DEVELOPPEMENT/@img/téléchargement (1).png";
-    document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projets-portfolio.html";
+    // document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projets-portfolio.html";
+    document.querySelector(".src").onclick = function () {
+        document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projets-portfolio.html";
+    }
 }
 function change3() { // Troisième image 'No Projet Found' > Renvoi vers page de projets
+    
+    // Soit cette page renvoye vers une page où sont regroupés les projets,
+    // Soit elle fera en sorte de renvoyer au hasard (1 chance sur 2) vers une des pages existantes
+
+    // Je pense que la deuxième option est plus drôle à coder
+    
     document.querySelector(".img1").classList.remove('fas');
     document.querySelector(".img1").classList.add('far');
     document.querySelector(".img2").classList.remove('fas');
@@ -33,7 +45,13 @@ function change3() { // Troisième image 'No Projet Found' > Renvoi vers page de
     document.getElementById("img-centrale").title = "PROJECTS"
     document.getElementById("img-thrd").src = "./DEVELOPPEMENT/@img/Snipe-IT-logo.png";
     document.getElementById("img-centrale").src = "./DEVELOPPEMENT/@img/téléchargement (1).png";
-    document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projets.html";
+    // document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projets.html";
+    document.querySelector(".src").onclick = function () {
+
+        
+
+        document.getElementById("href-img").href = "./DEVELOPPEMENT/~html/projets.html";
+    }
 }
 
 
