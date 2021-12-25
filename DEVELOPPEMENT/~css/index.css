@@ -107,8 +107,16 @@ body
   -webkit-transition: all 0.5s ease;
 	-moz-transition:  all 0.5s ease;
   text-shadow: -2px 0 var(--black), 0 1px var(--black),
-  1px 0 var(--black), 0 -1px var(--black);
+  1px 0 var(--black), 0 -1px var(--black);  
 }
+
+.fa-backward:hover,
+.fa-home:hover,
+.fa-chevron-circle-down:hover 
+{
+cursor:pointer;
+}
+
 
 /* END */
 
@@ -178,8 +186,8 @@ header div#header .header-nav ul li ul li a
 
 header div#header .header-nav ul li ul li a:hover 
 {
-  background-color: var(--main-color);
-  zoom:1.1;
+  /* background-color: var(--main-color); */
+  zoom:1.02;
   text-shadow: -2px 0 var(--black), 0 1px var(--black),
   1px 0 var(--black), 0 -1px var(--black);
 }
@@ -222,7 +230,7 @@ header div#header .header-nav ul li ul li a:hover
  max-width: 200px;
  display: flex;
  justify-content: center;
- margin: 4em auto 3em;
+ margin: 1em auto 3em;
 } 
 
 #img-centrale 
@@ -311,24 +319,44 @@ header div#header .header-nav ul li ul li a:hover
 
 #menu-central 
 {
-display: flex;
-justify-content: center;
-margin: auto;
-margin-top: 45px;
-/* border: var(--white); */
-/* border-style:inset; */
-height: 150px;
-width: 80%;
-max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2.5vh;
+  margin-bottom: 50px;
+  /* border: var(--white);
+  border-style:inset; */
+  max-width: 100%;
+  min-width: none;
+  max-height: 30%;
 }
 
+.src-logo 
+{
+  height: 10%;
+  width: 30%;
+}
 
+.fa-address-card
+{
+  /* haut | droit | bas | gauche */
+  font-size: 5em;
+  color: var(--white);
+  margin-top: 2.8vh;
+  margin-right: 5vh;
+  margin-left: 2.5vh;
 
+}
+
+.fa-address-card:hover
+{
+  color:var(--temp-red)
+}
 
 /* END */
 
 /* RESPONSIVE */
-
+  
 /* 
 
 Le fait d'avoir les deux images sur le côté quand on est sur petit écran n'est absolument pas pratique,
@@ -354,9 +382,22 @@ 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
   {
       background-color: var(--white);
   }
-  #menu-central 
+  .src-logo
   {
-      width: 80%;
+      width: 35%;
+      margin-top: 15vh;
+  }
+  .fa-address-card
+  {
+      font-size: 2em;
+      margin-top: 15vh;
+      margin-right: 3vh;
+  }
+  .fa-chevron-circle-down,
+  .fa-backward,
+  .fa-home
+  {
+    font-size: 2em;
   }
 }
 
@@ -364,7 +405,7 @@ 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
 {
   #menu-central 
   {
-      width: 80%;
+      width: 100%;
   }
   #img-centrale  
   {
@@ -418,6 +459,54 @@ Mise en évidence du menu déroulant, ainsi qu'à l'hover des liens.
 
 /* END */
 
+/* FOOTER */
+
+footer
+{
+  position: absolute;
+  /* margin: auto; */
+  height: 25px;
+  width: 100%;
+  bottom: 0;
+}
+
+#foot
+{
+  display: flex;
+  justify-content: right;
+  font-size: 1.5vh;
+  margin-right: 1%;
+}
+
+/* END */
+
 /* END INDEX.HTML */
 
-/* */
+/* PRESENTATION.HTML */
+
+#bt-pres  
+{
+  display: flex;
+  justify-content: right;
+  /* haut | droit | bas | gauche */
+  margin: 0.3em 0.1em;
+  flex-wrap: nowrap;
+  padding: 0.1%;
+  flex-direction: row-reverse;
+}
+
+.fa-file-download
+{
+  font-size: 3em;
+  color: var(--icon-color);
+  background-color: transparent;
+  cursor: alias;
+}
+
+.fa-cloud-download-alt
+{
+  font-size: 3em;
+  color: var(--icon-color);
+  background-color: transparent;
+  cursor: alias;
+}
