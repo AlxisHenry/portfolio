@@ -1,33 +1,24 @@
-/* Fonts */
-
 /* Import de plusieurs polices avec Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@600&family=Secular+One&family=Vujahday+Script&family=Yuji+Hentaigana+Akari&display=swap');
-
-/* 
-
-Pour utiliser une police, utilisée la commande pour la police voulue:
-
-font-family: 'Abril Fatface', cursive;
-
-font-family: 'Cinzel', serif;
-
-font-family: 'Secular One', sans-serif;
-
-font-family: 'Vujahday Script', cursive;
-
-font-family: 'Yuji Hentaigana Akari', cursive;
-
-*/
-
-/* END */
-
-/* DÉCLARATION DES VARIABLES */
 
 :root
 {
   /* Couleurs charte graphiques: */
+
+  /* Test première palette */
    --main-color: #083A59;
-   --icon-color: #bebebe;
+   --main-color3: #105773;
+   --main-color4: #20788C;
+   --main-color5: #5AADBF;
+   --icon-color: #E4EDF2;
+   /* --icon-color: #bebebe; */
+
+  /* Test seconde palette */
+   --main2: #4B5DAB;
+   --main3: #2F3A6B;
+   --main4: #667eea;
+   --main5: #6D86F7;
+   --main6: #5C71D1;
 
   /* Couleurs externes */
    --black: #000000;
@@ -35,49 +26,29 @@ font-family: 'Yuji Hentaigana Akari', cursive;
    --temp-red: #ff0000;
    --temp-purple: #ee82ee;
 
-}
+   /* Font Family */
+   --abril: 'Abril Fatface', cursive;
+   --cinzel: 'Cinzel', serif;
+   --secular: 'Secular One', sans-serif;
+   --vujah: 'Vujahday Script', cursive;
+   --yuji: 'Yuji Hentaigana Akari', cursive;
 
-/* END */
+}
 
 /* INDEX.HTML */
 
-/* BODY */
-
 body 
 {
-  margin: 0;
+  margin: 0; 
   padding: 0;
   overflow-x:  hidden;
-  background-color: var(--main-color);
-  /* background-color: transparent; */
+  background-color: var(--main-color3);
+  /* background-color: none; */
 }
 
-/* END */
+/* HEADER - ICONS */
 
-/* ICONS */
-
-.fa-chevron-circle-down,
-.fa-backward,
-.fa-home
-{
-  font-size: 3em;
-  color: var(--icon-color);
-  background-color: transparent;
-}
-
-.fa-chevron-circle-down 
-{
-  transform: rotateZ(90deg);
-  transition: 0.5s;
-}
-
-.fa-backward,
-.fa-chevron-circle-down 
-{
-  margin: auto 0.2em;
-}
-
-#header 
+.header-menu_header-buttons 
 {
   display: flex;
   justify-content: right;
@@ -88,45 +59,68 @@ body
   flex-direction: row-reverse;
 }
 
-.fa-backward:hover,
-.fa-home:hover 
-{
-  color: var(--white);
-  transform: scale(1.09);
-  transition: All 0.9s;
-  text-shadow: -2px 0 var(--black), 0 1px var(--black),
-  1px 0 var(--black), 0 -1px var(--black);
+.fa-chevron-circle-down,
+.fa-backward,
+.fa-home
+{ 
+  font-size: 3em;
+  color: var(--icon-color);
+  background-color: transparent;
 }
 
-.fa-chevron-circle-down:hover 
+.fa-backward,
+.fa-chevron-circle-down 
 {
-  color: var(--white);
-  opacity: 1;
-  transform: scale(1.09);
+  /* haut | droit | bas | gauche */
+  margin: auto 0.2em;
+}
+
+.fa-chevron-circle-down 
+{
+  transform: rotateZ(90deg);
   transition: 0.5s;
-  -webkit-transition: all 0.5s ease;
-	-moz-transition:  all 0.5s ease;
-  text-shadow: -2px 0 var(--black), 0 1px var(--black),
-  1px 0 var(--black), 0 -1px var(--black);  
 }
 
 .fa-backward:hover,
 .fa-home:hover,
 .fa-chevron-circle-down:hover 
 {
-cursor:pointer;
+  color: var(--white);
+  cursor:pointer;
+  transform: scale(1.09);
+  text-shadow: -2px 0 var(--black), 0 1px var(--black),
+  1px 0 var(--black), 0 -1px var(--black);
 }
 
+.fa-backward:hover,
+.fa-home:hover 
+{
+  transition: All 0.9s;
+}
 
-/* END */
+.fa-chevron-circle-down:hover 
+{
+  opacity: 1;
+  transition: 0.5s;
+  /* 
+  -webkit- pour Webkit (Chrome, Safari)
+  -moz- pour Gecko (Mozilla)
+  -ms- pour Microsoft (Internet Explorer)
+  */  
+  -webkit-transition: all 0.5s ease;
+	-moz-transition:  all 0.5s ease; 
+  -ms-transition: all 0.5s ease;
+}
 
-/* MENU DÉROULANT */
+/* END | HEADER - ICONS */
+
+/* MENU DÉROULANT @ HEADER - HOVER HOME ICON */
 
 ul.drop a 
 {
-  font-family: 'Abril Fatface', cursive;
+  font-family: var(--abril);
   font-size: 1.2em;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
  
 ul.drop,
@@ -178,13 +172,13 @@ ul.drop li.menuhover:hover > ul
   /* background-color: red; */
 }
    
-header div#header .header-nav ul li ul li a
+header div.header-menu_header-buttons .header-nav ul li ul li a
 {
   color:var(--white);
   text-decoration: none;
 }
 
-header div#header .header-nav ul li ul li a:hover 
+header div.header-menu_header-buttons .header-nav ul li ul li a:hover 
 {
   /* background-color: var(--main-color); */
   zoom:1.02;
@@ -192,9 +186,9 @@ header div#header .header-nav ul li ul li a:hover
   1px 0 var(--black), 0 -1px var(--black);
 }
 
-/* END - MENU DÉROULANT */
+/* END | MENU DÉROULANT @ HEADER - HOME ICON */
 
-/* MENU CENTRALE */
+/* MENU CENTRAL */
 
 .fa-circle 
 {
@@ -278,13 +272,13 @@ header div#header .header-nav ul li ul li a:hover
 {
   justify-content: left;
   /* position: absolute; */
-  margin: -23em 4em;
+  margin: -23em 3em;
 }
 
 #img-thrd 
 {
   justify-content: right;
-  margin: -23em 86em;
+  margin: -23em 77em;
 }
 
 .btn-select-img 
@@ -321,56 +315,34 @@ header div#header .header-nav ul li ul li a:hover
 {
   display: flex;
   justify-content: center;
-  margin: auto;
-  margin-top: 2.5vh;
-  margin-bottom: 50px;
+  margin: 0.5vh auto -6vh;
   /* border: var(--white);
   border-style:inset; */
-  max-width: 100%;
-  min-width: none;
-  max-height: 30%;
+  max-width: 80%;
+  width: 100%;
+  overflow:hidden;
 }
 
-.src-logo 
+#prenom,
+#nom
 {
-  height: 10%;
-  width: 30%;
+  margin-top: 2vh;
+  font-size: 5.5em;
+  color: var(--icon-color);
+  font-family: var(--abril);
 }
 
 .fa-address-card
 {
   /* haut | droit | bas | gauche */
-  font-size: 5em;
-  color: var(--white);
-  margin-top: 2.8vh;
-  margin-right: 5vh;
-  margin-left: 2.5vh;
-
-}
-
-.fa-address-card:hover
-{
-  color:var(--temp-red)
+  font-size: 2.5em;
+  color: var(--icon-color);
+  margin: 7.8vh 3.5vh;
 }
 
 /* END */
 
 /* RESPONSIVE */
-  
-/* 
-
-Le fait d'avoir les deux images sur le côté quand on est sur petit écran n'est absolument pas pratique,
-
-Donc sachant que les images tournent toute façons aléatoirement, ainsi que le fait qu'il y ait des bouttons permettant de changer d'images,
-
-J'ai décidé de les rendre invisibles lors que l'utilisateurs n'est plus sur un écran assez grand.
-
-Token GIT
-
-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 
-
-*/
-
 
 @media screen and (max-width: 1280px) 
 {
@@ -382,11 +354,6 @@ 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
   {
       background-color: var(--white);
   }
-  .src-logo
-  {
-      width: 35%;
-      margin-top: 15vh;
-  }
   .fa-address-card
   {
       font-size: 2em;
@@ -397,7 +364,7 @@ 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
   .fa-backward,
   .fa-home
   {
-    font-size: 2em;
+      font-size: 2em;
   }
 }
 
@@ -414,46 +381,57 @@ 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
   }
 }
 
-@media screen and (max-width: 1670px) /* OK */
-/* 
-
-Tant que l'écran n'est pas en full screen sur un écran supérieur à 1670px, les deux images de côtés sont mis en display: none;
-
-*/
-
+@media screen and (max-width: 1535px) /* OK */
 {
   #src-img-scnd, 
   #src-img-thrd 
   {
-     display: none;
+      display: none;
+  }
+  .fa-address-card
+  {
+      margin-top:6vh;
+      font-size: 2em;
+      margin-bottom: 15vh;
+  }
+  #prenom,
+  #nom
+  {
+      margin-top: 6vh;
+      font-size: 1.5em;
   }
 }
 
-@media screen and (min-width: 1671px) /* OK */
-
-/* 
-
-Les deux autres images appraissent seulement sur un écran de min-width: 1280px 
-
-Aide à l'affichage du menu, celui-ci étant caché par la div centrale, 
-Mise en évidence du menu déroulant, ainsi qu'à l'hover des liens.
-
-*/
-
+@media screen and (min-width: 1671px)
 {
-  #menu-central /* MENU CENTRALE */
+  #menu-central
   {
       width: 80%;
       height: 300px;
-      margin-bottom: 85px;
+      margin-bottom: -40px;
   }  
-  header div#header .header-nav ul li ul li a /* MENU DÉROULANT */
+  #img-scnd 
   {
-      background-color: var(--temp-red);
+      justify-content: left;
+      /* position: absolute; */
+      margin: -22em 4.5em;
   }
-  header div#header .header-nav ul li ul li a:hover /* HOVER SUR CHAQUE LIENS */
+  #img-thrd 
   {
-      background-color: var(--white);
+      justify-content: right;
+      margin: -22em 84.5em;
+  }
+  #prenom,
+  #nom
+  {
+      margin-top: 2vh;
+      font-size: 8em;
+  }
+  .fa-address-card
+  {
+      font-size: 4em;
+      color: var(--icon-color);
+      margin: 8.5vh 3.5vh;
   }
 }
 

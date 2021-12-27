@@ -11,6 +11,7 @@ function icon_history_back()
                 {
                      console.log("Cancel History Back");
                 }
+        //  console.log("icon_history_back() utilisée");
     }
 
 let path_to_imgs = "./DEVELOPPEMENT/@img/";
@@ -29,13 +30,13 @@ function activate_circle_img1()
             {
                  document.getElementById("href-img").href = `${path_to_html}projet-timken.html`;
             }
-         console.log("change1() utilisée");
+        //  console.log("change1() utilisée");
     }
 
 function activate_circle_img2() 
     { 
          document.querySelector(".img1").classList.remove('fas');
-         document.querySelector(".img1").classList.add('far');
+         document.querySelector(".img1").classList.add('far');  
          document.querySelector(".img3").classList.remove('fas');
          document.querySelector(".img2").classList.add('fas');
          document.getElementById("img-centrale").title = "SNIPE-IT"
@@ -46,7 +47,7 @@ function activate_circle_img2()
             {
                  document.getElementById("href-img").href = `${path_to_html}projet-portfolio.html`;
             }
-         console.log("change2() utilisée");
+        //  console.log("change2() utilisée");
     }
 
 function activate_circle_img3() 
@@ -65,14 +66,15 @@ function activate_circle_img3()
                  let random_path_selector = path_table[Math.floor(Math.random() * path_table.length)];
                  document.getElementById("href-img").href = random_path_selector;
             }
-         console.log("change3() utilisée");
+        //  console.log("change3() utilisée");
     }
 
 function activate_circle_img_auto() 
     {
-     setTimeout("activate_circle_img1()",5000);
-     setTimeout("activate_circle_img2()",15000);
-     setTimeout("activate_circle_img3()",25000);
+         setTimeout("activate_circle_img1()",5000);
+         setTimeout("activate_circle_img2()",15000);
+         setTimeout("activate_circle_img3()",25000);
+        //  console.log("activate_circle_img_auto() utilisée")
     }
 
 setInterval("activate_circle_img_auto()", 25000);
