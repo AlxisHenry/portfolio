@@ -1,4 +1,4 @@
-var a = console.time("Exécution script JS");
+console.time("Exécution script JS");
 
 // Fonctions globales 
 
@@ -49,6 +49,8 @@ const aleatory =
     href: "none",
     status: "none",
 };
+
+// Le résultat est bancal, mais la charte graphique est respectée, donc cela est suffisant.
 
 function activate_circle_img1() 
     { 
@@ -101,9 +103,9 @@ function activate_circle_img3()
                  let href_links_path = [timken.href,snipeit.href]
                  let random_path_selector = href_links_path[Math.floor(Math.random() * href_links_path.length)];
                  document.getElementById("href-img").href = random_path_selector;
-            }
+            };  
         //  console.log("change3() utilisée");
-    }
+    };
 
 function activate_circle_img_auto() 
     {
@@ -111,10 +113,15 @@ function activate_circle_img_auto()
          setTimeout("activate_circle_img2()",15000);
          setTimeout("activate_circle_img3()",25000);
         //  console.log("activate_circle_img_auto() utilisée")
-    }
+    };
 
-setInterval("activate_circle_img_auto()", 25000);
-
+function interval_circle_img_auto() 
+    {
+         setTimeout("activate_circle_img2()",5000);
+         setTimeout("activate_circle_img3()",15000);
+         setInterval("activate_circle_img_auto()", 25000);
+        //  console.log("interval_circle_img_auto() utilisée");
+    };
 
 // Fonctions utilisées sur 'comprendre.html'
 

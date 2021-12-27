@@ -463,16 +463,6 @@ footer
 
 /* PRESENTATION.HTML */
 
-.header_buttons_presentation
-{
-  display: flex;
-  justify-content: right;
-  /* haut | droit | bas | gauche */
-  margin: 0.3em 0.5em;
-  flex-wrap: nowrap;
-  flex-direction: row;
-}
-
 /* DOWNLOAD ICON */ 
 
 .fa-file-download
