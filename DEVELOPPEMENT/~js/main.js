@@ -1,3 +1,5 @@
+var a = console.time("Exécution script JS");
+
 // Fonctions globales 
 
 function icon_history_back()
@@ -13,7 +15,7 @@ function icon_history_back()
                 }
         //  console.log("icon_history_back() utilisée");
     }
-    
+
 // Fonctions utilisées sur 'index.html'
 
 /* La création d'objets est importante, car cela va permettre de faciliter si nécessaire les modifications */
@@ -119,3 +121,7 @@ setInterval("activate_circle_img_auto()", 25000);
 // Fonctions utilisées sur 'presentation.html'
 
 // Fonctions utilisées sur 'projets.html'
+
+console.timeEnd("Exécution script JS");
+
+// console.clear();
