@@ -21,18 +21,21 @@ const timken = {
      title: "TIMKEN",
      alt: "TIMKEN",
      img: `${path_to_imgs}Timken.png`,
+     href: `${path_to_html}projet-timken.html`
 };
 
 const snipeit = {
      title: "SNIPE-IT",
      alt: "SNIPE-IT",
      img: `${path_to_imgs}Snipe-IT-logo.png`,
+     href: `${path_to_html}projet-snipe-it.html`,
 };
 
 const aleatory = {
     title: "ALEATORY",
     alt: "ALEATORY",
     img: `${path_to_imgs}téléchargement (1).png`,
+    href: "none",
 };
 
 function activate_circle_img1() 
@@ -47,7 +50,7 @@ function activate_circle_img1()
          document.getElementById("img-thrd").src = aleatory.img;
          document.querySelector(".src").onclick = function () 
             {
-                 document.getElementById("href-img").href = `${path_to_html}projet-timken.html`;
+                 document.getElementById("href-img").href = timken.href;
             }
         //  console.log("change1() utilisée");
     }
@@ -65,7 +68,7 @@ function activate_circle_img2()
          document.getElementById("img-thrd").src = aleatory.img;
          document.querySelector(".src").onclick = function () 
             {
-                 document.getElementById("href-img").href = `${path_to_html}projet-portfolio.html`;
+                 document.getElementById("href-img").href = snipeit.href;
             }
         //  console.log("change2() utilisée");
     }
@@ -83,8 +86,8 @@ function activate_circle_img3()
          document.getElementById("img-thrd").src = snipeit.img;
          document.querySelector(".src").onclick = function () 
             {
-                 let path_table = [`${path_to_html}projet-timken.html`,`${path_to_html}projet-portfolio.html`]
-                 let random_path_selector = path_table[Math.floor(Math.random() * path_table.length)];
+                 let href_links_path = [timken.href,snipeit.href]
+                 let random_path_selector = href_links_path[Math.floor(Math.random() * href_links_path.length)];
                  document.getElementById("href-img").href = random_path_selector;
             }
         //  console.log("change3() utilisée");
