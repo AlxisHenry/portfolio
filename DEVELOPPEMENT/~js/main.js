@@ -14,28 +14,36 @@ function icon_history_back()
         //  console.log("icon_history_back() utilisée");
     }
 
+/* La création d'objets est importante, car cela va permettre de faciliter si nécessaire les modifications */
+
 let path_to_imgs = "./DEVELOPPEMENT/@img/";
 let path_to_html = "./DEVELOPPEMENT/~html/";
 
-const timken = {
+const timken =
+{
      title: "TIMKEN",
      alt: "TIMKEN",
      img: `${path_to_imgs}Timken.png`,
-     href: `${path_to_html}projet-timken.html`
+     href: `${path_to_html}projet-timken.html`,
+     status: "Not Started",
 };
 
-const snipeit = {
+const snipeit = 
+{
      title: "SNIPE-IT",
      alt: "SNIPE-IT",
      img: `${path_to_imgs}Snipe-IT-logo.png`,
      href: `${path_to_html}projet-snipe-it.html`,
+     status: "Not Started",
 };
 
-const aleatory = {
+const aleatory = 
+{
     title: "ALEATORY",
     alt: "ALEATORY",
     img: `${path_to_imgs}téléchargement (1).png`,
     href: "none",
+    status: "none",
 };
 
 function activate_circle_img1() 
