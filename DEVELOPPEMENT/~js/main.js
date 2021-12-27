@@ -1,4 +1,4 @@
-// Fonctions utilisées sur 'index.html'
+// Fonctions globales 
 
 function icon_history_back()
     {
@@ -13,6 +13,8 @@ function icon_history_back()
                 }
         //  console.log("icon_history_back() utilisée");
     }
+    
+// Fonctions utilisées sur 'index.html'
 
 /* La création d'objets est importante, car cela va permettre de faciliter si nécessaire les modifications */
 
