@@ -22,7 +22,8 @@ function activate_circle_img1()
          document.querySelector(".img2").classList.remove('fas');
          document.querySelector(".img3").classList.remove('fas');
          document.querySelector(".img1").classList.add('fas');
-         document.getElementById("img-centrale").title = "TIMKEN"
+         document.getElementById("img-centrale").title = "TIMKEN";
+         document.getElementById("img-centrale").alt = "TIMKEN";
          document.getElementById("img-centrale").src = `${path_to_imgs}Timken.png`;
          document.getElementById("img-scnd").src = `${path_to_imgs}Snipe-IT-logo.png`;
          document.getElementById("img-thrd").src = `${path_to_imgs}téléchargement (1).png`;
@@ -40,6 +41,7 @@ function activate_circle_img2()
          document.querySelector(".img3").classList.remove('fas');
          document.querySelector(".img2").classList.add('fas');
          document.getElementById("img-centrale").title = "SNIPE-IT"
+         document.getElementById("img-centrale").alt = "SNIPE-IT";
          document.getElementById("img-centrale").src = `${path_to_imgs}Snipe-IT-logo.png`;
          document.getElementById("img-scnd").src = `${path_to_imgs}Timken.png`;
          document.getElementById("img-thrd").src = `${path_to_imgs}téléchargement (1).png`;
@@ -57,6 +59,7 @@ function activate_circle_img3()
          document.querySelector(".img2").classList.remove('fas');
          document.querySelector(".img3").classList.add('fas');
          document.getElementById("img-centrale").title = "ALEATORY"
+         document.getElementById("img-centrale").alt = "ALEATORY";
          document.getElementById("img-centrale").src = `${path_to_imgs}téléchargement (1).png`;
          document.getElementById("img-scnd").src = `${path_to_imgs}Timken.png`;
          document.getElementById("img-thrd").src = `${path_to_imgs}Snipe-IT-logo.png`;

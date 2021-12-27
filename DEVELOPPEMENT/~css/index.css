@@ -260,6 +260,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
   height: 250px;
   /* animation: bounce 1s ease infinite alternate;  */
   display: flex;
+  border-radius: 25.5px 25.5px 25.5px 25.5px;
 }
 
 #img-scnd:hover,
@@ -338,6 +339,27 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
   font-size: 2.5em;
   color: var(--icon-color);
   margin: 7.8vh 3.5vh;
+}
+
+/* END */
+
+/* FOOTER */
+
+footer
+{
+  position: absolute;
+  /* margin: auto; */
+  height: 25px;
+  width: 100%;
+  bottom: 0;
+}
+
+#foot
+{
+  display: flex;
+  justify-content: right;
+  font-size: 1.5vh;
+  margin-right: 1%;
 }
 
 /* END */
@@ -437,41 +459,21 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
 
 /* END */
 
-/* FOOTER */
-
-footer
-{
-  position: absolute;
-  /* margin: auto; */
-  height: 25px;
-  width: 100%;
-  bottom: 0;
-}
-
-#foot
-{
-  display: flex;
-  justify-content: right;
-  font-size: 1.5vh;
-  margin-right: 1%;
-}
-
-/* END */
-
 /* END INDEX.HTML */
 
 /* PRESENTATION.HTML */
 
-#bt-pres  
+.header_buttons_presentation
 {
   display: flex;
   justify-content: right;
   /* haut | droit | bas | gauche */
-  margin: 0.3em 0.1em;
+  margin: 0.3em 0.5em;
   flex-wrap: nowrap;
-  padding: 0.1%;
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
+
+/* DOWNLOAD ICON */ 
 
 .fa-file-download
 {
@@ -483,8 +485,14 @@ footer
 
 .fa-cloud-download-alt
 {
-  font-size: 3em;
+  font-size: 2.5em;
   color: var(--icon-color);
   background-color: transparent;
   cursor: alias;
 }
+
+/* END @ DOWNLOAD - ICON */
+
+
+
+/* END HTML */ 
