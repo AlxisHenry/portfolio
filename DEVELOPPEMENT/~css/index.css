@@ -31,7 +31,7 @@
 
 /* ! INDEX.HTML */
 
-body 
+#body_index_page 
 {
   margin: 0; 
   padding: 0;
@@ -430,6 +430,14 @@ footer
 
 /* ! PRESENTATION.HTML */
 
+#body_presentation_page
+{
+  margin: 0; 
+  padding: 0;
+  overflow-x:  hidden;
+  background-color: var(--main-color3);
+}
+
 /* * DOWNLOAD CV ICON */ 
 
 .fa-cloud-download-alt
@@ -446,6 +454,14 @@ footer
 
 /* ! COMPRENDRE.HTML */
 
+#body_comprendre_page
+{
+  margin: 0; 
+  padding: 0;
+  overflow-x:  hidden;
+  background-color: var(--main-color3);
+}
+
 .fa-code,
 .fa-github
 {
@@ -455,5 +471,41 @@ footer
   cursor: alias;
 }
 
-
 /* ! END COMPRENDRE.HTML */
+
+/* ! PROJETS.HTML */
+
+#body_projets_page
+{
+  margin: 0; 
+  padding: 0;
+  overflow-x:  hidden;
+  background-color: var(--main-color3);
+}
+
+
+/* ! END PROJETS.HTML */ 
+
+/* ! PROJET-TIMKEN.HTML */
+
+#body_projet-timken_page
+{
+  margin: 0; 
+  padding: 0;
+  overflow-x:  hidden;
+  background-color: var(--main-color3);
+}
+
+/* ! END PROJET-TIMKEN.HTML */
+
+/* ! PROJET-SNIPE-IT.HTML */
+
+#body_projet-snipeit_page
+{
+  margin: 0; 
+  padding: 0;
+  overflow-x:  hidden;
+  background-color: var(--main-color3);
+}
+
+/* ! END PROJET-SNIPE-IT.HTML */
