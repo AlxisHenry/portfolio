@@ -172,11 +172,25 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
 
 /* * SLIDES */
 
+
+.btn-select-img 
+{
+  display: flex;
+  justify-content: center;
+  margin: -10px 48%;
+}
+
 .fa-circle 
 {
   font-size: 1.5em;
   color: var(--icon-color);
   background-color: transparent;
+}
+
+.fa-circle:hover 
+{
+  transform: scale(1.15);
+  color:var(--temp-purple);
 }
 
 .img1 
@@ -187,17 +201,12 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
 .img2
 {
   animation: bounce 1.3s ease infinite alternate; 
+  margin: auto 0.7vh;
 }
 
 .img3 
 {
   animation: bounce 1.4s ease infinite alternate; 
-}
-
-.fa-circle:hover 
-{
-  transform: scale(1.15);
-  color:var(--temp-purple);
 }
 
 #src-img-centrale 
@@ -215,13 +224,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
   height: 350px;
   border-radius: 22.5px 22.5px 22.5px 22.5px;
   box-shadow: 1.8px 1.8px var(--black);
-}
-
-#img-centrale:hover 
-{
-  zoom:1.005;
-  box-shadow: 0.5px 0.5px var(--black);
-  cursor:help;
 }
 
 #src-img-scnd, 
@@ -242,12 +244,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
   border-radius: 25.5px 25.5px 25.5px 25.5px;
 }
 
-#img-scnd:hover,
-#img-thrd:hover
-{
-  cursor:zoom-in;
-}
-
 #img-scnd 
 {
   justify-content: left;
@@ -260,21 +256,17 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
   margin: -23em 77em;
 }
 
-.btn-select-img 
+#img-scnd:hover,
+#img-thrd:hover
 {
-  display: flex;
-  justify-content: center;
-  margin: -10px 48%;
+  cursor:zoom-in;
 }
 
-.img2 
+#img-centrale:hover 
 {
-  margin: auto 0.7vh;
-}
-
-.img4 
-{
-  margin: auto 0.7vh;
+  zoom:1.005;
+  box-shadow: 0.5px 0.5px var(--black);
+  cursor:help;
 }
 
 @keyframes bounce
