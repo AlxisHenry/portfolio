@@ -199,13 +199,15 @@ function change_video_frame_menu()
 
 function affichage_flex_circle()
 {
-     document.getElementById('text-circle-video').style.display = "flex";
+     document.getElementById('text-circle-video').style.display = "flex"; 
+     sleepFor(100);
      document.getElementById('video_project').style.filter = "blur(4px)";
 };
 
 function affichage_none_circle()
 {
      document.getElementById('text-circle-video').style.display = "none";
+     sleepFor(100);
      document.getElementById('video_project').style.filter = "none";
 };
 
