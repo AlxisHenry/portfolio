@@ -1,24 +1,40 @@
 console.time("Exécution script JS");
 
-// Fonctions globales 
+// Fonctions globales
 
-function icon_history_back()
-    {
-         let confirm_history_back = confirm("Vous allez quitter la page");
-             if (confirm_history_back == true) 
-                {
-                     history.back();
-                }  
-                else 
-                {
-                     console.log("Cancel History Back");
-                }
-        //  console.log("icon_history_back() utilisée");
-    }
+let history_back_button = document.getElementById('btn-rar');
+
+history_back_button.addEventListener('click', function(e)
+{
+    let confirm_history_back = confirm("Vous allez quitter la page");
+    if (confirm_history_back == true) 
+       {
+            history.back();
+       }  
+       else 
+       {
+            console.log('Cancel History Back');
+       };
+})
+
+let discord_button = document.getElementById('href-discord');
+
+discord_button.addEventListener('click' , function(e) 
+{   
+    if (confirm('Redirect ?')) 
+        {
+             // Redirection vers discord
+        }
+        else 
+        {
+             e.preventDefault();
+             window.location = '../../index.html';
+        };
+});
 
 // Fonctions utilisées sur 'index.html'
 
-/* La création d'objets est importante, car cela va permettre de faciliter si nécessaire les modifications */
+/* La création d'objets est importante, car cela va permettre de faciliter, si nécessaire, les modifications */
 
 let path_to_imgs = "./DEVELOPPEMENT/@img/";
 let path_to_html = "./DEVELOPPEMENT/~html/";
@@ -108,19 +124,19 @@ function activate_circle_img3()
     };
 
 function activate_circle_img_auto() 
-    {
-         setTimeout("activate_circle_img1()",5000);
-         setTimeout("activate_circle_img2()",15000);
-         setTimeout("activate_circle_img3()",25000);
-        //  console.log("activate_circle_img_auto() utilisée")
-    };
-
+{
+     setTimeout("activate_circle_img1()",5000);
+     setTimeout("activate_circle_img2()",15000);
+     setTimeout("activate_circle_img3()",25000);
+    //  console.log("activate_circle_img_auto() utilisée")
+};
+    
 function interval_circle_img_auto() 
     {
-         setTimeout("activate_circle_img2()",5000);
-         setTimeout("activate_circle_img3()",15000);
-         setInterval("activate_circle_img_auto()", 25000);
-        //  console.log("interval_circle_img_auto() utilisée");
+     setTimeout("activate_circle_img2()",5000);
+     setTimeout("activate_circle_img3()",15000);
+     setInterval("activate_circle_img_auto()", 25000);
+    //  console.log("interval_circle_img_auto() utilisée");
     };
 
 // Fonctions utilisées sur 'comprendre.html'
