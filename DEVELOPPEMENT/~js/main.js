@@ -32,6 +32,15 @@ discord_button.addEventListener('click' , (e) =>
         };
 });
 
+function sleepFor(sleepDuration)
+{
+      var now = new Date().getTime();
+      while(new Date().getTime() < now + sleepDuration)
+      { 
+         /* Do nothing */ 
+      };
+ };
+
 // Fonctions utilisées sur 'index.html'
 
 /* La création d'objets est importante, car cela va permettre de faciliter, si nécessaire, les modifications */
@@ -147,27 +156,58 @@ function interval_circle_img_auto()
 
 function button_change_speed()
 {
-     document.getElementById('video_project').playbackRate = 1.25;
+      document.getElementById('video_project').playbackRate = 1.25;
 };
 
 let video = document.getElementById('video_project');
 let frame = document.getElementById('frame_project');
 let i_btn_video = document.getElementById('file-video');
 let i_btn_code = document.getElementById('file-code');
+let i_btn_informations = document.getElementById('info-circle');
 
-function change_video_frame_menu() {
-     if(getComputedStyle(video).display != "none"){
+function time_transition_code() 
+{
+      i_btn_code.style.display = "flex";
+};
+
+function time_transition_video() 
+{
+      i_btn_video.style.display = "flex";
+};
+
+function change_video_frame_menu() 
+{
+     if(getComputedStyle(video).display != "none")
+     {
           video.style.display = "none";
+          sleepFor(100);
           frame.style.display = "flex";
           i_btn_video.style.display = "none";
           i_btn_code.style.display = "flex";
-     } else {
+          i_btn_informations.style.display = "none";
+     } 
+     else 
+     {
           video.style.display = "flex";
+          sleepFor(100);
           frame.style.display = "none";
           i_btn_code.style.display = "none";
           i_btn_video.style.display = "flex";
+          i_btn_informations.style.display = "flex";
      };
-}
+};
+
+function affichage_flex_circle()
+{
+     document.getElementById('text-circle-video').style.display = "flex";
+     document.getElementById('video_project').style.filter = "blur(4px)";
+};
+
+function affichage_none_circle()
+{
+     document.getElementById('text-circle-video').style.display = "none";
+     document.getElementById('video_project').style.filter = "none";
+};
 
 // Fonctions globales
 

@@ -498,31 +498,44 @@ footer
 
 .fa-file-video
 {
-  font-size: 3.5em;
+  font-size: 2.5em;
   color: var(--icon-color);
   display: flex;
-  /* haut | droit | bas | gauche */
-  margin: -10% 75%;
+  margin: -9% 74.5%;
 }
 
 .fa-file-code 
 {
-  font-size: 3.5em;
+  font-size: 2.5em;
   color: var(--icon-color);
   display: none;
-  /* haut | droit | bas | gauche */
-  margin: -10% 75%;
+  margin: -9% 74.5%;
+  
+}
+
+.fa-file-code:hover,
+.fa-file-video:hover
+{
+   color: var(--temp-purple);
+   cursor: pointer;
 }
 
 .fa-info-circle 
 {
   font-size: 2.5em;
-  color: var(--temp-red);
+  color: var(--icon-color);
   display: flex;
   position: relative;
   z-index:999;
-  /* haut | droit | bas | gauche */
-  margin: -26.7% 71.3%;
+  margin: -26% 70.5%;
+}
+
+.fa-info-circle:hover
+{
+  filter: brightness(2);
+  transform: scale(1.05);
+  transition: 1.2s;
+  cursor: help;
 }
 
 #title_video_project,
@@ -540,38 +553,77 @@ footer
   width: 790px;
   height: 445px;
   border: outset;
-  border-radius: 20px 0px 20px 20px;
-  /* display: none; */
+  border-radius: 20px 20px 20px 20px;
+  cursor: none;
 }
 
 #title_video_project
 {
   color: var(--icon-color);
-  /* border: outset; */
   max-width: 680px;
   height: 85px;
   margin-top: 25px;
   font-size: 5em;
+  cursor: default;
 }
 
 #frame_project
 {
   display: none;
   border: outset;
-  color: black;
   margin: auto;
   margin-top: 110px;
   justify-content: center;
   overflow: hidden;
   width: 790px;
   height: 445px;
-  border-radius: 20px 0px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
 }
 
- 
+#text-circle-video
+{
+   display: none;
+   margin: auto;
+   margin-top: 25%;
+   border: unset;
+   border-color: red;
+   background-color: transparent;
+   /* background-color: white; */
+   width: 670px;
+   height: 375px;
+   position: relative;
+}
 
+h1,
+h2,
+p 
+{
+   overflow: hidden;
+}
 
+h1 
+{
+  position: fixed;
+  font-size: 3em;
+  margin-top: -5px;
+  color: var(--icon-color);
+}
 
+h2
+{
+  margin-top:60px;
+  font-size: 1em;
+  color: var(--icon-color);
+}
+
+p
+{
+  margin-top:120px;
+  margin-left: -212px;
+  font-size: 1em;
+  color: var(--icon-color);
+  text-align: left;
+}
 
 /* ! END PROJET-TIMKEN.HTML */
 
