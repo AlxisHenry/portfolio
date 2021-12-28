@@ -36,8 +36,8 @@ discord_button.addEventListener('click' , (e) =>
 
 /* La création d'objets est importante, car cela va permettre de faciliter, si nécessaire, les modifications */
 
-let path_to_imgs = "./DEVELOPPEMENT/@img/";
-let path_to_html = "./DEVELOPPEMENT/~html/";
+let path_to_imgs = "./DEVELOPPEMENT/@img/",
+    path_to_html = "./DEVELOPPEMENT/~html/";
 
 const timken =
 {
@@ -46,18 +46,16 @@ const timken =
      img: `${path_to_imgs}Timken.png`,
      href: `${path_to_html}projet-timken.html`,
      status: "Not Started",
-};
-
-const snipeit = 
+}, 
+snipeit = 
 {
      title: "SNIPE-IT",
      alt: "SNIPE-IT",
      img: `${path_to_imgs}Snipe-IT-logo.png`,
      href: `${path_to_html}projet-snipe-it.html`,
      status: "Not Started",
-};
-
-const aleatory = 
+},
+aleatory = 
 {
     title: "ALEATORY",
     alt: "ALEATORY",
