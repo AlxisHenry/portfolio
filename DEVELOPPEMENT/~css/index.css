@@ -3,30 +3,24 @@
 
 :root
 {
-  /* Couleurs charte graphiques: */
 
-  /* Test première palette */
-   --main-color: #083A59;
+  --main-color: #083A59;
    --main-color3: #105773;
    --main-color4: #20788C;
    --main-color5: #5AADBF;
    --icon-color: #E4EDF2;
-   /* --icon-color: #bebebe; */
 
-  /* Test seconde palette */
    --main2: #4B5DAB;
    --main3: #2F3A6B;
    --main4: #667eea;
    --main5: #6D86F7;
    --main6: #5C71D1;
 
-  /* Couleurs externes */
    --black: #000000;
    --white: #ffffff;
    --temp-red: #ff0000;
    --temp-purple: #ee82ee;
 
-   /* Font Family */
    --abril: 'Abril Fatface', cursive;
    --cinzel: 'Cinzel', serif;
    --secular: 'Secular One', sans-serif;
@@ -35,7 +29,7 @@
 
 }
 
-/* INDEX.HTML */
+/* ! INDEX.HTML */
 
 body 
 {
@@ -43,16 +37,14 @@ body
   padding: 0;
   overflow-x:  hidden;
   background-color: var(--main-color3);
-  /* background-color: none; */
 }
 
-/* HEADER - ICONS */
+/* * HEADER - ICONS & MENU */
 
 .header-menu_header-buttons 
 {
   display: flex;
   justify-content: right;
-  /* haut | droit | bas | gauche */
   margin: 0.3em 4.5em;
   flex-wrap: nowrap;
   padding: 0.1%;
@@ -71,7 +63,6 @@ body
 .fa-backward,
 .fa-chevron-circle-down 
 {
-  /* haut | droit | bas | gauche */
   margin: auto 0.2em;
 }
 
@@ -102,25 +93,19 @@ body
 {
   opacity: 1;
   transition: 0.5s;
-  /* 
-  -webkit- pour Webkit (Chrome, Safari)
-  -moz- pour Gecko (Mozilla)
-  -ms- pour Microsoft (Internet Explorer)
-  */  
   -webkit-transition: all 0.5s ease;
 	-moz-transition:  all 0.5s ease; 
   -ms-transition: all 0.5s ease;
 }
 
-/* END | HEADER - ICONS */
+/* * END HEADER - ICONS & MENU */
 
-/* MENU DÉROULANT @ HEADER - HOVER HOME ICON */
+/* * MENU DÉROULANT */
 
 ul.drop a 
 {
   font-family: var(--abril);
   font-size: 1.2em;
-  /* text-decoration: underline; */
 }
  
 ul.drop,
@@ -162,14 +147,12 @@ ul.drop li ul
 {
   width: 1000%;
   max-width: 265px;
-  /* haut | droit | bas | gauche */
   margin:6px -12.5em;
 }
 
 ul.drop li.menuhover:hover > ul 
 {
   visibility: visible;
-  /* background-color: red; */
 }
    
 header div.header-menu_header-buttons .header-nav ul li ul li a
@@ -180,15 +163,14 @@ header div.header-menu_header-buttons .header-nav ul li ul li a
 
 header div.header-menu_header-buttons .header-nav ul li ul li a:hover 
 {
-  /* background-color: var(--main-color); */
   zoom:1.02;
   text-shadow: -2px 0 var(--black), 0 1px var(--black),
   1px 0 var(--black), 0 -1px var(--black);
 }
 
-/* END | MENU DÉROULANT @ HEADER - HOME ICON */
+/* * END MENU DÉROULANT */
 
-/* MENU CENTRAL */
+/* * SLIDES */
 
 .fa-circle 
 {
@@ -233,7 +215,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
   height: 350px;
   border-radius: 22.5px 22.5px 22.5px 22.5px;
   box-shadow: 1.8px 1.8px var(--black);
-  /* animation: bounce 0.7s ease infinite alternate;  */
 }
 
 #img-centrale:hover 
@@ -241,7 +222,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
   zoom:1.005;
   box-shadow: 0.5px 0.5px var(--black);
   cursor:help;
-  /* animation: bounce 0.5s ease infinite alternate;  */
 }
 
 #src-img-scnd, 
@@ -258,7 +238,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
 {
   width: 250px;
   height: 250px;
-  /* animation: bounce 1s ease infinite alternate;  */
   display: flex;
   border-radius: 25.5px 25.5px 25.5px 25.5px;
 }
@@ -272,7 +251,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
 #img-scnd 
 {
   justify-content: left;
-  /* position: absolute; */
   margin: -23em 3em;
 }
 
@@ -308,9 +286,9 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
   }  
 }
 
-/* END */
+/* * END SLIDES */
 
-/* IMAGE CENTRALE (LOGO + IDENTITÉ) */
+/* * LOGO & NAME */
 
 #menu-central 
 {
@@ -335,20 +313,18 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
 
 .fa-address-card
 {
-  /* haut | droit | bas | gauche */
   font-size: 2.5em;
   color: var(--icon-color);
   margin: 7.8vh 3.5vh;
 }
 
-/* END */
+/* * END LOGO & NAME */
 
-/* FOOTER */
+/* * FOOTER */
 
 footer
 {
   position: absolute;
-  /* margin: auto; */
   height: 25px;
   width: 100%;
   bottom: 0;
@@ -362,9 +338,9 @@ footer
   margin-right: 1%;
 }
 
-/* END */
+/* * END FOOTER */
 
-/* RESPONSIVE */
+/* * RESPONSIVE */
 
 @media screen and (max-width: 1280px) 
 {
@@ -403,7 +379,7 @@ footer
   }
 }
 
-@media screen and (max-width: 1535px) /* OK */
+@media screen and (max-width: 1535px)
 {
   #src-img-scnd, 
   #src-img-thrd 
@@ -435,7 +411,6 @@ footer
   #img-scnd 
   {
       justify-content: left;
-      /* position: absolute; */
       margin: -22em 4.5em;
   }
   #img-thrd 
@@ -457,21 +432,13 @@ footer
   }
 }
 
-/* END */
+/* * END RESPONSIVE */
 
-/* END INDEX.HTML */
+/* ! END INDEX.HTML */
 
-/* PRESENTATION.HTML */
+/* ! PRESENTATION.HTML */
 
-/* DOWNLOAD ICON */ 
-
-.fa-file-download
-{
-  font-size: 3em;
-  color: var(--icon-color);
-  background-color: transparent;
-  cursor: alias;
-}
+/* * DOWNLOAD CV ICON */ 
 
 .fa-cloud-download-alt
 {
@@ -481,8 +448,20 @@ footer
   cursor: alias;
 }
 
-/* END @ DOWNLOAD - ICON */
+/* * END DOWNLOAD CV ICON */
+
+/* ! END PRESENTATION.HTML */ 
+
+/* ! COMPRENDRE.HTML */
+
+.fa-code,
+.fa-github
+{
+  font-size: 2.5em;
+  color: var(--icon-color);
+  background-color: transparent;
+  cursor: alias;
+}
 
 
-
-/* END HTML */ 
+/* ! END COMPRENDRE.HTML */
