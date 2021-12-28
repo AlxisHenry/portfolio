@@ -4,7 +4,7 @@ console.time("Exécution script JS");
 
 let history_back_button = document.getElementById('btn-rar');
 
-history_back_button.addEventListener('click', function(e)
+history_back_button.addEventListener('click', (e) =>
 {
     let confirm_history_back = confirm("Vous allez quitter la page");
     if (confirm_history_back == true) 
@@ -19,7 +19,7 @@ history_back_button.addEventListener('click', function(e)
 
 let discord_button = document.getElementById('href-discord');
 
-discord_button.addEventListener('click' , function(e) 
+discord_button.addEventListener('click' , (e) => 
 {   
     if (confirm('Redirect ?')) 
         {
@@ -132,12 +132,12 @@ function activate_circle_img_auto()
 };
     
 function interval_circle_img_auto() 
-    {
+{
      setTimeout("activate_circle_img2()",5000);
      setTimeout("activate_circle_img3()",15000);
      setInterval("activate_circle_img_auto()", 25000);
     //  console.log("interval_circle_img_auto() utilisée");
-    };
+};
 
 // Fonctions utilisées sur 'comprendre.html'
 
