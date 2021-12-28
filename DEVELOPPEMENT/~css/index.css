@@ -594,7 +594,7 @@ footer
    position: relative;
 }
 
-h1,
+/* h1,
 h2,
 p 
 {
@@ -623,7 +623,7 @@ p
   font-size: 1em;
   color: var(--icon-color);
   text-align: left;
-}
+} */
 
 /* ! END PROJET-TIMKEN.HTML */
 
