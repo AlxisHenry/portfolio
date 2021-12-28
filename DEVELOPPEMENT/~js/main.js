@@ -143,6 +143,13 @@ function interval_circle_img_auto()
 
 // Fonctions utilisées sur 'projets.html'
 
-console.timeEnd("Exécution script JS");
+// Fonctions utilisées sur 'projet-timken.html'
+
+document.getElementById('video').playbackRate = 10.25;
+console.log('test');
+
+// Fonctions globales
+
+// console.timeEnd("Exécution script JS");
 
 // console.clear();

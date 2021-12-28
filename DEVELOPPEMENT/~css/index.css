@@ -496,6 +496,30 @@ footer
   background-color: var(--main-color3);
 }
 
+video 
+{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: 1550px;
+  height: 500px;
+}
+
+/* #timken_project
+{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  overflow: hidden;
+  width: 850px;
+  height: 500px;
+}
+
+ */
+
+
+
+
 /* ! END PROJET-TIMKEN.HTML */
 
 /* ! PROJET-SNIPE-IT.HTML */
