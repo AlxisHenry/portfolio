@@ -496,26 +496,79 @@ footer
   background-color: var(--main-color3);
 }
 
-video 
+.fa-file-video
+{
+  font-size: 3.5em;
+  color: var(--icon-color);
+  display: flex;
+  /* haut | droit | bas | gauche */
+  margin: -10% 75%;
+}
+
+.fa-file-code 
+{
+  font-size: 3.5em;
+  color: var(--icon-color);
+  display: none;
+  /* haut | droit | bas | gauche */
+  margin: -10% 75%;
+}
+
+.fa-info-circle 
+{
+  font-size: 2.5em;
+  color: var(--temp-red);
+  display: flex;
+  position: relative;
+  z-index:999;
+  /* haut | droit | bas | gauche */
+  margin: -26.7% 71.3%;
+}
+
+#title_video_project,
+#video_project
 {
   display: flex;
   margin: auto;
   justify-content: center;
-  width: 1550px;
-  height: 500px;
+  margin-top: 110px;
 }
 
-/* #timken_project
+#video_project
 {
   display: flex;
+  width: 790px;
+  height: 445px;
+  border: outset;
+  border-radius: 20px 0px 20px 20px;
+  /* display: none; */
+}
+
+#title_video_project
+{
+  color: var(--icon-color);
+  /* border: outset; */
+  max-width: 680px;
+  height: 85px;
+  margin-top: 25px;
+  font-size: 5em;
+}
+
+#frame_project
+{
+  display: none;
+  border: outset;
+  color: black;
   margin: auto;
+  margin-top: 110px;
   justify-content: center;
   overflow: hidden;
-  width: 850px;
-  height: 500px;
+  width: 790px;
+  height: 445px;
+  border-radius: 20px 0px 20px 20px;
 }
 
- */
+ 
 
 
 

@@ -145,7 +145,29 @@ function interval_circle_img_auto()
 
 // Fonctions utilisées sur 'projet-timken.html'
 
-document.getElementById('video').playbackRate = 1.25;
+function button_change_speed()
+{
+     document.getElementById('video_project').playbackRate = 1.25;
+};
+
+let video = document.getElementById('video_project');
+let frame = document.getElementById('frame_project');
+let i_btn_video = document.getElementById('file-video');
+let i_btn_code = document.getElementById('file-code');
+
+function change_video_frame_menu() {
+     if(getComputedStyle(video).display != "none"){
+          video.style.display = "none";
+          frame.style.display = "flex";
+          i_btn_video.style.display = "none";
+          i_btn_code.style.display = "flex";
+     } else {
+          video.style.display = "flex";
+          frame.style.display = "none";
+          i_btn_code.style.display = "none";
+          i_btn_video.style.display = "flex";
+     };
+}
 
 // Fonctions globales
 
