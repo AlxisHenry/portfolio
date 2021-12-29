@@ -569,4 +569,114 @@ footer
   background-color: var(--main-color3);
 }
 
+#div_principale_projet_snipeit
+{
+ position: relative;
+ margin: 100px auto;
+ width: 49.375rem;
+ height: 27.813rem;
+}
+
+#video_projet-snp
+{
+  margin-bottom: -5%;
+  width: 100%;
+  height: 100%;
+  border: outset;
+  border-radius: 20px 20px 20px 20px;
+  cursor: pointer;
+}
+
+#frame_projet-snp
+{
+  margin-bottom: -5%;
+  display: none;
+  border: outset;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 20px 20px;
+}
+
+#info-circle-snp
+{
+  position: relative;
+  width: 30px;
+  left: 94%;
+  bottom: 89.5%;
+}
+
+#info-circle_code-snp
+{
+  display: none;
+  position: relative;
+  width: 30px;
+  left: 94%;
+  bottom: 2.5%;
+}
+
+#titlediv-snp
+{
+  position: absolute; 
+  text-align: center; 
+  width: 49.375rem;
+  font-size: 10rem;
+  font-family: var(--araba);
+}
+
+#infodivvideo-snp
+{
+  margin-left: 10px;
+  display: none;
+  position: absolute;
+  width: 42.6rem;
+  height: 27.8rem;
+  bottom: 0%;
+  background-color: none;
+}
+
+#infodivh1-snp
+{
+  margin-top:0;
+  margin-left: 16px;
+  font-size: 5rem;
+  font-family: var(--araba);
+  color: var(--main-color5);
+}
+
+#infop-snp
+{
+  margin-top: 115px;
+  margin-left: -320px;
+  font-size: 1.2rem;
+  color: var(--icon-color);
+}
+
+#infodivframe-snp
+{
+  margin-left: 10px;
+  display: none;
+  position: absolute;
+  width: 42.6rem;
+  height: 27.8rem;
+  bottom: 0%;
+  background-color: none;
+}
+
+#infodivframeh1-snp
+{
+  margin-top:0;
+  margin-left: 16px;
+  font-size: 5rem;
+  font-family: var(--araba);
+  color: var(--main-color5);
+}
+
+#infoframep-snp
+{
+  margin-top: 115px;
+  margin-left: -320px;
+  font-size: 1.2rem;
+  color: var(--icon-color);
+}
+
 /* ! END PROJET-SNIPE-IT.HTML */
