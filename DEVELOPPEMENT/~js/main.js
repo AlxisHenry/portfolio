@@ -200,7 +200,7 @@ function affichage_flex_frame_circle()
      document.getElementById('infodivframe').style.display = "flex"; 
      sleepFor(100);
      document.getElementById('frame_projet').style.filter = "blur(4px)";
-     document.getElementById('frame_projet').style.opacity = "0.5";
+     document.getElementById('frame_projet').style.opacity = "0.1";
      // console.log("frame flex mouseover info")
 };
 function affichage_none_frame_circle() 

@@ -531,7 +531,7 @@ footer
 
 #infodivframe
 {
-  margin-left: 10px;
+  margin-left: 16px;
   display: none;
   position: absolute;
   width: 42.6rem;
@@ -552,7 +552,7 @@ footer
 #infoframep
 {
   margin-top: 115px;
-  margin-left: -320px;
+  margin-left: -200px;
   font-size: 1.2rem;
   color: var(--icon-color);
 }
