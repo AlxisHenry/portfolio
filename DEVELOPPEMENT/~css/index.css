@@ -1,5 +1,7 @@
 /* Import de plusieurs polices avec Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@600&family=Secular+One&family=Vujahday+Script&family=Yuji+Hentaigana+Akari&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500&family=Bebas+Neue&family=Josefin+Sans:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
 :root
 {
@@ -26,8 +28,8 @@
    --secular: 'Secular One', sans-serif;
    --vujah: 'Vujahday Script', cursive;
    --yuji: 'Yuji Hentaigana Akari', cursive;
-
-}
+   --araba: 'Amatic SC', cursive;
+  }
 
 /* ! INDEX.HTML */
 
@@ -215,7 +217,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
  max-width: 200px;
  display: flex;
  justify-content: center;
- margin: 1em auto 3em;
+ margin: -2em auto 4em;
 } 
 
 #img-centrale 
@@ -298,9 +300,10 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
 #nom
 {
   margin-top: 2vh;
-  font-size: 5.5em;
+  font-size: 6.5em;
   color: var(--icon-color);
-  font-family: var(--abril);
+  /* font-family: var(--cinzel); */
+  font-family: var(--araba);
 }
 
 .fa-address-card
