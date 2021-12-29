@@ -248,8 +248,8 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
 {
   width: 250px;
   height: 250px;
-  /* display: flex; */
-  display: none;
+  display: flex;
+  /* display: none; */
   border-radius: 25.5px 25.5px 25.5px 25.5px;
 }
 
@@ -295,7 +295,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
 {
   display: flex;
   justify-content: center;
-  margin: 0.5vh auto -6vh;
+  margin: 0.5vh auto -10.5vh;
   /* border: var(--white);
   border-style:inset; */
   max-width: 80%;
