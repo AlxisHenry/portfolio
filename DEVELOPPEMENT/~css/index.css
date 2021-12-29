@@ -418,7 +418,6 @@ footer
   color: var(--icon-color);
 }
 
-.fa-file-video,
 .fa-file-code 
 {
   position: absolute;
@@ -426,6 +425,15 @@ footer
   /* left: 95.5%; */
   left: 102%;
   bottom: 1%;
+}
+
+.fa-file-video
+{
+  position: absolute;
+  width: 30px;
+  /* left: 95.5%; */
+  left: 102%;
+  bottom: 88%;
 }
 
 .fa-file-code 
@@ -493,7 +501,7 @@ footer
   font-family: var(--araba);
 }
 
-#infodiv 
+#infodivvideo 
 {
   margin-left: 10px;
   display: none;
@@ -514,6 +522,34 @@ footer
 }
 
 #infop
+{
+  margin-top: 115px;
+  margin-left: -320px;
+  font-size: 1.2rem;
+  color: var(--icon-color);
+}
+
+#infodivframe
+{
+  margin-left: 10px;
+  display: none;
+  position: absolute;
+  width: 42.6rem;
+  height: 27.8rem;
+  bottom: 0%;
+  background-color: none;
+}
+
+#infodivframeh1 
+{
+  margin-top:0;
+  margin-left: 16px;
+  font-size: 5rem;
+  font-family: var(--araba);
+  color: var(--main-color5);
+}
+
+#infoframep
 {
   margin-top: 115px;
   margin-left: -320px;
