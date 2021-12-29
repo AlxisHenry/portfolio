@@ -13,7 +13,7 @@ history_back_button.addEventListener('click', (e) =>
        }  
        else 
        {
-            console.log('Cancel History Back');
+            void(0);
        };
 })
 
@@ -28,7 +28,7 @@ discord_button.addEventListener('click' , (e) =>
         else 
         {
              e.preventDefault();
-             window.location = '../../index.html';
+             void(0);
         };
 });
 
@@ -60,7 +60,8 @@ snipeit =
 {
      title: "SNIPE-IT",
      alt: "SNIPE-IT",
-     img: `${path_to_imgs}Snipe-IT-logo.png`,
+     // img: `${path_to_imgs}Snipe-IT-logo.png`,
+     img: `${path_to_imgs}Timken.png`,
      href: `${path_to_html}projet-snipe-it.html`,
      status: "Not Started",
 },
@@ -68,7 +69,8 @@ aleatory =
 {
     title: "ALEATORY",
     alt: "ALEATORY",
-    img: `${path_to_imgs}téléchargement (1).png`,
+    img: `${path_to_imgs}Timken.png`,
+//     img: `${path_to_imgs}téléchargement (1).png`,
     href: "none",
     status: "none",
 };
@@ -156,14 +158,15 @@ function interval_circle_img_auto()
 
 function button_change_speed()
 {
-      document.getElementById('video_project').playbackRate = 1.25;
+      document.getElementById('video_projet').playbackRate = 1.25;
 };
 
-let video = document.getElementById('video_project');
-let frame = document.getElementById('frame_project');
+let video = document.getElementById('video_projet');
+let frame = document.getElementById('frame_projet');
 let i_btn_video = document.getElementById('file-video');
 let i_btn_code = document.getElementById('file-code');
 let i_btn_informations = document.getElementById('info-circle');
+let i_btn_informations_code = document.getElementById('info-circle_code');
 
 function time_transition_code() 
 {
@@ -185,6 +188,7 @@ function change_video_frame_menu()
           i_btn_video.style.display = "none";
           i_btn_code.style.display = "flex";
           i_btn_informations.style.display = "none";
+          i_btn_informations_code.style.display = "flex";
      } 
      else 
      {
@@ -194,21 +198,24 @@ function change_video_frame_menu()
           i_btn_code.style.display = "none";
           i_btn_video.style.display = "flex";
           i_btn_informations.style.display = "flex";
+          i_btn_informations_code.style.display = "none";
      };
 };
 
 function affichage_flex_circle()
 {
-     document.getElementById('text-circle-video').style.display = "flex"; 
+     document.getElementById('infodiv').style.display = "flex"; 
      sleepFor(100);
-     document.getElementById('video_project').style.filter = "blur(4px)";
+     document.getElementById('video_projet').style.filter = "blur(4px)";
+     document.getElementById('video_projet').style.opacity = "0.5";
 };
 
 function affichage_none_circle()
 {
-     document.getElementById('text-circle-video').style.display = "none";
+     document.getElementById('infodiv').style.display = "none";
      sleepFor(100);
-     document.getElementById('video_project').style.filter = "none";
+     document.getElementById('video_projet').style.filter = "none";
+     document.getElementById('video_projet').style.opacity = "1";
 };
 
 // Fonctions globales

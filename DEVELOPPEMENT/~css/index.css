@@ -22,7 +22,7 @@
    --white: #ffffff;
    --temp-red: #ff0000;
    --temp-purple: #ee82ee;
-
+   
    --abril: 'Abril Fatface', cursive;
    --cinzel: 'Cinzel', serif;
    --secular: 'Secular One', sans-serif;
@@ -32,6 +32,12 @@
   }
 
 /* ! INDEX.HTML */
+/* 
+*, ::before, ::after 
+{
+  margin: 0; 
+  padding: 0;
+} */
 
 #body_index_page 
 {
@@ -57,7 +63,7 @@
 .fa-backward,
 .fa-home
 { 
-  font-size: 3em;
+  font-size: 3rem;
   color: var(--icon-color);
   background-color: transparent;
 }
@@ -299,18 +305,17 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover
 #prenom,
 #nom
 {
-  margin-top: 2vh;
-  font-size: 6.5em;
+  margin-top: 0vw;
+  font-size: 8.5vw;
   color: var(--icon-color);
-  /* font-family: var(--cinzel); */
   font-family: var(--araba);
 }
 
 .fa-address-card
 {
-  font-size: 2.5em;
+  font-size: 3.5vw;
   color: var(--icon-color);
-  margin: 7.8vh 3.5vh;
+  margin: 4vw 5.5vh;
 }
 
 /* * END LOGO & NAME */
@@ -405,121 +410,115 @@ footer
   background-color: var(--main-color3);
 }
 
-#btns_video_frame
-{
-  display: flex;
-  justify-content: right;
-  margin-top: -36.2%;
-  margin-right: 21.5%;
-}
-
-.fa-file-video
+.fa-file-video,
+.fa-file-code,
+.fa-info-circle 
 {
   font-size: 2.5em;
-  /* position: absolute; */
   color: var(--icon-color);
-  /* display: flex; */
-  /* margin: -10% 76.5%; */
+}
+
+.fa-file-video,
+.fa-file-code 
+{
+  position: absolute;
+  width: 30px;
+  /* left: 95.5%; */
+  left: 102%;
+  bottom: 1%;
 }
 
 .fa-file-code 
 {
-  font-size: 2.5em;
-  /* position: absolute; */
-  color: var(--icon-color);
   display: none;
-  /* margin: -10% 76.5%; */
-  
 }
 
 .fa-file-code:hover,
 .fa-file-video:hover
 {
-   color: var(--temp-purple);
    cursor: pointer;
 }
 
-.fa-info-circle 
+#div_principale_projet
 {
-  font-size: 2.5em;
-  color: var(--icon-color);
-  margin-right: 15px;
-  /* display: flex; */
-  position: relative;
-  z-index: 8;
-  /* margin: -29% 72%; */
+ position: relative;
+ margin: 100px auto;
+ width: 49.375rem;
+ height: 27.813rem;
 }
 
-.fa-info-circle:hover
+#video_projet
 {
-  filter: brightness(2);
-  transform: scale(1.05);
-  transition: 1.2s;
-  cursor: help;
-}
-
-#title_video_project, 
-#video_project
-{
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-#video_project
-{
-  display: flex;
-  width: 790px;
-  height: 445px;
+  margin-bottom: -5%;
+  width: 100%;
+  height: 100%;
   border: outset;
   border-radius: 20px 20px 20px 20px;
-  cursor: none;
+  cursor: pointer;
 }
 
-#title_video_project
+#frame_projet
 {
-  color: var(--icon-color);
-  max-width: 680px;
-  height: 85px;
-  margin-top: 25px;
-  font-size: 5em;
-  cursor: default;
-}
-
-#frame_project
-{
+  margin-bottom: -5%;
   display: none;
   border: outset;
-  margin: auto;
-  margin-top: 50px;
-  justify-content: center;
-  overflow: hidden;
-  width: 790px;
-  height: 445px;
+  width: 100%;
+  height: 100%;
   border-radius: 20px 20px 20px 20px;
 }
 
-#text-circle-video
+#info-circle
 {
-   display: none;
-   margin: auto;
-   margin-top: 27%;
-   border: unset;
-   border-color: red;
-   background-color: transparent;
-   /* background-color: white; */
-   width: 670px;
-   height: 375px;
-   position: relative;
+  position: relative;
+  width: 30px;
+  left: 94%;
+  bottom: 89.5%;
 }
 
-#title_text-circle-video
+#info-circle_code
 {
-   overflow: hidden;
-   margin-top: 0px;
-   font-size: 3em;
-   color: var(--icon-color);
+  display: none;
+  position: relative;
+  width: 30px;
+  left: 94%;
+  bottom: 2.5%;
+}
+
+#titlediv 
+{
+  position: absolute; 
+  text-align: center; 
+  width: 49.375rem;
+  font-size: 10rem;
+  font-family: var(--araba);
+}
+
+#infodiv 
+{
+  margin-left: 10px;
+  display: none;
+  position: absolute;
+  width: 42.6rem;
+  height: 27.8rem;
+  bottom: 0%;
+  background-color: none;
+}
+
+#infodivh1 
+{
+  margin-top:0;
+  margin-left: 16px;
+  font-size: 5rem;
+  font-family: var(--araba);
+  color: var(--main-color5);
+}
+
+#infop
+{
+  margin-top: 115px;
+  margin-left: -320px;
+  font-size: 1.2rem;
+  color: var(--icon-color);
 }
 
 /* ! END PROJET-TIMKEN.HTML */
