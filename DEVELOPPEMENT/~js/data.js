@@ -38,5 +38,3 @@ localStorage.setItem("snipeit", snipeit_json);
 
 let aleatory_json = JSON.stringify(aleatory_js);
 localStorage.setItem("aleatory", aleatory_json);
-
-
