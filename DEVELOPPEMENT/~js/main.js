@@ -176,7 +176,7 @@ function change_video_frame_menu()
      };
 };
 
-// Vidéo
+// Vidéo 
 function affichage_flex_circle()
 {
      document.getElementById('infodivvideo').style.display = "flex"; 
@@ -204,6 +204,46 @@ function affichage_flex_frame_circle()
      // console.log("frame flex mouseover info")
 };
 function affichage_none_frame_circle() 
+{
+     document.getElementById('infodivframe').style.display = "none";
+     sleepFor(100);
+     document.getElementById('frame_projet').style.filter = "none";
+     document.getElementById('frame_projet').style.opacity = "1";
+     // console.log("frame none mouseout info")
+};
+
+// Fonctions utilisées sur 'projet-snipe-it.html'
+
+// Vidéo
+
+function affichage_flex_circle2()
+{
+     document.getElementById('infodivvideo').style.display = "flex"; 
+     sleepFor(100);
+     document.getElementById('video_projet').style.filter = "blur(4px)";
+     document.getElementById('video_projet').style.opacity = "0.5";
+     // console.log("video flex mouseover info")
+};
+function affichage_none_circle2()
+{
+     document.getElementById('infodivvideo').style.display = "none";
+     sleepFor(100);
+     document.getElementById('video_projet').style.filter = "none";
+     document.getElementById('video_projet').style.opacity = "1";
+     // console.log("video none mouseout info")
+};
+
+// Frame
+
+function affichage_flex_frame_circle2() 
+{
+     document.getElementById('infodivframe').style.display = "flex"; 
+     sleepFor(100);
+     document.getElementById('frame_projet').style.filter = "blur(4px)";
+     document.getElementById('frame_projet').style.opacity = "0.1";
+     // console.log("frame flex mouseover info")
+};
+function affichage_none_frame_circle2() 
 {
      document.getElementById('infodivframe').style.display = "none";
      sleepFor(100);
