@@ -43,37 +43,11 @@ function sleepFor(sleepDuration)
 
 // Fonctions utilisées sur 'index.html'
 
-/* La création d'objets est importante, car cela va permettre de faciliter, si nécessaire, les modifications */
+// Récupération des valeurs des tableaux au format JSON pour que le code ne soit pas illisible
 
-let path_to_imgs = "./DEVELOPPEMENT/@img/",
-    path_to_html = "./DEVELOPPEMENT/~html/";
-
-const timken =
-{
-     title: "TIMKEN",
-     alt: "TIMKEN",
-     img: `${path_to_imgs}Timken.png`,
-     href: `${path_to_html}projet-timken.html`,
-     status: "Not Started",
-}, 
-snipeit = 
-{
-     title: "SNIPE-IT",
-     alt: "SNIPE-IT",
-     // img: `${path_to_imgs}Snipe-IT-logo.png`,
-     img: `${path_to_imgs}Timken.png`,
-     href: `${path_to_html}projet-snipe-it.html`,
-     status: "Not Started",
-},
-aleatory = 
-{
-    title: "ALEATORY",
-    alt: "ALEATORY",
-    img: `${path_to_imgs}Timken.png`,
-//     img: `${path_to_imgs}téléchargement (1).png`,
-    href: "none",
-    status: "none",
-};
+let timken = JSON.parse(localStorage.getItem("timken"));
+let snipeit = JSON.parse(localStorage.getItem("snipeit"));
+let aleatory = JSON.parse(localStorage.getItem("aleatory"));
 
 // Le résultat est bancal, mais la charte graphique est respectée, donc cela est suffisant.
 

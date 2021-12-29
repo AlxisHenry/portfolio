@@ -104,7 +104,7 @@
   -webkit-transition: all 0.5s ease;
 	-moz-transition:  all 0.5s ease; 
   -ms-transition: all 0.5s ease;
-}
+} 
 
 /* * END HEADER - ICONS & MENU */
 
@@ -398,7 +398,6 @@ footer
   background-color: var(--main-color3);
 }
 
-
 /* ! END PROJETS.HTML */ 
 
 /* ! PROJET-TIMKEN.HTML */
@@ -681,3 +680,5 @@ footer
 }
 
 /* ! END PROJET-SNIPE-IT.HTML */
+
+/* ! END HTML */
