@@ -14,8 +14,7 @@ snipeit_js =
 {
  title: "SNIPE-IT",
  alt: "SNIPE-IT",
- // img: `${path_to_imgs}Snipe-IT-logo.png`,
- img: `${path_to_imgs}Timken.png`,
+ img: `${path_to_imgs}snipeit.png`,
  href: `${path_to_html}projet-snipe-it.html`,
  status: "Not Started",
 },
@@ -24,8 +23,7 @@ aleatory_js =
 {
 title: "ALEATORY",
 alt: "ALEATORY",
-img: `${path_to_imgs}Timken.png`,
-//     img: `${path_to_imgs}téléchargement (1).png`,
+img: `${path_to_imgs}aleatory.png`,
 href: "none",
 status: "none",
 };
