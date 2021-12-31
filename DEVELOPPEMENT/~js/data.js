@@ -28,11 +28,8 @@ href: "none",
 status: "none",
 };
 
-let timken_json = JSON.stringify(timken_js);
-localStorage.setItem("timken", timken_json);
+localStorage.setItem("timken", JSON.stringify(timken_js));
 
-let snipeit_json = JSON.stringify(snipeit_js);
-localStorage.setItem("snipeit", snipeit_json);
+localStorage.setItem("snipeit", JSON.stringify(snipeit_js));
 
-let aleatory_json = JSON.stringify(aleatory_js);
-localStorage.setItem("aleatory", aleatory_json);
+localStorage.setItem("aleatory", JSON.stringify(aleatory_js));
