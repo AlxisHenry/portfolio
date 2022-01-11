@@ -26,5 +26,8 @@ def recup_last_release_source_code():
     driver.find_element(By.XPATH, '//*[@id="repo-content-pjax-container"]/div/div[2]/div[1]/div[1]/span/get-repo/details/div/div/div[1]/ul/li[3]/a').click()
     time.sleep(20)
     driver.quit()
+    f = open('DEVELOPPEMENT\~extension\@logs\logs.txt', 'a')
+    f.write(time.strftime('%Y-%m-%d' + " - " + '%H:%M:%S', time.localtime()) + " |==| SCRIPT FINISHED" ) # Save complete datetime
+    f.close()
 
 recup_last_release_source_code()

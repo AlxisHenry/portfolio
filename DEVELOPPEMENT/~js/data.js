@@ -1,7 +1,7 @@
 let path_to_imgs = "./DEVELOPPEMENT/@img/",
     path_to_html = "./DEVELOPPEMENT/~html/";
 
-const timken_js =
+const timken_json =
 {
  title: "TIMKEN",
  alt: "TIMKEN",
@@ -10,7 +10,7 @@ const timken_js =
  status: "Not Started",
 },
 
-snipeit_js = 
+snipeit_json = 
 {
  title: "SNIPE-IT",
  alt: "SNIPE-IT",
@@ -19,7 +19,7 @@ snipeit_js =
  status: "Not Started",
 },
 
-aleatory_js = 
+aleatory_json = 
 {
 title: "ALEATORY",
 alt: "ALEATORY",
@@ -28,8 +28,8 @@ href: "none",
 status: "none",
 };
 
-localStorage.setItem("timken", JSON.stringify(timken_js));
+localStorage.setItem("timken", JSON.stringify(timken_json));
 
-localStorage.setItem("snipeit", JSON.stringify(snipeit_js));
+localStorage.setItem("snipeit", JSON.stringify(snipeit_json));
 
-localStorage.setItem("aleatory", JSON.stringify(aleatory_js));
+localStorage.setItem("aleatory", JSON.stringify(aleatory_json));

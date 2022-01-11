@@ -31,6 +31,12 @@
    --araba: 'Amatic SC', cursive;
   }
 
+  
+::-webkit-scrollbar
+{
+  width: 0;
+}
+
 /* ! INDEX.HTML */
 /* 
 *, ::before, ::after 
@@ -45,6 +51,7 @@
   padding: 0;
   overflow-x:  hidden;
   background-color: var(--main-color3);
+  
 }
 
 /* * HEADER - ICONS & MENU */
@@ -71,18 +78,11 @@
 .fa-backward,
 .fa-chevron-circle-down 
 {
-  margin: auto 0.2em;
-}
-
-.fa-chevron-circle-down 
-{
-  transform: rotateZ(90deg);
-  transition: 0.5s;
+  margin: auto 0.2em; 
 }
 
 .fa-backward:hover,
-.fa-home:hover,
-.fa-chevron-circle-down:hover 
+.fa-home:hover
 {
   color: var(--white);
   cursor:pointer;
@@ -97,14 +97,13 @@
   transition: All 0.9s;
 }
 
-.fa-chevron-circle-down:hover 
+.fa-chevron-circle-down:hover
 {
-  opacity: 1;
-  transition: 0.5s;
-  -webkit-transition: all 0.5s ease;
-	-moz-transition:  all 0.5s ease; 
-  -ms-transition: all 0.5s ease;
-} 
+  color: var(--white);
+  cursor:pointer;
+  transform: scale(1.09);
+  transition: All 0.9s;
+}
 
 /* * END HEADER - ICONS & MENU */
 
@@ -390,12 +389,79 @@ footer
 
 /* ! PROJETS.HTML */
 
+#htmlprojet
+{
+  scroll-behavior: smooth;
+}
+
 #body_projets_page
 {
   margin: 0; 
   padding: 0;
   overflow-x:  hidden;
-  background-color: var(--main-color3);
+  background-color: var(--main-color);
+}
+
+.projet-explication
+{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.projects
+{
+  font-size: 6.5rem;
+  font-family: var(--abril);
+  /* background-color: blue; */
+  height: 25vh;
+  text-align: center;
+  letter-spacing: 4.5px;
+  text-decoration: underline;
+  color: #FFF;
+}
+
+.pres-projet-timken,
+.pres-projet-snp
+{
+  height: 33vh;
+  text-align: center;
+}
+
+.encre
+{
+  text-decoration: none;
+  color: #FFF;
+  letter-spacing: 4.5px;
+  font-size: 10.5rem;
+  font-family: var(--araba);
+}
+
+.pres-projet-timken
+{ 
+ /* background-color: RED; */
+ 
+}
+
+.pres-projet-snp
+{
+  /* background-color: green; */
+}
+
+
+#Timken-presentation
+{
+  height: 100vh;
+  /* background-color: red; */
+  box-shadow: 0px 0px 8px black;
+}
+
+
+#SnipeIT-presentation
+{
+  height: 100vh;
+  /* background-color: green */
 }
 
 /* ! END PROJETS.HTML */ 
@@ -407,7 +473,13 @@ footer
   margin: 0; 
   padding: 0;
   overflow-x:  hidden;
-  background-color: var(--main-color3);
+  background-color: var(--main-color);
+}
+
+#titlediv 
+{
+  color: white;
+  text-decoration: none;
 }
 
 .fa-file-video,
@@ -424,7 +496,7 @@ footer
   width: 30px;
   /* left: 95.5%; */
   left: 102%;
-  bottom: 1%;
+  bottom: 88%;
 }
 
 .fa-file-video
@@ -489,16 +561,29 @@ footer
   position: relative;
   width: 30px;
   left: 94%;
-  bottom: 2.5%;
+  bottom: 89.5%;
 }
 
-#titlediv 
+.L0
 {
-  position: absolute; 
-  text-align: center; 
+  position: relative; 
+  margin: auto;
   width: 49.375rem;
   font-size: 10rem;
   font-family: var(--araba);
+  opacity: 0;
+}
+
+.L1 {animation:letters 3s ease 0000ms forwards;}
+.L2 {animation:letters 3s ease 0500ms forwards;}
+.L3 {animation:letters 3s ease 1000ms forwards;}
+.L4 {animation:letters 3s ease 1500ms forwards;}
+.L5 {animation:letters 3s ease 2000ms forwards;}
+.L6 {animation:letters 3s ease 2500ms forwards;}
+
+@keyframes letters {
+	0% {opacity:0;}
+	100% {opacity:1.0;}
 }
 
 #infodivvideo 
@@ -556,6 +641,10 @@ footer
   font-size: 1.2rem;
   color: var(--icon-color);
 }
+
+
+
+
 
 /* ! END PROJET-TIMKEN.HTML */
 

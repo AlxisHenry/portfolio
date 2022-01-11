@@ -9,13 +9,13 @@
 <link rel="stylesheet" href="./DEVELOPPEMENT/~css/~responsive/index.css">
 <script  type="text/javascript" src="./DEVELOPPEMENT/~js/data.js" defer></script>
 <script  type="text/javascript" src="./DEVELOPPEMENT/~js/main.js" defer></script>
-</head><body id="body_index_page" onload="interval_circle_img_auto();"> 
+</head><body id="body_index_page" onload="change_img_auto();"> 
 <header>
     <div class="header-menu_header-buttons">
       <nav class="header-nav">
       <ul id="nav" class="drop">
         <li class="menuhover">
-          <i class="menuhover fas fa-chevron-circle-down" alt="Menu déroulant" title="Menu"></i>
+<i class="menuhover fas fa-chevron-circle-down" id="dropmenu" alt="Menu déroulant" title="Menu"></i>
             <ul id="responsive"> 
               <li><a href="./DEVELOPPEMENT/~html/presentation.html" title="Présentation" id="href-presentation">PRÉSENTATION</a></li>
               <li><a href="./DEVELOPPEMENT/~html/projets.html" id="href-projets" title="Projets">MES PROJETS</a></li>
@@ -38,14 +38,14 @@
    <a id="href-img" href="./DEVELOPPEMENT/~html/projet-timken.html"><img id="img-centrale" alt="img" src="./DEVELOPPEMENT/@img/Timken.png" title="TIMKEN" class="src"></a>
 </div>
 <div id="src-img-scnd">
-   <img onclick="activate_circle_img1();" id="img-scnd" alt="img-sncd" title="Faire passer en premier plan" src="./DEVELOPPEMENT/@img/snipeit.png">
+   <img onclick="change_to_img1();" id="img-scnd" alt="img-sncd" title="Faire passer en premier plan" src="./DEVELOPPEMENT/@img/snipeit.png">
 </div>
 <div id="src-img-thrd">
-   <img onclick="activate_circle_img3();" id="img-thrd" alt="img-thrd" title="Faire passer en premier plan" src="./DEVELOPPEMENT/@img/aleatory.png">
+   <img onclick="change_to_img3();" id="img-thrd" alt="img-thrd" title="Faire passer en premier plan" src="./DEVELOPPEMENT/@img/aleatory.png">
 </div>
 <div class="btn-select-img"> 
-   <i onclick="activate_circle_img1();" alt="changement img1" title="Aller à l'image 1" class="img1 fas fa-circle"></i>
-   <i onclick="activate_circle_img2();" alt="changement img2" title="Aller à l'image 2" class="img2 far fa-circle"></i>
-   <i onclick="activate_circle_img3();" alt="changement img3" title="Aller à l'image 3" class="img3 far fa-circle"></i>
+   <i onclick="change_to_img1();" alt="changement img1" title="Aller à l'image 1" class="img1 fas fa-circle"></i>
+   <i onclick="change_to_img2();" alt="changement img2" title="Aller à l'image 2" class="img2 far fa-circle"></i>
+   <i onclick="change_to_img3();" alt="changement img3" title="Aller à l'image 3" class="img3 far fa-circle"></i>
 </div>
 <footer><div id="foot" alt="footer html">© 2021 | Alexis Henry</div></footer></body></html>
