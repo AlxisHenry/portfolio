@@ -9,29 +9,6 @@
 <img src="CHARTE GRAPHIQUE\IMAGES\rangement.png" height="300px" width="400px">
 
 
-
-- *Design d'Icons.*
-
-Ci-dessous, des designs temporaires d'icons, je vais choisir l'un deux pour servir d'Icon aux pages du portfolio.
-
-<center>
-
-
-
-<img src="DEVELOPPEMENT\@ico\favicon-1.ico">
-
-
-
-<img src="DEVELOPPEMENT\@ico\favicon-2.ico">
-
-
-
-<img src="DEVELOPPEMENT\@ico\favicon-3.ico" height="80px" width="80px">
-
-
-
-<img src="DEVELOPPEMENT\@ico\favicon-4.ico">
-
 </center>
 
 - *Palette de couleurs utilisées* 
