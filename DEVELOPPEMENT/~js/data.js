@@ -37,7 +37,7 @@ const timken = {
       },
       none: (id) => {
         id.style.filter = "none";
-      },m
+      },
     },
     opacity: (id, value) => {
       id.style.opacity = value;
