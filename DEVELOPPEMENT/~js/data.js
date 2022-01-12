@@ -30,14 +30,14 @@ const timken = {
       none: (id) => {
         id.style.display = "none";
       },
-    },
+    },  
     filter: {
       blur: (id, value) => {
         id.style.filter = `blur(${value}px)`;
       },
       none: (id) => {
         id.style.filter = "none";
-      },
+      },m
     },
     opacity: (id, value) => {
       id.style.opacity = value;

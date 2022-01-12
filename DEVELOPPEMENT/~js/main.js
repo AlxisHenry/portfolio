@@ -50,7 +50,6 @@ function change_to_img1() {
   src_prp.onclick = function () {
     href_img.href = timken.href;
   };
-  //  console.log("change1() utilisée");
 }
 
 function change_to_img2() {
@@ -66,7 +65,6 @@ function change_to_img2() {
   src_prp.onclick = function () {
     href_img.href = snipeit.href;
   };
-  //  console.log("change2() utilisée");
 }
 
 function change_to_img3() {
@@ -85,7 +83,6 @@ function change_to_img3() {
       href_links_path[Math.floor(Math.random() * href_links_path.length)];
     href_img.href = random_path_selector;
   };
-  //  console.log("change3() utilisée");
 }
 
 function change_img_auto() {
@@ -104,66 +101,55 @@ function change_img_auto() {
 
 let video = document.getElementById("video_projet"),
   frame = document.getElementById("frame_projet"),
-  i_btn_video = document.getElementById("file-video"),
-  i_btn_code = document.getElementById("file-code"),
-  i_btn_informations = document.getElementById("info-circle"),
-  i_btn_informations_code = document.getElementById("info-circle_code");
+  ico_video = document.getElementById("file-video"),
+  ico_frame = document.getElementById("file-code"),
+  ico_video_info = document.getElementById("info-circle"),
+  ico_frame_info = document.getElementById("info-circle_code"),
+  info_frame = document.getElementById("infodivframe"),
+  info_video = document.getElementById("infodivvideo");
 
-function change_video_frame_menu() {
+  function toggle() {
   if (getComputedStyle(video).display != "none") {
     style.display.none(video);
-    sleepFor(100);
     style.display.flex(frame);
-    style.display.none(i_btn_video);
-    style.display.flex(i_btn_code);
-    style.display.none(i_btn_informations);
-    style.display.flex(i_btn_informations_code);
+    style.display.none(ico_video);
+    style.display.flex(ico_frame);
+    style.display.none(ico_video_info);
+    style.display.flex(ico_frame_info);
   } else {
     style.display.flex(video);
-    sleepFor(100);
     style.display.none(frame);
-    style.display.none(i_btn_code);
-    style.display.flex(i_btn_video);
-    style.display.flex(i_btn_informations);
-    style.display.none(i_btn_informations_code);
+    style.display.flex(ico_video);
+    style.display.none(ico_frame);
+    style.display.flex(ico_video_info);
+    style.display.none(ico_frame_info);
   }
 }
 
-let infodivvideo = document.getElementById("infodivvideo"),
-  video_projet = document.getElementById("video_projet"),
-  infodivframe = document.getElementById("infodivframe"),
-  frame_projet = document.getElementById("frame_projet");
-
-// Vidéo
-function affichage_flex_circle() {
-  style.display.flex(infodivvideo);
+function info_video_up() {
+  style.display.flex(info_video);
   sleepFor(100);
-  style.filter.blur(video_projet, 4)
-  style.opacity(video_projet, 0.5);
-  // console.log("video flex mouseover info")
+  style.filter.blur(video, 4)
+  style.opacity(video, 0.5);
 }
-function affichage_none_circle() {
-  style.display.none(infodivvideo);
+function info_video_down() {
+  style.display.none(info_video);
   sleepFor(100);
-  style.filter.none(video_projet)
-  style.opacity(video_projet, 1);
-  // console.log("video none mouseout info")
+  style.filter.none(video)
+  style.opacity(video, 1);
 }
 
-// Frame
-function affichage_flex_frame_circle() {
-  style.display.flex(infodivframe);
+function info_frame_up() {
+  style.display.flex(info_frame);
   sleepFor(100);
-  style.filter.blur(frame_projet, 4)
-  style.opacity(frame_projet, 0.1);
-  // console.log("frame flex mouseover info")
+  style.filter.blur(frame, 4)
+  style.opacity(frame, 0.1);
 }
-function affichage_none_frame_circle() {
-  style.display.none(infodivframe);
+function info_frame_down() {
+  style.display.none(info_frame);
   sleepFor(100);
-  style.filter.none(frame_projet);
-  style.opacity(frame_projet, 1);
-  // console.log("frame none mouseout info")
+  style.filter.none(frame);
+  style.opacity(frame, 1);
 }
 
 // Fonctions utilisées sur 'projet-snipe-it.html'
