@@ -29,9 +29,11 @@ function sleepFor(sleepDuration) {
 
 // Fonctions utilisées sur 'index.html'
 
-let img1 = document.querySelector(".img1"),
-  img2 = document.querySelector(".img2"),
-  img3 = document.querySelector(".img3"),
+let btn1 = document.querySelector("btn1"),
+  btn2 = document.querySelector("btn2"),
+  first_button_div = document.getElementById("first_button_div"),
+  nd_button_div = document.getElementById("nd_button_div"),
+  th_button_div = document.getElementById("th_button_div"),
   img_centrale = document.getElementById("img-centrale"),
   img_nd = document.getElementById("img-scnd"),
   img_th = document.getElementById("img-thrd"),
@@ -39,6 +41,9 @@ let img1 = document.querySelector(".img1"),
   href_img = document.getElementById("href-img");
 
 function change_to_img1() {
+  first_button_div.style.display = "none"
+  nd_button_div.style.display = "none"
+  th_button_div.style.display = "flex"
   img_centrale.title = snipeit.title;
   img_centrale.alt = snipeit.alt;
   img_centrale.src = snipeit.img;
@@ -50,6 +55,9 @@ function change_to_img1() {
 }
 
 function change_to_img2() {
+  first_button_div.style.display = "none"
+  th_button_div.style.display = "none"
+  nd_button_div.style.display = "flex"
   img_centrale.title = aleatory.title;
   img_centrale.alt = aleatory.alt;
   img_centrale.src = aleatory.img;
@@ -61,6 +69,9 @@ function change_to_img2() {
 }
 
 function change_to_img3() {
+  nd_button_div.style.display = "none"
+  th_button_div.style.display = "none"
+  first_button_div.style.display = "flex"
   img_centrale.title = timken.title;
   img_centrale.alt = timken.alt;
   img_centrale.src = timken.img;
@@ -74,13 +85,13 @@ function change_to_img3() {
   };
 }
 
-function change_img_auto() {
-  setTimeout(change_to_img1, 20000);
-  setTimeout(change_to_img2, 40000);
-  setTimeout(change_to_img3, 60000);
-}
+// function change_img_auto() {
+//   setTimeout(change_to_img1, 20000);
+//   setTimeout(change_to_img2, 40000);
+//   setTimeout(change_to_img3, 60000);
+// }
 
-setInterval(change_img_auto, 6000)
+// setInterval(change_img_auto, 6000)
 
 // Fonctions utilisées sur 'comprendre.html'
 

@@ -158,8 +158,20 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 
 /* * SLIDES */
 
-.btn-select-img {
+#first_button_div {
   display: flex;
+  justify-content: center;
+  margin: -10px 48%;
+}
+
+#nd_button_div {
+  display: none;
+  justify-content: center;
+  margin: -10px 48%;
+}
+
+#th_button_div {
+  display: none;
   justify-content: center;
   margin: -10px 48%;
 }
@@ -175,30 +187,45 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   color: var(--temp-purple);
 }
 
-.img1 {
+.btn1 {
   animation: bounce 1.2s ease infinite alternate;
-  color: purple;
 }
-
-.img2 {
+.btn2 {
   animation: bounce 1.3s ease infinite alternate;
   margin: auto 0.7vh;
-  color: orange;
+}
+.btn3 {
+  animation: bounce 1.4s ease infinite alternate;
 }
 
+.img1 {
+  color: purple;
+}
+.img2 {
+  color: orange;
+}
 .img3 {
-  animation: bounce 1.4s ease infinite alternate;
   color: black;
 }
 
-.test1 {
-color: purple;
+.img4 {
+  color: orange;
 }
-.test2 {
-color: orange;
+.img5 {
+  color: black;
 }
-.test3 {
-color: black;
+.img6 {
+  color: purple;
+}
+
+.img7 {
+  color: black;
+}
+.img8 {
+  color: purple;
+}
+.img9 {
+  color: orange;
 }
 
 #src-img-centrale {
@@ -238,14 +265,16 @@ color: black;
 #img-scnd {
   justify-content: left;
   margin: -23em 3em;
-  transform:  rotateX(9deg) rotateY(45deg) rotateZ(0deg) translateX(0px) translateY(-35px) translateZ(0px) scale(1.375) skewY(3deg);
-    /* box-shadow: 5px 5px 15px 5px #000000; */
+  transform: rotateX(9deg) rotateY(45deg) rotateZ(0deg) translateX(0px)
+    translateY(-35px) translateZ(0px) scale(1.375) skewY(3deg);
+  /* box-shadow: 5px 5px 15px 5px #000000; */
 }
 
 #img-thrd {
   justify-content: right;
   margin: -23em 77em;
-  transform:  rotateX(-9deg) rotateY(-49deg) rotateZ(0deg) translateX(-50px) translateY(-20px) translateZ(0px) scale(1.4) skewY(-15deg);
+  transform: rotateX(-9deg) rotateY(-49deg) rotateZ(0deg) translateX(-50px)
+    translateY(-20px) translateZ(0px) scale(1.4) skewY(-15deg);
 }
 
 #img-scnd:hover,
