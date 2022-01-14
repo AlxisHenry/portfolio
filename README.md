@@ -1,29 +1,9 @@
 ***
 
+<link rel="stylesheet" href="./DEVELOPPEMENT/~css/md.css">
+
+
 # CCI-2021-PORTFOLIO - **_Charte graphique_**
-
-<style>
-
-#sommaire {
-    font-size: 4rem;
-}
-
-.sommaire {
-  color: white;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-.sommaire:hover {
-  color: orange;
-}
-
-.link {
- color: white;
-}.link:hover {
- color: orange;
-}
-
-</style>
 
 > ### <center id="sommaire"> **_Sommaire_** </center>
 >
