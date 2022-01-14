@@ -41,9 +41,27 @@ let btn1 = document.querySelector("btn1"),
   href_img = document.getElementById("href-img");
 
 function change_to_img1() {
-  first_button_div.style.display = "none"
-  nd_button_div.style.display = "none"
-  th_button_div.style.display = "flex"
+  style.display.none(first_button_div);
+  style.display.none(nd_button_div);
+  style.display.flex(th_button_div);
+}
+
+function change_to_img2() {
+  style.display.none(first_button_div);
+  style.display.none(th_button_div);
+  style.display.flex(nd_button_div);
+}
+
+function change_to_img3() {
+  style.display.none(nd_button_div);
+  style.display.none(th_button_div);
+  style.display.flex(first_button_div);
+}
+
+function change_auto_to_img1() {
+  style.display.none(first_button_div);
+  style.display.none(nd_button_div);
+  style.display.flex(th_button_div);
   img_centrale.title = snipeit.title;
   img_centrale.alt = snipeit.alt;
   img_centrale.src = snipeit.img;
@@ -54,10 +72,10 @@ function change_to_img1() {
   };
 }
 
-function change_to_img2() {
-  first_button_div.style.display = "none"
-  th_button_div.style.display = "none"
-  nd_button_div.style.display = "flex"
+function change_auto_to_img2() {
+  style.display.none(first_button_div);
+  style.display.none(th_button_div);
+  style.display.flex(nd_button_div);
   img_centrale.title = aleatory.title;
   img_centrale.alt = aleatory.alt;
   img_centrale.src = aleatory.img;
@@ -68,10 +86,10 @@ function change_to_img2() {
   };
 }
 
-function change_to_img3() {
-  nd_button_div.style.display = "none"
-  th_button_div.style.display = "none"
-  first_button_div.style.display = "flex"
+function change_auto_to_img3() {
+  style.display.none(nd_button_div);
+  style.display.none(th_button_div);
+  style.display.flex(first_button_div);
   img_centrale.title = timken.title;
   img_centrale.alt = timken.alt;
   img_centrale.src = timken.img;
@@ -85,13 +103,18 @@ function change_to_img3() {
   };
 }
 
-// function change_img_auto() {
-//   setTimeout(change_to_img1, 20000);
-//   setTimeout(change_to_img2, 40000);
-//   setTimeout(change_to_img3, 60000);
-// }
+function change_img_auto() {
+  setTimeout(change_auto_to_img1, 2000);
+  setTimeout(change_auto_to_img2, 4000);
+  setTimeout(change_auto_to_img3, 6000);
+}
 
-// setInterval(change_img_auto, 6000)
+function change_img_onload() {
+  setTimeout(change_auto_to_img1, 2000);
+  setTimeout(change_auto_to_img2, 4000);
+  setTimeout(change_auto_to_img3, 6000);
+  setInterval(change_img_auto, 6000);
+}
 
 // Fonctions utilisées sur 'comprendre.html'
 
@@ -110,7 +133,7 @@ let video = document.getElementById("video_projet"),
   info_frame = document.getElementById("infodivframe"),
   info_video = document.getElementById("infodivvideo");
 
-  function toggle() {
+function toggle() {
   if (getComputedStyle(video).display != "none") {
     style.display.none(video);
     style.display.flex(frame);
@@ -131,20 +154,20 @@ let video = document.getElementById("video_projet"),
 function info_video_up() {
   style.display.flex(info_video);
   sleepFor(100);
-  style.filter.blur(video, 4)
+  style.filter.blur(video, 4);
   style.opacity(video, 0.5);
 }
 function info_video_down() {
   style.display.none(info_video);
   sleepFor(100);
-  style.filter.none(video)
+  style.filter.none(video);
   style.opacity(video, 1);
 }
 
 function info_frame_up() {
   style.display.flex(info_frame);
   sleepFor(100);
-  style.filter.blur(frame, 4)
+  style.filter.blur(frame, 4);
   style.opacity(frame, 0.1);
 }
 function info_frame_down() {
