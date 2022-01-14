@@ -10,7 +10,7 @@
 > ---
 >
 > <center>
-> <a class="sommaire" href="#présentation-du-projet">Présentation du projet</a><br>
+> <a class="sommaire" style=" color: red;" href="#présentation-du-projet">Présentation du projet</a><br>
 > <a class="sommaire" href="#organisation-du-projet">Organisation du projet</a><br>
 > <a class="sommaire" href="#couleurs-utilisées"><i>Couleurs utilisées</a></i><br>
 > <a class="sommaire" href="#design-pages">Design Pages</a><br>
