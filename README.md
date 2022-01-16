@@ -3,8 +3,8 @@
 ## **[Présentation](#présentation-du-projet)**
 ## **[Organisation](#organisation-du-projet)**
 ## **[Couleurs](#couleurs-choisies-et-utilisées)**
-## **[Maquettes](#maquettes-&-design)**
-## **[Tasklist](#tasklist)**
+## **[Maquettes](#maquettes--design)**
+## **[Tasklist](#tasklist-1)**
 
 ---
 
