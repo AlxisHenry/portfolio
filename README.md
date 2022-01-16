@@ -2,8 +2,6 @@
 
 ## **_Sommaire_**
 
----
-
 **[Présentation](#présentation-du-projet)**<br>
 **[Organisation](#organisation-du-projet)**<br>
 **[Couleurs](#couleurs-choisies-et-utilisées)**<br>
@@ -14,7 +12,7 @@
 
 # **Présentation du projet**
 
-Le projet consiste en le développement d'un `portfolio` à l'aide de langages basiques (sans frameworks). Je vais donc utiliser HTML, CSS, JS.
+Le projet consiste en le développement d'un `portfolio` à l'aide de langages basiques (sans frameworks), tels que HTML, CSS et JS.
 
 Mon site est accessible au lien suivant: <a class="link" href="">https://alexishenry.fr</a>
 
