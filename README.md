@@ -26,7 +26,7 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 </p><br>
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\DOMAINS.png">
-</p><br>
+</p>
 
 ---
 
