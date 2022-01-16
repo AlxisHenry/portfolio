@@ -1,12 +1,10 @@
 # CCI-2021-PORTFOLIO - **_Charte graphique_**
 
-## **_Sommaire_**
-
-**[Présentation](#présentation-du-projet)**<br>
-**[Organisation](#organisation-du-projet)**<br>
-**[Couleurs](#couleurs-choisies-et-utilisées)**<br>
-**[Maquettes](#maquettes-&-design)**<br>
-**[Tasklist](#tasklist)**<br>
+## **[Présentation](#présentation-du-projet)**<br>
+## **[Organisation](#organisation-du-projet)**<br>
+## **[Couleurs](#couleurs-choisies-et-utilisées)**<br>
+## **[Maquettes](#maquettes-&-design)**<br>
+## **[Tasklist](#tasklist)**<br><br>
 
 ---
 
