@@ -18,7 +18,7 @@ J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
 Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de domaine sur celui-ci. Il suffit de gérer l'accès vers eux grâce à fichier `.htaccess`.
 
 
-<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\folder server.png">
+<img src="CHARTE GRAPHIQUE\IMAGES\folder server.png">
 
 
 
