@@ -22,10 +22,10 @@ J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
 Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de domaine sur celui-ci. Il suffit de gérer l'accès et la redirection vers eux grâce à un fichier `.htaccess`.<br><br>
 
 <p align="center">
-<img src="CHARTE GRAPHIQUE\IMAGES\htaccess.png">
+<img src="CHARTE GRAPHIQUE\IMAGES\DOMAINS.png">
 </p><br>
 <p align="center">
-<img src="CHARTE GRAPHIQUE\IMAGES\DOMAINS.png">
+<img src="CHARTE GRAPHIQUE\IMAGES\htaccess.png">
 </p>
 
 ---
