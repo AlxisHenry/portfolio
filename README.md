@@ -4,7 +4,7 @@
 ## **[Organisation](#organisation-du-projet)**<br>
 ## **[Couleurs](#couleurs-choisies-et-utilisées)**<br>
 ## **[Maquettes](#maquettes-&-design)**<br>
-## **[Tasklist](#tasklist)**<br><br>
+## **[Tasklist](#tasklist)**
 
 ---
 
@@ -12,7 +12,10 @@
 
 Le projet consiste en le développement d'un `portfolio` à l'aide de langages basiques (sans frameworks), tels que HTML, CSS et JS.
 
-Mon site est accessible au lien suivant: <a class="link" href="">https://alexishenry.fr</a>
+Ce site est accessible au lien suivant: **[https://alexishenry.fr](https://alexishenry.fr)**.
+
+J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**
+
 
 ---
 
