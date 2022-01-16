@@ -73,6 +73,8 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 
 # **Coulers choisies et utilisées**
 
+<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg">
+
 ---
 
 # **Maquettes & Design**
@@ -95,14 +97,6 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 <img src="CHARTE GRAPHIQUE\IMAGES\rangement.png" height="300px" width="400px">
 
 </center>
-
-- _Palette de couleurs utilisées_
-
-Après avoir réfléchi, j'ai trouvé plusieurs palettes de couleurs qui m'ont intéressées,
-
-Je sélectionnerai la palette de couleurs définitive en fonction du rendu de celle-ci lors du développement du portfolio.
-
-<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg">
 
 - _Présentation de la maquette (réalisée sur **excalidraw**)_
 
