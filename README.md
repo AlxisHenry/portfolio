@@ -1,9 +1,13 @@
 # CCI-2021-PORTFOLIO - **_Charte graphique_**
 
 ## **[Présentation](#présentation-du-projet)**
+
 ## **[Organisation](#organisation-du-projet)**
+
 ## **[Couleurs](#couleurs-choisies-et-utilisées)**
+
 ## **[Maquettes](#maquettes--design)**
+
 ## **[Tasklist](#tasklist-1)**
 
 ---
@@ -15,24 +19,23 @@ Le projet consiste en le développement d'un `portfolio` à l'aide de langages b
 Ce site est accessible au lien suivant: **[https://alexishenry.fr](https://alexishenry.fr)**.
 
 J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
-Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de domaine sur celui-ci. Il suffit de gérer l'accès vers eux grâce à fichier `.htaccess`.
-
+Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de domaine sur celui-ci. Il suffit de gérer l'accès vers eux grâce à un fichier `.htaccess`.
 
 <img src="CHARTE GRAPHIQUE\IMAGES\folder server.png">
 
-
+<img src="CHARTE GRAPHIQUE\IMAGES\htaccess.png">
 
 ---
 
 # **Organisation du projet**
 
     CCI-2021-PORTFOLIO
-       
+
         CHARTE GRAPHIQUE
            > EXCALIDRAW
            > IMAGES
                > PALETTES DE COULEURS
-       
+
         DEVELOPPEMENT
            > ~css
               > ~responsive
@@ -43,7 +46,7 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
            > ~extension
               > @exe
                  > chromedriver.exe
-              > @logs 
+              > @logs
                  > logs.txt
               > main.py
            > ~html
@@ -61,18 +64,17 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
                  > CV
               > @fonts
               > @ico
-                 > favicon-16x16.png 
+                 > favicon-16x16.png
               > @img
                  > aleatory.png
                  > snipeit.png
                  > Timken.png
               > @videos
                  > demonstration_automation_snp.mp4
-        
+
         .htaccess
         index.html
         README.md
-
 
 ---
 
@@ -83,7 +85,6 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 ---
 
 # **Maquettes & Design**
-
 
 - _Présentation de la maquette (réalisée sur **excalidraw**)_
 
@@ -121,7 +122,6 @@ Lorsque l'utilisateur cliquera sur une des slides présentes sur la page d'accue
 -- Second design, plus complexe mais beaucoup plus agréable.
 
 <img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 2.png">
-
 
 ---
 
