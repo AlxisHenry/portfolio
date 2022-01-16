@@ -23,7 +23,7 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\htaccess.png">
-</p>
+</p><br><br>
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\DOMAINS.png">
 </p>
