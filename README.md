@@ -25,6 +25,7 @@ J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
         CHARTE GRAPHIQUE
            > EXCALIDRAW
            > IMAGES
+               > PALETTES DE COULEURS
        
         DEVELOPPEMENT
            > ~css
@@ -33,16 +34,32 @@ J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
               > index.css
            > ~extension
               > @exe
+                 > chromedriver.exe
               > @logs 
+                 > logs.txt
               > main.py
            > ~html
+              > comprendre.html
+              > presentation.html
+              > projet-snipe-it.html
+              > projet.timken.html
+              > projets.html
            > ~js
+              > data.js
+              > main.js
            > assets
               > @download
                  > source_code
+                 > CV
               > @fonts
               > @ico
+                 > favicon-16x16.png 
               > @img
+                 > aleatory.png
+                 > snipeit.png
+                 > Timken.png
+              > @videos
+                 > demonstration_automation_snp.mp4
         
         index.html
         README.md
