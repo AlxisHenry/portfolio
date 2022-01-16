@@ -63,6 +63,7 @@ J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
               > @videos
                  > demonstration_automation_snp.mp4
         
+        .htaccess
         index.html
         README.md
 
