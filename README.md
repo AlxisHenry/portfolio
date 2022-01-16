@@ -32,6 +32,8 @@ J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
               > ~responsive
                  > index.css
               > index.css
+           > ~errors
+              > 404.html
            > ~extension
               > @exe
                  > chromedriver.exe
