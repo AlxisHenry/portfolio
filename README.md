@@ -83,7 +83,9 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 
 # **Couleurs choisies et utilisées**
 
-<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg">
+<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg"><br>
+
+  Voici donc les ``variables`` que je vais utilisées dans mon fichier CSS
 
 <p align="center"><br>
 <img src="CHARTE GRAPHIQUE\IMAGES\root css.png">
