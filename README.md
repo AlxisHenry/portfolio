@@ -85,6 +85,11 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 
 <img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg">
 
+<p align="center">
+<img src="CHARTE GRAPHIQUE\IMAGES\root css.png">
+</p>
+
+
 ---
 
 # **Maquettes & Design**

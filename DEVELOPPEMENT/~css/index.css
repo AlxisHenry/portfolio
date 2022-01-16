@@ -4,22 +4,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
 :root {
+  
   --main-color: #083a59;
   --main-color3: #105773;
   --main-color4: #20788c;
   --main-color5: #5aadbf;
   --icon-color: #e4edf2;
-
-  --main2: #4b5dab;
-  --main3: #2f3a6b;
-  --main4: #667eea;
-  --main5: #6d86f7;
-  --main6: #5c71d1;
-
-  --black: #000000;
-  --white: #ffffff;
-  --temp-red: #ff0000;
-  --temp-purple: #ee82ee;
 
   --abril: "Abril Fatface", cursive;
   --cinzel: "Cinzel", serif;
