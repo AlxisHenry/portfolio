@@ -85,19 +85,6 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 
 ---
 
-
-
-
-
-
-
-
- _Présentation de l'organisation du projet._
-
-<img src="CHARTE GRAPHIQUE\IMAGES\rangement.png" height="300px" width="400px">
-
-</center>
-
 - _Présentation de la maquette (réalisée sur **excalidraw**)_
 
   _-- Page d'accueil_ du site
