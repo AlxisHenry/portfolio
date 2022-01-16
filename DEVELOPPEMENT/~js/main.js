@@ -68,7 +68,7 @@ function change_auto_to_img1() {
   img_nd.src = aleatory.img;
   img_th.src = timken.img;
   src_prp.onclick = function () {
-    href_img.href = timken.href;
+    href_img.href = snipeit.href;
   };
 }
 
@@ -82,7 +82,7 @@ function change_auto_to_img2() {
   img_nd.src = timken.img;
   img_th.src = snipeit.img;
   src_prp.onclick = function () {
-    href_img.href = snipeit.href;
+    href_img.href = aleatory.href;
   };
 }
 
