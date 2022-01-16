@@ -14,12 +14,29 @@ Le projet consiste en le développement d'un `portfolio` à l'aide de langages b
 
 Ce site est accessible au lien suivant: **[https://alexishenry.fr](https://alexishenry.fr)**.
 
-J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**
-
+J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
 
 ---
 
 # **Organisation du projet**
+
+    CCI-2021-PORTFOLIO
+        CHARTE GRAPHIQUE
+          > EXCALIDRAW
+          > IMAGES
+        DEVELOPPEMENT
+          > ~css
+          > ~extension
+          > ~html
+          > ~js
+          > assets
+            > @download
+            > @fonts
+            > @ico
+            > @img
+        index.html
+        README.md
+
 
 ---
 
