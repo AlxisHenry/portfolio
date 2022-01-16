@@ -122,6 +122,12 @@ Lorsque l'utilisateur cliquera sur une des slides présentes sur la page d'accue
 
 # **Tasklist**
 
-- [x] eze
+- [x] A
+- [x] A
+- [x] A
+- [x] A
+- [x] A
+- [x] A
+- [x] A
 
 ---
