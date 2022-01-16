@@ -71,7 +71,7 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 
 ---
 
-# **Coulers choisies et utilisées**
+# **Couleurs choisies et utilisées**
 
 <img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg">
 
