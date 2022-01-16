@@ -19,7 +19,7 @@ Le projet consiste en le développement d'un `portfolio` à l'aide de langages b
 Ce site est accessible au lien suivant: **[https://alexishenry.fr](https://alexishenry.fr)**.
 
 J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
-Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de domaine sur celui-ci. Il suffit de gérer l'accès vers eux grâce à un fichier `.htaccess`.
+Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de domaine sur celui-ci. Il suffit de gérer l'accès vers eux grâce à un fichier `.htaccess`.<br>
 
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\htaccess.png">
