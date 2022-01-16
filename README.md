@@ -79,11 +79,6 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 
 # **Maquettes & Design**
 
----
-
-# **Tasklist**
-
----
 
 - _Présentation de la maquette (réalisée sur **excalidraw**)_
 
@@ -120,6 +115,11 @@ Lorsque l'utilisateur cliquera sur une des slides présentes sur la page d'accue
 
 -- Second design, plus complexe mais beaucoup plus agréable.
 
-<img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 2.1.png">
-
 <img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 2.png">
+
+
+---
+
+# **Tasklist**
+
+---
