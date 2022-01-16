@@ -28,11 +28,18 @@ J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
        
         DEVELOPPEMENT
            > ~css
+              > ~responsive
+                 > index.css
+              > index.css
            > ~extension
+              > @exe
+              > @logs 
+              > main.py
            > ~html
            > ~js
            > assets
               > @download
+                 > source_code
               > @fonts
               > @ico
               > @img
