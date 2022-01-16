@@ -1,5 +1,5 @@
-const path_to_imgs = "./DEVELOPPEMENT/@img/",
-  path_to_html = "./DEVELOPPEMENT/~html/";
+const path_to_imgs = "./DEVELOPPEMENT/assets/@img/",
+  path_to_html = "./DEVELOPPEMENT/assets/~html/";
 
 const timken = {
     title: "TIMKEN",
