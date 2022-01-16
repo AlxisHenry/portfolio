@@ -30,7 +30,7 @@ const timken = {
       none: (id) => {
         id.style.display = "none";
       },
-    },  
+    },
     filter: {
       blur: (id, value) => {
         id.style.filter = `blur(${value}px)`;

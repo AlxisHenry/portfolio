@@ -82,8 +82,10 @@ function change_auto_to_img2() {
   img_nd.src = timken.img;
   img_th.src = snipeit.img;
   src_prp.onclick = function () {
-    href_img.href = aleatory.href;
-  };
+    let href_links_path = [timken.href, snipeit.href];
+    let random_path_selector =
+      href_links_path[Math.floor(Math.random() * href_links_path.length)];
+    href_img.href = random_path_selector;  };
 }
 
 function change_auto_to_img3() {
@@ -96,10 +98,7 @@ function change_auto_to_img3() {
   img_nd.src = snipeit.img;
   img_th.src = aleatory.img;
   src_prp.onclick = function () {
-    let href_links_path = [timken.href, snipeit.href];
-    let random_path_selector =
-      href_links_path[Math.floor(Math.random() * href_links_path.length)];
-    href_img.href = random_path_selector;
+    href_img.href = timken.href;
   };
 }
 
