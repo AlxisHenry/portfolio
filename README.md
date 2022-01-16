@@ -1,30 +1,49 @@
-
 # CCI-2021-PORTFOLIO - **_Charte graphique_**
 
 ## **_Sommaire_**
-***
-**[Présentation](#presentation-du-projet)**<br>
-**[Organisation](#)**<br>
-**[Couleurs](#)**<br>
-**[Maquettes](#)**<br>
-**[Tasklist](#)**<br>
-
-
 
 ---
-# Présentation du projet
+
+**[Présentation](#présentation-du-projet)**<br>
+**[Organisation](#organisation-du-projet)**<br>
+**[Couleurs](#couleurs-choisies-et-utilisées)**<br>
+**[Maquettes](#maquettes-&-design)**<br>
+**[Tasklist](#tasklist)**<br>
+
+---
+
+# **Présentation du projet**
 
 Le projet consiste en le développement d'un `portfolio` à l'aide de langages basiques (sans frameworks). Je vais donc utiliser HTML, CSS, JS.
 
 Mon site est accessible au lien suivant: <a class="link" href="">https://alexishenry.fr</a>
 
+---
+
+# **Organisation du projet**
+
+---
+
+# **Coulers choisies et utilisées**
+
+---
+
+# **Maquettes & Design**
+
+---
+
+# **Tasklist**
+
+---
 
 
 
 
 
 
-- _Présentation de l'organisation du projet._
+
+
+ _Présentation de l'organisation du projet._
 
 <img src="CHARTE GRAPHIQUE\IMAGES\rangement.png" height="300px" width="400px">
 
@@ -39,8 +58,6 @@ Je sélectionnerai la palette de couleurs définitive en fonction du rendu de ce
 <img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg">
 
 - _Présentation de la maquette (réalisée sur **excalidraw**)_
-
-  
 
   _-- Page d'accueil_ du site
 
