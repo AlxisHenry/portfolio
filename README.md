@@ -21,19 +21,22 @@ J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
 # **Organisation du projet**
 
     CCI-2021-PORTFOLIO
+       
         CHARTE GRAPHIQUE
-          > EXCALIDRAW
-          > IMAGES
+           > EXCALIDRAW
+           > IMAGES
+       
         DEVELOPPEMENT
-          > ~css
-          > ~extension
-          > ~html
-          > ~js
-          > assets
-            > @download
-            > @fonts
-            > @ico
-            > @img
+           > ~css
+           > ~extension
+           > ~html
+           > ~js
+           > assets
+              > @download
+              > @fonts
+              > @ico
+              > @img
+        
         index.html
         README.md
 
