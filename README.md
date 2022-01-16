@@ -1,20 +1,17 @@
 ***
 
-<link rel="stylesheet" href="./DEVELOPPEMENT/~css/md.css">
-
-
 # CCI-2021-PORTFOLIO - **_Charte graphique_**
 
-> ### <center id="sommaire"> **_Sommaire_** </center>
->
-> ---
->
-> <center>
-> <a class="sommaire" style=" color: red;" href="#présentation-du-projet">Présentation du projet</a><br>
+### <center> **_Sommaire_** </center>
+
+---
+
+ <center>
+Présentation du projet</a><br>
 > <a class="sommaire" href="#organisation-du-projet">Organisation du projet</a><br>
 > <a class="sommaire" href="#couleurs-utilisées"><i>Couleurs utilisées</a></i><br>
 > <a class="sommaire" href="#design-pages">Design Pages</a><br>
-> <a class="sommaire" href="#tasklist"><b>Tasklist</a></b><br>
+[]()<b>Tasklist</a></b><br>
 > </center>
 >
 > ---
@@ -52,7 +49,7 @@ Je sélectionnerai la palette de couleurs définitive en fonction du rendu de ce
 
 - _Présentation de la maquette (réalisée sur **excalidraw**)_
 
-  ​
+  
 
   _-- Page d'accueil_ du site
 
