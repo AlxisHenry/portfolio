@@ -50,9 +50,17 @@
 
 @media screen and (max-width: 1200px) /*  ordinateur */
 {
+
 }
 
-
+@media screen and (max-width: 1025px)
+{
+  #src-img-scnd, 
+  #src-img-thrd 
+  {
+      display: none;
+  }
+}
 
 /* 
 @media screen and (max-width: 1280px) 

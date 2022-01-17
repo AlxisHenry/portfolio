@@ -4,7 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
 :root {
-  
   --main-color: #083a59;
   --main-color3: #105773;
   --main-color4: #20788c;
@@ -135,14 +134,13 @@ ul.drop li.menuhover:hover > ul {
 }
 
 header div.header-menu_header-buttons .header-nav ul li ul li a {
-  color: var(--white);
+  color: var(--icon-color);
   text-decoration: none;
 }
 
 header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   zoom: 1.02;
-  text-shadow: -2px 0 var(--black), 0 1px var(--black), 1px 0 var(--black),
-    0 -1px var(--black);
+  text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 /* * END MENU DÉROULANT */
@@ -173,11 +171,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   background-color: transparent;
 }
 
-.fa-circle:hover {
-  transform: scale(1.15);
-  color: var(--temp-purple);
-}
-
 .btn1 {
   animation: bounce 1.2s ease infinite alternate;
 }
@@ -201,29 +194,28 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 }
 .img6,
 .img8,
-.img1  {
+.img1 {
   color: purple;
 }
 
 #src-img-centrale {
-  max-height: 400px;
-  max-width: 800px;
+  max-height: 25rem;
+  max-width: 50rem;
   display: flex;
   justify-content: center;
-  margin: -5% auto 4%;
+  margin: -6% auto 4%;
 }
 
 #img-centrale {
   width: 100%;
-  height: 350px;
+  height: 100%;
   border-radius: 22.5px 22.5px 22.5px 22.5px;
-  box-shadow: 1.8px 1.8px var(--black);
+  box-shadow: 1.8px 1.8px black;
 }
 
 #src-img-scnd,
 #src-img-thrd {
-  max-height: 400px;
-  max-width: 130px;
+  max-width: 800px;
   filter: blur(4.5px);
   display: flex;
 }
@@ -231,16 +223,14 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 #img-scnd,
 #img-thrd {
   width: 300px;
-  max-width: 300px;
-  height: 250px;
-  max-height: 250px;
+  height: 100%;
   display: flex;
   border-radius: 25.5px 25.5px 25.5px 25.5px;
 }
 
 #img-scnd {
   justify-content: left;
-  margin: -23em 3em;
+  margin: -40% 5%;
   transform: rotateX(9deg) rotateY(45deg) rotateZ(0deg) translateX(0px)
     translateY(-35px) translateZ(0px) scale(1.375) skewY(3deg);
   /* box-shadow: 5px 5px 15px 5px #000000; */
@@ -248,7 +238,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 
 #img-thrd {
   justify-content: right;
-  margin: -23em 77em;
+  margin: -40% 152%;
   transform: rotateX(-9deg) rotateY(-49deg) rotateZ(0deg) translateX(-50px)
     translateY(-20px) translateZ(0px) scale(1.4) skewY(-15deg);
 }
@@ -260,7 +250,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 
 #img-centrale:hover {
   zoom: 1.005;
-  box-shadow: 0.5px 0.5px var(--black);
+  box-shadow: 0.5px 0.5px black;
   cursor: help;
 }
 

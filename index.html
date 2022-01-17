@@ -1,64 +1,203 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio - Alexis</title>
-<link rel="icon" href="./DEVELOPPEMENT/assets/@ico/favicon-16x16.png" />
-<script src="https://kit.fontawesome.com/ac4dc0897b.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./DEVELOPPEMENT/~css/index.css">
-<link rel="stylesheet" href="./DEVELOPPEMENT/~css/~responsive/index.css">
-<script  type="text/javascript" src="./DEVELOPPEMENT/~js/data.js" defer></script>
-<script  type="text/javascript" src="./DEVELOPPEMENT/~js/main.js" defer></script>
-</head><body id="body_index_page" onload="change_img_onload()"> 
-<header>
-    <div class="header-menu_header-buttons">
-      <nav class="header-nav">
-      <ul id="nav" class="drop">
-        <li class="menuhover">
-<i class="menuhover fas fa-chevron-circle-down" id="dropmenu" alt="Menu déroulant" title="Menu"></i>
-            <ul id="responsive"> 
-              <li><a href="./DEVELOPPEMENT/~html/presentation.html" title="Présentation" id="href-presentation">PRÉSENTATION</a></li>
-              <li><a href="./DEVELOPPEMENT/~html/projets.html" id="href-projets" title="Projets">MES PROJETS</a></li>
-              <li><a href="./DEVELOPPEMENT/~html/comprendre.html" id="href-comprendre" title="Comprendre">COMPRENDRE MON SITE</a></li>
-              <li><a href="https://discordapp.com/users/432241817975521282" id="href-discord" title="Join Me On Discord">JOIN MY DISCORD</a></li>
-            </ul>
-        </li>
-      </ul>
-      </nav>
-      <div class="bt-retour-accueil">
-         <a href="index.html"><i id="btn-rac" class="fas fa-home" alt="Accueil" title="Retour à l'accueil"></i></a>     
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Alexis</title>
+    <link rel="icon" href="./DEVELOPPEMENT/assets/@ico/favicon-16x16.png" />
+    <script
+      src="https://kit.fontawesome.com/ac4dc0897b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./DEVELOPPEMENT/~css/index.css" />
+    <link rel="stylesheet" href="./DEVELOPPEMENT/~css/~responsive/index.css" />
+    <script
+      type="text/javascript"
+      src="./DEVELOPPEMENT/~js/data.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="./DEVELOPPEMENT/~js/main.js"
+      defer
+    ></script>
+  </head>
+  <body id="body_index_page" onload="change_img_onload()">
+    <header>
+      <div class="header-menu_header-buttons">
+        <nav class="header-nav">
+          <ul id="nav" class="drop">
+            <li class="menuhover">
+              <i
+                class="menuhover fas fa-chevron-circle-down"
+                id="dropmenu"
+                alt="Menu déroulant"
+                title="Menu"
+              ></i>
+              <ul id="responsive">
+                <li>
+                  <a
+                    href="./DEVELOPPEMENT/~html/presentation.html"
+                    title="Présentation"
+                    id="href-presentation"
+                    >PRÉSENTATION</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./DEVELOPPEMENT/~html/projets.html"
+                    id="href-projets"
+                    title="Projets"
+                    >MES PROJETS</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./DEVELOPPEMENT/~html/comprendre.html"
+                    id="href-comprendre"
+                    title="Comprendre"
+                    >COMPRENDRE MON SITE</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://discordapp.com/users/432241817975521282"
+                    id="href-discord"
+                    title="Join Me On Discord"
+                    >JOIN MY DISCORD</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./DEVELOPPEMENT/~html/contact-me.html"
+                    id="href-contact"
+                    title="Contact me!"
+                    >CONTACT ME</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="bt-retour-accueil">
+          <a href="index.html"
+            ><i
+              id="btn-rac"
+              class="fas fa-home"
+              alt="Accueil"
+              title="Retour à l'accueil"
+            ></i
+          ></a>
+        </div>
+        <div class="bt-retour-arriere">
+          <i
+            id="btn-rar"
+            alt="Arrière"
+            class="fas fa-backward"
+            title="Retour en arrière"
+          ></i>
+        </div>
       </div>
-      <div class="bt-retour-arriere">
-         <i id="btn-rar" alt="Arrière" class="fas fa-backward" title="Retour en arrière"></i>
+    </header>
+    <div id="menu-central">
+      <p id="prenom" alt="prénom">ALEXIS</p>
+      <i class="far fa-address-card"></i>
+      <p id="nom" alt="nom">HENRY</p>
+    </div>
+    <div id="src-img-centrale">
+      <a id="href-img" href="./DEVELOPPEMENT/~html/projet-timken.html"
+        ><img
+          id="img-centrale"
+          alt="img"
+          src="./DEVELOPPEMENT/assets/@img/Timken.png"
+          title="TIMKEN"
+          class="src"
+      /></a>
+    </div>
+    <div id="src-img-scnd">
+      <img
+        onclick="change_to_img1();"
+        id="img-scnd"
+        alt="img-sncd"
+        title="Faire passer en premier plan"
+        src="./DEVELOPPEMENT/assets/@img/snipeit.png"
+      />
+    </div>
+    <div id="src-img-thrd">
+      <img
+        onclick="change_to_img3();"
+        id="img-thrd"
+        alt="img-thrd"
+        title="Faire passer en premier plan"
+        src="./DEVELOPPEMENT/assets/@img/aleatory.png"
+      />
+    </div>
+    <div class="btn-select-img">
+      <div id="first_button_div">
+        <i
+          onclick="change_to_img1();"
+          alt="changement img1"
+          title="Aller à l'image 1"
+          class="img1 btn1 fas fa-circle"
+        ></i>
+        <i
+          onclick="change_to_img2();"
+          alt="changement img2"
+          title="Aller à l'image 2"
+          class="img2 btn2 fas fa-circle"
+        ></i>
+        <i
+          onclick="change_to_img3();"
+          alt="changement img3"
+          title="Aller à l'image 3"
+          class="img3 btn3 fas fa-circle"
+        ></i>
+      </div>
+      <div id="nd_button_div">
+        <i
+          onclick="change_to_img1();"
+          alt="changement img1"
+          title="Aller à l'image 1"
+          class="img4 btn1 fas fa-circle"
+        ></i>
+        <i
+          onclick="change_to_img2();"
+          alt="changement img2"
+          title="Aller à l'image 2"
+          class="img5 btn2 fas fa-circle"
+        ></i>
+        <i
+          onclick="change_to_img3();"
+          alt="changement img3"
+          title="Aller à l'image 3"
+          class="img6 btn3 fas fa-circle"
+        ></i>
+      </div>
+      <div id="th_button_div">
+        <i
+          onclick="change_to_img1();"
+          alt="changement img1"
+          title="Aller à l'image 1"
+          class="img7 btn1 fas fa-circle"
+        ></i>
+        <i
+          onclick="change_to_img2();"
+          alt="changement img2"
+          title="Aller à l'image 2"
+          class="img8 btn2 fas fa-circle"
+        ></i>
+        <i
+          onclick="change_to_img3();"
+          alt="changement img3"
+          title="Aller à l'image 3"
+          class="img9 btn3 fas fa-circle"
+        ></i>
       </div>
     </div>
-</header>
-<div id="menu-central"><p id="prenom" alt="prénom">ALEXIS</p><i class="far fa-address-card"></i><p id="nom" alt="nom">HENRY </p></div>
-<div id="src-img-centrale">
-   <a id="href-img" href="./DEVELOPPEMENT/~html/projet-timken.html"><img id="img-centrale" alt="img" src="./DEVELOPPEMENT/assets/@img/Timken.png" title="TIMKEN" class="src"></a>
-</div>
-<div id="src-img-scnd">
-   <img onclick="change_to_img1();" id="img-scnd" alt="img-sncd" title="Faire passer en premier plan" src="./DEVELOPPEMENT/assets/@img/snipeit.png">
-</div>
-<div id="src-img-thrd">
-   <img onclick="change_to_img3();" id="img-thrd" alt="img-thrd" title="Faire passer en premier plan" src="./DEVELOPPEMENT/assets/@img/aleatory.png">
-</div>
-<div class="btn-select-img"> 
-   <div id="first_button_div">
-   <i onclick="change_to_img1();" alt="changement img1" title="Aller à l'image 1" class="img1 btn1 fas fa-circle"></i>
-   <i onclick="change_to_img2();" alt="changement img2" title="Aller à l'image 2" class="img2 btn2 fas fa-circle"></i>
-   <i onclick="change_to_img3();" alt="changement img3" title="Aller à l'image 3" class="img3 btn3 fas fa-circle"></i>
-   </div>  
-   <div id="nd_button_div"> 
-   <i onclick="change_to_img1();" alt="changement img1" title="Aller à l'image 1" class="img4 btn1 fas fa-circle"></i>
-   <i onclick="change_to_img2();" alt="changement img2" title="Aller à l'image 2" class="img5 btn2 fas fa-circle"></i>
-   <i onclick="change_to_img3();" alt="changement img3" title="Aller à l'image 3" class="img6 btn3 fas fa-circle"></i>
-   </div>  
-   <div id="th_button_div"> 
-   <i onclick="change_to_img1();" alt="changement img1" title="Aller à l'image 1" class="img7 btn1 fas fa-circle"></i>
-   <i onclick="change_to_img2();" alt="changement img2" title="Aller à l'image 2" class="img8 btn2 fas fa-circle"></i>
-   <i onclick="change_to_img3();" alt="changement img3" title="Aller à l'image 3" class="img9 btn3 fas fa-circle"></i>
-   </div> 
-   </div>  
 
-<footer><div id="foot" alt="footer html">© 2021 | Alexis Henry</div></footer></body></html>
+    <footer>
+      <div id="foot" alt="footer html">© 2021 | Alexis Henry</div>
+    </footer>
+  </body>
+</html>
