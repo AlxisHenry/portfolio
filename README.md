@@ -109,7 +109,7 @@ Les maquettes ne possèdent pas de couleurs, ni de cotes précises. Cela se fera
 La page sera composé de trois ``containers``. <br><br>
 Le ``Header`` qui comportera les .
 Une première `section`qui contient mon identité:
-<img src="CHARTE GRAPHIQUE\IMAGES\identité.png">
+<img src="CHARTE GRAPHIQUE\IMAGES\identite.png">
 
 
 
