@@ -125,25 +125,19 @@ Une première `section` qui contient mon identité:<br><br>
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\identite.png">
 </p>
-<br><br>
+<br>
 
 Une seconde `section` dans laquelle il y a le contenu principal. <br><br>
 
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\contenu.png">
-</p>
+</p><br>
 
-Et enfin le `footer`
+Et enfin le `footer`<br><br>
 
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\footer.png">
 </p>
-
-- En dessous, les projets présentés sur le site dérouleront.
-  - La slide du milieu sera mise en valeur par rapport à celles de côtés,
-  - Les slides de côtés seront floutées et accessible soit :
-    - par une flèche qui permet d'aller à droite ou à gauche, ou soit changeront automatiquement au bout d'un certain délai.
-    - par un système de ce style: <img src="CHARTE GRAPHIQUE\IMAGES\button.png"> , où le rond coché signifie la slide présente.
 
 #
 
