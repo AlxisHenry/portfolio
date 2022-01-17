@@ -96,7 +96,7 @@ X
 
 # **Maquettes & Design**
 
-J'ai réalisé les maquettes à intégrer sur [https://excalidraw.com/](`excalidraw`)
+J'ai réalisé les maquettes à intégrer sur [`excalidraw`](https://excalidraw.com/)
 
   _-- Page d'accueil_ du site
 
