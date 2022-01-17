@@ -99,7 +99,7 @@ J'ai réalisé les maquettes à intégrer sur [`excalidraw`](https://excalidraw.
 Celles-ci sont disponibles en cliquant [ici](https://github.com/AlxisHenry/CCI-2021-PORTFOLIO/tree/main/CHARTE%20GRAPHIQUE/EXCALIDRAW).<br>
 Les maquettes ne possèdent pas de couleurs, ni de cotes précises. Cela se fera au fur et à mesure du développement.
 
-## [Page d'accueil](https://alexishenry.fr/)
+### [Page d'accueil](https://alexishenry.fr/)
 
 <img src="CHARTE GRAPHIQUE\IMAGES\Page d'arrivée.png">
 
