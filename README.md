@@ -112,15 +112,18 @@ Le `Header` qui comportera les différents menus.<br>
 <img src="CHARTE GRAPHIQUE\IMAGES\menus.png">
 </p>
 <br><br>
+
 Une première `section` qui contient mon identité:<br><br>
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\identite.png">
 </p>
 <br><br>
+
 Une seconde `section` dans laquelle il y a le contenu principal. <br><br>
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\contenu.png">
 </p>
+
 Et enfin le `footer`
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\footer.png">
