@@ -106,18 +106,25 @@ Les maquettes ne possèdent pas de couleurs, ni de cotes précises. Cela se fera
 
 <img src="CHARTE GRAPHIQUE\IMAGES\Page d'arrivée.png">
 
-La page sera composé de quatre ``containers``. <br><br>
-Le ``Header`` qui comportera les différents menus.<br><br>
-Une première `section` qui contient mon identité:
+La page sera composé de quatre `containers`. <br>
+Le `Header` qui comportera les différents menus.<br>
+<p align="center">
+<img src="CHARTE GRAPHIQUE\IMAGES\menus.png">
+</p>
+<br><br>
+Une première `section` qui contient mon identité:<br>
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\identite.png">
-</p><br>
-
+</p>
+<br><br>
 Une seconde `section` dans laquelle il y a le contenu principal. <br>
-
+<p align="center">
+<img src="CHARTE GRAPHIQUE\IMAGES\contenu.png">
+</p>
 Et enfin le `footer`
-
-
+<p align="center">
+<img src="CHARTE GRAPHIQUE\IMAGES\footer.png">
+</p>
 
 - En haut à droite, il y a deux menus.
   - Celui de droite, sera le menu déroulant : c'est-à-dire, que lorsque l'utilisateur cliquera sur ce bouton, un menu s'affichera.
