@@ -98,7 +98,7 @@ Voici donc les `variables` que je vais utilisées dans mon fichier CSS:
 
 J'ai réalisé les maquettes à intégrer sur [`excalidraw`](https://excalidraw.com/).
 Celles-ci sont disponibles en cliquant [ici](https://github.com/AlxisHenry/CCI-2021-PORTFOLIO/tree/main/CHARTE%20GRAPHIQUE/EXCALIDRAW).<br>
-Les maquettes ne possèdent pas de couleurs, ni de côtes précises. 
+Les maquettes ne possèdent pas de couleurs, ni de cotes précises. Cela se fera au fur et à mesure du développement.
 
 #
 
