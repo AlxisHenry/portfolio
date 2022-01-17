@@ -64,11 +64,11 @@
 
 .fa-backward:hover,
 .fa-home:hover {
-  color: var(--white);
+  color: var(--icon-color);
   cursor: pointer;
   transform: scale(1.09);
-  text-shadow: -2px 0 var(--black), 0 1px var(--black), 1px 0 var(--black),
-    0 -1px var(--black);
+  text-shadow: -2px 0 black, 0 1px black, 1px 0 black,
+    0 -1px black;
 }
 
 .fa-backward:hover,
@@ -77,7 +77,7 @@
 }
 
 .fa-chevron-circle-down:hover {
-  color: var(--white);
+  color: var(--icon-color);
   cursor: pointer;
   transform: scale(1.09);
   transition: All 0.9s;
@@ -98,7 +98,7 @@ ul.drop ul {
   list-style: none;
   margin: -0.4px;
   padding: 0;
-  color: var(--black);
+  color: black;
   text-align: end;
 }
 
@@ -153,18 +153,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   margin: -10px 48%;
 }
 
-#nd_button_div {
-  display: none;
-  justify-content: center;
-  margin: -10px 48%;
-}
-
-#th_button_div {
-  display: none;
-  justify-content: center;
-  margin: -10px 48%;
-}
-
 .fa-circle {
   font-size: 1.5em;
   color: var(--icon-color);
@@ -173,37 +161,25 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 
 .btn1 {
   animation: bounce 1.2s ease infinite alternate;
+  color: purple;
 }
 .btn2 {
   animation: bounce 1.3s ease infinite alternate;
   margin: auto 0.7vh;
+  color: green;
 }
 .btn3 {
   animation: bounce 1.4s ease infinite alternate;
-}
-
-.img2,
-.img4,
-.img9 {
   color: orange;
 }
-.img3,
-.img5,
-.img7 {
-  color: black;
-}
-.img6,
-.img8,
-.img1 {
-  color: purple;
-}
+
 
 #src-img-centrale {
   max-height: 25rem;
   max-width: 50rem;
   display: flex;
   justify-content: center;
-  margin: -6% auto 4%;
+  margin: -1em auto 4%;
 }
 
 #img-centrale {
@@ -704,3 +680,4 @@ footer {
 /* ! END PROJET-SNIPE-IT.HTML */
 
 /* ! END HTML */
+

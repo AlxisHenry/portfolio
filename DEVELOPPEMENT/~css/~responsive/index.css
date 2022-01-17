@@ -1,68 +1,4 @@
-@media screen  and (min-width: 480px) /*  téléphones mobiles */
-{
-     /* ! INDEX.HTML */
-
-
-
-     /* ! END INDEX.HTML */ 
-    
-}
-
-@media screen and (max-width: 720px) /*  téléphones mobiles */
-{
-}
-
-@media screen and (min-width: 721px) /*  tablettes portrait */
-{
-     /* ! INDEX.HTML */
-
-        
-
-     /* ! END INDEX.HTML */ 
-}
-
-@media screen and (max-width: 900px) /*  tablettes portrait */
-{
-}
-
-@media screen and (min-width: 901px) /*  tablettes paysages */
-{
-     /* ! INDEX.HTML */
-
-        
-
-     /* ! END INDEX.HTML */ 
-}
-
-@media screen and (max-width: 1024px) /* tablettes paysages */
-{
-}
-
-
-@media screen and (min-width: 1025px) /*  ordinateur */
-{
-     /* ! INDEX.HTML */
-
-        
-
-     /* ! END INDEX.HTML */ 
-}
-
-@media screen and (max-width: 1200px) /*  ordinateur */
-{
-
-}
-
-@media screen and (max-width: 1025px)
-{
-  #src-img-scnd, 
-  #src-img-thrd 
-  {
-      display: none;
-  }
-}
-
-/* 
+ 
 @media screen and (max-width: 1280px) 
 {
   header div#header .header-nav ul li ul li a 
@@ -96,8 +32,7 @@
       width: 100%;
       height: 100%;
   }
-} */
-/* 
+} 
 @media screen and (max-width: 1535px)
 {
   #src-img-scnd, 
@@ -121,4 +56,4 @@
   }
 
 }
- */
+

@@ -41,27 +41,6 @@ let btn1 = document.querySelector("btn1"),
   href_img = document.getElementById("href-img");
 
 function change_to_img1() {
-  style.display.none(first_button_div);
-  style.display.none(nd_button_div);
-  style.display.flex(th_button_div);
-}
-
-function change_to_img2() {
-  style.display.none(first_button_div);
-  style.display.none(th_button_div);
-  style.display.flex(nd_button_div);
-}
-
-function change_to_img3() {
-  style.display.none(nd_button_div);
-  style.display.none(th_button_div);
-  style.display.flex(first_button_div);
-}
-
-function change_auto_to_img1() {
-  style.display.none(first_button_div);
-  style.display.none(nd_button_div);
-  style.display.flex(th_button_div);
   img_centrale.title = snipeit.title;
   img_centrale.alt = snipeit.alt;
   img_centrale.src = snipeit.img;
@@ -72,10 +51,7 @@ function change_auto_to_img1() {
   };
 }
 
-function change_auto_to_img2() {
-  style.display.none(first_button_div);
-  style.display.none(th_button_div);
-  style.display.flex(nd_button_div);
+function change_to_img2() {
   img_centrale.title = aleatory.title;
   img_centrale.alt = aleatory.alt;
   img_centrale.src = aleatory.img;
@@ -88,10 +64,7 @@ function change_auto_to_img2() {
     href_img.href = random_path_selector;  };
 }
 
-function change_auto_to_img3() {
-  style.display.none(nd_button_div);
-  style.display.none(th_button_div);
-  style.display.flex(first_button_div);
+function change_to_img3() {
   img_centrale.title = timken.title;
   img_centrale.alt = timken.alt;
   img_centrale.src = timken.img;
@@ -103,15 +76,15 @@ function change_auto_to_img3() {
 }
 
 function change_img_auto() {
-  setTimeout(change_auto_to_img1, 2000);
-  setTimeout(change_auto_to_img2, 4000);
-  setTimeout(change_auto_to_img3, 6000);
+  setTimeout(change_to_img1, 2000);
+  setTimeout(change_to_img2, 4000);
+  setTimeout(change_to_img3, 6000);
 }
 
 function change_img_onload() {
-  setTimeout(change_auto_to_img1, 2000);
-  setTimeout(change_auto_to_img2, 4000);
-  setTimeout(change_auto_to_img3, 6000);
+  setTimeout(change_to_img1, 2000);
+  setTimeout(change_to_img2, 4000);
+  setTimeout(change_to_img3, 6000);
   setInterval(change_img_auto, 6000);
 }
 
