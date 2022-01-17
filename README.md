@@ -96,7 +96,7 @@ X
 
 # **Maquettes & Design**
 
-J'ai réalisé les maquettes à intégrer sur [`excalidraw`](https://excalidraw.com/).
+J'ai réalisé les maquettes à intégrer sur [`excalidraw`](https://excalidraw.com/).<br>
 
 > [Page d'accueil](https://alexishenry.fr/)
 
