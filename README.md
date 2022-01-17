@@ -106,43 +106,46 @@ Les maquettes ne possèdent pas de couleurs, ni de cotes précises. Cela se fera
 
 <img src="CHARTE GRAPHIQUE\IMAGES\Page d'arrivée.png">
 
-La page sera composé de quatre `containers`. <br>
+La page sera composé de quatre `containers`. <br><br>
 Le `Header` qui comportera les différents menus.<br>
+
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\menus.png">
 </p>
-<br><br>
+<br>
+
+   - Le `premier icon` permet à l'utilisateur de retourner à la dernière page de son historique.
+   - Le `second icon` permet à l'utilisateur de retourner à [la page d'accueil](https://www.alexishenry.fr/index.html), 
+   - Le `troisième icon` permet l'ouverture du menu de navigation 
+
+<br>
 
 Une première `section` qui contient mon identité:<br><br>
+
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\identite.png">
 </p>
 <br><br>
 
 Une seconde `section` dans laquelle il y a le contenu principal. <br><br>
+
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\contenu.png">
 </p>
 
 Et enfin le `footer`
+
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\footer.png">
 </p>
 
-- En haut à droite, il y a deux menus.
-  - Celui de droite, sera le menu déroulant : c'est-à-dire, que lorsque l'utilisateur cliquera sur ce bouton, un menu s'affichera.
-  - Celui de gauche, sera un bouton présent sur toutes les pages: il permettra de se rendre à l'accueil.
-- Au milieu, dans le rond, il y aura une photo ou un logo.
-- Le rectangle l'entourant permettra de mettre mon prénom.
 - En dessous, les projets présentés sur le site dérouleront.
   - La slide du milieu sera mise en valeur par rapport à celles de côtés,
   - Les slides de côtés seront floutées et accessible soit :
     - par une flèche qui permet d'aller à droite ou à gauche, ou soit changeront automatiquement au bout d'un certain délai.
     - par un système de ce style: <img src="CHARTE GRAPHIQUE\IMAGES\button.png"> , où le rond coché signifie la slide présente.
 
-#
-
-> [Menu Déroulant](https://alexishenry.fr/)
+# > [Menu Déroulant](https://alexishenry.fr/)
 
 <img src="CHARTE GRAPHIQUE\IMAGES\mznu.png" />
 
