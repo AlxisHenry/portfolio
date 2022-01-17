@@ -97,6 +97,8 @@ X
 # **Maquettes & Design**
 
 J'ai réalisé les maquettes à intégrer sur [`excalidraw`](https://excalidraw.com/).
+Celles-ci sont disponibles en cliquant [ici](CHARTE GRAPHIQUE\EXCALIDRAW).
+
 # 
 > [Page d'accueil](https://alexishenry.fr/)
 
