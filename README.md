@@ -96,7 +96,7 @@ X
 
 # **Maquettes & Design**
 
-J'ai réalisé les maquettes à intégrer sur [`excalidraw`](https://excalidraw.com/).<br>
+J'ai réalisé les maquettes à intégrer sur [`excalidraw`](https://excalidraw.com/).
 
 > [Page d'accueil](https://alexishenry.fr/)
 
@@ -113,13 +113,13 @@ J'ai réalisé les maquettes à intégrer sur [`excalidraw`](https://excalidraw.
     - par une flèche qui permet d'aller à droite ou à gauche, ou soit changeront automatiquement au bout d'un certain délai.
     - par un système de ce style: <img src="CHARTE GRAPHIQUE\IMAGES\button.png"> , où le rond coché signifie la slide présente.
 
-_-- Menu déroulant_
+> [Menu Déroulant](https://alexishenry.fr/)
 
-<img src="CHARTE GRAPHIQUE\IMAGES\Menu déroulant.png" />
+<img src="CHARTE GRAPHIQUE\IMAGES\mznu.png" />
 
 Ci-dessus, un aperçu du menu déroulant voulu. Les catégories '_Présentations_', '_Comprendre mon site_' et '_JOIN MY DISCORD_' seront présentes. Pour ce qui est de la catégorie '_MES PROJETS_', elle peut paraître inutile, vu que tous les projets sont accessibles via la page d'accueil. Cela sera à voir plus tard. Je n'ai pas encore prévu de design pour les pages présentes dans le menu déroulant.
 
--- _Page de présentation des projets._
+> [Page de présentation d'un projet](https://alexishenry.fr/DEVELOPPEMENT/~html/projet-timken.html)
 
 Lorsque l'utilisateur cliquera sur une des slides présentes sur la page d'accueil, il sera redirigé vers la page de présentation du projet choisit.
 
