@@ -82,10 +82,10 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 ---
 
 # **Couleurs choisies et utilisées**
-
+X  
 <img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg"><br>
 
-  Voici donc les ``variables`` que je vais utilisées dans mon fichier CSS
+  Voici donc les ``variables`` que je vais utilisées dans mon fichier CSS:
 
 <p align="center"><br>
 <img src="CHARTE GRAPHIQUE\IMAGES\root css.png">
@@ -96,7 +96,7 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 
 # **Maquettes & Design**
 
-- _Présentation de la maquette (réalisée sur **excalidraw**)_
+J'ai réalisé les maquettes à intégrer sur [https://excalidraw.com/](`excalidraw`)
 
   _-- Page d'accueil_ du site
 
