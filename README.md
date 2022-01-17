@@ -97,7 +97,7 @@ X
 # **Maquettes & Design**
 
 J'ai réalisé les maquettes à intégrer sur [`excalidraw`](https://excalidraw.com/).
-Celles-ci sont disponibles en cliquant [ici](CHARTE GRAPHIQUE\EXCALIDRAW).
+Celles-ci sont disponibles en cliquant [ici](https://github.com/AlxisHenry/CCI-2021-PORTFOLIO/tree/main/CHARTE%20GRAPHIQUE/EXCALIDRAW).
 
 # 
 > [Page d'accueil](https://alexishenry.fr/)
