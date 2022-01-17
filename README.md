@@ -98,7 +98,7 @@ X
 
 J'ai réalisé les maquettes à intégrer sur [`excalidraw`](https://excalidraw.com/).
 
-> Page pr
+> [Page d'accueil](https://alexishenry.fr/)
 
 <img src="CHARTE GRAPHIQUE\IMAGES\Page d'arrivée.png">
 
