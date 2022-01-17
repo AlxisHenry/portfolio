@@ -107,13 +107,15 @@ Les maquettes ne possèdent pas de couleurs, ni de cotes précises. Cela se fera
 <img src="CHARTE GRAPHIQUE\IMAGES\Page d'arrivée.png">
 
 La page sera composé de quatre ``containers``. <br><br>
-Le ``Header`` qui comportera les .<br><br>
-Une première `section`qui contient mon identité:
+Le ``Header`` qui comportera les différents menus.<br><br>
+Une première `section` qui contient mon identité:
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\identite.png">
 </p><br>
-Une seconde `section`
 
+Une seconde `section` dans laquelle il y a le contenu principal. <br>
+
+Et enfin le `footer`
 
 
 
