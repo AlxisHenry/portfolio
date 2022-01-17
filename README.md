@@ -106,6 +106,15 @@ Les maquettes ne possèdent pas de couleurs, ni de cotes précises. Cela se fera
 
 <img src="CHARTE GRAPHIQUE\IMAGES\Page d'arrivée.png">
 
+La page sera composé de trois ``containers``. <br><br>
+Le ``Header`` qui comportera les .
+Une première `section`qui contient mon identité:
+<img src="CHARTE GRAPHIQUE\IMAGES\identité.png">
+
+
+
+
+
 - En haut à droite, il y a deux menus.
   - Celui de droite, sera le menu déroulant : c'est-à-dire, que lorsque l'utilisateur cliquera sur ce bouton, un menu s'affichera.
   - Celui de gauche, sera un bouton présent sur toutes les pages: il permettra de se rendre à l'accueil.
