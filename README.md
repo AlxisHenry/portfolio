@@ -83,7 +83,6 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 
 # **Couleurs choisies et utilisées**
 
-X  
 <img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg"><br>
 
 Voici donc les `variables` que je vais utilisées dans mon fichier CSS:
@@ -107,7 +106,7 @@ Les maquettes ne possèdent pas de couleurs, ni de cotes précises. Cela se fera
 <img src="CHARTE GRAPHIQUE\IMAGES\Page d'arrivée.png">
 
 La page sera composé de quatre `containers`. <br><br>
-Le `Header` qui comportera les différents menus.<br>
+Le `Header` qui comporte les différents menus.<br>
 
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\menus.png">
@@ -132,6 +131,12 @@ Une seconde `section` dans laquelle il y a le contenu principal. <br><br>
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\contenu.png">
 </p><br>
+
+Le contenu principal contient différentes slides, qui correspondent aux différents projets présentés sur le site.<BR><br>
+Les slides s'affichent ``automatiquement à intervale régulière`` dès le chargement de la page. Cependant l'utilisateur peut toujours naviguer à travers les slides grâce aux bouttons situés en dessous de celles-ci.
+
+<br>
+
 
 Et enfin le `footer`<br><br>
 
