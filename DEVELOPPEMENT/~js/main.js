@@ -19,7 +19,7 @@ document.getElementById("href-discord").addEventListener("click", (e) => {
     void 0;
   }
 });
-
+console.log("cc");
 function sleepFor(sleepDuration) {
   var now = new Date().getTime();
   while (new Date().getTime() < now + sleepDuration) {
