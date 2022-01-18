@@ -29,16 +29,76 @@ function sleepFor(sleepDuration) {
 
 // Fonctions utilisées sur 'index.html'
 
-let btn1 = document.querySelector("btn1"),
-  btn2 = document.querySelector("btn2"),
-  first_button_div = document.getElementById("first_button_div"),
-  nd_button_div = document.getElementById("nd_button_div"),
-  th_button_div = document.getElementById("th_button_div"),
+document.getElementById("src-img-centrale").insertAdjacentHTML(
+  "afterbegin",
+  (src_img_centrale = `
+<a id="href-img" href="${timken.href}"
+  ><img
+    id="img-centrale"
+    alt="${timken.alt}"
+    src="${timken.img}"
+    title="${timken.title}"
+    class="src"
+/></a>`)
+);
+document.getElementById("src-img-scnd").insertAdjacentHTML(
+  "afterbegin",
+  (src_img_scnd = `
+<img
+  onclick=change_to_img1();
+  id="img-scnd"
+  alt="${snipeit.alt}"
+  title="Faire passer en premier plan"
+  src="${snipeit.img}"
+/>`)
+);
+document.getElementById("src-img-thrd").insertAdjacentHTML(
+  "afterbegin",
+  (src_img_thrd = `
+<img
+  onclick="change_to_img3();"
+  id="img-thrd"
+  alt="${aleatory.alt}"
+  title="Faire passer en premier plan"
+  src="${aleatory.img}"
+/>`)
+);
+
+let first_button_div = document.getElementById("first_button_div"),
   img_centrale = document.getElementById("img-centrale"),
   img_nd = document.getElementById("img-scnd"),
   img_th = document.getElementById("img-thrd"),
   src_prp = document.querySelector(".src"),
   href_img = document.getElementById("href-img");
+
+first_button_div.insertAdjacentHTML(
+  "beforeend",
+  (snipeit_button = `<i
+  onclick="change_to_img1();"
+  alt="${snipeit.alt}"
+  title=""${snipeit.title}
+  class="img1 btn1 fas fa-circle"
+></i>`)
+);
+first_button_div.insertAdjacentHTML(
+  "beforeend",
+  (aleatory_button = `<i
+  onclick="change_to_img2();"
+  alt="${aleatory.alt}"
+  title="${aleatory.title}"
+  class="img2 btn2 fas fa-circle"
+></i>`)
+);
+first_button_div.insertAdjacentHTML(
+  "beforeend",
+  (timken_button = 
+`<i
+onclick="change_to_img3();"
+alt="${timken.alt}"
+title="${timken.title}"
+class="img3 btn3 fas fa-circle"
+></i>`
+));
 
 function change_to_img1() {
   img_centrale.title = snipeit.title;
@@ -61,7 +121,8 @@ function change_to_img2() {
     let href_links_path = [timken.href, snipeit.href];
     let random_path_selector =
       href_links_path[Math.floor(Math.random() * href_links_path.length)];
-    href_img.href = random_path_selector;  };
+    href_img.href = random_path_selector;
+  };
 }
 
 function change_to_img3() {
