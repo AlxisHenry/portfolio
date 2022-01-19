@@ -1,26 +1,26 @@
 const path = {
-   path_to_imgs: "./DEVELOPPEMENT/assets/@img/",
-   path_to_html: "./DEVELOPPEMENT/~html/",
+   imgs: "./DEVELOPPEMENT/assets/@img/",
+   html: "./DEVELOPPEMENT/~html/",
 }
 const images = {
   timken: {
     title: "TIMKEN",
     alt: "TIMKEN",
-    img: `${path.path_to_imgs}Timken.png`,
-    href: `${path.path_to_html}projet-timken.html`,
+    img: `${path.imgs}Timken.png`,
+    href: `${path.html}projet-timken.html`,
     status: "Not Started",
   },
   snipeit: {
     title: "SNIPE-IT",
     alt: "SNIPE-IT",
-    img: `${path.path_to_imgs}snipeit.png`,
-    href: `${path.path_to_html}projet-snipe-it.html`,
+    img: `${path.imgs}snipeit.png`,
+    href: `${path.html}projet-snipe-it.html`,
     status: "Not Started",
   },
   aleatory: {
     title: "ALEATORY",
     alt: "ALEATORY",
-    img: `${path.path_to_imgs}aleatory.png`,
+    img: `${path.imgs}aleatory.png`,
     href: "none",
     status: "none",
   },
