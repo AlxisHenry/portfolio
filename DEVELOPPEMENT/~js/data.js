@@ -1,7 +1,7 @@
 const path = {
-   imgs: "./DEVELOPPEMENT/assets/@img/",
-   html: "./DEVELOPPEMENT/~html/",
-}
+  imgs: "./DEVELOPPEMENT/assets/@img/",
+  html: "./DEVELOPPEMENT/~html/",
+};
 const images = {
   timken: {
     title: "TIMKEN",
@@ -26,23 +26,23 @@ const images = {
   },
 };
 const style = {
-    display: {
-      flex: (id) => {
-        id.style.display = "flex";
-      },
-      none: (id) => {
-        id.style.display = "none";
-      },
+  display: {
+    flex: (id) => {
+      id.style.display = "flex";
     },
-    filter: {
-      blur: (id, value) => {
-        id.style.filter = `blur(${value}px)`;
-      },
-      none: (id) => {
-        id.style.filter = "none";
-      },
+    none: (id) => {
+      id.style.display = "none";
     },
-    opacity: (id, value) => {
-      id.style.opacity = value;
+  },
+  filter: {
+    blur: (id, value) => {
+      id.style.filter = `blur(${value}px)`;
     },
-  };
+    none: (id) => {
+      id.style.filter = "none";
+    },
+  },
+  opacity: (id, value) => {
+    id.style.opacity = value;
+  },
+};
