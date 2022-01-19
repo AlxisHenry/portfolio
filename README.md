@@ -52,7 +52,9 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
               > projets.html
            > ~js
               > data.js
+              > index.js
               > main.js
+              > p-timken.js
            > assets
               > @download
                  > source_code
