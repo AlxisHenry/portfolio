@@ -1,76 +1,150 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Timken - Henry Alexis</title>
-<link rel="icon" href="../assets/@ico/favicon-16x16.png" />
-<script src="https://kit.fontawesome.com/ac4dc0897b.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../~css/index.css"> 
-<link rel="stylesheet" href="../~css/~responsive/index.css">
-<script src="../~js/main.js" defer></script>
-<script src="../~js/data.js" defer></script>
-</head><body id="body_projet-timken_page"><header>
-<div class="header-menu_header-buttons"><nav class="header-nav"><ul id="nav" class="drop"><li class="menuhover">
-<i class="menuhover fas fa-chevron-circle-down" title="Menu"></i><ul id="responsive"> 
-<li><a href="./presentation.html" title="Présentation" id="href-presentation">PRÉSENTATION</a></li>
-<li><a href="./projets.html" id="href-projets" title="Projets">MES PROJETS</a></li>
-<li><a href="./comprendre.html" id="href-comprendre" title="Comprendre">COMPRENDRE MON SITE</a></li>
-<li><a href="https://discordapp.com/users/432241817975521282" id="href-discord" title="Join Me On Discord">JOIN MY DISCORD</a></li>
-</ul></li></ul></nav>
-<div class="bt-retour-accueil"><a href="../../index.html"><i id="btn-rac" class="fas fa-home" title="Retour à l'accueil"></i></a></div>
-<div class="bt-retour-arriere"><i id="btn-rar" class="fas fa-backward" title="Retour en arrière"></i></div>
-</div></header>
-  
-<!-- PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timken - Henry Alexis</title>
+    <link rel="icon" href="../assets/@ico/favicon-16x16.png" />
+    <script
+      src="https://kit.fontawesome.com/ac4dc0897b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../~css/index.css" />
+    <link rel="stylesheet" href="../~css/~responsive/index.css" />
+  </head>
+  <body id="body_projet-timken_page">
+    <header>
+      <div class="header-menu_header-buttons">
+        <nav class="header-nav">
+          <ul id="nav" class="drop">
+            <li class="menuhover">
+              <i class="menuhover fas fa-chevron-circle-down" title="Menu"></i>
+              <ul id="responsive">
+                <li>
+                  <a
+                    href="./presentation.html"
+                    title="Présentation"
+                    id="href-presentation"
+                    >PRÉSENTATION</a
+                  >
+                </li>
+                <li>
+                  <a href="./projets.html" id="href-projets" title="Projets"
+                    >MES PROJETS</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./comprendre.html"
+                    id="href-comprendre"
+                    title="Comprendre"
+                    >COMPRENDRE MON SITE</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://discordapp.com/users/432241817975521282"
+                    id="href-discord"
+                    title="Join Me On Discord"
+                    >JOIN MY DISCORD</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="bt-retour-accueil">
+          <a href="../../index.html"
+            ><i id="btn-rac" class="fas fa-home" title="Retour à l'accueil"></i
+          ></a>
+        </div>
+        <div class="bt-retour-arriere">
+          <i id="btn-rar" class="fas fa-backward" title="Retour en arrière"></i>
+        </div>
+      </div>
+    </header>
 
-<div id="div_principale_projet">
+    <!-- PAGE -->
 
-       <iframe id="frame_projet" title="Projet réalisé pour mon entreprise" src="http://192.168.43.215/" frameborder="0"></iframe>
-       <video id="video_projet" autoplay="autoplay" loop="loop" muted="muted">
-             <source src="/DEVELOPPEMENT/assets/@videos/demonstration_automation_snp.mp4">
-       </video>
+    <div id="div_principale_projet">
+      <iframe 
+        id="frame_projet"
+        title="Projet réalisé pour mon entreprise"
+        src="http://192.168.43.215/" loading="lazy"
+      ></iframe>
+      <video id="video_projet" autoplay="autoplay" loop="loop" muted="muted">
+        <source
+          src="/DEVELOPPEMENT/assets/@videos/demonstration_automation_snp.mp4"
+        />
+      </video>
 
-      <i class="fas fa-info-circle" id="info-circle_code" onmouseover="info_frame_up()" onmouseout="info_frame_down()"></i> 
-      <i class="fas fa-info-circle" id="info-circle" onmouseover="info_video_up()" onmouseout="info_video_down()"></i> 
-      
+      <i
+        class="fas fa-info-circle"
+        id="info-circle_code"
+        onmouseover="info_frame_up()"
+        onmouseout="info_frame_down()"
+      ></i>
+      <i
+        class="fas fa-info-circle"
+        id="info-circle"
+        onmouseover="info_video_up()"
+        onmouseout="info_video_down()"
+      ></i>
+
       <i class="far fa-file-video" id="file-video" onclick="toggle()"></i>
       <i class="far fa-file-code" id="file-code" onclick="toggle()"></i>
 
-       <div id="fv">
-       <a id="titlediv" href="./projets.html#Timken-presentation">
-            <span class="L0 L1">T</span>
-            <span class="L0 L2">I</span>
-            <span class="L0 L3">M</span>
-            <span class="L0 L4">K</span>
-            <span class="L0 L5">E</span>
-            <span class="L0 L6">N</span>
-       </a>
-       </div>
+      <div id="fv">
+        <a id="titlediv" href="./projets.html#Timken-presentation">
+          <span class="L0 L1">T</span>
+          <span class="L0 L2">I</span>
+          <span class="L0 L3">M</span>
+          <span class="L0 L4">K</span>
+          <span class="L0 L5">E</span>
+          <span class="L0 L6">N</span>
+        </a>
+      </div>
 
       <div id="infodivvideo">
-             <h1 id="infodivh1"><strong> Projet Timken </strong></h1>
-                   <p id="infop">
-                    Le projet consiste en l'automatisation de l'actualisation du stock d'articles.<br><br>
-                    Ayant présenté le projet Snipe-IT à mon service, ils y ont trouvé un incovénient,<br>
-                    l'ajout d'une quantité d'article lors d'un achat n'est absolument pas intuitif.<br>
-                    De ce fait, j'ai eu l'idée d'<i>automatiser</i> l'ajout de la quantité achetée. <br>
-                    Comme vu dans la vidéo, une page web permettra de sélectionner l'article à ajouter, <br>
-                    préciser sa quantité, ainsi que de saisir numéro de commande facultatif.
-                   </p>
+        <h1 id="infodivh1"><strong> Projet Timken </strong></h1>
+        <p id="infop">
+          Le projet consiste en l'automatisation de l'actualisation du stock
+          d'articles.<br /><br />
+          Ayant présenté le projet Snipe-IT à mon service, ils y ont trouvé un
+          incovénient,<br />
+          l'ajout d'une quantité d'article lors d'un achat n'est absolument pas
+          intuitif.<br />
+          De ce fait, j'ai eu l'idée d'<i>automatiser</i> l'ajout de la quantité
+          achetée. <br />
+          Comme vu dans la vidéo, une page web permettra de sélectionner
+          l'article à ajouter, <br />
+          préciser sa quantité, ainsi que de saisir numéro de commande
+          facultatif.
+        </p>
       </div>
 
       <div id="infodivframe">
-             <h1 id="infodivframeh1"><strong> Site codé </strong></h1>
-                   <p id="infoframep">
-                   Le projet consiste en l'automatisation de la modification du stock d'articles.<br><br>
-                   Ayant présenté le second projet Snipe-IT à mon service, ils ont trouvé un incovénient,<br>
-                   L'ajout d'une quantité d'article lors d'un achat n'est absolument pas intuitif.<br>
-                   De ce fait, j'ai eu l'idée d'<i>automatiser</i> l'ajout de la quantité achetée.
-                   </p>
+        <h1 id="infodivframeh1"><strong> Site codé </strong></h1>
+        <p id="infoframep">
+          Le projet consiste en l'automatisation de la modification du stock
+          d'articles.<br /><br />
+          Ayant présenté le second projet Snipe-IT à mon service, ils ont trouvé
+          un incovénient,<br />
+          L'ajout d'une quantité d'article lors d'un achat n'est absolument pas
+          intuitif.<br />
+          De ce fait, j'ai eu l'idée d'<i>automatiser</i> l'ajout de la quantité
+          achetée.
+        </p>
       </div>
+    </div>
 
-</div>
+    <!-- END -->
 
-<!-- END -->
-  
-<footer><div id="foot">© 2021 | Alexis Henry</div></footer></body></html>
+    <footer><div id="foot">© 2021 | Alexis Henry</div></footer>
+
+    <script src="../~js/main.js"></script>
+    <script src="../~js/data.js"></script>
+    <script src="../~js/p-timken.js"></script>
+  </body>
+</html>

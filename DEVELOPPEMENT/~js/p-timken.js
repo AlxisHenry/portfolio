@@ -50,3 +50,6 @@ function info_frame_down() {
   style.filter.none(frame);
   style.opacity(frame, 1);
 }
+
+console.timeEnd("Exécution script JS");
+
