@@ -14,7 +14,7 @@
 
 # **Présentation du projet**
 
-Le projet consiste au développement d'un `portfolio` à l'aide de langages basiques (sans frameworks), tels que HTML, CSS et JS.
+Le projet consiste au développement d'un `portfolio` à l'aide de langages basiques (sans frameworks), tels que HTML, CSS et JS. Le code doit être validé par le [W3C Markup Validation Service](https://validator.w3.org/).
 
 Ce site est accessible au lien suivant: **[https://www.alexishenry.fr](https://www.alexishenry.fr)**.
 
