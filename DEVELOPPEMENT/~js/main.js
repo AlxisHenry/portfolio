@@ -19,7 +19,6 @@ document.getElementById("href-discord").addEventListener("click", (e) => {
     void 0;
   }
 });
-console.log("cc");
 function sleepFor(sleepDuration) {
   var now = new Date().getTime();
   while (new Date().getTime() < now + sleepDuration) {
@@ -32,12 +31,12 @@ function sleepFor(sleepDuration) {
 document.getElementById("src-img-centrale").insertAdjacentHTML(
   "afterbegin",
   (src_img_centrale = `
-<a id="href-img" href="${timken.href}"
+<a id="href-img" href="${images.timken.href}"
   ><img
     id="img-centrale"
-    alt="${timken.alt}"
-    src="${timken.img}"
-    title="${timken.title}"
+    alt="${images.timken.alt}"
+    src="${images.timken.img}"
+    title="${images.timken.title}"
     class="src"
 /></a>`)
 );
@@ -47,9 +46,9 @@ document.getElementById("src-img-scnd").insertAdjacentHTML(
 <img
   onclick=change_to_img1();
   id="img-scnd"
-  alt="${snipeit.alt}"
+  alt="${images.snipeit.alt}"
   title="Faire passer en premier plan"
-  src="${snipeit.img}"
+  src="${images.snipeit.img}"
 />`)
 );
 document.getElementById("src-img-thrd").insertAdjacentHTML(
@@ -58,9 +57,9 @@ document.getElementById("src-img-thrd").insertAdjacentHTML(
 <img
   onclick="change_to_img3();"
   id="img-thrd"
-  alt="${aleatory.alt}"
+  alt="${images.aleatory.alt}"
   title="Faire passer en premier plan"
-  src="${aleatory.img}"
+  src="${images.aleatory.img}"
 />`)
 );
 
@@ -75,8 +74,8 @@ first_button_div.insertAdjacentHTML(
   "beforeend",
   (snipeit_button = `<i
   onclick="change_to_img1();"
-  alt="${snipeit.alt}"
-  title=""${snipeit.title}
+  alt="${images.snipeit.alt}"
+  title=""${images.snipeit.title}
   class="img1 btn1 fas fa-circle"
 ></i>`)
 );
@@ -84,41 +83,40 @@ first_button_div.insertAdjacentHTML(
   "beforeend",
   (aleatory_button = `<i
   onclick="change_to_img2();"
-  alt="${aleatory.alt}"
-  title="${aleatory.title}"
+  alt="${images.aleatory.alt}"
+  title="${images.aleatory.title}"
   class="img2 btn2 fas fa-circle"
 ></i>`)
 );
 first_button_div.insertAdjacentHTML(
   "beforeend",
-  (timken_button = 
-`<i
+  (timken_button = `<i
 onclick="change_to_img3();"
-alt="${timken.alt}"
-title="${timken.title}"
+alt="${images.timken.alt}"
+title="${images.timken.title}"
 class="img3 btn3 fas fa-circle"
-></i>`
-));
+></i>`)
+);
 
 function change_to_img1() {
-  img_centrale.title = snipeit.title;
-  img_centrale.alt = snipeit.alt;
-  img_centrale.src = snipeit.img;
-  img_nd.src = aleatory.img;
-  img_th.src = timken.img;
+  img_centrale.title = images.snipeit.title;
+  img_centrale.alt = images.snipeit.alt;
+  img_centrale.src = images.snipeit.img;
+  img_nd.src = images.aleatory.img;
+  img_th.src = images.timken.img;
   src_prp.onclick = function () {
-    href_img.href = snipeit.href;
+    href_img.href = images.snipeit.href;
   };
 }
 
 function change_to_img2() {
-  img_centrale.title = aleatory.title;
-  img_centrale.alt = aleatory.alt;
-  img_centrale.src = aleatory.img;
-  img_nd.src = timken.img;
-  img_th.src = snipeit.img;
+  img_centrale.title = images.aleatory.title;
+  img_centrale.alt = images.aleatory.alt;
+  img_centrale.src = images.aleatory.img;
+  img_nd.src = images.timken.img;
+  img_th.src = images.snipeit.img;
   src_prp.onclick = function () {
-    let href_links_path = [timken.href, snipeit.href];
+    let href_links_path = [images.timken.href, images.snipeit.href];
     let random_path_selector =
       href_links_path[Math.floor(Math.random() * href_links_path.length)];
     href_img.href = random_path_selector;
@@ -126,13 +124,13 @@ function change_to_img2() {
 }
 
 function change_to_img3() {
-  img_centrale.title = timken.title;
-  img_centrale.alt = timken.alt;
-  img_centrale.src = timken.img;
-  img_nd.src = snipeit.img;
-  img_th.src = aleatory.img;
+  img_centrale.title = images.timken.title;
+  img_centrale.alt = images.timken.alt;
+  img_centrale.src = images.timken.img;
+  img_nd.src = images.snipeit.img;
+  img_th.src = images.aleatory.img;
   src_prp.onclick = function () {
-    href_img.href = timken.href;
+    href_img.href = images.timken.href;
   };
 }
 

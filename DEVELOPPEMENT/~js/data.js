@@ -1,28 +1,31 @@
-const path_to_imgs = "./DEVELOPPEMENT/assets/@img/",
-  path_to_html = "./DEVELOPPEMENT/~html/";
-
-const timken = {
+const path = {
+   path_to_imgs: "./DEVELOPPEMENT/assets/@img/",
+   path_to_html: "./DEVELOPPEMENT/~html/",
+}
+const images = {
+  timken: {
     title: "TIMKEN",
     alt: "TIMKEN",
-    img: `${path_to_imgs}Timken.png`,
-    href: `${path_to_html}projet-timken.html`,
+    img: `${path.path_to_imgs}Timken.png`,
+    href: `${path.path_to_html}projet-timken.html`,
     status: "Not Started",
   },
-  snipeit = {
+  snipeit: {
     title: "SNIPE-IT",
     alt: "SNIPE-IT",
-    img: `${path_to_imgs}snipeit.png`,
-    href: `${path_to_html}projet-snipe-it.html`,
+    img: `${path.path_to_imgs}snipeit.png`,
+    href: `${path.path_to_html}projet-snipe-it.html`,
     status: "Not Started",
   },
-  aleatory = {
+  aleatory: {
     title: "ALEATORY",
     alt: "ALEATORY",
-    img: `${path_to_imgs}aleatory.png`,
+    img: `${path.path_to_imgs}aleatory.png`,
     href: "none",
     status: "none",
   },
-  style = {
+};
+const style = {
     display: {
       flex: (id) => {
         id.style.display = "flex";
