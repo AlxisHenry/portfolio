@@ -693,11 +693,12 @@ footer {
 #titre-notfound {
     width: 100%;
     margin: auto;   
-    /* margin-top: 10%; */
     text-align: center;
-    background-color: red;
     font-size: 10rem;
     font-weight: 100;
+    font-family: var(--abril);
+    text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: var(--icon-color);
 }
 
 #p-notfound {
@@ -705,9 +706,10 @@ footer {
   margin: auto;   
   font-size: 5rem;
   text-align: center;
-  font-weight: 100;
-  background-color: red;
-
+  font-weight: 800;
+  color: var(--icon-color);
+  text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: var(--abril);
 }
 
 
