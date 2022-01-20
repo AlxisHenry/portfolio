@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 - Page not found</title>
-    <link rel="icon" href="../../../DEVELOPPEMENT/assets/@ico/favicon-16x16.png" />
+    <link
+      rel="icon"
+      href="../../../DEVELOPPEMENT/assets/@ico/favicon-16x16.png"
+    />
     <script
       src="https://kit.fontawesome.com/ac4dc0897b.js"
       crossorigin="anonymous"
     ></script>
- <style>
-   body  { background-color: red;}
- </style>
+    <link rel="stylesheet" href="../../../DEVELOPPEMENT/~css/~responsive/index.css" />
   </head>
   <body id="body_index_page">
     <header>
@@ -28,7 +29,7 @@
               <ul id="responsive">
                 <li>
                   <a
-                    href="../../../DEVELOPPEMENT/~html/projets.html"
+                    href="../../../DEVELOPPEMENT/~html/presentation.html"
                     title="Présentation"
                     id="href-presentation"
                     >PRÉSENTATION</a
@@ -36,7 +37,7 @@
                 </li>
                 <li>
                   <a
-                    href="./DEVELOPPEMENT/~html/projets.html"
+                    href="../../../DEVELOPPEMENT/~html/projets.html"
                     id="href-projets"
                     title="Projets"
                     >MES PROJETS</a
@@ -44,7 +45,7 @@
                 </li>
                 <li>
                   <a
-                    href="./DEVELOPPEMENT/~html/comprendre.html"
+                    href="../../../DEVELOPPEMENT/~html/comprendre.html"
                     id="href-comprendre"
                     title="Comprendre"
                     >COMPRENDRE MON SITE</a
@@ -63,7 +64,7 @@
           </ul>
         </nav>
         <div class="bt-retour-accueil">
-          <a href="index.html"
+          <a href="../../../index.html"
             ><i id="btn-rac" class="fas fa-home" title="Retour à l'accueil"></i
           ></a>
         </div>
@@ -75,5 +76,7 @@
     <footer>
       <div id="foot">© 2021 | Alexis Henry</div>
     </footer>
+    <script src="../../../DEVELOPPEMENT/~js/data.js"></script>
+    <script src="../../../DEVELOPPEMENT/~js/main.js"></script>
   </body>
 </html>
