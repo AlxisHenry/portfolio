@@ -2,10 +2,14 @@
   <head>
     <meta charset="utf-8" />
     <title>zdazdazdzadaz</title>
+    <link rel="stylesheet" href="../../~css/index.css" />
   </head>
   <body>
     <p>
       <!--#echo var="HTTP_USER_AGENT" --><!--#echo var="REMOTE_ADDR" --><!--#echo var="REQUEST_URI" --><!--#echo var="REDIRECT_STATUS" --><!--#echo var="HTTP_USER_AGENT" -->dsvsdvdsvdsvdsvdsdsvs
     </p>
+
+    ERROR 404 ZDAZDAZD
+
   </body>
 </html>
