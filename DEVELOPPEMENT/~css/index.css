@@ -693,8 +693,9 @@ footer {
 #titre-notfound {
     width: 100%;
     margin: auto;   
-    margin-top: 10%;
-    text-align: center; 
+    /* margin-top: 10%; */
+    text-align: center;
+    background-color: red;
     font-size: 10rem;
     font-weight: 100;
 }
@@ -705,6 +706,8 @@ footer {
   font-size: 5rem;
   text-align: center;
   font-weight: 100;
+  background-color: red;
+
 }
 
 
