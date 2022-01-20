@@ -79,7 +79,6 @@
         404
       </h1>
       <p id="p-notfound">Not Found</p>
-      <p id="ip"><!--#echo var="REMOTE_ADDR" --></p>
 
     <footer>
       <div id="foot">© 2021 | Alexis Henry</div>
