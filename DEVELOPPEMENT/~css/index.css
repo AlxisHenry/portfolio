@@ -681,5 +681,29 @@ footer {
 
 /* ! END PROJET-SNIPE-IT.HTML */
 
+/* ! 404 NOT FOUND */
+
+#body_notfound {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--main-color3);
+}
+
+#titre-notfound {
+    text-align: center;
+    font-size: 15em;
+    font-weight: 100;
+}
+
+#p-notfound {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 100;
+}
+
+
+/* ! END 404 NOT FOUND */
+
 /* ! END HTML */
 
