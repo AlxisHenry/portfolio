@@ -1,5 +1,5 @@
-ErrorDocument 400 /DEVELOPPEMENT/~errors/400.shtml
-ErrorDocument 401 /DEVELOPPEMENT/~errors/401.shtml
-ErrorDocument 403 /DEVELOPPEMENT/~errors/403.shtml
-ErrorDocument 404 /DEVELOPPEMENT/~errors/404.shtml
-ErrorDocument 500 /DEVELOPPEMENT/~errors/500.shtml
+ErrorDocument 400 /DEVELOPPEMENT/assets/~errors/400.shtml
+ErrorDocument 401 /DEVELOPPEMENT/assets/~errors/401.shtml
+ErrorDocument 403 /DEVELOPPEMENT/assets/~errors/403.shtml
+ErrorDocument 404 /DEVELOPPEMENT/assets/~errors/404.shtml
+ErrorDocument 500 /DEVELOPPEMENT/assets/~errors/500.shtml
