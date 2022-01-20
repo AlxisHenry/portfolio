@@ -74,14 +74,12 @@
       </div>
     </header>
 
-    <main>
       <h1
         id="titre-notfound">
         404
       </h1>
       <p id="p-notfound">Not Found</p>
       <p id="ip"><!--#echo var="REMOTE_ADDR" --></p>
-    </main>
 
     <footer>
       <div id="foot">© 2021 | Alexis Henry</div>
