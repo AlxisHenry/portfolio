@@ -483,41 +483,12 @@ footer {
   bottom: 89.5%;
 }
 
-.L0 {
-  position: relative;
-  margin: auto;
+#titlespan {
+  display: flex;
+  justify-content: center;
   width: 49.375rem;
   font-size: 10rem;
   font-family: var(--araba);
-  opacity: 0;
-}
-
-.L1 {
-  animation: letters 3s ease 0000ms forwards;
-}
-.L2 {
-  animation: letters 3s ease 0500ms forwards;
-}
-.L3 {
-  animation: letters 3s ease 1000ms forwards;
-}
-.L4 {
-  animation: letters 3s ease 1500ms forwards;
-}
-.L5 {
-  animation: letters 3s ease 2000ms forwards;
-}
-.L6 {
-  animation: letters 3s ease 2500ms forwards;
-}
-
-@keyframes letters {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 #infodivvideo {

@@ -68,82 +68,37 @@
     <!-- PAGE -->
 
     <div id="div_principale_projet">
-      <iframe 
-        id="frame_projet"
-        title="Projet réalisé pour mon entreprise"
-        src="http://192.168.43.215/" loading="lazy"
-      ></iframe>
       <video id="video_projet" autoplay="autoplay" loop="loop" muted="muted">
         <source
           src="/DEVELOPPEMENT/assets/@videos/demonstration_automation_snp.mp4"
         />
       </video>
+      <iframe
+        id="frame_projet"
+        title="Projet réalisé pour mon entreprise"
+        src="http://192.168.43.215/"
+        loading="lazy"
+      ></iframe>
+      <i class="fas fa-info-circle" id="info-circle_code"></i>
+      <i class="fas fa-info-circle" id="info-circle"></i>
 
-      <i
-        class="fas fa-info-circle"
-        id="info-circle_code"
-        onmouseover="info_frame_up()"
-        onmouseout="info_frame_down()"
-      ></i>
-      <i
-        class="fas fa-info-circle"
-        id="info-circle"
-        onmouseover="info_video_up()"
-        onmouseout="info_video_down()"
-      ></i>
-
-      <i class="far fa-file-video" id="file-video" onclick="toggle()"></i>
-      <i class="far fa-file-code" id="file-code" onclick="toggle()"></i>
+      <i class="far fa-file-video togglefunction" id="file-video"></i>
+      <i class="far fa-file-code togglefunction" id="file-code"></i>
 
       <div id="fv">
         <a id="titlediv" href="./projets.html#Timken-presentation">
-          <span class="L0 L1">T</span>
-          <span class="L0 L2">I</span>
-          <span class="L0 L3">M</span>
-          <span class="L0 L4">K</span>
-          <span class="L0 L5">E</span>
-          <span class="L0 L6">N</span>
+          <span id="titlespan">TIMKEN</span>
         </a>
       </div>
-
-      <div id="infodivvideo">
-        <h1 id="infodivh1"><strong> Projet Timken </strong></h1>
-        <p id="infop">
-          Le projet consiste en l'automatisation de l'actualisation du stock
-          d'articles.<br /><br />
-          Ayant présenté le projet Snipe-IT à mon service, ils y ont trouvé un
-          incovénient,<br />
-          l'ajout d'une quantité d'article lors d'un achat n'est absolument pas
-          intuitif.<br />
-          De ce fait, j'ai eu l'idée d'<i>automatiser</i> l'ajout de la quantité
-          achetée. <br />
-          Comme vu dans la vidéo, une page web permettra de sélectionner
-          l'article à ajouter, <br />
-          préciser sa quantité, ainsi que de saisir numéro de commande
-          facultatif.
-        </p>
-      </div>
-
-      <div id="infodivframe">
-        <h1 id="infodivframeh1"><strong> Site codé </strong></h1>
-        <p id="infoframep">
-          Le projet consiste en l'automatisation de la modification du stock
-          d'articles.<br /><br />
-          Ayant présenté le second projet Snipe-IT à mon service, ils ont trouvé
-          un incovénient,<br />
-          L'ajout d'une quantité d'article lors d'un achat n'est absolument pas
-          intuitif.<br />
-          De ce fait, j'ai eu l'idée d'<i>automatiser</i> l'ajout de la quantité
-          achetée.
-        </p>
-      </div>
+      <div id="infodivvideo"></div>
+      <div id="infodivframe"></div>
     </div>
 
     <!-- END -->
 
     <footer><div id="foot">© 2021 | Alexis Henry</div></footer>
 
-    <script src="../~js/main.js"></script>
+    <script src="../~js/main.js"></script>  
     <script src="../~js/data.js"></script>
     <script src="../~js/p-timken.js"></script>
   </body>
