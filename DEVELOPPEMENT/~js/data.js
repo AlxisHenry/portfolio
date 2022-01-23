@@ -33,6 +33,13 @@ const style = {
     none: (id) => {
       id.style.display = "none";
     },
+    toggle: (id) => {
+      if (getComputedStyle(id).display != "none") {
+        id.style.display = "none";
+      } else {
+        id.style.display = "flex";
+      }
+    },
   },
   filter: {
     blur: (id, value) => {

@@ -33,7 +33,7 @@ document.getElementById("src-img-thrd").insertAdjacentHTML(
   />`)
 );
 
-let first_button_div = document.getElementById("first_button_div"),
+const first_button_div = document.getElementById("first_button_div"),
   img_centrale = document.getElementById("img-centrale"),
   img_nd = document.getElementById("img-scnd"),
   img_th = document.getElementById("img-thrd"),
@@ -86,8 +86,8 @@ function change_to_img2() {
   img_nd.src = images.timken.img;
   img_th.src = images.snipeit.img;
   src_prp.onclick = function () {
-    let href_links_path = [images.timken.href, images.snipeit.href];
-    let random_path_selector =
+    const href_links_path = [images.timken.href, images.snipeit.href];
+    const random_path_selector =
       href_links_path[Math.floor(Math.random() * href_links_path.length)];
     href_img.href = random_path_selector;
   };

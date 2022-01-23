@@ -69,7 +69,11 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
               > @videos
                  > demonstration_automation_snp.mp4
               > ~errors
-                 > 404.html
+                 > 400.shtml
+                 > 401.shtml
+                 > 403.shtml
+                 > 404.shtml
+                 > 500.shtml
               > ~extension
                  > @exe
                     > chromedriver.exe
