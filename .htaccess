@@ -1,28 +1,3 @@
-# Autorisation des bots connus
-Options +FollowSymLinks
-RewriteEngine on
-RewriteCond %{HTTP_USER_AGENT} !^.*AOL.*       [NC]
-RewriteCond %{HTTP_²ER_AGENT} !^.*Mozilla.*   [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*Opera.*     [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*Msie.*      [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*Firefox.*   [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*Netscape.*  [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*Safari.*    [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*Google.*    [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*Slurp.*     [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*Yahoo.*     [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*MMCrawler.* [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*msnbot.*    [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*SandCrawl.* [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*MSRBOT.*    [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*Teoma.*     [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*Jeeves.*    [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*inktomi.*   [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*libwww.*    [NC]
-RewriteRule .* - [F]
-
-# Set Index file
-DirectoryIndex index.html
 
 # ErrorDocument
 ErrorDocument 400 /DEVELOPPEMENT/assets/~errors/400.shtml
@@ -30,12 +5,4 @@ ErrorDocument 401 /DEVELOPPEMENT/assets/~errors/401.shtml
 ErrorDocument 403 /DEVELOPPEMENT/assets/~errors/403.shtml
 ErrorDocument 404 /DEVELOPPEMENT/assets/~errors/404.shtml
 ErrorDocument 500 /DEVELOPPEMENT/assets/~errors/500.shtml
-
-<Files .htaccess>
-order allow,deny
-deny from all
-</Files>
-
-//Prevent directory listings
-Options All -Indexes
 

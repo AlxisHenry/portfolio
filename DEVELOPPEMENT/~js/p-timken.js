@@ -18,7 +18,7 @@ togglefunction[1].addEventListener("click", () => {
 fainfocircle[0].addEventListener("mouseover", () => {
   info_frame_up();
   info_frame_insert_HTML();
-});
+});+
 fainfocircle[0].addEventListener("mouseout", () => {
   info_frame_down();
   info_frame.innerHTML = "";
