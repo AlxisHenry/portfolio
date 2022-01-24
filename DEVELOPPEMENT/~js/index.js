@@ -14,7 +14,6 @@ document.getElementById("src-img-scnd").insertAdjacentHTML(
   "afterbegin",
   (src_img_scnd = `
   <img
-    onclick=change_to_img1();
     id="img-scnd"
     alt="${images.snipeit.alt}"
     title="Faire passer en premier plan"
@@ -25,7 +24,6 @@ document.getElementById("src-img-thrd").insertAdjacentHTML(
   "afterbegin",
   (src_img_thrd = `
   <img
-    onclick="change_to_img3();"
     id="img-thrd"
     alt="${images.aleatory.alt}"
     title="Faire passer en premier plan"
@@ -43,7 +41,6 @@ const first_button_div = document.getElementById("first_button_div"),
 first_button_div.insertAdjacentHTML(
   "beforeend",
   (snipeit_button = `<i
-    onclick="change_to_img1();"
     alt="${images.snipeit.alt}"
     title=""${images.snipeit.title}
     class="img1 btn1 fas fa-circle"
@@ -52,7 +49,6 @@ first_button_div.insertAdjacentHTML(
 first_button_div.insertAdjacentHTML(
   "beforeend",
   (aleatory_button = `<i
-    onclick="change_to_img2();"
     alt="${images.aleatory.alt}"
     title="${images.aleatory.title}"
     class="img2 btn2 fas fa-circle"
@@ -61,12 +57,17 @@ first_button_div.insertAdjacentHTML(
 first_button_div.insertAdjacentHTML(
   "beforeend",
   (timken_button = `<i
-  onclick="change_to_img3();"
   alt="${images.timken.alt}"
   title="${images.timken.title}"
   class="img3 btn3 fas fa-circle"
   ></i>`)
-);
+); 
+
+const buttons = document.querySelectorAll(".fa-circle");
+buttons[0].addEventListener("click", change_to_img1);
+buttons[1].addEventListener("click", change_to_img2);
+buttons[2].addEventListener("click", change_to_img3);
+window.addEventListener("load", change_img_onload);
 
 function change_to_img1() {
   img_centrale.title = images.snipeit.title;

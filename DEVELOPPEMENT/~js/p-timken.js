@@ -1,4 +1,4 @@
-let video = document.getElementById("video_projet"),
+const video = document.getElementById("video_projet"),
   frame = document.getElementById("frame_projet"),
   ico_video = document.getElementById("file-video"),
   ico_frame = document.getElementById("file-code"),
@@ -9,28 +9,31 @@ let video = document.getElementById("video_projet"),
   togglefunction = document.querySelectorAll(".togglefunction"),
   fainfocircle = document.querySelectorAll(".fa-info-circle");
 
-togglefunction[0].addEventListener("click", () => {
-  toggle();
-});
-togglefunction[1].addEventListener("click", () => {
-  toggle();
-});
-fainfocircle[0].addEventListener("mouseover", () => {
-  info_frame_up();
-  info_frame_insert_HTML();
-});+
-fainfocircle[0].addEventListener("mouseout", () => {
-  info_frame_down();
-  info_frame.innerHTML = "";
-});
-fainfocircle[1].addEventListener("mouseover", () => {
-  info_video_up();
-  info_video_insert_HTML();
-});
-fainfocircle[1].addEventListener("mouseout", () => {
-  info_video_down();
-  info_video.innerHTML = "";
-});
+togglefunction.forEach((this_toggle) =>
+  this_toggle.addEventListener("click", () => {
+    toggle();
+  })
+);
+
+fainfocircle.forEach((this_toggle) =>
+  this_toggle.addEventListener("mouseover", () => {
+    if (getComputedStyle(video).display != "none") {
+      display_flex_Video();
+    } else {
+      display_flex_Frame();
+    }
+  })
+);
+
+fainfocircle.forEach((this_toggle) =>
+  this_toggle.addEventListener("mouseout", () => {
+    if (getComputedStyle(video).display != "none") {
+      display_none_Video();
+    } else {
+      display_none_Frame();
+    }
+  })
+);
 
 function info_frame_insert_HTML() {
   info_frame.insertAdjacentHTML(
@@ -81,30 +84,36 @@ function toggle() {
   style.display.toggle(ico_frame_info);
 }
 
-function info_video_up() {
-  style.display.flex(info_video);
-  sleepFor(100);
-  style.filter.blur(video, 4);
-  style.opacity(video, 0.5);
-}
-function info_video_down() {
+function display_none_Video() {
   style.display.none(info_video);
   sleepFor(100);
   style.filter.none(video);
   style.opacity(video, 1);
+  info_video.innerHTML = "";
 }
 
-function info_frame_up() {
-  style.display.flex(info_frame);
+function display_flex_Video() {
+  style.display.flex(info_video);
   sleepFor(100);
-  style.filter.blur(frame, 4);
-  style.opacity(frame, 0.1);
+  style.filter.blur(video, 4);
+  style.opacity(video, 0.5);
+  info_video_insert_HTML();
 }
-function info_frame_down() {
+
+function display_none_Frame() {
   style.display.none(info_frame);
   sleepFor(100);
   style.filter.none(frame);
   style.opacity(frame, 1);
+  info_frame.innerHTML = "";
+}
+
+function display_flex_Frame() {
+  style.display.flex(info_frame);
+  sleepFor(100);
+  style.filter.blur(frame, 4);
+  style.opacity(frame, 0.1);
+  info_frame_insert_HTML();
 }
 
 console.timeEnd("Exécution script JS");
