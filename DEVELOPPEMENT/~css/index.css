@@ -1,4 +1,3 @@
-/* Import de plusieurs polices avec Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@600&family=Secular+One&family=Vujahday+Script&family=Yuji+Hentaigana+Akari&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500&family=Bebas+Neue&family=Josefin+Sans:wght@200;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
@@ -9,7 +8,6 @@
   --main-color4: #20788c;
   --main-color5: #5aadbf;
   --icon-color: #e4edf2;
-
   --abril: "Abril Fatface", cursive;
   --cinzel: "Cinzel", serif;
   --secular: "Secular One", sans-serif;
@@ -22,25 +20,18 @@
   width: 0;
 }
 
-
-
-/* ! INDEX.HTML */
-
-/* 
 *, ::before, ::after 
 {
   margin: 0; 
   padding: 0;
-} */
+}
 
-#body_index_page {
-  margin: 0;
-  padding: 0;
+body {
   overflow-x: hidden;
   background-color: var(--main-color3);
 }
 
-/* * HEADER - ICONS & MENU */
+/** ------------------------------ HEADER ------------------------------ */
 
 .header-menu_header-buttons {
   display: flex;
@@ -85,9 +76,52 @@
   transition: All 0.9s;
 }
 
-/* * END HEADER - ICONS & MENU */
+/*! ------------------------------ HEADER ------------------------------ */
+/** ------------------------------ FOOTER ------------------------------ */
 
-/* * MENU DÉROULANT */
+footer {
+  position: absolute;
+  height: 25px;
+  width: 100%;
+  bottom: 0;
+}
+
+#foot {
+  display: flex;
+  justify-content: right;
+  font-size: 1.5vh;
+  margin-right: 1%;
+}
+
+/*! ------------------------------ FOOTER ------------------------------ */
+/** ------------------------------ ERROR ------------------------------- */
+
+#titre-notfound {
+  width: 100%;
+  margin: auto;   
+  text-align: center;
+  font-size: 10rem;
+  font-weight: 100;
+  font-family: var(--abril);
+  text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: var(--icon-color);
+}
+
+#p-notfound {
+width: 100%;
+margin: auto;   
+font-size: 5rem;
+text-align: center;
+font-weight: 800;
+color: var(--icon-color);
+text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+font-family: var(--abril);
+}
+
+
+/*! ------------------------------ ERROR ------------------------------- */
+/** ------------------------------ INDEX  ------------------------------ */
+/** -------------------------- MENU DÉROULANT -------------------------- */
 
 ul.drop a {
   font-family: var(--abril);
@@ -145,9 +179,8 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-/* * END MENU DÉROULANT */
-
-/* * SLIDES */
+/** -------------------------- MENU DÉROULANT -------------------------- */
+/** ------------------------------ SLIDES ------------------------------ */
 
 #first_button_div {
   display: flex;
@@ -174,7 +207,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   animation: bounce 1.4s ease infinite alternate;
   color: orange;
 }
-
 
 #src-img-centrale {
   max-height: 25rem;
@@ -211,7 +243,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   margin: -40% 5%;
   transform: rotateX(9deg) rotateY(45deg) rotateZ(0deg) translateX(0px)
     translateY(-35px) translateZ(0px) scale(1.375) skewY(3deg);
-  /* box-shadow: 5px 5px 15px 5px #000000; */
 }
 
 #img-thrd {
@@ -241,9 +272,8 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   }
 }
 
-/* * END SLIDES */
-
-/* * LOGO & NAME */
+/** ------------------------------ SLIDES ------------------------------ */
+/** ---------------------------- CONTAINER ----------------------------- */
 
 #menu-central {
   display: flex;
@@ -268,36 +298,9 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   margin: 4vw 5.5vh;
 }
 
-/* * END LOGO & NAME */
-
-/* * FOOTER */
-
-footer {
-  position: absolute;
-  height: 25px;
-  width: 100%;
-  bottom: 0;
-}
-
-#foot {
-  display: flex;
-  justify-content: right;
-  font-size: 1.5vh;
-  margin-right: 1%;
-}
-
-/* * END FOOTER */
-
-/* ! END INDEX.HTML */
-
-/* ! PRESENTATION.HTML */
-
-#body_presentation_page {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: var(--main-color3);
-}
+/** ---------------------------- CONTAINER ----------------------------- */
+/*! ------------------------------ INDEX  ------------------------------ */
+/** -------------------------- PRESENTATION ---------------------------- */
 
 /* * DOWNLOAD CV ICON */
 
@@ -310,16 +313,9 @@ footer {
 
 /* * END DOWNLOAD CV ICON */
 
-/* ! END PRESENTATION.HTML */
+/*! -------------------------- PRESENTATION ---------------------------- */
+/** --------------------------- COMPRENDRE ----------------------------- */
 
-/* ! COMPRENDRE.HTML */
-
-#body_comprendre_page {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: var(--main-color3);
-}
 
 .fa-code,
 .fa-github {
@@ -329,20 +325,13 @@ footer {
   cursor: alias;
 }
 
-/* ! END COMPRENDRE.HTML */
-
-/* ! PROJETS.HTML */
+/*! --------------------------- COMPRENDRE ----------------------------- */
+/** ---------------------------- PROJETS ------------------------------- */
 
 #htmlprojet {
   scroll-behavior: smooth;
 }
 
-#body_projets_page {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: var(--main-color);
-}
 
 .projet-explication {
   display: flex;
@@ -354,7 +343,6 @@ footer {
 .projects {
   font-size: 6.5rem;
   font-family: var(--abril);
-  /* background-color: blue; */
   height: 25vh;
   text-align: center;
   letter-spacing: 4.5px;
@@ -376,35 +364,17 @@ footer {
   font-family: var(--araba);
 }
 
-.pres-projet-timken {
-  /* background-color: RED; */
-}
-
-.pres-projet-snp {
-  /* background-color: green; */
-}
-
 #Timken-presentation {
   height: 100vh;
-  /* background-color: red; */
   box-shadow: 0px 0px 8px black;
 }
 
 #SnipeIT-presentation {
   height: 100vh;
-  /* background-color: green */
 }
 
-/* ! END PROJETS.HTML */
-
-/* ! PROJET-TIMKEN.HTML */
-
-#body_projet-timken_page {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: var(--main-color);
-}
+/*! ---------------------------- PROJETS ------------------------------- */
+/** ----------------------------- TIMKEN ------------------------------- */
 
 #titlediv {
   color: white;
@@ -541,16 +511,8 @@ footer {
   color: var(--icon-color);
 }
 
-/* ! END PROJET-TIMKEN.HTML */
-
-/* ! PROJET-SNIPE-IT.HTML */
-
-#body_projet-snipeit_page {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: var(--main-color3);
-}
+/*! ----------------------------- TIMKEN ------------------------------- */
+/** ---------------------------- SNIPE-IT ------------------------------ */
 
 #div_principale_projet_snipeit {
   position: relative;
@@ -650,41 +612,4 @@ footer {
   color: var(--icon-color);
 }
 
-/* ! END PROJET-SNIPE-IT.HTML */
-
-/* ! 404 NOT FOUND */
-
-#body_notfound {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: var(--main-color3);
-}
-
-#titre-notfound {
-    width: 100%;
-    margin: auto;   
-    text-align: center;
-    font-size: 10rem;
-    font-weight: 100;
-    font-family: var(--abril);
-    text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    color: var(--icon-color);
-}
-
-#p-notfound {
-  width: 100%;
-  margin: auto;   
-  font-size: 5rem;
-  text-align: center;
-  font-weight: 800;
-  color: var(--icon-color);
-  text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-family: var(--abril);
-}
-
-
-/* ! END 404 NOT FOUND */
-
-/* ! END HTML */
-
+/*! ---------------------------- SNIPE-IT ------------------------------ */
