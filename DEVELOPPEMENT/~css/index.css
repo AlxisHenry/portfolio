@@ -3,11 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
 :root {
-  --main-color: #083a59;
+  --backroundColor: #083a59;
   --main-color3: #105773;
   --main-color4: #20788c;
-  --main-color5: #5aadbf;
-  --icon-color: #e4edf2;
+  --shadowColor: #5aadbf;
+  --iconColor: #e4edf2;
+  
   --abril: "Abril Fatface", cursive;
   --cinzel: "Cinzel", serif;
   --secular: "Secular One", sans-serif;
@@ -20,15 +21,16 @@
   width: 0;
 }
 
-*, ::before, ::after 
-{
-  margin: 0; 
+*,
+::before,
+::after {
+  margin: 0;
   padding: 0;
 }
 
 body {
   overflow-x: hidden;
-  background-color: var(--main-color3);
+  background-color: var(--backroundColor);
 }
 
 /** ------------------------------ HEADER ------------------------------ */
@@ -46,7 +48,7 @@ body {
 .fa-backward,
 .fa-home {
   font-size: 3rem;
-  color: var(--icon-color);
+  color: var(--iconColor);
   background-color: transparent;
 }
 
@@ -57,11 +59,11 @@ body {
 
 .fa-backward:hover,
 .fa-home:hover {
-  color: var(--icon-color);
+  color: var(--iconColor);
   cursor: pointer;
   transform: scale(1.09);
-  text-shadow: -2px 0 black, 0 1px black, 1px 0 black,
-    0 -1px black;
+  text-shadow: -0.5px 0 var(--shadowColor), 0 0.5px var(--shadowColor),
+    0.5px 0 var(--shadowColor), 0 -0.5px var(--shadowColor);
 }
 
 .fa-backward:hover,
@@ -70,10 +72,10 @@ body {
 }
 
 .fa-chevron-circle-down:hover {
-  color: var(--icon-color);
+  color: var(--iconColor);
   cursor: pointer;
   transform: scale(1.09);
-  transition: All 0.9s;
+  transition: All 0.05s;
 }
 
 /*! ------------------------------ HEADER ------------------------------ */
@@ -98,26 +100,27 @@ footer {
 
 #titre-notfound {
   width: 100%;
-  margin: auto;   
+  margin: auto;
   text-align: center;
   font-size: 10rem;
   font-weight: 100;
   font-family: var(--abril);
-  text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  color: var(--icon-color);
+  color: var(--iconColor);
+  text-shadow: -0.5px 0 var(--shadowColor), 0 0.5px var(--shadowColor),
+    0.5px 0 var(--shadowColor), 0 -0.5px var(--shadowColor);
 }
 
 #p-notfound {
-width: 100%;
-margin: auto;   
-font-size: 5rem;
-text-align: center;
-font-weight: 800;
-color: var(--icon-color);
-text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-font-family: var(--abril);
+  width: 100%;
+  margin: auto;
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 800;
+  color: var(--iconColor);
+  font-family: var(--abril);
+  text-shadow: -0.5px 0 var(--shadowColor), 0 0.5px var(--shadowColor),
+    0.5px 0 var(--shadowColor), 0 -0.5px var(--shadowColor);
 }
-
 
 /*! ------------------------------ ERROR ------------------------------- */
 /** ------------------------------ INDEX  ------------------------------ */
@@ -134,7 +137,7 @@ ul.drop ul {
   list-style: none;
   margin: -0.4px;
   padding: 0;
-  color: black;
+  color: var(--iconColor);
   text-align: end;
 }
 
@@ -162,21 +165,23 @@ ul.drop ul {
 ul.drop li ul {
   width: 1000%;
   max-width: 265px;
-  margin: 6px -12.5em;
+  margin: 1px -12.5em;
 }
 
 ul.drop li.menuhover:hover > ul {
   visibility: visible;
+  
 }
 
 header div.header-menu_header-buttons .header-nav ul li ul li a {
-  color: var(--icon-color);
+  color: var(--iconColor);
   text-decoration: none;
 }
 
 header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   zoom: 1.02;
-  text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-shadow: -0.5px 0 var(--shadowColor), 0 0.5px var(--shadowColor),
+    0.5px 0 var(--shadowColor), 0 -0.5px var(--shadowColor);
 }
 
 /** -------------------------- MENU DÉROULANT -------------------------- */
@@ -302,8 +307,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 /*! ------------------------------ INDEX  ------------------------------ */
 /** -------------------------- PRESENTATION ---------------------------- */
 
-/* * DOWNLOAD CV ICON */
-
 .fa-cloud-download-alt {
   font-size: 2.5em;
   color: var(--icon-color);
@@ -311,11 +314,8 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   cursor: alias;
 }
 
-/* * END DOWNLOAD CV ICON */
-
 /*! -------------------------- PRESENTATION ---------------------------- */
 /** --------------------------- COMPRENDRE ----------------------------- */
-
 
 .fa-code,
 .fa-github {
@@ -331,7 +331,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 #htmlprojet {
   scroll-behavior: smooth;
 }
-
 
 .projet-explication {
   display: flex;
@@ -358,7 +357,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 
 .encre {
   text-decoration: none;
-  color: #fff;
+  color: var(--icon-color);
   letter-spacing: 4.5px;
   font-size: 10.5rem;
   font-family: var(--araba);
@@ -391,7 +390,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 .fa-file-code {
   position: absolute;
   width: 30px;
-  /* left: 95.5%; */
   left: 102%;
   bottom: 88%;
 }
@@ -399,7 +397,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 .fa-file-video {
   position: absolute;
   width: 30px;
-  /* left: 95.5%; */
   left: 102%;
   bottom: 88%;
 }
