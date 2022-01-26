@@ -4,11 +4,11 @@
 
 :root {
   --backroundColor: #083a59;
-  --main-color3: #105773;
-  --main-color4: #20788c;
+  --color1: #105773;
+  --color2: #20788c;
   --shadowColor: #5aadbf;
   --iconColor: #e4edf2;
-  
+
   --abril: "Abril Fatface", cursive;
   --cinzel: "Cinzel", serif;
   --secular: "Secular One", sans-serif;
@@ -56,7 +56,7 @@ body {
 .fa-chevron-circle-down {
   margin: auto 0.2em;
 }
-
+.fa-chevron-circle-down-hover,
 .fa-backward:hover,
 .fa-home:hover {
   color: var(--iconColor);
@@ -65,17 +65,10 @@ body {
   text-shadow: -0.5px 0 var(--shadowColor), 0 0.5px var(--shadowColor),
     0.5px 0 var(--shadowColor), 0 -0.5px var(--shadowColor);
 }
-
+.fa-chevron-circle-down-hover,
 .fa-backward:hover,
 .fa-home:hover {
   transition: All 0.9s;
-}
-
-.fa-chevron-circle-down:hover {
-  color: var(--iconColor);
-  cursor: pointer;
-  transform: scale(1.09);
-  transition: All 0.05s;
 }
 
 /*! ------------------------------ HEADER ------------------------------ */
@@ -85,14 +78,8 @@ footer {
   position: absolute;
   height: 25px;
   width: 100%;
+  text-align: right;
   bottom: 0;
-}
-
-#foot {
-  display: flex;
-  justify-content: right;
-  font-size: 1.5vh;
-  margin-right: 1%;
 }
 
 /*! ------------------------------ FOOTER ------------------------------ */
@@ -170,7 +157,6 @@ ul.drop li ul {
 
 ul.drop li.menuhover:hover > ul {
   visibility: visible;
-  
 }
 
 header div.header-menu_header-buttons .header-nav ul li ul li a {

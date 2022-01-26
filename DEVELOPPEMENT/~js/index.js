@@ -69,6 +69,8 @@ buttons[1].addEventListener("click", change_to_img2);
 buttons[2].addEventListener("click", change_to_img3);
 window.addEventListener("load", change_img_onload);
 
+// --------------- FUNCTIONS ---------------
+
 function change_to_img1() {
   img_centrale.title = images.snipeit.title;
   img_centrale.alt = images.snipeit.alt;
