@@ -30,6 +30,7 @@ const style = {
     flex: (id) => {
       id.style.display = "flex";
     },
+    baptiste: "e",
     none: (id) => {
       id.style.display = "none";
     },
@@ -40,7 +41,7 @@ const style = {
         id.style.display = "flex";
       }
     },
-  },
+  },  
   filter: {
     blur: (id, value) => {
       id.style.filter = `blur(${value}px)`;
