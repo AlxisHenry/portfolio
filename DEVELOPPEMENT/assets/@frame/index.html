@@ -13,7 +13,7 @@
 
 </div>
 
-<form action="">
+
 
 	<div id="div1">
 
@@ -81,12 +81,43 @@
 
 		<input type="text" id="num" placeholder="Order Number" maxlength="20" title="Order Number" name="order_number">
 
-		<input type="submit" value="Confirm">
+		<input id="submitbtn" type="submit" value="Confirm">
+
 
 	</div>
 
-</form>
 
+<div class="" id="loadbar_container">
+	<div class="" id="loadbar_container2">
+	  <div class="" id="loadbar"></div>
+	</div>
+  </div>
+
+<script>
+	const submit_btn = document.querySelector('#submitbtn');
+	const loadbar_container = document.querySelector('#loadbar_container')
+	const loadbar_container2 = document.querySelector('#loadbar_container2')
+	const progress_bar = document.querySelector('#loadbar')
+
+	submit_btn.addEventListener('click', () => {
+
+		loadbar_container.classList.add('header-bar-chargement');
+		loadbar_container2.classList.add('progress-container-chargement');
+		progress_bar.classList.add('progress-bar-chargement');
+		// sleepFor(2000)
+		// loadbar_container.classList.remove('header-bar-chargement');
+		// loadbar_container2.classList.remove('progress-container-chargement');
+		// progress_bar.classList.remove('progress-bar-chargement');
+	})
+	
+function sleepFor(sleepDuration) {
+  var now = new Date().getTime();
+  while (new Date().getTime() < now + sleepDuration) {
+    /* Do nothing */
+  }
+}
+
+	</script>	
 </body>
 
 </html>

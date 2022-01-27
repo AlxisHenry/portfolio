@@ -81,7 +81,12 @@ function change_to_img1() {
   src_prp.onclick = function () {
     href_img.href = images.snipeit.href;
   };
-
+  img_centrale.animate([
+    { opacity: 0  },
+    { transition: 'ease-in'},
+  ], {
+    duration: 400,
+  });
 }
 
 function change_to_img2() {
@@ -98,8 +103,12 @@ function change_to_img2() {
   };
   img_centrale.classList.remove('transition-to-img')
   img_centrale.classList.add('transition-to-img')
-
-
+  img_centrale.animate([
+    { opacity: 0  },
+    { transition: 'ease-in'}
+  ], {
+    duration: 400,
+  });
 
 }
 
@@ -114,7 +123,12 @@ function change_to_img3() {
   };
   img_centrale.classList.remove('transition-to-img')
   img_centrale.classList.add('transition-to-img')
-
+  img_centrale.animate([
+    { opacity: 0  },
+    { transition: 'ease-in'}
+  ], {
+    duration: 400,
+  });
 }
 
 function change_img_auto() {

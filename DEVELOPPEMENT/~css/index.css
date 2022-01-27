@@ -401,6 +401,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 }
 
 #frame_projet {
+  position: relative;
   width: 45%;
   height: 50.55vh;
   display: none;
