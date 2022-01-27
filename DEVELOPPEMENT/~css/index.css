@@ -293,12 +293,14 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   font-size: 8.5vw;
   color: var(--iconColor);
   font-family: var(--araba);
+  margin-right: 2%;
+  margin-left: 2%;
 }
 
 .fa-address-card {
   font-size: 3.5vw;
   color: var(--color2);
-  margin: 50% 30px;
+  margin-top: 100%;
 }
 
 .fa-address-card:hover {
