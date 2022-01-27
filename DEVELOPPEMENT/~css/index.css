@@ -78,8 +78,14 @@ footer {
   position: absolute;
   height: 25px;
   width: 100%;
-  text-align: right;
+  text-align: center;
   bottom: 0;
+  color: var(--color1);
+}
+
+footer:hover {
+  transition: All 0.8s;
+  color: var(--iconColor);
 }
 
 /*! ------------------------------ FOOTER ------------------------------ */
@@ -171,122 +177,134 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 }
 
 /** -------------------------- MENU DÉROULANT -------------------------- */
-/** ------------------------------ SLIDES ------------------------------ */
+/** ------------------------------ BUTTONS ------------------------------ */
 
 #first_button_div {
+  height: 5vh;
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin: -10px 48%;
 }
 
 .fa-circle {
+  padding: 0.3vh;
+  margin-top: 1vh;
   font-size: 1.5em;
 }
 
 .btn1 {
-  animation: bounce 1.2s ease infinite alternate;
-  color: purple;
+  animation: bounce 1.2s ease infinite alternate-reverse;
 }
 .btn2 {
-  animation: bounce 1.3s ease infinite alternate;
-  margin: auto 0.7vh;
-  color: green;
+  animation: bounce 1.4s ease infinite alternate-reverse;
 }
 .btn3 {
-  animation: bounce 1.4s ease infinite alternate;
-  color: orange;
+  animation: bounce 1.6s ease infinite alternate-reverse;
 }
 
-#src-img-centrale {
-  max-height: 25rem;
-  max-width: 50rem;
+.btn1,
+.btn2,
+.btn3 {
+  color: var(--iconColor);
+}
+* .btn1:hover {
+  color: pink;
+}
+.btn2:hover {
+  color: rgb(187, 255, 187);
+}
+.btn3:hover {
+  color: rgb(236, 215, 177);
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(1.25vh);
+  }
+  to {
+    transform: translateY(1vh);
+  }
+}
+
+/** ------------------------------ BUTTONS ------------------------------ */
+/** ------------------------------ SLIDES ------------------------------ */
+
+#slides {
+  width: 100%;
+  height: 33vh;
+  margin-top: 12.5vh;
   display: flex;
   justify-content: center;
-  margin: -1em auto 4%;
+}
+
+.transition-to-img {
 }
 
 #img-centrale {
   width: 100%;
   height: 100%;
   border-radius: 22.5px 22.5px 22.5px 22.5px;
-  box-shadow: 1.8px 1.8px black;
+  box-shadow: 1.8px 1.8px var(--shadowColor);
 }
 
-#src-img-scnd,
-#src-img-thrd {
-  max-width: 800px;
-  filter: blur(4.5px);
-  display: flex;
+#img-scnd {
+  width: 100%;
+  height: 60%;
+  border-radius: 25.5px 25.5px 25.5px 25.5px;
+  margin-top: 15%;
+  margin-left: -20%;
 }
 
-#img-scnd,
 #img-thrd {
-  width: 300px;
-  height: 100%;
-  display: flex;
+  width: 100%;
+  height: 60%;
+  margin-top: 15%;
+  margin-left: 28%;
   border-radius: 25.5px 25.5px 25.5px 25.5px;
 }
 
 #img-scnd {
-  justify-content: left;
-  margin: -40% 5%;
   transform: rotateX(9deg) rotateY(45deg) rotateZ(0deg) translateX(0px)
     translateY(-35px) translateZ(0px) scale(1.375) skewY(3deg);
 }
-
 #img-thrd {
-  justify-content: right;
-  margin: -40% 152%;
   transform: rotateX(-9deg) rotateY(-49deg) rotateZ(0deg) translateX(-50px)
     translateY(-20px) translateZ(0px) scale(1.4) skewY(-15deg);
 }
 
-#img-scnd:hover,
-#img-thrd:hover {
-  cursor: zoom-in;
-}
-
 #img-centrale:hover {
-  zoom: 1.005;
-  box-shadow: 0.5px 0.5px black;
+  box-shadow: 1.5px 1.5px black;
   cursor: help;
-}
-
-@keyframes bounce {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-5px);
-  }
 }
 
 /** ------------------------------ SLIDES ------------------------------ */
 /** ---------------------------- CONTAINER ----------------------------- */
 
-#menu-central {
+#container-menu-central {
   display: flex;
   justify-content: center;
-  margin: 0.5vh auto -10.5vh;
-  max-width: 80%;
+  margin-top: 8vh;
   width: 100%;
   overflow: hidden;
 }
 
 #prenom,
 #nom {
-  margin-top: 0vw;
   font-size: 8.5vw;
-  color: var(--icon-color);
+  color: var(--iconColor);
   font-family: var(--araba);
 }
 
 .fa-address-card {
   font-size: 3.5vw;
-  color: var(--icon-color);
-  margin: 4vw 5.5vh;
+  color: var(--color2);
+  margin: 50% 30px;
 }
 
+.fa-address-card:hover {
+  transition: All 0.8s;
+  color: var(--iconColor)
+}
 /** ---------------------------- CONTAINER ----------------------------- */
 /*! ------------------------------ INDEX  ------------------------------ */
 /** -------------------------- PRESENTATION ---------------------------- */

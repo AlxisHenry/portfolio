@@ -72,6 +72,7 @@ window.addEventListener("load", change_img_onload);
 // --------------- FUNCTIONS ---------------
 
 function change_to_img1() {
+  img_centrale.classList.add('transition-to-img')
   img_centrale.title = images.snipeit.title;
   img_centrale.alt = images.snipeit.alt;
   img_centrale.src = images.snipeit.img;
@@ -80,6 +81,7 @@ function change_to_img1() {
   src_prp.onclick = function () {
     href_img.href = images.snipeit.href;
   };
+
 }
 
 function change_to_img2() {
@@ -94,6 +96,11 @@ function change_to_img2() {
       href_links_path[Math.floor(Math.random() * href_links_path.length)];
     href_img.href = random_path_selector;
   };
+  img_centrale.classList.remove('transition-to-img')
+  img_centrale.classList.add('transition-to-img')
+
+
+
 }
 
 function change_to_img3() {
@@ -105,6 +112,9 @@ function change_to_img3() {
   src_prp.onclick = function () {
     href_img.href = images.timken.href;
   };
+  img_centrale.classList.remove('transition-to-img')
+  img_centrale.classList.add('transition-to-img')
+
 }
 
 function change_img_auto() {
