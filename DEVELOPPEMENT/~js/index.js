@@ -61,7 +61,10 @@ first_button_div.insertAdjacentHTML(
   title="${images.timken.title}"
   class="img3 btn3 fas fa-circle"
   ></i>`)
-); 
+);
+
+style.filter.blur(img_nd, 2.5)
+style.filter.blur(img_th, 2.5)
 
 const buttons = document.querySelectorAll(".fa-circle");
 buttons[0].addEventListener("click", change_to_img1);
@@ -72,7 +75,7 @@ window.addEventListener("load", change_img_onload);
 // --------------- FUNCTIONS ---------------
 
 function change_to_img1() {
-  img_centrale.classList.add('transition-to-img')
+  img_centrale.classList.add("transition-to-img");
   img_centrale.title = images.snipeit.title;
   img_centrale.alt = images.snipeit.alt;
   img_centrale.src = images.snipeit.img;
@@ -81,10 +84,7 @@ function change_to_img1() {
   src_prp.onclick = function () {
     href_img.href = images.snipeit.href;
   };
-  img_centrale.animate([
-    { opacity: 0  },
-    { transition: 'ease-in'},
-  ], {
+  img_centrale.animate([{ opacity: 0 }, { transition: "ease-in" }], {
     duration: 400,
   });
 }
@@ -101,15 +101,11 @@ function change_to_img2() {
       href_links_path[Math.floor(Math.random() * href_links_path.length)];
     href_img.href = random_path_selector;
   };
-  img_centrale.classList.remove('transition-to-img')
-  img_centrale.classList.add('transition-to-img')
-  img_centrale.animate([
-    { opacity: 0  },
-    { transition: 'ease-in'}
-  ], {
+  img_centrale.classList.remove("transition-to-img");
+  img_centrale.classList.add("transition-to-img");
+  img_centrale.animate([{ opacity: 0 }, { transition: "ease-in" }], {
     duration: 400,
   });
-
 }
 
 function change_to_img3() {
@@ -121,12 +117,9 @@ function change_to_img3() {
   src_prp.onclick = function () {
     href_img.href = images.timken.href;
   };
-  img_centrale.classList.remove('transition-to-img')
-  img_centrale.classList.add('transition-to-img')
-  img_centrale.animate([
-    { opacity: 0  },
-    { transition: 'ease-in'}
-  ], {
+  img_centrale.classList.remove("transition-to-img");
+  img_centrale.classList.add("transition-to-img");
+  img_centrale.animate([{ opacity: 0 }, { transition: "ease-in" }], {
     duration: 400,
   });
 }

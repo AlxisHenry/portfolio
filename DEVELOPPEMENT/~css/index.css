@@ -117,6 +117,34 @@ footer:hover {
 }
 
 /*! ------------------------------ ERROR ------------------------------- */
+/** -------------------------- COMMING SOON ---------------------------- */
+
+.content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.logo {
+  height: 500px;
+  border-color: black;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(8deg);
+  }
+  50% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(8deg);
+  }
+}
+
+/*! -------------------------- COMMING SOON ---------------------------- */
 /** ------------------------------ INDEX  ------------------------------ */
 /** -------------------------- MENU DÉROULANT -------------------------- */
 

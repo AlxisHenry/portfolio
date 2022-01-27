@@ -53,7 +53,7 @@ const outTable = menu_deroulantTable.addEventListener("mouseout", () => {
 
 const date = new Date();
 
-const FooterText = "© " + date.getFullYear() + " | Alexis Henry";
+const FooterText = `© ${date.getFullYear()} | Alexis Henry`;
 
 const addHTML_toFooter = document
   .getElementById("foot")
