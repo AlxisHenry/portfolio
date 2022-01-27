@@ -123,7 +123,7 @@ footer:hover {
   position: absolute;
   top: 45%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .logo {
@@ -295,9 +295,21 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 #img-scnd {
   transform: rotateX(9deg) rotateY(45deg) rotateZ(0deg) translateX(0px)
     translateY(-35px) translateZ(0px) scale(1.375) skewY(3deg);
+  -moz-transform: rotateX(9deg) rotateY(45deg) rotateZ(0deg) translateX(0px)
+    translateY(-35px) translateZ(0px) scale(1.375) skewY(3deg);
+  -ms-transform: rotateX(9deg) rotateY(45deg) rotateZ(0deg) translateX(0px)
+    translateY(-35px) translateZ(0px) scale(1.375) skewY(3deg);
+  -o-transform: rotateX(9deg) rotateY(45deg) rotateZ(0deg) translateX(0px)
+    translateY(-35px) translateZ(0px) scale(1.375) skewY(3deg);
 }
 #img-thrd {
   transform: rotateX(-9deg) rotateY(-49deg) rotateZ(0deg) translateX(-50px)
+    translateY(-20px) translateZ(0px) scale(1.4) skewY(-15deg);
+  -moz-transform: rotateX(-9deg) rotateY(-49deg) rotateZ(0deg) translateX(-50px)
+    translateY(-20px) translateZ(0px) scale(1.4) skewY(-15deg);
+  -ms-transform: rotateX(-9deg) rotateY(-49deg) rotateZ(0deg) translateX(-50px)
+    translateY(-20px) translateZ(0px) scale(1.4) skewY(-15deg);
+  -o-transform: rotateX(-9deg) rotateY(-49deg) rotateZ(0deg) translateX(-50px)
     translateY(-20px) translateZ(0px) scale(1.4) skewY(-15deg);
 }
 
@@ -334,7 +346,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 
 .fa-address-card:hover {
   transition: All 0.8s;
-  color: var(--iconColor)
+  color: var(--iconColor);
 }
 
 /** ---------------------------- CONTAINER ----------------------------- */
@@ -435,7 +447,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   display: none;
   border: outset;
   border-radius: 20px 20px 20px 20px;
-  
 }
 
 .fa-file-video,
@@ -531,7 +542,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 #titlediv {
   color: white;
   text-decoration: none;
-} 
+}
 
 #fv {
   display: flex;
