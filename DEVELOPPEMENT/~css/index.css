@@ -125,13 +125,7 @@ footer:hover {
 }
 
 #shtml-errors-server-return-this {
-  width: 100%;
-  margin: auto;
-  font-size: 1rem;
-  text-align: center;
-  font-weight: 800;
-  color: var(--iconColor);
-  font-family: var(--abril);
+display: none;
 }
 
 /*! ------------------------------ ERROR ------------------------------- */
