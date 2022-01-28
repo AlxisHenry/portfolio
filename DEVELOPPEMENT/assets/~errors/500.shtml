@@ -79,9 +79,17 @@
         500
       </h1>
       <p id="p-notfound">Internal Server Error</p>
+      <p id="shtml-errors-server-return-this">
+        <!--#echo var="HTTP_REFERER" --><br>
+        <!--#echo var="REMOTE_ADDR" --><br>
+        <!--#echo var="REQUEST_URI" --><br>
+        <!--#echo var="REDIRECT_STATUS" --><br>
+        <!--#echo var="HTTP_USER_AGENT" --><br>
+        <!--#echo var="HTTP_HOST" -->
+      </p>
 
     <footer>
-      <div id="foot">© 2021 | Alexis Henry</div>
+      <div id="foot"></div>
     </footer>
     <script src="../../../DEVELOPPEMENT/~js/data.js"></script>
     <script src="../../../DEVELOPPEMENT/~js/main.js"></script>
