@@ -24,11 +24,6 @@
   width: 0;
 }
 
-/* .scroller {
-  overflow-y: scroll;
-  scrollbar-color: #0A4C95 #C2D2E4;
-} */
-
 *,
 ::before,
 ::after {
@@ -57,7 +52,7 @@ body {
 .fa-backward,
 .fa-home {
   font-size: 3rem;
-  color: var(--iconColor);
+  color: var(--color2);
   background-color: transparent;
 }
 
@@ -92,7 +87,7 @@ footer {
   color: var(--color1);
 }
 
-footer:hover {
+#footerspan:hover {
   transition: All 0.8s;
   color: var(--iconColor);
 }
@@ -249,15 +244,17 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   color: var(--iconColor);
 }
 .btn1:hover {
-  color: pink;
+  /* color: #892e88; */
+  color: #debeca;
 }
 .btn2:hover {
-  color: rgb(187, 255, 187);
+  /* color:#173d20; */
+  color: #acbda4;
 }
 .btn3:hover {
-  color: rgb(236, 215, 177);
+  /* color: #f89b3b; */
+  color: #facc9a;
 }
-
 @keyframes bounce {
   from {
     transform: translateY(1.25vh);
@@ -282,7 +279,9 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   width: 100%;
   height: 100%;
   border-radius: 22.5px 22.5px 22.5px 22.5px;
-  box-shadow: 1.8px 1.8px var(--shadowColor);
+  border: solid;
+  border-width: 4px; 
+  border-color: var(--shadowColor);
 }
 
 #img-scnd {
@@ -324,7 +323,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 }
 
 #img-centrale:hover {
-  box-shadow: 1.5px 1.5px black;
   cursor: help;
 }
 

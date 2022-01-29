@@ -60,14 +60,24 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
                  > source_code
                  > CV
               > @fonts
+              > @frame
+                 > cgi-enabled
+                    > main.py
+                 > img
+                    > favicon.ico
+                    > Timken.png
+                 > index.html
+                 > style.css
               > @ico
                  > favicon-16x16.png
               > @img
                  > aleatory.png
+                 > coming-soon.png
                  > snipeit.png
                  > Timken.png
               > @videos
                  > demonstration_automation_snp.mp4
+                 > showsnipeit.mkv
               > ~errors
                  > 400.shtml
                  > 401.shtml

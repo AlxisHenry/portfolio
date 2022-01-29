@@ -16,7 +16,7 @@ document.getElementById("src-img-scnd").insertAdjacentHTML(
   <img
     id="img-scnd"
     alt="${images.snipeit.alt}"
-    title="Faire passer en premier plan"
+    title="Seconde image"
     src="${images.snipeit.img}"
   />`)
 );
@@ -26,7 +26,7 @@ document.getElementById("src-img-thrd").insertAdjacentHTML(
   <img
     id="img-thrd"
     alt="${images.aleatory.alt}"
-    title="Faire passer en premier plan"
+    title="Troisième image"
     src="${images.aleatory.img}"
   />`)
 );
