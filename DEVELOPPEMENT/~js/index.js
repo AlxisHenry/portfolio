@@ -139,10 +139,17 @@ function change_img_onload() {
 
 // ------------------ FIREFOX & SAFARI  ------------------
 
-if (platform.name === "Firefox" || platform.name === "Safari") {
+if (platform.name === "Firefox") {
   img_nd.style.visibility = "hidden";
-  img_th.style.visibility = "hidden";
-} 
+  img_th.style.visibility = "hidden"; 
+} else if (platform.name === "Safari"){
+  img_nd.style.visibility = "hidden";
+  img_th.style.visibility = "hidden"; 
+} else if (platform.name === "Opera"){
+  img_nd.style.visibility = "hidden";
+  img_th.style.visibility = "hidden"; 
+}
 
+console.log(platform.name);
 
 console.timeEnd("Exécution script JS");
