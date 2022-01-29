@@ -1,5 +1,7 @@
 console.time("Exécution script JS");
 
+// import { platform } from './librairies/platform.js-master/platform';
+
 // ------------------ HISTORY BACK ICON  ------------------
 
 document.getElementById("btn-rar").addEventListener("click", (e) => {
@@ -72,4 +74,3 @@ if (document.querySelector("#index_page")){
   document.querySelector("title").insertAdjacentHTML("afterend", favicon);
   console.log("test");
 }
-

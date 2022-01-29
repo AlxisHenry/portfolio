@@ -137,4 +137,12 @@ function change_img_onload() {
   setInterval(change_img_auto, 6000);
 }
 
+// ------------------ FIREFOX & SAFARI  ------------------
+
+if (platform.name === "Firefox" || platform.name === "Safari") {
+  img_nd.style.visibility = "hidden";
+  img_th.style.visibility = "hidden";
+} 
+
+
 console.timeEnd("Exécution script JS");
