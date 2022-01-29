@@ -150,6 +150,4 @@ if (platform.name === "Firefox") {
   img_th.style.visibility = "hidden"; 
 }
 
-console.log(platform.name);
-
 console.timeEnd("Exécution script JS");
