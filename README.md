@@ -46,6 +46,7 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
               > index.css
            > ~html
               > comprendre.html
+              > inprogress.html
               > presentation.html
               > projet-snipe-it.html
               > projet.timken.html
@@ -71,6 +72,11 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
               > @ico
                  > favicon-16x16.png
               > @img
+                 > no-backgrounds
+                    > al-removebg-preview.png
+                    > al2-removebg-preview.png
+                    > al3-removebg-preview.png
+                    > ss--removebg-preview.png
                  > aleatory.png
                  > coming-soon.png
                  > snipeit.png
