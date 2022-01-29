@@ -20,7 +20,7 @@ const images = {
   aleatory: {
     title: "ALEATORY",
     alt: "ALEATORY",
-    img: `${path.imgs}inprogress.png`,
+    img: `${path.imgs}aleatory.png`,
     href: "none",
     status: "none",
   },
