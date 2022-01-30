@@ -7,7 +7,7 @@ const images = {
     title: "TIMKEN",
     alt: "TIMKEN",
     img: `${path.imgs}Timken.png`,
-    href: `${path.html}inprogress.html`,
+    href: `${path.html}projet-timken.html`,
     status: "Not Started",
   },
   snipeit: {

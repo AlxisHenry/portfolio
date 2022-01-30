@@ -140,10 +140,6 @@ function change_img_onload() {
 
 // ------------------ FIREFOX & SAFARI  ------------------
 
-const this_platform = platform.name
-console.log(`%cYou use ${this_platform}`, "color: red; background-color:white; font-size:25px;");
-console.log(`%cIf you see a bug, please report them on : https://github.com/AlxisHenry/CCI-2021-PORTFOLIO`, "color: red; background-color:white; font-size:10px;");
-
 if (platform.name === "Chrome") {
   console.log("You use a good browser :)");
 } else if (platform.name === "Firefox" || platform.name === "Safari") {

@@ -7,7 +7,8 @@ const video = document.getElementById("video_projet"),
   info_frame = document.getElementById("infodivframe"),
   info_video = document.getElementById("infodivvideo"),
   togglefunction = document.querySelectorAll(".togglefunction"),
-  fainfocircle = document.querySelectorAll(".fa-info-circle");
+  fainfocircle = document.querySelectorAll(".fa-info-circle"),
+  info_projet = document.querySelectorAll('.info-projet');
 
 togglefunction.forEach((this_toggle) =>
   this_toggle.addEventListener("click", () => {
@@ -25,6 +26,22 @@ fainfocircle.forEach((this_toggle) =>
   })
 );
 
+info_projet.forEach((this_toggle) =>
+  this_toggle.addEventListener("mouseover", () => {
+    if (getComputedStyle(video).display != "none") {
+      style.display.flex(info_video);
+      style.display.none(info_frame);
+      style.filter.blur(video, 4);
+      style.opacity(video, 0.5);
+    } else {
+      style.display.none(info_video);
+      style.display.flex(info_frame);
+      style.filter.blur(frame, 4);
+      style.opacity(frame, 0.5);
+    }
+  })
+);
+
 fainfocircle.forEach((this_toggle) =>
   this_toggle.addEventListener("mouseout", () => {
     if (getComputedStyle(video).display != "none") {
@@ -35,48 +52,22 @@ fainfocircle.forEach((this_toggle) =>
   })
 );
 
-function info_frame_insert_HTML() {
-  info_frame.insertAdjacentHTML(
-    "afterbegin",
-    `<div class="show-info-when-mouseover">
-  <h1 id="infodivh1"><strong> Site codé </strong></h1>
-  <p id="infop">
-    Le projet consiste en l'automatisation de la modification du stock
-    d'articles.<br /><br />
-    Ayant présenté le second projet Snipe-IT à mon service, ils ont trouvé
-    un incovénient,<br />
-    L'ajout d'une quantité d'article lors d'un achat n'est absolument pas
-    intuitif.<br />
-    De ce fait, j'ai eu l'idée d'<i>automatiser</i> l'ajout de la quantité
-    achetée.
-  </p></div>`
-  );
-}
+info_projet.forEach((this_toggle) =>
+  this_toggle.addEventListener("mouseout", () => {
+    style.display.none(info_video);
+    style.display.none(info_frame);
+    style.filter.blur(frame, 0);
+    style.opacity(frame, 1);  
+    style.filter.blur(video, 0);
+    style.opacity(video, 1);
+  })
+);
 
-function info_video_insert_HTML() {
-  info_video.insertAdjacentHTML(
-    "afterbegin",
-    `<div class="show-info-when-mouseover">
-  <h1 id="infodivh1"><strong> Projet Timken </strong></h1>
-  <p id="infop">
-    Le projet consiste en l'automatisation de l'actualisation du stock
-    d'articles.<br /><br />
-    Ayant présenté le projet Snipe-IT à mon service, ils y ont trouvé un
-    incovénient,<br />
-    l'ajout d'une quantité d'article lors d'un achat n'est absolument pas
-    intuitif.<br />
-    De ce fait, j'ai eu l'idée d'<i>automatiser</i> l'ajout de la quantité
-    achetée. <br />
-    Comme vu dans la vidéo, une page web permettra de sélectionner
-    l'article à ajouter, <br />
-    préciser sa quantité, ainsi que de saisir numéro de commande
-    facultatif.
-  </p></div>`
-  );
-}
-
-function toggle() {
+function toggle() { 
   style.display.toggle(video);
+  video.animate([{ opacity: 0 }, 
+    { }], 
+    {duration: 800,});
   style.display.toggle(frame);
   style.display.toggle(ico_video);
   style.display.toggle(ico_frame);
@@ -89,31 +80,33 @@ function display_none_Video() {
   sleepFor(100);
   style.filter.none(video);
   style.opacity(video, 1);
-  info_video.innerHTML = "";
 }
 
 function display_flex_Video() {
   style.display.flex(info_video);
+  info_video.animate([{ opacity: 0 }, 
+    { }], 
+    {duration: 800,});
   sleepFor(100);
   style.filter.blur(video, 4);
   style.opacity(video, 0.5);
-  info_video_insert_HTML();
 }
 
 function display_none_Frame() {
   style.display.none(info_frame);
   sleepFor(100);
   style.filter.none(frame);
-  style.opacity(frame, 1);
-  info_frame.innerHTML = "";
+  style.opacity(frame, 1);W
 }
 
 function display_flex_Frame() {
   style.display.flex(info_frame);
+  info_frame.animate([{ opacity: 0 }, 
+    { }], 
+    {duration: 800,});
   sleepFor(100);
   style.filter.blur(frame, 4);
   style.opacity(frame, 0.1);
-  info_frame_insert_HTML();
 }
 
 console.timeEnd("Exécution script JS");

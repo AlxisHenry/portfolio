@@ -1,7 +1,5 @@
 console.time("Exécution script JS");
 
-// import { platform } from './librairies/platform.js-master/platform';
-
 // ------------------ HISTORY BACK ICON  ------------------
 
 document.getElementById("btn-rar").addEventListener("click", (e) => {
@@ -72,3 +70,7 @@ if (document.querySelector("#index_page")){
   const favicon = `<link rel="icon" href="${href_to_favicon}" />`;
   document.querySelector("title").insertAdjacentHTML("afterend", favicon);
 }
+
+// ------------------ DEBUG ------------------
+
+console.log(`%cIf you see a bug, please report them on : https://github.com/AlxisHenry/CCI-2021-PORTFOLIO`, "color: red; font-size:10px;");
