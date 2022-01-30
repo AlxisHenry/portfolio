@@ -67,10 +67,8 @@ if (document.querySelector("#index_page")){
   let href_to_favicon = "./DEVELOPPEMENT/assets/@ico/favicon.png";
   const favicon = `<link rel="icon" href="${href_to_favicon}" />`;
   document.querySelector("title").insertAdjacentHTML("afterend", favicon);
-  console.log("test2");
 } else {
   let href_to_favicon = "../assets/@ico/favicon.png"; 
   const favicon = `<link rel="icon" href="${href_to_favicon}" />`;
   document.querySelector("title").insertAdjacentHTML("afterend", favicon);
-  console.log("test");
 }

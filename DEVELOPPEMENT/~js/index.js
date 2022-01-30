@@ -141,13 +141,10 @@ function change_img_onload() {
 
 if (platform.name === "Firefox") {
   img_nd.style.visibility = "hidden";
-  img_th.style.visibility = "hidden"; 
-} else if (platform.name === "Safari"){
-  img_nd.style.visibility = "hidden";
-  img_th.style.visibility = "hidden"; 
-} else if (platform.name === "Opera"){
-  img_nd.style.visibility = "hidden";
-  img_th.style.visibility = "hidden"; 
+  img_th.style.visibility = "hidden";
+} else if (platform.name === "Safari" || platform.name === "Opera") {
+  img_nd.style.transform = "none";
+  img_th.style.transform = "none"; 
 }
 
 console.timeEnd("Exécution script JS");
