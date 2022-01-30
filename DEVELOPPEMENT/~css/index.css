@@ -377,138 +377,105 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 /*! ---------------------------- PROJETS ------------------------------- */
 /** ----------------------------- TIMKEN ------------------------------- */
 
-/* Do this */
-
 #div_principale_projet {
   display: flex;
-  justify-content: center;
-  margin-top: 12vh;
-  width: 100%;
+  justify-content: right;
+  margin: auto;
+  margin-top: 2vh;
+  width: 50%;
   height: 100%;
 }
 
 #video_projet {
-  position: relative;
   z-index: 1;
-  width: 45%;
+  width: 100%;
   height: 100%;
   border: outset;
   border-radius: 20px 20px 20px 20px;
-  cursor: pointer;
   overflow: hidden;
 }
 
-#frame_projet {
-  position: relative;
-  width: 45%;
-  height: 50.55vh;
-  display: none;
+#demo_projet {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   border: outset;
   border-radius: 20px 20px 20px 20px;
-}
-
-.fa-file-video,
-.fa-file-code,
-.fa-info-circle {
-  font-size: 2.5em;
-  color: var(--icon-color);
-}
-
-.fa-file-code {
-  position: absolute;
-  right: 500px;
-  width: 30px;
-}
-
-.fa-file-video {
-  width: 30px;
-}
-
-.fa-file-code {
   display: none;
+  overflow: hidden;
 }
 
-.fa-file-code:hover,
-.fa-file-video:hover {
+.togglefunction {
+  position: absolute;
+  font-size: 2.5em;
+  color: var(--shadowColor);
+  z-index: 999;
+  margin-top: 0px;
+  margin-right: -40px;
   cursor: pointer;
 }
 
-#info-circle {
-  position: relative;
-  z-index: 9;
-  width: 30px;
-  left: 94%;
-  bottom: 89.5%;
+.fa-file-code {
+  display: none;
+}
+
+.research-info-function {
+  position: absolute;
+  font-size: 2.5em;
+  color: var(--shadowColor);
+  z-index: 999;
+  margin-top: 20px;
+  margin-right: 20px;
+  cursor: help;
+}
+
+.research-info-function:hover,
+.togglefunction:hover {
+  color: var(--iconColor);
+  transform: scale(1.09);
+  text-shadow: -0.5px 0 var(--shadowColor), 0 0.5px var(--shadowColor),
+    0.5px 0 var(--shadowColor), 0 -0.5px var(--shadowColor);
+    transition: All 0.9s;
 }
 
 #info-circle_code {
   display: none;
-  position: relative;
-  width: 30px;
-  left: 94%;
-  bottom: 89.5%;
 }
 
-#infodivvideo {
-  margin-left: 10px;
-  display: none;
+.info-projet {
   position: absolute;
-  width: 42.6rem;
-  height: 27.8rem;
-  bottom: 0%;
+  z-index: 10;
+  color: white;
+  width: 50%;
+  height: auto;
 }
 
 #infodivh1 {
   margin-top: 0;
   margin-left: 16px;
-  font-size: 5rem;
+  font-size: 5vw;
   font-family: var(--araba);
   color: var(--main-color5);
 }
 
 #infop {
-  margin-top: 115px;
-  margin-left: -320px;
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   color: var(--icon-color);
-}
-
-#infodivframe {
   margin-left: 16px;
-  display: none;
-  position: absolute;
-  width: 42.6rem;
-  height: 27.8rem;
-  bottom: 0%;
 }
 
-#infodivframeh1 {
-  margin-top: 0;
-  margin-left: 16px;
-  font-size: 5rem;
-  font-family: var(--araba);
-  color: var(--main-color5);
-}
-
-#infoframep {
-  margin-top: 115px;
-  margin-left: -200px;
-  font-size: 1.2rem;
-  color: var(--icon-color);
-}
-
-#titlediv {
+.title-of-the-project-href-timken {
   color: white;
   text-decoration: none;
 }
 
-#fv {
+.title-of-the-project-timken {
   display: flex;
   justify-content: center;
   width: 100%;
-  font-size: 14vw;
+  font-size: 10em;
   font-family: var(--araba);
-}
+}  
 
 /*! ----------------------------- TIMKEN ------------------------------- */
 /** ---------------------------- SNIPE-IT ------------------------------ */

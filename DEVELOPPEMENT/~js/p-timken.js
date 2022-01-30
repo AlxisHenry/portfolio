@@ -1,5 +1,5 @@
 const video = document.getElementById("video_projet"),
-  frame = document.getElementById("frame_projet"),
+  frame = document.getElementById("demo_projet"),
   ico_video = document.getElementById("file-video"),
   ico_frame = document.getElementById("file-code"),
   ico_video_info = document.getElementById("info-circle"),
@@ -38,9 +38,9 @@ fainfocircle.forEach((this_toggle) =>
 function info_frame_insert_HTML() {
   info_frame.insertAdjacentHTML(
     "afterbegin",
-    `
-  <h1 id="infodivframeh1"><strong> Site codé </strong></h1>
-  <p id="infoframep">
+    `<div class="show-info-when-mouseover">
+  <h1 id="infodivh1"><strong> Site codé </strong></h1>
+  <p id="infop">
     Le projet consiste en l'automatisation de la modification du stock
     d'articles.<br /><br />
     Ayant présenté le second projet Snipe-IT à mon service, ils ont trouvé
@@ -49,14 +49,14 @@ function info_frame_insert_HTML() {
     intuitif.<br />
     De ce fait, j'ai eu l'idée d'<i>automatiser</i> l'ajout de la quantité
     achetée.
-  </p>`
+  </p></div>`
   );
 }
 
 function info_video_insert_HTML() {
   info_video.insertAdjacentHTML(
     "afterbegin",
-    `
+    `<div class="show-info-when-mouseover">
   <h1 id="infodivh1"><strong> Projet Timken </strong></h1>
   <p id="infop">
     Le projet consiste en l'automatisation de l'actualisation du stock
@@ -71,7 +71,7 @@ function info_video_insert_HTML() {
     l'article à ajouter, <br />
     préciser sa quantité, ainsi que de saisir numéro de commande
     facultatif.
-  </p>`
+  </p></div>`
   );
 }
 
