@@ -64,71 +64,49 @@
       </div>
     </header>
 
-    <!-- PAGE -->
+    <!--*  CONTAINER  -->
+    <div id="div_principale_projet">
 
-
-    <div id="div_principale_projet_snipeit">
-      <iframe
-        id="frame_projet-snp"
-        title="Projet réalisé pour mon entreprise"
-        src=""
-      ></iframe>
-      <video
-        id="video_projet-snp"
-        autoplay="autoplay"
-        loop="loop"
-        muted="muted"
-      >
-        <source
-          src="/DEVELOPPEMENT/assets/@videos/showsnipeit.mkv"
-        />
+      <video id="video_projet" autoplay="autoplay" loop="loop" muted="muted">
+        <source src="/DEVELOPPEMENT/assets/@videos/showsnipeit.mkv" />
+      </video>
+      <video id="demo_projet" autoplay="autoplay" loop="loop" muted="muted">
+        <source src="/DEVELOPPEMENT/assets/@videos/showsnipeit.mkv" />
       </video>
 
-      <i class="fas fa-info-circle" id="info-circle_code-snp"></i>
-      <i class="fas fa-info-circle" id="info-circle-snp"></i>
-
-      <i class="far fa-file-video" id="file-video-snp"></i>
-      <i class="far fa-file-code" id="file-code-snp"></i>
-
-      <div id="titlediv-snp">
-        <!-- <a href="./projets.html#SnipeIT-presentation">SNIPE-IT</a> -->
-        <a id="titlediv" href="./inprogress.html">SNIPE-IT</a>
+      <i class="fas fa-info-circle research-info-function" id="info-circle_code"></i>
+      <i class="fas fa-info-circle research-info-function" id="info-circle"></i>
+      <i class="far fa-file-code togglefunction" id="file-code"></i>
+      <i class="far fa-file-video togglefunction" id="file-video"></i>
+  
+      <div id="infodivvideo" class="info-projet">
+        <div class="show-info-when-mouseover">
+          <h1 id="infodivh1"><strong>AZE</strong></h1>
+          <p id="infop">AZEEEE</p>
+        </div>
       </div>
 
-      <div id="infodivvideo-snp">
-        <h1 id="infodivh1-snp"><strong> SNIPE-IT PROJET </strong></h1>
-        <p id="infop-snp">
-          Le projet consiste en l'automatisation de la modification du stock
-          d'articles.<br /><br />
-          Ayant présenté le second projet Snipe-IT à mon service, ils ont trouvé
-          un incovénient,<br />
-          L'ajout d'une quantité d'article lors d'un achat n'est absolument pas
-          intuitif.<br />
-          De ce fait, j'ai eu l'idée d'<i>automatiser</i> l'ajout de la quantité
-          achetée.
-        </p>
+      <div id="infodivframe" class="info-projet">
+        <div class="show-info-when-mouseover">
+          <h1 id="infodivh1"><strong>AZE</strong></h1>
+          <p id="infop">AZEZADSCDS</p>
+        </div>
       </div>
 
-      <div id="infodivframe-snp">
-        <h1 id="infodivframeh1-snp"><strong> FRAME PROJET </strong></h1>
-        <p id="infoframep-snp">
-          Le projet consiste en l'automatisation de la modification du stock
-          d'articles.<br /><br />
-          Ayant présenté le second projet Snipe-IT à mon service, ils ont trouvé
-          un incovénient,<br />
-          L'ajout d'une quantité d'article lors d'un achat n'est absolument pas
-          intuitif.<br />
-          De ce fait, j'ai eu l'idée d'<i>automatiser</i> l'ajout de la quantité
-          achetée.
-        </p>
-      </div>
+
     </div>
 
-    <!-- END -->
+    <!--!  CONTAINER  -->
+    <!--*  TITLE  -->
+    <div class="title-of-the-project">
+      <a class="title-of-the-project-href" href="./inprogress.html">
+        <span id="titlespan">SNIPE-IT</span></a>
+    </div>
+    <!--!  TITLE  -->
 
     <footer><div id="foot"></div></footer>
     <script src="../~js/data.js"></script>
     <script src="../~js/main.js"></script>
-    <script src="../~js/p-snipeit.js"></script>
+    <script src="../~js/projets.js"></script>
   </body>
 </html>

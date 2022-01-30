@@ -14,7 +14,7 @@ const images = {
     title: "SNIPE-IT",
     alt: "SNIPE-IT",
     img: `${path.imgs}snipeit.png`,
-    href: `${path.html}inprogress.html`,
+    href: `${path.html}projet-snipe-it.html`,
     status: "Not Started",
   },
   aleatory: {

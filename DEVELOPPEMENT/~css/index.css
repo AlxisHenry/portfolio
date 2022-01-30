@@ -469,12 +469,12 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   margin-left: 16px;
 }
 
-.title-of-the-project-href-timken {
+.title-of-the-project-href {
   color: white;
   text-decoration: none;
 }
 
-.title-of-the-project-timken {
+.title-of-the-project {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -485,6 +485,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 /*! ----------------------------- TIMKEN ------------------------------- */
 /** ---------------------------- SNIPE-IT ------------------------------ */
 
-/* Do this */
+
 
 /*! ---------------------------- SNIPE-IT ------------------------------ */
