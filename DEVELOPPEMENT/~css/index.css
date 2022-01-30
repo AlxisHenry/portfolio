@@ -288,19 +288,19 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   width: 100%;
   height: 60%;
   border-radius: 25.5px 25.5px 25.5px 25.5px;
-  margin-top: 15%;
+  margin-top: 20%;
   margin-left: -20%;
-  filter: grayscale(1);
 }
 
 #img-thrd {
   width: 100%;
   height: 60%;
-  margin-top: 15%;
-  margin-left: 28%;
+  margin-top: 20%;
+  margin-left: 22%;
   border-radius: 25.5px 25.5px 25.5px 25.5px;
 }
 
+/* 
 #img-scnd {
   transform: rotateX(9deg) rotateY(45deg) rotateZ(0deg) translateX(0px)
     translateY(-35px) translateZ(0px) scale(1.375) skewY(3deg);
@@ -321,7 +321,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
     translateY(-20px) translateZ(0px) scale(1.4) skewY(-15deg);
   -o-transform:rotateX(-9deg) rotateY(-49deg) rotateZ(0deg) translateX(-50px)
     translateY(-20px) translateZ(0px) scale(1.4) skewY(-15deg);
-  }
+  } */
 
 #img-centrale:hover {
   cursor: help;

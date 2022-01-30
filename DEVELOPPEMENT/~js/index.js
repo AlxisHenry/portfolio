@@ -63,8 +63,9 @@ first_button_div.insertAdjacentHTML(
   ></i>`)
 );
 
-style.filter.blur(img_nd, 2.5)
-style.filter.blur(img_th, 2.5)
+//* Ces deux lignes permettent de flouter les images de côtés. J'ai décidé de les retirer car c'est plus esthétique.
+// style.filter.blur(img_nd, 3)
+// style.filter.blur(img_th, 3)
 
 const buttons = document.querySelectorAll(".fa-circle");
 buttons[0].addEventListener("click", change_to_img1);
@@ -125,26 +126,30 @@ function change_to_img3() {
 }
 
 function change_img_auto() {
-  setTimeout(change_to_img1, 2000);
-  setTimeout(change_to_img2, 4000);
-  setTimeout(change_to_img3, 6000);
+  setTimeout(change_to_img1, 4000);
+  setTimeout(change_to_img2, 8000);
+  setTimeout(change_to_img3, 12000);
 }
 
 function change_img_onload() {
-  setTimeout(change_to_img1, 2000);
-  setTimeout(change_to_img2, 4000);
-  setTimeout(change_to_img3, 6000);
-  setInterval(change_img_auto, 6000);
+  setTimeout(change_to_img1, 4000);
+  setTimeout(change_to_img2, 8000);
+  setTimeout(change_to_img3, 12000);
+  setInterval(change_img_auto, 12000);
 }
 
 // ------------------ FIREFOX & SAFARI  ------------------
 
-if (platform.name === "Firefox") {
+const this_platform = platform.name
+console.log(`%cYou use ${this_platform}`, "color: red; background-color:white; font-size:25px;");
+console.log(`%cIf you see a bug, please report them on : https://github.com/AlxisHenry/CCI-2021-PORTFOLIO`, "color: red; background-color:white; font-size:10px;");
+
+if (platform.name === "Chrome") {
+  console.log("You use a good browser :)");
+} else if (platform.name === "Firefox" || platform.name === "Safari") {
   img_nd.style.visibility = "hidden";
   img_th.style.visibility = "hidden";
-} else if (platform.name === "Safari" || platform.name === "Opera") {
-  img_nd.style.transform = "none";
-  img_th.style.transform = "none"; 
+  console.log(`%cThe version of the website is modified on your browser. Sorry for this issue `, "color: red; background-color:white; font-size:12px;");
 }
 
 console.timeEnd("Exécution script JS");
