@@ -481,6 +481,17 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   margin-left: 16px;
 }
 
+.href-to-another-project {
+  text-decoration: none;
+  color: #892e88;
+  text-shadow: -0.5px 0 var(--iconColor), 0 0.5px var(--iconColor),
+  0.5px 0 var(--iconColor), 0 -0.5px var(--iconColor);
+}
+
+.href-to-another-project:hover {
+  cursor: pointer;
+}
+
 .title-of-the-project-href {
   color: white;
   text-decoration: none;

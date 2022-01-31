@@ -63,7 +63,8 @@ first_button_div.insertAdjacentHTML(
   ></i>`)
 );
 
-//* Ces deux lignes permettent de flouter les images de côtés. J'ai décidé de les retirer car c'est plus esthétique.
+//* Ces deux lignes permettent de flouter les images de côtés. J'ai décidé de les retirer car c'est plus esthétique,
+//* Ceci après avoir reçu l'avis de différents utilisateurs.
 // style.filter.blur(img_nd, 3)
 // style.filter.blur(img_th, 3)
 
