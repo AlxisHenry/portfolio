@@ -37,20 +37,20 @@
   .info-projet {
     width: 100%;
   }
-  #infodivh1 {
+  .infodivh1 {
     font-size: 4em;
   }
-  #infop {
-    font-size: 15px;
+  .infop {
+    font-size: 12px;
   }
 }
 
 @media screen and (max-height: 800px) {
-  #infodivh1 {
+  .infodivh1 {
     font-size: 3.5em;
   }
-  #infop {
-    font-size: 9px;
+  .infop {
+    font-size: 25px;
   }
   .active-scroll-on-this-page {
     overflow: scroll;
