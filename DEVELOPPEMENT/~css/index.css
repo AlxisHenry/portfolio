@@ -455,6 +455,10 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   display: none;
 }
 
+#timkenspan {
+  color: #FF840E;
+}
+
 .info-projet {
   position: absolute;
   z-index: 10;
@@ -463,7 +467,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   height: auto;
 }
 
-#infodivh1 {
+.infodivh1 {
   margin-top: 0;
   margin-left: 16px;
   font-size: 5vw;
@@ -471,7 +475,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   color: var(--main-color5);
 }
 
-#infop {
+.infop {
   font-size: 1.2vw;
   color: var(--icon-color);
   margin-left: 16px;
