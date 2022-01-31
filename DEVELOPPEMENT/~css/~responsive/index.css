@@ -52,6 +52,12 @@
   #infop {
     font-size: 9px;
   }
+  .active-scroll-on-this-page {
+    overflow: scroll;
+  }
+  footer {
+    display: none;
+  }
 }
 
 /*! ----------------------------- TIMKEN ------------------------------- */

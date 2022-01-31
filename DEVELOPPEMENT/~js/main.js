@@ -11,7 +11,7 @@ document.getElementById("btn-rar").addEventListener("click", (e) => {
   }
 });
 
-// ------------------ TO DISCORD ICON ------------------
+// ------------------ SEND TO DISCORD ICON ------------------
 
 document.getElementById("href-discord").addEventListener("click", (e) => {
   if (confirm("Redirect ?")) {
@@ -22,7 +22,7 @@ document.getElementById("href-discord").addEventListener("click", (e) => {
   }
 });
 
-// ------------------ SLEEP FUNC ------------------
+// ------------------ SLEEP FUNC ------------------666666666666666666666666666666666666666666666666666666666666666666666666666
 
 function sleepFor(sleepDuration) {
   var now = new Date().getTime();

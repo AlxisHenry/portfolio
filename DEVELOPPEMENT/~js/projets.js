@@ -33,11 +33,13 @@ info_projet.forEach((this_toggle) =>
       style.display.none(info_frame);
       style.filter.blur(video, 4);
       style.opacity(video, 0.5);
+      fainfocircle[1].classList.add('research-info-function-hover')
     } else {
       style.display.none(info_video);
       style.display.flex(info_frame);
       style.filter.blur(frame, 4);
       style.opacity(frame, 0.5);
+      fainfocircle[0].classList.add('research-info-function-hover')
     }
   })
 );
@@ -60,6 +62,8 @@ info_projet.forEach((this_toggle) =>
     style.opacity(frame, 1);  
     style.filter.blur(video, 0);
     style.opacity(video, 1);
+    fainfocircle[0].classList.remove('research-info-function-hover')
+    fainfocircle[1].classList.remove('research-info-function-hover')
   })
 );
 
