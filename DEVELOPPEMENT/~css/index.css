@@ -372,7 +372,45 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 /*! --------------------------- COMPRENDRE ----------------------------- */
 /** ---------------------------- PROJETS ------------------------------- */
 
-/* Dont do this page */
+.section-principale {
+  margin-top: 12.5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container-principal {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 50vh;
+  width: 85%;
+  -webkit-box-shadow: 5px 5px 15px 5px #7c1d1d; 
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 30px;
+  background-color: var(--color1); 
+  background-image: 
+  linear-gradient(transparent 11px,
+    var(--backroundColor) 12px,
+    transparent 12px),
+  linear-gradient(90deg,
+    transparent 11px,
+    var(--backroundColor) 12px,
+    transparent 12px);
+  background-size: 100% 12px, 12px 100%;
+}
+
+.github-button-container {
+  bottom: 5%;
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+
+.container-title-h1 {
+  font-size: 5vw;
+  font-family: var(--araba);
+  color: var(--iconColor);
+}
 
 /*! ---------------------------- PROJETS ------------------------------- */
 /** ----------------------------- TIMKEN ------------------------------- */

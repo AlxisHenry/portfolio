@@ -61,3 +61,19 @@
 }
 
 /*! ----------------------------- TIMKEN ------------------------------- */
+
+/** ------------------------------ COMPRENDRE ------------------------------- */
+
+@media screen and (max-width: 720px) {
+  .container-title-h1{
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container-principal {
+    width: 45%;
+  }
+}
+
+/*! ------------------------------ COMPRENDRE ------------------------------- */
