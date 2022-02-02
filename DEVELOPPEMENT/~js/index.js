@@ -145,7 +145,6 @@ function event_RandomRedirection() {
   randomRedirection.parentElement.href = href_links_path[Math.floor(Math.random() * href_links_path.length)];
 }
 
-
 function LoadingFunction() {
   setTimeout(change_img_onload, 3000);
 }
