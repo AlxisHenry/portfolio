@@ -14,7 +14,7 @@ document.getElementById("btn-rar").addEventListener("click", (e) => {
 // ------------------ SEND TO DISCORD ICON ------------------
 
 document.getElementById("href-discord").addEventListener("click", (e) => {
-  if (confirm("Redirect ?")) {
+  if (confirm("Cela va ouvrir un nouvel onglet, êtes vous sûr ?")) {
     // Redirection vers discord
   } else {
     e.preventDefault();
