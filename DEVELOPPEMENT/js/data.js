@@ -1,7 +1,7 @@
 const path = {
   imgs: {
-    index: "./DEVELOPPEMENT/assets/@img/",
-    relat: "../assets/@img/no-backgrounds/"
+    index: "./DEVELOPPEMENT/assets/img/",
+    relat: "../assets/img/no-backgrounds/"
   },
   html: "./DEVELOPPEMENT/html/",
 };
