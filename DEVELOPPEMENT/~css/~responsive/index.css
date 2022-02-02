@@ -38,7 +38,7 @@
     width: 100%;
   }
   .infodivh1 {
-    font-size: 4em;
+    font-size: 2em;
   }
   .infop {
     font-size: 12px;
@@ -47,7 +47,7 @@
 
 @media screen and (max-height: 800px) {
   .infodivh1 {
-    font-size: 3.5em;
+    font-size: 4em;
   }
   .infop {
     font-size: 12px;

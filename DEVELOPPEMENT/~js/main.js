@@ -31,6 +31,20 @@ function sleepFor(sleepDuration) {
   }
 }
 
+// ------------------ LOADER ------------------
+
+if (document.querySelector('.loader-style-display')) {
+  const loader = document.querySelector('.loader-style-display');
+  const LoaderImg = `<img id="loader-aleatory-img" alt="${images.aleatory.alt}" title="aleatory" src="${images.aleatory.img}"/>`
+  loader.insertAdjacentHTML('afterbegin', LoaderImg);
+  
+  window.addEventListener('load', displayLoader);
+  
+  function displayLoader() {
+    loader.className += " loader-none";
+  }
+}
+
 // ------------------ MENU ICON ------------------
 
 const menu_deroulantHover = document.querySelector(".fa-chevron-circle-down");

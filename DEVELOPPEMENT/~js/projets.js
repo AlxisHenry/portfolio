@@ -32,13 +32,13 @@ info_projet.forEach((this_toggle) =>
       style.display.flex(info_video);
       style.display.none(info_frame);
       style.filter.blur(video, 4);
-      style.opacity(video, 0.5);
+      style.opacity(video, 0.1);
       fainfocircle[1].classList.add('research-info-function-hover')
     } else {
       style.display.none(info_video);
       style.display.flex(info_frame);
       style.filter.blur(frame, 4);
-      style.opacity(frame, 0.5);
+      style.opacity(frame, 0.1);
       fainfocircle[0].classList.add('research-info-function-hover')
     }
   })
@@ -93,14 +93,14 @@ function display_flex_Video() {
     {duration: 800,});
   sleepFor(100);
   style.filter.blur(video, 4);
-  style.opacity(video, 0.5);
+  style.opacity(video, 0.1);
 }
 
 function display_none_Frame() {
   style.display.none(info_frame);
   sleepFor(100);
   style.filter.none(frame);
-  style.opacity(frame, 1);W
+  style.opacity(frame, 1);
 }
 
 function display_flex_Frame() {

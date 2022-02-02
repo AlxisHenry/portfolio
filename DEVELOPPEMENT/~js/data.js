@@ -1,30 +1,41 @@
 const path = {
-  imgs: "./DEVELOPPEMENT/assets/@img/",
+  imgs: {
+    index: "./DEVELOPPEMENT/assets/@img/",
+    relat: "../assets/@img/"
+  },
   html: "./DEVELOPPEMENT/~html/",
 };
+
 const images = {
-  timken: {
+  first_project: {
     title: "TIMKEN",
     alt: "TIMKEN",
-    img: `${path.imgs}Timken.png`,
+    img: `${path.imgs.index}Timken.png`,
     href: `${path.html}projet-timken.html`,
-    status: "Not Started",
+    status: "Finished",
   },
-  snipeit: {
+  second_project: {
     title: "SNIPE-IT",
     alt: "SNIPE-IT",
-    img: `${path.imgs}snipeit.png`,
+    img: `${path.imgs.index}snipeit.png`,
     href: `${path.html}projet-snipe-it.html`,
+    status: "Finished",
+  },
+  third_project: {
+    title: "Sport Addict",
+    alt: "SPORT-ADDICT",
+    img: `${path.imgs.index}sport-addict.png`,
+    href: `${path.html}inprogress.html`,
     status: "Not Started",
   },
   aleatory: {
     title: "ALEATORY",
     alt: "ALEATORY",
-    img: `${path.imgs}aleatory.png`,
-    href: "none",
-    status: "none",
-  },
+    img: `${path.imgs.relat}aleatory.png`,
+    status: "Loader",
+  }
 };
+
 const style = {
   display: {
     flex: (id) => {
@@ -41,7 +52,7 @@ const style = {
         id.style.display = "flex";
       }
     },
-  },  
+  },
   filter: {
     blur: (id, value) => {
       id.style.filter = `blur(${value}px)`;
