@@ -146,6 +146,11 @@ Une première `section` qui contient mon identité.<br><br>
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\identite.png">
 </p>
+
+<br>
+
+L'icon présent au milieu, permet de renvoyer aléatoirement l'utilisateurs sur un des projets parmis tous ceux présents surle site, et non seulement sur ceux présents sur la page d'accueil.
+
 <br>
 
 Une seconde `section` dans laquelle il y a le contenu principal. <br><br>
@@ -160,12 +165,17 @@ Les slides s'affichent ``automatiquement à intervale régulière`` dès le char
 <br>
 
 
-Et enfin le `footer`.<br><br>
+Et enfin le `footer`, qui possède une simple animation au passage de la souris.<br><br>
 
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\footer.png">
 </p>
 
+Grâce au code JS ci-dessous, la date s'actualisera automatiquement chaque années, Cela évite de devoir la modifier manuellement.
+
+<p align="center">
+<img src="CHARTE GRAPHIQUE\IMAGES\footerjs.png">
+</p>
 #
 
 > [Menu Déroulant](https://alexishenry.fr/)
