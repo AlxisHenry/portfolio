@@ -3,7 +3,7 @@ const path = {
     index: "./DEVELOPPEMENT/assets/@img/",
     relat: "../assets/@img/no-backgrounds/"
   },
-  html: "./DEVELOPPEMENT/~html/",
+  html: "./DEVELOPPEMENT/html/",
 };
 
 const images = {
