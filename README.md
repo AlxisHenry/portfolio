@@ -16,9 +16,9 @@ Le projet consiste au développement d'un `portfolio` à l'aide de langages basi
 
 Ce site est accessible de deux façons,
 
-En production au lien suivant: **[https://alexishenry.fr](https://www.alexishenry.fr)**.
+En production au lien suivant: **[https://prod.alexishenry.fr](https://www.alexishenry.fr)**.
 
-En développement au lien suivant: **[https://alexishenry.fr](https://alxishenry.github.io/CCI-2021-PORTFOLIO/)**.
+En développement au lien suivant: **[https://dev.alexishenry.fr](https://alxishenry.github.io/CCI-2021-PORTFOLIO/)**.
 
 J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
 Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de domaine sur celui-ci. Il suffit de gérer l'accès et la redirection vers eux grâce à un fichier `.htaccess`.<br><br>
