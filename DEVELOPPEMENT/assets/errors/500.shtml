@@ -5,15 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 - Page not found</title>
-    <link
-      rel="icon"
-      href="../../../DEVELOPPEMENT/assets/@ico/favicon-16x16.png"
-    />
-    <script
-      src="https://kit.fontawesome.com/ac4dc0897b.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="../../../DEVELOPPEMENT/~css/index.css" />
+    <script src="https://kit.fontawesome.com/ac4dc0897b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../DEVELOPPEMENT/css/index.css" />
   </head>
   <body id="body_notfound">
     <header>
@@ -29,7 +22,7 @@
               <ul id="responsive">
                 <li>
                   <a
-                    href="../../../DEVELOPPEMENT/~html/inprogress.html"
+                    href="../../../DEVELOPPEMENT/html/inprogress.html"
                     title="Présentation"
                     id="href-presentation"
                     >PRÉSENTATION</a
@@ -37,7 +30,7 @@
                 </li>
                 <li>
                   <a
-                    href="../../../DEVELOPPEMENT/~html/inprogress.html"
+                    href="../../../DEVELOPPEMENT/html/inprogress.html"
                     id="href-projets"
                     title="Projets"
                     >MES PROJETS</a
@@ -45,7 +38,7 @@
                 </li>
                 <li>
                   <a
-                    href="../../../DEVELOPPEMENT/~html/inprogress.html"
+                    href="../../../DEVELOPPEMENT/html/inprogress.html"
                     id="href-comprendre"
                     title="Comprendre"
                     >COMPRENDRE MON SITE</a
@@ -92,7 +85,7 @@
     <footer>
       <div id="foot"></div>
     </footer>
-    <script src="../../../DEVELOPPEMENT/~js/data.js"></script>
-    <script src="../../../DEVELOPPEMENT/~js/main.js"></script>
+    <script src="../../../DEVELOPPEMENT/js/data.js"></script>
+    <script src="../../../DEVELOPPEMENT/js/main.js"></script>
   </body>
 </html>
