@@ -42,11 +42,11 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
                > PALETTES DE COULEURS
 
         DEVELOPPEMENT
-           > ~css
-              > ~responsive
+           > css
+              > responsive
                  > index.css
               > index.css
-           > ~html
+           > html
               > comprendre.html
               > inprogress.html
               > presentation.html
@@ -55,20 +55,20 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
               > projet-sport-addict.html
               > projet.timken.html
               > projets.html
-           > ~js
+           > js
               > platform.js-master (Librairie JS)
               > data.js
               > index.js
               > main.js
               > p-timken.js
            > assets
-              > @download
+              > download
                  > CV
-              > @fonts
-              > @ico
+              > fonts
+              > ico
                  > favicon-16x16.png
                  > favicon.png
-              > @img
+              > img
                  > no-backgrounds
                     > al-removebg-preview.png
                     > al2-removebg-preview.png
@@ -80,10 +80,10 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
                  > snipeit.png
                  > sport-addict.png
                  > Timken.png
-              > @videos
+              > videos
                  > demonstration_automation_snp.mp4
                  > showsnipeit.mkv
-              > ~errors
+              > errors
                  > 400.shtml
                  > 401.shtml
                  > 403.shtml
