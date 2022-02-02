@@ -16,7 +16,11 @@
 
 Le projet consiste au développement d'un `portfolio` à l'aide de langages basiques (sans frameworks), tels que HTML, CSS et JS. Le code doit être validé par le [W3C Markup Validation Service](https://validator.w3.org/).
 
-Ce site est accessible au lien suivant: **[https://www.alexishenry.fr](https://www.alexishenry.fr)**.
+Ce site est accessible de deux façons,
+
+En production au lien suivant: **[https://alexishenry.fr](https://www.alexishenry.fr)**.
+
+En développement au lien suivant: **[https://alexishenry.fr](https://alxishenry.github.io/CCI-2021-PORTFOLIO/)**.
 
 J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
 Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de domaine sur celui-ci. Il suffit de gérer l'accès et la redirection vers eux grâce à un fichier `.htaccess`.<br><br>
@@ -48,10 +52,13 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
               > comprendre.html
               > inprogress.html
               > presentation.html
+              > projet-sanisarre.html
               > projet-snipe-it.html
+              > projet-sport-addict.html
               > projet.timken.html
               > projets.html
            > ~js
+              > platform.js-master (Librairie JS)
               > data.js
               > index.js
               > main.js
@@ -61,16 +68,9 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
                  > source_code
                  > CV
               > @fonts
-              > @frame
-                 > cgi-enabled
-                    > main.py
-                 > img
-                    > favicon.ico
-                    > Timken.png
-                 > index.html
-                 > style.css
               > @ico
                  > favicon-16x16.png
+                 > favicon.png
               > @img
                  > no-backgrounds
                     > al-removebg-preview.png
@@ -79,7 +79,9 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
                     > ss--removebg-preview.png
                  > aleatory.png
                  > coming-soon.png
+                 > coming-soon2.png
                  > snipeit.png
+                 > sport-addict.png
                  > Timken.png
               > @videos
                  > demonstration_automation_snp.mp4
@@ -171,7 +173,7 @@ Et enfin le `footer`, qui possède une simple animation au passage de la souris.
 <img src="CHARTE GRAPHIQUE\IMAGES\footer.png">
 </p>
 
-Grâce au code JS ci-dessous, la date s'actualisera automatiquement chaque années, Cela évite de devoir la modifier manuellement.
+Grâce au code JS ci-dessous, la date s'actualisera automatiquement chaque année.
 
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\footerjs.png">
