@@ -22,7 +22,7 @@ document.getElementById("href-discord").addEventListener("click", (e) => {
   }
 });
 
-// ------------------ SLEEP FUNC ------------------666666666666666666666666666666666666666666666666666666666666666666666666666
+// ------------------ SLEEP FUNC ------------------
 
 function sleepFor(sleepDuration) {
   var now = new Date().getTime();
@@ -67,7 +67,7 @@ const outTable = menu_deroulantTable.addEventListener("mouseout", () => {
 
 const date = new Date();
 
-const FooterText = `<span id="footerspan">© ${date.getFullYear()} | Alexis Henry</span>`;
+const FooterText = `<span id="footerspan">© ${date.getFullYear()} Alexis Henry. All Rights Reserved</span>`;
 
 const addHTML_toFooter = document
   .getElementById("foot")

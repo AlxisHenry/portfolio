@@ -8,8 +8,6 @@
 
 ## **[Maquettes](#maquettes--design)**
 
-## **[Tasklist](#tasklist-1)**
-
 ---
 
 # **Présentation du projet**
@@ -199,11 +197,5 @@ Ci-dessus, un aperçu du menu déroulant voulu. Les catégories '_Présentations
 
 
 <img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 2.png">
-
----
-
-# **Tasklist**
-
-- [x] A
 
 ---
