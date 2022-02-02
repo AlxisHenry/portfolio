@@ -65,7 +65,6 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
               > p-timken.js
            > assets
               > @download
-                 > source_code
                  > CV
               > @fonts
               > @ico
