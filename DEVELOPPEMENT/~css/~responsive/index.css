@@ -79,4 +79,10 @@
   }
 }
 
+@media screen and (max-height: 800px) {
+  .github-button-container  {
+    bottom: -20%;
+  }
+}
+
 /*! ------------------------------ COMPRENDRE ------------------------------- */
