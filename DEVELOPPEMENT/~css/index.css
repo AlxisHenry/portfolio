@@ -50,7 +50,7 @@ body {
 }
 
 .loader-style-display > img {
-  width: 100px;
+  width: 400px;
 }
 
 @keyframes fadeOut {
@@ -61,9 +61,9 @@ body {
 }
 
 .loader-style-display.loader-none {
-    animation: fadeOut 1s;
+    animation: fadeOut 2s;
     animation-fill-mode: forwards;
-}
+} 
 
 /*! ------------------------------ LOADER ------------------------------ */
 /** ------------------------------ HEADER ------------------------------ */

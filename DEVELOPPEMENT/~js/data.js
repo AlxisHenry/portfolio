@@ -1,7 +1,7 @@
 const path = {
   imgs: {
     index: "./DEVELOPPEMENT/assets/@img/",
-    relat: "../assets/@img/"
+    relat: "../assets/@img/no-backgrounds/"
   },
   html: "./DEVELOPPEMENT/~html/",
 };
@@ -31,7 +31,7 @@ const images = {
   aleatory: {
     title: "ALEATORY",
     alt: "ALEATORY",
-    img: `${path.imgs.relat}aleatory.png`,
+    img: `${path.imgs.relat}aleatory-removebg-preview.png`,
     status: "Loader",
   }
 };
