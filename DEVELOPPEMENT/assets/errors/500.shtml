@@ -30,7 +30,7 @@
                 </li>
                 <li>
                   <a
-                    href="../../../DEVELOPPEMENT/html/inprogress.html"
+                    href="../../../DEVELOPPEMENT/html/projets.html"
                     id="href-projets"
                     title="Projets"
                     >MES PROJETS</a
@@ -38,7 +38,7 @@
                 </li>
                 <li>
                   <a
-                    href="../../../DEVELOPPEMENT/html/inprogress.html"
+                    href="../../../DEVELOPPEMENT/html/comprendre.html"
                     id="href-comprendre"
                     title="Comprendre"
                     >COMPRENDRE MON SITE</a
