@@ -468,11 +468,12 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 /** ---------------------------- PROJETS ------------------------------- */
 
 .grid-projects {
-  margin: auto;
-  margin-right: 4em;
-  margin-left: 4em;
+  margin-top: 5%;
+  margin-right: 20%;
+  margin-left: 20%;
   width: auto;
   height: 500px;
+  margin-bottom: 4em;
   /* background-color: red; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -482,22 +483,53 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   
 }
 
-#pr2 {
-  background-color: red;
+#pr1 {
+  background-color: slategray;
 }
+
+#pr2 {
+  background-image: url(../assets/img/Timken.png);
+}
+
+#pr3 {
+  background-color: snow;
+}
+
 #pr4 {
   background-color: blue;
 }
+
+#pr5 {
+ background-color: springgreen;
+}
+
+#pr6 {
+  background-color: tomato;
+}
+
+#pr7 {
+  background-color: yellow;
+}
+
+#pr8 {
+ background-color: var(--shadowColor);
+}
+
 #pr9 {
   background-color: purple;
 }
-#pr8 {
-  background-color: saddlebrown;
-}
+
 #pr10 {
   background-color: skyblue;
 }
 
+#pr11 {
+ background-color: papayawhip;
+}
+
+#pr12 {
+  background-color: yellow;
+}
 
 /*! ---------------------------- PROJETS ------------------------------- */
 /** ----------------------------- TIMKEN ------------------------------- */
