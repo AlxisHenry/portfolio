@@ -32,20 +32,19 @@ for (let current = 0; current < imgs_src.length; current++) {
     }
 }
 
-
 imgs_event.forEach((this_toggle) =>
   this_toggle.addEventListener("mouseover", (e) => {
     let overThisDiv = e.fromElement;
     let overThisImg = e.target;   
-    overThisDiv.classList.add('show-more-about-this-image')
+    overThisImg.classList.add('show-more-about-this-image')
   })
 );
 
-grid_Vide.forEach((this_togle) =>
-  this_togle.addEventListener("mouseout", (e) => {
+imgs_event.forEach((this_togle) =>
+  this_togle.addEventListener("mouseout", () => {
    
     let element = 0
-    for (element of grid_Vide) {
+    for (element of grid_Presentation) {
         console.log(element)
         if (element.classList.contains('show-more-about-this-image')) {
            element.classList.remove('show-more-about-this-image');
@@ -53,4 +52,3 @@ grid_Vide.forEach((this_togle) =>
       }
   })
 );
-
