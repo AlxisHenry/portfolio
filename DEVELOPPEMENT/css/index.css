@@ -397,11 +397,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 /*! -------------------------- PRESENTATION ---------------------------- */
 /** --------------------------- COMPRENDRE ----------------------------- */
 
-/* Do this */
-
-/*! --------------------------- COMPRENDRE ----------------------------- */
-/** ---------------------------- PROJETS ------------------------------- */
-
 .section-principale {
   margin-top: 12.5vh;
   display: flex;
@@ -467,6 +462,40 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   font-family: var(--poiret);
   color: var(--iconColor);
   text-align: center;
+}
+
+/*! --------------------------- COMPRENDRE ----------------------------- */
+/** ---------------------------- PROJETS ------------------------------- */
+
+.grid-projects {
+  margin: auto;
+  margin-right: 4em;
+  margin-left: 4em;
+  width: auto;
+  height: 500px;
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.projet-presentation-grid {
+  
+}
+
+#pr2 {
+  background-color: red;
+}
+#pr4 {
+  background-color: blue;
+}
+#pr9 {
+  background-color: purple;
+}
+#pr8 {
+  background-color: saddlebrown;
+}
+#pr10 {
+  background-color: skyblue;
 }
 
 
