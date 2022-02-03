@@ -10,23 +10,24 @@ for (let div = 0; div < 9; div++) {
 const imgs_src = document.querySelectorAll(".imgsrc");
 const grid_Presentation = document.querySelectorAll('.imgsrc');
 const grid_Vide = document.querySelectorAll('.projet-presentation-grid');
-const path_to_image = "../assets/img/";
+const path_to_image = "../assets/img/no-backgrounds/";
 const imgs_event = [];  
 
-imgs_src[0].src = `${path_to_image}no-project.png`;
-imgs_src[1].src = `${path_to_image}no-project.png`;
+imgs_src[0].src = `${path_to_image}cmson.png`;
+imgs_src[1].src = `${path_to_image}cmson.png`;
 imgs_src[2].src = `${path_to_image}Timken.png`;
-imgs_src[3].src = `${path_to_image}testing.png`;
+imgs_src[3].src = `${path_to_image}cmson.png`;
 imgs_src[4].src = `${path_to_image}aleatory.png`;
-imgs_src[5].src = `${path_to_image}no-project.png`;
+imgs_src[5].src = `${path_to_image}cmson.png`;
 imgs_src[6].src = `${path_to_image}snipeit.png`;
-imgs_src[7].src = `${path_to_image}no-project.png`;
+imgs_src[7].src = `${path_to_image}cmson.png`;
 imgs_src[8].src = `${path_to_image}sport-addict.png`;
 
 for (let current = 0; current < imgs_src.length; current++) {
-    if (grid_Presentation[current].outerHTML == `<img class="imgsrc" src="../assets/img/no-project.png">`) {
+    if (grid_Presentation[current].outerHTML == `<img class="imgsrc" src="../assets/img/no-backgrounds/cmson.png">`) {
         grid_Presentation[current].className += (' remove-no-project');
         grid_Vide[current].className += (' remove-border');
+        grid_Presentation[current].className += (' logo')
     } else {
         imgs_event.push(grid_Presentation[current]);
     }
@@ -42,10 +43,8 @@ imgs_event.forEach((this_toggle) =>
 
 imgs_event.forEach((this_togle) =>
   this_togle.addEventListener("mouseout", () => {
-   
     let element = 0
     for (element of grid_Presentation) {
-        console.log(element)
         if (element.classList.contains('show-more-about-this-image')) {
            element.classList.remove('show-more-about-this-image');
         }
