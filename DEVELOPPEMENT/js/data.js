@@ -31,7 +31,7 @@ const images = {
   aleatory: {
     title: "ALEATORY",
     alt: "ALEATORY",
-    img: `${path.imgs.relat}aleatory-removebg-preview.png`,
+    img: `${path.imgs.relat}aleatory.png`,
     status: "Loader",
   }
 };

@@ -489,6 +489,9 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   height: 100%;
 }
 
+.show-more-about-this-image {
+border: red;}
+
 /*! ---------------------------- PROJETS ------------------------------- */
 /** ----------------------------- TIMKEN ------------------------------- */
 /** ---------------------------- SNIPE-IT ------------------------------ */
