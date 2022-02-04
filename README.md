@@ -42,6 +42,36 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
                > PALETTES DE COULEURS
 
         DEVELOPPEMENT
+           > assets
+              > ~extension
+                 > @exe
+                    > chromedriver.exe
+                 > @logs
+                    > logs.txt
+                 > main.py          
+              > errors
+                 > 400.shtml
+                 > 401.shtml
+                 > 403.shtml
+                 > 404.shtml
+                 > 500.shtml 
+              > ico
+                 > favicon.png
+              > img
+                 > no-backgrounds
+                    > aleatory.png
+                    > coming-soon.png
+                    > snipeit.png
+                    > sport-addict.png
+                    > Timken.png
+                 > aleatory.png
+                 > coming-soon.png
+                 > snipeit.png
+                 > sport-addict.png
+                 > Timken.png
+              > videos
+                 > demonstration_automation_snp.mp4
+                 > showsnipeit.mkv
            > css
               > responsive
                  > index.css
@@ -61,44 +91,10 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
               > index.js
               > main.js
               > p-timken.js
-           > assets
-              > download
-                 > CV
-              > fonts
-              > ico
-                 > favicon-16x16.png
-                 > favicon.png
-              > img
-                 > no-backgrounds
-                    > al-removebg-preview.png
-                    > al2-removebg-preview.png
-                    > al3-removebg-preview.png
-                    > ss--removebg-preview.png
-                 > aleatory.png
-                 > coming-soon.png
-                 > coming-soon2.png
-                 > snipeit.png
-                 > sport-addict.png
-                 > Timken.png
-              > videos
-                 > demonstration_automation_snp.mp4
-                 > showsnipeit.mkv
-              > errors
-                 > 400.shtml
-                 > 401.shtml
-                 > 403.shtml
-                 > 404.shtml
-                 > 500.shtml
-              > ~extension
-                 > @exe
-                    > chromedriver.exe
-                 > @logs
-                    > logs.txt
-                 > main.py
 
         .htaccess
         index.html
-        README.md
+        README.md (this)
 
 ---
 
