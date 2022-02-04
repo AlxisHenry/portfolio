@@ -11,18 +11,18 @@ const imgs_src = document.querySelectorAll(".imgsrc");
 const href_this = document.querySelector(".href_this");
 const grid_Presentation = document.querySelectorAll(".imgsrc");
 const grid_Vide = document.querySelectorAll(".projet-presentation-grid");
-const path_to_image = "../assets/img/no-backgrounds/";
+const path_to_images = "../assets/img/no-backgrounds/";
 const imgs_event = [];
 
-imgs_src[0].src = `${path_to_image}coming-soon.png`;
-imgs_src[1].src = `${path_to_image}coming-soon.png`;
-imgs_src[2].src = `${path_to_image}Timken.png`;
-imgs_src[3].src = `${path_to_image}coming-soon.png`;
-imgs_src[4].src = `${path_to_image}aleatory.png`;
-imgs_src[5].src = `${path_to_image}coming-soon.png`;
-imgs_src[6].src = `${path_to_image}snipeit.png`;
-imgs_src[7].src = `${path_to_image}coming-soon.png`;
-imgs_src[8].src = `${path_to_image}sport-addict.png`;
+imgs_src[0].src = `${path_to_images}coming-soon.png`;
+imgs_src[1].src = `${path_to_images}coming-soon.png`;
+imgs_src[2].src = `${path_to_images}Timken.png`;
+imgs_src[3].src = `${path_to_images}coming-soon.png`;
+imgs_src[4].src = `${path_to_images}aleatory.png`;
+imgs_src[5].src = `${path_to_images}coming-soon.png`;
+imgs_src[6].src = `${path_to_images}snipeit.png`;
+imgs_src[7].src = `${path_to_images}coming-soon.png`;
+imgs_src[8].src = `${path_to_images}sport-addict.png`;
 
 const PathToOuterHTML = `<img class="imgsrc" src="../assets/img/no-backgrounds/`;                        
 
