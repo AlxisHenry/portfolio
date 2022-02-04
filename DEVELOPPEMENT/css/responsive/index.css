@@ -86,10 +86,10 @@
 
 /*! ------------------------------ COMPRENDRE ------------------------------- */
 /** ------------------------------ PROJETS ------------------------------- */
-/* 
-@media screen and (max-width: 920px) {
+
+@media screen and (max-width: 980px) {
   .grid-projects {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     margin-top: 5%;
   }
   .remove-no-project {
@@ -99,7 +99,10 @@
     border-color: none;
     border: hidden;
   }
-} */
+  .active-scroll-on-this-page {
+    overflow: scroll;
+  }
+}
 
 @media screen and (max-width: 720px) {
   .grid-projects {

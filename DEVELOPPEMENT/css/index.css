@@ -114,6 +114,7 @@ footer {
   text-align: center;
   bottom: 0;
   color: var(--color1);
+  cursor: default;
 }
 
 #footerspan:hover {
@@ -491,7 +492,8 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 }
 
 .show-more-about-this-image {
-  filter: blur(4px);
+  transform: scale(1.2);
+  transition: All 2.3s;
 }
 
 /*! ---------------------------- PROJETS ------------------------------- */

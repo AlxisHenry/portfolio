@@ -2,7 +2,7 @@ const grid_Template = document.querySelector(".grid-projects");
 let id = 0;
 
 for (let div = 0; div < 9; div++) {
-  let div_toAdd = `<div class="projet-presentation-grid" id="pr${id}"><a class="href_this" href=""><img class="imgsrc" src=""></a></div>`;
+  let div_toAdd = `<div class="projet-presentation-grid" id="pr${id}"><a class="href_this" href=""><img class="imgsrc" title="" src=""></a></div>`;
   grid_Template.insertAdjacentHTML("beforeend", div_toAdd);
   id++;
 }
@@ -24,7 +24,7 @@ imgs_src[6].src = `${path_to_images}snipeit.png`;
 imgs_src[7].src = `${path_to_images}coming-soon.png`;
 imgs_src[8].src = `${path_to_images}sport-addict.png`;
 
-const PathToOuterHTML = `<img class="imgsrc" src="../assets/img/no-backgrounds/`;                        
+const PathToOuterHTML = `<img class="imgsrc" title="" src="../assets/img/no-backgrounds/`;                        
 
 for (let current = 0; current < imgs_src.length; current++) {
   if (grid_Presentation[current].outerHTML == `${PathToOuterHTML}coming-soon.png">`) {
@@ -33,8 +33,10 @@ for (let current = 0; current < imgs_src.length; current++) {
     grid_Presentation[current].className += " logo";
     grid_Presentation[current].style.cursor = "default";
     grid_Vide[current].children[0].removeAttribute('href');
+    grid_Presentation[current].title = 'Not Found'
   } else {
-    switch (grid_Presentation[current].outerHTML) {
+    const _this = grid_Presentation[current];
+    switch (_this.outerHTML) {
       case `${PathToOuterHTML}aleatory.png">`:
         grid_Vide[current].firstChild.href = "./inprogress.html";
         break;
@@ -48,6 +50,7 @@ for (let current = 0; current < imgs_src.length; current++) {
         grid_Vide[current].firstChild.href = "./projet-snipe-it.html";
         break;
     }
+    _this.title = "Go to project !";
     imgs_event.push(grid_Presentation[current]);
   }
 }
