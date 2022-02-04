@@ -487,6 +487,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 }
 
 .imgsrc {
+  transition: All 1.5s;
   width: 100%;
   height: 100%;
 }
@@ -495,6 +496,8 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   transform: scale(1.2);
   transition: All 2.3s;
 }
+
+
 
 /*! ---------------------------- PROJETS ------------------------------- */
 /** ----------------------------- TIMKEN ------------------------------- */
