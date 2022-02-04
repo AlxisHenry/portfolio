@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap'); 
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 
 :root {
   --backroundColor: #083a59;
@@ -9,12 +9,11 @@
   --shadowColor: #5aadbf;
   --iconColor: #e4edf2;
 
-  --amatic: "Amatic SC", cursive;        /* Titres et Sous-Titres */
-  --poiret: 'Poiret One', cursive;       /* Descriptions */
-  --fatface: 'Abril Fatface', cursive;   /* Menu déroulant */
+  --amatic: "Amatic SC", cursive; /* Titres et Sous-Titres */
+  --poiret: "Poiret One", cursive; /* Descriptions */
+  --fatface: "Abril Fatface", cursive; /* Menu déroulant */
 
-   scrollbar-width: none;
-
+  scrollbar-width: none;
 }
 
 ::-webkit-scrollbar {
@@ -54,16 +53,16 @@ body {
 }
 
 @keyframes fadeOut {
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    } 
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .loader-style-display.loader-none {
-    animation: fadeOut 2s;
-    animation-fill-mode: forwards;
-} 
+  animation: fadeOut 2s;
+  animation-fill-mode: forwards;
+}
 
 /*! ------------------------------ LOADER ------------------------------ */
 /** ------------------------------ HEADER ------------------------------ */
@@ -150,7 +149,7 @@ footer {
 }
 
 #shtml-errors-server-return-this {
-display: none;
+  display: none;
 }
 
 /*! ------------------------------ ERROR ------------------------------- */
@@ -158,7 +157,7 @@ display: none;
 
 .content {
   position: absolute;
-  top: 45%; 
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -311,7 +310,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   height: 100%;
   border-radius: 22.5px 22.5px 22.5px 22.5px;
   border: solid;
-  border-width: 4px; 
+  border-width: 4px;
   border-color: var(--shadowColor);
 }
 
@@ -410,18 +409,21 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   position: relative;
   height: 50vh;
   width: 85%;
-  -webkit-box-shadow: 5px 5px 15px 5px #7c1d1d; 
+  -webkit-box-shadow: 5px 5px 15px 5px #7c1d1d;
   box-shadow: 5px 5px 15px 5px #000000;
   border-radius: 30px;
-  background-color: var(--color1); 
-  background-image: 
-  linear-gradient(transparent 11px,
-    var(--backroundColor) 12px,
-    transparent 12px),
-  linear-gradient(90deg,
-    transparent 11px,
-    var(--backroundColor) 12px,
-    transparent 12px);
+  background-color: var(--color1);
+  background-image: linear-gradient(
+      transparent 11px,
+      var(--backroundColor) 12px,
+      transparent 12px
+    ),
+    linear-gradient(
+      90deg,
+      transparent 11px,
+      var(--backroundColor) 12px,
+      transparent 12px
+    );
   background-size: 100% 12px, 12px 100%;
   overflow: scroll;
 }
@@ -441,7 +443,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 .space-between-container {
   width: 100%;
   height: 30px;
-  /* background: black; */
 }
 
 .container-title-h1 {
@@ -455,7 +456,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 }
 
 .container-github-paragraphe {
-  /* background-color: red; */
   margin-left: 10px;
   margin-right: 10px;
   width: auto;
@@ -463,6 +463,13 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   font-family: var(--poiret);
   color: var(--iconColor);
   text-align: center;
+}
+
+.href-to-github {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--shadowColor);
+  font-family: var(--poiret);
 }
 
 /*! --------------------------- COMPRENDRE ----------------------------- */
@@ -475,14 +482,11 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   width: auto;
   height: 500px;
   margin-bottom: 4em;
-  /* background-color: red; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .projet-presentation-grid {
-  /* border: inset; */
-  /* border-color: var(--iconColor); */
   background-color: var(--backroundColor);
 }
 
@@ -496,8 +500,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   transform: scale(1.2);
   transition: All 2.3s;
 }
-
-
 
 /*! ---------------------------- PROJETS ------------------------------- */
 /** ----------------------------- TIMKEN ------------------------------- */
@@ -519,7 +521,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   border: outset;
   border-radius: 20px 20px 20px 20px;
   overflow: hidden;
-
 }
 
 #demo_projet {
@@ -567,7 +568,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   transform: scale(1.09);
   text-shadow: -0.5px 0 var(--shadowColor), 0 0.5px var(--shadowColor),
     0.5px 0 var(--shadowColor), 0 -0.5px var(--shadowColor);
-    transition: All 0.9s;
+  transition: All 0.9s;
 }
 
 .research-info-function-hover {
@@ -615,7 +616,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   font-weight: 550;
 }
 
-
 .title-of-the-project-href {
   color: var(--iconColor);
   text-decoration: none;
@@ -627,8 +627,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   width: 100%;
   font-size: 10em;
   font-family: var(--amatic);
-
-}  
+}
 
 /*! ---------------------------- SNIPE-IT ------------------------------ */
 /*! ----------------------------- TIMKEN ------------------------------- */

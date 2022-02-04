@@ -68,7 +68,10 @@
 
 @media screen and (max-width: 720px) {
   .container-title-h1 {
-    font-size: 2em;
+    font-size: 3em;
+  }
+  .container-github-paragraphe {
+    font-size: 20px;
   }
 }
 
