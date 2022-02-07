@@ -80,17 +80,19 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
               > comprendre.html
               > inprogress.html
               > presentation.html
+              > mentions-legales.html
               > projet-sanisarre.html
               > projet-snipe-it.html
               > projet-sport-addict.html
               > projet.timken.html
               > projets.html
            > js
-              > platform.js-master (Librairie JS)
-              > data.js
+              > modules
+                 > data.js
+              > app.js
               > index.js
               > main.js
-              > p-timken.js
+              > projets.js
 
         .htaccess
         index.html
@@ -171,27 +173,32 @@ Grâce au code JS ci-dessous, la date s'actualisera automatiquement chaque anné
 <p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\footerjs.png">
 </p>
-#
+
+La condition ci-dessus permet de gérer la redirection vers la page des mentions légales, en fonction de la page sur laquelle est l'utilisateur.
+
 
 > [Menu Déroulant](https://alexishenry.fr/)
 
 <br>
 <img src="CHARTE GRAPHIQUE\IMAGES\Menu déroulant.png" />
 
-Ci-dessus, un aperçu du menu déroulant voulu. Les catégories '_Présentations_', '_Comprendre mon site_' et '_JOIN MY DISCORD_' seront présentes. Pour ce qui est de la catégorie '_MES PROJETS_', elle peut paraître inutile, vu que tous les projets sont accessibles via la page d'accueil. Cela sera à voir plus tard. Je n'ai pas encore prévu de design pour les pages présentes dans le menu déroulant.
+Ci-dessus, un aperçu du menu déroulant voulu. <br><br>
 
+Les catégories '_Présentations_', '_Comprendre mon site_' et '_JOIN MY DISCORD_' seront présentes.
 
-<!-- <img src="CHARTE GRAPHIQUE\IMAGES\mznu.png" /> -->
-
+ Pour ce qui est de la catégorie '_MES PROJETS_', elle peut paraître inutile, vu que tous les projets sont accessibles via la page d'accueil. 
+ Cela sera à voir plus tard. Je n'ai pas encore prévu de design pour les pages présentes dans le menu déroulant.
 
 #
 
 > [Page de présentation d'un projet](https://alexishenry.fr/DEVELOPPEMENT/~html/projet-timken.html)
 
-
+<p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 1.png">
+</p>
 
-
+<p align="center">
 <img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 2.png">
+</p>
 
 ---

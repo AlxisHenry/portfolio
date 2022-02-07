@@ -75,7 +75,8 @@ if (document.querySelector("#index_page")){
   var href_to_mentions = "../html/inprogress.html";
 }
 
-const FooterText = `<a class="href-to-mentions" href="${href_to_mentions}"><span id="footerspan">© ${date.getFullYear()} Alexis Henry. All Rights Reserved</span></a>`;
+const FooterText = `<a class="href-to-mentions" href="${href_to_mentions}"><span id="footerspan">© ${date.getFullYear()} Alexis Henry. 
+All Rights Reserved</span></a>`;
 
 const addHTML_toFooter = document
   .getElementById("foot")

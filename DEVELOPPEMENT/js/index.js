@@ -14,7 +14,7 @@ document.getElementById("src-img-centrale").insertAdjacentHTML(
 );
 document.getElementById("src-img-scnd").insertAdjacentHTML(
   "afterbegin",
-    `
+  `
   <img
     id="img-scnd"
     alt="${images.second_project.alt}"
@@ -157,9 +157,30 @@ function LoadingFunction() {
 
 // ------------------ FIREFOX & SAFARI (Using JS Platform librairies)  ------------------
 
-if (platform.name === "Chrome") {
+var browserName = (function (agent) {
+  switch (true) {
+    case agent.indexOf("edge") > -1:
+      return "MS Edge";
+    case agent.indexOf("edg/") > -1:
+      return "Edge ( chromium based)";
+    case agent.indexOf("opr") > -1 && !!window.opr:
+      return "Opera";
+    case agent.indexOf("chrome") > -1 && !!window.chrome:
+      return "Chrome";
+    case agent.indexOf("trident") > -1:
+      return "MS IE";
+    case agent.indexOf("firefox") > -1:
+      return "Firefox";
+    case agent.indexOf("safari") > -1:
+      return "Safari";
+    default:
+      return "other";
+  }
+})(window.navigator.userAgent.toLowerCase());
+
+if (browserName == "Chrome") {
   console.log("You use a good browser :)");
-} else if (platform.name === "Firefox" || platform.name === "Safari") {
+} else if (browserName == "Firefox" || browserName == "Safari") {
   img_nd.style.visibility = "hidden";
   img_th.style.visibility = "hidden";
   console.log(
