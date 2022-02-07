@@ -1,5 +1,5 @@
 import { images } from "./modules/data.js";
-import { browserName } from "./modules/browser.js";
+import { browserName, FIX_FIREFOX } from "./modules/browser.js";
 
 document.getElementById("src-img-centrale").insertAdjacentHTML(
   "afterbegin",
@@ -160,7 +160,15 @@ function LoadingFunction() {
 
 if (browserName == "Chrome") {
   console.log("You use a good browser :)");
-} else if (browserName == "Firefox" || browserName == "Safari") {
+} else if (browserName == "Firefox") {
+  img_nd.style.visibility = "hidden";
+  img_th.style.visibility = "hidden";
+  FIX_FIREFOX(img_centrale);
+  console.log(
+    `%cThe version of the website is modified on your browser. Sorry for this issue `,
+    "color: red; background-color:white; font-size:12px;"
+  );
+} else if (browserName == "Safari") {
   img_nd.style.visibility = "hidden";
   img_th.style.visibility = "hidden";
   console.log(
@@ -168,5 +176,6 @@ if (browserName == "Chrome") {
     "color: red; background-color:white; font-size:12px;"
   );
 }
+
 
 console.timeEnd("Exécution script JS");

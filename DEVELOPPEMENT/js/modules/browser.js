@@ -18,3 +18,10 @@ export var browserName = (function (agent) {
         return "other";
     }
   })(window.navigator.userAgent.toLowerCase());
+
+
+// IF FIREFOX ::
+
+export function FIX_FIREFOX(id) {
+  id.classList.add('FIX_FIREFOX');
+}
