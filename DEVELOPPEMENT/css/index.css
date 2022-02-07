@@ -107,19 +107,26 @@ body {
 /** ------------------------------ FOOTER ------------------------------ */
 
 footer {
+
   position: absolute;
   height: 25px;
   width: 100%;
   text-align: center;
   bottom: 0;
-  color: var(--color1);
   cursor: default;
+}
+
+.href-to-mentions {
+  text-decoration: none;
+  color: var(--color2);
 }
 
 #footerspan:hover {
   transition: All 0.8s;
   color: var(--iconColor);
-}
+  text-decoration: none;
+
+} 
 
 /*! ------------------------------ FOOTER ------------------------------ */
 /** ------------------------------ ERROR ------------------------------- */
