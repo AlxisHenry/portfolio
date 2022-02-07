@@ -1,0 +1,19 @@
+{
+  "name": "cci-2021-portfolio",
+  "version": "1.0.0",
+  "description": "Create a Portfolio > CCI Campus Strasbourg Project",
+  "main": "./DEVELOPPEMENT/js/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlxisHenry/CCI-2021-PORTFOLIO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlxisHenry/CCI-2021-PORTFOLIO/issues"
+  },
+  "homepage": "https://github.com/AlxisHenry/CCI-2021-PORTFOLIO#readme"
+}
