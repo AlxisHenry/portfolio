@@ -89,6 +89,7 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
            > js
               > modules
                  > data.js
+                 > browser.js
               > app.js
               > index.js
               > main.js
