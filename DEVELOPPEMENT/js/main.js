@@ -1,5 +1,7 @@
 console.time("Exécution script JS");
 
+import { images } from "./modules/data.js";
+
 // ------------------ HISTORY BACK ICON  ------------------
 
 document.getElementById("btn-rar").addEventListener("click", (e) => {

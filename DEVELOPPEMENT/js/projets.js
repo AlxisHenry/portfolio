@@ -1,3 +1,5 @@
+import { style } from "./modules/data.js";
+
 const video = document.getElementById("video_projet"),
   frame = document.getElementById("demo_projet"),
   ico_video = document.getElementById("file-video"),

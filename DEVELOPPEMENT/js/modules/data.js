@@ -1,4 +1,4 @@
-const path = {
+export const path = {
   imgs: {
     index: "./DEVELOPPEMENT/assets/img/",
     relat: "../assets/img/no-backgrounds/"
@@ -6,7 +6,7 @@ const path = {
   html: "./DEVELOPPEMENT/html/",
 };
 
-const images = {
+export const images = {
   first_project: {
     title: "TIMKEN",
     alt: "TIMKEN",
@@ -36,7 +36,7 @@ const images = {
   }
 };
 
-const style = {
+export const style = {
   display: {
     flex: (id) => {
       id.style.display = "flex";

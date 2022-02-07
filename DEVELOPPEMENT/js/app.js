@@ -1,3 +1,5 @@
+import * as data from "./modules/data.js";
+
 const grid_Template = document.querySelector(".grid-projects");
 let id = 0;
 
