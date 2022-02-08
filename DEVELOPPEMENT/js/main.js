@@ -73,6 +73,7 @@ if (document.querySelector("#index_page")){
   var href_to_mentions = "./DEVELOPPEMENT/html/inprogress.html";
 } else {
   var href_to_mentions = "../html/inprogress.html";
+  document.getElementById("foot").style.display = "none";
 }
 
 const FooterText = `<a class="href-to-mentions" href="${href_to_mentions}"><span id="footerspan">© ${date.getFullYear()} Alexis Henry. 
