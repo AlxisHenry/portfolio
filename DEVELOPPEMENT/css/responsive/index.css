@@ -65,7 +65,10 @@
   .active-scroll-on-this-page {
     overflow: scroll;
   }
-  footer {
+}
+
+@media screen and (max-height: 700px) {
+    footer {
     display: none;
   }
 }
@@ -115,7 +118,7 @@
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 700px) {
   .grid-projects {
     grid-template-columns: repeat(1, 1fr);
     margin-top: 25%;
@@ -130,6 +133,9 @@
     border-color: none;
     border: hidden;
   }
+}
+
+@media screen and (max-width: 1200px) {
   footer {
     display: none;
   }
