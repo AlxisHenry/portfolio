@@ -1,4 +1,5 @@
 import { style } from "./modules/data.js";
+import { sleepFor } from "./main.js";
 
 const video = document.getElementById("video_projet"),
   frame = document.getElementById("demo_projet"),

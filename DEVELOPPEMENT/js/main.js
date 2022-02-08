@@ -26,7 +26,7 @@ document.getElementById("href-discord").addEventListener("click", (e) => {
 
 // ------------------ SLEEP FUNC ------------------
 
-function sleepFor(sleepDuration) {
+export function sleepFor(sleepDuration) {
   var now = new Date().getTime();
   while (new Date().getTime() < now + sleepDuration) {
     /* Do nothing */

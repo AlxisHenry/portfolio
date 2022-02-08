@@ -1,4 +1,5 @@
 import * as data from "./modules/data.js";
+import { sleepFor } from "./main.js";
 
 const grid_Template = document.querySelector(".grid-projects");
 let id = 0;

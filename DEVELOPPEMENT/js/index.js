@@ -1,5 +1,6 @@
 import { images } from "./modules/data.js";
 import { browserName, FIX_FIREFOX } from "./modules/browser.js";
+import { sleepFor } from "./main.js";
 
 document.getElementById("src-img-centrale").insertAdjacentHTML(
   "afterbegin",
