@@ -124,6 +124,7 @@
     margin-top: 25%;
   }
   .active-scroll-on-this-page {
+    
     overflow: scroll;
   }
   .remove-no-project {
