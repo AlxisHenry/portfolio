@@ -22,7 +22,7 @@ export const images = {
     status: "Finished",
   },
   third_project: {
-    title: "Sport Addict",
+    title: "SPORT-ADDICT",
     alt: "SPORT-ADDICT",
     img: `${path.imgs.index}sport-addict.png`,
     href: `${path.html}inprogress.html`,

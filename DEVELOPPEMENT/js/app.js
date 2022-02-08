@@ -4,7 +4,7 @@ const grid_Template = document.querySelector(".grid-projects");
 let id = 0;
 
 for (let div = 0; div < 9; div++) {
-  let div_toAdd = `<div class="projet-presentation-grid" id="pr${id}"><a class="href_this" href=""><img class="imgsrc" title="" src=""></a></div>`;
+  let div_toAdd = `<div class="projet-presentation-grid" id="pr${id}"><a class="href_this" href=""><img class="imgsrc" alt="" title="" src=""></a></div>`;
   grid_Template.insertAdjacentHTML("beforeend", div_toAdd);
   id++;
 }
@@ -26,7 +26,7 @@ imgs_src[6].src = `${path_to_images}coming-soon.png`;
 imgs_src[7].src = `${path_to_images}coming-soon.png`;
 imgs_src[8].src = `${path_to_images}coming-soon.png`;
 
-const PathToOuterHTML = `<img class="imgsrc" title="" src="../assets/img/no-backgrounds/`;                        
+const PathToOuterHTML = `<img class="imgsrc" alt="" title="" src="../assets/img/no-backgrounds/`;                        
 
 for (let current = 0; current < imgs_src.length; current++) {
   if (grid_Presentation[current].outerHTML == `${PathToOuterHTML}coming-soon.png">`) {
@@ -41,18 +41,25 @@ for (let current = 0; current < imgs_src.length; current++) {
     switch (_this.outerHTML) {
       case `${PathToOuterHTML}aleatory.png">`:
         grid_Vide[current].firstChild.href = "./inprogress.html";
+        _this.title = data.images.aleatory.title;
+        _this.alt = data.images.aleatory.alt;
         break;
       case `${PathToOuterHTML}Timken.png">`:
         grid_Vide[current].firstChild.href = "./projet-timken.html";
+        _this.title = data.images.first_project.title;
+        _this.alt = data.images.first_project.alt;
         break;
       case `${PathToOuterHTML}sport-addict.png">`:
         grid_Vide[current].firstChild.href = "./inprogress.html";
+        _this.title = data.images.third_project.title;
+        _this.alt = data.images.third_project.alt;
         break;
       case `${PathToOuterHTML}snipeit.png">`:
         grid_Vide[current].firstChild.href = "./projet-snipe-it.html";
+        _this.title = data.images.second_project.title;
+        _this.alt = data.images.second_project.alt;
         break;
     }
-    _this.title = "Go to project !";
     imgs_event.push(grid_Presentation[current]);
   }
 }
