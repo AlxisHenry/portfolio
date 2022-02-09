@@ -4,24 +4,13 @@ import { images } from "./modules/data.js";
 
 // ------------------ HISTORY BACK ICON  ------------------
 
-document.getElementById("btn-rar").addEventListener("click", (e) => {
-  if (confirm("Redirect ?")) {
+document.getElementById("btn-rar").addEventListener("click", () => {
     history.back();
-  } else {
-    e.preventDefault();
-    void 0;
-  }
 });
 
 // ------------------ SEND TO DISCORD ICON ------------------
 
-document.getElementById("href-discord").addEventListener("click", (e) => {
-  if (confirm("Cela va ouvrir un nouvel onglet, êtes vous sûr ?")) {
-    // Redirection vers discord
-  } else {
-    e.preventDefault();
-    void 0;
-  }
+document.getElementById("href-discord").addEventListener("click", () => {
 });
 
 // ------------------ SLEEP FUNC ------------------

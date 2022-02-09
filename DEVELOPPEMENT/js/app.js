@@ -31,12 +31,10 @@ const PathToOuterHTML = `<img class="imgsrc" alt="" title="" src="../assets/img/
 
 for (let current = 0; current < imgs_src.length; current++) {
   if (grid_Presentation[current].outerHTML == `${PathToOuterHTML}coming-soon.png">`) {
-    grid_Presentation[current].className += " remove-no-project";
-    grid_Vide[current].className += " remove-border";
-    grid_Presentation[current].className += " logo";
+    grid_Presentation[current].className += " remove-no-project logo";
     grid_Presentation[current].style.cursor = "default";
-    grid_Vide[current].children[0].removeAttribute('href');
     grid_Presentation[current].title = 'Not Found'
+    grid_Vide[current].children[0].removeAttribute('href');
       if (current === imgs_src.length - 1) {
         grid_Presentation[current].className += " responsive-remove-last-children"
       }
