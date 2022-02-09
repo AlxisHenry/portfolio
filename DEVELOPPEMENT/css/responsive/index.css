@@ -116,6 +116,9 @@
   .active-scroll-on-this-page {
     overflow: scroll;
   }
+  .responsive-remove-last-children {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 700px) {

@@ -37,6 +37,9 @@ for (let current = 0; current < imgs_src.length; current++) {
     grid_Presentation[current].style.cursor = "default";
     grid_Vide[current].children[0].removeAttribute('href');
     grid_Presentation[current].title = 'Not Found'
+      if (current === imgs_src.length - 1) {
+        grid_Presentation[current].className += " responsive-remove-last-children"
+      }
   } else {
     const _this = grid_Presentation[current];
     switch (_this.outerHTML) {
