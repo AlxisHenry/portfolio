@@ -42,13 +42,7 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
                > PALETTES DE COULEURS
 
         DEVELOPPEMENT
-           > assets
-              > ~extension
-                 > @exe
-                    > chromedriver.exe
-                 > @logs
-                    > logs.txt
-                 > main.py          
+           > assets      
               > errors
                  > 400.shtml
                  > 401.shtml

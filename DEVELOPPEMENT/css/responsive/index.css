@@ -1,3 +1,12 @@
+/** ------------------------------ FOOTER  ----------------------------- */
+
+@media screen and (max-height: 600px) {
+  footer {
+    display: none;
+  }
+}
+
+/*! ------------------------------ FOOTER  ----------------------------- */
 /** ------------------------------ INDEX  ------------------------------ */
 
 @media screen and (max-width: 1350px) {
@@ -21,6 +30,7 @@
 
 /*! ------------------------------ INDEX  ------------------------------- */
 /** ------------------------------ TIMKEN ------------------------------- */
+/** ----------------------------- SNIPE-IT ------------------------------ */
 
 @media screen and (max-width: 1800px) {
   #div_principale_projet {
@@ -67,21 +77,16 @@
   }
 }
 
-@media screen and (max-height: 700px) {
-    footer {
-    display: none;
-  }
-}
 
+/** ---------------------------- SNIPE-IT ------------------------------ */
 /*! ----------------------------- TIMKEN ------------------------------- */
-
 /** ------------------------------ COMPRENDRE ------------------------------- */
 
 @media screen and (max-width: 720px) {
   .container-title-h1 {
     font-size: 3em;
   }
-  .container-github-paragraphe {
+  .container-github-paragraphe { 
     font-size: 20px;
   }
 }
@@ -133,12 +138,6 @@
   .remove-border {
     border-color: none;
     border: hidden;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  footer {
-    display: none;
   }
 }
 
