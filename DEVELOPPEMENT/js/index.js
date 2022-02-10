@@ -1,6 +1,9 @@
 import { images } from "./modules/data.js";
-import { browserName, FIX_FIREFOX } from "./modules/browser.js";
+import { browserName, FIX } from "./modules/browser.js";
 import { sleepFor } from "./main.js";
+
+document.querySelector('#prenom').innerHTML = "ALEXIS";
+document.querySelector('#nom').innerHTML = "HENRY";
 
 document.getElementById("src-img-centrale").insertAdjacentHTML(
   "afterbegin",
@@ -164,7 +167,7 @@ if (browserName == "Chrome") {
 } else if (browserName == "Firefox") {
   img_nd.style.visibility = "hidden";
   img_th.style.visibility = "hidden";
-  FIX_FIREFOX(img_centrale);
+  FIX(img_centrale, 'firefox');
   console.log(
     `%cThe version of the website is modified on your browser. Sorry for this issue `,
     "color: red; background-color:white; font-size:12px;"
