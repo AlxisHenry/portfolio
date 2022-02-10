@@ -58,8 +58,8 @@ const outTable = menu_deroulantTable.addEventListener("mouseout", () => {
 
 const date = new Date();
 
-if (document.querySelector("#index_page")){
-  var href_to_mentions = "./DEVELOPPEMENT/html/inprogress.html";
+if (document.querySelector("#index_page") || document.querySelector("#footer_page")){
+  var href_to_mentions = "./DEVELOPPEMENT/html/mentions-legales.html";
 } else {
   var href_to_mentions = "../html/inprogress.html";
   document.getElementById("foot").style.display = "none";
