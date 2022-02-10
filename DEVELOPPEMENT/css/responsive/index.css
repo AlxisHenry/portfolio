@@ -15,7 +15,7 @@
 /*! ------------------------------ FOOTER  ----------------------------- */
 /** ------------------------------ INDEX  ------------------------------ */
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 950px) {
   #img-thrd,
   #img-scnd {
     display: none;
@@ -23,7 +23,27 @@
 
   header div.header-menu_header-buttons .header-nav ul li ul li a {
     background-color: var(--color2);
+  }  
+}
+
+@media screen and (max-width: 1380px) and (min-height: 950px) {
+  #img-thrd,
+  #img-scnd {
+    display: none;
   }
+}
+
+@media screen and (max-width: 900px) { 
+#prenom,
+#nom {
+  font-size: 20.5vw;
+}
+.fa-random {
+  font-size: 10.5vw;
+  margin-top: 75%;
+  transition: All 0.5s;
+  transform: rotate(90deg);
+}
 
 }
 
@@ -32,7 +52,7 @@
     max-width: 80%;
     margin-left: 10%;
     }
-  }
+  } 
 
 /*! ------------------------------ INDEX  ------------------------------- */
 /** ------------------------------ TIMKEN ------------------------------- */

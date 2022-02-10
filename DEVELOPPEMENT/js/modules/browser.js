@@ -21,6 +21,7 @@ export var browserName = (function (agent) {
 
 // IF FIREFOX ::  id.classList.add('FIX_FIREFOX');
 
+
 export function FIX(id, browser) {
   switch (browser) {
     case 'firefox':
