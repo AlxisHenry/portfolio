@@ -432,7 +432,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
       transparent 12px
     );
   background-size: 100% 12px, 12px 100%;
-  overflow: scroll;
+  overflow:auto;
 }
 
 .space-between-github-icons {
@@ -478,6 +478,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   color: var(--shadowColor);
   font-family: var(--poiret);
 }
+
 
 /*! --------------------------- COMPRENDRE ----------------------------- */
 /** ---------------------------- PROJETS ------------------------------- */

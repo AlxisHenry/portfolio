@@ -19,9 +19,6 @@ export var browserName = (function (agent) {
   }
 })(window.navigator.userAgent.toLowerCase());
 
-// IF FIREFOX ::  id.classList.add('FIX_FIREFOX');
-
-
 export function FIX(id, browser) {
   switch (browser) {
     case 'firefox':
