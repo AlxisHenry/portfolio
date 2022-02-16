@@ -70,7 +70,7 @@ All Rights Reserved</span></a>`;
 
 const addHTML_toFooter = document
   .getElementById("foot")
-  .insertAdjacentHTML("afterbegin", FooterText);
+  .insertAdjacentHTML("afterbegin", FooterText);  
 
 // ------------------ FAVICON ------------------
 

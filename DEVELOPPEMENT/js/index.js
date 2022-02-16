@@ -160,6 +160,7 @@ function LoadingFunction() {
   setTimeout(change_img_onload, 3000);
 }
 
+
 // ------------------ FIREFOX & SAFARI (Using Vanilla JS)  ------------------
 
 if (browserName == "Chrome") {

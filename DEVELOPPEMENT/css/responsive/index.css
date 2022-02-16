@@ -44,7 +44,12 @@
   transition: All 0.5s;
   transform: rotate(90deg);
 }
+}
 
+@media screen and (max-height: 500px) {
+  .active-scroll-on-index-page {
+    overflow: scroll;
+  }
 }
 
 @media screen and (max-width: 1350px) {

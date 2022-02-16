@@ -1,8 +1,8 @@
 
 # ErrorDocument
-ErrorDocument 400 /DEVELOPPEMENT/assets/~errors/400.shtml
-ErrorDocument 401 /DEVELOPPEMENT/assets/~errors/401.shtml
-ErrorDocument 403 /DEVELOPPEMENT/assets/~errors/403.shtml
-ErrorDocument 404 /DEVELOPPEMENT/assets/~errors/404.shtml
-ErrorDocument 500 /DEVELOPPEMENT/assets/~errors/500.shtml
+ErrorDocument 400 /DEVELOPPEMENT/assets/errors/400.shtml
+ErrorDocument 401 /DEVELOPPEMENT/assets/errors/401.shtml
+ErrorDocument 403 /DEVELOPPEMENT/assets/errors/403.shtml
+ErrorDocument 404 /DEVELOPPEMENT/assets/errors/404.shtml
+ErrorDocument 500 /DEVELOPPEMENT/assets/errors/500.shtml
 
