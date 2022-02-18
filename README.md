@@ -63,9 +63,10 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
                  > snipeit.png
                  > sport-addict.png
                  > Timken.png
-              > videos
-                 > demonstration_automation_snp.mp4
-                 > showsnipeit.mkv
+              > videos (Format utilisé: mp4, pour des raisons de comptabilités entre navigateurs)
+                 > show-extension-automation-snipe-it.mp4
+                 > snipe-it-installation.mp4
+                 > timken-installation-gestion-stock.mp4
            > css
               > responsive
                  > index.css
@@ -91,6 +92,8 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 
         .htaccess
         index.html
+        package-lock.json
+        package.json
         README.md (this)
 
 ---
