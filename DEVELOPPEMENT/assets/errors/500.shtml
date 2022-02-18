@@ -85,7 +85,7 @@
     <footer>
       <div id="foot"></div>
     </footer>
-    <script src="../../../DEVELOPPEMENT/js/data.js"></script>
-    <script src="../../../DEVELOPPEMENT/js/main.js"></script>
+    <script type="module" src="../../../DEVELOPPEMENT/js/modules/data.js"></script>
+    <script type="module" src="../../../DEVELOPPEMENT/js/main.js"></script>
   </body>
 </html>
