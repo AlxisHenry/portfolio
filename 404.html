@@ -1,15 +1,19 @@
-<!DOCTYPE html>
+ <!-- This is Github Error Pages -->
+ <!DOCTYPE html>
 <html lang="en">
-  <head id="footer_page">
+  <head id="index_page">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - Alexis Henry</title>
-    <link rel="icon" href="../ico/favicon.png" />
-    <script src="https://kit.fontawesome.com/ac4dc0897b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../../DEVELOPPEMENT/css/index.css" />
+    <title>Homepage - Alexis Henry</title>
+    <script
+      src="https://kit.fontawesome.com/ac4dc0897b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./DEVELOPPEMENT/css/index.css" />
+    <link rel="stylesheet" href="./DEVELOPPEMENT/css/responsive/index.css" />
   </head>
-  <body id="body_notfound">
+  <body class="active-scroll-on-index-page">
     <header>
       <div class="header-menu_header-buttons">
         <nav class="header-nav">
@@ -23,7 +27,7 @@
               <ul id="responsive">
                 <li>
                   <a
-                    href="../../../DEVELOPPEMENT/html/inprogress.html"
+                    href="./DEVELOPPEMENT/html/inprogress.html"
                     title="Présentation"
                     id="href-presentation"
                     >PRÉSENTATION</a
@@ -31,7 +35,7 @@
                 </li>
                 <li>
                   <a
-                    href="../../../DEVELOPPEMENT/html/projets.html"
+                    href="./DEVELOPPEMENT/html/projets.html"
                     id="href-projets"
                     title="Projets"
                     >MES PROJETS</a
@@ -39,7 +43,7 @@
                 </li>
                 <li>
                   <a
-                    href="../../../DEVELOPPEMENT/html/comprendre.html"
+                    href="./DEVELOPPEMENT/html/comprendre.html"
                     id="href-comprendre"
                     title="Comprendre"
                     >COMPRENDRE MON SITE</a
@@ -59,7 +63,7 @@
           </ul>
         </nav>
         <div class="bt-retour-accueil">
-          <a href="../../../index.html"
+          <a href="index.html"
             ><i id="btn-rac" class="fas fa-home" title="Retour à l'accueil"></i
           ></a>
         </div>
@@ -69,26 +73,21 @@
       </div>
     </header>
 
-      <h1
-        id="titre-notfound">
-        404
-      </h1>
-      <p id="p-notfound">Not Found</p>
-      <p id="p-infouser"></p>
-      
-      <p id="shtml-errors-server-return-this">
-        <!--#echo var="HTTP_REFERER" --><br>
-        <!--#echo var="REMOTE_ADDR" --><br>
-        <!--#echo var="REQUEST_URI" --><br>
-        <!--#echo var="REDIRECT_STATUS" --><br>
-        <!--#echo var="HTTP_USER_AGENT" --><br>
-        <!--#echo var="HTTP_HOST" -->
-      </p>  
+    <h1
+    id="titre-notfound">
+    404
+  </h1>
+  <p id="p-notfound">Not Found</p>
+  <p id="p-infouser"></p>
+  
+  <p id="shtml-errors-server-return-this">
 
-    <footer>
-      <div id="foot"></div>
-    </footer>
-    <script type="module" src="../../../DEVELOPPEMENT/js/modules/data.js"></script>
-    <script type="module" src="../../../DEVELOPPEMENT/js/main.js"></script>
+  </p>  
+
+    <footer><div id="foot"></div></footer>
+
+    <script type="module" src="./DEVELOPPEMENT/js/main.js"></script>
+    <script type="module" src="./DEVELOPPEMENT/js/index.js"></script>
   </body>
 </html>
+
