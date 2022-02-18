@@ -60,7 +60,7 @@ body {
 }
 
 .loader-style-display.loader-none {
-  animation: fadeOut 2s;
+  animation: fadeOut 0.85s;
   animation-fill-mode: forwards;
 }
 
@@ -337,8 +337,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   border-radius: 25.5px 25.5px 25.5px 25.5px;
 }
 
-/* 
-#img-scnd {
+/* #img-scnd {
   transform: rotateX(9deg) rotateY(45deg) rotateZ(0deg) translateX(0px)
     translateY(-35px) translateZ(0px) scale(1.375) skewY(3deg);
   -moz-transform: rotateX(9deg) rotateY(45deg) rotateZ(0deg) translateX(0px)
