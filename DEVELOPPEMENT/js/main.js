@@ -78,6 +78,10 @@ if (document.querySelector("#index_page")){
   let href_to_favicon = "./DEVELOPPEMENT/assets/ico/favicon.png";
   const favicon = `<link rel="icon" href="${href_to_favicon}" />`;
   document.querySelector("title").insertAdjacentHTML("afterend", favicon);
+} else if (document.querySelector('#body_notfound')) {
+  let href_to_favicon = "./../ico/favicon.png";
+  const favicon = `<link rel="icon" href="${href_to_favicon}" />`;
+  document.querySelector("title").insertAdjacentHTML("afterend", favicon);
 } else {
   let href_to_favicon = "../assets/ico/favicon.png"; 
   const favicon = `<link rel="icon" href="${href_to_favicon}" />`;
