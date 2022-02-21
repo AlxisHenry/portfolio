@@ -106,7 +106,6 @@ body {
 /*! ------------------------------ HEADER ------------------------------ */
 /** ------------------------------ FOOTER ------------------------------ */
 
-
 #foot {
   position: absolute;
   height: 25px;
@@ -114,7 +113,7 @@ body {
   text-align: center;
   bottom: 0;
   cursor: default;
-} 
+}
 
 .href-to-mentions {
   text-decoration: none;
@@ -125,8 +124,7 @@ body {
   transition: All 0.8s;
   color: var(--iconColor);
   text-decoration: none;
-
-} 
+}
 
 /*! ------------------------------ FOOTER ------------------------------ */
 /** ------------------------------ ERROR ------------------------------- */
@@ -431,7 +429,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
       transparent 12px
     );
   background-size: 100% 12px, 12px 100%;
-  overflow:auto;
+  overflow: auto;
 }
 
 .space-between-github-icons {
@@ -477,7 +475,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   color: var(--shadowColor);
   font-family: var(--poiret);
 }
-
 
 /*! --------------------------- COMPRENDRE ----------------------------- */
 /** ---------------------------- PROJETS ------------------------------- */
@@ -638,8 +635,35 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 
 /*! ---------------------------- SNIPE-IT ------------------------------ */
 /*! ----------------------------- TIMKEN ------------------------------- */
-/** ----------------------------- MENTIONS ------------------------------- */
+/** ----------------------------- MENTIONS LEGALES------------------------------- */
 
+.active-scroll-on-this-page-All {
+  overflow: scroll;
+}
+#mentionslegales {
+  padding: 0rem 10%;
+  text-align: justify;
+}
+#mentionslegales h2 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: var(--shadowColor);
+  font-size: 30px;
+  font-weight: 800;
+  padding-top: 40px;
+}
+#mentionslegales p {
+  font-size: 20px;
+  color: var(--iconColor);
+}
 
+#mentionslegales a {
+  text-decoration: none;
+  color: var(--shadowColor);
+}
+
+#mentionslegales a:hover {
+  color: wheat;
+}
 
 /*! ----------------------------- MENTIONS ------------------------------- */
