@@ -632,7 +632,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   display: flex;
   justify-content: center;
   width: 100%;
-  font-size: 10em;
+  font-size: 8em;
   font-family: var(--amatic);
 }
 

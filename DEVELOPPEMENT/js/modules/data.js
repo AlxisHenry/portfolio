@@ -25,7 +25,7 @@ export const images = {
     title: "SPORT-ADDICT",
     alt: "SPORT-ADDICT",
     img: `${path.imgs.index}sport-addict.png`,
-    href: `${path.html}inprogress.html`,
+    href: `${path.html}projet-sport-addict.html`,
     status: "Not Started",
   },
   aleatory: {

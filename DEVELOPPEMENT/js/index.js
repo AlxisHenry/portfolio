@@ -2,8 +2,8 @@ import { images, style } from "./modules/data.js";
 import { browserName, FIX } from "./modules/browser.js";
 import { sleepFor } from "./main.js";
 
-document.querySelector('#prenom').innerHTML = "ALEXIS";
-document.querySelector('#nom').innerHTML = "HENRY";
+document.querySelector("#prenom").innerHTML = "ALEXIS";
+document.querySelector("#nom").innerHTML = "HENRY";
 
 document.getElementById("src-img-centrale").insertAdjacentHTML(
   "afterbegin",
@@ -70,14 +70,12 @@ first_button_div.insertAdjacentHTML(
   ></i>`
 );
 
-
 //! Ces deux lignes + l340-360 d'index.css permette d'avoir un autre design :
 //* Montrer cette version de dev
 //* Ces deux lignes permettent de flouter les images de côtés. J'ai décidé de les retirer car c'est plus esthétique,
 //* Ceci après avoir reçu l'avis de différents utilisateurs.
 // style.filter.blur(img_nd, 2)
 // style.filter.blur(img_th, 2)
-
 
 const buttons = document.querySelectorAll(".fa-circle");
 buttons[0].addEventListener("click", change_to_img1);
@@ -164,7 +162,6 @@ function LoadingFunction() {
   setTimeout(change_img_onload, 3000);
 }
 
-
 // ------------------ FIREFOX & SAFARI (Using Vanilla JS)  ------------------
 
 if (browserName == "Chrome") {
@@ -172,7 +169,7 @@ if (browserName == "Chrome") {
 } else if (browserName == "Firefox") {
   img_nd.style.visibility = "hidden";
   img_th.style.visibility = "hidden";
-  FIX(img_centrale, 'firefox');
+  FIX(img_centrale, "firefox");
   console.log(
     `%cThe version of the website is modified on your browser. Sorry for this issue `,
     "color: red; background-color:white; font-size:12px;"
@@ -185,6 +182,5 @@ if (browserName == "Chrome") {
     "color: red; background-color:white; font-size:12px;"
   );
 }
-
 
 console.timeEnd("Exécution script JS");

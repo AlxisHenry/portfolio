@@ -52,7 +52,7 @@ for (let current = 0; current < imgs_src.length; current++) {
         _this.alt = data.images.first_project.alt;
         break;
       case `${PathToOuterHTML}sport-addict.png">`:
-        grid_Vide[current].firstChild.href = "./inprogress.html";
+        grid_Vide[current].firstChild.href = "./projet-sport-addict.html";
         _this.title = data.images.third_project.title;
         _this.alt = data.images.third_project.alt;
         break;

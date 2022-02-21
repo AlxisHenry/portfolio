@@ -65,6 +65,7 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
                  > Timken.png
               > videos (Format utilisé: mp4, pour des raisons de comptabilités entre navigateurs)
                  > show-extension-automation-snipe-it.mp4
+                 > show-sport-addict-website.mp4
                  > snipe-it-installation.mp4
                  > timken-installation-gestion-stock.mp4
            > css
@@ -91,6 +92,7 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
               > projets.js
 
         .htaccess
+        404.html (This is for all errors on Github Pages)
         index.html
         package-lock.json
         package.json
