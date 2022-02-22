@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head id="footer_page">
+  <head id="error_page">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>401 - Alexis Henry</title>
-    <link rel="icon" href="../../../ico/favicon.png" />
+    <link rel="icon" href="../../../DEVELOPPEMENT/assets/ico/favicon.png" />
     <script src="https://kit.fontawesome.com/ac4dc0897b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../../DEVELOPPEMENT/css/index.css" />
   </head>

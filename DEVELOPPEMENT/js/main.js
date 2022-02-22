@@ -58,12 +58,13 @@ const outTable = menu_deroulantTable.addEventListener("mouseout", () => {
 const date = new Date();
 
 if (
-  document.querySelector("#index_page") ||
-  document.querySelector("#footer_page")
+  document.querySelector("#index_page")
 ) {
   var href_to_mentions = "./DEVELOPPEMENT/html/mentions-legales.html";
+} else if (document.querySelector("#error_page")) {
+  var href_to_mentions = "#";
 } else {
-  var href_to_mentions = "../html/inprogress.html";
+  var href_to_mentions = "#";
   document.getElementById("foot").style.display = "none";
 }
 
@@ -80,6 +81,8 @@ if (document.querySelector("#index_page")) {
   let href_to_favicon = "./DEVELOPPEMENT/assets/ico/favicon.png";
   const favicon = `<link rel="icon" href="${href_to_favicon}" />`;
   document.querySelector("title").insertAdjacentHTML("afterend", favicon);
+} else if (document.querySelector('#error_page')) {
+  // Do nothing
 } else {
   let href_to_favicon = "../assets/ico/favicon.png";
   const favicon = `<link rel="icon" href="${href_to_favicon}" />`;
