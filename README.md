@@ -16,7 +16,7 @@ Le projet consiste au développement d'un `portfolio` à l'aide de langages basi
 
 Ce site est accessible de deux façons,
 
-En production au lien suivant: **[https://prod.alexishenry.fr](https://www.alexishenry.fr)**.
+En production aux liens suivants: **[https://prod.alexishenry.fr](https://www.alexishenry.fr)**, **[https://prod.about-me.site](https://www.about-me.site)**.
 
 En développement au lien suivant: **[https://dev.alexishenry.fr](https://alxishenry.github.io/CCI-2021-PORTFOLIO/)**.
 
