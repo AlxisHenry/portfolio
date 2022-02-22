@@ -89,34 +89,52 @@
   .info-projet {
     width: 100%;
   }
-  .infodivh1 {
+  /* .infodivh1 {
     font-size: 2em;
   }
   .infop {
     font-size: 12px;
-  }
+  } */
 }
 
 @media (min-width:720px) and (max-width:1280px) {
   #div_principale_projet {
       margin-top: 12.5vh;
-      /* width: 60%; */
   }
 }
 
 @media screen and (max-height: 800px) {
-  .infodivh1 {
+  /* .infodivh1 {
     font-size: 4em;
   }
   .infop {
     font-size: 12px;
-  }
+  } */
 }
 
 @media screen and (max-width: 600px) {
+  /* .infodivh1 {
+    font-size: 2.2rem;
+  } */
   .long-title {
     font-size: 0.6em;
   }  
+}
+
+@media screen and (max-width: 1200px) {
+
+  .infodivh1 {
+    font-size: 2rem;
+  }
+
+  .infodivh2 {
+    font-size: 0.8rem;
+  }
+
+  .infop {
+    font-size: 0.6rem;
+  }
+
 }
 
 /*! ---------------------------- SNIPE-IT ------------------------------ */
