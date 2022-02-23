@@ -74,8 +74,8 @@ first_button_div.insertAdjacentHTML(
 //* Montrer cette version de dev
 //* Ces deux lignes permettent de flouter les images de côtés. J'ai décidé de les retirer car c'est plus esthétique,
 //* Ceci après avoir reçu l'avis de différents utilisateurs.
-// style.filter.blur(img_nd, 2)
-// style.filter.blur(img_th, 2)
+style.filter.blur(img_nd, 2)
+style.filter.blur(img_th, 2)
 
 const buttons = document.querySelectorAll(".fa-circle");
 buttons[0].addEventListener("click", change_to_img1);
