@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Snipe-IT - Alexis Henry</title>
-    <script
-      src="https://kit.fontawesome.com/ac4dc0897b.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>Timken - Alexis Henry</title>
+    <script src="https://kit.fontawesome.com/ac4dc0897b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/responsive/index.css" />
   </head>
   <body class="active-scroll-on-this-page">
+
     <div class="loader-style-display"></div>
 
     <header>
@@ -70,67 +68,51 @@
     <!--*  CONTAINER  -->
     <div id="div_principale_projet">
       <video id="video_projet" autoplay="autoplay" loop="loop" muted="muted">
-        <source src="../assets/videos/snipe-it-installation.mp4" />
+        <source
+          src="../../assets/videos/timken-installation-gestion-stock.mp4"/>
       </video>
       <video id="demo_projet" autoplay="autoplay" loop="loop" muted="muted">
-        <source src="../assets/videos/show-extension-automation-snipe-it.mp4" />
+        <sources src="#"/>
       </video>
-
-      <i
-        class="fas fa-info-circle research-info-function"
-        id="info-circle_code"
-      ></i>
+      <i class="fas fa-info-circle research-info-function" id="info-circle_code"></i>
       <i class="fas fa-info-circle research-info-function" id="info-circle"></i>
-      <i class="far fa-file-code togglefunction" id="file-code"></i>
-      <i class="far fa-file-video togglefunction" id="file-video"></i>
 
+      <!--*  INFO  -->
       <div id="infodivvideo" class="info-projet">
         <div class="show-info-when-mouseover">
-          <h1 class="infodivh1">Mise en place</h1>
+          <h1 class="infodivh1">
+              <span class="title">Gestion du stock</span>
+          </h1>
           <hr class="divhr">
-
           <p class="infop">
-           
-            J'ai tout d'abord mis en place <a class="href-to-other-page" href="https://snipeitapp.com/">Snipe-IT</a> sur une machine virtuelle <a class="href-to-other-page" href="https://fr.wikipedia.org/wiki/Linux">Linux</a>. <br>
-            La <a href="https://snipe-it.readme.io/docs">documentation officielle</a> conseille d'utiliser les dernières versions d'<a class="href-to-other-page" href="https://www.ubuntu-fr.org/">Ubuntu</a>, ou de <a class="href-to-other-page" href="https://www.debian.org/index.fr.html">Debian</a>.<br>
-            À terme, cette solution sera installé sur une machine virtuelle sur l'un des serveurs de mon entreprise. Ceci pour permettre un accès interne à celle-ci. <br>
-            Finalement, après avoir testé <a href="https://snipeitapp.com/">Snipe-IT</a>, c'est actuellement la meilleur solution vis à vis de la gestion de stock. <br>
-            C'est le seul avec un design récent qui est agréable à utiliser. Et qui en plus de cela, a de nombreuses fonctionnalités intéressantes, comme l'import de données.
+            Afin de répondre à un besoin de gestion des stocks,<br><br>
+            Pour ce faire, j'ai recherché différentes solutions, comme par exemple <a href="https://glpi-project.org/fr/" class="href-to-other-page">GLPI</a> ou encore <a href="https://ralph.allegro.tech/" class="href-to-other-page">Ralph</a>.
+            J'ai donc choisi <a class="href-to-other-page" href="./projet-snipe-it.html">Snipe-IT</a>, l'interface étant plus agréable et davantage intuitive. 
+            un logiciel open-source, permettant la gestion d'un parc informatique.
+            Grâce à cet outil, l'entretien d'un inventaire en temps réel ainsi que le suivi du matériel est facilité.
           </p>
         </div>
       </div>
-
       <div id="infodivframe" class="info-projet">
         <div class="show-info-when-mouseover">
-          <h1 class="infodivh1">Extension</h1>
-          <hr class="divhr">
-
-          <p class="infop longp">
-            
-            Lors de la mise en place de <a class="href-to-other-page" href="https://snipeitapp.com/">Snipe-IT</a>, j'ai constaté un problème lors de l'ajouts de quantité à un accessoire.<br>
-            Ceci n'étant pas très intuitif, j'ai décidé de coder une page web qui va permettre de faire cela automatiquement.<br>
-            <br>
-            Il suffira donc de se rendre sur la page web contenant le formulaire, préciser la quantité, l'article, ainsi qu'un numéro de commande ;
-            Ensuite, lors de la validation, le programme va s'occuper d'aller modifier ceci automatiquement sur <a class="href-to-other-page" href="https://snipeitapp.com/">Snipe-IT</a>, <br>
-            Il génère aussi un fichier texte dans lequel il va stocker toutes les données envoyées, pour avoir accès à des logs. <br>
-            Pour réalisé ceci, j'ai utilisé <a class="href-to-other-page" href="https://www.python.org/">Python</a> pour l'automatisation ainsi que <a class="href-to-other-page" href="https://www.php.net/">PHP</a> pour l'exécution du script.
-
-
-          </p>
+          <h1 class="infodivh1"></h1>
+          <p class="infop"></p>
         </div>
       </div>
+      <!--!  INFO  -->
     </div>
 
     <!--!  CONTAINER  -->
     <!--*  TITLE  -->
     <div class="title-of-the-project">
       <a class="title-of-the-project-href" href="./projets.html">
-        <span id="titlespan">SNIPE-IT</span></a
-      >
+        <span id="titlespan">TIMKEN</span>
+      </a>
     </div>
     <!--!  TITLE  -->
 
     <footer><div id="foot"></div></footer>
+
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script type="module" src="../js/main.js"></script>
     <script type="module" src="../js/projets.js"></script>

@@ -14,7 +14,7 @@ const imgs_src = document.querySelectorAll(".imgsrc");
 const href_this = document.querySelector(".href_this");
 const grid_Presentation = document.querySelectorAll(".imgsrc");
 const grid_Vide = document.querySelectorAll(".projet-presentation-grid");
-const path_to_images = "../assets/img/no-backgrounds/";
+const path_to_images = "../../assets/img/no-backgrounds/";
 const imgs_event = [];
 
 imgs_src[0].src = `${path_to_images}sport-addict.png`;
@@ -27,7 +27,7 @@ imgs_src[6].src = `${path_to_images}coming-soon.png`;
 imgs_src[7].src = `${path_to_images}coming-soon.png`;
 imgs_src[8].src = `${path_to_images}coming-soon.png`;
 
-const PathToOuterHTML = `<img class="imgsrc" alt="" title="" src="../assets/img/no-backgrounds/`;                        
+const PathToOuterHTML = `<img class="imgsrc" alt="" title="" src="../../assets/img/no-backgrounds/`;                        
 
 for (let current = 0; current < imgs_src.length; current++) {
   if (grid_Presentation[current].outerHTML == `${PathToOuterHTML}coming-soon.png">`) {

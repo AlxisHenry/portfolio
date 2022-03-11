@@ -1,9 +1,9 @@
 export const path = {
   imgs: {
-    index: "./DEVELOPPEMENT/assets/img/",
-    relat: "../assets/img/no-backgrounds/"
+    index: "./assets/img/",
+    relat: "../../assets/img/no-backgrounds/"
   },
-  html: "./DEVELOPPEMENT/html/",
+  html: "./src/html/",
 };
 
 export const images = {

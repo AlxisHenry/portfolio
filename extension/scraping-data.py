@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.service import Service
 
 # Récupération des données de tous les sujets récupérés dans le ficheir scraping-links.
 
-file = open('scraping-links.txt', 'r')
+file = open('./scraping-data/scraping-links.txt', 'r')
 tab = file.readlines()
 file.close()
 
@@ -43,7 +43,7 @@ for tabs in tab_without_doublons:
     themes = driver.find_element(By.CLASS_NAME, 'simple-list').get_attribute('innerText')
     date = driver.find_element(By.CLASS_NAME, 'light-cover-info').get_attribute('innerText')
     dates_format = driver.find_elements(By.TAG_NAME, 'time')
-    f = open('./scraping-data.txt', 'a', encoding='utf8')
+    f = open('./scraping-data/scraping-data.txt', 'a', encoding='utf8')
     f.write( 'Titre: ' + title + '\n')
     f.write( 'Auteur: ' + author + '\n')
     f.write( 'link: ' + tabs)
