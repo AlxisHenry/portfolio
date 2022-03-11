@@ -26,16 +26,9 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 
     CCI-2021-PORTFOLIO
 
-        DEVELOPPEMENT
-           > assets      
-              > errors
-                 > 400.shtml
-                 > 401.shtml
-                 > 403.shtml
-                 > 404.shtml
-                 > 500.shtml 
-              > ico
-                 > favicon.png
+        > assets      
+           > ico
+              > favicon.png
               > img
                  > no-backgrounds
                     > aleatory.png
@@ -53,6 +46,13 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
                  > show-sport-addict-website.mp4
                  > snipe-it-installation.mp4
                  > timken-installation-gestion-stock.mp4
+        > extension
+           > scrap-data
+              > scraping-data.txt
+              > scraping-links.txt
+           > scraping-data.py
+           > scraping-links.py
+        > src
            > css
               > responsive
                  > index.css
@@ -75,11 +75,6 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
               > index.js
               > main.js
               > projets.js
-           > python
-              > scraping-data.txt
-              > scraping-data.py
-              > scraping-links.py
-              > scraping-links.txt
 
         index.html
         README.md (this)
