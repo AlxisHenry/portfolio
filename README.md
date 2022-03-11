@@ -4,42 +4,27 @@
 
 ## **[Organisation](#organisation-du-projet)**
 
-## **[Couleurs](#couleurs-choisies-et-utilisées)**
-
-## **[Maquettes](#maquettes--design)**
-
 ---
 
 # **Présentation du projet**
 
-Le projet consiste au développement d'un `portfolio` à l'aide de langages basiques (sans frameworks), tels que HTML, CSS et JS. Le code doit être validé par le [W3C Markup Validation Service](https://validator.w3.org/).
+> *La version 1.0.0 de ce projet disponible **[ici](https://github.com/AlxisHenry/CCI-2021-PORTFOLIO/tree/v1.0.0)**, a été réalisée uniquement à l'aide des langages HTML, CSS et Javascript.*
 
-Ce site est accessible de deux façons,
+La suite de projet consiste en l'ajout d'une veille technologique. Cela introduit donc les langages Php et Sql. Cette veille va contenir des articles stockés dans une base de donnée, que l'utilisateur pourra visionner et recherche par mots clés.
 
-En production aux liens suivants: **[https://prod.alexishenry.fr](https://www.alexishenry.fr)**, **[https://prod.about-me.site](https://www.about-me.site)**.
+Pour ce qui est de la récupération des articles, j'ai décidé d'automatiser ceci. Vous retrouverez [ici](https://github.com/AlxisHenry/CCI-2021-PORTFOLIO/tree/v1.0.0/DEVELOPPEMENT/python) les scripts réalisant le scrapping d'articles sur le site [France Inter](https://www.franceinter.fr/).
 
-En développement au lien suivant: **[https://dev.alexishenry.fr](https://alxishenry.github.io/CCI-2021-PORTFOLIO/)**.
+Le site sera accessible au lien suivant : **[https://prod.alexishenry.fr](https://www.alexishenry.fr)**.
+
 
 J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
-Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de domaine sur celui-ci. Il suffit de gérer l'accès et la redirection vers eux grâce à un fichier `.htaccess`.<br><br>
-
-<p align="center">
-<img src="CHARTE GRAPHIQUE\IMAGES\DOMAINS.png">
-</p><br>
-<p align="center">
-<img src="CHARTE GRAPHIQUE\IMAGES\htaccess.png">
-</p>
+Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de domaine sur celui-ci. Il suffit de gérer l'accès et la redirection vers eux grâce à un fichier `.htaccess`.<br>
 
 ---
 
 # **Organisation du projet**
 
     CCI-2021-PORTFOLIO
-
-        CHARTE GRAPHIQUE
-           > EXCALIDRAW
-           > IMAGES
-               > PALETTES DE COULEURS
 
         DEVELOPPEMENT
            > assets      
@@ -90,115 +75,13 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
               > index.js
               > main.js
               > projets.js
+           > python
+              > scraping-data.txt
+              > scraping-data.py
+              > scraping-links.py
+              > scraping-links.txt
 
-        .htaccess
-        404.html (This is for all errors on Github Pages)
         index.html
-        package-lock.json
-        package.json
         README.md (this)
-
----
-
-# **Couleurs choisies et utilisées**
-
-<img src="CHARTE GRAPHIQUE\IMAGES\PALETTES DE COULEURS\AC - Palette 4.jpeg"><br>
-
-Voici donc les `variables` que je vais utilisées dans mon fichier CSS:
-
-<p align="center"><br>
-<img src="CHARTE GRAPHIQUE\IMAGES\root css.png">
-</p>
-
----
-
-# **Maquettes & Design**
-
-J'ai réalisé les maquettes à intégrer sur [`excalidraw`](https://excalidraw.com/).
-Celles-ci sont disponibles en cliquant [ici](https://github.com/AlxisHenry/CCI-2021-PORTFOLIO/tree/main/CHARTE%20GRAPHIQUE/EXCALIDRAW).<br>
-Les maquettes ne possèdent pas de couleurs, ni de cotes précises. Cela se fera au fur et à mesure du développement.
-
-#
-
-> [Page d'accueil](https://alexishenry.fr/)
-
-<img src="CHARTE GRAPHIQUE\IMAGES\Page d'arrivée.png">
-
-La page sera composé de quatre `containers`. <br><br>
-Le `Header` qui comporte les différents menus.<br>
-
-<p align="center">
-<img src="CHARTE GRAPHIQUE\IMAGES\menus.png">
-</p>
-<br>
-
-   - Le `premier icon` permet à l'utilisateur de retourner à la dernière page de son historique.
-   - Le `second icon` permet à l'utilisateur de retourner à [la page d'accueil](https://www.alexishenry.fr/index.html), 
-   - Le `troisième icon` permet l'ouverture du menu de navigation 
-
-<br>
-
-Une première `section` qui contient mon identité.<br><br>
-
-<p align="center">
-<img src="CHARTE GRAPHIQUE\IMAGES\identite.png">
-</p>
-
-<br>
-
-L'icon présent au milieu, permet de renvoyer aléatoirement l'utilisateurs sur un des projets parmis tous ceux présents surle site, et non seulement sur ceux présents sur la page d'accueil.
-
-<br>
-
-Une seconde `section` dans laquelle il y a le contenu principal. <br><br>
-
-<p align="center">
-<img src="CHARTE GRAPHIQUE\IMAGES\contenu.png">
-</p><br>
-
-Le contenu principal contient différentes slides, qui correspondent aux différents projets présentés sur le site.<BR><br>
-Les slides s'affichent ``automatiquement à intervale régulière`` dès le chargement de la page. Cependant l'utilisateur peut toujours naviguer à travers les slides grâce aux bouttons situés en dessous de celles-ci.
-
-<br>
-
-
-Et enfin le `footer`, qui possède une simple animation au passage de la souris.<br><br>
-
-<p align="center">
-<img src="CHARTE GRAPHIQUE\IMAGES\footer.png">
-</p>
-
-Grâce au code JS ci-dessous, la date s'actualisera automatiquement chaque année.
-
-<p align="center">
-<img src="CHARTE GRAPHIQUE\IMAGES\footerjs.png">
-</p>
-
-La condition ci-dessus permet de gérer la redirection vers la page des mentions légales, en fonction de la page sur laquelle est l'utilisateur.
-
-
-> [Menu Déroulant](https://alexishenry.fr/)
-
-<br>
-<img src="CHARTE GRAPHIQUE\IMAGES\Menu déroulant.png" />
-
-Ci-dessus, un aperçu du menu déroulant voulu. <br><br>
-
-Les catégories '_Présentations_', '_Comprendre mon site_' et '_JOIN MY DISCORD_' seront présentes.
-
- Pour ce qui est de la catégorie '_MES PROJETS_', elle peut paraître inutile, vu que tous les projets sont accessibles via la page d'accueil. 
- Cela sera à voir plus tard. Je n'ai pas encore prévu de design pour les pages présentes dans le menu déroulant.
-
-#
-
-> [Page de présentation d'un projet](https://alexishenry.fr/DEVELOPPEMENT/~html/projet-timken.html)
-
-<p align="center">
-<img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 1.png">
-</p>
-
-<p align="center">
-<img src="CHARTE GRAPHIQUE\IMAGES\Page présentation 2.png">
-</p>
 
 ---
