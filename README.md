@@ -8,14 +8,13 @@
 
 # **Présentation du projet**
 
-> *La version 1.0.0 de ce projet disponible **[ici](https://github.com/AlxisHenry/CCI-2021-PORTFOLIO/tree/v1.0.0)**, a été réalisée uniquement à l'aide des langages HTML, CSS et Javascript.*
+> _La version 1.0.0 de ce projet disponible **[ici](https://github.com/AlxisHenry/CCI-2021-PORTFOLIO/tree/v1.0.0)**, a été réalisée uniquement à l'aide des langages HTML, CSS et Javascript._
 
 La suite de projet consiste en l'ajout d'une veille technologique. Cela introduit donc les langages Php et Sql. Cette veille va contenir des articles stockés dans une base de donnée, que l'utilisateur pourra visionner et recherche par mots clés.
 
 Pour ce qui est de la récupération des articles, j'ai décidé d'automatiser ceci. Vous retrouverez [ici](https://github.com/AlxisHenry/CCI-2021-PORTFOLIO/tree/main/DEVELOPPEMENT/python) les scripts réalisant le scrapping d'articles sur le site [France Inter](https://www.franceinter.fr/).
 
 Le site sera accessible au lien suivant : **[https://prod.alexishenry.fr](https://www.alexishenry.fr)**.
-
 
 J'ai choisi d'héberger mon site chez **[LWS](https://www.lws.fr/)**.
 Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de domaine sur celui-ci. Il suffit de gérer l'accès et la redirection vers eux grâce à un fichier `.htaccess`.<br>
@@ -26,7 +25,7 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
 
     CCI-2021-PORTFOLIO
 
-        > assets      
+        > assets
            > ico
               > favicon.png
               > img
@@ -48,8 +47,10 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
                  > timken-installation-gestion-stock.mp4
         > extension
            > scrap-data
-              > scraping-data.txt
+              > create-tables.sql
+              > scraping-data.sql
               > scraping-links.txt
+           > chromedriver.exe
            > scraping-data.py
            > scraping-links.py
         > src
