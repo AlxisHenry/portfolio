@@ -23,7 +23,8 @@ tabs = ['https://www.franceinter.fr/theme/informatique',
         'https://www.franceinter.fr/theme/microsoft',
         'https://www.franceinter.fr/theme/sony',
         'https://www.franceinter.fr/theme/nintendo',
-        'https://www.franceinter.fr/theme/twitter'
+        'https://www.franceinter.fr/theme/twitter',
+        'https://www.franceinter.fr/cinema'
         ]
 
 options = Options()

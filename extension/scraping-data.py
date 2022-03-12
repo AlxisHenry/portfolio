@@ -1,18 +1,13 @@
-from hashlib import new
+from distutils.command.upload import upload
 from time import sleep
-from tokenize import Name
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 
-# Récupération des données de tous les sujets récupérés dans le ficheir scraping-links.
-
-file = open('./scraping-data/scraping-links.txt', 'r')
+file = open('extension\scrap-data\scraping-links.txt', 'r')
 tab = file.readlines()
 file.close()
-
-f = open('./try.txt', 'a')
 
 tab_without_doublons = []
 
@@ -21,7 +16,7 @@ tab_without_doublons.append(tab[0])
 options = Options()
 options.add_argument("start-minimized")
 
-path = Service('./chromedriver.exe')
+path = Service('extension\chromedriver.exe')
 driver = webdriver.Chrome(options = options, service= path)
 
 driver.get(tab_without_doublons[0])
@@ -35,29 +30,36 @@ for i in tab:
 
 for tabs in tab_without_doublons:
     driver.get(tabs )
-    sleep(2.5)
-    title = driver.find_element(By.XPATH, '/html/body/main/div[3]/div/h1').get_attribute('innerHTML')
-    author = driver.find_element(By.CLASS_NAME, 'light-cover-info-authors').get_attribute('innerText')
-    image = driver.find_element(By.XPATH, '/html/body/main/div[4]/div/article/figure/picture/img').get_attribute('src')
-    alt = driver.find_element(By.XPATH, '/html/body/main/div[4]/div/article/figure/picture/img').get_attribute('alt')
-    themes = driver.find_element(By.CLASS_NAME, 'simple-list').get_attribute('innerText')
-    date = driver.find_element(By.CLASS_NAME, 'light-cover-info').get_attribute('innerText')
+    sleep(2)
+    title = driver.find_element(By.XPATH, '/html/body/main/div[3]/div/h1').get_attribute('innerHTML').replace('&nbsp;', ' ').replace('"', '`')
+    author = driver.find_element(By.CLASS_NAME, 'light-cover-info-authors').get_attribute('innerText').replace('"', '`')
+    image = driver.find_element(By.XPATH, '/html/body/main/div[4]/div/article/figure/picture/source').get_attribute('srcset')
+    alt = driver.find_element(By.XPATH, '/html/body/main/div[4]/div/article/figure/picture/img').get_attribute('alt').replace('"', '`')
+    themes = driver.find_element(By.CLASS_NAME, 'simple-list').get_attribute('innerText').replace('"', '`')
+    date = driver.find_element(By.CLASS_NAME, 'light-cover-info').get_attribute('innerText').replace('"', '`')
     dates_format = driver.find_elements(By.TAG_NAME, 'time')
-    f = open('./scraping-data/scraping-data.txt', 'a', encoding='utf8')
-    f.write( 'Titre: ' + title + '\n')
-    f.write( 'Auteur: ' + author + '\n')
-    f.write( 'link: ' + tabs)
-    f.write( "Liens vers l'image: " + image + '\n')
-    f.write( "Alt de l'image: " + alt + '\n')
-    f.write( "Thèmes: " + themes + '\n')
-    f.write( "Date: " + date + '\n')
-    for dates in dates_format:
-        if (dates.get_attribute('datetime') == None):
-            print('Date non présente')
+    f = open('extension\scrap-data\scraping-data.sql', 'a', encoding='utf8')
+    
+    if (image.find('data:image/jpeg;base64,') == -1):
+        f.write('INSERT INTO DataScrapp (title, author, LinkImage, AltImage, Theme, FullDate, UpdateDate, UploadDate, UrlArticle) VALUES ("')
+        f.write(title + '","' + author + '","' + image + '","' + alt + '","' + themes + '","' + date + '","')
+        if (len(dates_format) == 1):
+            for dates in dates_format:  
+                if (dates.get_attribute('datetime') == None):
+                 UpdateDate = 'none'
+                 UploadDate = 'none'
+            else:
+                UpdateDate = 'none'
+                UploadDate = dates.get_attribute('datetime')
+            f.write(UpdateDate + '","' + UploadDate + '","')
         else:
-            f.write( "Date_Format : " + dates.get_attribute('datetime') + '\n')
-    f.write('\n')
-    f.close()
+            for dates in dates_format:
+                 f.write(dates.get_attribute('datetime') + '","')
+        f.write(tabs + '");\n')
+        f.close()
+    else:
+        print('Erreur de lien, non ajouté à la liste')
+
     sleep(1)
 
 driver.close()
