@@ -1,12 +1,25 @@
-CREATE TABLE DataScrapp
+CREATE TABLE Articles
 (
+    identifier INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     title VARCHAR(100),
     author VARCHAR(100),
+	UrlArticle VARCHAR(255)
+);
+CREATE TABLE Images
+(
+    identifier INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     LinkImage VARCHAR(255),
-    AltImage VARCHAR(255),
-    Theme VARCHAR(255),
+    AltImage VARCHAR(255)
+);
+CREATE TABLE Dates
+(
+    identifier INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     FullDate VARCHAR(255),
     UpdateDate VARCHAR(20),
-    UploadDate VARCHAR(20),
-	UrlArticle VARCHAR(255)
-)
+    UploadDate VARCHAR(20)
+);
+CREATE TABLE Themes
+(
+    identifier INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Theme VARCHAR(255)
+);

@@ -30,7 +30,6 @@ for i in tab:
 
 for tabs in tab_without_doublons:
     driver.get(tabs )
-    sleep(2)
     title = driver.find_element(By.XPATH, '/html/body/main/div[3]/div/h1').get_attribute('innerHTML').replace('&nbsp;', ' ').replace('"', '`')
     author = driver.find_element(By.CLASS_NAME, 'light-cover-info-authors').get_attribute('innerText').replace('"', '`')
     image = driver.find_element(By.XPATH, '/html/body/main/div[4]/div/article/figure/picture/source').get_attribute('srcset')
@@ -41,8 +40,9 @@ for tabs in tab_without_doublons:
     f = open('extension\scrap-data\scraping-data.sql', 'a', encoding='utf8')
     
     if (image.find('data:image/jpeg;base64,') == -1):
-        f.write('INSERT INTO DataScrapp (title, author, LinkImage, AltImage, Theme, FullDate, UpdateDate, UploadDate, UrlArticle) VALUES ("')
-        f.write(title + '","' + author + '","' + image + '","' + alt + '","' + themes + '","' + date + '","')
+        f.write('INSERT INTO Articles (title, author, UrlArticle) VALUES ("' + title + '","' + author + '","' + tabs + '");')
+        f.write('INSERT INTO Images (LinkImage, AltImage) VALUES ("' + image + '","' + alt + '");\n')
+        f.write('INSERT INTO Themes (Theme) VALUES ("' + themes + '");\n')
         if (len(dates_format) == 1):
             for dates in dates_format:  
                 if (dates.get_attribute('datetime') == None):
@@ -51,11 +51,12 @@ for tabs in tab_without_doublons:
             else:
                 UpdateDate = 'none'
                 UploadDate = dates.get_attribute('datetime')
-            f.write(UpdateDate + '","' + UploadDate + '","')
+            f.write('INSERT INTO Dates (FullDate, UpdateDate, UploadDate) VALUES ("' + date + '","' + UpdateDate + '","' + UploadDate + '");\n')
         else:
+            f.write('INSERT INTO Dates (UpdateDate, UploadDate, FullDate) VALUES ("')
             for dates in dates_format:
                  f.write(dates.get_attribute('datetime') + '","')
-        f.write(tabs + '");\n')
+            f.write(date + '");\n')
         f.close()
     else:
         print('Erreur de lien, non ajouté à la liste')
