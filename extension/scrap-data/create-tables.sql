@@ -1,25 +1,34 @@
-CREATE TABLE Articles
+DROP DATABASE
+    IF EXISTS scrapping;
+CREATE DATABASE scrapping
+    DEFAULT CHARACTER SET utf8mb4
+    COLLATE utf8mb4_general_ci;
+USE scrapping;
+
+CREATE TABLE IF NOT EXISTS `Articles`
 (
-    identifier INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    title VARCHAR(100),
-    author VARCHAR(100),
-	UrlArticle VARCHAR(255)
+    `identifier` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `title` VARCHAR(100),
+    `author` VARCHAR(100),
+    `introduction` VARCHAR(255),
+	`UrlArticle` VARCHAR(255)
 );
-CREATE TABLE Images
+CREATE TABLE IF NOT EXISTS `Images`
 (
-    identifier INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    LinkImage VARCHAR(255),
-    AltImage VARCHAR(255)
+    `identifier` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `LinkImage` VARCHAR(255),
+    `AltImage` VARCHAR(255)
 );
-CREATE TABLE Dates
+CREATE TABLE IF NOT EXISTS `Dates`
 (
-    identifier INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    FullDate VARCHAR(255),
-    UpdateDate VARCHAR(20),
-    UploadDate VARCHAR(20)
+    `identifier` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `FullDate` VARCHAR(255),
+    `UpdateDate` VARCHAR(20),
+    `UploadDate` VARCHAR(20)
 );
-CREATE TABLE Themes
+CREATE TABLE IF NOT EXISTS `Themes`
 (
-    identifier INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    Theme VARCHAR(255)
+    `identifier` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `Theme` VARCHAR(255),
+    `ThemePrincipal` VARCHAR(255)
 );

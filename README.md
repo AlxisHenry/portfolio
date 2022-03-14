@@ -49,10 +49,15 @@ Ce panel permet l'hébergement de plusieurs sites grâce à l'ajout de nom de do
            > scrap-data
               > create-tables.sql
               > scraping-data.sql
-              > scraping-links.txt
+              > scraping-v-juridique-links.txt
+              > scraping-v-technologique-links.txt
+           > v-juridique
+              > scraping-data-juridique.py
+              > scraping-links-juridique.py
+           > v-technologique
+              > scraping-data-technologique.py
+              > scraping-links-technologique.py
            > chromedriver.exe
-           > scraping-data.py
-           > scraping-links.py
         > src
            > css
               > responsive

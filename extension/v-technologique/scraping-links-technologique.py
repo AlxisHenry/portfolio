@@ -30,7 +30,7 @@ tabs = ['https://www.franceinter.fr/theme/informatique',
 options = Options()
 options.add_argument("start-minimized")
 
-path = Service('./chromedriver.exe')
+path = Service('extension\chromedriver.exe')
 driver = webdriver.Chrome(options = options, service= path)
 
 for tab in tabs:
@@ -40,7 +40,7 @@ for tab in tabs:
     cards = driver.find_elements(By.CLASS_NAME, 'card-text-sub')
 
     for card in cards:
-        f = open('./scraping-data/scraping-links.txt', 'a', encoding='utf8')
+        f = open('extension\scrap-data\scraping-v-technologique-links.txt', 'a', encoding='utf8')
         if (card.get_attribute('href') == None):
             print("NoneType")
         else:

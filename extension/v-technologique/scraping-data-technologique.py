@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 
-file = open('extension\scrap-data\scraping-links.txt', 'r')
+file = open('extension\scrap-data\scraping-v-technologique-links.txt', 'r')
 tab = file.readlines()
 file.close()
 
@@ -42,7 +42,7 @@ for tabs in tab_without_doublons:
     if (image.find('data:image/jpeg;base64,') == -1):
         f.write('INSERT INTO Articles (title, author, UrlArticle) VALUES ("' + title + '","' + author + '","' + tabs + '");')
         f.write('INSERT INTO Images (LinkImage, AltImage) VALUES ("' + image + '","' + alt + '");\n')
-        f.write('INSERT INTO Themes (Theme) VALUES ("' + themes + '");\n')
+        f.write('INSERT INTO Themes (Theme, ThemePrincipal) VALUES ("' + themes + '"," Technologique ");\n')
         if (len(dates_format) == 1):
             for dates in dates_format:  
                 if (dates.get_attribute('datetime') == None):
