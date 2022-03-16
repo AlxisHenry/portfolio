@@ -1,4 +1,3 @@
-from distutils.command.upload import upload
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -50,4 +49,3 @@ for tab in tabs:
 
     f.close()
     driver.quit()
-
