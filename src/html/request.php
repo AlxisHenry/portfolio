@@ -36,7 +36,6 @@ while ($result = $DynamicQuery->fetch_assoc()) {
 	<h1 class="content-article-card title-article"> ' . $result['title'] . ' </h1>
 	<h2 class="content-article-card date-publication"> Publié le ' . utf8_encode($formatDate) . '</h2>
 	<h3 class="content-article-card author-article"> ' . $result['author'] . ' </h3>
-	<input> </input>
 	</div>
 	';
 }
