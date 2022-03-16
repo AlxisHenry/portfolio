@@ -2,10 +2,7 @@
 
 $get_data = $_GET['filtre'];
 
-$dbhost = "localhost";
-$dbuser = "c1798400c_portfolio";
-$dbpass = "root";
-$db = 'c1798400c_scrapping';
+include('../php/database-connexion.php');
 
 $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $db) or die("Connect failed: %s\n"
 	. $conn->error);
@@ -26,16 +23,17 @@ while ($result = $DynamicQuery->fetch_assoc()) {
 	setlocale(LC_TIME, 'fr_FR.utf8', 'fra');
 	if (strpos($result['UploadDate'], ':')) {
 		$timestamp = strtotime($result['UploadDate']);
-		$formatDate = strftime("%d %B %Y", $timestamp);
+		$formatDate = utf8_encode(strftime("%d %B %Y", $timestamp));
 	} else {
 		$formatDate = $result['UploadDate'];
 	}
 	echo '
 	<div class="article-card"> 
 	<img class="content-article-card image-article" src="' . $result['LinkImage'] . '" alt="' . $result['AltImage'] . '"/>
-	<h1 class="content-article-card title-article"> ' . $result['title'] . ' </h1>
-	<h2 class="content-article-card date-publication"> Publié le ' . utf8_encode($formatDate) . '</h2>
+	<h1 class="content-article-card title-article"> ' . $result['title'] . '... </h1>
+	<h2 class="content-article-card date-publication"> Publié le ' . $formatDate . '</h2>
 	<h3 class="content-article-card author-article"> ' . $result['author'] . ' </h3>
+    <a href="' . $result['UrlArticle'] . '"><div class="content-article-card button-href-artcie"> Voir ' . "l'article" . ' </div></a>
 	</div>
 	';
 }
