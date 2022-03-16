@@ -12,10 +12,10 @@ $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $db) or die("Connect failed: %s\
 $mysqli->set_charset('utf8');
 
 $sql_request = 'SELECT *
-FROM `articles`
-INNER JOIN `dates` ON `articles`.identifier = `dates`.identifier
-INNER JOIN `images` ON `dates`.identifier = `images`.identifier
-INNER JOIN `themes` ON `images`.identifier = `themes`.identifier
+FROM `Articles`
+INNER JOIN `Dates` ON `Articles`.identifier = `Dates`.identifier
+INNER JOIN `Images` ON `Dates`.identifier = `Images`.identifier
+INNER JOIN `Themes` ON `Images`.identifier = `Themes`.identifier
 WHERE `title` LIKE "%' . $get_data . '%";
 ';
 
