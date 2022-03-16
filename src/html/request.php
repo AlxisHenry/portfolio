@@ -3,9 +3,9 @@
 $get_data = $_GET['filtre'];
 
 $dbhost = "localhost";
-$dbuser = "root";
+$dbuser = "c1798400c_portfolio";
 $dbpass = "root";
-$db = 'scrapping';
+$db = 'c1798400c_scrapping';
 
 $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $db) or die("Connect failed: %s\n"
 	. $conn->error);
