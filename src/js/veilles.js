@@ -1,22 +1,21 @@
 $(".research-veille-technologique").keyup(function () {
   var DynamicResearch = $(".research-veille-technologique").val();
-  var liste = $(".resultat");
-
+  var cards = $(".cards");
   if ($(".research-veille-technologique").val().length < 2) {
     return false;
   } else {
-    SendResearch(DynamicResearch, liste);
+    SendResearch(DynamicResearch, cards);
   }
 });
 
 $(".research-veille-technologique").keydown(function () {
   if ($(".research-veille-technologique").val().length < 5) {
-    $(".resultat").html("").show();
+    $(".cards").html("").show();
   }
 });
 
 function SendResearch(value, dom) {
-  var param = "filtre=" + value;
+  var param = "user_research=" + value;
   $.ajax({
     type: "GET",
     url: "request.php",
