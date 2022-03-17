@@ -706,7 +706,7 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   left: 10%;
 }
 
-body {
+.body-veille {
   overflow: scroll;
 }
 
@@ -714,8 +714,7 @@ body {
   background-color: white;
   width: 250px;
   height: 300px;
-  margin-right: 25px;
-  margin-top: 25px;
+  margin-top: 60px;
   text-align: center;
   box-shadow: 5px 5px 15px 5px #000000;
 }
@@ -743,13 +742,21 @@ body {
   border-top: 2px solid #32a1ce;
 }
 
-.cards {
-  margin-top: 60px;
+.contain-cards {
   width: 100%;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cards {
+  margin-top: 50px;
+  width: 80%;
+  display: flex;
+  align-self: center;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .button-href-article {
