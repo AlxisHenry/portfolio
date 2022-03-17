@@ -647,7 +647,6 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
   color: wheat;
 }
 
-
 .title-of-the-project-href {
   color: var(--iconColor);
   text-decoration: none;
@@ -699,6 +698,87 @@ header div.header-menu_header-buttons .header-nav ul li ul li a:hover {
 /*! ----------------------------- MENTIONS ------------------------------- */
 /** ----------------------------- VEILLE ------------------------------- */
 
+.research-veille-technologique {
+  width: 15%;
+  height: 30px;
+  position: absolute;
+  top: 12px;
+  left: 10%;
+}
 
+body {
+  overflow: scroll;
+}
+
+.article-card {
+  background-color: white;
+  width: 250px;
+  height: 300px;
+  margin-right: 25px;
+  margin-top: 25px;
+  text-align: center;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.image-article {
+  width: 100%;
+  height: 150px;
+}
+
+.title-article {
+  font-size: 15px;
+  color: black;
+  font-family: var(--poiret);
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.under-image {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid #32a1ce;
+}
+
+.cards {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-href-article {
+  width: 100px;
+  display: block;
+  border: solid 1px transparent;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  color: white;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 5px;
+}
+
+.href-to-article-page {
+  text-decoration: none;
+}
+
+.date-publication {
+  color: black;
+  font-size: 12px;
+  font-family: var(--poiret);
+  margin-bottom: 15px;
+}
 
 /*! ----------------------------- VEILLE ------------------------------- */
