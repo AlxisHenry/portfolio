@@ -14,7 +14,7 @@
 <body class="body-veille">
   <header>
     <div class="header-menu_header-buttons">
-      <nav class="header-nav">
+      <nav class="header-nav veille-nav-responsive">
         <ul id="nav" class="drop">
           <li class="menuhover">
             <i class="menuhover fas fa-chevron-circle-down" title="Menu"></i>
@@ -48,8 +48,9 @@
     </div>
   </header>
 
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="text" name="" id="" class="research-veille-technologique" />
+  <div class="contain-research-veille-technologique">
+    <input type="text" name="" id="" class="research-veille-technologique" />
+  </div>
   <div class="contain-cards">
     <div class="cards">
 
@@ -66,11 +67,11 @@
 
 
       $sql_request = 'SELECT *
-FROM `Articles`
-INNER JOIN `Dates` ON `Articles`.identifier = `Dates`.identifier
-INNER JOIN `Images` ON `Dates`.identifier = `Images`.identifier
-INNER JOIN `Themes` ON `Images`.identifier = `Themes`.identifier
-ORDER BY `Articles`.identifier DESC';
+      FROM `Articles`
+      INNER JOIN `Dates` ON `Articles`.identifier = `Dates`.identifier
+      INNER JOIN `Images` ON `Dates`.identifier = `Images`.identifier
+      INNER JOIN `Themes` ON `Images`.identifier = `Themes`.identifier
+      ORDER BY `Articles`.identifier DESC';
 
       $DynamicQuery = $pdo_connect->query($sql_request);
       $i = 0;
@@ -86,17 +87,17 @@ ORDER BY `Articles`.identifier DESC';
           $datetime = $result['UploadDate'];
         }
         echo '
-	<div class="article-card article-nb-' . $result['identifier'] . ' card-nb-' . $i++ . '"> 
-	<img class="content-article-card image-article" src="' . $result['LinkImage'] . '" alt="' . $result['AltImage'] . '"/>
-	<div class="content-article-card under-image">
-	<h1 class="content-article-card title-article"> ' . $result['title'] . '... </h1>
-	<h2 class="content-article-card date-publication"> Publié le <time datetime="' . $datetime . '">' . $formatDate . '</time></h2>
-    <a class="content-artcile-card href-to-article-page" href="' . $result['UrlArticle'] . '">
-	<div class="content-article-card button-href-article ' . $result['identifier'] . '"> Voir ' . "l'article" . ' </div>
-	</a>
-	</div>
-	</div>
-	';
+            <div class="article-card article-nb-' . $result['identifier'] . ' card-nb-' . $i++ . '"> 
+            <img class="content-article-card image-article" src="' . $result['LinkImage'] . '" alt="' . $result['AltImage'] . '"/>
+            <div class="content-article-card under-image">
+            <h1 class="content-article-card title-article"> ' . $result['title'] . '... </h1>
+            <h2 class="content-article-card date-publication"> Publié le <time datetime="' . $datetime . '">' . $formatDate . '</time></h2>
+              <a class="content-artcile-card href-to-article-page" href="' . $result['UrlArticle'] . '">
+            <div class="content-article-card button-href-article ' . $result['identifier'] . '"> Voir ' . "l'article" . ' </div>
+            </a>
+            </div>
+            </div>
+            ';
       }
       ?>
 
