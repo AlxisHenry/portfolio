@@ -20,8 +20,11 @@ FROM `Articles`
 INNER JOIN `Dates` ON `Articles`.identifier = `Dates`.identifier
 INNER JOIN `Images` ON `Dates`.identifier = `Images`.identifier
 INNER JOIN `Themes` ON `Images`.identifier = `Themes`.identifier
-WHERE `title` LIKE "%' . $get_data . '%";
-';
+WHERE `title` LIKE "%' . $get_data . '%"
+OR `Dates`.FullDate LIKE "%' . $get_data . '%"
+OR `Articles`.introduction LIKE "%' . $get_data . '%"
+OR `Articles`.author LIKE "%' . $get_data . '%"
+ORDER BY `Articles`.identifier DESC';
 
 $DynamicQuery = $pdo_connect->query($sql_request);
 
