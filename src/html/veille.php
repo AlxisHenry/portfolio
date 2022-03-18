@@ -49,7 +49,7 @@
   </header>
 
   <div class="contain-research-veille-technologique">
-    <input type="text" name="" id="" class="research-veille-technologique" />
+    <input type="text" placeholder="Rechercher un article..." name="" id="" class="research-veille-technologique" />
   </div>
   <div class="contain-cards">
     <div class="cards">
