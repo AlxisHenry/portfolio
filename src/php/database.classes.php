@@ -1,5 +1,5 @@
 <?php
 $dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "root";
+$dbuser = "alexis";
+$dbpass = "alexis";
 $db = 'scrapping';

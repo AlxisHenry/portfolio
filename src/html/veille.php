@@ -79,8 +79,7 @@
         date_default_timezone_set('Europe/Paris');
         setlocale(LC_TIME, 'fr_FR.utf8', 'fra');
         if (strpos($result['UploadDate'], ':')) {
-          $timestamp = strtotime($result['UploadDate']);
-          $formatDate = utf8_encode(strftime("%d %B %Y", $timestamp));
+          $formatDate = str_replace('-', "/", substr($result['UploadDate'], 0, strpos($result['UploadDate'], 'T')));
           $datetime = $result['UploadDate'];
         } else {
           $formatDate = $result['UploadDate'];
