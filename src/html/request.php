@@ -1,9 +1,5 @@
 <?php
 
-spl_autoload_register(function ($class_name) {
-	include '../php/' . $class_name . '.classes.php';
-});
-
 $get_data = $_GET['user_research'];
 
 include('../php/database.classes.php');
