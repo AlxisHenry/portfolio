@@ -8,9 +8,9 @@ USE scrapping;
 CREATE TABLE IF NOT EXISTS `Articles`
 (
     `identifier` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    `title` VARCHAR(100),
-    `author` VARCHAR(100),
-    `introduction` VARCHAR(255),
+    `title` VARCHAR(200),
+    `author` VARCHAR(200),
+    `introduction` VARCHAR(500),
 	`UrlArticle` VARCHAR(255)
 );
 CREATE TABLE IF NOT EXISTS `Images`
