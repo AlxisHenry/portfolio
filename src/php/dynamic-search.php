@@ -20,7 +20,7 @@ WHERE `title` LIKE "%' . $get_data . '%"
 OR `Dates`.FullDate LIKE "%' . $get_data . '%"
 OR `Articles`.introduction LIKE "%' . $get_data . '%"
 OR `Articles`.author LIKE "%' . $get_data . '%"
-ORDER BY `Articles`.identifier DESC';
+ORDER BY `Articles`.identifier DESC LIMIT 4, 200';
 
 $DynamicQuery = $pdo_connect->query($sql_request);
 

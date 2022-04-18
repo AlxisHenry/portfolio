@@ -703,6 +703,7 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
 }
 
 .research-veille-technologique {
+  margin-top: 900px;
   width: 250px;
   height: 30px;
   position: relative;
@@ -796,8 +797,36 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
 .date-publication {
   color: black;
   font-size: 12px;
-  font-family: var(--poiret);
   margin-bottom: 15px;
+}
+
+.favorites-cards {
+  margin-top: 10px;
+  width: 80%;
+  height: 450px;
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.favorites-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+._favorites {
+  color: white;
+  width: auto;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
 /*! ----------------------------- VEILLE ------------------------------- */

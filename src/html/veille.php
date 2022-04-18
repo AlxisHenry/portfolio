@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include('../php/configs/database.login.php');
+
+try {
+    $pdo_connect = new PDO('mysql:host=' . $dbhost . ';dbname=' . $db . ';charset=utf8', $dbuser, $dbpass);
+} catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+?>
 
 <head>
   <meta charset="UTF-8" />
@@ -52,25 +61,53 @@
     <input type="text" placeholder="Rechercher un article..." name="" id="" class="research-veille-technologique" />
   </div>
   <div class="contain-cards">
+
+      <div class="favorites-title"><h1 class="_favorites">Articles qui pourraient vous intéresser...</h1></div>
+
+      <div class="favorites-cards">
+          <?php
+          $favorites_request= 'SELECT *
+          FROM `Articles`
+          INNER JOIN `Dates` ON `Articles`.identifier = `Dates`.identifier
+          INNER JOIN `Images` ON `Dates`.identifier = `Images`.identifier
+          INNER JOIN `Themes` ON `Images`.identifier = `Themes`.identifier
+          ORDER BY `Articles`.identifier DESC LIMIT 4';
+          $Favorites = $pdo_connect->query($favorites_request);
+          while ($result = $Favorites->fetch()) {
+              date_default_timezone_set('Europe/Paris');
+              setlocale(LC_TIME, 'fr_FR.utf8', 'fra');
+              if (strpos($result['UploadDate'], ':')) {
+                  $formatDate = str_replace('-', "/", substr($result['UploadDate'], 0, strpos($result['UploadDate'], 'T')));
+                  $datetime = $result['UploadDate'];
+              } else {
+                  $formatDate = $result['UploadDate'];
+                  $datetime = $result['UploadDate'];
+              }
+              echo '
+            <div class="article-card article-nb-' . $result['identifier'] . ' card-nb-' . $i++ . '"> 
+            <img class="content-article-card image-article" src="' . $result['LinkImage'] . '" alt="' . $result['AltImage'] . '"/>
+            <div class="content-article-card under-image">
+            <h1 class="content-article-card title-article"> ' . $result['title'] . '... </h1>
+            <h2 class="content-article-card date-publication"> Publié le <time datetime="' . $datetime . '">' . $formatDate . '</time></h2>
+              <a class="content-artcile-card href-to-article-page" href="' . $result['UrlArticle'] . '">
+            <div class="content-article-card button-href-article ' . $result['identifier'] . '"> Voir ' . "l'article" . ' </div>
+            </a>
+            </div>
+            </div>
+            ';
+          }
+          ?>
+      </div>
+
     <div class="cards">
 
       <?php
-
-      include('../php/configs/database.login.php');
-
-      try {
-        $pdo_connect = new PDO('mysql:host=' . $dbhost . ';dbname=' . $db . ';charset=utf8', $dbuser, $dbpass);
-      } catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-      }
-
       $sql_request = 'SELECT *
-      FROM `Articles`
-      INNER JOIN `Dates` ON `Articles`.identifier = `Dates`.identifier
-      INNER JOIN `Images` ON `Dates`.identifier = `Images`.identifier
-      INNER JOIN `Themes` ON `Images`.identifier = `Themes`.identifier
-      ORDER BY `Articles`.identifier DESC';
-
+          FROM `Articles`
+          INNER JOIN `Dates` ON `Articles`.identifier = `Dates`.identifier
+          INNER JOIN `Images` ON `Dates`.identifier = `Images`.identifier
+          INNER JOIN `Themes` ON `Images`.identifier = `Themes`.identifier
+          ORDER BY `Articles`.identifier DESC LIMIT 4, 200';
       $DynamicQuery = $pdo_connect->query($sql_request);
       $i = 0;
       while ($result = $DynamicQuery->fetch()) {
@@ -100,11 +137,6 @@
 
     </div>
   </div>
-
-
-
-
-
 
   <footer>
     <div id="foot"></div>
