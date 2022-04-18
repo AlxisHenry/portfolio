@@ -57,9 +57,6 @@ try {
     </div>
   </header>
 
-  <div class="contain-research-veille-technologique">
-    <input type="text" placeholder="Rechercher un article..." name="" id="" class="research-veille-technologique" />
-  </div>
   <div class="contain-cards">
 
       <div class="favorites-title"><h1 class="_favorites">Articles qui pourraient vous intéresser...</h1></div>
@@ -98,7 +95,9 @@ try {
           }
           ?>
       </div>
-
+      <div class="contain-research-veille-technologique">
+          <input type="text" placeholder="Rechercher un article..." name="" id="" class="research-veille-technologique" />
+      </div>
     <div class="cards">
 
       <?php
