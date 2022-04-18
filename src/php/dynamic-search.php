@@ -2,7 +2,7 @@
 
 $get_data = $_GET['user_research'];
 
-include('../php/database.classes.php');
+include('configs/database.login.php');
 
 try {
 	$pdo_connect = new PDO('mysql:host=' . $dbhost . ';dbname=' . $db . ';charset=utf8', $dbuser, $dbpass);

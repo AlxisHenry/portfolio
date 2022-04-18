@@ -8,10 +8,10 @@ function SendResearch(value, dom) {
   var param = "user_research=" + value;
   $.ajax({
     type: "GET",
-    url: "request.php",
+    url: "../php/dynamic-search.php",
     data: param,
-    success: function (server_response) {
-      dom.html(server_response).show();
+    success: function (search_result) {
+      dom.html(search_result).show();
     },
     error: function () {
       console.log("Erreur");
