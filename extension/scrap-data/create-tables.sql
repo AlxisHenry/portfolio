@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `Articles`
     `identifier` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     `title` VARCHAR(200),
     `author` VARCHAR(200),
-    `introduction` VARCHAR(500),
+    `introduction` VARCHAR(2000),
 	`UrlArticle` VARCHAR(255)
 );
 CREATE TABLE IF NOT EXISTS `Images`
