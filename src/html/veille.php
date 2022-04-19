@@ -48,10 +48,9 @@
   </header>
 
   <div class="more-articles">
-      <i class="fa-solid fa-plus"></i>
-      <i class="fa-solid fa-xmark hidden"></i>
+      <i class="fa-solid fa-plus" title="Rechercher d'autres articles"></i>
+      <i class="fa-solid fa-xmark hidden" title="Revenir aux favoris"></i>
   </div>
-  <!-- <i class="fa-solid fa-plus"></i> Afficher -->
 
   <div class="contain-cards">
 
@@ -91,9 +90,7 @@
             ';
           }
           ?>
-
       </div>
-
 
       <div class="contain-research-veille-technologique">
           <input type="text" placeholder="Rechercher un article..." name="" id="" class="research-veille-technologique" />
