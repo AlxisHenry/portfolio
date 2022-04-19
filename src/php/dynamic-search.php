@@ -14,7 +14,7 @@ WHERE `title` LIKE "%' . $get_data . '%"
 OR `Dates`.FullDate LIKE "%' . $get_data . '%"
 OR `Articles`.introduction LIKE "%' . $get_data . '%"
 OR `Articles`.author LIKE "%' . $get_data . '%"
-ORDER BY `Articles`.identifier DESC LIMIT 4, 200';
+ORDER BY `Articles`.identifier';
 
 $DynamicResearchElements = Connection()->prepare($GET_LIKE_Element);
 $DynamicResearchElements->execute();
@@ -34,7 +34,7 @@ while ($result = $DynamicResearchElements->fetch()) {
 	}
 	echo '
 	<div class="article-card article-nb-' . $result['identifier'] . ' card-nb-' . $i++ . '"> 
-	<img class="content-article-card image-article" src="' . $result['LinkImage'] . '" alt="' . $result['AltImage'] . '"/>
+	<img loading="lazy" class="content-article-card image-article" src="' . $result['LinkImage'] . '" alt="' . $result['AltImage'] . '"/>
 	<div class="content-article-card under-image">
 	<h1 class="content-article-card title-article"> ' . $result['title'] . '... </h1>
 	<h2 class="content-article-card date-publication"> Publié le <time datetime="' . $datetime . '">' . $formatDate . '</time></h2>
@@ -46,4 +46,4 @@ while ($result = $DynamicResearchElements->fetch()) {
 	';
 }
 
-$DynamicQuery->closeCursor();
+$DynamicResearchElements->closeCursor();

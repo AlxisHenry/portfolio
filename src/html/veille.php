@@ -59,7 +59,7 @@
           INNER JOIN `Dates` ON `Articles`.identifier = `Dates`.identifier
           INNER JOIN `Images` ON `Dates`.identifier = `Images`.identifier
           INNER JOIN `Themes` ON `Images`.identifier = `Themes`.identifier
-          ORDER BY `Articles`.identifier DESC LIMIT 10';
+          ORDER BY RAND() LIMIT 10';
           $GET_Favorites = Connection()->prepare($Favorites_Request);
           $GET_Favorites->execute();
           while ($result = $GET_Favorites->fetch()) {
@@ -98,7 +98,7 @@
           INNER JOIN `Dates` ON `Articles`.identifier = `Dates`.identifier
           INNER JOIN `Images` ON `Dates`.identifier = `Images`.identifier
           INNER JOIN `Themes` ON `Images`.identifier = `Themes`.identifier
-          ORDER BY `Articles`.identifier DESC LIMIT 4, 300';
+          ORDER BY RAND()';
       $DynamicQuery = Connection()->query($GET_ALL_Articles);
       $i = 0;
       while ($result = $DynamicQuery->fetch()) {
@@ -113,7 +113,7 @@
         }
         echo '
             <div class="article-card article-nb-' . $result['identifier'] . ' card-nb-' . $i++ . '"> 
-            <img class="content-article-card image-article" src="' . $result['LinkImage'] . '" alt="' . $result['AltImage'] . '"/>
+            <img loading="lazy" class="content-article-card image-article" src="' . $result['LinkImage'] . '" alt="' . $result['AltImage'] . '"/>
             <div class="content-article-card under-image">
             <h1 class="content-article-card title-article"> ' . $result['title'] . '... </h1>
             <h2 class="content-article-card date-publication"> Publié le <time datetime="' . $datetime . '">' . $formatDate . '</time></h2>
