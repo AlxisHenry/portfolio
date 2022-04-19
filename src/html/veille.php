@@ -6,8 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Veille Technologique - Alexis Henry</title>
-  <script src="https://kit.fontawesome.com/ac4dc0897b.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>  <link rel="stylesheet" href="../css/index.css" />
   <!-- <link rel="stylesheet" href="../css/responsive/index.css" /> -->
 </head>
 
@@ -48,6 +47,10 @@
     </div>
   </header>
 
+  <div class="more-articles"><i class="fa-solid fa-plus"></i></div>
+  <!-- <i class="fa-solid fa-xmark"></i> Cacher -->
+  <!-- <i class="fa-solid fa-plus"></i> Afficher -->
+
   <div class="contain-cards">
 
       <div class="favorites-title"><h1 class="_favorites">Articles qui pourraient vous intéresser...</h1></div>
@@ -86,10 +89,14 @@
             ';
           }
           ?>
+
       </div>
+
+
       <div class="contain-research-veille-technologique">
           <input type="text" placeholder="Rechercher un article..." name="" id="" class="research-veille-technologique" />
       </div>
+
     <div class="cards">
 
       <?php

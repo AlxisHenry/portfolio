@@ -20,6 +20,29 @@ function SendResearch(value, element) {
   });
 }
 
+document.querySelector('.more-articles .fa-plus').addEventListener('click', (e) => {
+
+  // Animation de l'icone +
+  e.target.classList.add('fa-plus-animation');
+  setTimeout(() => {
+    e.target.classList.remove('fa-plus-animation');
+  }, 1000)
+
+  // Animation des favoris
+  document.querySelector('.favorites-title').classList.add('favorites-card-hidden-transition');
+  document.querySelector('.favorites-cards').classList.add('favorites-card-hidden-transition');
+  document.querySelector('.cards').classList.add('all-articles-show-transition');
+  document.querySelector('.contain-research-veille-technologique').classList.add('contain-research-veille-technologique-animation');
+
+  setTimeout(() => {
+    document.querySelector('.favorites-title').classList.add('hidden');
+    document.querySelector('.favorites-cards').classList.add('hidden');
+  }, 3000)
+
+
+
+})
+
 /*
 function SendResearch(value, element) {
   var search_value = "user_research=" + value;
