@@ -20,25 +20,70 @@ function SendResearch(value, element) {
   });
 }
 
+const FavoritesTitle = document.querySelector('.favorites-title');
+const FavoritesCards = document.querySelector('.favorites-cards');
+const Cards = document.querySelector('.cards');
+const CardsResearch = document.querySelector('.contain-research-veille-technologique');
+
 document.querySelector('.more-articles .fa-plus').addEventListener('click', (e) => {
 
   // Animation de l'icone +
   e.target.classList.add('fa-plus-animation');
   setTimeout(() => {
     e.target.classList.remove('fa-plus-animation');
+    e.target.classList.add('hidden');
+    e.target.parentNode.children[1].classList.remove('hidden')
   }, 1000)
 
-  // Animation des favoris
-  document.querySelector('.favorites-title').classList.add('favorites-card-hidden-transition');
-  document.querySelector('.favorites-cards').classList.add('favorites-card-hidden-transition');
-  document.querySelector('.cards').classList.add('all-articles-show-transition');
-  document.querySelector('.contain-research-veille-technologique').classList.add('contain-research-veille-technologique-animation');
+  // Déplacement des favoris
+  FavoritesTitle.classList.add('favorites-card-hidden-transition');
+  FavoritesCards.classList.add('favorites-card-hidden-transition');
 
+  // Déplacement des articles
+  Cards.classList.remove('hidden');
+  CardsResearch.classList.remove('hidden');
+  Cards.classList.add('all-articles-show-transition');
+  CardsResearch.classList.add('contain-research-veille-technologique-animation');
+
+  // Suppression des favoris
   setTimeout(() => {
-    document.querySelector('.favorites-title').classList.add('hidden');
-    document.querySelector('.favorites-cards').classList.add('hidden');
-  }, 3000)
+    FavoritesTitle.classList.add('hidden');
+    FavoritesCards.classList.add('hidden');
+    FavoritesTitle.classList.remove('favorites-card-up-transition');
+    FavoritesCards.classList.remove('favorites-card-up-transition');
+    FavoritesTitle.classList.remove('favorites-card-hidden-transition')
+    FavoritesCards.classList.remove('favorites-card-hidden-transition')
+    }, 1500)
+})
 
+document.querySelector('.more-articles .fa-xmark').addEventListener('click', (e) => {
+
+  e.target.classList.add('fa-plus-animation');
+  setTimeout(() => {
+    e.target.classList.remove('fa-plus-animation');
+    e.target.classList.add('hidden');
+    e.target.parentNode.children[0].classList.remove('hidden')
+  }, 1000)
+
+  // Déplacement des articles
+  Cards.classList.add('all-articles-down-transition');
+  CardsResearch.classList.add('contain-research-veille-technologique-animation-reverse');
+
+  // Déplacement des favoris
+  FavoritesTitle.classList.remove('hidden');
+  FavoritesCards.classList.remove('hidden');
+  FavoritesTitle.classList.add('favorites-card-up-transition');
+  FavoritesCards.classList.add('favorites-card-up-transition');
+
+  // Suppression des articles
+  setTimeout(() => {
+    Cards.classList.add('hidden');
+    CardsResearch.classList.add('hidden')
+    Cards.classList.remove('all-articles-show-transition');
+    CardsResearch.classList.remove('contain-research-veille-technologique-animation');
+    Cards.classList.remove('all-articles-down-transition');
+    CardsResearch.classList.remove('contain-research-veille-technologique-animation-reverse');
+  }, 1500)
 
 
 })

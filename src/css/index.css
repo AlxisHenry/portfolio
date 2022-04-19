@@ -727,7 +727,7 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
   margin-right: 5px;
   background-color: white;
   width: 250px;
-  height: 300px;
+  height: 325px;
   margin-top: 60px;
   text-align: center;
   box-shadow: 5px 5px 15px 5px #000000;
@@ -792,6 +792,10 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
   margin-bottom: 5px;
 }
 
+.button-href-article:hover {
+  filter: saturate(1.5);
+}
+
 .href-to-article-page {
   text-decoration: none;
 }
@@ -806,7 +810,7 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
   margin-top: 10px;
   width: 80%;
   max-width: 1500px;
-  height: 750px;
+  height: 800px;
   display: flex;
   align-self: center;
   justify-content: space-around;
@@ -846,31 +850,20 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
   box-shadow: 1px 1px black;
 }
 
-.more-articles .fa-plus {
+.more-articles .fa-plus, .more-articles .fa-xmark{
   font-size: 40px;
   color: var(--color2);
   opacity: 1;
 }
 
-.more-articles .fa-plus:hover {
+.more-articles .fa-plus:hover, .more-articles .fa-xmark:hover {
   color: orange;
   cursor: pointer;
 }
 
+/* Icons */
 .fa-plus-animation {
   animation: 1s turn forwards;
-}
-
-.favorites-card-hidden-transition {
-  animation: 1s hideFavorites forwards;
-}
-
-.all-articles-show-transition {
-  animation: 1s showAllArticles forwards;
-}
-
-.contain-research-veille-technologique-animation {
-  animation: 1s showResearch forwards;
 }
 
 @keyframes turn {
@@ -878,8 +871,26 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(180deg);
+    transform: rotate(225deg);
   }
+}
+
+/* Favorites */
+.favorites-card-up-transition {
+  animation: 1s upFavorites forwards;
+}
+
+@keyframes upFavorites {
+  0% {
+    margin-top: -40000px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.favorites-card-hidden-transition {
+  animation: 1s hideFavorites forwards;
 }
 
 @keyframes hideFavorites {
@@ -891,6 +902,11 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
   }
 }
 
+/* Articles & Searchbar */
+.all-articles-show-transition {
+  animation: 1s showAllArticles forwards;
+}
+
 @keyframes showAllArticles {
   0% {
     margin-top: 40000px;
@@ -900,11 +916,41 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
   }
 }
 
+.all-articles-down-transition {
+  animation: 1s downAllArticles forwards;
+}
+
+@keyframes downAllArticles {
+  0% {
+    margin-top: 50px;
+  }
+  100% {
+    margin-top: 40000px;
+  }
+}
+
+.contain-research-veille-technologique-animation {
+  animation: 1s showResearch forwards;
+}
+
 @keyframes showResearch {
   0% {
     margin-top: 39960px;
   } 100% {
+      margin-top: 40px;
+    }
+}
+
+.contain-research-veille-technologique-animation-reverse {
+  animation: 1s hideResearch forwards;
+}
+
+@keyframes hideResearch {
+  0% {
     margin-top: 40px;
+  }
+  100% {
+    margin-top: 39960px;
   }
 }
 

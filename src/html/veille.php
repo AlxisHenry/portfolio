@@ -47,8 +47,10 @@
     </div>
   </header>
 
-  <div class="more-articles"><i class="fa-solid fa-plus"></i></div>
-  <!-- <i class="fa-solid fa-xmark"></i> Cacher -->
+  <div class="more-articles">
+      <i class="fa-solid fa-plus"></i>
+      <i class="fa-solid fa-xmark hidden"></i>
+  </div>
   <!-- <i class="fa-solid fa-plus"></i> Afficher -->
 
   <div class="contain-cards">
