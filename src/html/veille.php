@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-include('../php/configs/database.login.php');
-
-try {
-    $pdo_connect = new PDO('mysql:host=' . $dbhost . ';dbname=' . $db . ';charset=utf8', $dbuser, $dbpass);
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
-?>
-
+<?php include('../php/configs/database.login.php'); ?>
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -63,14 +54,15 @@ try {
 
       <div class="favorites-cards">
           <?php
-          $favorites_request= 'SELECT *
+          $Favorites_Request = 'SELECT *
           FROM `Articles`
           INNER JOIN `Dates` ON `Articles`.identifier = `Dates`.identifier
           INNER JOIN `Images` ON `Dates`.identifier = `Images`.identifier
           INNER JOIN `Themes` ON `Images`.identifier = `Themes`.identifier
-          ORDER BY `Articles`.identifier DESC LIMIT 4';
-          $Favorites = $pdo_connect->query($favorites_request);
-          while ($result = $Favorites->fetch()) {
+          ORDER BY `Articles`.identifier DESC LIMIT 10';
+          $GET_Favorites = Connection()->prepare($Favorites_Request);
+          $GET_Favorites->execute();
+          while ($result = $GET_Favorites->fetch()) {
               date_default_timezone_set('Europe/Paris');
               setlocale(LC_TIME, 'fr_FR.utf8', 'fra');
               if (strpos($result['UploadDate'], ':')) {
@@ -101,13 +93,13 @@ try {
     <div class="cards">
 
       <?php
-      $sql_request = 'SELECT *
+      $GET_ALL_Articles = 'SELECT *
           FROM `Articles`
           INNER JOIN `Dates` ON `Articles`.identifier = `Dates`.identifier
           INNER JOIN `Images` ON `Dates`.identifier = `Images`.identifier
           INNER JOIN `Themes` ON `Images`.identifier = `Themes`.identifier
-          ORDER BY `Articles`.identifier DESC LIMIT 4, 200';
-      $DynamicQuery = $pdo_connect->query($sql_request);
+          ORDER BY `Articles`.identifier DESC LIMIT 4, 300';
+      $DynamicQuery = Connection()->query($GET_ALL_Articles);
       $i = 0;
       while ($result = $DynamicQuery->fetch()) {
         date_default_timezone_set('Europe/Paris');
@@ -145,5 +137,4 @@ try {
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="../js/veilles.js"></script>
 </body>
-
 </html>

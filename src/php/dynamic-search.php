@@ -4,14 +4,8 @@ $get_data = $_GET['user_research'];
 
 include('configs/database.login.php');
 
-try {
-	$pdo_connect = new PDO('mysql:host=' . $dbhost . ';dbname=' . $db . ';charset=utf8', $dbuser, $dbpass);
-} catch (Exception $e) {
-	die('Erreur : ' . $e->getMessage());
-}
-
 // todo: Améliorer la requête (avec l'alt de l'image et la date complète)
-$sql_request = 'SELECT *
+$GET_LIKE_Element = 'SELECT *
 FROM `Articles`
 INNER JOIN `Dates` ON `Articles`.identifier = `Dates`.identifier
 INNER JOIN `Images` ON `Dates`.identifier = `Images`.identifier
@@ -22,11 +16,12 @@ OR `Articles`.introduction LIKE "%' . $get_data . '%"
 OR `Articles`.author LIKE "%' . $get_data . '%"
 ORDER BY `Articles`.identifier DESC LIMIT 4, 200';
 
-$DynamicQuery = $pdo_connect->query($sql_request);
+$DynamicResearchElements = Connection()->prepare($GET_LIKE_Element);
+$DynamicResearchElements->execute();
 
 $i = 0;
 
-while ($result = $DynamicQuery->fetch()) {
+while ($result = $DynamicResearchElements->fetch()) {
 	date_default_timezone_set('Europe/Paris');
 	setlocale(LC_TIME, 'fr_FR.utf8', 'fra');
 	if (strpos($result['UploadDate'], ':')) {

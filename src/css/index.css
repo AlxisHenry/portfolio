@@ -723,6 +723,8 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
 }
 
 .article-card {
+  margin-left: 5px;
+  margin-right: 5px;
   background-color: white;
   width: 250px;
   height: 300px;
@@ -768,6 +770,7 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
   align-self: center;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 1500px;
   justify-content: space-around;
 }
 
@@ -802,12 +805,13 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
 .favorites-cards {
   margin-top: 10px;
   width: 80%;
-  height: 450px;
+  max-width: 1500px;
+  height: 750px;
   display: flex;
   align-self: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .favorites-title {
@@ -815,7 +819,7 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: -10px;
 }
 
 ._favorites {
@@ -826,6 +830,12 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
   display: flex;
   text-align: center;
   align-items: center;
+}
+
+@media screen and (max-width: 920px) {
+  .favorites-title {
+    margin-top: 40px;
+  }
 }
 
 /*! ----------------------------- VEILLE ------------------------------- */
