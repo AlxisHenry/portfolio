@@ -1,7 +1,0 @@
-# Ignore php file who contains database connection
-
-src/php/configs
-src/php/configs/database.login.php
-
-# Ignore .idea
-.idea
