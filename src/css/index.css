@@ -823,6 +823,7 @@ header div.header-menu_header-buttons .veille-nav-responsive ul li ul li a {
   justify-content: space-around;
   flex-wrap: wrap;
   overflow: hidden;
+  max-height: 800px;
 }
 
 .favorites-title {

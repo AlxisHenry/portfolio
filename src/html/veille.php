@@ -92,11 +92,11 @@
           ?>
       </div>
 
-      <div class="contain-research-veille-technologique">
+      <div class="contain-research-veille-technologique hidden">
           <input type="text" placeholder="Rechercher un article..." name="" id="" class="research-veille-technologique" />
       </div>
 
-    <div class="cards">
+    <div class="cards hidden">
 
       <?php
       $GET_ALL_Articles = 'SELECT *

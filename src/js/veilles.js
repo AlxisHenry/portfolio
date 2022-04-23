@@ -53,7 +53,7 @@ document.querySelector('.more-articles .fa-plus').addEventListener('click', (e) 
     FavoritesCards.classList.remove('favorites-card-up-transition');
     FavoritesTitle.classList.remove('favorites-card-hidden-transition')
     FavoritesCards.classList.remove('favorites-card-hidden-transition')
-    }, 1500)
+    }, 200)
 })
 
 document.querySelector('.more-articles .fa-xmark').addEventListener('click', (e) => {
@@ -83,7 +83,7 @@ document.querySelector('.more-articles .fa-xmark').addEventListener('click', (e)
     CardsResearch.classList.remove('contain-research-veille-technologique-animation');
     Cards.classList.remove('all-articles-down-transition');
     CardsResearch.classList.remove('contain-research-veille-technologique-animation-reverse');
-  }, 1500)
+  }, 200)
 
 
 })
