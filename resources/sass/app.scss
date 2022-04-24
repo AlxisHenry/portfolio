@@ -1,4 +1,27 @@
-$base-color: #c6538c;
+@import "KNACSS/abstracts/variables-sass";
+@import "KNACSS/abstracts/mixins-sass";
+
+@import "KNACSS/base/reset-base";
+@import "KNACSS/base/reset-accessibility";
+@import "KNACSS/base/reset-forms";
+@import "KNACSS/base/reset-print";
+@import "KNACSS/base/layout";
+
+// UTILITAIRES
+@import "KNACSS/utils/utils-global";
+@import "KNACSS/utils/utils-font-sizes";
+@import "KNACSS/utils/utils-spacers";
+@import "KNACSS/utils/grillade";
+
+// COMPOSANTS
+// @import "components/button";
+// @import "components/burger";
+// @import "components/checkbox";
+// @import "components/radio";
+// @import "components/select";
+// @import "components/quote";
+
+$base-color: #8c647f;
 
 body {
     background: $base-color;
