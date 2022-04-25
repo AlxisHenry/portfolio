@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Mon Portfolio</title>
+    <title>Portfolio</title>
 
     <link rel="stylesheet" href="{{ url('css/app.css') }}">
     <link rel="icon" href="{{ url('assets/images/favicon.png') }}" />
 
 </head>
 <body>
+
+<button class="burger-button" type="button" role="button" aria-label="open/close navigation"><i></i></button>
 
 
 
