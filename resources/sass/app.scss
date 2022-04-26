@@ -7,17 +7,92 @@ $base-color: rgba(32, 51, 46, 0.98);
 
 body {
     background: $base-color;
+    overflow: hidden;
 }
 
 /* Navigation */
 
 $burger-space: 50px;
+$nav-none-spacing: -1000px;
 
 .burger-button {
+    z-index: 5;
     position: absolute;
     top: $burger-space;
     right: $burger-space;
+
 }
 
+.menu-navigation {
+    width: 400px;
+    height: 100vh;
+    right: $nav-none-spacing;
+    background-color: black;
+
+    z-index: 4;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .nav-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100px;
+
+        .nav-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 32px;
+            color: white;
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .menu-navigation {
+        width: 100%;
+    }
+}
+
+.nav-up-animation {
+    animation: showNav 1.2s forwards;
+}
+
+.nav-down-animation {
+    animation: byeNav 1.2s forwards;
+}
+
+@keyframes showNav {
+    0% {
+        right: $nav-none-spacing;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes byeNav {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: $nav-none-spacing;
+    }
+}
+
+// Global
+
+.hidden {
+    display: none;
+}
 
 
