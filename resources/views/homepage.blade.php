@@ -14,14 +14,22 @@
 
 <button class="burger-button" type="button" role="button" aria-label="open/close navigation"><i></i></button>
 
-<nav class="burger-element menu-navigation">
 
-    <div class="nav-content"><span class="nav-title">Qui suis-je ?</span></div>
-    <div class="nav-content"><span class="nav-title">Mes projets</span></div>
-    <div class="nav-content"><span class="nav-title">Mes projets2</span></div>
-    <div class="nav-content"><span class="nav-title">Mes projets3</span></div>
+    <div class="burger-element primary-navbar">
 
-</nav>
+        <div class="nav-content"><span class="nav-title">Qui suis-je ?</span></div>
+        <div class="nav-content"><span class="nav-title">Mes projets</span></div>
+
+    </div>
+
+    <div class="burger-element secondary-navbar">
+
+        <div class="nav-content"><span class="nav-title">Mes projets2</span></div>
+        <div class="nav-content"><span class="nav-title">Mes projets3</span></div>
+
+    </div>
+
+
 
 
 </body>

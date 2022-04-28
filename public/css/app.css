@@ -6037,79 +6037,128 @@ body {
   right: 50px;
 }
 
-.menu-navigation {
-  width: 400px;
-  height: 100vh;
-  right: -1000px;
-  background-color: black;
+.burger-element {
   z-index: 4;
   position: absolute;
+  width: 400px;
+  height: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   flex-direction: column;
-  align-items: center;
+  background-color: black;
 }
-.menu-navigation .nav-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100px;
-}
-.menu-navigation .nav-content .nav-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.burger-element .nav-content .nav-title {
   font-size: 32px;
   color: white;
 }
 
+.primary-navbar {
+  right: 0;
+  top: 0;
+  margin-top: -1000px;
+}
+.primary-navbar .nav-content:first-child {
+  margin-top: 100px;
+}
+
+.secondary-navbar {
+  right: 0;
+  bottom: 0;
+  margin-bottom: -1000px;
+}
+.secondary-navbar .nav-content:last-child {
+  margin-bottom: 100px;
+}
+
 @media screen and (max-width: 600px) {
-  .menu-navigation {
+  .burger-element {
     width: 100%;
   }
 }
-.nav-up-animation {
-  -webkit-animation: showNav 1.2s forwards;
-          animation: showNav 1.2s forwards;
+.primaryAnimation {
+  -webkit-animation: primaryAnimation 1.2s forwards;
+          animation: primaryAnimation 1.2s forwards;
 }
 
-.nav-down-animation {
-  -webkit-animation: byeNav 1.2s forwards;
-          animation: byeNav 1.2s forwards;
+.secondaryAnimation {
+  -webkit-animation: secondaryAnimation 1.2s forwards;
+          animation: secondaryAnimation 1.2s forwards;
 }
 
-@-webkit-keyframes showNav {
+.primaryReverseAnimation {
+  -webkit-animation: primaryReverseAnimation 1.2s forwards;
+          animation: primaryReverseAnimation 1.2s forwards;
+}
+
+.secondaryReverseAnimation {
+  -webkit-animation: secondaryReverseAnimation 1.2s forwards;
+          animation: secondaryReverseAnimation 1.2s forwards;
+}
+
+@-webkit-keyframes primaryAnimation {
   0% {
-    right: -1000px;
+    margin-top: -1000px;
   }
   100% {
-    right: 0;
+    margin-top: 0;
   }
 }
 
-@keyframes showNav {
+@keyframes primaryAnimation {
   0% {
-    right: -1000px;
+    margin-top: -1000px;
   }
   100% {
-    right: 0;
+    margin-top: 0;
   }
 }
-@-webkit-keyframes byeNav {
+@-webkit-keyframes secondaryAnimation {
   0% {
-    right: 0;
+    margin-bottom: -1000px;
   }
   100% {
-    right: -1000px;
+    margin-bottom: 0;
   }
 }
-@keyframes byeNav {
+@keyframes secondaryAnimation {
   0% {
-    right: 0;
+    margin-bottom: -1000px;
   }
   100% {
-    right: -1000px;
+    margin-bottom: 0;
+  }
+}
+@-webkit-keyframes primaryReverseAnimation {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -1000px;
+  }
+}
+@keyframes primaryReverseAnimation {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -1000px;
+  }
+}
+@-webkit-keyframes secondaryReverseAnimation {
+  0% {
+    margin-bottom: 0;
+  }
+  100% {
+    margin-bottom: -1000px;
+  }
+}
+@keyframes secondaryReverseAnimation {
+  0% {
+    margin-bottom: 0;
+  }
+  100% {
+    margin-bottom: -1000px;
   }
 }
 .hidden {

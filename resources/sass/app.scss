@@ -20,72 +20,102 @@ $nav-none-spacing: -1000px;
     position: absolute;
     top: $burger-space;
     right: $burger-space;
-
 }
 
-.menu-navigation {
-    width: 400px;
-    height: 100vh;
-    right: $nav-none-spacing;
-    background-color: black;
-
+.burger-element {
     z-index: 4;
     position: absolute;
+    width: 400px;
+    height: 50%;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
+    background-color: black;
 
     .nav-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 100%;
-        height: 100px;
 
         .nav-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
             font-size: 32px;
             color: white;
-
         }
     }
 
 }
 
+.primary-navbar {
+    right: 0;
+    top: 0;
+    margin-top: $nav-none-spacing;
+
+    .nav-content:first-child {
+        margin-top: 100px;
+    }
+}
+
+.secondary-navbar {
+    right: 0;
+    bottom: 0;
+    margin-bottom:$nav-none-spacing;
+
+    .nav-content:last-child {
+        margin-bottom: 100px;
+    }
+}
+
 @media screen and (max-width: 600px) {
-    .menu-navigation {
+    .burger-element {
         width: 100%;
     }
 }
 
-.nav-up-animation {
-    animation: showNav 1.2s forwards;
+.primaryAnimation {
+    animation: primaryAnimation 1.2s forwards;
 }
 
-.nav-down-animation {
-    animation: byeNav 1.2s forwards;
+.secondaryAnimation {
+    animation: secondaryAnimation 1.2s forwards;
 }
 
-@keyframes showNav {
+.primaryReverseAnimation {
+    animation: primaryReverseAnimation 1.2s forwards;
+}
+
+.secondaryReverseAnimation {
+    animation: secondaryReverseAnimation 1.2s forwards;
+}
+
+@keyframes primaryAnimation {
     0% {
-        right: $nav-none-spacing;
+        margin-top: $nav-none-spacing;
     }
     100% {
-        right: 0;
+        margin-top: 0;
+    }
+}
+@keyframes secondaryAnimation {
+    0% {
+        margin-bottom: $nav-none-spacing;
+    }
+    100% {
+        margin-bottom: 0;
     }
 }
 
-@keyframes byeNav {
+@keyframes primaryReverseAnimation {
     0% {
-        right: 0;
+        margin-top: 0;
     }
     100% {
-        right: $nav-none-spacing;
+        margin-top: $nav-none-spacing;
+    }
+}
+@keyframes secondaryReverseAnimation {
+    0% {
+        margin-bottom: 0;
+    }
+    100% {
+        margin-bottom: $nav-none-spacing;
     }
 }
 

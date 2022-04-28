@@ -4,18 +4,23 @@ console.log('App js')
 function toggleNav() {
 
 const button = document.querySelector('.burger-button')
-const element = document.querySelector('.menu-navigation')
+const primaryElement = document.querySelector('.primary-navbar')
+const secondaryElement = document.querySelector('.secondary-navbar')
 
 if (button) {
         button.addEventListener('click', (e) => {
             button.classList.toggle('is-active')
-            if (element){
-                if (!element.classList.contains('nav-up-animation')) {
-                    element.classList.remove('nav-down-animation')
-                    element.classList.add('nav-up-animation')
+            if (primaryElement && secondaryElement){
+                if ((!primaryElement.classList.contains('primaryAnimation')) && (!secondaryElement.classList.contains('secondaryAnimation'))) {
+                    primaryElement.classList.remove('primaryReverseAnimation')
+                    secondaryElement.classList.remove('secondaryReverseAnimation')
+                    primaryElement.classList.add('primaryAnimation')
+                    secondaryElement.classList.add('secondaryAnimation')
                 } else {
-                    element.classList.remove('nav-up-animation')
-                    element.classList.add('nav-down-animation')
+                    primaryElement.classList.add('primaryReverseAnimation')
+                    secondaryElement.classList.add('secondaryReverseAnimation')
+                    primaryElement.classList.remove('primaryAnimation')
+                    secondaryElement.classList.remove('secondaryAnimation')
                 }
             }
             e.preventDefault()
