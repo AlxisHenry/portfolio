@@ -6077,23 +6077,23 @@ body {
   }
 }
 .primaryAnimation {
-  -webkit-animation: primaryAnimation 1.2s forwards;
-          animation: primaryAnimation 1.2s forwards;
+  -webkit-animation: primaryAnimation 0.5s forwards;
+          animation: primaryAnimation 0.5s forwards;
 }
 
 .secondaryAnimation {
-  -webkit-animation: secondaryAnimation 1.2s forwards;
-          animation: secondaryAnimation 1.2s forwards;
+  -webkit-animation: secondaryAnimation 0.5s forwards;
+          animation: secondaryAnimation 0.5s forwards;
 }
 
 .primaryReverseAnimation {
-  -webkit-animation: primaryReverseAnimation 1.2s forwards;
-          animation: primaryReverseAnimation 1.2s forwards;
+  -webkit-animation: primaryReverseAnimation 0.5s forwards;
+          animation: primaryReverseAnimation 0.5s forwards;
 }
 
 .secondaryReverseAnimation {
-  -webkit-animation: secondaryReverseAnimation 1.2s forwards;
-          animation: secondaryReverseAnimation 1.2s forwards;
+  -webkit-animation: secondaryReverseAnimation 0.5s forwards;
+          animation: secondaryReverseAnimation 0.5s forwards;
 }
 
 @-webkit-keyframes primaryAnimation {

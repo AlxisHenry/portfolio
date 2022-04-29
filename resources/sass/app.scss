@@ -70,19 +70,19 @@ $nav-none-spacing: -1000px;
 }
 
 .primaryAnimation {
-    animation: primaryAnimation 1.2s forwards;
+    animation: primaryAnimation 0.5s forwards;
 }
 
 .secondaryAnimation {
-    animation: secondaryAnimation 1.2s forwards;
+    animation: secondaryAnimation 0.5s forwards;
 }
 
 .primaryReverseAnimation {
-    animation: primaryReverseAnimation 1.2s forwards;
+    animation: primaryReverseAnimation 0.5s forwards;
 }
 
 .secondaryReverseAnimation {
-    animation: secondaryReverseAnimation 1.2s forwards;
+    animation: secondaryReverseAnimation 0.5s forwards;
 }
 
 @keyframes primaryAnimation {
