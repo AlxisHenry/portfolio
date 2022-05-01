@@ -3,10 +3,15 @@
 @import "KNACSS/__utils__";
 @import "KNACSS/__components__";
 
-$base-color: rgba(32, 51, 46, 0.98);
+$__background__: rgba(32, 51, 46, 0.98);
+
+* {
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    background: $base-color;
+    background: $__background__;
     overflow: hidden;
 }
 
@@ -15,74 +20,83 @@ body {
 $burger-space: 50px;
 $nav-none-spacing: -1000px;
 
-.burger-button {
-    z-index: 5;
-    position: absolute;
-    top: $burger-space;
-    right: $burger-space;
-}
+.__navbar__ {
 
-.burger-element {
-    z-index: 4;
-    position: absolute;
-    width: 400px;
-    height: 50%;
+    width: 100%;
+    height: 120px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    background-color: black;
+    justify-content: flex-end;
 
-    .nav-content {
+    .burger-button {
+        z-index: 5;
+        margin-right: 50px;
+    }
 
-        .nav-title {
-            font-size: 32px;
-            color: white;
+    .burger-element {
+        z-index: 4;
+        position: absolute;
+        width: 400px;
+        height: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+
+        .nav-content {
+
+            .nav-title {
+                font-size: 32px;
+                color: white;
+            }
+        }
+
+    }
+
+    .primary-navbar {
+        right: 0;
+        top: 0;
+        margin-top: $nav-none-spacing;
+
+        .nav-content:first-child {
+            margin-top: 100px;
         }
     }
 
-}
+    .secondary-navbar {
+        right: 0;
+        bottom: 0;
+        margin-bottom: $nav-none-spacing;
 
-.primary-navbar {
-    right: 0;
-    top: 0;
-    margin-top: $nav-none-spacing;
-
-    .nav-content:first-child {
-        margin-top: 100px;
+        .nav-content:last-child {
+            margin-bottom: 100px;
+        }
     }
-}
 
-.secondary-navbar {
-    right: 0;
-    bottom: 0;
-    margin-bottom:$nav-none-spacing;
-
-    .nav-content:last-child {
-        margin-bottom: 100px;
+    .primaryAnimation {
+        animation: primaryAnimation 0.5s forwards;
     }
+
+    .secondaryAnimation {
+        animation: secondaryAnimation 0.5s forwards;
+    }
+
+    .primaryReverseAnimation {
+        animation: primaryReverseAnimation 0.5s forwards;
+    }
+
+    .secondaryReverseAnimation {
+        animation: secondaryReverseAnimation 0.5s forwards;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
-    .burger-element {
-        width: 100%;
+    .__navbar__ {
+        .burger-element {
+            width: 100%;
+        }
     }
-}
-
-.primaryAnimation {
-    animation: primaryAnimation 0.5s forwards;
-}
-
-.secondaryAnimation {
-    animation: secondaryAnimation 0.5s forwards;
-}
-
-.primaryReverseAnimation {
-    animation: primaryReverseAnimation 0.5s forwards;
-}
-
-.secondaryReverseAnimation {
-    animation: secondaryReverseAnimation 0.5s forwards;
 }
 
 @keyframes primaryAnimation {
