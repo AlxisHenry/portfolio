@@ -3,7 +3,7 @@
 @import "KNACSS/__utils__";
 @import "KNACSS/__components__";
 
-$__background__: rgba(32, 51, 46, 0.98);
+$__background__: rgba(109, 255, 217, 0.98);
 
 * {
     margin: 0;
@@ -19,11 +19,12 @@ body {
 
 $burger-space: 50px;
 $nav-none-spacing: -1000px;
+$burger__background: #383838;
 
 .__navbar__ {
 
     width: 100%;
-    height: 120px;
+    height: 115px;
     display: flex;
     justify-content: flex-end;
 
@@ -41,7 +42,8 @@ $nav-none-spacing: -1000px;
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
-        background-color: black;
+
+        background-color: $burger__background;
 
         .nav-content {
 
