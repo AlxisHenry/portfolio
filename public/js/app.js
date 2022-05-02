@@ -7,8 +7,6 @@
   \*****************************/
 /***/ (() => {
 
-console.log('App js');
-
 function toggleNav() {
   var button = document.querySelector('.burger-button');
   var primaryElement = document.querySelector('.primary-navbar');
