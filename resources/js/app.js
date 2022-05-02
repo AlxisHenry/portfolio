@@ -1,5 +1,3 @@
-console.log('App js')
-
 function toggleNav() {
 
 const button = document.querySelector('.burger-button')
