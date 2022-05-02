@@ -3,10 +3,12 @@
 @import "KNACSS/__utils__";
 @import "KNACSS/__components__";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@200&display=swap');
 
 $__background__color: #F6EFE7;
 $__navbar_text: #595959;
 $poppins: 'Poppins', sans-serif;
+$iconsolata: 'Inconsolata', monospace;
 
 * {
     margin: 0;
@@ -55,16 +57,17 @@ $burger__background: #99BFAD;
             .nav-content {
 
                 .nav-title {
-                    font-size: 32px;
+                    font-size: 40px;
                     color: $__navbar_text;
                     letter-spacing: 1px;
                     text-transform: uppercase;
                     font-weight: lighter;
+                    font-family: $iconsolata;
                 }
 
                 .nav-active {
                     color: black;
-                    font-weight: 500;
+                    font-weight: revert;
                 }
 
             }
@@ -132,7 +135,7 @@ footer {
 }
 
 footer .footer-text {
-    color: white;
+    color: #8C8C8C;
     width: auto;
     height: auto;
     font-size: 14px;
