@@ -5982,7 +5982,7 @@ a[href^="#"]::after {
   width: 2.2rem;
   padding: 0;
   background-color: transparent;
-  background-image: linear-gradient(#f6f6f6, #f6f6f6);
+  background-image: linear-gradient(#595959, #595959);
   background-position: center;
   background-repeat: no-repeat;
   background-origin: content-box;
@@ -5996,7 +5996,7 @@ a[href^="#"]::after {
 .burger-button > *::after {
   content: "";
   height: 3px;
-  background: #f6f6f6;
+  background: #595959;
   transition: 0.25s;
   transition-property: transform, top;
   will-change: transform, top;
@@ -6031,7 +6031,7 @@ a[href^="#"]::after {
 }
 
 body {
-  background: rgba(32, 51, 46, 0.98);
+  background: #F6EFE7;
   overflow: hidden;
 }
 
@@ -6040,58 +6040,49 @@ body {
   width: 100%;
   height: 115px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .__navbar__ .burger-button {
   z-index: 5;
-  margin-right: 50px;
+  margin-left: 50px;
 }
 .__navbar__ .burger-element {
   z-index: 4;
   position: absolute;
   width: 400px;
-  height: 50%;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  background-color: #383838;
+  background-color: #99BFAD;
+}
+.__navbar__ .burger-element a {
+  text-decoration: none;
 }
 .__navbar__ .burger-element a .nav-content .nav-title {
   font-size: 32px;
-  color: white;
+  color: #595959;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+.__navbar__ .burger-element a .nav-content .nav-active {
+  color: black;
+  font-weight: 500;
 }
 .__navbar__ .primary-navbar {
-  right: 0;
+  left: 0;
   top: 0;
-  margin-top: -1000px;
-}
-.__navbar__ .primary-navbar a .nav-content:first-child {
-  margin-top: 100px;
-}
-.__navbar__ .secondary-navbar {
-  right: 0;
-  bottom: 0;
-  margin-bottom: -1000px;
-}
-.__navbar__ .secondary-navbar a .nav-content:first-child {
-  margin-bottom: -120px;
+  margin-left: -1000px;
 }
 .__navbar__ .primaryAnimation {
   -webkit-animation: primaryAnimation 0.5s forwards;
           animation: primaryAnimation 0.5s forwards;
 }
-.__navbar__ .secondaryAnimation {
-  -webkit-animation: secondaryAnimation 0.5s forwards;
-          animation: secondaryAnimation 0.5s forwards;
-}
 .__navbar__ .primaryReverseAnimation {
   -webkit-animation: primaryReverseAnimation 0.5s forwards;
           animation: primaryReverseAnimation 0.5s forwards;
-}
-.__navbar__ .secondaryReverseAnimation {
-  -webkit-animation: secondaryReverseAnimation 0.5s forwards;
-          animation: secondaryReverseAnimation 0.5s forwards;
 }
 
 @media screen and (max-width: 600px) {
@@ -6101,66 +6092,34 @@ body {
 }
 @-webkit-keyframes primaryAnimation {
   0% {
-    margin-top: -1000px;
+    margin-left: -1000px;
   }
   100% {
-    margin-top: 0;
+    margin-left: 0;
   }
 }
 @keyframes primaryAnimation {
   0% {
-    margin-top: -1000px;
+    margin-left: -1000px;
   }
   100% {
-    margin-top: 0;
-  }
-}
-@-webkit-keyframes secondaryAnimation {
-  0% {
-    margin-bottom: -1000px;
-  }
-  100% {
-    margin-bottom: 0;
-  }
-}
-@keyframes secondaryAnimation {
-  0% {
-    margin-bottom: -1000px;
-  }
-  100% {
-    margin-bottom: 0;
+    margin-left: 0;
   }
 }
 @-webkit-keyframes primaryReverseAnimation {
   0% {
-    margin-top: 0;
+    margin-left: 0;
   }
   100% {
-    margin-top: -1000px;
+    margin-left: -1000px;
   }
 }
 @keyframes primaryReverseAnimation {
   0% {
-    margin-top: 0;
+    margin-left: 0;
   }
   100% {
-    margin-top: -1000px;
-  }
-}
-@-webkit-keyframes secondaryReverseAnimation {
-  0% {
-    margin-bottom: 0;
-  }
-  100% {
-    margin-bottom: -1000px;
-  }
-}
-@keyframes secondaryReverseAnimation {
-  0% {
-    margin-bottom: 0;
-  }
-  100% {
-    margin-bottom: -1000px;
+    margin-left: -1000px;
   }
 }
 footer {

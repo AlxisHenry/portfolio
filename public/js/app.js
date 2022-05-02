@@ -10,23 +10,18 @@
 function toggleNav() {
   var button = document.querySelector('.burger-button');
   var primaryElement = document.querySelector('.primary-navbar');
-  var secondaryElement = document.querySelector('.secondary-navbar');
 
   if (button) {
     button.addEventListener('click', function (e) {
       button.classList.toggle('is-active');
 
-      if (primaryElement && secondaryElement) {
-        if (!primaryElement.classList.contains('primaryAnimation') && !secondaryElement.classList.contains('secondaryAnimation')) {
+      if (primaryElement) {
+        if (!primaryElement.classList.contains('primaryAnimation')) {
           primaryElement.classList.remove('primaryReverseAnimation');
-          secondaryElement.classList.remove('secondaryReverseAnimation');
           primaryElement.classList.add('primaryAnimation');
-          secondaryElement.classList.add('secondaryAnimation');
         } else {
           primaryElement.classList.add('primaryReverseAnimation');
-          secondaryElement.classList.add('secondaryReverseAnimation');
           primaryElement.classList.remove('primaryAnimation');
-          secondaryElement.classList.remove('secondaryAnimation');
         }
       }
 
