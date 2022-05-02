@@ -14,21 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', function () {
-    return view('homepage', ['title' => 'Homepage - Henry Alexis']);
+    return view('homepage', ['title' => 'Homepage - Henry Alexis', 'navbar' => 'home']);
 });
 
 Route::redirect('/', 'home');
 
-Route::view('/about', 'about', ['title' => 'About me - Henry Alexis']);
+Route::view('/about', 'homepage', ['title' => 'About me - Henry Alexis', 'navbar' => 'about']);
 
-Route::redirect('/aboutme', 'about');
+Route::view('/projects', 'homepage', ['title' => 'Projects - Henry Alexis', 'navbar' => 'projects']);
 
-Route::view('/projects', 'projects', ['title' => 'Projects - Henry Alexis']);
-
-Route::redirect('/myprojects', 'projects');
-
-Route::view('/articles', 'veille', ['title' => 'Articles? - Henry Alexis']);
-
-Route::view('/veille', 'articles', ['title' => 'Articles? - Henry Alexis']);
-
-Route::view('/veilletechnologique', 'articles', ['title' => 'Articles? - Henry Alexis']);
+Route::view('/board', 'homepage', ['title' => 'Articles? - Henry Alexis', 'navbar' => 'board']);

@@ -4,7 +4,8 @@
 @import "KNACSS/__components__";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-$__background__: rgba(32, 51, 46, 0.98);
+$__background__color: #F6EFE7;
+$__navbar_text: #595959;
 $poppins: 'Poppins', sans-serif;
 
 * {
@@ -13,7 +14,7 @@ $poppins: 'Poppins', sans-serif;
 }
 
 body {
-    background: $__background__;
+    background: $__background__color;
     overflow: hidden;
 }
 
@@ -21,27 +22,27 @@ body {
 
 $burger-space: 50px;
 $nav-none-spacing: -1000px;
-$burger__background: #383838;
+$burger__background: #99BFAD;
 
 .__navbar__ {
 
     width: 100%;
     height: 115px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     .burger-button {
         z-index: 5;
-        margin-right: 50px;
+        margin-left: 50px;
     }
 
     .burger-element {
         z-index: 4;
         position: absolute;
         width: 400px;
-        height: 50%;
+        height: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
 
@@ -49,57 +50,46 @@ $burger__background: #383838;
 
         a {
 
+            text-decoration: none;
+
             .nav-content {
 
                 .nav-title {
                     font-size: 32px;
-                    color: white;
+                    color: $__navbar_text;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    font-weight: lighter;
                 }
+
+                .nav-active {
+                    color: black;
+                    font-weight: 500;
+                }
+
             }
         }
 
     }
 
     .primary-navbar {
-        right: 0;
+        left: 0;
         top: 0;
-        margin-top: $nav-none-spacing;
+        margin-left: $nav-none-spacing;
 
         a {
-            .nav-content:first-child {
-                margin-top: 100px;
-            }
+
         }
 
     }
 
-    .secondary-navbar {
-        right: 0;
-        bottom: 0;
-        margin-bottom: $nav-none-spacing;
-
-        a {
-            .nav-content:first-child {
-                margin-bottom: -120px;
-            }
-        }
-
-    }
 
     .primaryAnimation {
         animation: primaryAnimation 0.5s forwards;
     }
 
-    .secondaryAnimation {
-        animation: secondaryAnimation 0.5s forwards;
-    }
-
     .primaryReverseAnimation {
         animation: primaryReverseAnimation 0.5s forwards;
-    }
-
-    .secondaryReverseAnimation {
-        animation: secondaryReverseAnimation 0.5s forwards;
     }
 
 }
@@ -114,37 +104,22 @@ $burger__background: #383838;
 
 @keyframes primaryAnimation {
     0% {
-        margin-top: $nav-none-spacing;
+        margin-left: $nav-none-spacing;
     }
     100% {
-        margin-top: 0;
-    }
-}
-@keyframes secondaryAnimation {
-    0% {
-        margin-bottom: $nav-none-spacing;
-    }
-    100% {
-        margin-bottom: 0;
+        margin-left: 0;
     }
 }
 
 @keyframes primaryReverseAnimation {
     0% {
-        margin-top: 0;
+        margin-left: 0;
     }
     100% {
-        margin-top: $nav-none-spacing;
+        margin-left: $nav-none-spacing;
     }
 }
-@keyframes secondaryReverseAnimation {
-    0% {
-        margin-bottom: 0;
-    }
-    100% {
-        margin-bottom: $nav-none-spacing;
-    }
-}
+
 
 footer {
     position: absolute;

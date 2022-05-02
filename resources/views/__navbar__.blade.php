@@ -4,15 +4,29 @@
 
     <div class="burger-element primary-navbar">
 
-        <a href="/home"> <div class="nav-content"><span class="nav-title">Home</span></div> </a>
-        <a href="/projects"> <div class="nav-content"><span class="nav-title">Projects</span></div> </a>
+        <a href="/home">
+            <div class="nav-content">
+                <span class="nav-title {{ $navbar === 'home' ? 'nav-active' : '' }}">Home</span>
+            </div>
+        </a>
 
-    </div>
+        <a href="/projects">
+            <div class="nav-content">
+                <span class="nav-title {{ $navbar === 'projects' ? 'nav-active' : '' }}">Projects</span>
+            </div>
+        </a>
 
-    <div class="burger-element secondary-navbar">
+        <a href="/board">
+            <div class="nav-content">
+                <span class="nav-title {{ $navbar === 'board' ? 'nav-active' : '' }}">Board</span>
+            </div>
+        </a>
 
-        <a href="/articles"> <div class="nav-content"><span class="nav-title">Veille</span></div> </a>
-        <a href="/about"> <div class="nav-content"><span class="nav-title">About me</span></div> </a>
+        <a href="/about">
+            <div class="nav-content">
+                <span class="nav-title {{ $navbar === 'about' ? 'nav-active' : '' }}">About me</span>
+            </div>
+        </a>
 
     </div>
 
