@@ -6039,6 +6039,7 @@ a[href^="#"]::after {
 body {
   background: #F6EFE7;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 /* END - Globals */
@@ -6065,6 +6066,8 @@ body {
   background-color: #99BFAD;
   left: 0;
   top: 0;
+  bottom: 0;
+  right: 0;
   margin-left: -1000px;
 }
 .__navbar__ .burger-element .nav-active .nav-content .nav-title {
@@ -6182,6 +6185,10 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
+  .__navbar__ .burger-button {
+    margin-left: 20px;
+    margin-top: -40px;
+  }
   .__navbar__ .burger-element {
     width: 100%;
   }
@@ -6361,6 +6368,10 @@ footer .footer-text {
   }
   .__homepage__presentation__ .__presentation__myself__ .name {
     margin-top: 0;
+    font-size: 26px;
+  }
+  .__homepage__presentation__ .__presentation__myself__ .language .language-icon {
+    width: 1.9rem;
   }
 }
 /* END - Home */

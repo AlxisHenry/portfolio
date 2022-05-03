@@ -23,6 +23,7 @@ $_family_iconsolata: 'Inconsolata', monospace;
 body {
     background: $__backgroundColor__;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 /* END - Globals */
@@ -56,6 +57,8 @@ $__navbarBackgroundColor__: #99BFAD;
         background-color: $__navbarBackgroundColor__;
         left: 0;
         top: 0;
+        bottom: 0;
+        right: 0;
         margin-left: $__hiddenNavbar__;
 
         .nav-active .nav-content .nav-title {
@@ -159,6 +162,10 @@ $__navbarBackgroundColor__: #99BFAD;
 
 @media screen and (max-width: 600px) {
     .__navbar__ {
+        .burger-button {
+            margin-left: 20px;
+            margin-top: -40px;
+        }
         .burger-element {
             width: 100%;
         }
@@ -242,16 +249,13 @@ footer .footer-text {
 .__page__more__ {
     width: 100%;
     height: 100px;
-
     display: flex;
     justify-content: center;
     align-items: flex-end;
 
     .__page__more__arrow {
-
         width: 500px;
         height: 60px;
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -322,7 +326,6 @@ footer .footer-text {
 
     .__presentation__myself__ {
         margin-left: 80px;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -383,6 +386,14 @@ footer .footer-text {
 
             .name {
                 margin-top: 0;
+                font-size: 26px;
+            }
+
+            .language {
+                .language-icon {
+                    width: 1.9rem;
+                }
+
             }
         }
 

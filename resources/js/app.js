@@ -10,9 +10,11 @@ if (burgerButton) {
                 if ((!burgerElement.classList.contains('NavbarUpAnimation'))) {
                     burgerElement.classList.remove('NavbarReverseAnimation')
                     burgerElement.classList.add('NavbarUpAnimation')
+                    document.querySelector('body').style.overflowY = 'hidden'
                 } else {
                     burgerElement.classList.add('NavbarReverseAnimation')
                     burgerElement.classList.remove('NavbarUpAnimation')
+                    document.querySelector('body').style.overflowY = 'scroll'
                 }
             }
             e.preventDefault()
