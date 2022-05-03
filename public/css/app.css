@@ -6301,8 +6301,8 @@ footer .footer-text {
 }
 .__homepage__presentation__ .screen {
   margin-top: 80px;
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   border: solid 1px;
   box-shadow: 0 0 50px #ccc;
@@ -6346,6 +6346,20 @@ footer .footer-text {
   width: 2.2rem;
 }
 
+@media screen and (max-width: 1040px) {
+  .__homepage__presentation__ .screen {
+    height: 250px;
+    width: 250px;
+  }
+  .__homepage__presentation__ .screen .identity__screen {
+    transform: rotate(350deg);
+    border-radius: 9999px;
+    max-height: 250px;
+    min-width: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 @media screen and (max-width: 700px) {
   .__homepage__presentation__ {
     flex-direction: column;

@@ -306,8 +306,8 @@ footer .footer-text {
 
     .screen {
         margin-top: 80px;
-        width: 280px;
-        height: 280px;
+        width: 300px;
+        height: 300px;
         border-radius: 50%;
         border: solid 1px;
         box-shadow: 0 0 50px #ccc;
@@ -360,6 +360,38 @@ footer .footer-text {
 
 }
 
+@media screen and (max-width: 1040px) {
+
+    .__homepage__presentation__ {
+
+        .screen {
+            height: 250px;
+            width: 250px;
+
+            .identity__screen {
+                transform: rotate(350deg);
+                border-radius: 9999px;
+                max-height: 250px;
+                min-width: 250px;
+                object-fit: cover;
+            }
+
+        }
+
+        .__presentation__myself__  {
+
+            .name {
+            }
+
+            .language {
+                .language-icon {
+                }
+
+            }
+        }
+
+    }
+}
 @media screen and (max-width: 700px) {
 
     .__homepage__presentation__ {
