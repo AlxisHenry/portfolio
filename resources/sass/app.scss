@@ -74,15 +74,18 @@ $burger__background: #99BFAD;
                 }
 
                 .hover_loading_nav {
-                    width: 0;
+                    width: 0    ;
                     height: 1px;
-                    background-color: black;
+                    border-top: solid 1px black;
                 }
 
-                .loading__navbar_animation {
-                    animation: LoadingNavbar 0.6s forwards;
+                .loading__navbar_animation_up {
+                    animation: LoadingNavbarUp 0.6s forwards;
                 }
 
+                .loading__navbar_animation_down {
+                    animation: LoadingNavbarDown 0.6s forwards;
+                }
             }
         }
 
@@ -118,12 +121,20 @@ $burger__background: #99BFAD;
     }
 }
 
-@keyframes LoadingNavbar {
+@keyframes LoadingNavbarUp {
     0% {
         width: 0;
     } 100% {
         width: 100%;
     }
+}
+
+@keyframes LoadingNavbarDown {
+    0% {
+        width: 100%;
+    } 100% {
+          width: 0;
+      }
 }
 
 @keyframes primaryAnimation {

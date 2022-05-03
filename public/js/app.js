@@ -37,13 +37,14 @@ function HoverNavbarMenu() {
     NavTitle.forEach(function (__NavTitle) {
       return __NavTitle.addEventListener('mouseover', function () {
         var LoadingBar = __NavTitle.parentNode.children[1];
-        LoadingBar.classList.add('loading__navbar_animation');
+        LoadingBar.classList.remove('loading__navbar_animation_down');
+        LoadingBar.classList.add('loading__navbar_animation_up');
       });
     });
     NavTitle.forEach(function (__NavTitle) {
       return __NavTitle.addEventListener('mouseout', function () {
         var LoadingBar = __NavTitle.parentNode.children[1];
-        LoadingBar.classList.remove('loading__navbar_animation');
+        LoadingBar.classList.add('loading__navbar_animation_down');
       });
     });
   }

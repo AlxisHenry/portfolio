@@ -32,7 +32,8 @@ function HoverNavbarMenu() {
 
                 const LoadingBar = __NavTitle.parentNode.children[1]
 
-                LoadingBar.classList.add('loading__navbar_animation')
+                LoadingBar.classList.remove('loading__navbar_animation_down')
+                LoadingBar.classList.add('loading__navbar_animation_up')
 
             }))
 
@@ -41,7 +42,7 @@ function HoverNavbarMenu() {
 
                 const LoadingBar = __NavTitle.parentNode.children[1]
 
-                LoadingBar.classList.remove('loading__navbar_animation')
+                LoadingBar.classList.add('loading__navbar_animation_down')
 
             }))
 

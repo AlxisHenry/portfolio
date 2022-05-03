@@ -6078,11 +6078,15 @@ body {
 .__navbar__ .burger-element a .nav-content .hover_loading_nav {
   width: 0;
   height: 1px;
-  background-color: black;
+  border-top: solid 1px black;
 }
-.__navbar__ .burger-element a .nav-content .loading__navbar_animation {
-  -webkit-animation: LoadingNavbar 0.6s forwards;
-          animation: LoadingNavbar 0.6s forwards;
+.__navbar__ .burger-element a .nav-content .loading__navbar_animation_up {
+  -webkit-animation: LoadingNavbarUp 0.6s forwards;
+          animation: LoadingNavbarUp 0.6s forwards;
+}
+.__navbar__ .burger-element a .nav-content .loading__navbar_animation_down {
+  -webkit-animation: LoadingNavbarDown 0.6s forwards;
+          animation: LoadingNavbarDown 0.6s forwards;
 }
 .__navbar__ .primary-navbar {
   left: 0;
@@ -6103,7 +6107,7 @@ body {
     width: 100%;
   }
 }
-@-webkit-keyframes LoadingNavbar {
+@-webkit-keyframes LoadingNavbarUp {
   0% {
     width: 0;
   }
@@ -6111,12 +6115,28 @@ body {
     width: 100%;
   }
 }
-@keyframes LoadingNavbar {
+@keyframes LoadingNavbarUp {
   0% {
     width: 0;
   }
   100% {
     width: 100%;
+  }
+}
+@-webkit-keyframes LoadingNavbarDown {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes LoadingNavbarDown {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
   }
 }
 @-webkit-keyframes primaryAnimation {
