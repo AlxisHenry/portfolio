@@ -6052,12 +6052,14 @@ body {
 }
 .__navbar__ .burger-button {
   z-index: 5;
-  margin-left: 50px;
+  position: fixed;
+  top: 40px;
+  left: 40px;
 }
 .__navbar__ .burger-element {
   z-index: 4;
-  position: absolute;
-  width: 400px;
+  position: fixed;
+  width: 300px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -6186,8 +6188,8 @@ body {
 }
 @media screen and (max-width: 600px) {
   .__navbar__ .burger-button {
-    margin-left: 20px;
-    margin-top: -40px;
+    top: 40px;
+    left: 40px;
   }
   .__navbar__ .burger-element {
     width: 100%;
