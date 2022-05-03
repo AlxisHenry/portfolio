@@ -6232,6 +6232,10 @@ footer .footer-text {
   height: 280px;
   border-radius: 50%;
   border: solid 1px;
+  box-shadow: 0 0 50px #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .__homepage__presentation__ .__presentation__myself__ {
   margin-left: 50px;

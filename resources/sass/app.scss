@@ -216,6 +216,15 @@ footer .footer-text {
         height: 280px;
         border-radius: 50%;
         border: solid 1px;
+        box-shadow: 0 0 50px #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .identity__screen {
+
+        }
+
     }
 
     .__presentation__myself__ {
