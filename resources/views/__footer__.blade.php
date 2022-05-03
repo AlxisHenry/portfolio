@@ -1,5 +1,5 @@
 
-<footer>
+<footer class="hidden">
     <div class="footer-text">© 2022 Alexis Henry. All Rights Reserved</div>
 </footer>
 

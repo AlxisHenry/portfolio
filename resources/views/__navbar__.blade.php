@@ -4,6 +4,8 @@
         <i></i>
     </button>
 
+    @include('__navbar__arrow__')
+
     <div class="burger-element">
 
         <a {{ $navbar === 'home' ? '' : 'href=/home' }} class="{{ $navbar === 'home' ? 'nav-active' : 'nav-disabled' }}">
