@@ -6026,6 +6026,11 @@ a[href^="#"]::after {
   transform: translateY(-50%) rotate3d(0, 0, 1, -45deg);
 }
 
+/* Globals */
+.hidden {
+  display: none !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6033,10 +6038,11 @@ a[href^="#"]::after {
 
 body {
   background: #F6EFE7;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-/* Navigation */
+/* END - Globals */
+/* Navbar */
 .__navbar__ {
   width: 100%;
   height: 115px;
@@ -6057,9 +6063,21 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: #99BFAD;
+  left: 0;
+  top: 0;
+  margin-left: -1000px;
 }
 .__navbar__ .burger-element .nav-active .nav-content .nav-title {
   color: black;
+  cursor: pointer;
+}
+.__navbar__ .burger-element a {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 .__navbar__ .burger-element a:not(.nav-active) .hover_loading_nav {
   width: 0;
@@ -6074,16 +6092,9 @@ body {
   -webkit-animation: LoadingNavbarDown 0.6s forwards;
           animation: LoadingNavbarDown 0.6s forwards;
 }
-.__navbar__ .burger-element a {
-  width: 100%;
-  height: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
 .__navbar__ .burger-element a:hover .nav-content .nav-title {
   color: black;
+  transition: color 1s;
 }
 .__navbar__ .burger-element a:first-child {
   margin-top: 30px;
@@ -6096,25 +6107,15 @@ body {
   font-weight: lighter;
   font-family: "Inconsolata", monospace;
 }
-.__navbar__ .primary-navbar {
-  left: 0;
-  top: 0;
-  margin-left: -1000px;
+.__navbar__ .NavbarUpAnimation {
+  -webkit-animation: NavbarUpAnimation 0.5s forwards;
+          animation: NavbarUpAnimation 0.5s forwards;
 }
-.__navbar__ .primaryAnimation {
-  -webkit-animation: primaryAnimation 0.5s forwards;
-          animation: primaryAnimation 0.5s forwards;
-}
-.__navbar__ .primaryReverseAnimation {
-  -webkit-animation: primaryReverseAnimation 0.5s forwards;
-          animation: primaryReverseAnimation 0.5s forwards;
+.__navbar__ .NavbarReverseAnimation {
+  -webkit-animation: NavbarReverseAnimation 0.5s forwards;
+          animation: NavbarReverseAnimation 0.5s forwards;
 }
 
-@media screen and (max-width: 600px) {
-  .__navbar__ .burger-element {
-    width: 100%;
-  }
-}
 @-webkit-keyframes LoadingNavbarUp {
   0% {
     width: 0;
@@ -6123,6 +6124,7 @@ body {
     width: 100%;
   }
 }
+
 @keyframes LoadingNavbarUp {
   0% {
     width: 0;
@@ -6147,7 +6149,7 @@ body {
     width: 0;
   }
 }
-@-webkit-keyframes primaryAnimation {
+@-webkit-keyframes NavbarUpAnimation {
   0% {
     margin-left: -1000px;
   }
@@ -6155,7 +6157,7 @@ body {
     margin-left: 0;
   }
 }
-@keyframes primaryAnimation {
+@keyframes NavbarUpAnimation {
   0% {
     margin-left: -1000px;
   }
@@ -6163,7 +6165,7 @@ body {
     margin-left: 0;
   }
 }
-@-webkit-keyframes primaryReverseAnimation {
+@-webkit-keyframes NavbarReverseAnimation {
   0% {
     margin-left: 0;
   }
@@ -6171,7 +6173,7 @@ body {
     margin-left: -1000px;
   }
 }
-@keyframes primaryReverseAnimation {
+@keyframes NavbarReverseAnimation {
   0% {
     margin-left: 0;
   }
@@ -6179,6 +6181,13 @@ body {
     margin-left: -1000px;
   }
 }
+@media screen and (max-width: 600px) {
+  .__navbar__ .burger-element {
+    width: 100%;
+  }
+}
+/* END - Navbar */
+/* Footer */
 footer {
   position: absolute;
   width: 100%;
@@ -6198,6 +6207,71 @@ footer .footer-text {
   font-family: "Poppins", sans-serif;
 }
 
-.hidden {
-  display: none;
+@media screen and (max-width: 280px) {
+  footer {
+    display: none;
+  }
 }
+@media screen and (max-height: 700px) {
+  footer {
+    display: none;
+  }
+}
+/* END - Footer */
+/* Home */
+.__homepage__presentation__ {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.__homepage__presentation__ .screen {
+  margin-top: 100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: solid 1px;
+}
+.__homepage__presentation__ .__presentation__myself__ {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.__homepage__presentation__ .__presentation__myself__ .name {
+  margin-top: -15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 44px;
+  text-transform: uppercase;
+}
+.__homepage__presentation__ .__presentation__myself__ .job {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 36px;
+  font-weight: 500;
+}
+.__homepage__presentation__ .__presentation__myself__ .language {
+  margin-top: 20px;
+}
+.__homepage__presentation__ .__presentation__myself__ .language .language-icon {
+  margin-right: 12px;
+  width: 2.2rem;
+}
+
+@media screen and (max-width: 700px) {
+  .__homepage__presentation__ {
+    flex-direction: column;
+    align-items: center;
+  }
+  .__homepage__presentation__ .screen {
+    margin-top: -60px;
+  }
+  .__homepage__presentation__ .__presentation__myself__ {
+    margin-left: 0;
+    margin-top: 25px;
+  }
+}
+/* END - Home */

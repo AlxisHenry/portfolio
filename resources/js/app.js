@@ -1,18 +1,18 @@
 function toggleNav() {
 
-const button = document.querySelector('.burger-button')
-const primaryElement = document.querySelector('.primary-navbar')
+const burgerButton = document.querySelector('.burger-button')
+const burgerElement = document.querySelector('.burger-element')
 
-if (button) {
-        button.addEventListener('click', (e) => {
-            button.classList.toggle('is-active')
-            if (primaryElement){
-                if ((!primaryElement.classList.contains('primaryAnimation'))) {
-                    primaryElement.classList.remove('primaryReverseAnimation')
-                    primaryElement.classList.add('primaryAnimation')
+if (burgerButton) {
+        burgerButton.addEventListener('click', (e) => {
+            burgerButton.classList.toggle('is-active')
+            if (burgerElement){
+                if ((!burgerElement.classList.contains('NavbarUpAnimation'))) {
+                    burgerElement.classList.remove('NavbarReverseAnimation')
+                    burgerElement.classList.add('NavbarUpAnimation')
                 } else {
-                    primaryElement.classList.add('primaryReverseAnimation')
-                    primaryElement.classList.remove('primaryAnimation')
+                    burgerElement.classList.add('NavbarReverseAnimation')
+                    burgerElement.classList.remove('NavbarUpAnimation')
                 }
             }
             e.preventDefault()
@@ -23,7 +23,7 @@ if (button) {
 
 function HoverNavbarMenu() {
 
-    const NavTitle = document.querySelectorAll('.primary-navbar a:not(.nav-active)')
+    const NavTitle = document.querySelectorAll('.burger-element a:not(.nav-active)')
 
     if (NavTitle) {
 

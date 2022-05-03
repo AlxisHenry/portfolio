@@ -8,20 +8,20 @@
 /***/ (() => {
 
 function toggleNav() {
-  var button = document.querySelector('.burger-button');
-  var primaryElement = document.querySelector('.primary-navbar');
+  var burgerButton = document.querySelector('.burger-button');
+  var burgerElement = document.querySelector('.burger-element');
 
-  if (button) {
-    button.addEventListener('click', function (e) {
-      button.classList.toggle('is-active');
+  if (burgerButton) {
+    burgerButton.addEventListener('click', function (e) {
+      burgerButton.classList.toggle('is-active');
 
-      if (primaryElement) {
-        if (!primaryElement.classList.contains('primaryAnimation')) {
-          primaryElement.classList.remove('primaryReverseAnimation');
-          primaryElement.classList.add('primaryAnimation');
+      if (burgerElement) {
+        if (!burgerElement.classList.contains('NavbarUpAnimation')) {
+          burgerElement.classList.remove('NavbarReverseAnimation');
+          burgerElement.classList.add('NavbarUpAnimation');
         } else {
-          primaryElement.classList.add('primaryReverseAnimation');
-          primaryElement.classList.remove('primaryAnimation');
+          burgerElement.classList.add('NavbarReverseAnimation');
+          burgerElement.classList.remove('NavbarUpAnimation');
         }
       }
 
@@ -31,7 +31,7 @@ function toggleNav() {
 }
 
 function HoverNavbarMenu() {
-  var NavTitle = document.querySelectorAll('.primary-navbar a:not(.nav-active)');
+  var NavTitle = document.querySelectorAll('.burger-element a:not(.nav-active)');
 
   if (NavTitle) {
     NavTitle.forEach(function (__NavTitle) {

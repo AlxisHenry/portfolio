@@ -5,10 +5,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@200&display=swap');
 
-$__background__color: #F6EFE7;
-$__navbar_text: #595959;
-$poppins: 'Poppins', sans-serif;
-$iconsolata: 'Inconsolata', monospace;
+/* Globals */
+
+$__backgroundColor__: #F6EFE7;
+$_family_poppins: 'Poppins', sans-serif;
+$_family_iconsolata: 'Inconsolata', monospace;
+
+.hidden {
+    display: none!important;
+}
 
 * {
     margin: 0;
@@ -16,15 +21,16 @@ $iconsolata: 'Inconsolata', monospace;
 }
 
 body {
-    background: $__background__color;
-    overflow: hidden;
+    background: $__backgroundColor__;
+    overflow-x: hidden;
 }
 
-/* Navigation */
+/* END - Globals */
+/* Navbar */
 
-$burger-space: 50px;
-$nav-none-spacing: -1000px;
-$burger__background: #99BFAD;
+$__navbarLinksColor__: #595959;
+$__hiddenNavbar__: -1000px;
+$__navbarBackgroundColor__: #99BFAD;
 
 .__navbar__ {
 
@@ -47,35 +53,37 @@ $burger__background: #99BFAD;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
-        background-color: $burger__background;
+        background-color: $__navbarBackgroundColor__;
+        left: 0;
+        top: 0;
+        margin-left: $__hiddenNavbar__;
 
         .nav-active .nav-content .nav-title {
             color: black;
-        }
-
-        a:not(.nav-active) {
-
-            .hover_loading_nav {
-                width: 0    ;
-                height: 1px;
-                border-top: solid 1px black;
-            }
-
-            .loading__navbar_animation_up {
-                animation: LoadingNavbarUp 0.6s forwards;
-            }
-
-            .loading__navbar_animation_down {
-                animation: LoadingNavbarDown 0.6s forwards;
-            }
-
+            cursor: pointer;
         }
 
         a {
 
+            &:not(.nav-active) {
+                .hover_loading_nav {
+                    width: 0;
+                    height: 1px;
+                    border-top: solid 1px black;
+                }
+
+                .loading__navbar_animation_up {
+                    animation: LoadingNavbarUp 0.6s forwards;
+                }
+
+                .loading__navbar_animation_down {
+                    animation: LoadingNavbarDown 0.6s forwards;
+                }
+            }
+
             &:hover .nav-content .nav-title {
                 color: black;
+                transition: color 1s;
             }
 
             &:first-child {
@@ -93,11 +101,11 @@ $burger__background: #99BFAD;
 
                 .nav-title {
                     font-size: 40px;
-                    color: $__navbar_text;
+                    color: $__navbarLinksColor__;
                     letter-spacing: 1px;
                     text-transform: uppercase;
                     font-weight: lighter;
-                    font-family: $iconsolata;
+                    font-family: $_family_iconsolata;
                 }
 
             }
@@ -105,29 +113,14 @@ $burger__background: #99BFAD;
 
     }
 
-    .primary-navbar {
-        left: 0;
-        top: 0;
-        margin-left: $nav-none-spacing;
+    .NavbarUpAnimation {
+        animation: NavbarUpAnimation 0.5s forwards;
     }
 
-
-    .primaryAnimation {
-        animation: primaryAnimation 0.5s forwards;
+    .NavbarReverseAnimation {
+        animation: NavbarReverseAnimation 0.5s forwards;
     }
 
-    .primaryReverseAnimation {
-        animation: primaryReverseAnimation 0.5s forwards;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-    .__navbar__ {
-        .burger-element {
-            width: 100%;
-        }
-    }
 }
 
 @keyframes LoadingNavbarUp {
@@ -146,24 +139,34 @@ $burger__background: #99BFAD;
       }
 }
 
-@keyframes primaryAnimation {
+@keyframes NavbarUpAnimation {
     0% {
-        margin-left: $nav-none-spacing;
+        margin-left: $__hiddenNavbar__;
     }
     100% {
         margin-left: 0;
     }
 }
 
-@keyframes primaryReverseAnimation {
+@keyframes NavbarReverseAnimation {
     0% {
         margin-left: 0;
     }
     100% {
-        margin-left: $nav-none-spacing;
+        margin-left: $__hiddenNavbar__;
     }
 }
 
+@media screen and (max-width: 600px) {
+    .__navbar__ {
+        .burger-element {
+            width: 100%;
+        }
+    }
+}
+
+/* END - Navbar */
+/* Footer */
 
 footer {
     position: absolute;
@@ -181,13 +184,92 @@ footer .footer-text {
     height: auto;
     font-size: 14px;
     font-weight: lighter;
-    font-family: $poppins;
+    font-family: $_family_poppins;
 }
 
-// Global
-
-.hidden {
-    display: none;
+@media screen and (max-width: 280px) {
+    footer {
+        display: none;
+    }
 }
 
+@media screen and (max-height: 700px) {
+    footer {
+        display: none;
+    }
+}
 
+/* END - Footer */
+/* Home */
+
+.__homepage__presentation__ {
+    width: 100%;
+    height: 550px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    .screen {
+        margin-top: 100px;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        border: solid 1px;
+    }
+
+    .__presentation__myself__ {
+        margin-left: 50px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .name {
+            margin-top: -15px;
+            font-family: $_family_poppins;
+            font-weight: 800;
+            letter-spacing: 1px;
+            font-size: 44px;
+            text-transform: uppercase;
+        }
+
+        .job {
+            font-family: $_family_poppins;
+            letter-spacing: 1px;
+            font-size: 36px;
+            font-weight: 500;
+        }
+
+        .language {
+            margin-top: 20px;
+            .language-icon {
+                margin-right: 12px;
+                width: 2.2rem;
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .__homepage__presentation__ {
+        flex-direction: column;
+        align-items: center;
+
+        .screen {
+            margin-top: -60px;
+        }
+
+        .__presentation__myself__  {
+            margin-left: 0;
+            margin-top: 25px;
+        }
+
+    }
+
+}
+
+/* END - Home */
