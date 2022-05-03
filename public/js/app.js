@@ -31,19 +31,19 @@ function toggleNav() {
 }
 
 function HoverNavbarMenu() {
-  var NavTitle = document.querySelectorAll('.primary-navbar a .nav-content .nav-title:not(.nav-active)');
+  var NavTitle = document.querySelectorAll('.primary-navbar a:not(.nav-active)');
 
   if (NavTitle) {
     NavTitle.forEach(function (__NavTitle) {
       return __NavTitle.addEventListener('mouseover', function () {
-        var LoadingBar = __NavTitle.parentNode.children[1];
+        var LoadingBar = __NavTitle.children[0].children[1];
         LoadingBar.classList.remove('loading__navbar_animation_down');
         LoadingBar.classList.add('loading__navbar_animation_up');
       });
     });
     NavTitle.forEach(function (__NavTitle) {
       return __NavTitle.addEventListener('mouseout', function () {
-        var LoadingBar = __NavTitle.parentNode.children[1];
+        var LoadingBar = __NavTitle.children[0].children[1];
         LoadingBar.classList.add('loading__navbar_animation_down');
       });
     });

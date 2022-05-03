@@ -4,30 +4,30 @@
 
     <div class="burger-element primary-navbar">
 
-        <a href="/home">
+        <a href="/home" class="{{ $navbar === 'home' ? 'nav-active' : '' }}">
             <div class="nav-content">
-                <span class="nav-title {{ $navbar === 'home' ? 'nav-active' : '' }}">Home</span>
+                <span class="nav-title">Home</span>
                 <div class="hover_loading_nav"></div>
             </div>
         </a>
 
-        <a href="/projects">
+        <a href="/projects" class="{{ $navbar === 'projects' ? 'nav-active' : '' }}">
             <div class="nav-content">
-                <span class="nav-title {{ $navbar === 'projects' ? 'nav-active' : '' }}">Projects</span>
+                <span class="nav-title">Projects</span>
                 <div class="hover_loading_nav"></div>
             </div>
         </a>
 
-        <a href="/board">
+        <a href="/board" class="{{ $navbar === 'board' ? 'nav-active' : '' }}">
             <div class="nav-content">
-                <span class="nav-title {{ $navbar === 'board' ? 'nav-active' : '' }}">Board</span>
+                <span class="nav-title">Board</span>
                 <div class="hover_loading_nav"></div>
             </div>
         </a>
 
-        <a href="/about">
+        <a href="/about" class="{{ $navbar === 'about' ? 'nav-active' : '' }}">
             <div class="nav-content">
-                <span class="nav-title {{ $navbar === 'about' ? 'nav-active' : '' }}">About me</span>
+                <span class="nav-title">About me</span>
                 <div class="hover_loading_nav"></div>
             </div>
         </a>

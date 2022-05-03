@@ -23,14 +23,14 @@ if (button) {
 
 function HoverNavbarMenu() {
 
-    const NavTitle = document.querySelectorAll('.primary-navbar a .nav-content .nav-title:not(.nav-active)')
+    const NavTitle = document.querySelectorAll('.primary-navbar a:not(.nav-active)')
 
     if (NavTitle) {
 
         NavTitle.forEach(__NavTitle =>
             __NavTitle.addEventListener('mouseover', () => {
 
-                const LoadingBar = __NavTitle.parentNode.children[1]
+                const LoadingBar = __NavTitle.children[0].children[1]
 
                 LoadingBar.classList.remove('loading__navbar_animation_down')
                 LoadingBar.classList.add('loading__navbar_animation_up')
@@ -40,7 +40,7 @@ function HoverNavbarMenu() {
         NavTitle.forEach(__NavTitle =>
             __NavTitle.addEventListener('mouseout', () => {
 
-                const LoadingBar = __NavTitle.parentNode.children[1]
+                const LoadingBar = __NavTitle.children[0].children[1]
 
                 LoadingBar.classList.add('loading__navbar_animation_down')
 

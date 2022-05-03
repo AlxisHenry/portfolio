@@ -6053,13 +6053,40 @@ body {
   width: 400px;
   height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: #99BFAD;
 }
+.__navbar__ .burger-element .nav-active .nav-content .nav-title {
+  color: black;
+}
+.__navbar__ .burger-element a:not(.nav-active) .hover_loading_nav {
+  width: 0;
+  height: 1px;
+  border-top: solid 1px black;
+}
+.__navbar__ .burger-element a:not(.nav-active) .loading__navbar_animation_up {
+  -webkit-animation: LoadingNavbarUp 0.6s forwards;
+          animation: LoadingNavbarUp 0.6s forwards;
+}
+.__navbar__ .burger-element a:not(.nav-active) .loading__navbar_animation_down {
+  -webkit-animation: LoadingNavbarDown 0.6s forwards;
+          animation: LoadingNavbarDown 0.6s forwards;
+}
 .__navbar__ .burger-element a {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
+}
+.__navbar__ .burger-element a:hover .nav-content .nav-title {
+  color: black;
+}
+.__navbar__ .burger-element a:first-child {
+  margin-top: 30px;
 }
 .__navbar__ .burger-element a .nav-content .nav-title {
   font-size: 40px;
@@ -6068,25 +6095,6 @@ body {
   text-transform: uppercase;
   font-weight: lighter;
   font-family: "Inconsolata", monospace;
-}
-.__navbar__ .burger-element a .nav-content .nav-active {
-  color: black;
-}
-.__navbar__ .burger-element a .nav-content .nav-title:not(.nav-active):hover {
-  color: black;
-}
-.__navbar__ .burger-element a .nav-content .hover_loading_nav {
-  width: 0;
-  height: 1px;
-  border-top: solid 1px black;
-}
-.__navbar__ .burger-element a .nav-content .loading__navbar_animation_up {
-  -webkit-animation: LoadingNavbarUp 0.6s forwards;
-          animation: LoadingNavbarUp 0.6s forwards;
-}
-.__navbar__ .burger-element a .nav-content .loading__navbar_animation_down {
-  -webkit-animation: LoadingNavbarDown 0.6s forwards;
-          animation: LoadingNavbarDown 0.6s forwards;
 }
 .__navbar__ .primary-navbar {
   left: 0;

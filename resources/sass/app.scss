@@ -44,14 +44,49 @@ $burger__background: #99BFAD;
         width: 400px;
         height: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
 
         background-color: $burger__background;
 
+        .nav-active .nav-content .nav-title {
+            color: black;
+        }
+
+        a:not(.nav-active) {
+
+            .hover_loading_nav {
+                width: 0    ;
+                height: 1px;
+                border-top: solid 1px black;
+            }
+
+            .loading__navbar_animation_up {
+                animation: LoadingNavbarUp 0.6s forwards;
+            }
+
+            .loading__navbar_animation_down {
+                animation: LoadingNavbarDown 0.6s forwards;
+            }
+
+        }
+
         a {
 
+            &:hover .nav-content .nav-title {
+                color: black;
+            }
+
+            &:first-child {
+                margin-top: 30px;
+            }
+
+            width: 100%;
+            height: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-decoration: none;
 
             .nav-content {
@@ -65,27 +100,6 @@ $burger__background: #99BFAD;
                     font-family: $iconsolata;
                 }
 
-                .nav-active {
-                    color: black;
-                }
-
-                .nav-title:not(.nav-active):hover {
-                    color: black;
-                }
-
-                .hover_loading_nav {
-                    width: 0    ;
-                    height: 1px;
-                    border-top: solid 1px black;
-                }
-
-                .loading__navbar_animation_up {
-                    animation: LoadingNavbarUp 0.6s forwards;
-                }
-
-                .loading__navbar_animation_down {
-                    animation: LoadingNavbarDown 0.6s forwards;
-                }
             }
         }
 
@@ -95,11 +109,6 @@ $burger__background: #99BFAD;
         left: 0;
         top: 0;
         margin-left: $nav-none-spacing;
-
-        a {
-
-        }
-
     }
 
 
