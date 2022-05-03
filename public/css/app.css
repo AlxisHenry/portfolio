@@ -6188,8 +6188,8 @@ body {
 }
 @media screen and (max-width: 600px) {
   .__navbar__ .burger-button {
-    top: 40px;
-    left: 40px;
+    top: 20px;
+    left: 20px;
   }
   .__navbar__ .burger-element {
     width: 100%;
