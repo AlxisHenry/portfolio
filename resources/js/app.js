@@ -21,5 +21,33 @@ if (button) {
     }
 }
 
-toggleNav()
+function HoverNavbarMenu() {
 
+    const NavTitle = document.querySelectorAll('.primary-navbar a .nav-content .nav-title:not(.nav-active)')
+
+    if (NavTitle) {
+
+        NavTitle.forEach(__NavTitle =>
+            __NavTitle.addEventListener('mouseover', () => {
+
+                const LoadingBar = __NavTitle.parentNode.children[1]
+
+                LoadingBar.classList.add('loading__navbar_animation')
+
+            }))
+
+        NavTitle.forEach(__NavTitle =>
+            __NavTitle.addEventListener('mouseout', () => {
+
+                const LoadingBar = __NavTitle.parentNode.children[1]
+
+                LoadingBar.classList.remove('loading__navbar_animation')
+
+            }))
+
+    }
+
+}
+
+toggleNav()
+HoverNavbarMenu()

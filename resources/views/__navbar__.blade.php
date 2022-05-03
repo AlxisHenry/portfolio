@@ -7,24 +7,28 @@
         <a href="/home">
             <div class="nav-content">
                 <span class="nav-title {{ $navbar === 'home' ? 'nav-active' : '' }}">Home</span>
+                <div class="hover_loading_nav"></div>
             </div>
         </a>
 
         <a href="/projects">
             <div class="nav-content">
                 <span class="nav-title {{ $navbar === 'projects' ? 'nav-active' : '' }}">Projects</span>
+                <div class="hover_loading_nav"></div>
             </div>
         </a>
 
         <a href="/board">
             <div class="nav-content">
                 <span class="nav-title {{ $navbar === 'board' ? 'nav-active' : '' }}">Board</span>
+                <div class="hover_loading_nav"></div>
             </div>
         </a>
 
         <a href="/about">
             <div class="nav-content">
                 <span class="nav-title {{ $navbar === 'about' ? 'nav-active' : '' }}">About me</span>
+                <div class="hover_loading_nav"></div>
             </div>
         </a>
 

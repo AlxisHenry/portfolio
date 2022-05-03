@@ -30,7 +30,27 @@ function toggleNav() {
   }
 }
 
+function HoverNavbarMenu() {
+  var NavTitle = document.querySelectorAll('.primary-navbar a .nav-content .nav-title:not(.nav-active)');
+
+  if (NavTitle) {
+    NavTitle.forEach(function (__NavTitle) {
+      return __NavTitle.addEventListener('mouseover', function () {
+        var LoadingBar = __NavTitle.parentNode.children[1];
+        LoadingBar.classList.add('loading__navbar_animation');
+      });
+    });
+    NavTitle.forEach(function (__NavTitle) {
+      return __NavTitle.addEventListener('mouseout', function () {
+        var LoadingBar = __NavTitle.parentNode.children[1];
+        LoadingBar.classList.remove('loading__navbar_animation');
+      });
+    });
+  }
+}
+
 toggleNav();
+HoverNavbarMenu();
 
 /***/ }),
 

@@ -6071,7 +6071,18 @@ body {
 }
 .__navbar__ .burger-element a .nav-content .nav-active {
   color: black;
-  font-weight: revert;
+}
+.__navbar__ .burger-element a .nav-content .nav-title:not(.nav-active):hover {
+  color: black;
+}
+.__navbar__ .burger-element a .nav-content .hover_loading_nav {
+  width: 0;
+  height: 1px;
+  background-color: black;
+}
+.__navbar__ .burger-element a .nav-content .loading__navbar_animation {
+  -webkit-animation: LoadingNavbar 0.6s forwards;
+          animation: LoadingNavbar 0.6s forwards;
 }
 .__navbar__ .primary-navbar {
   left: 0;
@@ -6089,6 +6100,22 @@ body {
 
 @media screen and (max-width: 600px) {
   .__navbar__ .burger-element {
+    width: 100%;
+  }
+}
+@-webkit-keyframes LoadingNavbar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes LoadingNavbar {
+  0% {
+    width: 0;
+  }
+  100% {
     width: 100%;
   }
 }
