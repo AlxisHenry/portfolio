@@ -6059,7 +6059,7 @@ body {
 .__navbar__ .burger-element {
   z-index: 4;
   position: fixed;
-  width: 300px;
+  width: 360px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -6197,7 +6197,7 @@ body {
 }
 /* END - Navbar */
 /* Footer */
-footer {
+.__footer__ {
   width: 100%;
   height: 20px;
   bottom: 4px;
@@ -6205,7 +6205,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
-footer .footer-text {
+.__footer__ .__footer__main__ {
   color: #8C8C8C;
   margin-right: 12px;
   width: auto;
@@ -6267,18 +6267,22 @@ footer .footer-text {
 }
 .__homepage__presentation__ .__presentation__ {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  margin-right: 140px;
+  max-height: 400px;
+  height: 400px;
+  align-items: center;
+  border-bottom: solid 2px black;
+  box-shadow: 0 20px 10px -15px #111;
+  -webkit-box-shadow: 0 20px 10px -15px #111;
+}
+.__homepage__presentation__ .__presentation__ .__presentation__separator__ {
+  height: 400px;
+  background-color: black;
 }
 .__homepage__presentation__ .__presentation__ .__main__presentation__ {
   display: flex;
-  flex-direction: row;
-}
-.__homepage__presentation__ .__presentation__ .__main__presentation__ .__presentation__separator__ {
-  height: 220px;
-  border-right: solid 1px black;
-  background-color: black;
+  flex-direction: column;
 }
 .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ {
   display: flex;
@@ -6287,7 +6291,6 @@ footer .footer-text {
   margin-left: 40px;
 }
 .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name {
-  margin-top: 0;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
@@ -6300,18 +6303,27 @@ footer .footer-text {
   font-size: 3rem;
   font-weight: 500;
 }
-.__homepage__presentation__ .__language__ {
-  margin-top: 30px;
+.__homepage__presentation__ .__presentation__ .__main__presentation__ .__language__ {
+  margin-top: 32px;
+  margin-left: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 32px;
+  justify-content: flex-start;
+  gap: 50px;
 }
-.__homepage__presentation__ .__language__ .language_icon {
-  width: 2.5rem;
+.__homepage__presentation__ .__presentation__ .__main__presentation__ .__language__ .language_icon {
+  width: 2.2rem;
+}
+.__homepage__presentation__ .__presentation__ .__main__presentation__ .__language__ .language_icon:last-child {
+  width: 3.5rem;
+}
+.__homepage__presentation__ .__main__asset__ {
+  height: 400px;
+  display: flex;
+  align-items: end;
 }
 .__homepage__presentation__ .__main__asset__ .__asset__ {
-  width: 460px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -6331,66 +6343,6 @@ footer .footer-text {
   }
   100% {
     transform: rotateY(360deg);
-  }
-}
-@media screen and (max-width: 700px) {
-  .__homepage__presentation__ {
-    width: 100%;
-    height: 650px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .__homepage__presentation__ .__presentation__ {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 140px;
-  }
-  .__homepage__presentation__ .__presentation__ .__main__presentation__ {
-    display: flex;
-    flex-direction: row;
-  }
-  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__presentation__separator__ {
-    height: 220px;
-    border-right: solid 1px black;
-    background-color: black;
-  }
-  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 40px;
-  }
-  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name {
-    margin-top: 0;
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    letter-spacing: 1px;
-    font-size: 5rem;
-    text-transform: uppercase;
-  }
-  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .job {
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 1px;
-    font-size: 3rem;
-    font-weight: 500;
-  }
-  .__homepage__presentation__ .__language__ {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-  }
-  .__homepage__presentation__ .__language__ .language_icon {
-    width: 2.5rem;
-  }
-  .__homepage__presentation__ .__main__asset__ .__asset__ {
-    width: 460px;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 /* END - Home */

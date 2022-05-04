@@ -13,6 +13,13 @@
             </div>
         </a>
 
+        <a {{ $navbar === 'about' ? '' : 'href=/about' }} class="{{ $navbar === 'about' ? 'nav-active' : 'nav-disabled' }}">
+            <div class="nav-content">
+                <span class="nav-title">About me</span>
+                <div class="hover_loading_nav"></div>
+            </div>
+        </a>
+
         <a {{ $navbar === 'projects' ? '' : 'href=/projects' }} class="{{ $navbar === 'projects' ? 'nav-active' : 'nav-disabled' }}">
             <div class="nav-content">
                 <span class="nav-title">Projects</span>
@@ -23,13 +30,6 @@
         <a {{ $navbar === 'board' ? '' : 'href=/board' }} class="{{ $navbar === 'board' ? 'nav-active' : 'nav-disabled' }}">
             <div class="nav-content">
                 <span class="nav-title">Board</span>
-                <div class="hover_loading_nav"></div>
-            </div>
-        </a>
-
-        <a {{ $navbar === 'about' ? '' : 'href=/about' }} class="{{ $navbar === 'about' ? 'nav-active' : 'nav-disabled' }}">
-            <div class="nav-content">
-                <span class="nav-title">About me</span>
                 <div class="hover_loading_nav"></div>
             </div>
         </a>

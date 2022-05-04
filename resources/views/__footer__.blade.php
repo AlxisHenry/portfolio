@@ -1,7 +1,7 @@
 
-<footer class="">
+<footer class="__footer__">
 
-    <div class="footer-text">© 2022 Alexis Henry. All Rights Reserved</div>
+    <div class="__footer__main__">© {{ date("Y") }} Alexis Henry. All Rights Reserved</div>
 
 </footer>
 
