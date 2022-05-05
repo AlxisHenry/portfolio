@@ -5,8 +5,7 @@
 <section class="__homepage__presentation__">
 
     <div class="__presentation__">
-        <div class="__presentation__separator__">
-        </div>
+        <div class="__presentation__separator__"></div>
                 <div class="__main__presentation__">
                     <div class="__me__">
                         <div class="name">
@@ -25,15 +24,12 @@
                         <img src="{{ url('assets/svg/bash.svg') }}" alt="Bash" title="Bash" class="language_icon">
                     </div>
                 </div>
-
-        <div class="__main__asset__">
-            <img src="{{ url('assets/cafe.gif') }}" alt="Computer" title="Computer" class="__asset__">
         </div>
 
+    <div class="__main__asset__">
+        <img src="{{ url('assets/cafe.gif') }}" alt="Computer" title="Computer" class="__asset__">
     </div>
 
 </section>
-
-@include('__arrow__')
 
 @include('__footer__')
