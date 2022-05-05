@@ -14,22 +14,24 @@
                         <div class="job">
                             Web Developer
                         </div>
+                        <div class="__language__">
+                            <img src="{{ url('assets/svg/javascript.svg') }}" alt="Javascript" title="Javascript" class="language_icon">
+                            <img src="{{ url('assets/svg/nodejs.svg') }}" alt="NodeJS" title="NodeJS" class="language_icon">
+                            <img src="{{ url('assets/svg/php.svg') }}" alt="PHP" title="PHP" class="language_icon">
+                            <img src="{{ url('assets/svg/laravel.svg') }}" alt="Laravel" title="Laravel" class="language_icon">
+                            <img src="{{ url('assets/svg/python.svg') }}" alt="Python" title="Python" class="language_icon">
+                            <img src="{{ url('assets/svg/bash.svg') }}" alt="Bash" title="Bash" class="language_icon">
+                        </div>
                     </div>
-                    <div class="__language__">
-                        <img src="{{ url('assets/svg/javascript.svg') }}" alt="Javascript" title="Javascript" class="language_icon">
-                        <img src="{{ url('assets/svg/nodejs.svg') }}" alt="NodeJS" title="NodeJS" class="language_icon">
-                        <img src="{{ url('assets/svg/php.svg') }}" alt="PHP" title="PHP" class="language_icon">
-                        <img src="{{ url('assets/svg/laravel.svg') }}" alt="Laravel" title="Laravel" class="language_icon">
-                        <img src="{{ url('assets/svg/python.svg') }}" alt="Python" title="Python" class="language_icon">
-                        <img src="{{ url('assets/svg/bash.svg') }}" alt="Bash" title="Bash" class="language_icon">
+                    <div class="__main__asset__">
+                        <img src="{{ url('assets/cafe.gif') }}" alt="Computer" title="Computer" class="__asset__">
                     </div>
                 </div>
         </div>
 
-    <div class="__main__asset__">
-        <img src="{{ url('assets/cafe.gif') }}" alt="Computer" title="Computer" class="__asset__">
-    </div>
+
 
 </section>
+
 
 @include('__footer__')
