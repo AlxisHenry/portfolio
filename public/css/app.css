@@ -6070,7 +6070,7 @@ body {
   top: 0;
   bottom: 0;
   right: 0;
-  margin-left: -300px;
+  margin-left: -1000px;
 }
 .__navbar__ .burger-element .nav-active .nav-content .nav-title {
   color: black;
@@ -6156,7 +6156,7 @@ body {
 }
 @-webkit-keyframes NavbarUpAnimation {
   0% {
-    margin-left: -300px;
+    margin-left: -1000px;
   }
   100% {
     margin-left: 0;
@@ -6164,7 +6164,7 @@ body {
 }
 @keyframes NavbarUpAnimation {
   0% {
-    margin-left: -300px;
+    margin-left: -1000px;
   }
   100% {
     margin-left: 0;
@@ -6175,7 +6175,7 @@ body {
     margin-left: 0;
   }
   100% {
-    margin-left: -300px;
+    margin-left: -1000px;
   }
 }
 @keyframes NavbarReverseAnimation {
@@ -6183,7 +6183,7 @@ body {
     margin-left: 0;
   }
   100% {
-    margin-left: -300px;
+    margin-left: -1000px;
   }
 }
 @media screen and (max-width: 600px) {
