@@ -16,7 +16,7 @@
                         </div>
                         <div class="__language__">
                             <img src="{{ url('assets/svg/javascript.svg') }}" alt="Javascript" title="Javascript" class="language_icon">
-                          <!--  <img src="" alt="NodeJS" title="NodeJS" class="language_icon"> -->
+                            <img src="{{ url('assets/svg/nodejs.svg') }}" alt="NodeJS" title="NodeJS" class="language_icon">
                             <img src="{{ url('assets/svg/php.svg') }}" alt="PHP" title="PHP" class="language_icon">
                             <img src="{{ url('assets/svg/python.svg') }}" alt="Python" title="Python" class="language_icon">
                             <img src="{{ url('assets/svg/laravel.svg') }}" alt="Laravel" title="Laravel" class="language_icon">

@@ -6070,7 +6070,7 @@ body {
   top: 0;
   bottom: 0;
   right: 0;
-  margin-left: -1000px;
+  margin-left: -300px;
 }
 .__navbar__ .burger-element .nav-active .nav-content .nav-title {
   color: black;
@@ -6090,12 +6090,12 @@ body {
   border-top: solid 1px black;
 }
 .__navbar__ .burger-element a:not(.nav-active) .loading__navbar_animation_up {
-  -webkit-animation: LoadingNavbarUp 0.6s forwards;
-          animation: LoadingNavbarUp 0.6s forwards;
+  -webkit-animation: LoadingNavbarUp 0.6s ease-in-out forwards;
+          animation: LoadingNavbarUp 0.6s ease-in-out forwards;
 }
 .__navbar__ .burger-element a:not(.nav-active) .loading__navbar_animation_down {
-  -webkit-animation: LoadingNavbarDown 0.6s forwards;
-          animation: LoadingNavbarDown 0.6s forwards;
+  -webkit-animation: LoadingNavbarDown 0.6s ease-in-out forwards;
+          animation: LoadingNavbarDown 0.6s ease-in-out forwards;
 }
 .__navbar__ .burger-element a:hover .nav-content .nav-title {
   color: black;
@@ -6113,12 +6113,12 @@ body {
   font-family: "Inconsolata", monospace;
 }
 .__navbar__ .NavbarUpAnimation {
-  -webkit-animation: NavbarUpAnimation 0.5s forwards;
-          animation: NavbarUpAnimation 0.5s forwards;
+  -webkit-animation: NavbarUpAnimation 0.25s ease-in forwards;
+          animation: NavbarUpAnimation 0.25s ease-in forwards;
 }
 .__navbar__ .NavbarReverseAnimation {
-  -webkit-animation: NavbarReverseAnimation 0.5s forwards;
-          animation: NavbarReverseAnimation 0.5s forwards;
+  -webkit-animation: NavbarReverseAnimation 0.25s ease-in forwards;
+          animation: NavbarReverseAnimation 0.25s ease-in forwards;
 }
 
 @-webkit-keyframes LoadingNavbarUp {
@@ -6156,7 +6156,7 @@ body {
 }
 @-webkit-keyframes NavbarUpAnimation {
   0% {
-    margin-left: -1000px;
+    margin-left: -300px;
   }
   100% {
     margin-left: 0;
@@ -6164,7 +6164,7 @@ body {
 }
 @keyframes NavbarUpAnimation {
   0% {
-    margin-left: -1000px;
+    margin-left: -300px;
   }
   100% {
     margin-left: 0;
@@ -6175,7 +6175,7 @@ body {
     margin-left: 0;
   }
   100% {
-    margin-left: -1000px;
+    margin-left: -300px;
   }
 }
 @keyframes NavbarReverseAnimation {
@@ -6183,7 +6183,7 @@ body {
     margin-left: 0;
   }
   100% {
-    margin-left: -1000px;
+    margin-left: -300px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -6278,12 +6278,12 @@ body {
   -webkit-box-shadow: 0 20px 10px -15px #111;
 }
 .__homepage__presentation__ .__presentation__.moov_this_element {
-  -webkit-animation: MoovElement 0.5s forwards;
-          animation: MoovElement 0.5s forwards;
+  -webkit-animation: MoovElement 0.2s forwards;
+          animation: MoovElement 0.2s forwards;
 }
 .__homepage__presentation__ .__presentation__.moov_this_element_reverse {
-  -webkit-animation: ReverseMoovElement 0.5s forwards;
-          animation: ReverseMoovElement 0.5s forwards;
+  -webkit-animation: ReverseMoovElement 0.2s forwards;
+          animation: ReverseMoovElement 0.2s forwards;
 }
 .__homepage__presentation__ .__presentation__ .__presentation__separator__ {
   height: 400px;

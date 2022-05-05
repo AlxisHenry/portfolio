@@ -30,7 +30,7 @@ body {
 /* Navbar */
 
 $__navbarLinksColor__: #949494;
-$__hiddenNavbar__: -1000px;
+$__hiddenNavbar__: -300px;
 $__navbarBackgroundColor__: #99BFAD;
 
 .__navbar__ {
@@ -77,11 +77,11 @@ $__navbarBackgroundColor__: #99BFAD;
                 }
 
                 .loading__navbar_animation_up {
-                    animation: LoadingNavbarUp 0.6s forwards;
+                    animation: LoadingNavbarUp 0.6s ease-in-out forwards;
                 }
 
                 .loading__navbar_animation_down {
-                    animation: LoadingNavbarDown 0.6s forwards;
+                    animation: LoadingNavbarDown 0.6s ease-in-out forwards;
                 }
             }
 
@@ -118,11 +118,11 @@ $__navbarBackgroundColor__: #99BFAD;
     }
 
     .NavbarUpAnimation {
-        animation: NavbarUpAnimation 0.5s forwards;
+        animation: NavbarUpAnimation 0.25s ease-in forwards;
     }
 
     .NavbarReverseAnimation {
-        animation: NavbarReverseAnimation 0.5s forwards;
+        animation: NavbarReverseAnimation 0.25s ease-in forwards;
     }
 
 }
@@ -268,11 +268,11 @@ $__navbarBackgroundColor__: #99BFAD;
         -webkit-box-shadow: 0 20px 10px -15px #111;
 
         &.moov_this_element {
-            animation: MoovElement 0.5s forwards;
+            animation: MoovElement 0.2s forwards;
         }
 
         &.moov_this_element_reverse {
-            animation: ReverseMoovElement 0.5s forwards;
+            animation: ReverseMoovElement 0.2s forwards;
         }
 
         .__presentation__separator__ {
