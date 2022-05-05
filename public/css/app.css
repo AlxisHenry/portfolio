@@ -6393,6 +6393,12 @@ body {
     display: none;
   }
 }
+@media screen and (min-height: 900px) {
+  .__homepage__presentation__ {
+    height: 550px;
+    align-items: center;
+  }
+}
 @-webkit-keyframes rotateAsset {
   0% {
     transform: rotateY(0deg);
