@@ -37,7 +37,7 @@
     </div>
 
     <div class="__github__icon__">
-        <a href="https://github.com/AlxisHenry">
+        <a href="https://github.com/AlxisHenry" target="_blank">
             <i title="My Github Profile" class="fa-brands fa-github"></i>
         </a>
     </div>
