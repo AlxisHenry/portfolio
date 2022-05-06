@@ -3,7 +3,6 @@
 @include('__navbar__')
 
 <section class="__homepage__presentation__">
-
     <div class="__presentation__">
         <div class="__presentation__separator__"></div>
                 <div class="__main__presentation__">
@@ -29,8 +28,34 @@
                     </div>
                 </div>
         </div>
-
 </section>
 
+@include('__arrow__')
+
+<section id="__spoilerAbout" class="__spoiler__about__">
+
+    <div class="__about__title__">
+
+    </div>
+
+    <div class="__about__card__">
+
+        <div class="__about__">
+            <span class="_about_descript_">
+                Hi, I'm Henry Alexis,<br>
+                French Web Developer based in Strasbourg, France.
+            </span>
+
+            <div class="__more__about__">
+                <a href="/about">
+                    <span class="__more__title__">More</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 @include('__footer__')
