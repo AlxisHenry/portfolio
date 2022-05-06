@@ -6402,7 +6402,7 @@ body {
 @media screen and (max-width: 1200px) {
   @-webkit-keyframes MoovElement {
     0% {
-      margin-left: 0;
+      margin-left: 20px;
     }
     100% {
       margin-left: 200px;
@@ -6410,7 +6410,7 @@ body {
   }
   @keyframes MoovElement {
     0% {
-      margin-left: 0;
+      margin-left: 20px;
     }
     100% {
       margin-left: 200px;
@@ -6421,7 +6421,7 @@ body {
       margin-left: 200px;
     }
     100% {
-      margin-left: 0;
+      margin-left: 20px;
     }
   }
   @keyframes ReverseMoovElement {
@@ -6429,7 +6429,7 @@ body {
       margin-left: 200px;
     }
     100% {
-      margin-left: 0;
+      margin-left: 20px;
     }
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name {
@@ -6480,7 +6480,7 @@ body {
 }
 @-webkit-keyframes MoovElement {
   0% {
-    margin-left: 0;
+    margin-left: 20px;
   }
   100% {
     margin-left: 280px;
@@ -6488,7 +6488,7 @@ body {
 }
 @keyframes MoovElement {
   0% {
-    margin-left: 0;
+    margin-left: 20px;
   }
   100% {
     margin-left: 280px;
@@ -6499,7 +6499,7 @@ body {
     margin-left: 280px;
   }
   100% {
-    margin-left: 0;
+    margin-left: 20px;
   }
 }
 @keyframes ReverseMoovElement {
@@ -6507,7 +6507,7 @@ body {
     margin-left: 280px;
   }
   100% {
-    margin-left: 0;
+    margin-left: 20px;
   }
 }
 .__spoiler__about__ {

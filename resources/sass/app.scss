@@ -413,7 +413,7 @@ $__navbarBackgroundColor__: #99BFAD;
 @media screen and (max-width: 1200px){
     @keyframes MoovElement {
         0% {
-            margin-left: 0;
+            margin-left: 20px;
         }
         100% {
             margin-left: 200px;
@@ -425,7 +425,7 @@ $__navbarBackgroundColor__: #99BFAD;
             margin-left: 200px;
         }
         100% {
-            margin-left: 0;
+            margin-left: 20px;
         }
     }
     .__homepage__presentation__ {
@@ -499,7 +499,7 @@ $__navbarBackgroundColor__: #99BFAD;
 
 @keyframes MoovElement {
     0% {
-        margin-left: 0;
+        margin-left: 20px;
     }
     100% {
         margin-left: 280px;
@@ -511,7 +511,7 @@ $__navbarBackgroundColor__: #99BFAD;
         margin-left: 280px;
     }
     100% {
-        margin-left: 0;
+        margin-left: 20px;
     }
 }
 
