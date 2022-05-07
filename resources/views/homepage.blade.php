@@ -58,7 +58,7 @@ $Google->setTarget('en');
 
             </span>
 
-            <div class="__more__about__">
+            <div class="__more__button__ __more__about__">
                 <a href="/about">
                     <span class="__more__title__">More</span>
                 </a>
@@ -72,39 +72,62 @@ $Google->setTarget('en');
 
 <section id="__spoilerProjects" class="__spoiler__projects__">
 
-</section>
+    <div class="__projects__">
 
-<section id="__spoilerCards" class="__spoiler__cards__ hidden">
+        <div class="project_nb_1 _sport_project">
 
-    @foreach(DB::select('SELECT * FROM `Articles`
-                            INNER JOIN Dates ON Articles.identifier = Dates.identifier
-                            INNER JOIN Images ON Articles.identifier = Images.identifier
-                            INNER JOIN Themes ON Articles.identifier = Themes.identifier
-                            WHERE Articles.identifier > 155 AND Articles.identifier < 161') as $card)
+            <h1>Sport Addict</h1>
 
-        <div class="__article__card__ __article__nb__{{ $card->identifier }}__">
+        </div>
+        <div class="project_nb_2 _stock_project_">
 
-            <div class="__article__image__">
-                <img src="{{ $card->LinkImage }}" alt="{{ $Google->translate(str($card->introduction)) }}" title="{{ $Google->translate($card->title) }}">
-            </div>
-
-            <div class="__article__date__">
-                <time data-time="{{ date($card->UploadDate) }}"> Published on {{ date('d/m/Y', strtotime(date($card->UploadDate)))  }}</time>
-            </div>
-
-            <div class="__article__title__">
-                <span>{{ $Google->translate($card->title) }}</span>
-            </div>
-
-            <div class="__article_url__">
-                <a href="{{ $card->UrlArticle }}" target="_blank">
-                    <button>{{ $Google->translate("Voir l'article") }}</button>
-                </a>
-            </div>
+            <h1> Timken </h1>
 
         </div>
 
+    </div>
+
+</section>
+
+<section id="__spoilerCards" class="__spoiler__cards__">
+
+    <div class="__cards__">
+        @foreach(DB::select('SELECT * FROM `Articles`
+                                INNER JOIN Dates ON Articles.identifier = Dates.identifier
+                                INNER JOIN Images ON Articles.identifier = Images.identifier
+                                INNER JOIN Themes ON Articles.identifier = Themes.identifier
+                                WHERE Articles.identifier > 155 AND Articles.identifier < 161') as $card)
+            <div class="__article__card__ __article__nb__{{ $card->identifier }}__ ">
+
+                <div class="__article__image__">
+                    <img src="{{ $card->LinkImage }}" alt="{{ $Google->translate(str($card->introduction)) }}" title="{{ $Google->translate($card->title) }}">
+                </div>
+
+                <div class="__article__date__">
+                    <time data-time="{{ date($card->UploadDate) }}"> Published on {{ date('d/m/Y', strtotime(date($card->UploadDate)))  }}</time>
+                </div>
+
+                <div class="__article__title__">
+                    <span>{{ $Google->translate($card->title) }}</span>
+                </div>
+
+                <div class="__article_url__">
+                    <a href="{{ $card->UrlArticle }}" target="_blank">
+                        <button>{{ $Google->translate("Voir l'article") }}</button>
+                    </a>
+                </div>
+
+            </div>
+
     @endforeach
+
+    </div>
+
+        <div class="__more__button__ __more__cards__">
+            <a href="/board">
+                <span class="__more__cards__">More</span>
+            </a>
+        </div>
 
 </section>
 

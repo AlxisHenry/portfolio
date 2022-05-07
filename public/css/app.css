@@ -6570,83 +6570,62 @@ body {
 }
 .__spoiler__about__ .__about__card__ .__about__ .__more__about__ {
   margin-top: 75px;
-  width: 100px;
-  height: 45px;
-  border-radius: 12px;
-  border: solid 1px #cdcdfd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #cdcdfd;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-}
-.__spoiler__about__ .__about__card__ .__about__ .__more__about__:hover {
-  transition: All 0.35s;
-  cursor: pointer;
-  filter: hue-rotate(90deg);
-}
-.__spoiler__about__ .__about__card__ .__about__ .__more__about__:hover .__more__title__ {
-  font-weight: 600;
-}
-.__spoiler__about__ .__about__card__ .__about__ .__more__about__ a {
-  text-decoration: none;
-}
-.__spoiler__about__ .__about__card__ .__about__ .__more__about__ a .__more__title__ {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 18px;
-  letter-spacing: 1px;
-  font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
-}
-.__spoiler__about__ .__about__card__ .__about__ .__more__about__ a .__more__title__:hover {
-  cursor: pointer;
 }
 
 .__spoiler__cards__ {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 40px;
   flex-wrap: wrap;
+  gap: 80px;
 }
-.__spoiler__cards__ .__article__card__ {
+.__spoiler__cards__ .__cards__ {
+  gap: 30px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.__spoiler__cards__ .__cards__ .__article__card__ {
   height: 350px;
   width: 275px;
   background-color: white;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }
-.__spoiler__cards__ .__article__card__ .__article__image__ {
+.__spoiler__cards__ .__cards__ .__article__card__ .__article__image__ {
   width: 100%;
 }
-.__spoiler__cards__ .__article__card__ .__article__image__ img {
+.__spoiler__cards__ .__cards__ .__article__card__ .__article__image__ img {
   width: 100%;
   height: 175px;
   border-bottom: solid 1px black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-.__spoiler__cards__ .__article__card__ .__article__date__ {
+.__spoiler__cards__ .__cards__ .__article__card__ .__article__date__ {
   flex: 0.5;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.__spoiler__cards__ .__article__card__ .__article__date__ time {
+.__spoiler__cards__ .__cards__ .__article__card__ .__article__date__ time {
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
-.__spoiler__cards__ .__article__card__ .__article__title__ {
+.__spoiler__cards__ .__cards__ .__article__card__ .__article__title__ {
   flex: 2px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.__spoiler__cards__ .__article__card__ .__article__title__ span {
+.__spoiler__cards__ .__cards__ .__article__card__ .__article__title__ span {
   text-align: center;
   font-size: 13px;
   font-family: "Poppins", sans-serif;
@@ -6654,17 +6633,17 @@ body {
   margin-right: 8px;
   font-weight: 500;
 }
-.__spoiler__cards__ .__article__card__ .__article_url__ {
+.__spoiler__cards__ .__cards__ .__article__card__ .__article_url__ {
   width: 100%;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.__spoiler__cards__ .__article__card__ .__article_url__ a {
+.__spoiler__cards__ .__cards__ .__article__card__ .__article_url__ a {
   text-decoration: none;
 }
-.__spoiler__cards__ .__article__card__ .__article_url__ a button {
+.__spoiler__cards__ .__cards__ .__article__card__ .__article_url__ a button {
   width: 145px;
   position: relative;
   margin-bottom: 3px;
@@ -6678,9 +6657,45 @@ body {
   line-height: 1.5;
   text-align: center;
 }
-.__spoiler__cards__ .__article__card__ .__article_url__ a button:hover {
+.__spoiler__cards__ .__cards__ .__article__card__ .__article_url__ a button:hover {
   cursor: pointer;
   filter: hue-rotate(90deg);
+}
+
+.__more__button__ {
+  width: 100px;
+  height: 45px;
+  border-radius: 12px;
+  border: solid 1px #cdcdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cdcdfd;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.__more__button__:hover {
+  transition: All 0.35s;
+  cursor: pointer;
+  filter: hue-rotate(90deg);
+}
+.__more__button__:hover a span {
+  font-weight: 600;
+}
+.__more__button__ a {
+  text-decoration: none;
+}
+.__more__button__ a span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+.__more__button__ a span:hover {
+  cursor: pointer;
 }
 
 /* END - Home */
