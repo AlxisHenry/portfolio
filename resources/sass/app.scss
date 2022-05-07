@@ -49,6 +49,7 @@ $__navbarBackgroundColor__: #99BFAD;
 
     .__github__icon__ {
         width: 32px;
+        z-index: 10;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -481,6 +482,60 @@ $__navbarBackgroundColor__: #99BFAD;
     }
 }
 
+@media screen and (max-width: 500px){
+    .__homepage__presentation__ {
+
+        .__presentation__ {
+
+            .__presentation__separator__ {
+
+            }
+
+            .__main__presentation__ {
+
+                .__me__ {
+
+                    .name {
+                        font-size: 2rem;
+                        margin-top: 200px;
+                    }
+
+                    .job {
+                        font-size: 1.5rem;
+                    }
+                    .__language__ {
+                        margin-top: 32px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 25px;
+
+                        .language_icon {
+                            width: 90px;
+
+                            &:last-child {
+                                width: 140px;
+                            }
+
+                        }
+                    }
+
+                }
+                .__main__asset__ {
+                    display: none;
+
+                    .__asset__ {
+
+                    }
+
+                }
+
+            }
+        }
+
+    }
+}
+
 @media screen and (min-height: 900px) {
     .__homepage__presentation__ {
         height: 550px;
@@ -537,7 +592,7 @@ $__navbarBackgroundColor__: #99BFAD;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 50%;
+                width: 40%;
                 height: 400px;
 
                 ._about_descript_ {
@@ -549,6 +604,7 @@ $__navbarBackgroundColor__: #99BFAD;
                 }
 
                 .__more__about__ {
+                    margin-top: 75px;
                     width: 100px;
                     height: 45px;
                     border-radius: 12px;
@@ -594,6 +650,92 @@ $__navbarBackgroundColor__: #99BFAD;
             }
 
         }
+}
+
+.__spoiler__cards__ {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+    flex-wrap: wrap;
+
+    .__article__card__ {
+
+        height: 350px;
+        width: 275px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+
+        .__article__image__ {
+            width: 100%;
+            img {
+                width: 100%;
+                height: 175px;
+                border-bottom: solid 1px black;
+            }
+        }
+        .__article__date__ {
+            flex: .5;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            time {
+                font-size: 14px;
+                font-family: $_family_poppins;
+                font-weight: 600;
+            }
+        }
+        .__article__title__ {
+            flex: 2px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                text-align: center;
+                font-size: 13px;
+                font-family: $_family_poppins;
+                margin-left: 8px;
+                margin-right: 8px;
+                font-weight: 500;
+            }
+        }
+        .__article_url__ {
+            width: 100%;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                text-decoration: none;
+                button {
+                    width: 145px;
+                    position: relative;
+                    margin-bottom: 3px;
+                    margin-top: 5px;
+                    display: block;
+                    background-color: #cdcdfd;
+                     border-color: #cdcdfd;
+                    border-radius: 0.25rem;
+                    padding: 0.475rem 0.85rem;
+                    color: white;
+                    line-height: 1.5;
+                    text-align: center;
+                    &:hover {
+                        cursor: pointer;
+                        filter: hue-rotate(90deg);
+                    }
+
+                }
+            }
+        }
+
+    }
+
 }
 
 /* END - Home */
