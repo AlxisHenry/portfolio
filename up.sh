@@ -10,6 +10,8 @@ UpdateProject () {
     sudo chown -R ubuntu:ubuntu /var/www/main
     git pull
     echo 'Paramétrage de Laravel'
+    composer install
+    npm install
     php artisan cache:clear
     echo 'Attribution des droits à Apache'
     sudo chown -R www-data:www-data /var/www/main
