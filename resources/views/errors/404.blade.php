@@ -1,21 +1,20 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page not found - Henry Alexis</title>
-    <link rel="stylesheet" href="{{ url('css/app.css') }}">
-    <link rel="icon" href="{{ url('assets/images/favicon.png') }}" />
-</head>
-<body>
+<?php
+use Stichoza\GoogleTranslate\GoogleTranslate;
+$Google = new GoogleTranslate();
+$Google->setSource('fr');
+$Google->setTarget('en');
+?>
 
+@include('__header__')
 @include('__navbar__clean__')
 
-<section class="__page_not_found__">
+<section class="__page_not_found__ flex justify-center align-center" style="width: 100%; margin-top: -100px">
 
-    <h1>Sorry, we can't find this page</h1>
-    <h2>404 Error</h2>
+    <h1 class="text-center text-bigger text-bold text-36"> {{ $Google->translate("Désolé, nous n'avons pas trouvé ce que vous cherchez...") }}</h1>
+    <h2 class="text-center text-italic text-24">{{ $Google->translate("Une erreur 404 s'est produite") }}</h2>
 
 </section>
 
-@include('__footer__')
+<div class="flex align-center justify-center" style="width: 100%; position: absolute; bottom: 0"> <img src="{{ url('assets/cafe.gif') }}" alt="Main Logo"> </div>
+
+<script src="{{ url('js/app.js') }}"></script>
