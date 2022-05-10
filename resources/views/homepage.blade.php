@@ -1,5 +1,3 @@
-@include('__header__')
-
 <?php
 use Stichoza\GoogleTranslate\GoogleTranslate;
 $Google = new GoogleTranslate();
@@ -7,6 +5,7 @@ $Google->setSource('fr');
 $Google->setTarget('en');
 ?>
 
+@include('__header__')
 
 @include('__navbar__')
 
@@ -70,18 +69,33 @@ $Google->setTarget('en');
 
 </section>
 
-<section id="__spoilerProjects" class="__spoiler__projects__">
+<section id="__spoilerProjects" class="__spoiler__projects__ hidden">
 
     <div class="__projects__">
 
-        <div class="project_nb_1 _sport_project">
+        <div class="__project__card__ _project-nb-1_">
 
-            <h1>Sport Addict</h1>
+            <h1>{{ $Google->translate('Gestion de stock') }}</h1>
 
-        </div>
-        <div class="project_nb_2 _stock_project_">
+            <div class="_this_project_">
 
-            <h1> Timken </h1>
+                <div class="_project_image_">
+                    <img src="{{ url('assets/images/gs-timken.png') }}" alt="Timken Inventory Management" class="">
+                </div>
+
+                <div class="_about_project_">
+
+
+
+                </div>
+
+                <div class="_language_use_">
+                    <span class="_project_language">Javascript</span>
+                    <span class="_project_language">PHP</span>
+                    <span class="_project_language">Powershell</span>
+                </div>
+
+            </div>
 
         </div>
 
@@ -96,11 +110,12 @@ $Google->setTarget('en');
                                 INNER JOIN Dates ON Articles.identifier = Dates.identifier
                                 INNER JOIN Images ON Articles.identifier = Images.identifier
                                 INNER JOIN Themes ON Articles.identifier = Themes.identifier
-                                WHERE Articles.identifier > 155 AND Articles.identifier < 161') as $card)
+                                WHERE Articles.identifier > 160 AND Articles.identifier < 165') as $card)
+
             <div class="__article__card__ __article__nb__{{ $card->identifier }}__ ">
 
                 <div class="__article__image__">
-                    <img src="{{ $card->LinkImage }}" alt="{{ $Google->translate(str($card->introduction)) }}" title="{{ $Google->translate($card->title) }}">
+                    <img src="{{ $card->LinkImage }}" alt="{{ $Google->translate(str($card->AltImage)) }}" title="{{ $Google->translate($card->title) }}">
                 </div>
 
                 <div class="__article__date__">
@@ -112,7 +127,7 @@ $Google->setTarget('en');
                 </div>
 
                 <div class="__article_url__">
-                    <a href="{{ $card->UrlArticle }}" target="_blank">
+                    <a href="/board/article/{{ substr($card->UrlArticle, strrpos($card->UrlArticle, '/', '0') + 1) }}">
                         <button>{{ $Google->translate("Voir l'article") }}</button>
                     </a>
                 </div>
