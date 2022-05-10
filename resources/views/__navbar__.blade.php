@@ -34,11 +34,18 @@
             </div>
         </a>
 
+        <a {{ $navbar === 'news' ? '' : 'href=/news' }} class="{{ $navbar === 'news' ? 'nav-active' : 'nav-disabled' }}">
+            <div class="nav-content">
+                <span class="nav-title">News</span>
+                <div class="hover_loading_nav"></div>
+            </div>
+        </a>
+
     </div>
 
     <div class="__github__icon__">
-        <a href="https://github.com/AlxisHenry" target="_blank">
-            <i title="My Github Profile" class="fa-brands fa-github"></i>
+        <a href="https://github.com/AlxisHenry" target="_blank" rel="noreferrer">
+            <i title="Github" class="fa-brands fa-github"></i>
         </a>
     </div>
 

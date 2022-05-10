@@ -106,6 +106,7 @@ $Google->setTarget('en');
 <section id="__spoilerCards" class="__spoiler__cards__">
 
     <div class="__cards__">
+
         @foreach(DB::select('SELECT * FROM `Articles`
                                 INNER JOIN Dates ON Articles.identifier = Dates.identifier
                                 INNER JOIN Images ON Articles.identifier = Images.identifier

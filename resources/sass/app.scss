@@ -134,7 +134,10 @@ $__navbarBackgroundColor__: #99BFAD;
             }
 
             &:first-child {
-                margin-top: 30px;
+                margin-top: 80px;
+            }
+            &:last-child {
+                margin-bottom: 40px;
             }
 
             width: 100%;
@@ -262,9 +265,15 @@ $__navbarBackgroundColor__: #99BFAD;
         flex-direction: row;
         .__footer__contact__ {
             flex: 1;
-            background-color: black;
             letter-spacing: 1px;
             font-family: $_family_poppins;
+            a {
+                text-decoration: none;
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
         }
         .__switch__theme__ {
             flex: 1;
@@ -275,17 +284,17 @@ $__navbarBackgroundColor__: #99BFAD;
                 position: relative;
                 z-index: 0;
                 width: 60px;
-                height: 30px;
+                height: 30.5px;
                 border: solid black 1px;
                 border-radius: 50px;
-                background-color: gray;
+                background-color: white;
 
                 ._switch_indicator_ {
                     background-color: white;
                     position: relative;
                     width: 28px;
                     height: 28px;
-                    border: inset 1px white;
+                    box-shadow: .5px .5px 1px 1px black;
                     z-index: 20;
                     border-radius: 50%;
                 }
@@ -1024,6 +1033,36 @@ $__navbarBackgroundColor__: #99BFAD;
     }
 }
 
-
-
 /* END - Board/article/{title}*/
+/* Board/keyword/{keyword}*/
+
+.__keywords__cards__ {
+    .__research__ {
+        width: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 38px;
+        font-family: $_family_iconsolata;
+        letter-spacing: 1px;
+    }
+}
+
+/* END - Board/keyword/{keyword}*/
+
+.test {
+    .__cards__ {
+        width: 100%;
+        height: 350px;
+        max-height: 350px;
+        min-width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow-y: hidden;
+        .__cards__technology__ {
+            height: 350px;
+            width: 275px;
+            background-color: yellow;
+        }
+    }
+}

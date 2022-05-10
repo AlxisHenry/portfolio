@@ -88,7 +88,7 @@ INSERT INTO Articles (title, introduction, UrlArticle) VALUES ("Reconnaissance f
 ");INSERT INTO Images (LinkImage, AltImage) VALUES ("https://d1fmx1rbmqrxrr.cloudfront.net/zdnet/optim/i/edit/ne/2019/01/CNIL_620__w1200.jpg","Logo de la CNIL");INSERT INTO Themes (Theme, ThemePrincipal) VALUES (" Mise en demeure Reconnaissance faciale Bases légales","Juridique");
 INSERT INTO Dates (FullDate, UploadDate) VALUES ("16 décembre 2021","16 décembre 2021");
 INSERT INTO Articles (title, introduction, UrlArticle) VALUES ("Reconnaissance faciale dans les aéroports : quels enjeux et quels grands principes à respecter ?","L’utilisation de la reconnaissance faciale pour le contrôle d’identité dans les aéroports n’est pas anodin pour les droits et libertés des personnes concernées. Ces dispositifs doivent donc intégrer des garanties fortes en matière de protection des données personnelles.
- 
+
  ","https://www.cnil.fr/fr/reconnaissance-faciale-dans-les-aeroports-quels-enjeux-et-quels-grands-principes-respecter
 ");INSERT INTO Images (LinkImage, AltImage) VALUES ("https://d1fmx1rbmqrxrr.cloudfront.net/zdnet/optim/i/edit/ne/2019/01/CNIL_620__w1200.jpg","Logo de la CNIL");INSERT INTO Themes (Theme, ThemePrincipal) VALUES (" Reconnaissance faciale Aéroports","Juridique");
 INSERT INTO Dates (FullDate, UploadDate) VALUES ("09 octobre 2020","09 octobre 2020");
