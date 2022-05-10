@@ -34,6 +34,13 @@
             </div>
         </a>
 
+        <a href="/news">
+            <div class="nav-content">
+                <span class="nav-title">News</span>
+                <div class="hover_loading_nav"></div>
+            </div>
+        </a>
+
     </div>
 
     <div class="__github__icon__">
