@@ -36,4 +36,10 @@
 
     </div>
 
+    <div class="__github__icon__">
+        <a href="https://github.com/AlxisHenry" target="_blank" rel="noreferrer">
+            <i title="Github" class="fa-brands fa-github"></i>
+        </a>
+    </div>
+
 </nav>
