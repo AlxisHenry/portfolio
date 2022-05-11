@@ -1,10 +1,3 @@
-<?php
-use Stichoza\GoogleTranslate\GoogleTranslate;
-$Google = new GoogleTranslate();
-$Google->setSource('fr');
-$Google->setTarget('en');
-?>
-
 @include('__header__')
 
 @include('__navbar__')
@@ -107,11 +100,7 @@ $Google->setTarget('en');
 
     <div class="__cards__">
 
-        @foreach(DB::select('SELECT * FROM `Articles`
-                                INNER JOIN Dates ON Articles.identifier = Dates.identifier
-                                INNER JOIN Images ON Articles.identifier = Images.identifier
-                                INNER JOIN Themes ON Articles.identifier = Themes.identifier
-                                WHERE Articles.identifier > 160 AND Articles.identifier < 165') as $card)
+        @foreach($spoiler_cards as $card)
 
             <div class="__article__card__ __article__nb__{{ $card->identifier }}__ ">
 
@@ -140,7 +129,7 @@ $Google->setTarget('en');
     </div>
 
         <div class="__more__button__ __more__cards__">
-            <a href="/board">
+            <a href="/news">
                 <span class="__more__cards__">More</span>
             </a>
         </div>

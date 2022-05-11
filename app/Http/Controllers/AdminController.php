@@ -9,11 +9,32 @@ class AdminController extends Controller
 
     public function __construct()
     {
-        $this->middleware('Ip');
     }
 
     public function Admin() {
+        return 'Admin';
+    }
+
+    public function AdminNews() {
+
+    }
+
+    public function AdminNewsEdit() {
+
+    }
+
+    public function AdminBoard() {
+
+    }
+
+    public function AdminBoardEdit() {
+
+    }
+
+    public function LaravelWelcome() {
+
         return view('%welcome%');
+
     }
 
 }
