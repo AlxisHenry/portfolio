@@ -8,6 +8,7 @@ use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\DownloadLinks;
 
 /* RouteServiceProvider */
 
@@ -61,7 +62,6 @@ Route::prefix('news')->group(function () {
        Route::get('/', [NewsController::class, 'News'])->name('news');
        Route::get('/{ARTICLE_URL_NAME}', [NewsController::class, 'NewsArticle'])->name('news_article');
        Route::get('/word/{KEYWORD}', [NewsController::class, 'NewsKeyword'])->name('news_keyword');
-       Route::get('/test/test', [NewsController::class, 'NewsTest'])->name('news_test');
    });
 
 });

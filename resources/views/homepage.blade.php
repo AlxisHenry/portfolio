@@ -5,29 +5,29 @@
 <section class="__homepage__presentation__">
     <div class="__presentation__">
         <div class="__presentation__separator__"></div>
-                <div class="__main__presentation__">
-                    <div class="__me__">
-                        <div class="name">
-                            {{ config('data.name') }}
-                        </div>
-                        <div class="job">
-                            {{ config('data.job') }}
-                        </div>
-                        <div class="__language__">
-
-                            @foreach($languages as $lang)
-
-                                {!! $lang !!}
-
-                            @endforeach
-
-                        </div>
-                    </div>
-                    <div class="__main__asset__">
-                        <img src="{{ url('assets/cafe.gif') }}" alt="Computer" title="Computer" class="__asset__">
-                    </div>
+        <div class="__main__presentation__">
+            <div class="__me__">
+                <div class="name">
+                    {{ config('data.name') }}
                 </div>
+                <div class="job">
+                    {{ config('data.job') }}
+                </div>
+                <div class="__language__">
+
+                    @foreach($languages as $lang)
+
+                        {!! $lang !!}
+
+                    @endforeach
+
+                </div>
+            </div>
+            <div class="__main__asset__">
+                <img src="{{ url('assets/cafe.gif') }}" alt="Computer" title="Computer" class="__asset__">
+            </div>
         </div>
+    </div>
 </section>
 
 @include('__arrow__')
@@ -124,15 +124,15 @@
 
             </div>
 
-    @endforeach
+        @endforeach
 
     </div>
 
-        <div class="__more__button__ __more__cards__">
-            <a href="/news">
-                <span class="__more__cards__">More</span>
-            </a>
-        </div>
+    <div class="__more__button__ __more__cards__">
+        <a href="/news">
+            <span class="__more__cards__">More</span>
+        </a>
+    </div>
 
 </section>
 
