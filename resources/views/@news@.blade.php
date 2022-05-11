@@ -16,7 +16,7 @@ $Google->setTarget('en');
                                 INNER JOIN Dates ON Articles.identifier = Dates.identifier
                                 INNER JOIN Images ON Articles.identifier = Images.identifier
                                 INNER JOIN Themes ON Articles.identifier = Themes.identifier
-                                WHERE Themes.ThemePrincipal = " Technologique " LIMIT 15') as $card)
+                                WHERE Themes.ThemePrincipal = " Technologique " LIMIT 5') as $card)
 
             <div class="__article__card__ __article__nb__{{ $card->identifier }}__ ">
 
@@ -50,7 +50,7 @@ $Google->setTarget('en');
                                 INNER JOIN Dates ON Articles.identifier = Dates.identifier
                                 INNER JOIN Images ON Articles.identifier = Images.identifier
                                 INNER JOIN Themes ON Articles.identifier = Themes.identifier
-                                WHERE Themes.ThemePrincipal = "Juridique" LIMIT 15') as $card)
+                                WHERE Themes.ThemePrincipal = "Juridique" LIMIT 5') as $card)
 
             <div class="__article__card__ __article__nb__{{ $card->identifier }}__ ">
 
