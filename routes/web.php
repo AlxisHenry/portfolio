@@ -3,31 +3,23 @@
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\BoardController;
+use App\Http\Controllers\NewsController;
+
 /* RouteServiceProvider */
 
-Route::get('laravel/{password}', function ($password) {
-    if ($password === 'admin123') {
-        return view('%welcome%');
-    } else {
-        return Redirect::to('home');
-    }
-})->name('admin');
+Route::get('admin', [AdminController::class, 'Admin'])->name('admin');
 
-Route::view('/home',   'homepage', ['title' => 'Home - Henry Alexis',
-                                             'navbar' => 'home',
-                                             'og_description' => 'Portfolio Henry Alexis - Homepage'])->name('home');
+Route::get('home', [HomeController::class, 'Home'])->name('home');
 
-Route::view('/projects', 'projects', ['title' => 'Projects - Henry Alexis',
-                                                'navbar' => 'projects',
-                                                'og_description' => 'Portfolio Henry Alexis - Projects'])->name('projects');
+Route::get('projects', [ProjectsController::class, 'Projects'])->name('projects');
 
-Route::view('/board', 'board', ['title' => 'Board - Henry Alexis',
-                                            'navbar' => 'board',
-                                            'og_description' => 'Portfolio Henry Alexis - Board with my articles'])->name('board');
+Route::get('board', [BoardController::class, 'Board'])->name('board');
 
-Route::view('/news', '@news@', ['title' => 'News - Henry Alexis',
-    'navbar' => 'news',
-    'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL'])->name('news');
+Route::get('news', [NewsController::class, 'News'])->name('news');
 
 Route::get('news/article/{title}', function ($title = 'null') {
     return view('@news_article@');
