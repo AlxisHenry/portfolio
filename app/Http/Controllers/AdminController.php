@@ -9,7 +9,7 @@ class AdminController extends Controller
 
     public function __construct()
     {
-        $this->middleware('ip');
+        $this->middleware('Ip');
     }
 
     public function Admin() {

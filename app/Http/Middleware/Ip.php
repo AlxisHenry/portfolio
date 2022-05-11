@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class ip
+class Ip
 {
     /**
      * Handle an incoming request.

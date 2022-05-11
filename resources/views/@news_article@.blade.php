@@ -1,10 +1,3 @@
-<?php
-use Stichoza\GoogleTranslate\GoogleTranslate;
-$Google = new GoogleTranslate();
-$Google->setSource('fr');
-$Google->setTarget('en');
-?>
-
 @include('__header__')
 @include('__navbar__clean__')
 
@@ -12,11 +5,7 @@ $Google->setTarget('en');
 
     <div class="__article__">
 
-        @foreach(DB::select("SELECT * FROM `Articles`
-                                INNER JOIN Dates ON Articles.identifier = Dates.identifier
-                                INNER JOIN Images ON Articles.identifier = Images.identifier
-                                INNER JOIN Themes ON Articles.identifier = Themes.identifier
-                                WHERE Articles.UrlArticle LIKE '%". substr(Request::url(), strrpos(Request::url(), '/', '0') + 1) ."%'") as $card)
+        @foreach($ARTICLE as $card)
 
             <div class="__article-nb{{$card->identifier}}__" data-article="{{$card->identifier}}" data-url="{{$card->UrlArticle}}">
 
@@ -45,7 +34,7 @@ $Google->setTarget('en');
                         </div>
 
                         <div class="__article_url__">
-                            <a href="{{ $card->UrlArticle ?? ''}}" target="_blank">
+                            <a href="{{ $card->UrlArticle ?? ''}}" rel="nofollow noreferrer" target="_blank">
                                 <button>{{ $Google->translate("Aller à cet article") }}</button>
                             </a>
                         </div>
@@ -64,7 +53,7 @@ $Google->setTarget('en');
                         ?>
                         @foreach(explode(' ', $card->Theme) as $theme)
                             @if (strlen($theme) > 5)
-                                <a href="/news/keyword/{{ strtolower(strtr($theme, $unwanted_array)) }}"> <span class="__article_keyword__"> {{ $Google->translate(strtolower($theme) ?? '') }} </span> </a>
+                                    <a href="/news/word/{{ strtolower(strtr($theme, $unwanted_array)) }}"> <span class="__article_keyword__"> {{ $Google->translate(strtolower($theme) ?? '') }} </span> </a>
                             @endif
                         @endforeach
                     </div>

@@ -1,10 +1,3 @@
-<?php
-use Stichoza\GoogleTranslate\GoogleTranslate;
-$Google = new GoogleTranslate();
-$Google->setSource('fr');
-$Google->setTarget('en');
-?>
-
 @include('__header__')
 @include('__navbar__')
 
@@ -12,11 +5,7 @@ $Google->setTarget('en');
 
     <div class="__cards__">
 
-        @foreach(DB::select('SELECT * FROM `Articles`
-                                INNER JOIN Dates ON Articles.identifier = Dates.identifier
-                                INNER JOIN Images ON Articles.identifier = Images.identifier
-                                INNER JOIN Themes ON Articles.identifier = Themes.identifier
-                                WHERE Themes.ThemePrincipal = " Technologique " LIMIT 5') as $card)
+        @foreach($TECH_CARDS as $card)
 
             <div class="__article__card__ __article__nb__{{ $card->identifier }}__ ">
 
@@ -33,7 +22,7 @@ $Google->setTarget('en');
                 </div>
 
                 <div class="__article_url__">
-                    <a href="/news/article/{{ substr($card->UrlArticle, strrpos($card->UrlArticle, '/', '0') + 1) }}">
+                    <a href="/news/{{ substr($card->UrlArticle, strrpos($card->UrlArticle, '/', '0') + 1) }}">
                         <button>{{ $Google->translate("Voir l'article") }}</button>
                     </a>
                 </div>
@@ -46,11 +35,7 @@ $Google->setTarget('en');
 
     <div class="__cards__">
 
-        @foreach(DB::select('SELECT * FROM `Articles`
-                                INNER JOIN Dates ON Articles.identifier = Dates.identifier
-                                INNER JOIN Images ON Articles.identifier = Images.identifier
-                                INNER JOIN Themes ON Articles.identifier = Themes.identifier
-                                WHERE Themes.ThemePrincipal = "Juridique" LIMIT 5') as $card)
+        @foreach($JURI_CARDS as $card)
 
             <div class="__article__card__ __article__nb__{{ $card->identifier }}__ ">
 
@@ -67,7 +52,7 @@ $Google->setTarget('en');
                 </div>
 
                 <div class="__article_url__">
-                    <a href="/news/article/{{ substr($card->UrlArticle, strrpos($card->UrlArticle, '/', '0') + 1) }}">
+                    <a href="/news/{{ substr($card->UrlArticle, strrpos($card->UrlArticle, '/', '0') + 1) }}">
                         <button>{{ $Google->translate("Voir l'article") }}</button>
                     </a>
                 </div>
