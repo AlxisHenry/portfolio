@@ -40,7 +40,7 @@ $keyword = substr(Request::url(), strrpos(Request::url(), '/', '0') + 1);
                     </div>
 
                     <div class="__article_url__">
-                        <a href="/board/article/{{ substr($card->UrlArticle, strrpos($card->UrlArticle, '/', '0') + 1) }}">
+                        <a href="/news/article/{{ substr($card->UrlArticle, strrpos($card->UrlArticle, '/', '0') + 1) }}">
                             <button>{{ $Google->translate("Voir l'article") }}</button>
                         </a>
                     </div>

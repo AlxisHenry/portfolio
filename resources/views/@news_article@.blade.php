@@ -64,7 +64,7 @@ $Google->setTarget('en');
                         ?>
                         @foreach(explode(' ', $card->Theme) as $theme)
                             @if (strlen($theme) > 5)
-                                <a href="/board/keyword/{{ strtolower(strtr($theme, $unwanted_array)) }}"> <span class="__article_keyword__"> {{ $Google->translate(strtolower($theme) ?? '') }} </span> </a>
+                                <a href="/news/keyword/{{ strtolower(strtr($theme, $unwanted_array)) }}"> <span class="__article_keyword__"> {{ $Google->translate(strtolower($theme) ?? '') }} </span> </a>
                             @endif
                         @endforeach
                     </div>
