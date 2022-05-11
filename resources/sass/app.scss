@@ -446,14 +446,14 @@ $__navbarBackgroundColor__: #99BFAD;
                     align-items: center;
                     justify-content: flex-start;
                     gap: 60px;
+                    a {
+                        .language_icon {
+                            width: 2.2rem;
 
-                    .language_icon {
-                        width: 2.2rem;
-
-                        &:last-child {
-                            width: 3.5rem;
+                            &:last-child {
+                                width: 3.5rem;
+                            }
                         }
-
                     }
                 }
 
@@ -519,14 +519,15 @@ $__navbarBackgroundColor__: #99BFAD;
                         align-items: center;
                         justify-content: flex-start;
                         gap: 50px;
+                        a {
+                            .language_icon {
+                                width: 2.2rem;
 
-                        .language_icon {
-                            width: 2.2rem;
+                                &:last-child {
+                                    width: 3.5rem;
+                                }
 
-                            &:last-child {
-                                width: 3.5rem;
                             }
-
                         }
                     }
 
@@ -573,17 +574,17 @@ $__navbarBackgroundColor__: #99BFAD;
                         align-items: center;
                         justify-content: flex-start;
                         gap: 25px;
+                        a {
+                            .language_icon {
+                                width: 90px;
 
-                        .language_icon {
-                            width: 90px;
+                                &:last-child {
+                                    width: 140px;
+                                }
 
-                            &:last-child {
-                                width: 140px;
                             }
-
                         }
                     }
-
                 }
                 .__main__asset__ {
                     display: none;

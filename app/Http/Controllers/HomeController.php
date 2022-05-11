@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Stichoza\GoogleTranslate\GoogleTranslate;
 
 class HomeController extends Controller
@@ -22,6 +23,23 @@ class HomeController extends Controller
         return $Google;
     }
 
+    public function Languages():array {
+
+        $LANGUAGES_SVG = Storage::disk('public-content')->allFiles('assets/svg/languages');
+
+        sort($LANGUAGES_SVG);
+        $LANGUAGES = [];
+
+        foreach ($LANGUAGES_SVG as $item) {
+            $language_name = explode('.', $item)[1];
+            $LANGUAGES[] = "<a href='/home/$language_name'><img src='". url($item) ."' alt='$language_name' title='$language_name' class='language_icon'></a>";
+
+        }
+
+        return $LANGUAGES;
+
+    }
+
     public function Home() {
         $Google = $this->GoogleTranslate();
 
@@ -35,6 +53,7 @@ class HomeController extends Controller
 
         return view('homepage', ['title' => 'Home - Henry Alexis',
                                       'navbar' => 'home',
+                                      'languages' => $this->Languages(),
                                       'og_description' => 'Portfolio Henry Alexis - Homepage',
                                       'spoiler_cards' => $spoiler_cards,
                                       'Google' => $Google]);
