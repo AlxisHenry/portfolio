@@ -1,7 +1,10 @@
+import ScrollReveal from 'scrollreveal'
+
 const burgerButton = document.querySelector('.burger-button')
 const burgerElement = document.querySelector('.burger-element')
 const burgerMouvement = document.querySelector('.__presentation__')
 const ArticleElement = document.querySelector('.__target__article__')
+const LanguagesIcons = document.querySelectorAll('.language_icon')
 
 function toggleNav() {
 
@@ -73,8 +76,19 @@ function HoverNavbarMenu() {
     }
 }
 
-toggleNav()
-HoverNavbarMenu()
+function HomepageReveal() {
+
+    let Icon = 0;
+    for(let i = 150; i < (150 * (LanguagesIcons.length + 1)); i++) {
+        ScrollReveal().reveal(LanguagesIcons[Icon], {delay: i})
+        i = i+150
+        Icon++
+    }
+
+    ScrollReveal().reveal('.name', {delay: 75})
+    ScrollReveal().reveal('.job', {delay: 150})
+
+}
 
 window.addEventListener('resize', () => {
  if (burgerMouvement) {
@@ -97,6 +111,14 @@ window.addEventListener('resize', () => {
          }
      }
  }
+})
+
+window.addEventListener('load', () => {
+
+    toggleNav()
+    HoverNavbarMenu()
+    HomepageReveal()
+
 })
 
 
