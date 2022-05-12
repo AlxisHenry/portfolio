@@ -2,6 +2,5 @@
 
 @section('content')
 
-    @include('sections.errors.503')
 
 @stop

@@ -33,7 +33,7 @@ class HomeController extends Controller
 
         foreach ($LANGUAGES_SVG as $item) {
             $language_name = explode('.', $item)[1];
-            $LANGUAGES[] = "<a href='/home/$language_name'><img src='". url($item) ."' alt='$language_name' title='$language_name' class='language_icon'></a>";
+            $LANGUAGES[] = "<a href='/home/language/$language_name'><img src='". url($item) ."' alt='$language_name' title='$language_name' class='language_icon'></a>";
 
         }
 
@@ -52,7 +52,7 @@ class HomeController extends Controller
             ->where('Articles.identifier', '<', 163)
             ->get();
 
-        return view('homepage', ['title' => 'Home - Henry Alexis',
+        return view('layouts.homepage', ['title' => 'Home - Henry Alexis',
                                       'navbar' => 'home',
                                       'languages' => $this->Languages(),
                                       'og_description' => 'Portfolio Henry Alexis - Homepage',

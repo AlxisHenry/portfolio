@@ -1,4 +1,3 @@
-
 <footer class="__footer__">
 
       <div class="__footer__top__">

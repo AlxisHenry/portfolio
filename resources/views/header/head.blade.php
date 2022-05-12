@@ -31,4 +31,5 @@
     <link rel="mask-icon" href="{{ url('assets/icons/favicon.ico') }}" color="#009af6">
 </head>
 <body>
-<span class="cursor hidden"></span>
+
+@include('header.cursor')

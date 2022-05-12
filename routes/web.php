@@ -32,7 +32,7 @@ Route::prefix('admin')->group(function() {
 Route::controller(HomeController::class)->group(function () {
 
     Route::get('home', [HomeController::class, 'Home'])->name('home');
-    Route::get('home/language/{LANGUAGE}', [HomeController::class, 'Language'])->name('home_language');
+    Route::get('home/dev/{LANGUAGE}', [HomeController::class, 'Language'])->name('home_language');
 
 });
 

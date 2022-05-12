@@ -40,6 +40,7 @@ class NewsController extends Controller
                       ->join('Images', 'Articles.identifier', '=', 'Images.identifier')
                       ->join('Themes', 'Articles.identifier', '=', 'Themes.identifier')
                       ->where('Themes.ThemePrincipal', '=', ' Technologique ')
+                      ->offset(0)
                       ->limit(5)
                       ->get();
 
@@ -48,15 +49,16 @@ class NewsController extends Controller
                       ->join('Images', 'Articles.identifier', '=', 'Images.identifier')
                       ->join('Themes', 'Articles.identifier', '=', 'Themes.identifier')
                       ->where('Themes.ThemePrincipal', '=', 'Juridique')
+                      ->offset(0)
                       ->limit(5)
                       ->get();
 
-        return view('@news@', ['title' => 'News - Henry Alexis',
-                                    'navbar' => 'news',
-                                    'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
-                                    'TECH_CARDS' => $TECH_CARDS,
-                                    'JURI_CARDS' => $JURI_CARDS,
-                                    'Google' => $Google]);
+        return view('layouts.news', ['title' => 'News - Henry Alexis',
+                                         'navbar' => 'news',
+                                         'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
+                                         'TECH_CARDS' => $TECH_CARDS,
+                                         'JURI_CARDS' => $JURI_CARDS,
+                                         'Google' => $Google]);
     }
 
     /**
@@ -72,11 +74,12 @@ class NewsController extends Controller
                    ->where('Articles.UrlArticle', 'like', '%' . $ARTICLE_URL_NAME . '%')
                    ->get();
 
-        return view('@news_article@', ['title' => 'News - Henry Alexis',
-            'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
-            'ARTICLE' => $ARTICLE,
-            'unwanted_array' => $this->UnwantedCharacters(),
-            'Google' => $Google]);
+        return view('layouts.article', ['title' => 'News - Henry Alexis',
+                                            'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
+                                            'navbar' => 'null',
+                                            'ARTICLE' => $ARTICLE,
+                                            'unwanted_array' => $this->UnwantedCharacters(),
+                                            'Google' => $Google]);
 
     }
 
@@ -92,11 +95,12 @@ class NewsController extends Controller
                                          ->limit(10)
                                          ->get();
 
-        return view('@news_keyword@', ['title' => $KEYWORD . ' - Henry Alexis',
-            'KEYWORD' => $KEYWORD,
-            'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
-            'CORRESPONDING_KEYWORD_ARTICLE' => $CORRESPONDING_KEYWORD_ARTICLE,
-            'Google' => $Google]);
+        return view('layouts.keyword', ['title' => $KEYWORD . ' - Henry Alexis',
+                                            'KEYWORD' => $KEYWORD,
+                                            'navbar' => 'null',
+                                            'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
+                                            'CORRESPONDING_KEYWORD_ARTICLE' => $CORRESPONDING_KEYWORD_ARTICLE,
+                                            'Google' => $Google]);
 
     }
 

@@ -23,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer(['errors.404', 'errors::404'], function ($view) {
+            $view->with(['navbar' => 'null']);
+        });
+        view()->composer(['errors.503', 'errors::503'], function ($view) {
+            $view->with(['navbar' => 'null']);
+        });
     }
 }

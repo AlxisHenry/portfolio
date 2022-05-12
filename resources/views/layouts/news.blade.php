@@ -1,5 +1,6 @@
-@include('__header__')
-@include('__navbar__')
+@extends('layouts.master')
+
+@section('content')
 
 <section class="__spoiler__cards__ test layout-maxed">
 
@@ -7,7 +8,7 @@
 
         @foreach($TECH_CARDS as $card)
 
-            @include('__card__')
+            @include('component.articles.card')
 
         @endforeach
 
@@ -17,7 +18,7 @@
 
         @foreach($JURI_CARDS as $card)
 
-            @include('__card__')
+            @include('component.articles.card')
 
         @endforeach
 
@@ -25,4 +26,4 @@
 
 </section>
 
-@include('__footer__')
+@stop

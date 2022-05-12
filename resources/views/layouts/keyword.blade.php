@@ -1,5 +1,6 @@
-@include('__header__')
-@include('__navbar__clean__')
+@extends('layouts.master')
+
+@section('content')
 
 <section class="__spoiler__cards__ __keywords__cards__">
 
@@ -9,7 +10,7 @@
 
         @foreach($CORRESPONDING_KEYWORD_ARTICLE as $card)
 
-            @include('__card__')
+            @include('component.articles.card')
 
         @endforeach
 
@@ -17,4 +18,4 @@
 
 </section>
 
-@include('__footer__')
+@stop
