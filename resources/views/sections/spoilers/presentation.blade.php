@@ -2,10 +2,14 @@
     <div class="__presentation__separator__"></div>
     <div class="__main__presentation__">
         <div class="__me__">
-            <div class="name">
+            <div class="name"
+                 data-aos="fade-right"
+            >
                 Henry Alexis
             </div>
-            <div class="job">
+            <div class="job"
+                 data-aos="fade-right"
+            >
                 Web Developer
             </div>
             <div class="__language__">

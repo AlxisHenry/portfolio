@@ -34,14 +34,14 @@ class HomeController extends Controller
         foreach ($LANGUAGES_SVG as $item) {
             $language_name = explode('.', $item)[1];
             $LANGUAGES[] = "<a href='/home/language/$language_name'><img src='". url($item) ."' alt='$language_name' title='$language_name' class='language_icon'></a>";
-
         }
 
         return $LANGUAGES;
 
     }
 
-    public function Home() {
+    public function Home()
+    {
         $Google = $this->GoogleTranslate();
 
         $spoiler_cards = DB::table('Articles')
@@ -53,11 +53,18 @@ class HomeController extends Controller
             ->get();
 
         return view('layouts.homepage', ['title' => 'Home - Henry Alexis',
-                                      'navbar' => 'home',
-                                      'languages' => $this->Languages(),
-                                      'og_description' => 'Portfolio Henry Alexis - Homepage',
-                                      'spoiler_cards' => $spoiler_cards,
-                                      'Google' => $Google]);
+                                        'navbar' => 'home',
+                                        'languages' => $this->Languages(),
+                                        'og_description' => 'Portfolio Henry Alexis - Homepage',
+                                        'spoiler_cards' => $spoiler_cards,
+                                        'Google' => $Google]);
     }
 
+    public function WikiLang(string $LANGUAGE)
+    {
+
+        $LANGUAGE_TO_SCRAP = '';
+
+        return view('layouts.language', ['title' => 'Language - Henry Alexis', 'LANGUAGE' => $LANGUAGE]);
+    }
 }

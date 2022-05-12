@@ -1,4 +1,10 @@
 import ScrollReveal from 'scrollreveal'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({
+    duration: 2000
+});
 
 const burgerButton = document.querySelector('.burger-button')
 const burgerElement = document.querySelector('.burger-element')
@@ -79,14 +85,11 @@ function HoverNavbarMenu() {
 function HomepageReveal() {
 
     let Icon = 0;
-    for(let i = 150; i < (150 * (LanguagesIcons.length + 1)); i++) {
+    for(let i = 125; i < (125 * (LanguagesIcons.length + 1)); i++) {
         ScrollReveal().reveal(LanguagesIcons[Icon], {delay: i})
-        i = i+150
+        i = i+125
         Icon++
     }
-
-    ScrollReveal().reveal('.name', {delay: 75})
-    ScrollReveal().reveal('.job', {delay: 150})
 
 }
 
@@ -115,9 +118,9 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('load', () => {
 
+    HomepageReveal()
     toggleNav()
     HoverNavbarMenu()
-    HomepageReveal()
 
 })
 
