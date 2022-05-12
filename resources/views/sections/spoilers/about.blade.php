@@ -7,10 +7,11 @@
         <div class="__about__">
             <span class="_about_descript_">
 
-                    Hi, I'm Henry Alexis, Web Developer since 2022, based in Strasbourg, France. <br>
-                    Hope to become Full Stack Developer. <br>
-                    I'm ready to learn every language if I need to use it. <br>
-                    My favorites langague is Javascript. <br>
+                    Hi, I'm Henry Alexis, Web Developer since 2022, based in Strasbourg, France.
+                    I'm currently student at the <a href="https://www.ccicampus.fr/" rel="noreferrer nofollow">CCI Campus</a> of Strasbourg.
+                    Mon alternance au sein de la société <a href="https://www.timken.com/fr/" rel="noreferrer nofollow">Timken</a> me permet
+                    d'appronfondir mes connaissances en tant que développeur. Vous pouvez retrouver <a href="/projects/inventory-managment">ici</a> le projet que j'y réalise seul.
+                    Mon objectif principal étant de faire de ma passion, mon métier.
 
             </span>
 

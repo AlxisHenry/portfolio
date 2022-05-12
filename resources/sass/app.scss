@@ -439,20 +439,55 @@ $__navbarBackgroundColor__: #99BFAD;
                 justify-content: center;
                 align-items: flex-start;
 
+                div {
+                    p {
+                        display: inline-block;
+                        position: relative;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            height: 100%;
+                            width: 3px;
+                            background: black;
+                            right: -15px;
+                            top: 0;
+                            animation: cursor 1s infinite;
+                        }
+
+                        &.disabled-animation-writer {
+                            &:after {
+                                width: 0;
+                            }
+                        }
+                    }
+                }
+
                 .name {
-                    font-family: $_family_poppins;
-                    font-weight: 800;
-                    letter-spacing: 1px;
-                    font-size: 6.5rem;
-                    text-transform: uppercase;
+                    min-width: 640px;
+                    p {
+                        span {
+                            font-family: $_family_poppins;
+                            font-weight: 800;
+                            letter-spacing: 1px;
+                            font-size: 6.5rem;
+                            text-transform: uppercase;
+                        }
+                    }
                 }
 
                 .job {
-                    font-family: $_family_poppins;
-                    letter-spacing: 1px;
-                    font-size: 4.2rem;
-                    font-weight: 500;
+                    p {
+                        span {
+                            font-family: $_family_poppins;
+                            letter-spacing: 1px;
+                            font-size: 4.2rem;
+                            font-weight: 500;
+                        }
+                    }
                 }
+
                 .__language__ {
                     margin-top: 32px;
                     display: flex;
@@ -489,6 +524,18 @@ $__navbarBackgroundColor__: #99BFAD;
 
 }
 
+@keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 1200px){
     @keyframes MoovElement {
         0% {
@@ -520,12 +567,20 @@ $__navbarBackgroundColor__: #99BFAD;
                 .__me__ {
 
                     .name {
-                        font-size: 4rem;
-                        margin-top: 100px;
+                            p {
+                                span {
+                                    font-size: 4rem;
+                                    margin-top: 100px;
+                                }
+                            }
                     }
 
                     .job {
-                        font-size: 2.5rem;
+                            p {
+                                span {
+                                    font-size: 2.5rem;
+                                }
+                            }
                     }
                     .__language__ {
                         margin-top: 32px;
@@ -575,12 +630,20 @@ $__navbarBackgroundColor__: #99BFAD;
                 .__me__ {
 
                     .name {
-                        font-size: 2rem;
-                        margin-top: 200px;
+                        p {
+                            span {
+                                font-size: 2rem;
+                                margin-top: 200px;
+                            }
+                        }
                     }
 
                     .job {
-                        font-size: 1.5rem;
+                        p {
+                            span {
+                                font-size: 1.5rem;
+                            }
+                        }
                     }
                     .__language__ {
                         margin-top: 32px;
@@ -675,6 +738,7 @@ $__navbarBackgroundColor__: #99BFAD;
                 height: 400px;
 
                 ._about_descript_ {
+                    margin-bottom: 40px;
                     margin-left: 30px;
                     text-align: justify;
                     font-size: 18px;

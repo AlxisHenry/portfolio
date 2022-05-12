@@ -6490,14 +6490,36 @@ body {
   justify-content: center;
   align-items: flex-start;
 }
+.__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ div p {
+  display: inline-block;
+  position: relative;
+}
+.__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ div p:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 3px;
+  background: black;
+  right: -15px;
+  top: 0;
+  -webkit-animation: cursor 1s infinite;
+          animation: cursor 1s infinite;
+}
+.__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ div p.disabled-animation-writer:after {
+  width: 0;
+}
 .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name {
+  min-width: 640px;
+}
+.__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name p span {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
   font-size: 6.5rem;
   text-transform: uppercase;
 }
-.__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .job {
+.__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .job p span {
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
   font-size: 4.2rem;
@@ -6527,6 +6549,29 @@ body {
      object-fit: cover;
 }
 
+@-webkit-keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 1200px) {
   @-webkit-keyframes MoovElement {
     0% {
@@ -6560,11 +6605,11 @@ body {
       margin-left: 20px;
     }
   }
-  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name {
+  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name p span {
     font-size: 4rem;
     margin-top: 100px;
   }
-  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .job {
+  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .job p span {
     font-size: 2.5rem;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .__language__ {
@@ -6585,11 +6630,11 @@ body {
   }
 }
 @media screen and (max-width: 500px) {
-  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name {
+  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name p span {
     font-size: 2rem;
     margin-top: 200px;
   }
-  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .job {
+  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .job p span {
     font-size: 1.5rem;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .__language__ {
@@ -6689,6 +6734,7 @@ body {
   height: 400px;
 }
 .__spoiler__about__ .__about__card__ .__about__ ._about_descript_ {
+  margin-bottom: 40px;
   margin-left: 30px;
   text-align: justify;
   font-size: 18px;

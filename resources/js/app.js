@@ -1,6 +1,40 @@
 import ScrollReveal from 'scrollreveal'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import anime from 'animejs/lib/anime.es.js';
+import Typed from 'typed.js';
+
+const Name = document.querySelector('.name p')
+const Job = document.querySelector('.job p')
+const name = "Henry alexis"
+const job = "Web Developer"
+
+function typetest(job, index) {
+    if(index < job.length) {
+        setTimeout(() => {
+            Job.innerHTML += `<span>${job[index]}</span>`
+            typetest(job, index + 1)
+        }, 125);
+    } else {
+        Job.classList.add('disabled-animation-writer')
+    }
+}
+
+function typewriter(name, index){
+    if(index < name.length) {
+        setTimeout(() => {
+            Name.innerHTML += `<span>${name[index]}</span>`
+            typewriter(name, index + 1)
+        }, 125);
+    } else {
+        Name.classList.add('disabled-animation-writer')
+    }
+}
+setTimeout(() => {
+    typewriter(name, 0)
+    typetest(job, 0)
+}, 0);
+
 
 AOS.init({
     duration: 2000
@@ -85,9 +119,9 @@ function HoverNavbarMenu() {
 function HomepageReveal() {
 
     let Icon = 0;
-    for(let i = 125; i < (125 * (LanguagesIcons.length + 1)); i++) {
+    for(let i = 0; i < (240 * (LanguagesIcons.length + 1)); i++) {
         ScrollReveal().reveal(LanguagesIcons[Icon], {delay: i})
-        i = i+125
+        i = i+240
         Icon++
     }
 
