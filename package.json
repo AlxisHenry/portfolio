@@ -19,6 +19,7 @@
         "sass-loader": "^12.6.0"
     },
     "dependencies": {
+        "aos": "^2.3.4",
         "scrollreveal": "^4.0.9"
     }
 }
