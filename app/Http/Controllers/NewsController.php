@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use League\Flysystem\Config;
+use Illuminate\Routing\Controller;
 
 class NewsController extends Controller
 {

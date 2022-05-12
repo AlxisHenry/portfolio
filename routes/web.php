@@ -67,3 +67,4 @@ Route::prefix('news')->group(function () {
 });
 
 Route::redirect('/', 'home');
+Route::view('/test/downloads', 'test');
