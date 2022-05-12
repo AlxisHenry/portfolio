@@ -2,9 +2,9 @@
     "private": true,
     "scripts": {
         "dev": "npm run development",
-            "development": "mix",
+        "development": "mix",
         "prod": "npm run production",
-            "production": "mix --production",
+        "production": "mix --production",
         "watch": "mix watch",
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot"
@@ -17,5 +17,8 @@
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.51.0",
         "sass-loader": "^12.6.0"
+    },
+    "dependencies": {
+        "scrollreveal": "^4.0.9"
     }
 }
