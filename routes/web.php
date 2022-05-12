@@ -12,6 +12,13 @@ use App\Http\Controllers\DownloadLinks;
 
 /* RouteServiceProvider */
 
+Route::controller(HomeController::class)->group(function () {
+
+    Route::get('home', [HomeController::class, 'Home'])->name('home');
+    Route::get('/home/language/{LANGUAGE}', [HomeController::class, 'WikiLang'])->name('home_language');
+
+});
+
 Route::prefix('admin')->group(function() {
 
     Route::middleware('ip')->group(function() {
@@ -26,13 +33,6 @@ Route::prefix('admin')->group(function() {
         });
 
     });
-
-});
-
-Route::controller(HomeController::class)->group(function () {
-
-    Route::get('home', [HomeController::class, 'Home'])->name('home');
-    Route::get('home/dev/{LANGUAGE}', [HomeController::class, 'Language'])->name('home_language');
 
 });
 
@@ -58,11 +58,11 @@ Route::controller(BoardController::class)->group(function () {
 
 Route::prefix('news')->group(function () {
 
-   Route::controller(NewsController::class)->group(function () {
-       Route::get('/', [NewsController::class, 'News'])->name('news');
-       Route::get('/{ARTICLE_URL_NAME}', [NewsController::class, 'NewsArticle'])->name('news_article');
-       Route::get('/word/{KEYWORD}', [NewsController::class, 'NewsKeyword'])->name('news_keyword');
-   });
+    Route::controller(NewsController::class)->group(function () {
+        Route::get('/', [NewsController::class, 'News'])->name('news');
+        Route::get('/{ARTICLE_URL_NAME}', [NewsController::class, 'NewsArticle'])->name('news_article');
+        Route::get('/word/{KEYWORD}', [NewsController::class, 'NewsKeyword'])->name('news_keyword');
+    });
 
 });
 
