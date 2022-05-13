@@ -44,12 +44,12 @@ class HomeController extends Controller
     {
         $Google = $this->GoogleTranslate();
 
-        $spoiler_cards = DB::table('Articles')
-            ->join('Dates', 'Articles.identifier', '=', 'Dates.identifier')
-            ->join('Images', 'Articles.identifier', '=', 'Images.identifier')
-            ->join('Themes', 'Articles.identifier', '=', 'Themes.identifier')
-            ->where('Articles.identifier', '>', 160)
-            ->where('Articles.identifier', '<', 163)
+        $spoiler_cards = DB::table('NEWS_ARTICLE')
+            ->join('NEWS_DATE', 'NEWS_ARTICLE.identifier', '=', 'NEWS_DATE.identifier')
+            ->join('NEWS_IMAGE', 'NEWS_ARTICLE.identifier', '=', 'NEWS_IMAGE.identifier')
+            ->join('NEWS_THEME', 'NEWS_ARTICLE.identifier', '=', 'NEWS_THEME.identifier')
+            ->where('NEWS_ARTICLE.identifier', '>', 160)
+            ->where('NEWS_ARTICLE.identifier', '<', 163)
             ->get();
 
         return view('layouts.homepage', ['title' => 'Home - Henry Alexis',
