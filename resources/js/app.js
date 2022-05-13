@@ -154,13 +154,24 @@ const Themes = () => {
 
 }
 
+const LoadingPosition = (e) => {
+
+    const LoadingIndicator = document.querySelector('.__state__indicator__')
+    const TotalHeight = document.body.offsetHeight
+    const PassedHeight = Math.round(window.scrollY + window.innerHeight)
+    const LoadingState = Math.round((PassedHeight / TotalHeight) * 100)
+    LoadingIndicator.style.width = LoadingState + '%'
+    console.log(TotalHeight,PassedHeight, LoadingState)
+
+}
+
 const burgerButton = document.querySelector('.burger-button')
 const burgerElement = document.querySelector('.burger-element')
 const burgerMouvement = document.querySelector('.__presentation__')
 const ArticleElement = document.querySelector('.__target__article__')
 const LanguagesIcons = document.querySelectorAll('.language_icon')
 
-window.addEventListener('load', () => {
+window.addEventListener('load', (e) => {
 
     AOS.init({
         duration: 2000
@@ -172,11 +183,18 @@ window.addEventListener('load', () => {
     Themes()
     toggleNav()
     HoverNavbarMenu()
+    LoadingPosition(e)
 
 })
 
 window.addEventListener('resize', () => {
 
     ResizeNavAnimation()
+
+})
+
+window.addEventListener('scroll', (e) => {
+
+    LoadingPosition(e)
 
 })

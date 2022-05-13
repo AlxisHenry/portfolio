@@ -6112,6 +6112,24 @@ body {
   z-index: 99;
 }
 
+.__loading__bar__ {
+  position: fixed;
+  top: 0;
+  height: 3px;
+  background-color: gray;
+  width: 100%;
+}
+.__loading__bar__ .__state__indicator__ {
+  -webkit-animation: All ease-in 300ms;
+          animation: All ease-in 300ms;
+  position: relative;
+  height: 3px;
+  top: 0;
+  left: 0;
+  width: 0;
+  background-color: #f7fafb;
+}
+
 /* END - Globals */
 /* Navbar */
 .__navbar__ {

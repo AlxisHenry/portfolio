@@ -1507,12 +1507,21 @@ var Themes = function Themes() {
   }
 };
 
+var LoadingPosition = function LoadingPosition(e) {
+  var LoadingIndicator = document.querySelector('.__state__indicator__');
+  var TotalHeight = document.body.offsetHeight;
+  var PassedHeight = Math.round(window.scrollY + window.innerHeight);
+  var LoadingState = Math.round(PassedHeight / TotalHeight * 100);
+  LoadingIndicator.style.width = LoadingState + '%';
+  console.log(TotalHeight, PassedHeight, LoadingState);
+};
+
 var burgerButton = document.querySelector('.burger-button');
 var burgerElement = document.querySelector('.burger-element');
 var burgerMouvement = document.querySelector('.__presentation__');
 var ArticleElement = document.querySelector('.__target__article__');
 var LanguagesIcons = document.querySelectorAll('.language_icon');
-window.addEventListener('load', function () {
+window.addEventListener('load', function (e) {
   aos__WEBPACK_IMPORTED_MODULE_1___default().init({
     duration: 2000
   });
@@ -1522,9 +1531,13 @@ window.addEventListener('load', function () {
   Themes();
   toggleNav();
   HoverNavbarMenu();
+  LoadingPosition(e);
 });
 window.addEventListener('resize', function () {
   ResizeNavAnimation();
+});
+window.addEventListener('scroll', function (e) {
+  LoadingPosition(e);
 });
 
 /***/ }),

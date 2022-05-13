@@ -31,5 +31,6 @@
     <link rel="mask-icon" href="{{ url('assets/icons/favicon.ico') }}" color="#009af6">
 </head>
 <body>
+<div class="__loading__bar__"><div class="__state__indicator__"></div></div>
 
 @include('header.cursor')
