@@ -6363,8 +6363,8 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .__footer__ .__footer__main__:hover {
+  transition: All ease-in-out 300ms;
   cursor: pointer;
-  transition: color ease-in-out 300ms;
   color: black;
 }
 
@@ -6613,11 +6613,11 @@ body {
     }
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name p span {
-    font-size: 4rem;
+    font-size: 6rem;
     margin-top: 100px;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .job p span {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .__language__ {
     margin-top: 32px;
@@ -6627,22 +6627,24 @@ body {
     gap: 50px;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .__language__ a .language_icon {
-    width: 2.2rem;
+    width: 1.8rem;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .__language__ a .language_icon:last-child {
-    width: 3.5rem;
+    width: 2.5rem;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__main__asset__ {
     display: none;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name {
+    margin-top: 100px;
+  }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name p span {
-    font-size: 2rem;
-    margin-top: 200px;
+    font-size: 3.8rem;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .job p span {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .__language__ {
     margin-top: 32px;
@@ -6652,12 +6654,28 @@ body {
     gap: 25px;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .__language__ a .language_icon {
-    width: 90px;
+    width: 60px;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .__language__ a .language_icon:last-child {
-    width: 140px;
+    width: 120px;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__main__asset__ {
+    display: none;
+  }
+}
+@media screen and (max-width: 430px) {
+  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name {
+    min-width: auto;
+  }
+  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name p span {
+    width: 60px;
+    font-size: 3rem;
+    margin-top: 100px;
+  }
+  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .job p span {
+    font-size: 1.8rem;
+  }
+  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .__language__ {
     display: none;
   }
 }

@@ -1357,7 +1357,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function writeJob(job, index) {
+var writeJob = function writeJob(job, index) {
   var Job = document.querySelector('.job p');
 
   if (index < job.length) {
@@ -1368,9 +1368,9 @@ function writeJob(job, index) {
   } else {
     Job.classList.add('disabled-animation-writer');
   }
-}
+};
 
-function writeName(name, index) {
+var writeName = function writeName(name, index) {
   var Name = document.querySelector('.name p');
 
   if (index < name.length) {
@@ -1381,9 +1381,9 @@ function writeName(name, index) {
   } else {
     Name.classList.add('disabled-animation-writer');
   }
-}
+};
 
-function toggleNav() {
+var toggleNav = function toggleNav() {
   if (burgerButton) {
     burgerButton.addEventListener('click', function (e) {
       burgerButton.classList.toggle('is-active');
@@ -1429,9 +1429,33 @@ function toggleNav() {
       e.preventDefault();
     }, false);
   }
-}
+};
 
-function HoverNavbarMenu() {
+var ResizeNavAnimation = function ResizeNavAnimation() {
+  if (burgerMouvement) {
+    if (window.innerWidth <= 1500) {
+      burgerMouvement.classList.remove('moov_this_element_reverse');
+      burgerMouvement.classList.remove('moov_this_element');
+    } else {
+      if (burgerElement.classList.contains('NavbarUpAnimation')) {
+        burgerMouvement.classList.add('moov_this_element');
+      }
+    }
+  }
+
+  if (ArticleElement) {
+    if (window.innerWidth <= 1500) {
+      ArticleElement.classList.remove('moov-article-element');
+      ArticleElement.classList.remove('reverse-moov-article-element');
+    } else {
+      if (burgerElement.classList.contains('NavbarUpAnimation')) {
+        ArticleElement.classList.add('moov-article-element');
+      }
+    }
+  }
+};
+
+var HoverNavbarMenu = function HoverNavbarMenu() {
   var NavTitle = document.querySelectorAll('.burger-element a:not(.nav-active)');
 
   if (NavTitle) {
@@ -1449,9 +1473,9 @@ function HoverNavbarMenu() {
       });
     });
   }
-}
+};
 
-function HomepageReveal() {
+var HomepageReveal = function HomepageReveal() {
   var Icon = 0;
 
   for (var i = 0; i < 240 * (LanguagesIcons.length + 1); i++) {
@@ -1461,7 +1485,7 @@ function HomepageReveal() {
     i = i + 240;
     Icon++;
   }
-}
+};
 
 var Themes = function Themes() {
   var SwapThemeElement = document.querySelector('.__theme__main__');
@@ -1488,29 +1512,6 @@ var burgerElement = document.querySelector('.burger-element');
 var burgerMouvement = document.querySelector('.__presentation__');
 var ArticleElement = document.querySelector('.__target__article__');
 var LanguagesIcons = document.querySelectorAll('.language_icon');
-window.addEventListener('resize', function () {
-  if (burgerMouvement) {
-    if (window.innerWidth <= 1500) {
-      burgerMouvement.classList.remove('moov_this_element_reverse');
-      burgerMouvement.classList.remove('moov_this_element');
-    } else {
-      if (burgerElement.classList.contains('NavbarUpAnimation')) {
-        burgerMouvement.classList.add('moov_this_element');
-      }
-    }
-  }
-
-  if (ArticleElement) {
-    if (window.innerWidth <= 1500) {
-      ArticleElement.classList.remove('moov-article-element');
-      ArticleElement.classList.remove('reverse-moov-article-element');
-    } else {
-      if (burgerElement.classList.contains('NavbarUpAnimation')) {
-        ArticleElement.classList.add('moov-article-element');
-      }
-    }
-  }
-});
 window.addEventListener('load', function () {
   aos__WEBPACK_IMPORTED_MODULE_1___default().init({
     duration: 2000
@@ -1521,6 +1522,9 @@ window.addEventListener('load', function () {
   Themes();
   toggleNav();
   HoverNavbarMenu();
+});
+window.addEventListener('resize', function () {
+  ResizeNavAnimation();
 });
 
 /***/ }),

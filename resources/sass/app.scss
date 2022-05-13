@@ -301,8 +301,8 @@ $__navbarBackgroundColor__: #99BFAD;
         font-family: $_family_poppins;
 
         &:hover {
+            transition: All ease-in-out 300ms;
             cursor: pointer;
-            transition: color ease-in-out 300ms;
             color: black;
         }
 
@@ -576,7 +576,7 @@ $__navbarBackgroundColor__: #99BFAD;
                     .name {
                             p {
                                 span {
-                                    font-size: 4rem;
+                                    font-size: 6rem;
                                     margin-top: 100px;
                                 }
                             }
@@ -585,7 +585,7 @@ $__navbarBackgroundColor__: #99BFAD;
                     .job {
                             p {
                                 span {
-                                    font-size: 2.5rem;
+                                    font-size: 4rem;
                                 }
                             }
                     }
@@ -597,10 +597,10 @@ $__navbarBackgroundColor__: #99BFAD;
                         gap: 50px;
                         a {
                             .language_icon {
-                                width: 2.2rem;
+                                width: 1.8rem;
 
                                 &:last-child {
-                                    width: 3.5rem;
+                                    width: 2.5rem;
                                 }
 
                             }
@@ -623,7 +623,7 @@ $__navbarBackgroundColor__: #99BFAD;
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     .__homepage__presentation__ {
 
         .__presentation__ {
@@ -637,10 +637,10 @@ $__navbarBackgroundColor__: #99BFAD;
                 .__me__ {
 
                     .name {
+                        margin-top: 100px;
                         p {
                             span {
-                                font-size: 2rem;
-                                margin-top: 200px;
+                                font-size: 3.8rem;
                             }
                         }
                     }
@@ -648,7 +648,7 @@ $__navbarBackgroundColor__: #99BFAD;
                     .job {
                         p {
                             span {
-                                font-size: 1.5rem;
+                                font-size: 2.4rem;
                             }
                         }
                     }
@@ -660,10 +660,10 @@ $__navbarBackgroundColor__: #99BFAD;
                         gap: 25px;
                         a {
                             .language_icon {
-                                width: 90px;
+                                width: 60px;
 
                                 &:last-child {
-                                    width: 140px;
+                                    width: 120px;
                                 }
 
                             }
@@ -682,6 +682,42 @@ $__navbarBackgroundColor__: #99BFAD;
             }
         }
 
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .__homepage__presentation__ {
+
+        .__presentation__ {
+
+            .__main__presentation__ {
+
+                .__me__ {
+
+                    .name {
+                        min-width: auto;
+                        p {
+                            span {
+                                width: 60px;
+                                font-size: 3rem;
+                                margin-top: 100px;
+                            }
+                        }
+                    }
+
+                    .job {
+                        p {
+                            span {
+                                font-size: 1.8rem;
+                            }
+                        }
+                    }
+                    .__language__ {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }
 

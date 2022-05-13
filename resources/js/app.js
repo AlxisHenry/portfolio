@@ -4,7 +4,7 @@ import 'aos/dist/aos.css'
 import anime from 'animejs/lib/anime.es.js'
 import Typed from 'typed.js'
 
-function writeJob(job, index) {
+const writeJob = (job, index) => {
     const Job = document.querySelector('.job p')
     if(index < job.length) {
         setTimeout(() => {
@@ -16,7 +16,7 @@ function writeJob(job, index) {
     }
 }
 
-function writeName(name, index){
+const writeName = (name, index) => {
     const Name = document.querySelector('.name p')
     if(index < name.length) {
         setTimeout(() => {
@@ -28,7 +28,7 @@ function writeName(name, index){
     }
 }
 
-function toggleNav() {
+const toggleNav = () => {
 
 if (burgerButton) {
         burgerButton.addEventListener('click', (e) => {
@@ -70,7 +70,30 @@ if (burgerButton) {
     }
 }
 
-function HoverNavbarMenu() {
+const ResizeNavAnimation = () => {
+    if (burgerMouvement) {
+        if (window.innerWidth <= 1500) {
+            burgerMouvement.classList.remove('moov_this_element_reverse')
+            burgerMouvement.classList.remove('moov_this_element')
+        } else {
+            if (burgerElement.classList.contains('NavbarUpAnimation')) {
+                burgerMouvement.classList.add('moov_this_element')
+            }
+        }
+    }
+    if (ArticleElement) {
+        if (window.innerWidth <= 1500) {
+            ArticleElement.classList.remove('moov-article-element')
+            ArticleElement.classList.remove('reverse-moov-article-element')
+        } else {
+            if (burgerElement.classList.contains('NavbarUpAnimation')) {
+                ArticleElement.classList.add('moov-article-element')
+            }
+        }
+    }
+}
+
+const HoverNavbarMenu = () => {
 
     const NavTitle = document.querySelectorAll('.burger-element a:not(.nav-active)')
 
@@ -98,7 +121,7 @@ function HoverNavbarMenu() {
     }
 }
 
-function HomepageReveal() {
+const HomepageReveal = () => {
 
     let Icon = 0
     for(let i = 0; i < (240 * (LanguagesIcons.length + 1)); i++) {
@@ -137,29 +160,6 @@ const burgerMouvement = document.querySelector('.__presentation__')
 const ArticleElement = document.querySelector('.__target__article__')
 const LanguagesIcons = document.querySelectorAll('.language_icon')
 
-window.addEventListener('resize', () => {
- if (burgerMouvement) {
-     if (window.innerWidth <= 1500) {
-     burgerMouvement.classList.remove('moov_this_element_reverse')
-     burgerMouvement.classList.remove('moov_this_element')
-     } else {
-         if (burgerElement.classList.contains('NavbarUpAnimation')) {
-             burgerMouvement.classList.add('moov_this_element')
-         }
-     }
- }
- if (ArticleElement) {
-     if (window.innerWidth <= 1500) {
-         ArticleElement.classList.remove('moov-article-element')
-         ArticleElement.classList.remove('reverse-moov-article-element')
-     } else {
-         if (burgerElement.classList.contains('NavbarUpAnimation')) {
-             ArticleElement.classList.add('moov-article-element')
-         }
-     }
- }
-})
-
 window.addEventListener('load', () => {
 
     AOS.init({
@@ -170,11 +170,13 @@ window.addEventListener('load', () => {
     writeJob('Web Developer', 0)
     HomepageReveal()
     Themes()
-
     toggleNav()
     HoverNavbarMenu()
 
 })
 
+window.addEventListener('resize', () => {
 
+    ResizeNavAnimation()
 
+})
