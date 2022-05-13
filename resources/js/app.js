@@ -1,50 +1,32 @@
 import ScrollReveal from 'scrollreveal'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import anime from 'animejs/lib/anime.es.js';
-import Typed from 'typed.js';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import anime from 'animejs/lib/anime.es.js'
+import Typed from 'typed.js'
 
-const Name = document.querySelector('.name p')
-const Job = document.querySelector('.job p')
-const name = "Henry alexis"
-const job = "Web Developer"
-
-function typetest(job, index) {
+function writeJob(job, index) {
+    const Job = document.querySelector('.job p')
     if(index < job.length) {
         setTimeout(() => {
             Job.innerHTML += `<span>${job[index]}</span>`
-            typetest(job, index + 1)
-        }, 125);
+            writeJob(job, index + 1)
+        }, 125)
     } else {
         Job.classList.add('disabled-animation-writer')
     }
 }
 
-function typewriter(name, index){
+function writeName(name, index){
+    const Name = document.querySelector('.name p')
     if(index < name.length) {
         setTimeout(() => {
             Name.innerHTML += `<span>${name[index]}</span>`
-            typewriter(name, index + 1)
-        }, 125);
+            writeName(name, index + 1)
+        }, 125)
     } else {
         Name.classList.add('disabled-animation-writer')
     }
 }
-setTimeout(() => {
-    typewriter(name, 0)
-    typetest(job, 0)
-}, 0);
-
-
-AOS.init({
-    duration: 2000
-});
-
-const burgerButton = document.querySelector('.burger-button')
-const burgerElement = document.querySelector('.burger-element')
-const burgerMouvement = document.querySelector('.__presentation__')
-const ArticleElement = document.querySelector('.__target__article__')
-const LanguagesIcons = document.querySelectorAll('.language_icon')
 
 function toggleNav() {
 
@@ -118,7 +100,7 @@ function HoverNavbarMenu() {
 
 function HomepageReveal() {
 
-    let Icon = 0;
+    let Icon = 0
     for(let i = 0; i < (240 * (LanguagesIcons.length + 1)); i++) {
         ScrollReveal().reveal(LanguagesIcons[Icon], {delay: i})
         i = i+240
@@ -126,6 +108,34 @@ function HomepageReveal() {
     }
 
 }
+
+const Themes = () => {
+
+    const SwapThemeElement = document.querySelector('.__theme__main__')
+    const Theme = SwapThemeElement.children[0]
+
+    if (SwapThemeElement) {
+        SwapThemeElement.addEventListener('click', () => {
+            if (Theme) {
+                const ActualTheme = SwapThemeElement.id
+                const SwapTo = Theme.dataset.next
+                SwapThemeElement.id = SwapTo.toLowerCase()
+                Theme.id = SwapTo.toLowerCase()
+                Theme.title = SwapTo
+                Theme.alt = SwapTo
+                Theme.dataset.next = ActualTheme
+                Theme.src = Theme.src.replace(ActualTheme, SwapTo.toLowerCase())
+            }
+        })
+    }
+
+}
+
+const burgerButton = document.querySelector('.burger-button')
+const burgerElement = document.querySelector('.burger-element')
+const burgerMouvement = document.querySelector('.__presentation__')
+const ArticleElement = document.querySelector('.__target__article__')
+const LanguagesIcons = document.querySelectorAll('.language_icon')
 
 window.addEventListener('resize', () => {
  if (burgerMouvement) {
@@ -152,7 +162,15 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('load', () => {
 
+    AOS.init({
+        duration: 2000
+    })
+
+    writeName('Henry alexis', 0)
+    writeJob('Web Developer', 0)
     HomepageReveal()
+    Themes()
+
     toggleNav()
     HoverNavbarMenu()
 

@@ -1356,45 +1356,32 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Name = document.querySelector('.name p');
-var Job = document.querySelector('.job p');
-var name = "Henry alexis";
-var job = "Web Developer";
 
-function typetest(job, index) {
+function writeJob(job, index) {
+  var Job = document.querySelector('.job p');
+
   if (index < job.length) {
     setTimeout(function () {
       Job.innerHTML += "<span>".concat(job[index], "</span>");
-      typetest(job, index + 1);
+      writeJob(job, index + 1);
     }, 125);
   } else {
     Job.classList.add('disabled-animation-writer');
   }
 }
 
-function typewriter(name, index) {
+function writeName(name, index) {
+  var Name = document.querySelector('.name p');
+
   if (index < name.length) {
     setTimeout(function () {
       Name.innerHTML += "<span>".concat(name[index], "</span>");
-      typewriter(name, index + 1);
+      writeName(name, index + 1);
     }, 125);
   } else {
     Name.classList.add('disabled-animation-writer');
   }
 }
-
-setTimeout(function () {
-  typewriter(name, 0);
-  typetest(job, 0);
-}, 0);
-aos__WEBPACK_IMPORTED_MODULE_1___default().init({
-  duration: 2000
-});
-var burgerButton = document.querySelector('.burger-button');
-var burgerElement = document.querySelector('.burger-element');
-var burgerMouvement = document.querySelector('.__presentation__');
-var ArticleElement = document.querySelector('.__target__article__');
-var LanguagesIcons = document.querySelectorAll('.language_icon');
 
 function toggleNav() {
   if (burgerButton) {
@@ -1476,6 +1463,31 @@ function HomepageReveal() {
   }
 }
 
+var Themes = function Themes() {
+  var SwapThemeElement = document.querySelector('.__theme__main__');
+  var Theme = SwapThemeElement.children[0];
+
+  if (SwapThemeElement) {
+    SwapThemeElement.addEventListener('click', function () {
+      if (Theme) {
+        var ActualTheme = SwapThemeElement.id;
+        var SwapTo = Theme.dataset.next;
+        SwapThemeElement.id = SwapTo.toLowerCase();
+        Theme.id = SwapTo.toLowerCase();
+        Theme.title = SwapTo;
+        Theme.alt = SwapTo;
+        Theme.dataset.next = ActualTheme;
+        Theme.src = Theme.src.replace(ActualTheme, SwapTo.toLowerCase());
+      }
+    });
+  }
+};
+
+var burgerButton = document.querySelector('.burger-button');
+var burgerElement = document.querySelector('.burger-element');
+var burgerMouvement = document.querySelector('.__presentation__');
+var ArticleElement = document.querySelector('.__target__article__');
+var LanguagesIcons = document.querySelectorAll('.language_icon');
 window.addEventListener('resize', function () {
   if (burgerMouvement) {
     if (window.innerWidth <= 1500) {
@@ -1500,7 +1512,13 @@ window.addEventListener('resize', function () {
   }
 });
 window.addEventListener('load', function () {
+  aos__WEBPACK_IMPORTED_MODULE_1___default().init({
+    duration: 2000
+  });
+  writeName('Henry alexis', 0);
+  writeJob('Web Developer', 0);
   HomepageReveal();
+  Themes();
   toggleNav();
   HoverNavbarMenu();
 });

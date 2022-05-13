@@ -1,4 +1,4 @@
-<div class="__arrow__">
+<div class="__arrow__" data-aos="">
 
     <div class="__page__arrow__">
 

@@ -18,10 +18,20 @@
 
     </div>
 
-    <div class="__github__icon__">
-        <a href="https://github.com/AlxisHenry" target="_blank" rel="noreferrer">
-            <i title="Github" class="fa-brands fa-github"></i>
+    <div class="__navbar__features__">
+
+        <a href="https://github.com/AlxisHenry" target="_blank" rel="nofollow noreferrer">
+            <img title="Github" src="{{ url('assets/svg/contacts/github.svg') }}" alt="Github Link">
         </a>
+       <!-- <a href="https://wakatime.com/@AlxisHenry" target="_blank" rel="noreferrer nofollow">
+            <img title="Wakatime" src="{{-- url('assets/svg/contacts/wakatime.svg') --}}" alt="Wakatime Link">
+        </a> -->
+        <div class="__theme__">
+            <div class="__theme__main__" id="moon">
+                <img id="moon" title="Moon" src="{{ url('assets/svg/themes/moon.svg') }}" alt="Moon" data-next="Sun">
+            </div>
+        </div>
+
     </div>
 
 </nav>

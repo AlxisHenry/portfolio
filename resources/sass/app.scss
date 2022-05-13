@@ -62,29 +62,77 @@ $__navbarBackgroundColor__: #99BFAD;
         left: 40px;
     }
 
-    .__github__icon__ {
-        width: 32px;
-        z-index: 10;
-        height: 100%;
+    .__navbar__features__ {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        gap: 15px;
+        height: 100%;
+        align-items: center;
         margin-right: 40px;
 
         a {
+            width: 32px;
+            height: 33px;
             text-decoration: none;
+            border-radius: 50%;
+            border-bottom: solid 1px;
 
-            i {
-                margin-top: 40px;
+            img {
+                width: 32px;
+                height: 33px;
                 font-size: 32px;
                 color: #595959;
                 border-radius: 50%;
 
                 &:hover {
                     cursor: pointer;
-                    color: black;
                 }
 
             }
+        }
+
+        .__theme__ {
+            width: 32px;
+            height: 33px;
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+
+            .__theme__main__ {
+                height: 33px;
+                width: 33px;
+                border-radius: 50%;
+                box-shadow: .5px .5px .5px black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &#sun {
+                    transition: background-color ease-in 150ms;
+                    background-color: #f7fafb;
+                    border: outset #f7fafb 2px;
+                }
+
+                &#moon {
+                    transition: background-color ease-in 150ms;
+                    background-color: #2d3748;
+                    border: outset #f7fafb 2px;
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
         }
 
     }
@@ -216,18 +264,10 @@ $__navbarBackgroundColor__: #99BFAD;
         .burger-element {
             width: 100%;
         }
-        .__github__icon__ {
+        .__navbar__features__ {
             margin-right: 20px;
-            a {
-
-                i {
-                    margin-top: 20px;
-
-                    &:hover {
-
-                    }
-
-                }
+            a, .__theme__ {
+                margin-top: -40px;
             }
 
         }
@@ -240,7 +280,7 @@ $__navbarBackgroundColor__: #99BFAD;
 .__footer__ {
     margin-top: 45px;
     width: 100%;
-    height: 130px;
+    height: 40px;
     background-color: #e5d6d6;
     display: flex;
     justify-content: center;
@@ -249,58 +289,25 @@ $__navbarBackgroundColor__: #99BFAD;
 
     .__footer__main__ {
         text-align: center;
-        width: 100%;
+        width: auto;
         color: #8C8C8C;
         margin-right: 12px;
-        height: 30px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 14px;
         font-weight: lighter;
         font-family: $_family_poppins;
+
+        &:hover {
+            cursor: pointer;
+            transition: color ease-in-out 300ms;
+            color: black;
+        }
+
     }
 
-    .__footer__top__ {
-        height: 100px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        .__footer__contact__ {
-            flex: 1;
-            letter-spacing: 1px;
-            font-family: $_family_poppins;
-            a {
-                text-decoration: none;
-                img {
-                    width: 25px;
-                    height: 25px;
-                }
-            }
-        }
-        .__switch__theme__ {
-            flex: 1;
-            letter-spacing: 1px;
-            font-family: $_family_poppins;
-            ._switch_ {
-                margin-left: 12px;
-                position: relative;
-                z-index: 0;
-                width: 60px;
-                height: 30.5px;
-                border: solid black 1px;
-                border-radius: 50px;
-                background-color: white;
-
-                ._switch_indicator_ {
-                    background-color: white;
-                    position: relative;
-                    width: 28px;
-                    height: 28px;
-                    box-shadow: .5px .5px 1px 1px black;
-                    z-index: 20;
-                    border-radius: 50%;
-                }
-            }
-        }
-    }
 }
 
 /* END - Footer */
