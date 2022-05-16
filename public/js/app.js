@@ -1487,6 +1487,16 @@ var HomepageReveal = function HomepageReveal() {
   }
 };
 
+var RevealYears = function RevealYears() {
+  var years = document.querySelector('.years');
+  (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_3__["default"])({
+    targets: years,
+    innerHTML: [2000, 2022],
+    easing: 'linear',
+    round: 1
+  });
+};
+
 var Themes = function Themes() {
   var SwapThemeElement = document.querySelector('.__theme__main__');
   var Theme = SwapThemeElement.children[0];
@@ -1516,6 +1526,21 @@ var LoadingPosition = function LoadingPosition(e) {
   console.log(TotalHeight, PassedHeight, LoadingState);
 };
 
+var AboutAnimation = function AboutAnimation() {
+  var AboutButton = document.querySelector('._up_project_ ');
+  var LoadElement = document.querySelector('.__load__');
+
+  if (AboutButton) {
+    AboutButton.addEventListener('mouseover', function () {
+      AboutButton.classList.add('__arrow__animation__about__button__');
+      LoadElement.classList.remove('__reverse__');
+    });
+    AboutButton.addEventListener('mouseout', function () {
+      LoadElement.classList.add('__reverse__');
+    });
+  }
+};
+
 var burgerButton = document.querySelector('.burger-button');
 var burgerElement = document.querySelector('.burger-element');
 var burgerMouvement = document.querySelector('.__presentation__');
@@ -1523,7 +1548,7 @@ var ArticleElement = document.querySelector('.__target__article__');
 var LanguagesIcons = document.querySelectorAll('.language_icon');
 window.addEventListener('load', function (e) {
   aos__WEBPACK_IMPORTED_MODULE_1___default().init({
-    duration: 1100
+    duration: 1800
   });
   writeName('Henry alexis', 0);
   writeJob('Web Developer', 0);
@@ -1532,6 +1557,8 @@ window.addEventListener('load', function (e) {
   toggleNav();
   HoverNavbarMenu();
   LoadingPosition(e);
+  RevealYears();
+  AboutAnimation();
 });
 window.addEventListener('resize', function () {
   ResizeNavAnimation();

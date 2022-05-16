@@ -1,4 +1,4 @@
-<div class="__more__button__ __more__cards__"
+<div class="__more__button__ __more__cards__ __more__projects__"
      data-aos="fade-right"
     >
     <a href="{{ $to }}">

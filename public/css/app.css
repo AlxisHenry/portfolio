@@ -6781,6 +6781,7 @@ body {
   margin-bottom: 40px;
   margin-left: 30px;
   text-align: justify;
+  font-weight: 700;
   font-size: 18px;
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
@@ -6790,13 +6791,157 @@ body {
 }
 
 .__spoiler__projects__ {
-  margin-top: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
   width: 100%;
+}
+.__spoiler__projects__ .__projects__ {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.__spoiler__projects__ .__projects__ .__more__projects__ {
+  margin-top: 25px;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_image_ {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_image_ img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._language_use_ a {
+  padding: 5px;
+  margin-left: 4px;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ .__arrow__animation__about__button__ .__load__ {
+  border-radius: 8px;
+  -webkit-animation: AnimationAboutBackground 0.8s forwards;
+          animation: AnimationAboutBackground 0.8s forwards;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ .__arrow__animation__about__button__ .__reverse__ {
+  -webkit-animation: AnimationAboutBackgroundReverse 1.2s forwards;
+          animation: AnimationAboutBackgroundReverse 1.2s forwards;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 1.525rem;
+  background-color: white;
+  width: 120px;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__load__ {
+  position: absolute;
+  width: 0;
+  left: 0;
+  height: 100%;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__content__ {
+  border-radius: 8px;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-transform: uppercase;
+  font-family: "Inconsolata", monospace;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__content__:hover {
+  cursor: pointer;
+  color: white;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__content__:hover .__arrow__left__ {
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__content__:hover .__arrow__left__:after {
+  background-color: white;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__content__ .__arrow__left__ {
+  margin-left: 20px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  transform: rotate(135deg);
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__content__ .__arrow__left__:after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 20px;
   background-color: black;
+  transform: rotate(-45deg) translate(15px, 1px) translateX(-8.8px);
+  left: 0;
+  top: 0;
+}
+
+@-webkit-keyframes AnimationAboutBackground {
+  from {
+    background-color: white;
+    width: 0;
+  }
+  to {
+    background-color: black;
+    width: 100%;
+  }
+}
+
+@keyframes AnimationAboutBackground {
+  from {
+    background-color: white;
+    width: 0;
+  }
+  to {
+    background-color: black;
+    width: 100%;
+  }
+}
+@-webkit-keyframes AnimationAboutBackgroundReverse {
+  from {
+    background-color: black;
+    width: 100%;
+  }
+  to {
+    background-color: white;
+    width: 0;
+  }
+}
+@keyframes AnimationAboutBackgroundReverse {
+  from {
+    background-color: black;
+    width: 100%;
+  }
+  to {
+    background-color: white;
+    width: 0;
+  }
 }
 .__spoiler__cards__ {
   display: flex;

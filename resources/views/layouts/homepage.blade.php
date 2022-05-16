@@ -16,7 +16,7 @@
 
     </section>
 
-    <section id="__spoilerProjects" class="__spoiler__projects__ hidden">
+    <section id="__spoilerProjects" class="__spoiler__projects__">
 
         @include('sections.spoilers.projects')
 

@@ -132,6 +132,17 @@ const HomepageReveal = () => {
 
 }
 
+const RevealYears = () => {
+    const years = document.querySelector('.years');
+
+    anime({
+        targets: years,
+        innerHTML: [2000, 2022],
+        easing: 'linear',
+        round: 1
+    });
+}
+
 const Themes = () => {
 
     const SwapThemeElement = document.querySelector('.__theme__main__')
@@ -164,6 +175,29 @@ const LoadingPosition = (e) => {
 
 }
 
+const AboutAnimation = () => {
+    const AboutButton = document.querySelector('._up_project_ ')
+    const LoadElement = document.querySelector('.__load__')
+
+    if (AboutButton) {
+
+        AboutButton.addEventListener('mouseover', () => {
+
+            AboutButton.classList.add('__arrow__animation__about__button__')
+            LoadElement.classList.remove('__reverse__')
+
+        })
+
+        AboutButton.addEventListener('mouseout', () => {
+
+            LoadElement.classList.add('__reverse__')
+
+        })
+
+    }
+
+}
+
 const burgerButton = document.querySelector('.burger-button')
 const burgerElement = document.querySelector('.burger-element')
 const burgerMouvement = document.querySelector('.__presentation__')
@@ -173,7 +207,7 @@ const LanguagesIcons = document.querySelectorAll('.language_icon')
 window.addEventListener('load', (e) => {
 
     AOS.init({
-        duration: 1100
+        duration: 1800
     })
 
     writeName('Henry alexis', 0)
@@ -183,7 +217,8 @@ window.addEventListener('load', (e) => {
     toggleNav()
     HoverNavbarMenu()
     LoadingPosition(e)
-
+    RevealYears()
+    AboutAnimation()
 })
 
 window.addEventListener('resize', () => {
