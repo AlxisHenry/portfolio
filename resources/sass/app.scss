@@ -16,6 +16,10 @@ $_family_iconsolata: 'Inconsolata', monospace;
     display: none!important;
 }
 
+.invisible {
+    visibility: hidden!important;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -44,17 +48,19 @@ body {
 .__loading__bar__ {
     position: fixed;
     top: 0;
-    height: 3px;
+    left: 0;
+    height: 100%;
     background-color: gray;
-    width: 100%;
+    width: 3px;
+    z-index: 120;
 
     .__state__indicator__ {
         animation: All ease-in 300ms;
         position: relative;
-        height: 3px;
+        height: 0;
         top: 0;
         left: 0;
-        width: 0;
+        width: 3px;
         background-color: #f7fafb;
     }
 
@@ -173,7 +179,7 @@ $__navbarBackgroundColor__: #99BFAD;
         right: 0;
         margin-left: $__hiddenNavbar__;
 
-        .nav-active .nav-content .nav-title {
+        .nav-active .nav-content .nav-title .nav-title_letter {
             color: black;
             cursor: pointer;
         }
@@ -196,7 +202,7 @@ $__navbarBackgroundColor__: #99BFAD;
                 }
             }
 
-            &:hover .nav-content .nav-title {
+            &:hover .nav-content .nav-title .nav-title_letter {
                 color: black;
                 transition: color 1s;
             }
@@ -218,12 +224,14 @@ $__navbarBackgroundColor__: #99BFAD;
             .nav-content {
 
                 .nav-title {
-                    font-size: 40px;
-                    color: $__navbarLinksColor__;
-                    letter-spacing: 1px;
-                    text-transform: uppercase;
-                    font-weight: lighter;
-                    font-family: $_family_iconsolata;
+                    .nav-title_letter {
+                        font-size: 40px;
+                        color: $__navbarLinksColor__;
+                        text-transform: uppercase;
+                        font-weight: lighter;
+                        font-family: $_family_iconsolata;
+                        min-width: 20px;
+                    }
                 }
 
             }
@@ -342,18 +350,16 @@ $__navbarBackgroundColor__: #99BFAD;
     align-items: flex-end;
 
     .__page__arrow__ {
-        width: 40px;
-        border-radius: 50%;
-        height: 40px;
+        border-radius: 12px;
+        padding: 1.2em;
+        width: 200px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: row;
 
         &:hover {
-            border: solid 1px black;
             cursor: pointer;
-            animation: AnimationArrowCircle 1.5s forwards;
         }
 
         &:hover ._arrow_ {
@@ -362,14 +368,12 @@ $__navbarBackgroundColor__: #99BFAD;
         }
 
             ._arrow_ {
-                animation: bounceArrow 2s ease-in-out infinite;
                 border: solid #595959;
                 border-width: 0 3px 3px 0;
                 display: inline-block;
                 margin-bottom: 4px;
                 padding: 8px;
                 transform: rotate(45deg);
-
             }
 
         }
@@ -797,7 +801,7 @@ $__navbarBackgroundColor__: #99BFAD;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 40%;
+                width: 80%;
                 height: 400px;
 
                 ._about_descript_ {

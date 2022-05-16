@@ -6087,6 +6087,10 @@ q:lang(fr),
   display: none !important;
 }
 
+.invisible {
+  visibility: hidden !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6115,18 +6119,20 @@ body {
 .__loading__bar__ {
   position: fixed;
   top: 0;
-  height: 3px;
+  left: 0;
+  height: 100%;
   background-color: gray;
-  width: 100%;
+  width: 3px;
+  z-index: 120;
 }
 .__loading__bar__ .__state__indicator__ {
   -webkit-animation: All ease-in 300ms;
           animation: All ease-in 300ms;
   position: relative;
-  height: 3px;
+  height: 0;
   top: 0;
   left: 0;
-  width: 0;
+  width: 3px;
   background-color: #f7fafb;
 }
 
@@ -6223,7 +6229,7 @@ body {
   right: 0;
   margin-left: -1000px;
 }
-.__navbar__ .burger-element .nav-active .nav-content .nav-title {
+.__navbar__ .burger-element .nav-active .nav-content .nav-title .nav-title_letter {
   color: black;
   cursor: pointer;
 }
@@ -6248,7 +6254,7 @@ body {
   -webkit-animation: LoadingNavbarDown 0.6s ease-in-out forwards;
           animation: LoadingNavbarDown 0.6s ease-in-out forwards;
 }
-.__navbar__ .burger-element a:hover .nav-content .nav-title {
+.__navbar__ .burger-element a:hover .nav-content .nav-title .nav-title_letter {
   color: black;
   transition: color 1s;
 }
@@ -6258,13 +6264,13 @@ body {
 .__navbar__ .burger-element a:last-child {
   margin-bottom: 40px;
 }
-.__navbar__ .burger-element a .nav-content .nav-title {
+.__navbar__ .burger-element a .nav-content .nav-title .nav-title_letter {
   font-size: 40px;
   color: #949494;
-  letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: lighter;
   font-family: "Inconsolata", monospace;
+  min-width: 20px;
 }
 .__navbar__ .NavbarUpAnimation {
   -webkit-animation: NavbarUpAnimation 0.25s ease-in forwards;
@@ -6397,27 +6403,22 @@ body {
   align-items: flex-end;
 }
 .__arrow__ .__page__arrow__ {
-  width: 40px;
-  border-radius: 50%;
-  height: 40px;
+  border-radius: 12px;
+  padding: 1.2em;
+  width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
 }
 .__arrow__ .__page__arrow__:hover {
-  border: solid 1px black;
   cursor: pointer;
-  -webkit-animation: AnimationArrowCircle 1.5s forwards;
-          animation: AnimationArrowCircle 1.5s forwards;
 }
 .__arrow__ .__page__arrow__:hover ._arrow_ {
   cursor: pointer;
   border-color: black;
 }
 .__arrow__ .__page__arrow__ ._arrow_ {
-  -webkit-animation: bounceArrow 2s ease-in-out infinite;
-          animation: bounceArrow 2s ease-in-out infinite;
   border: solid #595959;
   border-width: 0 3px 3px 0;
   display: inline-block;
@@ -6773,7 +6774,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40%;
+  width: 80%;
   height: 400px;
 }
 .__spoiler__about__ .__about__card__ .__about__ ._about_descript_ {

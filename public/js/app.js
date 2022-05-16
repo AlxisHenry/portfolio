@@ -1512,7 +1512,7 @@ var LoadingPosition = function LoadingPosition(e) {
   var TotalHeight = document.body.offsetHeight;
   var PassedHeight = Math.round(window.scrollY + window.innerHeight);
   var LoadingState = Math.round(PassedHeight / TotalHeight * 100);
-  LoadingIndicator.style.width = LoadingState + '%';
+  LoadingIndicator.style.height = LoadingState + '%';
   console.log(TotalHeight, PassedHeight, LoadingState);
 };
 
@@ -1523,7 +1523,7 @@ var ArticleElement = document.querySelector('.__target__article__');
 var LanguagesIcons = document.querySelectorAll('.language_icon');
 window.addEventListener('load', function (e) {
   aos__WEBPACK_IMPORTED_MODULE_1___default().init({
-    duration: 2000
+    duration: 1100
   });
   writeName('Henry alexis', 0);
   writeJob('Web Developer', 0);

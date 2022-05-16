@@ -155,12 +155,11 @@ const Themes = () => {
 }
 
 const LoadingPosition = (e) => {
-
     const LoadingIndicator = document.querySelector('.__state__indicator__')
     const TotalHeight = document.body.offsetHeight
     const PassedHeight = Math.round(window.scrollY + window.innerHeight)
     const LoadingState = Math.round((PassedHeight / TotalHeight) * 100)
-    LoadingIndicator.style.width = LoadingState + '%'
+    LoadingIndicator.style.height = LoadingState + '%'
     console.log(TotalHeight,PassedHeight, LoadingState)
 
 }
@@ -174,7 +173,7 @@ const LanguagesIcons = document.querySelectorAll('.language_icon')
 window.addEventListener('load', (e) => {
 
     AOS.init({
-        duration: 2000
+        duration: 1100
     })
 
     writeName('Henry alexis', 0)
