@@ -6792,19 +6792,28 @@ body {
 
 .__spoiler__projects__ {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: auto;
   width: 100%;
-}
-.__spoiler__projects__ .__projects__ {
-  width: 700px;
-  display: flex;
+  justify-content: center;
+  gap: 50px;
   flex-direction: column;
-  align-items: center;
+}
+.__spoiler__projects__ ._projects_cards_ {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
 }
 .__spoiler__projects__ .__projects__ .__more__projects__ {
   margin-top: 25px;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 350px;
+}
+.__spoiler__projects__ .__projects__ .__project__card__:hover {
+  cursor: pointer;
 }
 .__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ {
   display: flex;
@@ -6814,53 +6823,98 @@ body {
 }
 .__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_image_ {
   width: 350px;
-  height: 350px;
+  height: 380px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.1);
 }
 .__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_image_ img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._language_use_ a {
-  padding: 5px;
-  margin-left: 4px;
-}
-.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ .__arrow__animation__about__button__ .__load__ {
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ {
   border-radius: 8px;
+  position: absolute;
+  width: 350px;
+  height: 380px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  bottom: -400px;
+  background-color: white;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_:hover {
+  cursor: pointer;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_.show {
+  -webkit-animation: AnimationAboutCards 1s forwards;
+          animation: AnimationAboutCards 1s forwards;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_.hide {
+  -webkit-animation: AnimationAboutCardsReverse 1s forwards;
+          animation: AnimationAboutCardsReverse 1s forwards;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ h1 {
+  margin-top: 30px;
+  text-align: center;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._little_description_ {
+  margin-top: 25px;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-size: 16px;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._github_link_ {
+  position: absolute;
+  right: 25px;
+  bottom: 135px;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._language_use_ {
+  position: absolute;
+  bottom: 90px;
+  right: 25px;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._language_use_ a {
+  text-decoration: none;
+  margin-left: 12px;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ .__arrow__animation__about__button__ .__load__ {
+  border-radius: 6px;
   -webkit-animation: AnimationAboutBackground 0.8s forwards;
           animation: AnimationAboutBackground 0.8s forwards;
 }
-.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ .__arrow__animation__about__button__ .__reverse__ {
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ .__arrow__animation__about__button__ .__reverse__ {
   -webkit-animation: AnimationAboutBackgroundReverse 1.2s forwards;
           animation: AnimationAboutBackgroundReverse 1.2s forwards;
 }
-.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ {
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._up_project_ {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
   display: flex;
   align-items: center;
   flex-direction: row;
   padding: 1.525rem;
-  background-color: white;
   width: 120px;
   justify-content: center;
   border-radius: 8px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
-.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__load__ {
-  position: absolute;
-  width: 0;
-  left: 0;
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._up_project_ a {
+  width: 100%;
   height: 100%;
+  position: absolute;
+  text-decoration: none;
 }
-.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__content__ {
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._up_project_ a .__content__ {
   border-radius: 8px;
   z-index: 99;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6871,18 +6925,18 @@ body {
   font-weight: 700;
   font-size: 18px;
 }
-.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__content__:hover {
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._up_project_ a .__content__:hover {
   cursor: pointer;
   color: white;
 }
-.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__content__:hover .__arrow__left__ {
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._up_project_ a .__content__:hover .__arrow__left__ {
   border-top: 2px solid white;
   border-left: 2px solid white;
 }
-.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__content__:hover .__arrow__left__:after {
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._up_project_ a .__content__:hover .__arrow__left__:after {
   background-color: white;
 }
-.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__content__ .__arrow__left__ {
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._up_project_ a .__content__ .__arrow__left__ {
   margin-left: 20px;
   display: block;
   width: 12px;
@@ -6891,7 +6945,7 @@ body {
   border-left: 2px solid black;
   transform: rotate(135deg);
 }
-.__spoiler__projects__ .__projects__ .__project__card__ ._project_content_ ._up_project_ .__content__ .__arrow__left__:after {
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._up_project_ a .__content__ .__arrow__left__:after {
   content: "";
   display: block;
   width: 2px;
@@ -6900,6 +6954,13 @@ body {
   transform: rotate(-45deg) translate(15px, 1px) translateX(-8.8px);
   left: 0;
   top: 0;
+}
+.__spoiler__projects__ .__projects__ .__project__card__ ._this_project_ ._project_content_ ._up_project_ .__load__ {
+  background-color: rosybrown;
+  position: absolute;
+  width: 0;
+  left: 0;
+  height: 100%;
 }
 
 @-webkit-keyframes AnimationAboutBackground {
@@ -6941,6 +7002,38 @@ body {
   to {
     background-color: white;
     width: 0;
+  }
+}
+@-webkit-keyframes AnimationAboutCards {
+  from {
+    bottom: -400px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+@keyframes AnimationAboutCards {
+  from {
+    bottom: -400px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+@-webkit-keyframes AnimationAboutCardsReverse {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -400px;
+  }
+}
+@keyframes AnimationAboutCardsReverse {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -400px;
   }
 }
 .__spoiler__cards__ {

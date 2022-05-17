@@ -2,9 +2,7 @@
 @import "KNACSS/__base__";
 @import "KNACSS/__utils__";
 @import "KNACSS/__components__";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Libre+Franklin:wght@200&family=Poppins:wght@200&display=swap');
+@import 'fonts.scss';
 
 /* Globals */
 
@@ -826,22 +824,32 @@ $__navbarBackgroundColor__: #99BFAD;
 
 .__spoiler__projects__ {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: auto;
     width: 100%;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: column;
+
+    ._projects_cards_ {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+    }
 
 .__projects__ {
-        width: 700px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 
         .__more__projects__ {
             margin-top: 25px;
         }
 
         .__project__card__ {
+            border-radius: 8px;
+            overflow: hidden;
+            width: 350px;
+            &:hover {
+                cursor: pointer;
+            }
 
             ._this_project_ {
                 display: flex;
@@ -851,105 +859,161 @@ $__navbarBackgroundColor__: #99BFAD;
 
                 ._project_image_ {
                     width: 350px;
-                    height: 350px;
+                    height: 380px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     background-color: white;
-                    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.1);
 
                     img {
                         object-fit: cover;
                     }
                 }
 
-            }
+                ._project_content_ {
+                    border-radius: 8px;
+                    position: absolute;
+                    width: 350px;
+                    height: 380px;
+                    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                    bottom: -400px;
+                    background-color: white;
 
-            ._project_content_ {
-
-                ._language_use_ {
-                    a {
-                        padding: 5px;
-                        margin-left: 4px;
+                    &:hover {
+                        cursor: pointer;
                     }
-                }
 
-                .__arrow__animation__about__button__ {
+                    &.show {
+                        animation: AnimationAboutCards 1s forwards;
+                    }
+
+                    &.hide {
+                        animation: AnimationAboutCardsReverse 1s forwards;
+                    }
+
+                    h1 {
+                        margin-top: 30px;
+                        text-align: center;
+                        font-style: normal;
+                        letter-spacing: 1px;
+                        text-decoration: underline;
+                    }
+
+                    ._little_description_ {
+                        margin-top: 25px;
+                        margin-left: 16px;
+                        margin-right: 16px;
+                        font-size: 16px;
+                    }
+
+                    ._github_link_ {
+                        position: absolute;
+                        right: 25px;
+                        bottom: 135px;
+                    }
+
+                    ._language_use_ {
+                        position: absolute;
+                        bottom: 90px;
+                        right: 25px;
+                        a {
+                            text-decoration: none;
+                            margin-left: 12px;
+                        }
+                    }
+
+                    .__arrow__animation__about__button__ {
                         .__load__ {
-                            border-radius: 8px;
+                            border-radius: 6px;
                             animation: AnimationAboutBackground 0.8s forwards;
                         }
                         .__reverse__ {
                             animation: AnimationAboutBackgroundReverse 1.2s forwards;
                         }
-                }
-
-                ._up_project_ {
-                    display: flex;
-                    align-items: center;
-                    flex-direction: row;
-                    padding: 1.525rem;
-                    background-color: white;
-                    width: 120px;
-                    justify-content: center;
-                    border-radius: 8px;
-                    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-
-                    .__load__ {
-                        position: absolute;
-                        width: 0;
-                        left: 0;
-                        height: 100%;
                     }
 
-                    .__content__ {
-                        border-radius: 8px;
-                        z-index: 99;
-                        width: 100%;
-                        height: 100%;
+                    ._up_project_ {
                         position: absolute;
+                        bottom: 25px;
+                        right: 25px;
                         display: flex;
-                        justify-content: center;
                         align-items: center;
-                        color: black;
-                        text-transform: uppercase;
-                        font-family: $_family_iconsolata;
-                        letter-spacing: 1px;
-                        font-weight: 700;
-                        font-size: 18px;
-                        &:hover {
-                            cursor: pointer;
-                            color: white;
-                            .__arrow__left__ {
-                                border-top: 2px solid white;
-                                border-left: 2px solid white;
-                                &:after {
-                                    background-color: white;
+                        flex-direction: row;
+                        padding: 1.525rem;
+                        width: 120px;
+                        justify-content: center;
+                        border-radius: 8px;
+                        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+                        a {
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            text-decoration: none;
+
+                            .__content__ {
+                                border-radius: 8px;
+                                z-index: 99;
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: black;
+                                text-transform: uppercase;
+                                font-family: $_family_iconsolata;
+                                letter-spacing: 1px;
+                                font-weight: 700;
+                                font-size: 18px;
+                                &:hover {
+                                    cursor: pointer;
+                                    color: white;
+                                    .__arrow__left__ {
+                                        border-top: 2px solid white;
+                                        border-left: 2px solid white;
+                                        &:after {
+                                            background-color: white;
+                                        }
+                                    }
+                                }
+                                .__arrow__left__ {
+                                    margin-left: 20px;
+                                    display: block;
+                                    width: 12px;
+                                    height: 12px;
+                                    border-top: 2px solid black;
+                                    border-left: 2px solid black;
+                                    transform: rotate(135deg);
+                                    &:after {
+                                        content: "";
+                                        display: block;
+                                        width: 2px;
+                                        height: 20px;
+                                        background-color: black;
+                                        transform: rotate(-45deg) translate(15px, 1px) translateX(-8.8px);
+                                        left: 0;
+                                        top: 0;
+                                    }
                                 }
                             }
+
                         }
-                        .__arrow__left__ {
-                            margin-left: 20px;
-                            display: block;
-                            width: 12px;
-                            height: 12px;
-                            border-top: 2px solid black;
-                            border-left: 2px solid black;
-                            transform: rotate(135deg);
-                            &:after {
-                                content: "";
-                                display: block;
-                                width: 2px;
-                                height: 20px;
-                                background-color: black;
-                                transform: rotate(-45deg) translate(15px, 1px) translateX(-8.8px);
-                                left: 0;
-                                top: 0;
-                            }
+
+                        .__load__ {
+                            background-color: rosybrown;
+                            position: absolute;
+                            width: 0;
+                            left: 0;
+                            height: 100%;
                         }
+
                     }
                 }
+
             }
+
         }
     }
 }
@@ -973,6 +1037,24 @@ $__navbarBackgroundColor__: #99BFAD;
     to {
         background-color: white;
         width: 0;
+    }
+}
+
+@keyframes AnimationAboutCards {
+    from {
+        bottom: -400px;
+    }
+    to {
+        bottom: 0;
+    }
+}
+
+@keyframes AnimationAboutCardsReverse {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: -400px;
     }
 }
 

@@ -6,8 +6,10 @@
 
 </footer>
 
+<script src="{{ url('js/app.js') }}"></script>
+
 </body>
 
-<script src="{{ url('js/app.js') }}"></script>
+@yield('footer')
 
 </html>
