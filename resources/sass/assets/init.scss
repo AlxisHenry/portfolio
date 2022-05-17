@@ -1,0 +1,17 @@
+$__backgroundColor__: #F6EFE7;
+$_family_poppins: 'Poppins', sans-serif;
+$_family_iconsolata: 'Inconsolata', monospace;
+$__navbarLinksColor__: #949494;
+$__hiddenNavbar__: -1000px;
+$__navbarBackgroundColor__: #99BFAD;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $__backgroundColor__;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}

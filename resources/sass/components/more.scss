@@ -1,0 +1,38 @@
+.__more__button__ {
+  width: 100px;
+  height: 45px;
+  border-radius: 12px;
+  border: solid 1px #cdcdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cdcdfd;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transition: All 0.35s;
+    cursor: pointer;
+    filter: hue-rotate(90deg);
+    a span {
+      font-weight: 600;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-family: $_family_poppins;
+      text-transform: uppercase;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

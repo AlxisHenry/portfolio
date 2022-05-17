@@ -1,0 +1,296 @@
+/* START --- Presentation */
+
+.__homepage__presentation__ {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .__presentation__ {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-height: 400px;
+    height: 400px;
+    align-items: center;
+    border-bottom: solid 2px black;
+    box-shadow: 0 20px 10px -15px #111;
+    -webkit-box-shadow: 0 20px 10px -15px #111;
+
+    &.moov_this_element {
+      animation: MoovElement 0.2s forwards;
+    }
+
+    &.moov_this_element_reverse {
+      animation: ReverseMoovElement 0.2s forwards;
+    }
+
+    .__presentation__separator__ {
+      height: 400px;
+      background-color: black;
+    }
+
+    .__main__presentation__ {
+      display: flex;
+      flex-direction: row;
+
+      .__me__ {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        div {
+          p {
+            display: inline-block;
+            position: relative;
+
+            &:after {
+              content: "";
+              position: absolute;
+              display: block;
+              height: 100%;
+              width: 3px;
+              background: black;
+              right: -15px;
+              top: 0;
+              animation: cursor 1s infinite;
+            }
+
+            &.disabled-animation-writer {
+              &:after {
+                width: 0;
+              }
+            }
+          }
+        }
+
+        .name {
+          min-width: 640px;
+          p {
+            span {
+              font-family: $_family_poppins;
+              font-weight: 800;
+              letter-spacing: 1px;
+              font-size: 6.5rem;
+              text-transform: uppercase;
+            }
+          }
+        }
+
+        .job {
+          p {
+            span {
+              font-family: $_family_poppins;
+              letter-spacing: 1px;
+              font-size: 4.2rem;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .__language__ {
+          margin-top: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 60px;
+          a {
+            .language_icon {
+              width: 2.2rem;
+            }
+            &:last-child {
+              .language_icon {
+                width: 3.5rem;
+              }
+            }
+          }
+        }
+
+      }
+      .__main__asset__ {
+        height: 400px;
+        display: flex;
+        align-items: end;
+
+        .__asset__ {
+          height: 300px;
+          object-fit: cover;
+        }
+
+      }
+
+    }
+  }
+
+}
+
+/* END --- Presentation */
+
+/* START --- About */
+
+.__spoiler__about__ {
+  margin-top: 5%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .__about__card__ {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .__about__ {
+      margin-top: 60px;
+      text-align: justify;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      height: 400px;
+
+      ._about_descript_ {
+        margin-bottom: 40px;
+        margin-left: 30px;
+        text-align: justify;
+        font-weight: 700;
+        font-size: 18px;
+        font-family: $_family_poppins;
+        letter-spacing: 1px;
+      }
+
+      .__more__about__ {
+        margin-top: 75px;
+
+      }
+
+    }
+
+  }
+}
+
+/* END --- About */
+
+/* START --- Projects */
+
+.__spoiler__projects__ {
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  gap: 50px;
+  flex-direction: column;
+  ._projects_cards_ {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+  }
+}
+
+/* END --- Projects */
+
+/* START --- Cards */
+
+.__spoiler__cards__ {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+/* END --- Cards */
+
+/* START --- Animations */
+
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotateAsset {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes MoovElement {
+  0% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: 280px;
+  }
+}
+
+@keyframes ReverseMoovElement {
+  0% {
+    margin-left: 280px;
+  }
+  100% {
+    margin-left: 20px;
+  }
+}
+
+@keyframes AnimationAboutBackground {
+  from {
+    background-color: white;
+    width: 0;
+  }
+  to {
+    background-color: black;
+    width: 100%;
+  }
+}
+
+@keyframes AnimationAboutBackgroundReverse {
+  from {
+    background-color: black;
+    width: 100%;
+  }
+  to {
+    background-color: white;
+    width: 0;
+  }
+}
+
+@keyframes AnimationAboutCards {
+  from {
+    bottom: -400px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes AnimationAboutCardsReverse {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -400px;
+  }
+}
+
+/* END --- Animations */

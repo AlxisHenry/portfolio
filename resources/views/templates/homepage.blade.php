@@ -22,7 +22,7 @@
 
     </section>
 
-    <section id="__spoilerCards" class="__spoiler__cards__ hidden">
+    <section id="__spoilerCards" class="__spoiler__cards__">
 
         @include('components.sections.spoilers.news')
 

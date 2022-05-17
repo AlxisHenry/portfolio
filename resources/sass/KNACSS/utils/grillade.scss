@@ -47,14 +47,14 @@
   }
 }
 
-/* grid-template-columns initialisation */
+/* grid-templates-columns initialisation */
 @for $i from 1 through $grid-columns {
   .grid-cols-#{$i} {
     grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
   }
 }
 
-/* grid-template-columns au sein des breakpoints */
+/* grid-templates-columns au sein des breakpoints */
 @each $bp, $bpv in $breakpoints {
   @media (min-width: #{$bpv}) {
     @for $i from 1 through $grid-columns {

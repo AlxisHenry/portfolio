@@ -1,0 +1,184 @@
+@media screen and (max-width: 1200px){
+  @keyframes MoovElement {
+    0% {
+      margin-left: 20px;
+    }
+    100% {
+      margin-left: 200px;
+    }
+  }
+
+  @keyframes ReverseMoovElement {
+    0% {
+      margin-left: 200px;
+    }
+    100% {
+      margin-left: 20px;
+    }
+  }
+  .__homepage__presentation__ {
+
+    .__presentation__ {
+
+      .__presentation__separator__ {
+
+      }
+
+      .__main__presentation__ {
+
+        .__me__ {
+
+          .name {
+            p {
+              span {
+                font-size: 6rem;
+                margin-top: 100px;
+              }
+            }
+          }
+
+          .job {
+            p {
+              span {
+                font-size: 4rem;
+              }
+            }
+          }
+          .__language__ {
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 50px;
+            a {
+              .language_icon {
+                width: 1.8rem;
+
+                &:last-child {
+                  width: 2.5rem;
+                }
+
+              }
+            }
+          }
+
+        }
+        .__main__asset__ {
+          display: none;
+
+          .__asset__ {
+
+          }
+
+        }
+
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 600px){
+  .__homepage__presentation__ {
+
+    .__presentation__ {
+
+      .__presentation__separator__ {
+
+      }
+
+      .__main__presentation__ {
+
+        .__me__ {
+
+          .name {
+            margin-top: 100px;
+            p {
+              span {
+                font-size: 3.8rem;
+              }
+            }
+          }
+
+          .job {
+            p {
+              span {
+                font-size: 2.4rem;
+              }
+            }
+          }
+          .__language__ {
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 25px;
+            a {
+              .language_icon {
+                width: 60px;
+
+                &:last-child {
+                  width: 120px;
+                }
+
+              }
+            }
+          }
+        }
+        .__main__asset__ {
+          display: none;
+
+          .__asset__ {
+
+          }
+
+        }
+
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .__homepage__presentation__ {
+
+    .__presentation__ {
+
+      .__main__presentation__ {
+
+        .__me__ {
+
+          .name {
+            min-width: auto;
+            p {
+              span {
+                width: 60px;
+                font-size: 3rem;
+                margin-top: 100px;
+              }
+            }
+          }
+
+          .job {
+            p {
+              span {
+                font-size: 1.8rem;
+              }
+            }
+          }
+          .__language__ {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-height: 900px) {
+  .__homepage__presentation__ {
+    height: 550px;
+    align-items: center;
+  }
+}
