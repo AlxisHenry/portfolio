@@ -52,7 +52,7 @@ class HomeController extends Controller
             ->where('NEWS_ARTICLE.identifier', '<', 163)
             ->get();
 
-        return view('layouts.homepage', ['title' => 'Home - Henry Alexis',
+        return view('template.homepage', ['title' => 'Home - Henry Alexis',
                                         'navbar' => 'home',
                                         'languages' => $this->Languages(),
                                         'og_description' => 'Portfolio Henry Alexis - Homepage',
@@ -65,6 +65,6 @@ class HomeController extends Controller
 
         $LANGUAGE_TO_SCRAP = '';
 
-        return view('layouts.language', ['title' => 'Language - Henry Alexis', 'LANGUAGE' => $LANGUAGE]);
+        return view('template.language', ['title' => 'Language - Henry Alexis', 'LANGUAGE' => $LANGUAGE]);
     }
 }

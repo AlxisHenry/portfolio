@@ -17,7 +17,7 @@ class AboutController extends Controller
 
     public function About()
     {
-        return view('layouts.about', ['title' => 'About me - Henry Alexis', 'navbar' => 'about', 'og_description' => 'Portfolio Henry Alexis - About me']);
+        return view('template.about', ['title' => 'About me - Henry Alexis', 'navbar' => 'about', 'og_description' => 'Portfolio Henry Alexis - About me']);
     }
 
 }
