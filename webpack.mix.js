@@ -17,6 +17,10 @@ mix.webpackConfig({
     }
 });
 
-mix.js('resources/js/app.js', 'public/js');
+mix.js('resources/js/app.js', 'public/js/app.js');
+mix.js('resources/js/homepage.js', 'public/js/homepage.js');
+mix.js('resources/js/components/project-cards.js', 'public/js/components/project-cards.js')
+mix.js('resources/js/components/burger-menu.js', 'public/js/components/burger-menu.js')
 
 mix.sass('resources/sass/app.scss', 'public/css');
+

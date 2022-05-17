@@ -1,4 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/homepage.js": "/js/homepage.js",
+    "/js/components/project-cards.js": "/js/components/project-cards.js",
+    "/js/components/burger-menu.js": "/js/components/burger-menu.js",
     "/css/app.css": "/css/app.css"
 }
