@@ -28,15 +28,7 @@
                     {{ $Languages }}
                 </div>
 
-                <div class="_up_project_">
-                    <a href="{{ $Project }}">
-                        <div class="__content__">
-                            about
-                            <div class="__arrow__left__"></div>
-                        </div>
-                    </a>
-                    <div class=""></div>
-                </div>
+                @include('components.about', ['link' => $Project])
 
             </div>
 

@@ -1,6 +1,7 @@
 import ScrollReveal from "scrollreveal";
 import anime from "animejs";
 import * as ProjectsCards from "./components/project-cards"
+import * as global from "./main"
 
 const writeJob = (job, index) => {
     const Job = document.querySelector('.job p')
@@ -37,13 +38,26 @@ const HomepageReveal = () => {
 }
 
 const RevealYears = () => {
-    const years = document.querySelector('.years');
-    anime({
-        targets: years,
-        innerHTML: [2000, 2022],
-        easing: 'linear',
-        round: 1
-    });
+    const years = document.querySelector('.years')
+    let state = true
+
+    if (years) {
+        document.addEventListener('scroll', () => {
+            if (state) {
+                if (global.inViewport(years)) {
+                    setTimeout(() => {
+                        anime({
+                            targets: years,
+                            innerHTML: [2000, 2022],
+                            easing: 'linear',
+                            round: 1
+                        })
+                    }, 400)
+                    state = false
+                }
+            }
+        })
+    }
 }
 
 window.addEventListener('load', (e) => {

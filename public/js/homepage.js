@@ -1387,6 +1387,33 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./resources/js/main.js":
+/*!******************************!*\
+  !*** ./resources/js/main.js ***!
+  \******************************/
+/***/ ((module) => {
+
+var elementInViewport = function elementInViewport(el) {
+  var top = el.offsetTop;
+  var left = el.offsetLeft;
+  var width = el.offsetWidth;
+  var height = el.offsetHeight;
+
+  while (el.offsetParent) {
+    el = el.offsetParent;
+    top += el.offsetTop;
+    left += el.offsetLeft;
+  }
+
+  return top >= window.scrollY && left >= window.scrollY && top + height <= window.scrollY + window.innerHeight && left + width <= window.scrollY + window.innerWidth;
+};
+
+module.exports = {
+  inViewport: elementInViewport
+};
+
+/***/ }),
+
 /***/ "./node_modules/is-dom-node-list/dist/is-dom-node-list.es.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/is-dom-node-list/dist/is-dom-node-list.es.js ***!
@@ -3350,6 +3377,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var animejs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! animejs */ "./node_modules/animejs/lib/anime.es.js");
 /* harmony import */ var _components_project_cards__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/project-cards */ "./resources/js/components/project-cards.js");
 /* harmony import */ var _components_project_cards__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_project_cards__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main */ "./resources/js/main.js");
+/* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_main__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -3395,12 +3425,25 @@ var HomepageReveal = function HomepageReveal() {
 
 var RevealYears = function RevealYears() {
   var years = document.querySelector('.years');
-  (0,animejs__WEBPACK_IMPORTED_MODULE_1__["default"])({
-    targets: years,
-    innerHTML: [2000, 2022],
-    easing: 'linear',
-    round: 1
-  });
+  var state = true;
+
+  if (years) {
+    document.addEventListener('scroll', function () {
+      if (state) {
+        if (_main__WEBPACK_IMPORTED_MODULE_3__.inViewport(years)) {
+          setTimeout(function () {
+            (0,animejs__WEBPACK_IMPORTED_MODULE_1__["default"])({
+              targets: years,
+              innerHTML: [2000, 2022],
+              easing: 'linear',
+              round: 1
+            });
+          }, 400);
+          state = false;
+        }
+      }
+    });
+  }
 };
 
 window.addEventListener('load', function (e) {
