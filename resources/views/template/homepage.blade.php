@@ -1,30 +1,30 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
 
     <section class="__homepage__presentation__">
 
-        @include('sections.spoilers.presentation')
+        @include('components.sections.spoilers.presentation')
 
     </section>
 
-    @include('component.arrow.arrow-down')
+    @include('components.arrow')
 
     <section id="__spoilerAbout" class="__spoiler__about__">
 
-        @include('sections.spoilers.about')
+        @include('components.sections.spoilers.about')
 
     </section>
 
     <section id="__spoilerProjects" class="__spoiler__projects__">
 
-        @include('sections.spoilers.projects')
+        @include('components.sections.spoilers.projects')
 
     </section>
 
     <section id="__spoilerCards" class="__spoiler__cards__ hidden">
 
-        @include('sections.spoilers.news')
+        @include('components.sections.spoilers.news')
 
     </section>
 

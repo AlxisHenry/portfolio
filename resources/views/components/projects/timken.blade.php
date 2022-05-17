@@ -1,4 +1,4 @@
-@component('component.projects.cards')
+@component('components.cards')
 
     @slot('MainTitle')
     @endslot

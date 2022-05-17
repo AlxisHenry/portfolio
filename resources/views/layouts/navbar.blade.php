@@ -6,15 +6,15 @@
 
     <div class="burger-element">
 
-            @include('navigation.nav-menu', ['to' => 'home','title' => 'Home'])
+            @include('components.navbar', ['to' => 'home','title' => 'Home'])
 
-            @include('navigation.nav-menu', ['to' => 'about','title' => 'about me'])
+            @include('components.navbar', ['to' => 'about','title' => 'about me'])
 
-            @include('navigation.nav-menu', ['to' => 'projects','title' => 'projects'])
+            @include('components.navbar', ['to' => 'projects','title' => 'projects'])
 
-            @include('navigation.nav-menu', ['to' => 'board','title' => 'board'])
+            @include('components.navbar', ['to' => 'board','title' => 'board'])
 
-            @include('navigation.nav-menu', ['to' => 'news','title' => 'news'])
+            @include('components.navbar', ['to' => 'news','title' => 'news'])
 
     </div>
 

@@ -12,7 +12,7 @@
 
             </span>
 
-            @include('component.buttons.more', ['to' => '/about'])
+            @include('components.more', ['to' => '/about'])
 
         </div>
 

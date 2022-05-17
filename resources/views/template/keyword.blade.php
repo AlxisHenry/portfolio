@@ -10,7 +10,7 @@
 
         @foreach($CORRESPONDING_KEYWORD_ARTICLE as $card)
 
-            @include('component.articles.card')
+            @include('components.articles.news')
 
         @endforeach
 

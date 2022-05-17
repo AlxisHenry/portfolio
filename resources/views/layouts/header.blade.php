@@ -32,6 +32,5 @@
 </head>
 <body>
 
-@include('header.progress')
-
-@include('header.cursor')
+@include('components.scrollbar')
+@include('components.cursor')

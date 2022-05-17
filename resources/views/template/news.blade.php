@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
 
@@ -8,7 +8,7 @@
 
         @foreach($TECH_CARDS as $card)
 
-            @include('component.articles.card')
+            @include('components.articles.news')
 
         @endforeach
 
@@ -18,7 +18,7 @@
 
         @foreach($JURI_CARDS as $card)
 
-            @include('component.articles.card')
+            @include('components.articles.news')
 
         @endforeach
 
