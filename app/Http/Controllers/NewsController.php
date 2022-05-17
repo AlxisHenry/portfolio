@@ -53,7 +53,7 @@ class NewsController extends Controller
                       ->limit(5)
                       ->get();
 
-        return view('template.news', ['title' => 'News - Henry Alexis',
+        return view('templates.news', ['title' => 'News - Henry Alexis',
                                          'navbar' => 'news',
                                          'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
                                          'TECH_CARDS' => $TECH_CARDS,
@@ -74,7 +74,7 @@ class NewsController extends Controller
                    ->where('NEWS_ARTICLE.UrlArticle', 'like', '%' . $ARTICLE_URL_NAME . '%')
                    ->get();
 
-        return view('template.article', ['title' => 'News - Henry Alexis',
+        return view('templates.article', ['title' => 'News - Henry Alexis',
                                             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
                                             'navbar' => 'null',
                                             'ARTICLE' => $ARTICLE,
@@ -95,7 +95,7 @@ class NewsController extends Controller
                                          ->limit(10)
                                          ->get();
 
-        return view('template.keyword', ['title' => $KEYWORD . ' - Henry Alexis',
+        return view('templates.keyword', ['title' => $KEYWORD . ' - Henry Alexis',
                                             'KEYWORD' => $KEYWORD,
                                             'navbar' => 'null',
                                             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',

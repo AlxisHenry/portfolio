@@ -15,7 +15,7 @@ class BoardController extends Controller
     }
 
     public function Board() {
-        return view('template.board', ['title' => 'Board - Henry Alexis', 'navbar' => 'board', 'og_description' => 'Portfolio Henry Alexis - Board with my articles']);
+        return view('templates.board', ['title' => 'Board - Henry Alexis', 'navbar' => 'board', 'og_description' => 'Portfolio Henry Alexis - Board with my articles']);
     }
 
 }
