@@ -6421,6 +6421,10 @@ body {
 }
 
 .__more__button__ {
+  min-height: 45px;
+  min-width: 100px;
+  max-width: 100px;
+  max-height: 45px;
   width: 100px;
   height: 45px;
   border-radius: 12px;
@@ -6808,7 +6812,7 @@ body {
 .__spoiler__about__ {
   margin-top: 5%;
   width: 100%;
-  height: auto;
+  height: 600px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -7266,7 +7270,19 @@ body {
     display: none;
   }
 }
+@media screen and (max-width: 900px) {
+  .__spoiler__projects__ {
+    margin-top: 35px;
+  }
+  .__spoiler__projects__ ._projects_cards_ {
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 600px) {
+  .__spoiler__projects__ {
+    background-color: yellow;
+  }
+
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name {
     margin-top: 100px;
   }
@@ -7307,6 +7323,18 @@ body {
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .__language__ {
     display: none;
+  }
+
+  .__spoiler__about__ .__about__card__ .__about__ {
+    margin-top: -40px;
+  }
+  .__spoiler__about__ .__about__card__ .__about__ ._about_descript_ {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0;
+  }
+  .__spoiler__about__ .__about__card__ .__about__ .__more__about__ {
+    margin-top: 40px;
   }
 }
 @media screen and (min-height: 900px) {
