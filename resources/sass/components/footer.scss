@@ -2,7 +2,7 @@
   margin-top: 45px;
   width: 100%;
   height: 40px;
-  background-color: #e5d6d6;
+  background-color: #242B40;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
   .__footer__main__ {
     text-align: center;
     width: auto;
-    color: #8C8C8C;
+    color: #F2F2F0;
     margin-right: 12px;
     height: 40px;
     display: flex;
@@ -22,9 +22,9 @@
     font-family: $_family_poppins;
 
     &:hover {
-      transition: All ease-in-out 300ms;
+      transition: All ease-in-out 220ms;
       cursor: pointer;
-      color: black;
+      color: #52B3D9;
     }
 
   }

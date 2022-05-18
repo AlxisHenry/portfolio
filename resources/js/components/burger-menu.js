@@ -1,71 +1,76 @@
-const burgerButton = document.querySelector('.burger-button')
-const burgerElement = document.querySelector('.burger-element')
-const burgerMouvement = document.querySelector('.__presentation__')
-const ArticleElement = document.querySelector('.__target__article__')
+const ExtendsAnimationClass =  '__element__navbar__extends__'
+const ReverseExtendsAnimationClass = '__reverse__element__navbar__extends__'
+const ExtendsNavbar = 'NavbarUpAnimation'
+const ReverseExtendsNavbar = 'NavbarReverseAnimation'
+const Button = document.querySelector('.burger-button')
+const Navbar = document.querySelector('.burger-element')
+const ElementToMoveDuringExtends = [
+    document.querySelector('.__presentation__'),
+    document.querySelector('.__about__card__'),
+    document.querySelector('#__spoilerProjects'),
+    document.querySelector('#__spoilerCards'),
+]
 
-const toggleNav = () => {
+const ButtonAction = () => {
+    if (!Button || !Navbar) { return false }
+    Button.addEventListener('click', (e) => {
+        Button.classList.toggle('is-active')
+        if (Navbar.classList.length === 1) {
+            Navbar.classList.add(ExtendsNavbar)
+        } else {
+            Navbar.classList.toggle(ReverseExtendsNavbar)
+            Navbar.classList.toggle(ExtendsNavbar)
+        }
+    })
+}
 
-    if (burgerButton) {
-        burgerButton.addEventListener('click', (e) => {
-            burgerButton.classList.toggle('is-active')
-            if (burgerElement){
-                if ((!burgerElement.classList.contains('NavbarUpAnimation'))) {
-                    burgerElement.classList.remove('NavbarReverseAnimation')
-                    burgerElement.classList.add('NavbarUpAnimation')
-                    if (burgerMouvement) {
-                        if (window.innerWidth <= 1500) {} else {
-                            burgerMouvement.classList.remove('moov_this_element_reverse')
-                            burgerMouvement.classList.add('moov_this_element')
-                        }
-                    }
-                    if (ArticleElement) {
-                        if (window.innerWidth <= 1500) {} else {
-                            ArticleElement.classList.remove('reverse-moov-article-element')
-                            ArticleElement.classList.add('moov-article-element')
-                        }
-                    }
-                } else {
-                    burgerElement.classList.add('NavbarReverseAnimation')
-                    burgerElement.classList.remove('NavbarUpAnimation')
-                    if (burgerMouvement) {
-                        if (window.innerWidth <= 1500) {} else {
-                            burgerMouvement.classList.remove('moov_this_element')
-                            burgerMouvement.classList.add('moov_this_element_reverse')
-                        }}
-                    if (ArticleElement) {
-                        if (window.innerWidth <= 1500) {} else {
-                            ArticleElement.classList.add('reverse-moov-article-element')
-                            ArticleElement.classList.remove('moov-article-element')
-                        }       }
-                }
+const NavbarAnimation = () => {
+    if (!Button || !Navbar) { return false }
+    Button.addEventListener('click', (e) => {
+        if (window.innerWidth > 1500) {
+            if (Navbar.classList.contains(ExtendsNavbar)) {
+                ElementToMoveDuringExtends.forEach((Element) => {
+                    Element.classList.remove(ReverseExtendsAnimationClass)
+                    Element.classList.add(ExtendsAnimationClass)
+                })
+            } else {
+                ElementToMoveDuringExtends.forEach((Element) => {
+                    Element.classList.remove(ExtendsAnimationClass)
+                    Element.classList.add(ReverseExtendsAnimationClass)
+                })
             }
-            e.preventDefault()
-
-        }, false)
-    }
+        }
+    })
 }
 
 const ResizeNavAnimation = () => {
-    if (burgerMouvement) {
+
+    if (Moov_Presentation) {
         if (window.innerWidth <= 1500) {
-            burgerMouvement.classList.remove('moov_this_element_reverse')
-            burgerMouvement.classList.remove('moov_this_element')
+            Moov_Presentation.classList.remove('moov_this_element_reverse')
+            Moov_Presentation.classList.remove('moov_this_element')
         } else {
             if (burgerElement.classList.contains('NavbarUpAnimation')) {
-                burgerMouvement.classList.add('moov_this_element')
+                Moov_Presentation.classList.add('moov_this_element')
             }
         }
     }
-    if (ArticleElement) {
+    if (Moov_Article) {
         if (window.innerWidth <= 1500) {
-            ArticleElement.classList.remove('moov-article-element')
-            ArticleElement.classList.remove('reverse-moov-article-element')
+            Moov_Article.classList.remove('moov-article-element')
+            Moov_Article.classList.remove('reverse-moov-article-element')
         } else {
             if (burgerElement.classList.contains('NavbarUpAnimation')) {
-                ArticleElement.classList.add('moov-article-element')
+                Moov_Article.classList.add('moov-article-element')
             }
         }
     }
+
+    console.log(Mooov_About)
+    if (Mooov_About) {
+
+    }
+
 }
 
 const HoverNavbarMenu = () => {
@@ -73,7 +78,6 @@ const HoverNavbarMenu = () => {
     const NavTitle = document.querySelectorAll('.burger-element a:not(.nav-active)')
 
     if (NavTitle) {
-
         NavTitle.forEach(__NavTitle =>
             __NavTitle.addEventListener('mouseover', () => {
 
@@ -83,7 +87,6 @@ const HoverNavbarMenu = () => {
                 LoadingBar.classList.add('loading__navbar_animation_up')
 
             }))
-
         NavTitle.forEach(__NavTitle =>
             __NavTitle.addEventListener('mouseout', () => {
 
@@ -92,12 +95,13 @@ const HoverNavbarMenu = () => {
                 LoadingBar.classList.add('loading__navbar_animation_down')
 
             }))
-
     }
+
 }
 
 module.exports = {
-    Burger: toggleNav,
+    Button: ButtonAction,
+    Animation: NavbarAnimation,
     Resize: ResizeNavAnimation,
     Hover: HoverNavbarMenu
 }

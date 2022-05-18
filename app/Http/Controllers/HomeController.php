@@ -49,7 +49,7 @@ class HomeController extends Controller
             ->join('NEWS_IMAGE', 'NEWS_ARTICLE.identifier', '=', 'NEWS_IMAGE.identifier')
             ->join('NEWS_THEME', 'NEWS_ARTICLE.identifier', '=', 'NEWS_THEME.identifier')
             ->where('NEWS_ARTICLE.identifier', '>', 160)
-            ->where('NEWS_ARTICLE.identifier', '<', 163)
+            ->where('NEWS_ARTICLE.identifier', '<', 167)
             ->get();
 
         return view('templates.homepage', ['title' => 'Home - Henry Alexis',

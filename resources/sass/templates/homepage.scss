@@ -20,14 +20,6 @@
     box-shadow: 0 20px 10px -15px #111;
     -webkit-box-shadow: 0 20px 10px -15px #111;
 
-    &.moov_this_element {
-      animation: MoovElement 0.2s forwards;
-    }
-
-    &.moov_this_element_reverse {
-      animation: ReverseMoovElement 0.2s forwards;
-    }
-
     .__presentation__separator__ {
       height: 400px;
       background-color: black;
@@ -207,6 +199,9 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 80px;
+  .__cards__ {
+    max-width: 900px;
+  }
 }
 
 /* END --- Cards */
@@ -231,24 +226,6 @@
   }
   100% {
     transform: rotateY(360deg);
-  }
-}
-
-@keyframes MoovElement {
-  0% {
-    margin-left: 20px;
-  }
-  100% {
-    margin-left: 280px;
-  }
-}
-
-@keyframes ReverseMoovElement {
-  0% {
-    margin-left: 280px;
-  }
-  100% {
-    margin-left: 20px;
   }
 }
 

@@ -62,8 +62,9 @@ window.addEventListener('load', function (e) {
   });
   Themes();
   LoadingPosition(e);
-  _components_burger_menu__WEBPACK_IMPORTED_MODULE_2__.Burger();
+  _components_burger_menu__WEBPACK_IMPORTED_MODULE_2__.Button();
   _components_burger_menu__WEBPACK_IMPORTED_MODULE_2__.Hover();
+  _components_burger_menu__WEBPACK_IMPORTED_MODULE_2__.Animation();
 });
 window.addEventListener('scroll', function (e) {
   LoadingPosition(e);
@@ -80,81 +81,79 @@ window.addEventListener('resize', function () {
   \************************************************/
 /***/ ((module) => {
 
-var burgerButton = document.querySelector('.burger-button');
-var burgerElement = document.querySelector('.burger-element');
-var burgerMouvement = document.querySelector('.__presentation__');
-var ArticleElement = document.querySelector('.__target__article__');
+var ExtendsAnimationClass = '__element__navbar__extends__';
+var ReverseExtendsAnimationClass = '__reverse__element__navbar__extends__';
+var ExtendsNavbar = 'NavbarUpAnimation';
+var ReverseExtendsNavbar = 'NavbarReverseAnimation';
+var Button = document.querySelector('.burger-button');
+var Navbar = document.querySelector('.burger-element');
+var ElementToMoveDuringExtends = [document.querySelector('.__presentation__'), document.querySelector('.__about__card__'), document.querySelector('#__spoilerProjects'), document.querySelector('#__spoilerCards')];
 
-var toggleNav = function toggleNav() {
-  if (burgerButton) {
-    burgerButton.addEventListener('click', function (e) {
-      burgerButton.classList.toggle('is-active');
-
-      if (burgerElement) {
-        if (!burgerElement.classList.contains('NavbarUpAnimation')) {
-          burgerElement.classList.remove('NavbarReverseAnimation');
-          burgerElement.classList.add('NavbarUpAnimation');
-
-          if (burgerMouvement) {
-            if (window.innerWidth <= 1500) {} else {
-              burgerMouvement.classList.remove('moov_this_element_reverse');
-              burgerMouvement.classList.add('moov_this_element');
-            }
-          }
-
-          if (ArticleElement) {
-            if (window.innerWidth <= 1500) {} else {
-              ArticleElement.classList.remove('reverse-moov-article-element');
-              ArticleElement.classList.add('moov-article-element');
-            }
-          }
-        } else {
-          burgerElement.classList.add('NavbarReverseAnimation');
-          burgerElement.classList.remove('NavbarUpAnimation');
-
-          if (burgerMouvement) {
-            if (window.innerWidth <= 1500) {} else {
-              burgerMouvement.classList.remove('moov_this_element');
-              burgerMouvement.classList.add('moov_this_element_reverse');
-            }
-          }
-
-          if (ArticleElement) {
-            if (window.innerWidth <= 1500) {} else {
-              ArticleElement.classList.add('reverse-moov-article-element');
-              ArticleElement.classList.remove('moov-article-element');
-            }
-          }
-        }
-      }
-
-      e.preventDefault();
-    }, false);
+var ButtonAction = function ButtonAction() {
+  if (!Button || !Navbar) {
+    return false;
   }
+
+  Button.addEventListener('click', function (e) {
+    Button.classList.toggle('is-active');
+
+    if (Navbar.classList.length === 1) {
+      Navbar.classList.add(ExtendsNavbar);
+    } else {
+      Navbar.classList.toggle(ReverseExtendsNavbar);
+      Navbar.classList.toggle(ExtendsNavbar);
+    }
+  });
+};
+
+var NavbarAnimation = function NavbarAnimation() {
+  if (!Button || !Navbar) {
+    return false;
+  }
+
+  Button.addEventListener('click', function (e) {
+    if (window.innerWidth > 1500) {
+      if (Navbar.classList.contains(ExtendsNavbar)) {
+        ElementToMoveDuringExtends.forEach(function (Element) {
+          Element.classList.remove(ReverseExtendsAnimationClass);
+          Element.classList.add(ExtendsAnimationClass);
+        });
+      } else {
+        ElementToMoveDuringExtends.forEach(function (Element) {
+          Element.classList.remove(ExtendsAnimationClass);
+          Element.classList.add(ReverseExtendsAnimationClass);
+        });
+      }
+    }
+  });
 };
 
 var ResizeNavAnimation = function ResizeNavAnimation() {
-  if (burgerMouvement) {
+  if (Moov_Presentation) {
     if (window.innerWidth <= 1500) {
-      burgerMouvement.classList.remove('moov_this_element_reverse');
-      burgerMouvement.classList.remove('moov_this_element');
+      Moov_Presentation.classList.remove('moov_this_element_reverse');
+      Moov_Presentation.classList.remove('moov_this_element');
     } else {
       if (burgerElement.classList.contains('NavbarUpAnimation')) {
-        burgerMouvement.classList.add('moov_this_element');
+        Moov_Presentation.classList.add('moov_this_element');
       }
     }
   }
 
-  if (ArticleElement) {
+  if (Moov_Article) {
     if (window.innerWidth <= 1500) {
-      ArticleElement.classList.remove('moov-article-element');
-      ArticleElement.classList.remove('reverse-moov-article-element');
+      Moov_Article.classList.remove('moov-article-element');
+      Moov_Article.classList.remove('reverse-moov-article-element');
     } else {
       if (burgerElement.classList.contains('NavbarUpAnimation')) {
-        ArticleElement.classList.add('moov-article-element');
+        Moov_Article.classList.add('moov-article-element');
       }
     }
   }
+
+  console.log(Mooov_About);
+
+  if (Mooov_About) {}
 };
 
 var HoverNavbarMenu = function HoverNavbarMenu() {
@@ -178,7 +177,8 @@ var HoverNavbarMenu = function HoverNavbarMenu() {
 };
 
 module.exports = {
-  Burger: toggleNav,
+  Button: ButtonAction,
+  Animation: NavbarAnimation,
   Resize: ResizeNavAnimation,
   Hover: HoverNavbarMenu
 };

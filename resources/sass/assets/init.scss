@@ -1,21 +1,34 @@
-$__backgroundColor__: #F2F2F2;
+/* START --- Colors */
+
+$DarkBlue: #242B40;
+$Blue: #1B208C;
+$FlashBlue: #52B3D9;
+$MoyBlue: #464AA6;
+$LightBlue: #787CBF;
+$clay: #F2BC79;
+$Orange: #F2C166;
+$LightOrange: #F2D49B;
+$BrokenWhite: #F2F2F2;
+$BrokenLightWhite: #F2F2F0;
+
+/* END --- Colors */
+/* START --- Variables */
+
+$__BackgroundColor: $BrokenWhite;
+$__navbarLinksColor__: $BrokenLightWhite;
+$__hiddenNavbar__: -1000px;
+$__navbarBackgroundColor__: $DarkBlue;
+$__MoreButtonBackground: $Orange;
+$__MoreButtonBackgroundHover: $LightOrange;
+
+/* END --- Variables */
+
+/* START --- FONT FAMILY */
+
 $_family_poppins: 'Poppins', sans-serif;
 $_family_iconsolata: 'Inconsolata', monospace;
-$__navbarLinksColor__: #949494;
-$__hiddenNavbar__: -1000px;
-$__navbarBackgroundColor__: #242B40;
 
-$bleu_fort: #1B208C;
-$bleu_moyen: #464AA6;
-$bleu_clair: #787CBF;
-$bg: #F2F2F0;
-$clay: #F2BC79;
-/* Color Theme Swatches in Hex */
-$People-using-their-mobile-phones-or-smartphone-for-the-news-illustration-1-hex: #242B40;
-$People-using-their-mobile-phones-or-smartphone-for-the-news-illustration-2-hex: #52B3D9;
-$People-using-their-mobile-phones-or-smartphone-for-the-news-illustration-3-hex: #F2C166;
-$People-using-their-mobile-phones-or-smartphone-for-the-news-illustration-4-hex: #F2D49B;
-$People-using-their-mobile-phones-or-smartphone-for-the-news-illustration-5-hex: #F2F2F2;
+/* END --- FONT FAMILY*/
 
 * {
   margin: 0;
@@ -23,7 +36,7 @@ $People-using-their-mobile-phones-or-smartphone-for-the-news-illustration-5-hex:
 }
 
 body {
-  background: $__backgroundColor__;
+  background: $__BackgroundColor;
   overflow-x: hidden;
   overflow-y: scroll;
 }

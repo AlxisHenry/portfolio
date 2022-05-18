@@ -8,8 +8,8 @@
 
 <script src="{{ url('js/app.js') }}"></script>
 
-</body>
-
 @yield('footer')
+
+</body>
 
 </html>

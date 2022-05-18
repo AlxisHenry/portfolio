@@ -33,7 +33,21 @@
 
 /* END --- Responsive */
 
+/* START --- Keyframes */
+
+@import 'keyframes/globals';
+
+/* END --- Keyframes */
+
 /* START --- Globals */
+
+.__element__navbar__extends__ {
+    animation: __element__navbar__extends__ 0.875s forwards;
+}
+
+.__reverse__element__navbar__extends__ {
+    animation: __reverse__element__navbar__extends__ 0.875s forwards;
+}
 
 .hidden {
     display: none!important;

@@ -26,7 +26,7 @@
        <!-- <a href="https://wakatime.com/@AlxisHenry" target="_blank" rel="noreferrer nofollow">
             <img title="Wakatime" src="{{-- url('assets/svg/contacts/wakatime.svg') --}}" alt="Wakatime Link">
         </a> -->
-        <div class="__theme__ invisible">
+        <div class="__theme__">
             <div class="__theme__main__" id="moon">
                 <img id="moon" title="Moon" src="{{ url('assets/svg/themes/moon.svg') }}" alt="Moon" data-next="Sun">
             </div>

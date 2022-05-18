@@ -5,14 +5,6 @@
   justify-content: center;
   align-items: center;
 
-  &.moov-article-element {
-    animation: MoovArticleElement 1s forwards;
-  }
-
-  &.reverse-moov-article-element {
-    animation: ReverseMoovArticleElement 1s forwards;
-  }
-
   .__article__ {
     max-width: 750px
   }
@@ -147,22 +139,4 @@
 
   }
 
-}
-
-@keyframes MoovArticleElement {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: 200px;
-  }
-}
-
-@keyframes ReverseMoovArticleElement {
-  0% {
-    margin-left: 200px;
-  }
-  100% {
-    margin-left: 0;
-  }
 }

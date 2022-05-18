@@ -37,8 +37,9 @@ window.addEventListener('load', (e) => {
     AOS.init({ duration: 1800 })
     Themes()
     LoadingPosition(e)
-    Menu.Burger()
+    Menu.Button()
     Menu.Hover()
+    Menu.Animation()
 
 })
 

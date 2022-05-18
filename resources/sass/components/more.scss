@@ -7,18 +7,18 @@
   width: 100px;
   height: 45px;
   border-radius: 12px;
-  border: solid 1px #F2C166;
+  border: solid 1px $__MoreButtonBackground;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F2C166;
+  background-color: $__MoreButtonBackground;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 
   &:hover {
     transition: background-color 1.5s;
     cursor: pointer;
-    background-color: #F2D49B ;
-    border-color: #F2D49B;
+    background-color: $__MoreButtonBackgroundHover ;
+    border-color: $__MoreButtonBackgroundHover;
     a span {
       color: black;
       font-weight: 600;
