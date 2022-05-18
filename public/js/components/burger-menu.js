@@ -55,31 +55,18 @@ var NavbarAnimation = function NavbarAnimation() {
 };
 
 var ResizeNavAnimation = function ResizeNavAnimation() {
-  if (Moov_Presentation) {
-    if (window.innerWidth <= 1500) {
-      Moov_Presentation.classList.remove('moov_this_element_reverse');
-      Moov_Presentation.classList.remove('moov_this_element');
-    } else {
-      if (burgerElement.classList.contains('NavbarUpAnimation')) {
-        Moov_Presentation.classList.add('moov_this_element');
-      }
-    }
+  if (!Button || !Navbar) {
+    return false;
   }
 
-  if (Moov_Article) {
+  ElementToMoveDuringExtends.forEach(function (Element) {
     if (window.innerWidth <= 1500) {
-      Moov_Article.classList.remove('moov-article-element');
-      Moov_Article.classList.remove('reverse-moov-article-element');
-    } else {
-      if (burgerElement.classList.contains('NavbarUpAnimation')) {
-        Moov_Article.classList.add('moov-article-element');
-      }
+      Element.classList.remove(ExtendsAnimationClass);
+      Element.classList.remove(ReverseExtendsAnimationClass);
+    } else if (Navbar.classList.contains('NavbarUpAnimation')) {
+      Element.classList.add(ExtendsAnimationClass);
     }
-  }
-
-  console.log(Mooov_About);
-
-  if (Mooov_About) {}
+  });
 };
 
 var HoverNavbarMenu = function HoverNavbarMenu() {

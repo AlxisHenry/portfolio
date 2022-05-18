@@ -44,33 +44,15 @@ const NavbarAnimation = () => {
 }
 
 const ResizeNavAnimation = () => {
-
-    if (Moov_Presentation) {
+    if (!Button || !Navbar) { return false }
+    ElementToMoveDuringExtends.forEach((Element) => {
         if (window.innerWidth <= 1500) {
-            Moov_Presentation.classList.remove('moov_this_element_reverse')
-            Moov_Presentation.classList.remove('moov_this_element')
-        } else {
-            if (burgerElement.classList.contains('NavbarUpAnimation')) {
-                Moov_Presentation.classList.add('moov_this_element')
-            }
+            Element.classList.remove(ExtendsAnimationClass)
+            Element.classList.remove(ReverseExtendsAnimationClass)
+        } else if (Navbar.classList.contains('NavbarUpAnimation')) {
+            Element.classList.add(ExtendsAnimationClass)
         }
-    }
-    if (Moov_Article) {
-        if (window.innerWidth <= 1500) {
-            Moov_Article.classList.remove('moov-article-element')
-            Moov_Article.classList.remove('reverse-moov-article-element')
-        } else {
-            if (burgerElement.classList.contains('NavbarUpAnimation')) {
-                Moov_Article.classList.add('moov-article-element')
-            }
-        }
-    }
-
-    console.log(Mooov_About)
-    if (Mooov_About) {
-
-    }
-
+    })
 }
 
 const HoverNavbarMenu = () => {
