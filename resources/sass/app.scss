@@ -21,6 +21,7 @@
 /* START --- Templates */
 
 @import 'templates/homepage';
+@import 'templates/projects';
 @import 'templates/news';
 @import 'templates/news{title}';
 @import 'templates/news{keyword}';
@@ -30,6 +31,7 @@
 /* START --- Responsive */
 
 @import 'templates/@media/homepage';
+@import 'templates/@media/projects';
 
 /* END --- Responsive */
 
@@ -42,11 +44,11 @@
 /* START --- Globals */
 
 .__element__navbar__extends__ {
-    animation: __element__navbar__extends__ 0.875s forwards;
+    animation: __element__navbar__extends__ 1.275s forwards;
 }
 
 .__reverse__element__navbar__extends__ {
-    animation: __reverse__element__navbar__extends__ 0.875s forwards;
+    animation: __reverse__element__navbar__extends__ 1.275s forwards;
 }
 
 .hidden {

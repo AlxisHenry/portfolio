@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
 
@@ -10,7 +10,7 @@
 
         @foreach($CORRESPONDING_KEYWORD_ARTICLE as $card)
 
-            @include('components.articles.news')
+            @include('components.news')
 
         @endforeach
 

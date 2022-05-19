@@ -1,0 +1,19 @@
+/* START --- Projects Page */
+
+.__main__projects__ {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+  .__right, .__left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
+
+/* END --- Projects Page */

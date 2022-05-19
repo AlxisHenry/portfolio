@@ -6976,6 +6976,21 @@ body {
   }
 }
 /* END --- Animations */
+/* START --- Projects Page */
+.__main__projects__ {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.__main__projects__ .__right, .__main__projects__ .__left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* END --- Projects Page */
 .test .__cards__ {
   width: 100%;
   height: 350px;
@@ -7253,6 +7268,15 @@ body {
     align-items: center;
   }
 }
+@media screen and (max-width: 800px) {
+  .__main__projects__ {
+    flex-direction: column;
+    gap: 75px;
+  }
+  .__main__projects__ .__right, .__main__projects__ .__left {
+    gap: 75px;
+  }
+}
 /* END --- Responsive */
 /* START --- Keyframes */
 @-webkit-keyframes __element__navbar__extends__ {
@@ -7290,13 +7314,13 @@ body {
 /* END --- Keyframes */
 /* START --- Globals */
 .__element__navbar__extends__ {
-  -webkit-animation: __element__navbar__extends__ 0.875s forwards;
-          animation: __element__navbar__extends__ 0.875s forwards;
+  -webkit-animation: __element__navbar__extends__ 1.275s forwards;
+          animation: __element__navbar__extends__ 1.275s forwards;
 }
 
 .__reverse__element__navbar__extends__ {
-  -webkit-animation: __reverse__element__navbar__extends__ 0.875s forwards;
-          animation: __reverse__element__navbar__extends__ 0.875s forwards;
+  -webkit-animation: __reverse__element__navbar__extends__ 1.275s forwards;
+          animation: __reverse__element__navbar__extends__ 1.275s forwards;
 }
 
 .hidden {
