@@ -87,7 +87,7 @@ var ExtendsNavbar = 'NavbarUpAnimation';
 var ReverseExtendsNavbar = 'NavbarReverseAnimation';
 var Button = document.querySelector('.burger-button');
 var Navbar = document.querySelector('.burger-element');
-var ElementToMoveDuringExtends = [document.querySelector('.__presentation__'), document.querySelector('.__about__card__'), document.querySelector('#__spoilerProjects'), document.querySelector('#__spoilerCards')];
+var ElementToMoveDuringExtends = [document.querySelector('.__presentation__'), document.querySelector('.__about__card__'), document.querySelector('#__spoilerProjects'), document.querySelector('#__spoilerCards'), document.querySelector('.__main__projects__')];
 
 var ButtonAction = function ButtonAction() {
   if (!Button || !Navbar) {
@@ -115,13 +115,17 @@ var NavbarAnimation = function NavbarAnimation() {
     if (window.innerWidth > 1500) {
       if (Navbar.classList.contains(ExtendsNavbar)) {
         ElementToMoveDuringExtends.forEach(function (Element) {
-          Element.classList.remove(ReverseExtendsAnimationClass);
-          Element.classList.add(ExtendsAnimationClass);
+          if (Element) {
+            Element.classList.remove(ReverseExtendsAnimationClass);
+            Element.classList.add(ExtendsAnimationClass);
+          }
         });
       } else {
         ElementToMoveDuringExtends.forEach(function (Element) {
-          Element.classList.remove(ExtendsAnimationClass);
-          Element.classList.add(ReverseExtendsAnimationClass);
+          if (Element) {
+            Element.classList.remove(ExtendsAnimationClass);
+            Element.classList.add(ReverseExtendsAnimationClass);
+          }
         });
       }
     }
@@ -135,10 +139,14 @@ var ResizeNavAnimation = function ResizeNavAnimation() {
 
   ElementToMoveDuringExtends.forEach(function (Element) {
     if (window.innerWidth <= 1500) {
-      Element.classList.remove(ExtendsAnimationClass);
-      Element.classList.remove(ReverseExtendsAnimationClass);
+      if (Element) {
+        Element.classList.remove(ExtendsAnimationClass);
+        Element.classList.remove(ReverseExtendsAnimationClass);
+      }
     } else if (Navbar.classList.contains('NavbarUpAnimation')) {
-      Element.classList.add(ExtendsAnimationClass);
+      if (Element) {
+        Element.classList.add(ExtendsAnimationClass);
+      }
     }
   });
 };

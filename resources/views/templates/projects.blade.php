@@ -21,6 +21,5 @@
 
 @section('footer')
 
-    <script src="{{ url('js/homepage.js') }}"></script>
 
 @stop

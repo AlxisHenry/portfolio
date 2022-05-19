@@ -9,6 +9,7 @@ const ElementToMoveDuringExtends = [
     document.querySelector('.__about__card__'),
     document.querySelector('#__spoilerProjects'),
     document.querySelector('#__spoilerCards'),
+    document.querySelector('.__main__projects__')
 ]
 
 const ButtonAction = () => {
@@ -30,13 +31,17 @@ const NavbarAnimation = () => {
         if (window.innerWidth > 1500) {
             if (Navbar.classList.contains(ExtendsNavbar)) {
                 ElementToMoveDuringExtends.forEach((Element) => {
-                    Element.classList.remove(ReverseExtendsAnimationClass)
-                    Element.classList.add(ExtendsAnimationClass)
+                    if(Element) {
+                        Element.classList.remove(ReverseExtendsAnimationClass)
+                        Element.classList.add(ExtendsAnimationClass)
+                    }
                 })
             } else {
                 ElementToMoveDuringExtends.forEach((Element) => {
-                    Element.classList.remove(ExtendsAnimationClass)
-                    Element.classList.add(ReverseExtendsAnimationClass)
+                    if(Element) {
+                        Element.classList.remove(ExtendsAnimationClass)
+                        Element.classList.add(ReverseExtendsAnimationClass)
+                    }
                 })
             }
         }
@@ -47,10 +52,14 @@ const ResizeNavAnimation = () => {
     if (!Button || !Navbar) { return false }
     ElementToMoveDuringExtends.forEach((Element) => {
         if (window.innerWidth <= 1500) {
-            Element.classList.remove(ExtendsAnimationClass)
-            Element.classList.remove(ReverseExtendsAnimationClass)
+            if(Element) {
+                Element.classList.remove(ExtendsAnimationClass)
+                Element.classList.remove(ReverseExtendsAnimationClass)
+            }
         } else if (Navbar.classList.contains('NavbarUpAnimation')) {
-            Element.classList.add(ExtendsAnimationClass)
+            if(Element) {
+                Element.classList.add(ExtendsAnimationClass)
+            }
         }
     })
 }
