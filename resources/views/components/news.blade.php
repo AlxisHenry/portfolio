@@ -13,7 +13,7 @@
             <span>{{ $Google->translate($card->title) }}</span>
         </div>
 
-        @include('components.about', ['link' => $card->UrlArticle])
+        @include('components.about', ['link' => '/news/' .  explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle))]])
 
     </div>
 

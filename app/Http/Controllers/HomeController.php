@@ -62,9 +62,7 @@ class HomeController extends Controller
 
     public function WikiLang(string $LANGUAGE)
     {
-
         $LANGUAGE_TO_SCRAP = '';
-
         return view('templates.language', ['title' => 'Language - Henry Alexis', 'LANGUAGE' => $LANGUAGE]);
     }
 }

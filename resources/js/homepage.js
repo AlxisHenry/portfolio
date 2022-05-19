@@ -48,7 +48,7 @@ const RevealYears = () => {
                     setTimeout(() => {
                         anime({
                             targets: years,
-                            innerHTML: [2000, 2022],
+                            innerHTML: [1980, 2022],
                             easing: 'linear',
                             round: 1
                         })
@@ -65,6 +65,12 @@ window.addEventListener('load', (e) => {
     writeName('Henry alexis', 0)
     writeJob('Web Developer', 0)
     HomepageReveal()
+    anime({
+        targets: document.querySelector('.years'),
+        innerHTML: [1980, 2022],
+        easing: 'linear',
+        round: 1
+    })
     RevealYears()
     ProjectsCards.InputAnimation(e)
     ProjectsCards.ProjectAnimation(e)

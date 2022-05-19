@@ -3434,7 +3434,7 @@ var RevealYears = function RevealYears() {
           setTimeout(function () {
             (0,animejs__WEBPACK_IMPORTED_MODULE_1__["default"])({
               targets: years,
-              innerHTML: [2000, 2022],
+              innerHTML: [1980, 2022],
               easing: 'linear',
               round: 1
             });
@@ -3450,6 +3450,12 @@ window.addEventListener('load', function (e) {
   writeName('Henry alexis', 0);
   writeJob('Web Developer', 0);
   HomepageReveal();
+  (0,animejs__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    targets: document.querySelector('.years'),
+    innerHTML: [1980, 2022],
+    easing: 'linear',
+    round: 1
+  });
   RevealYears();
   _components_project_cards__WEBPACK_IMPORTED_MODULE_2__.InputAnimation(e);
   _components_project_cards__WEBPACK_IMPORTED_MODULE_2__.ProjectAnimation(e);

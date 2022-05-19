@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
 
@@ -17,7 +17,7 @@
                     </blockquote>
 
                     <div class="__article__informations__">
-                        <time data-time="{{ date($card->UploadDate) }}"> Published on {{ date('d/m/Y', strtotime(date($card->UploadDate)))  }} &nbsp;</time> {{ $Google->translate($card->author ?? '') }}
+                        <time data-time="{{ date($card->UploadDate) }}"> Published on {{ date('d/m/Y', strtotime(date($card->UploadDate)))  }}</time>, {{ $Google->translate($card->author ?? '') }}
                     </div>
 
                     <main class="__article__center__presentation__">
@@ -31,7 +31,7 @@
                         </figure>
                         <div class="__article__right__menu__">
                             <div class="__article_introduction__">
-                                {{ $Google->translate($card->introduction ?? $card->AltImage) ?? $Google->translate('Cet article ne contient pas de description') }}
+                                {{ $Google->translate($card->AltImage) ?? $Google->translate('Cet article ne contient pas de description') }}
                             </div>
 
                             <div class="__article_url__">
