@@ -1,7 +1,7 @@
 import ScrollReveal from "scrollreveal";
 import anime from "animejs";
-import * as ProjectsCards from "./components/project-cards"
-import * as global from "./main"
+import * as ProjectsCards from "../components/project-cards"
+import * as global from "../main"
 
 const writeJob = (job, index) => {
     const Job = document.querySelector('.job p')

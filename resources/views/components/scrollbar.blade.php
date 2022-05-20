@@ -8,7 +8,7 @@
         top: 0;
         left: 0;
         height: 100%;
-        background-color: gray;
+        background-color: #242B40;
         width: 3px;
         z-index: 120;
 
@@ -20,6 +20,6 @@
         top: 0;
         left: 0;
         width: 3px;
-        background-color: #f7fafb;
+        background-color: #52B3D9;
     }
 </style>

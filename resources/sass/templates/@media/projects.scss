@@ -1,9 +1,9 @@
 @media screen and (max-width: 800px) {
   .__main__projects__ {
-    flex-direction: column;
-    gap: 75px;
-    .__right, .__left {
-      gap: 75px;
+    .__main__projects__cards__ {
+      .__main__projects__cards__elements__ {
+        flex-direction: column;
+      }
     }
   }
 }

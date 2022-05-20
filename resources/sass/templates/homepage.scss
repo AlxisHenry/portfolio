@@ -180,6 +180,9 @@
   justify-content: center;
   gap: 50px;
   flex-direction: column;
+  ._projects_title_ {
+
+  }
   ._projects_cards_ {
     display: flex;
     flex-direction: row;
@@ -198,9 +201,10 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  gap: 80px;
+  gap: 20px;
+  margin-bottom: 80px;
   .__cards__ {
-    max-width: 1250px;
+    max-width: 1000px;
   }
 }
 

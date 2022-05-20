@@ -1,17 +1,25 @@
 /* START --- Projects Page */
 
 .__main__projects__ {
-
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
+  gap: 95px;
+  width: 100%;
+  height: auto;
 
-  .__right, .__left {
+  .__main__projects__cards__ {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    .__main__projects__cards__elements__ {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 60px;
+      width: 1200px;
+    }
   }
 
 }

@@ -1,4 +1,8 @@
-<h1 class="_projects_title_">Projects</h1>
+@component('components.underline-title')
+    @slot('Title')
+        Projects
+    @endslot
+@endcomponent
 
 <div class="_projects_cards_">
 
