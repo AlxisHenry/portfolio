@@ -1,12 +1,17 @@
+/* START --- Globals */
+
+@import 'globals';
+@import 'assets/fonts';
+@import 'assets/init';
 @import "KNACSS/__abstracts__";
 @import "KNACSS/__base__";
 @import "KNACSS/__utils__";
-@import "KNACSS/__components__";
-@import 'assets/fonts';
-@import 'assets/init';
+
+/* END --- Globals */
 
 /* START --- Components */
 
+@import "KNACSS/__components__";
 @import 'components/arrow';
 @import 'components/navbar';
 @import 'components/footer';
@@ -35,29 +40,3 @@
 @import 'templates/@media/projects';
 
 /* END --- Responsive */
-
-/* START --- Keyframes */
-
-@import 'keyframes/globals';
-
-/* END --- Keyframes */
-
-/* START --- Globals */
-
-.__element__navbar__extends__ {
-    animation: __element__navbar__extends__ 1.275s forwards;
-}
-
-.__reverse__element__navbar__extends__ {
-    animation: __reverse__element__navbar__extends__ 1.275s forwards;
-}
-
-.hidden {
-    display: none!important;
-}
-
-.invisible {
-    visibility: hidden!important;
-}
-
-/* END --- Globals */

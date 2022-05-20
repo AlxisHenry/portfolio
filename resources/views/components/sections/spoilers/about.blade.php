@@ -1,3 +1,9 @@
+@component('components.underline-title')
+    @slot('Title')
+        About me
+    @endslot
+@endcomponent
+
 <div class="__about__card__" data-aos="fade-right">
 
         <div class="__about__">

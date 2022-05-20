@@ -127,11 +127,11 @@
 .__spoiler__about__ {
   margin-top: 5%;
   width: 100%;
-  height: 600px;
+  height: 800px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 
   .__about__card__ {
     width: 100%;
@@ -159,8 +159,8 @@
         letter-spacing: 1px;
       }
 
-      .__more__about__ {
-        margin-top: 75px;
+      .__more__button__  {
+        margin-top: 82px;
       }
 
     }
@@ -173,12 +173,13 @@
 /* START --- Projects */
 
 .__spoiler__projects__ {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   height: auto;
   width: 100%;
   justify-content: center;
-  gap: 50px;
+  gap: 82px;
   flex-direction: column;
   ._projects_title_ {
 
@@ -195,13 +196,13 @@
 /* START --- Cards */
 
 .__spoiler__cards__ {
-  margin-top: 100px;
+  margin-top: 213px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 82px;
   margin-bottom: 80px;
   .__cards__ {
     max-width: 1000px;

@@ -52,7 +52,7 @@ class HomeController extends Controller
             ->where('NEWS_ARTICLE.identifier', '<', 167)
             ->get();
 
-        return view('templates.homepage', ['title' => 'Home - Henry Alexis',
+        return view('templates.homepage', ['title' => 'Henry Alexis',
                                         'navbar' => 'home',
                                         'languages' => $this->Languages(),
                                         'og_description' => 'Portfolio Henry Alexis - Homepage',

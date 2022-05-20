@@ -1,0 +1,37 @@
+.hidden {
+  display: none!important;
+}
+
+.invisible {
+  visibility: hidden!important;
+}
+
+/* Start --- Navbar extends animation */
+
+.__element__navbar__extends__ {
+  animation: __element__navbar__extends__ 1.275s forwards;
+}
+
+.__reverse__element__navbar__extends__ {
+  animation: __reverse__element__navbar__extends__ 1.275s forwards;
+}
+
+@keyframes __element__navbar__extends__ {
+  0% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: 140px;
+  }
+}
+
+@keyframes __reverse__element__navbar__extends__ {
+  0% {
+    margin-left: 140px;
+  }
+  100% {
+    margin-left: 20px;
+  }
+}
+
+/* End --- Navbar extends animation */

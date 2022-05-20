@@ -2,6 +2,77 @@
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@200&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Libre+Franklin:wght@200&family=Poppins:wght@200&display=swap);
 @charset "UTF-8";
+/* START --- Globals */
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+/* Start --- Navbar extends animation */
+.__element__navbar__extends__ {
+  -webkit-animation: __element__navbar__extends__ 1.275s forwards;
+          animation: __element__navbar__extends__ 1.275s forwards;
+}
+
+.__reverse__element__navbar__extends__ {
+  -webkit-animation: __reverse__element__navbar__extends__ 1.275s forwards;
+          animation: __reverse__element__navbar__extends__ 1.275s forwards;
+}
+
+@-webkit-keyframes __element__navbar__extends__ {
+  0% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: 140px;
+  }
+}
+
+@keyframes __element__navbar__extends__ {
+  0% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: 140px;
+  }
+}
+@-webkit-keyframes __reverse__element__navbar__extends__ {
+  0% {
+    margin-left: 140px;
+  }
+  100% {
+    margin-left: 20px;
+  }
+}
+@keyframes __reverse__element__navbar__extends__ {
+  0% {
+    margin-left: 140px;
+  }
+  100% {
+    margin-left: 20px;
+  }
+}
+/* End --- Navbar extends animation */
+/* START --- Colors */
+/* END --- Colors */
+/* START --- Variables */
+/* END --- Variables */
+/* START --- FONT FAMILY */
+/* END --- FONT FAMILY*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F2F2F2;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 /* ----------------------------- */
 /* ==Reset (base)                */
 /* ----------------------------- */
@@ -5949,6 +6020,8 @@ a[href^="#"]::after {
     grid-row: span 6/span 6;
   }
 }
+/* END --- Globals */
+/* START --- Components */
 /*
  * component nav "burger" button
  */
@@ -6082,24 +6155,6 @@ q:lang(fr),
   quotes: "« " " »" "“" "”";
 }
 
-/* START --- Colors */
-/* END --- Colors */
-/* START --- Variables */
-/* END --- Variables */
-/* START --- FONT FAMILY */
-/* END --- FONT FAMILY*/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: #F2F2F2;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-/* START --- Components */
 .__arrow__ {
   margin-top: 60px;
   width: 100%;
@@ -6425,7 +6480,6 @@ body {
 }
 
 .__more__button__ {
-  margin-top: 32px;
   min-height: 45px;
   min-width: 100px;
   max-width: 100px;
@@ -6695,12 +6749,9 @@ body {
   height: 100%;
 }
 
-.__main__section__title__ {
-  margin-top: -25px;
-}
 .__main__section__title__ h1 {
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 4.4em;
 }
 .__main__section__title__ .__title__loader__ {
   margin-top: -12px;
@@ -6810,11 +6861,11 @@ body {
 .__spoiler__about__ {
   margin-top: 5%;
   width: 100%;
-  height: 600px;
+  height: 800px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 .__spoiler__about__ .__about__card__ {
   width: 100%;
@@ -6841,19 +6892,20 @@ body {
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
 }
-.__spoiler__about__ .__about__card__ .__about__ .__more__about__ {
-  margin-top: 75px;
+.__spoiler__about__ .__about__card__ .__about__ .__more__button__ {
+  margin-top: 82px;
 }
 
 /* END --- About */
 /* START --- Projects */
 .__spoiler__projects__ {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   height: auto;
   width: 100%;
   justify-content: center;
-  gap: 50px;
+  gap: 82px;
   flex-direction: column;
 }
 .__spoiler__projects__ ._projects_cards_ {
@@ -6865,13 +6917,13 @@ body {
 /* END --- Projects */
 /* START --- Cards */
 .__spoiler__cards__ {
-  margin-top: 100px;
+  margin-top: 213px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 82px;
   margin-bottom: 80px;
 }
 .__spoiler__cards__ .__cards__ {
@@ -7166,6 +7218,7 @@ body {
 
 /* END --- Templates */
 /* START --- Responsive */
+/* START --- Homepage view Responsive */
 @media screen and (max-width: 1200px) {
   @-webkit-keyframes MoovElement {
     0% {
@@ -7292,63 +7345,12 @@ body {
     align-items: center;
   }
 }
+/* END --- Homepage view Responsive */
+/* START --- Project Responsive */
 @media screen and (max-width: 800px) {
   .__main__projects__ .__main__projects__cards__ .__main__projects__cards__elements__ {
     flex-direction: column;
   }
 }
+/* START --- Project View Responsive */
 /* END --- Responsive */
-/* START --- Keyframes */
-@-webkit-keyframes __element__navbar__extends__ {
-  0% {
-    margin-left: 20px;
-  }
-  100% {
-    margin-left: 140px;
-  }
-}
-@keyframes __element__navbar__extends__ {
-  0% {
-    margin-left: 20px;
-  }
-  100% {
-    margin-left: 140px;
-  }
-}
-@-webkit-keyframes __reverse__element__navbar__extends__ {
-  0% {
-    margin-left: 140px;
-  }
-  100% {
-    margin-left: 20px;
-  }
-}
-@keyframes __reverse__element__navbar__extends__ {
-  0% {
-    margin-left: 140px;
-  }
-  100% {
-    margin-left: 20px;
-  }
-}
-/* END --- Keyframes */
-/* START --- Globals */
-.__element__navbar__extends__ {
-  -webkit-animation: __element__navbar__extends__ 1.275s forwards;
-          animation: __element__navbar__extends__ 1.275s forwards;
-}
-
-.__reverse__element__navbar__extends__ {
-  -webkit-animation: __reverse__element__navbar__extends__ 1.275s forwards;
-          animation: __reverse__element__navbar__extends__ 1.275s forwards;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.invisible {
-  visibility: hidden !important;
-}
-
-/* END --- Globals */

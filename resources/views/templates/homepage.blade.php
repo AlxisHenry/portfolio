@@ -2,6 +2,10 @@
 
 @section('content')
 
+    <!--
+    todo : Responsive of sections titles / projects cards
+    -->
+
     <section class="__homepage__presentation__">
 
         @include('components.sections.spoilers.presentation')
@@ -13,6 +17,11 @@
     <section id="__spoilerAbout" class="__spoiler__about__">
 
         @include('components.sections.spoilers.about')
+
+        <!--
+        todo : About section refactor (css & html)
+        todo : Homepage refactor responsive design (file per section)
+        -->
 
     </section>
 
