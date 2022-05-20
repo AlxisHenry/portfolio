@@ -29,6 +29,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Themes = function Themes() {
+  // Swap themes with navbar icons
   var SwapThemeElement = document.querySelector('.__theme__main__');
   var Theme = SwapThemeElement.children[0];
 
@@ -49,6 +50,7 @@ var Themes = function Themes() {
 };
 
 var LoadingPosition = function LoadingPosition(e) {
+  // Load scrollbar on the left of the page
   var LoadingIndicator = document.querySelector('.__state__indicator__');
   var TotalHeight = document.body.offsetHeight;
   var PassedHeight = Math.round(window.scrollY + window.innerHeight);
@@ -90,6 +92,7 @@ var Navbar = document.querySelector('.burger-element');
 var ElementToMoveDuringExtends = [document.querySelector('.__presentation__'), document.querySelector('.__about__card__'), document.querySelector('#__spoilerProjects'), document.querySelector('#__spoilerCards'), document.querySelector('.__main__projects__')];
 
 var ButtonAction = function ButtonAction() {
+  // Toggle menu
   if (!Button || !Navbar) {
     return false;
   }
@@ -107,6 +110,7 @@ var ButtonAction = function ButtonAction() {
 };
 
 var NavbarAnimation = function NavbarAnimation() {
+  // Toggle extends elements
   if (!Button || !Navbar) {
     return false;
   }
@@ -133,6 +137,7 @@ var NavbarAnimation = function NavbarAnimation() {
 };
 
 var ResizeNavAnimation = function ResizeNavAnimation() {
+  // Toggle extends element during resize
   if (!Button || !Navbar) {
     return false;
   }
@@ -152,6 +157,7 @@ var ResizeNavAnimation = function ResizeNavAnimation() {
 };
 
 var HoverNavbarMenu = function HoverNavbarMenu() {
+  // Hover navbar elements
   var NavTitle = document.querySelectorAll('.burger-element a:not(.nav-active)');
 
   if (NavTitle) {

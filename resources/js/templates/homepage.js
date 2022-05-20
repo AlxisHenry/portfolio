@@ -4,6 +4,7 @@ import * as ProjectsCards from "../components/project-cards"
 import * as global from "../main"
 
 const writeJob = (job, index) => {
+    // Write Job on homepage
     const Job = document.querySelector('.job p')
     if(index < job.length) {
         setTimeout(() => {
@@ -16,6 +17,7 @@ const writeJob = (job, index) => {
 }
 
 const writeName = (name, index) => {
+    // Write Name on homepage
     const Name = document.querySelector('.name p')
     if(index < name.length) {
         setTimeout(() => {
@@ -28,6 +30,7 @@ const writeName = (name, index) => {
 }
 
 const HomepageReveal = () => {
+    // Animation on languages icons
     const LanguagesIcons = document.querySelectorAll('.language_icon')
     let Icon = 0
     for(let i = 0; i < (240 * (LanguagesIcons.length + 1)); i++) {
@@ -38,9 +41,9 @@ const HomepageReveal = () => {
 }
 
 const RevealYears = () => {
+    // Try to make a good animation on years in about me spoiler (ok but have some bugs)
     const years = document.querySelector('.years')
     let state = true
-
     if (years) {
         document.addEventListener('scroll', () => {
             if (state) {

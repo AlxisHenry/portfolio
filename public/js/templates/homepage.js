@@ -1333,6 +1333,7 @@ anime.random = function (min, max) { return Math.floor(Math.random() * (max - mi
 /***/ ((module) => {
 
 var AboutAnimation = function AboutAnimation(e) {
+  // Animation on about button of cards
   var AboutButton = document.querySelectorAll('._up_project_ ');
 
   if (AboutButton) {
@@ -1356,6 +1357,7 @@ var AboutAnimation = function AboutAnimation(e) {
 };
 
 var ProjectInformations = function ProjectInformations(e) {
+  // Show Projects Cards Information
   var ProjectCards = document.querySelectorAll('._project_image_');
   var AboutProjectCard = document.querySelectorAll('._project_content_');
 
@@ -1394,6 +1396,7 @@ module.exports = {
 /***/ ((module) => {
 
 var elementInViewport = function elementInViewport(el) {
+  // Check if el is in viewport
   var top = el.offsetTop;
   var left = el.offsetLeft;
   var width = el.offsetWidth;
@@ -3385,6 +3388,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var writeJob = function writeJob(job, index) {
+  // Write Job on homepage
   var Job = document.querySelector('.job p');
 
   if (index < job.length) {
@@ -3398,6 +3402,7 @@ var writeJob = function writeJob(job, index) {
 };
 
 var writeName = function writeName(name, index) {
+  // Write Name on homepage
   var Name = document.querySelector('.name p');
 
   if (index < name.length) {
@@ -3411,6 +3416,7 @@ var writeName = function writeName(name, index) {
 };
 
 var HomepageReveal = function HomepageReveal() {
+  // Animation on languages icons
   var LanguagesIcons = document.querySelectorAll('.language_icon');
   var Icon = 0;
 
@@ -3424,6 +3430,7 @@ var HomepageReveal = function HomepageReveal() {
 };
 
 var RevealYears = function RevealYears() {
+  // Try to make a good animation on years in about me spoiler (ok but have some bugs)
   var years = document.querySelector('.years');
   var state = true;
 

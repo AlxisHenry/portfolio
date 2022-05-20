@@ -13,6 +13,7 @@ const ElementToMoveDuringExtends = [
 ]
 
 const ButtonAction = () => {
+    // Toggle menu
     if (!Button || !Navbar) { return false }
     Button.addEventListener('click', (e) => {
         Button.classList.toggle('is-active')
@@ -26,6 +27,7 @@ const ButtonAction = () => {
 }
 
 const NavbarAnimation = () => {
+    // Toggle extends elements
     if (!Button || !Navbar) { return false }
     Button.addEventListener('click', (e) => {
         if (window.innerWidth > 1500) {
@@ -49,6 +51,7 @@ const NavbarAnimation = () => {
 }
 
 const ResizeNavAnimation = () => {
+    // Toggle extends element during resize
     if (!Button || !Navbar) { return false }
     ElementToMoveDuringExtends.forEach((Element) => {
         if (window.innerWidth <= 1500) {
@@ -65,29 +68,22 @@ const ResizeNavAnimation = () => {
 }
 
 const HoverNavbarMenu = () => {
-
+    // Hover navbar elements
     const NavTitle = document.querySelectorAll('.burger-element a:not(.nav-active)')
-
     if (NavTitle) {
         NavTitle.forEach(__NavTitle =>
             __NavTitle.addEventListener('mouseover', () => {
-
                 const LoadingBar = __NavTitle.children[0].children[1]
-
                 LoadingBar.classList.remove('loading__navbar_animation_down')
                 LoadingBar.classList.add('loading__navbar_animation_up')
 
             }))
         NavTitle.forEach(__NavTitle =>
             __NavTitle.addEventListener('mouseout', () => {
-
                 const LoadingBar = __NavTitle.children[0].children[1]
-
                 LoadingBar.classList.add('loading__navbar_animation_down')
-
             }))
     }
-
 }
 
 module.exports = {

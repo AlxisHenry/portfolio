@@ -16,6 +16,7 @@ var Navbar = document.querySelector('.burger-element');
 var ElementToMoveDuringExtends = [document.querySelector('.__presentation__'), document.querySelector('.__about__card__'), document.querySelector('#__spoilerProjects'), document.querySelector('#__spoilerCards'), document.querySelector('.__main__projects__')];
 
 var ButtonAction = function ButtonAction() {
+  // Toggle menu
   if (!Button || !Navbar) {
     return false;
   }
@@ -33,6 +34,7 @@ var ButtonAction = function ButtonAction() {
 };
 
 var NavbarAnimation = function NavbarAnimation() {
+  // Toggle extends elements
   if (!Button || !Navbar) {
     return false;
   }
@@ -59,6 +61,7 @@ var NavbarAnimation = function NavbarAnimation() {
 };
 
 var ResizeNavAnimation = function ResizeNavAnimation() {
+  // Toggle extends element during resize
   if (!Button || !Navbar) {
     return false;
   }
@@ -78,6 +81,7 @@ var ResizeNavAnimation = function ResizeNavAnimation() {
 };
 
 var HoverNavbarMenu = function HoverNavbarMenu() {
+  // Hover navbar elements
   var NavTitle = document.querySelectorAll('.burger-element a:not(.nav-active)');
 
   if (NavTitle) {

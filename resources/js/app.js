@@ -3,10 +3,9 @@ import 'aos/dist/aos.css'
 import * as Menu from './components/burger-menu'
 
 const Themes = () => {
-
+    // Swap themes with navbar icons
     const SwapThemeElement = document.querySelector('.__theme__main__')
     const Theme = SwapThemeElement.children[0]
-
     if (SwapThemeElement) {
         SwapThemeElement.addEventListener('click', () => {
             if (Theme) {
@@ -25,6 +24,7 @@ const Themes = () => {
 }
 
 const LoadingPosition = (e) => {
+    // Load scrollbar on the left of the page
     const LoadingIndicator = document.querySelector('.__state__indicator__')
     const TotalHeight = document.body.offsetHeight
     const PassedHeight = Math.round(window.scrollY + window.innerHeight)

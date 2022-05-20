@@ -1,4 +1,5 @@
 const elementInViewport = (el) => {
+    // Check if el is in viewport
     let top = el.offsetTop;
     let left = el.offsetLeft;
     let width = el.offsetWidth;

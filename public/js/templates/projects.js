@@ -8,6 +8,7 @@
 /***/ ((module) => {
 
 var AboutAnimation = function AboutAnimation(e) {
+  // Animation on about button of cards
   var AboutButton = document.querySelectorAll('._up_project_ ');
 
   if (AboutButton) {
@@ -31,6 +32,7 @@ var AboutAnimation = function AboutAnimation(e) {
 };
 
 var ProjectInformations = function ProjectInformations(e) {
+  // Show Projects Cards Information
   var ProjectCards = document.querySelectorAll('._project_image_');
   var AboutProjectCard = document.querySelectorAll('._project_content_');
 
@@ -69,6 +71,7 @@ module.exports = {
 /***/ ((module) => {
 
 var elementInViewport = function elementInViewport(el) {
+  // Check if el is in viewport
   var top = el.offsetTop;
   var left = el.offsetLeft;
   var width = el.offsetWidth;
