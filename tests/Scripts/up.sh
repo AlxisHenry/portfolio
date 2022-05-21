@@ -11,8 +11,9 @@ UpdateProject () {
 				git pull
 
 				echo 'Paramétrage de Laravel'
-				composer instalL
-				npm install
+				composer install
+				npm --prefix /var/www/main install
+				npm --prefix /var/www/main/ run prod
 				php artisan cache:clear
 				php artisan optimize
 				php artisan optimize:clear
@@ -50,6 +51,8 @@ InitProject () {
 
 				echo 'Paramétrage de Laravel'
 				composer install
+				npm --prefix /var/www/main install
+				npm --prefix /var/www/main/ run prod
 				cp .env.example .env
 				php artisan key:generate
 				php artisan cache:clear
