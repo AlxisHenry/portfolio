@@ -3,76 +3,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Libre+Franklin:wght@200&family=Poppins:wght@200&display=swap);
 @charset "UTF-8";
 /* START --- Globals */
-.hidden {
-  display: none !important;
-}
-
-.invisible {
-  visibility: hidden !important;
-}
-
-/* Start --- Navbar extends animation */
-.__element__navbar__extends__ {
-  -webkit-animation: __element__navbar__extends__ 1.275s forwards;
-          animation: __element__navbar__extends__ 1.275s forwards;
-}
-
-.__reverse__element__navbar__extends__ {
-  -webkit-animation: __reverse__element__navbar__extends__ 1.275s forwards;
-          animation: __reverse__element__navbar__extends__ 1.275s forwards;
-}
-
-@-webkit-keyframes __element__navbar__extends__ {
-  0% {
-    margin-left: 20px;
-  }
-  100% {
-    margin-left: 140px;
-  }
-}
-
-@keyframes __element__navbar__extends__ {
-  0% {
-    margin-left: 20px;
-  }
-  100% {
-    margin-left: 140px;
-  }
-}
-@-webkit-keyframes __reverse__element__navbar__extends__ {
-  0% {
-    margin-left: 140px;
-  }
-  100% {
-    margin-left: 20px;
-  }
-}
-@keyframes __reverse__element__navbar__extends__ {
-  0% {
-    margin-left: 140px;
-  }
-  100% {
-    margin-left: 20px;
-  }
-}
-/* End --- Navbar extends animation */
-/* START --- Colors */
-/* END --- Colors */
-/* START --- Variables */
-/* END --- Variables */
-/* START --- FONT FAMILY */
-/* END --- FONT FAMILY*/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: #F2F2F2;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
 /* ----------------------------- */
 /* ==Reset (base)                */
 /* ----------------------------- */
@@ -6020,8 +5950,6 @@ a[href^="#"]::after {
     grid-row: span 6/span 6;
   }
 }
-/* END --- Globals */
-/* START --- Components */
 /*
  * component nav "burger" button
  */
@@ -6155,6 +6083,78 @@ q:lang(fr),
   quotes: "« " " »" "“" "”";
 }
 
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+/* Start --- Navbar extends animation */
+.__element__navbar__extends__ {
+  -webkit-animation: __element__navbar__extends__ 1.275s forwards;
+          animation: __element__navbar__extends__ 1.275s forwards;
+}
+
+.__reverse__element__navbar__extends__ {
+  -webkit-animation: __reverse__element__navbar__extends__ 1.275s forwards;
+          animation: __reverse__element__navbar__extends__ 1.275s forwards;
+}
+
+@-webkit-keyframes __element__navbar__extends__ {
+  0% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: 140px;
+  }
+}
+
+@keyframes __element__navbar__extends__ {
+  0% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: 140px;
+  }
+}
+@-webkit-keyframes __reverse__element__navbar__extends__ {
+  0% {
+    margin-left: 140px;
+  }
+  100% {
+    margin-left: 20px;
+  }
+}
+@keyframes __reverse__element__navbar__extends__ {
+  0% {
+    margin-left: 140px;
+  }
+  100% {
+    margin-left: 20px;
+  }
+}
+/* End --- Navbar extends animation */
+/* START --- Colors */
+/* END --- Colors */
+/* START --- Variables */
+/* END --- Variables */
+/* START --- FONT FAMILY */
+/* END --- FONT FAMILY*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F2F2F2;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* END --- Globals */
+/* START --- Components */
 .__arrow__ {
   margin-top: 60px;
   width: 100%;

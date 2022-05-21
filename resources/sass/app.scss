@@ -1,17 +1,17 @@
 /* START --- Globals */
 
-@import 'globals';
-@import 'assets/fonts';
-@import 'assets/init';
 @import "KNACSS/__abstracts__";
 @import "KNACSS/__base__";
 @import "KNACSS/__utils__";
+@import "KNACSS/__components__";
+@import 'globals';
+@import 'assets/fonts';
+@import 'assets/init';
 
 /* END --- Globals */
 
 /* START --- Components */
 
-@import "KNACSS/__components__";
 @import 'components/arrow';
 @import 'components/navbar';
 @import 'components/footer';
