@@ -8,19 +8,14 @@ use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\DownloadLinks;
 
 /* RouteServiceProvider */
 
-Route::controller(HomeController::class)->group(function () {
-
-    Route::get('home', [HomeController::class, 'Home'])->name('home');
-    Route::get('/home/language/{LANGUAGE}', [HomeController::class, 'WikiLang'])->name('home_language');
-
-});
+// Routes to admin views
 
 Route::prefix('admin')->group(function() {
 
+    // Routes with middleware restrictions
     Route::middleware('ip')->group(function() {
 
         Route::controller(AdminController::class)->group(function () {
@@ -35,6 +30,17 @@ Route::prefix('admin')->group(function() {
     });
 
 });
+
+// Routes to authorized views
+
+Route::controller(HomeController::class)->group(function () {
+
+    Route::get('home', [HomeController::class, 'Home'])->name('home');
+    Route::get('/home/language/{LANGUAGE}', [HomeController::class, 'WikiLang'])->name('home_language');
+
+});
+
+Route::redirect('/', 'home');
 
 Route::controller(AboutController::class)->group(function () {
 
@@ -66,5 +72,6 @@ Route::prefix('news')->group(function () {
 
 });
 
-Route::redirect('/', 'home');
+// Testing routes
+
 Route::view('/test/downloads', 'test');
