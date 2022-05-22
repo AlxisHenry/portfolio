@@ -1,36 +1,41 @@
+/* Start --- Google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Libre+Franklin:wght@200&family=Poppins:wght@200&display=swap');
+
+/* END --- Google fonts */
 /* START --- Globals */
 
 @import "KNACSS/__abstracts__";
 @import "KNACSS/__base__";
 @import "KNACSS/__utils__";
 @import "KNACSS/__components__";
-@import 'globals';
-@import 'assets/fonts';
-@import 'assets/init';
+@import 'globals'; /* Globals variables, class and animations */
 
 /* END --- Globals */
 
 /* START --- Components */
 
-@import 'components/arrow';
+@import 'components/arrow'; /* Arrow use in homepage */
 @import 'components/navbar';
 @import 'components/footer';
-@import 'components/errors';
-@import 'components/more';
-@import 'components/news-cards';
-@import 'components/cards';
-@import 'components/about';
-@import 'components/underline-title';
+@import 'components/errors'; /* Style use in errors pages */
+@import 'components/more'; /* More button (use on homepage) */
+@import 'components/news-cards'; /* Cards contains scrapped news */
+@import 'components/cards'; /* Cards contains projects */
+@import 'components/about'; /* About button on all cards  */
+@import 'components/underline-title'; /* Text decoration on section titles */
 
 /* END --- Components */
 
 /* START --- Templates */
 
-@import 'templates/homepage';
-@import 'templates/projects';
-@import 'templates/news';
-@import 'templates/news{title}';
-@import 'templates/news{keyword}';
+@import 'templates/homepage'; /* Access to homepage */
+@import 'templates/projects'; /* Access to all projects */
+@import 'templates/news'; /* Access to all news */
+@import 'templates/news{title}'; /* Access to a news with url /news/{title} */
+@import 'templates/news{keyword}'; /* Access to a keyword of news with url /news/{keyword} */
 
 /* END --- Templates */
 

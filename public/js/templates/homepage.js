@@ -3441,7 +3441,7 @@ var RevealYears = function RevealYears() {
           setTimeout(function () {
             (0,animejs__WEBPACK_IMPORTED_MODULE_1__["default"])({
               targets: years,
-              innerHTML: [1980, 2022],
+              innerHTML: [2003, 2022],
               easing: 'linear',
               round: 1
             });
@@ -3459,7 +3459,7 @@ window.addEventListener('load', function (e) {
   HomepageReveal();
   (0,animejs__WEBPACK_IMPORTED_MODULE_1__["default"])({
     targets: document.querySelector('.years'),
-    innerHTML: [1980, 2022],
+    innerHTML: [2003, 2022],
     easing: 'linear',
     round: 1
   });

@@ -2,6 +2,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@200&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Libre+Franklin:wght@200&family=Poppins:wght@200&display=swap);
 @charset "UTF-8";
+/* Start --- Google fonts */
+/* END --- Google fonts */
 /* START --- Globals */
 /* ----------------------------- */
 /* ==Reset (base)                */
@@ -6083,6 +6085,9 @@ q:lang(fr),
   quotes: "« " " »" "“" "”";
 }
 
+/* Start --- Globals variables */
+/* End --- Globals variables */
+/* Start --- Globals class */
 .hidden {
   display: none !important;
 }
@@ -6091,6 +6096,18 @@ q:lang(fr),
   visibility: hidden !important;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F2F2F2;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* End --- Globals class */
 /* Start --- Navbar extends animation */
 .__element__navbar__extends__ {
   -webkit-animation: __element__navbar__extends__ 1.275s forwards;
@@ -6136,25 +6153,10 @@ q:lang(fr),
   }
 }
 /* End --- Navbar extends animation */
-/* START --- Colors */
-/* END --- Colors */
-/* START --- Variables */
-/* END --- Variables */
-/* START --- FONT FAMILY */
-/* END --- FONT FAMILY*/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: #F2F2F2;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
+/* Globals variables, class and animations */
 /* END --- Globals */
 /* START --- Components */
+/* START --- Component --- Arrow */
 .__arrow__ {
   margin-top: 60px;
   width: 100%;
@@ -6177,7 +6179,7 @@ body {
 }
 .__arrow__ .__page__arrow__:hover ._arrow_ {
   cursor: pointer;
-  border-color: black;
+  border-color: #0F0F0F;
 }
 .__arrow__ .__page__arrow__ ._arrow_ {
   border: solid #595959;
@@ -6188,6 +6190,8 @@ body {
   transform: rotate(45deg);
 }
 
+/* END --- Component --- Arrow */
+/* START --- Component --- Arrow Animations */
 @-webkit-keyframes bounceArrow {
   0% {
     margin-bottom: 4px;
@@ -6199,7 +6203,6 @@ body {
     margin-bottom: 4px;
   }
 }
-
 @keyframes bounceArrow {
   0% {
     margin-bottom: 4px;
@@ -6211,6 +6214,11 @@ body {
     margin-bottom: 4px;
   }
 }
+/* END --- Component --- Arrow Animations */
+/* START --- Component --- Arrow Responsive */
+/* END --- Component --- Arrow Responsive */
+/* Arrow use in homepage */
+/* START --- Component --- Navbar */
 .__navbar__ {
   width: 100%;
   height: 115px;
@@ -6267,7 +6275,7 @@ body {
 .__navbar__ .__navbar__features__ .__theme__ .__theme__main__#sun {
   transition: transform;
   transform: rotateX(360deg);
-  background-color: #F2F2F2;
+  background-color: transparent;
 }
 .__navbar__ .__navbar__features__ .__theme__ .__theme__main__#sun img {
   width: 30px;
@@ -6352,6 +6360,8 @@ body {
           animation: NavbarReverseAnimation 0.25s ease-in forwards;
 }
 
+/* END --- Component --- Navbar */
+/* START --- Component --- Navbar Animations */
 @-webkit-keyframes LoadingNavbarUp {
   0% {
     width: 0;
@@ -6360,7 +6370,6 @@ body {
     width: 100%;
   }
 }
-
 @keyframes LoadingNavbarUp {
   0% {
     width: 0;
@@ -6417,6 +6426,8 @@ body {
     margin-left: -1000px;
   }
 }
+/* END --- Component --- Navbar Animations */
+/* START --- Component --- Navbar Responsive */
 @media screen and (max-width: 600px) {
   .__navbar__ .burger-button {
     top: 20px;
@@ -6432,8 +6443,9 @@ body {
     margin-top: -40px;
   }
 }
+/* END --- Component --- Navbar Responsive */
 .__footer__ {
-  margin-top: 100px;
+  margin-top: 300px;
   width: 100%;
   height: 45px;
   background-color: #242B40;
@@ -6479,6 +6491,8 @@ body {
   box-shadow: 0 20px 10px -15px #111;
 }
 
+/* Style use in errors pages */
+/* START --- Component --- More */
 .__more__button__ {
   min-height: 45px;
   min-width: 100px;
@@ -6521,6 +6535,9 @@ body {
   cursor: pointer;
 }
 
+/* END --- Component --- More */
+/* More button (use on homepage) */
+/* START --- Component --- News Cards */
 .__cards__ {
   margin-left: 30px;
   margin-right: 30px;
@@ -6588,6 +6605,11 @@ body {
   right: 20px;
 }
 
+/* END --- Component --- News Cards */
+/* START --- Component --- News Cards Responsive */
+/* END --- Component --- News Cards Responsive */
+/* Cards contains scrapped news */
+/* START --- Component --- Cards */
 .__projects__ .__more__projects__ {
   margin-top: 25px;
 }
@@ -6611,7 +6633,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #FFFFFF;
   box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.1);
 }
 .__projects__ .__project__card__ ._this_project_ ._project_image_ img {
@@ -6625,7 +6647,7 @@ body {
   height: 380px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   bottom: -400px;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 .__projects__ .__project__card__ ._this_project_ ._project_content_:hover {
   cursor: pointer;
@@ -6666,16 +6688,25 @@ body {
   margin-left: 12px;
 }
 
-.__arrow__animation__about__button__ .__load__ {
-  border-radius: 6px;
-  -webkit-animation: AnimationAboutBackground 0.8s forwards;
-          animation: AnimationAboutBackground 0.8s forwards;
+/* END --- Component --- Cards */
+/* START --- Component --- Cards responsive */
+@media screen and (max-width: 440px) {
+  .__projects__ .__project__card__ {
+    width: 280px;
+  }
+  .__projects__ .__project__card__ ._this_project_ ._project_image_ {
+    width: 280px;
+  }
+  .__projects__ .__project__card__ ._this_project_ ._project_image_ img {
+    width: 200px;
+  }
+  .__projects__ .__project__card__ ._this_project_ ._project_content_ {
+    width: 280px;
+  }
 }
-.__arrow__animation__about__button__ .__reverse__ {
-  -webkit-animation: AnimationAboutBackgroundReverse 1.2s forwards;
-          animation: AnimationAboutBackgroundReverse 1.2s forwards;
-}
-
+/* END --- Component --- Cards responsive */
+/* Cards contains projects */
+/* START --- Component --- About */
 ._up_project_ {
   position: absolute;
   bottom: 20px;
@@ -6704,7 +6735,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #0F0F0F;
   text-transform: uppercase;
   font-family: "Inconsolata", monospace;
   letter-spacing: 1px;
@@ -6713,22 +6744,22 @@ body {
 }
 ._up_project_ a .__content__:hover {
   cursor: pointer;
-  color: white;
+  color: #FFFFFF;
 }
 ._up_project_ a .__content__:hover .__arrow__left__ {
-  border-top: 2px solid white;
-  border-left: 2px solid white;
+  border-top: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
 }
 ._up_project_ a .__content__:hover .__arrow__left__:after {
-  background-color: white;
+  background-color: #FFFFFF;
 }
 ._up_project_ a .__content__ .__arrow__left__ {
   margin-left: 20px;
   display: block;
   width: 12px;
   height: 12px;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
+  border-top: 2px solid #0F0F0F;
+  border-left: 2px solid #0F0F0F;
   transform: rotate(135deg);
 }
 ._up_project_ a .__content__ .__arrow__left__:after {
@@ -6736,30 +6767,54 @@ body {
   display: block;
   width: 2px;
   height: 20px;
-  background-color: black;
+  background-color: #0F0F0F;
   transform: rotate(-45deg) translate(15px, 1px) translateX(-8.8px);
   left: 0;
   top: 0;
 }
 ._up_project_ .__load__ {
-  background-color: rosybrown;
+  background-color: #0F0F0F;
   position: absolute;
   width: 0;
   left: 0;
   height: 100%;
 }
 
+/* END --- Component --- About */
+/* START --- Component --- About Animations */
+.__arrow__animation__about__button__ .__load__ {
+  border-radius: 6px;
+  -webkit-animation: AnimationAboutBackground 0.8s forwards;
+          animation: AnimationAboutBackground 0.8s forwards;
+}
+.__arrow__animation__about__button__ .__reverse__ {
+  -webkit-animation: AnimationAboutBackgroundReverse 1.2s forwards;
+          animation: AnimationAboutBackgroundReverse 1.2s forwards;
+}
+
+/* END --- Component --- About Animations */
+/* About button on all cards  */
+/* START --- Component --- Underline Section Title */
 .__main__section__title__ h1 {
   text-transform: uppercase;
   font-size: 4.4em;
 }
 .__main__section__title__ .__title__loader__ {
-  margin-top: -12px;
+  margin-top: -25px;
   background-color: #464AA6;
   width: 100%;
   height: 2px;
 }
 
+/* END --- Component --- Underline Section Title */
+/* START --- Component --- Underline Section Title responsive */
+@media screen and (max-width: 440px) {
+  .__main__section__title__ h1 {
+    font-size: 3rem;
+  }
+}
+/* END --- Component --- Underline Section Title responsive */
+/* Text decoration on section titles */
 /* END --- Components */
 /* START --- Templates */
 /* START --- Presentation */
@@ -6917,7 +6972,7 @@ body {
 /* END --- Projects */
 /* START --- Cards */
 .__spoiler__cards__ {
-  margin-top: 213px;
+  margin-top: 270px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -7043,6 +7098,7 @@ body {
   }
 }
 /* END --- Animations */
+/* Access to homepage */
 /* START --- Projects Page */
 .__main__projects__ {
   display: flex;
@@ -7067,6 +7123,7 @@ body {
 }
 
 /* END --- Projects Page */
+/* Access to all projects */
 .test .__cards__ {
   width: 100%;
   height: 350px;
@@ -7082,6 +7139,7 @@ body {
   background-color: yellow;
 }
 
+/* Access to all news */
 .__target__article__ {
   margin-left: 20px;
   margin-right: 20px;
@@ -7206,6 +7264,7 @@ body {
   color: gray;
 }
 
+/* Access to a news with url /news/{title} */
 .__keywords__cards__ .__research__ {
   width: auto;
   display: flex;
@@ -7216,6 +7275,7 @@ body {
   letter-spacing: 1px;
 }
 
+/* Access to a keyword of news with url /news/{keyword} */
 /* END --- Templates */
 /* START --- Responsive */
 /* START --- Homepage view Responsive */

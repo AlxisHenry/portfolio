@@ -1,3 +1,5 @@
+# This script will update the production code
+
 SendProject () {
 
   echo "Droits distants sur /var/www/main attribués à ubuntu"

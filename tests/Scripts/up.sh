@@ -1,3 +1,5 @@
+# This script will get the lasts commits on github
+
 UpdateProject () {
 
 				echo '------------------------------';

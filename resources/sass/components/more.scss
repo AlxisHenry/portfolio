@@ -1,3 +1,5 @@
+/* START --- Component --- More */
+
 .__more__button__ {
   min-height: 45px;
   min-width: 100px;
@@ -6,18 +8,18 @@
   width: 100px;
   height: 45px;
   border-radius: 12px;
-  border: solid 1px $__MoreButtonBackground;
+  border: solid 1px $Orange;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $__MoreButtonBackground;
+  background-color: $Orange;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 
   &:hover {
     transition: background-color 1.5s;
     cursor: pointer;
-    background-color: $__MoreButtonBackgroundHover ;
-    border-color: $__MoreButtonBackgroundHover;
+    background-color: $LightOrange ;
+    border-color: $LightOrange;
     a span {
       color: black;
       font-weight: 600;
@@ -33,7 +35,7 @@
       color: white;
       font-size: 18px;
       letter-spacing: 1px;
-      font-family: $_family_poppins;
+      font-family: $poppins;
       text-transform: uppercase;
 
       &:hover {
@@ -42,3 +44,6 @@
     }
   }
 }
+
+/* END --- Component --- More */
+

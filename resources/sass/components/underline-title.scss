@@ -1,12 +1,27 @@
+/* START --- Component --- Underline Section Title */
+
 .__main__section__title__ {
   h1 {
     text-transform: uppercase;
     font-size: 4.4em;
   }
   .__title__loader__ {
-    margin-top: -12px;
-    background-color: #464AA6;
+    margin-top: -25px;
+    background-color: $MoyBlue;
     width: 100%;
     height: 2px;
   }
 }
+
+/* END --- Component --- Underline Section Title */
+/* START --- Component --- Underline Section Title responsive */
+
+@media screen and (max-width: 440px) {
+  .__main__section__title__{
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+/* END --- Component --- Underline Section Title responsive */

@@ -64,7 +64,7 @@
           min-width: 640px;
           p {
             span {
-              font-family: $_family_poppins;
+              font-family: $poppins;
               font-weight: 800;
               letter-spacing: 1px;
               font-size: 6.5rem;
@@ -76,7 +76,7 @@
         .job {
           p {
             span {
-              font-family: $_family_poppins;
+              font-family: $poppins;
               letter-spacing: 1px;
               font-size: 4.2rem;
               font-weight: 500;
@@ -155,7 +155,7 @@
         text-align: justify;
         font-weight: 700;
         font-size: 18px;
-        font-family: $_family_poppins;
+        font-family: $poppins;
         letter-spacing: 1px;
       }
 
@@ -196,7 +196,7 @@
 /* START --- Cards */
 
 .__spoiler__cards__ {
-  margin-top: 213px;
+  margin-top: 270px;
   display: flex;
   justify-content: center;
   flex-direction: column;

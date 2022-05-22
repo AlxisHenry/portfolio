@@ -1,8 +1,8 @@
 .__footer__ {
-  margin-top: 100px;
+  margin-top: 300px;
   width: 100%;
   height: 45px;
-  background-color: #242B40;
+  background-color: $DarkBlue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
   .__footer__main__ {
     text-align: center;
     width: auto;
-    color: #F2F2F0;
+    color: $BrokenLightWhite;
     margin-right: 12px;
     height: 40px;
     display: flex;
@@ -19,12 +19,12 @@
     align-items: center;
     font-size: 14px;
     font-weight: lighter;
-    font-family: $_family_poppins;
+    font-family: $poppins;
 
     &:hover {
       transition: All ease-in-out 220ms;
       cursor: pointer;
-      color: #52B3D9;
+      color: $FlashBlue;
     }
 
   }

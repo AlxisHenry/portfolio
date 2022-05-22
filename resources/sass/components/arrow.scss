@@ -1,3 +1,5 @@
+/* START --- Component --- Arrow */
+
 .__arrow__ {
   margin-top: 60px;
   width: 100%;
@@ -21,11 +23,11 @@
 
     &:hover ._arrow_ {
       cursor: pointer;
-      border-color: black;
+      border-color: $black;
     }
 
     ._arrow_ {
-      border: solid #595959;
+      border: solid $LightGray;
       border-width: 0 3px 3px 0;
       display: inline-block;
       margin-bottom: 4px;
@@ -36,6 +38,9 @@
   }
 
 }
+
+/* END --- Component --- Arrow */
+/* START --- Component --- Arrow Animations */
 
 @keyframes bounceArrow {
   0% {
@@ -48,3 +53,7 @@
     margin-bottom: 4px;
   }
 }
+
+/* END --- Component --- Arrow Animations */
+/* START --- Component --- Arrow Responsive */
+/* END --- Component --- Arrow Responsive */

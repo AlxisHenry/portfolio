@@ -51,7 +51,7 @@ const RevealYears = () => {
                     setTimeout(() => {
                         anime({
                             targets: years,
-                            innerHTML: [1980, 2022],
+                            innerHTML: [2003, 2022],
                             easing: 'linear',
                             round: 1
                         })
@@ -70,7 +70,7 @@ window.addEventListener('load', (e) => {
     HomepageReveal()
     anime({
         targets: document.querySelector('.years'),
-        innerHTML: [1980, 2022],
+        innerHTML: [2003, 2022],
         easing: 'linear',
         round: 1
     })

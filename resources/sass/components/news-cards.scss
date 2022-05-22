@@ -1,3 +1,5 @@
+/* START --- Component --- News Cards */
+
 .__cards__ {
   margin-left: 30px;
   margin-right: 30px;
@@ -43,7 +45,7 @@
 
             time {
               font-size: 14px;
-              font-family: $_family_poppins;
+              font-family: $poppins;
               font-weight: 600;
             }
           }
@@ -59,7 +61,7 @@
             span {
               text-align: center;
               font-size: 13px;
-              font-family: $_family_poppins;
+              font-family: $poppins;
               margin-left: 8px;
               margin-right: 8px;
               font-weight: 500;
@@ -74,3 +76,7 @@
       }
     }
 }
+
+/* END --- Component --- News Cards */
+/* START --- Component --- News Cards Responsive */
+/* END --- Component --- News Cards Responsive */

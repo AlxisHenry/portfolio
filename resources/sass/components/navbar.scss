@@ -1,3 +1,5 @@
+/* START --- Component --- Navbar */
+
 .__navbar__ {
   width: 100%;
   height: 115px;
@@ -59,7 +61,7 @@
         &#sun {
           transition: transform  ;
           transform: rotateX(360deg);
-          background-color: #F2F2F2;
+          background-color: transparent;
           img {
             width: 30px;
             height: 30px;
@@ -68,7 +70,7 @@
 
         &#moon {
           transition: background-color 150ms;
-          background-color: #181717;
+          background-color: $LightBlack;
           img {
             width: 20px;
             height: 20px;
@@ -96,15 +98,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: $__navbarBackgroundColor__;
+    background-color: $DarkBlue;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
-    margin-left: $__hiddenNavbar__;
+    margin-left: -1000px;
 
     .nav-active .nav-content .nav-title .nav-title_letter {
-      color: #52B3D9;
+      color: $FlashBlue;
       cursor: pointer;
     }
 
@@ -114,7 +116,7 @@
         .hover_loading_nav {
           width: 0;
           height: 1px;
-          border-top: solid 1px #52B3D9;
+          border-top: solid 1px $FlashBlue;
         }
 
         .loading__navbar_animation_up {
@@ -127,7 +129,7 @@
       }
 
       &:hover .nav-content .nav-title .nav-title_letter {
-        color: #52B3D9;
+        color: $FlashBlue;
         transition: color 1s;
       }
 
@@ -150,10 +152,10 @@
         .nav-title {
           .nav-title_letter {
             font-size: 40px;
-            color: $__navbarLinksColor__;
+            color: $BrokenLightWhite;
             text-transform: uppercase;
             font-weight: lighter;
-            font-family: $_family_iconsolata;
+            font-family: $iconsolata;
             min-width: 20px;
           }
         }
@@ -173,6 +175,9 @@
 
 }
 
+/* END --- Component --- Navbar */
+/* START --- Component --- Navbar Animations */
+
 @keyframes LoadingNavbarUp {
   0% {
     width: 0;
@@ -191,7 +196,7 @@
 
 @keyframes NavbarUpAnimation {
   0% {
-    margin-left: $__hiddenNavbar__;
+    margin-left: -1000px;
   }
   100% {
     margin-left: 0;
@@ -203,9 +208,12 @@
     margin-left: 0;
   }
   100% {
-    margin-left: $__hiddenNavbar__;
+    margin-left: -1000px;
   }
 }
+
+/* END --- Component --- Navbar Animations */
+/* START --- Component --- Navbar Responsive */
 
 @media screen and (max-width: 600px) {
   .__navbar__ {
@@ -225,3 +233,5 @@
     }
   }
 }
+
+/* END --- Component --- Navbar Responsive */

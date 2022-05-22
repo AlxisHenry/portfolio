@@ -1,3 +1,24 @@
+/* Start --- Globals variables */
+
+$DarkBlue: #242B40;
+$Blue: #1B208C;
+$FlashBlue: #52B3D9;
+$MoyBlue: #464AA6;
+$LightBlue: #787CBF;
+$Clay: #F2BC79;
+$Orange: #F2C166;
+$LightOrange: #F2D49B;
+$BrokenWhite: #F2F2F2;
+$BrokenLightWhite: #F2F2F0;
+$LightBlack: #181717;
+$LightGray: #595959;
+$ShadowDark: rgba(0, 0, 0, 0.1);
+$poppins: 'Poppins', sans-serif;
+$iconsolata: 'Inconsolata', monospace;
+
+/* End --- Globals variables */
+/* Start --- Globals class */
+
 .hidden {
   display: none!important;
 }
@@ -6,6 +27,18 @@
   visibility: hidden!important;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $BrokenWhite;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* End --- Globals class */
 /* Start --- Navbar extends animation */
 
 .__element__navbar__extends__ {

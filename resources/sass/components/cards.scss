@@ -1,3 +1,5 @@
+/* START --- Component --- Cards */
+
 .__projects__ {
 
   .__more__projects__ {
@@ -24,8 +26,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: white;
-        box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.1);
+        background-color: $white;
+        box-shadow: 1px 10px 10px $ShadowDark;
 
         img {
           object-fit: cover;
@@ -37,9 +39,9 @@
         position: absolute;
         width: 350px;
         height: 380px;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 10px $ShadowDark;
         bottom: -400px;
-        background-color: white;
+        background-color: $white;
 
         &:hover {
           cursor: pointer;
@@ -90,3 +92,33 @@
 
   }
 }
+
+/* END --- Component --- Cards */
+/* START --- Component --- Cards responsive */
+
+@media screen and (max-width: 440px) {
+  .__projects__ {
+
+    .__project__card__ {
+      width: 280px;
+
+      ._this_project_ {
+
+        ._project_image_ {
+          width: 280px;
+          img {
+            width: 200px;
+          }
+        }
+
+        ._project_content_ {
+          width: 280px;
+
+        }
+      }
+    }
+  }
+
+}
+
+/* END --- Component --- Cards responsive */
