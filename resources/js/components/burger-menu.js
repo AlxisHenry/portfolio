@@ -4,13 +4,7 @@ const ExtendsNavbar = 'NavbarUpAnimation'
 const ReverseExtendsNavbar = 'NavbarReverseAnimation'
 const Button = document.querySelector('.burger-button')
 const Navbar = document.querySelector('.burger-element')
-const ElementToMoveDuringExtends = [
-    document.querySelector('.__presentation__'),
-    document.querySelector('.__spoiler__about__'),
-    document.querySelector('#__spoilerProjects'),
-    document.querySelector('#__spoilerCards'),
-    document.querySelector('.__main__projects__')
-]
+const ElementToMoveDuringExtends = document.querySelectorAll('section') // Extends all sections on the page
 
 const ButtonAction = () => {
     // Toggle menu
@@ -27,7 +21,7 @@ const ButtonAction = () => {
 }
 
 const NavbarAnimation = () => {
-    // Toggle extends elements
+    // Toggle extends elements on all sections
     if (!Button || !Navbar) { return false }
     Button.addEventListener('click', (e) => {
         if (window.innerWidth > 1500) {
@@ -51,7 +45,7 @@ const NavbarAnimation = () => {
 }
 
 const ResizeNavAnimation = () => {
-    // Toggle extends element during resize
+    // Toggle extends element during resize on all sections
     if (!Button || !Navbar) { return false }
     ElementToMoveDuringExtends.forEach((Element) => {
         if (window.innerWidth <= 1500) {
