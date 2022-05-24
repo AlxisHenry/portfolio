@@ -3,6 +3,7 @@
 /* Start --- Google fonts */
 /* END --- Google fonts */
 /* START --- Globals */
+/* START --- KNACSS framework imports */
 /* ----------------------------- */
 /* ==Reset (base)                */
 /* ----------------------------- */
@@ -6083,6 +6084,8 @@ q:lang(fr),
   quotes: "« " " »" "“" "”";
 }
 
+/* Contain components like burger menu */
+/* END --- KNACSS framework imports */
 /* Start --- Globals variables */
 /* End --- Globals variables */
 /* Start --- Globals class */
@@ -6442,6 +6445,7 @@ body {
   }
 }
 /* END --- Component --- Navbar Responsive */
+/* Navbar (burger menu / github icon / theme switch) */
 .__footer__ {
   margin-top: 240px;
   width: 100%;
@@ -6471,6 +6475,7 @@ body {
   color: #52B3D9;
 }
 
+/* Footer (Copyright) */
 .error_section {
   width: 100%;
   height: 800px;
@@ -6815,7 +6820,7 @@ body {
 /* Text decoration on section titles */
 /* END --- Components */
 /* START --- Templates */
-/* START --- Presentation */
+/* START --- PRESENTATION --- SECTION */
 .__homepage__presentation__ {
   width: 100%;
   height: 400px;
@@ -6909,8 +6914,8 @@ body {
      object-fit: cover;
 }
 
-/* END --- Presentation */
-/* START --- About */
+/* END --- PRESENTATION --- SECTION */
+/* START --- ABOUT --- SECTION */
 .__spoiler__about__ {
   margin-top: 125px;
   width: 100%;
@@ -6946,8 +6951,9 @@ body {
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
 }
-/* END --- About */
-/* START --- Projects */
+
+/* END --- ABOUT --- SECTION */
+/* START --- PROJECTS --- SECTION */
 .__spoiler__projects__ {
   margin-top: 150px;
   display: flex;
@@ -6964,8 +6970,24 @@ body {
   gap: 100px;
 }
 
-/* END --- Projects */
-/* START --- Cards */
+/* END --- PROJECTS --- SECTION  */
+/* START --- BOARD --- SECTION */
+.__spoiler__board__ {
+  margin-top: 210px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 82px;
+  margin-bottom: 80px;
+}
+.__spoiler__board__ .__cards__ {
+  max-width: 1000px;
+}
+
+/* END --- BOARD --- SECTION  */
+/* START --- CARDS --- SECTION */
 .__spoiler__cards__ {
   margin-top: 210px;
   display: flex;
@@ -6980,8 +7002,8 @@ body {
   max-width: 1000px;
 }
 
-/* END --- Cards */
-/* START --- Animations */
+/* END --- CARDS --- SECTION */
+/* START --- ANIMATIONS */
 @-webkit-keyframes cursor {
   0% {
     opacity: 1;
@@ -7092,7 +7114,7 @@ body {
     bottom: -400px;
   }
 }
-/* END --- Animations */
+/* END --- ANIMATIONS */
 /* Access to homepage */
 /* START --- Projects Page */
 .__main__projects__ {
@@ -7275,38 +7297,7 @@ body {
 /* START --- Responsive */
 /* START --- Homepage view Responsive */
 @media screen and (max-width: 1200px) {
-  @-webkit-keyframes MoovElement {
-    0% {
-      margin-left: 20px;
-    }
-    100% {
-      margin-left: 200px;
-    }
-  }
-  @keyframes MoovElement {
-    0% {
-      margin-left: 20px;
-    }
-    100% {
-      margin-left: 200px;
-    }
-  }
-  @-webkit-keyframes ReverseMoovElement {
-    0% {
-      margin-left: 200px;
-    }
-    100% {
-      margin-left: 20px;
-    }
-  }
-  @keyframes ReverseMoovElement {
-    0% {
-      margin-left: 200px;
-    }
-    100% {
-      margin-left: 20px;
-    }
-  }
+  /* START --- PRESENTATION --- SECTION RESPONSIVE */
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name p span {
     font-size: 6rem;
     margin-top: 100px;
@@ -7330,13 +7321,18 @@ body {
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__main__asset__ {
     display: none;
   }
+  /* END --- PRESENTATION --- SECTION RESPONSIVE */
 }
 @media screen and (max-width: 900px) {
+  /* START --- PROJECTS --- SECTION RESPONSIVE */
   .__spoiler__projects__ ._projects_cards_ {
     flex-direction: column;
   }
+
+  /* END --- PROJECTS --- SECTION RESPONSIVE */
 }
 @media screen and (max-width: 600px) {
+  /* START --- PRESENTATION --- SECTION RESPONSIVE */
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name {
     margin-top: 100px;
   }
@@ -7362,14 +7358,22 @@ body {
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__main__asset__ {
     display: none;
   }
+  /* END --- PRESENTATION --- SECTION RESPONSIVE */
 }
 @media screen and (max-width: 430px) {
+  /* START --- PRESENTATION --- SECTION RESPONSIVE */
+  .__homepage__presentation__ .__presentation__ {
+    margin-top: -75px;
+  }
+  .__homepage__presentation__ .__presentation__ .__main__presentation__ {
+    margin-bottom: -100px;
+  }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name {
     min-width: auto;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .name p span {
     width: 60px;
-    font-size: 3rem;
+    font-size: 2.2rem;
     margin-top: 100px;
   }
   .__homepage__presentation__ .__presentation__ .__main__presentation__ .__me__ .job p span {
@@ -7379,19 +7383,18 @@ body {
     display: none;
   }
 
+  /* END --- PRESENTATION --- SECTION RESPONSIVE */
+  /* START --- ABOUT --- SECTION RESPONSIVE */
   .__spoiler__about__ .__about__card__ .__about__ ._about_descript_ {
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
     letter-spacing: 0;
   }
-}
-@media screen and (min-height: 900px) {
-  .__homepage__presentation__ {
-    height: 550px;
-    align-items: center;
-  }
+
+  /* END --- ABOUT --- SECTION RESPONSIVE */
 }
 /* END --- Homepage view Responsive */
+/* Contain all responsive of homepage */
 /* START --- Project Responsive */
 @media screen and (max-width: 800px) {
   .__main__projects__ .__main__projects__cards__ .__main__projects__cards__elements__ {
@@ -7399,4 +7402,5 @@ body {
   }
 }
 /* START --- Project View Responsive */
+/* Contain all responsive of projects page */
 /* END --- Responsive */

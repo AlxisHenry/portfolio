@@ -1,12 +1,14 @@
-/* START --- Presentation */
+/* START --- PRESENTATION --- SECTION */
 
 .__homepage__presentation__ {
+  // Section
   width: 100%;
   height: 400px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 
+  // Content
   .__presentation__ {
     margin-left: 20px;
     margin-right: 20px;
@@ -19,16 +21,13 @@
     border-bottom: solid 2px black;
     box-shadow: 0 20px 10px -15px #111;
     -webkit-box-shadow: 0 20px 10px -15px #111;
-
     .__presentation__separator__ {
       height: 400px;
       background-color: black;
     }
-
     .__main__presentation__ {
       display: flex;
       flex-direction: row;
-
       .__me__ {
         display: flex;
         flex-direction: column;
@@ -114,17 +113,16 @@
         }
 
       }
-
     }
   }
-
 }
 
-/* END --- Presentation */
+/* END --- PRESENTATION --- SECTION */
 
-/* START --- About */
+/* START --- ABOUT --- SECTION */
 
 .__spoiler__about__ {
+  // Section
   margin-top: 125px;
   width: 100%;
   min-height: 700px;
@@ -134,13 +132,13 @@
   justify-content: space-around;
   align-items: center;
 
+  // Content
   .__about__card__ {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     .__about__ {
       text-align: justify;
       display: flex;
@@ -149,7 +147,6 @@
       width: 80%;
       min-width: 120px;
       height: auto;
-
       ._about_descript_ {
         margin-right: 20px;
         margin-left: 20px;
@@ -159,22 +156,16 @@
         font-family: $poppins;
         letter-spacing: 1px;
       }
-
     }
-
   }
-
-  .__more__button__ {
-
-  }
-
 }
 
-/* END --- About */
+/* END --- ABOUT --- SECTION */
 
-/* START --- Projects */
+/* START --- PROJECTS --- SECTION */
 
 .__spoiler__projects__ {
+  // Section
   margin-top: 150px;
   display: flex;
   align-items: center;
@@ -183,6 +174,7 @@
   justify-content: center;
   gap: 82px;
   flex-direction: column;
+  // Content
   ._projects_cards_ {
     display: flex;
     flex-direction: row;
@@ -190,11 +182,12 @@
   }
 }
 
-/* END --- Projects */
+/* END --- PROJECTS --- SECTION  */
 
-/* START --- Cards */
+/* START --- BOARD --- SECTION */
 
-.__spoiler__cards__ {
+.__spoiler__board__ {
+  // Section
   margin-top: 210px;
   display: flex;
   justify-content: center;
@@ -203,14 +196,35 @@
   flex-wrap: wrap;
   gap: 82px;
   margin-bottom: 80px;
+  // Content
   .__cards__ {
     max-width: 1000px;
   }
 }
 
-/* END --- Cards */
+/* END --- BOARD --- SECTION  */
 
-/* START --- Animations */
+/* START --- CARDS --- SECTION */
+
+.__spoiler__cards__ {
+  // Section
+  margin-top: 210px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 82px;
+  margin-bottom: 80px;
+  // Content
+  .__cards__ {
+    max-width: 1000px;
+  }
+}
+
+/* END --- CARDS --- SECTION */
+
+/* START --- ANIMATIONS */
 
 @keyframes cursor {
   0% {
@@ -273,4 +287,4 @@
   }
 }
 
-/* END --- Animations */
+/* END --- ANIMATIONS */

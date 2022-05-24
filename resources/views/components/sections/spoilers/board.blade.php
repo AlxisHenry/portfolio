@@ -1,10 +1,10 @@
 @component('components.underline-title')
     @slot('Title')
-        News
+        Board
     @endslot
 @endcomponent
 
-<div class="__cards__" data-aos="fade-right">
+<div class="__cards__" data-aos="fade-left">
 
     @foreach($spoiler_cards as $card)
 
@@ -14,4 +14,4 @@
 
 </div>
 
-@include('components.more', ['to' => '/news'])
+@include('components.more', ['to' => '/board'])

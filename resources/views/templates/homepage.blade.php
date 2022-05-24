@@ -6,7 +6,7 @@
     todo : Responsive of sections titles / projects cards
     -->
 
-    <section class="__homepage__presentation__">
+    <section id="__homePresentation" class="__homepage__presentation__">
 
         @include('components.sections.spoilers.presentation')
 
@@ -18,15 +18,21 @@
 
         @include('components.sections.spoilers.about')
 
-        <!--
-        todo : Homepage refactor responsive design (file per section)
-        -->
-
     </section>
 
     <section id="__spoilerProjects" class="__spoiler__projects__">
 
         @include('components.sections.spoilers.projects')
+
+    </section>
+
+    <section id="__spoilerBoard" class="__spoiler__board__">
+
+        <!--
+        todo: Section will contain article realized by myself
+        -->
+
+        @include('components.sections.spoilers.board')
 
     </section>
 

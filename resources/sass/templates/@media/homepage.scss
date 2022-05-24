@@ -1,23 +1,9 @@
 /* START --- Homepage view Responsive */
 
 @media screen and (max-width: 1200px){
-  @keyframes MoovElement {
-    0% {
-      margin-left: 20px;
-    }
-    100% {
-      margin-left: 200px;
-    }
-  }
 
-  @keyframes ReverseMoovElement {
-    0% {
-      margin-left: 200px;
-    }
-    100% {
-      margin-left: 20px;
-    }
-  }
+  /* START --- PRESENTATION --- SECTION RESPONSIVE */
+
   .__homepage__presentation__ {
 
     .__presentation__ {
@@ -78,23 +64,33 @@
     }
 
   }
+
+  /* END --- PRESENTATION --- SECTION RESPONSIVE */
+
 }
 
 @media screen and (max-width: 900px) {
+
+  /* START --- PROJECTS --- SECTION RESPONSIVE */
+
   .__spoiler__projects__ {
     ._projects_cards_ {
       flex-direction: column;
-      }
+    }
   }
+
+  /* END --- PROJECTS --- SECTION RESPONSIVE */
+
 }
 
 @media screen and (max-width: 600px){
+
+  /* START --- PRESENTATION --- SECTION RESPONSIVE */
+
   .__homepage__presentation__ {
 
     .__presentation__ {
-
       .__presentation__separator__ {
-
       }
 
       .__main__presentation__ {
@@ -148,28 +144,31 @@
     }
 
   }
+
+  /* END --- PRESENTATION --- SECTION RESPONSIVE */
+
 }
 
 @media screen and (max-width: 430px) {
+
+  /* START --- PRESENTATION --- SECTION RESPONSIVE */
+
   .__homepage__presentation__ {
-
     .__presentation__ {
-
+      margin-top: -75px;
       .__main__presentation__ {
-
+        margin-bottom: -100px;
         .__me__ {
-
           .name {
             min-width: auto;
             p {
               span {
                 width: 60px;
-                font-size: 3rem;
+                font-size: 2.2rem;
                 margin-top: 100px;
               }
             }
           }
-
           .job {
             p {
               span {
@@ -184,32 +183,21 @@
       }
     }
   }
+
+  /* END --- PRESENTATION --- SECTION RESPONSIVE */
+
+  /* START --- ABOUT --- SECTION RESPONSIVE */
+
   .__spoiler__about__ {
-
-    .__about__card__ {
-
-      .__about__ {
-
-        ._about_descript_ {
+    .__about__card__  .__about__ ._about_descript_ {
           text-align: center;
-          font-size: 15px;
+          font-size: 17px;
           letter-spacing: 0;
-        }
-
-        .__more__about__ {
-        }
-
-      }
-
     }
   }
-}
 
-@media screen and (min-height: 900px) {
-  .__homepage__presentation__ {
-    height: 550px;
-    align-items: center;
-  }
+  /* END --- ABOUT --- SECTION RESPONSIVE */
+
 }
 
 /* END --- Homepage view Responsive */

@@ -6,10 +6,15 @@
 
 /* START --- Globals */
 
+/* START --- KNACSS framework imports */
+
 @import "KNACSS/__abstracts__";
 @import "KNACSS/__base__";
 @import "KNACSS/__utils__";
-@import "KNACSS/__components__";
+@import "KNACSS/__components__"; /* Contain components like burger menu */
+
+/* END --- KNACSS framework imports */
+
 @import 'globals'; /* Globals variables, class and animations */
 
 /* END --- Globals */
@@ -17,8 +22,8 @@
 /* START --- Components */
 
 @import 'components/arrow'; /* Arrow use in homepage */
-@import 'components/navbar';
-@import 'components/footer';
+@import 'components/navbar'; /* Navbar (burger menu / github icon / theme switch) */
+@import 'components/footer'; /* Footer (Copyright) */
 @import 'components/errors'; /* Style use in errors pages */
 @import 'components/more'; /* More button (use on homepage) */
 @import 'components/news-cards'; /* Cards contains scrapped news */
@@ -40,7 +45,7 @@
 
 /* START --- Responsive */
 
-@import 'templates/@media/homepage';
-@import 'templates/@media/projects';
+@import 'templates/@media/homepage'; /* Contain all responsive of homepage */
+@import 'templates/@media/projects'; /* Contain all responsive of projects page */
 
 /* END --- Responsive */

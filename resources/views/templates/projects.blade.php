@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <section class="__main__projects__ layout-maxed">
+    <section id="__mainProject" class="__main__projects__ layout-maxed">
 
         @component('components.underline-title')
             @slot('Title')

@@ -16,6 +16,7 @@ use App\Http\Controllers\AboutController;
 Route::prefix('admin')->group(function() {
 
     // Routes with middleware restrictions
+    // todo: edit middleware for the admin pages access
     Route::middleware('ip')->group(function() {
 
         Route::controller(AdminController::class)->group(function () {
