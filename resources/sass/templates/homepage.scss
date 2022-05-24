@@ -125,12 +125,13 @@
 /* START --- About */
 
 .__spoiler__about__ {
-  margin-top: 5%;
+  margin-top: 125px;
   width: 100%;
-  height: 800px;
+  min-height: 700px;
+  height: auto;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 
   .__about__card__ {
@@ -141,17 +142,17 @@
     flex-direction: column;
 
     .__about__ {
-      margin-top: 60px;
       text-align: justify;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 80%;
-      height: 400px;
+      min-width: 120px;
+      height: auto;
 
       ._about_descript_ {
-        margin-bottom: 40px;
-        margin-left: 30px;
+        margin-right: 20px;
+        margin-left: 20px;
         text-align: justify;
         font-weight: 700;
         font-size: 18px;
@@ -159,13 +160,14 @@
         letter-spacing: 1px;
       }
 
-      .__more__button__  {
-        margin-top: 82px;
-      }
-
     }
 
   }
+
+  .__more__button__ {
+
+  }
+
 }
 
 /* END --- About */
@@ -173,7 +175,7 @@
 /* START --- Projects */
 
 .__spoiler__projects__ {
-  margin-top: 50px;
+  margin-top: 150px;
   display: flex;
   align-items: center;
   height: auto;
@@ -181,9 +183,6 @@
   justify-content: center;
   gap: 82px;
   flex-direction: column;
-  ._projects_title_ {
-
-  }
   ._projects_cards_ {
     display: flex;
     flex-direction: row;
@@ -196,7 +195,7 @@
 /* START --- Cards */
 
 .__spoiler__cards__ {
-  margin-top: 270px;
+  margin-top: 210px;
   display: flex;
   justify-content: center;
   flex-direction: column;

@@ -82,7 +82,6 @@
 
 @media screen and (max-width: 900px) {
   .__spoiler__projects__ {
-    margin-top: 35px;
     ._projects_cards_ {
       flex-direction: column;
       }
@@ -90,8 +89,6 @@
 }
 
 @media screen and (max-width: 600px){
-  .__spoiler__projects__ {
-  }
   .__homepage__presentation__ {
 
     .__presentation__ {
@@ -192,7 +189,6 @@
     .__about__card__ {
 
       .__about__ {
-        margin-top: -40px;
 
         ._about_descript_ {
           text-align: center;
@@ -201,7 +197,6 @@
         }
 
         .__more__about__ {
-          margin-top: 40px;
         }
 
       }

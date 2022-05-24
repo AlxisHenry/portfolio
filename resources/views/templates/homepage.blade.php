@@ -19,7 +19,6 @@
         @include('components.sections.spoilers.about')
 
         <!--
-        todo : About section refactor (css & html)
         todo : Homepage refactor responsive design (file per section)
         -->
 

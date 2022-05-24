@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@200&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Libre+Franklin:wght@200&family=Poppins:wght@200&display=swap);
 @charset "UTF-8";
 /* Start --- Google fonts */
@@ -6445,7 +6443,7 @@ body {
 }
 /* END --- Component --- Navbar Responsive */
 .__footer__ {
-  margin-top: 300px;
+  margin-top: 240px;
   width: 100%;
   height: 45px;
   background-color: #242B40;
@@ -6914,12 +6912,13 @@ body {
 /* END --- Presentation */
 /* START --- About */
 .__spoiler__about__ {
-  margin-top: 5%;
+  margin-top: 125px;
   width: 100%;
-  height: 800px;
+  min-height: 700px;
+  height: auto;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 .__spoiler__about__ .__about__card__ {
@@ -6930,31 +6929,27 @@ body {
   flex-direction: column;
 }
 .__spoiler__about__ .__about__card__ .__about__ {
-  margin-top: 60px;
   text-align: justify;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80%;
-  height: 400px;
+  min-width: 120px;
+  height: auto;
 }
 .__spoiler__about__ .__about__card__ .__about__ ._about_descript_ {
-  margin-bottom: 40px;
-  margin-left: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
   text-align: justify;
   font-weight: 700;
   font-size: 18px;
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
 }
-.__spoiler__about__ .__about__card__ .__about__ .__more__button__ {
-  margin-top: 82px;
-}
-
 /* END --- About */
 /* START --- Projects */
 .__spoiler__projects__ {
-  margin-top: 50px;
+  margin-top: 150px;
   display: flex;
   align-items: center;
   height: auto;
@@ -6972,7 +6967,7 @@ body {
 /* END --- Projects */
 /* START --- Cards */
 .__spoiler__cards__ {
-  margin-top: 270px;
+  margin-top: 210px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -7337,9 +7332,6 @@ body {
   }
 }
 @media screen and (max-width: 900px) {
-  .__spoiler__projects__ {
-    margin-top: 35px;
-  }
   .__spoiler__projects__ ._projects_cards_ {
     flex-direction: column;
   }
@@ -7387,16 +7379,10 @@ body {
     display: none;
   }
 
-  .__spoiler__about__ .__about__card__ .__about__ {
-    margin-top: -40px;
-  }
   .__spoiler__about__ .__about__card__ .__about__ ._about_descript_ {
     text-align: center;
     font-size: 15px;
     letter-spacing: 0;
-  }
-  .__spoiler__about__ .__about__card__ .__about__ .__more__about__ {
-    margin-top: 40px;
   }
 }
 @media screen and (min-height: 900px) {

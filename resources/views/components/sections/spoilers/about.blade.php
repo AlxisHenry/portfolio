@@ -1,6 +1,6 @@
 @component('components.underline-title')
     @slot('Title')
-        About me
+        about me
     @endslot
 @endcomponent
 
@@ -18,8 +18,8 @@
 
             </span>
 
-            @include('components.more', ['to' => '/about'])
-
         </div>
 
 </div>
+
+@include('components.more', ['to' => '/about'])
