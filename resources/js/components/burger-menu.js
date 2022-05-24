@@ -6,7 +6,7 @@ const Button = document.querySelector('.burger-button')
 const Navbar = document.querySelector('.burger-element')
 const ElementToMoveDuringExtends = [
     document.querySelector('.__presentation__'),
-    document.querySelector('.__about__card__'),
+    document.querySelector('.__spoiler__about__'),
     document.querySelector('#__spoilerProjects'),
     document.querySelector('#__spoilerCards'),
     document.querySelector('.__main__projects__')
