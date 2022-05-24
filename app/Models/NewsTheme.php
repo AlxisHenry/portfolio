@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class NEWS_ARTICLE extends Model
+class NewsTheme extends Model
 {
     use HasFactory;
 }

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('BOARD_ARTICLE', function (Blueprint $table) {
+        Schema::create('news_themes', function (Blueprint $table) {
             $table->id('identifier');
             $table->string('Theme')->default('null');
             $table->string('ThemePrincipal')->default('null');
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('news_themes');
     }
 };

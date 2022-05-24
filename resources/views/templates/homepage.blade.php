@@ -2,10 +2,6 @@
 
 @section('content')
 
-    <!--
-    todo : Responsive of sections titles / projects cards
-    -->
-
     <section id="__homePresentation" class="__homepage__presentation__">
 
         @include('components.sections.spoilers.presentation')
@@ -21,6 +17,10 @@
     </section>
 
     <section id="__spoilerProjects" class="__spoiler__projects__">
+
+        <!--
+        todo : Optimize responsive of projects cards
+        -->
 
         @include('components.sections.spoilers.projects')
 

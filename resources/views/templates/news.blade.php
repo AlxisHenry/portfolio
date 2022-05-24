@@ -8,7 +8,7 @@
 
         @foreach($TECH_CARDS as $card)
 
-            @include('components.articles.news')
+            @include('components.news')
 
         @endforeach
 
@@ -18,7 +18,7 @@
 
         @foreach($JURI_CARDS as $card)
 
-            @include('components.articles.news')
+            @include('components.news')
 
         @endforeach
 

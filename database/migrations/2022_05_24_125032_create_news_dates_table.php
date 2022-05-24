@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('NEWS_IMAGE', function (Blueprint $table) {
+        Schema::create('news_dates', function (Blueprint $table) {
             $table->id('identifier');
-            $table->string('LinkImage')->default('null');
-            $table->string('AltImage')->default('null');
+            $table->string('FullDate')->default('null');
+            $table->string('UpdateDate')->default('null');
+            $table->string('UploadDate')->default('null');
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Images');
+        Schema::dropIfExists('news_dates');
     }
 };

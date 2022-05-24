@@ -33,7 +33,7 @@ class AdminController extends Controller
     }
 
     public function LaravelWelcome() {
-        return view('%welcome%');
+        return view('welcome');
     }
 
 }
