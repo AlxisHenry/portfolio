@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-{{ dd($CORRESPONDING_KEYWORD_ARTICLE) }}
-
 @section('content')
 
 <section class="__spoiler__cards__ __keywords__cards__">

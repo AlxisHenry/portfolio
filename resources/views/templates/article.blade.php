@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-{{ dd($ARTICLE) }}
-
 @section('content')
 
 
