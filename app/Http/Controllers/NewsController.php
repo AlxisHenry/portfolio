@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\NewsArticle;
-use App\Models\NewsImage;
+use App\Models\News;
 use Stichoza\GoogleTranslate\GoogleTranslate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -37,18 +36,9 @@ class NewsController extends Controller
 
         $Google = $this->GoogleTranslate();
 
-        $TECH_CARDS = NewsArticle::where('news_themes.ThemePrincipal', '=', ' Technologique ')
-                      ->join('news_dates', 'news_articles.identifier', '=', 'news_dates.identifier')
-                      ->join('news_images', 'news_articles.identifier', '=', 'news_images.identifier')
-                      ->join('news_themes', 'news_articles.identifier', '=', 'news_themes.identifier')
-                      ->take(10)
-                      ->get();
+        $TECH_CARDS = News::technology();
 
-        $JURI_CARDS = NewsArticle::where('news_themes.ThemePrincipal', '=', 'Juridique')
-                      ->join('news_dates', 'news_articles.identifier', '=', 'news_dates.identifier')
-                      ->join('news_images', 'news_articles.identifier', '=', 'news_images.identifier')
-                      ->join('news_themes', 'news_articles.identifier', '=', 'news_themes.identifier')
-                      ->get();
+        $JURI_CARDS = News::juridique();
 
         return view('templates.news', ['title' => 'News - Henry Alexis',
                                          'navbar' => 'news',
@@ -64,10 +54,7 @@ class NewsController extends Controller
     public function NewsArticle(string $ARTICLE_URL_NAME)
     {
         $Google = $this->GoogleTranslate();
-        $ARTICLE = NewsArticle::where('UrlArticle', 'like', "%$ARTICLE_URL_NAME%")
-            ->join('news_dates', 'news_dates.identifier', '=', 'news_articles.identifier')
-            ->join('news_themes', 'news_themes.identifier', '=', 'news_articles.identifier')
-            ->join('news_images', 'news_images.identifier', '=', 'news_articles.identifier')->get();
+        $ARTICLE = News::url($ARTICLE_URL_NAME);
 
 
         return view('templates.article', ['title' => 'News - Henry Alexis',
@@ -83,12 +70,7 @@ class NewsController extends Controller
 
         $Google = $this->GoogleTranslate();
 
-        $CORRESPONDING_KEYWORD_ARTICLE = NewsArticle::where('news_themes.Theme', 'like', '%' . $KEYWORD . '%')
-                                        ->join('news_dates', 'news_articles.identifier', '=', 'news_dates.identifier')
-                                        ->join('news_images', 'news_articles.identifier', '=', 'news_images.identifier')
-                                        ->join('news_themes', 'news_articles.identifier', '=', 'news_themes.identifier')
-                                        ->limit(8)->get();
-
+        $CORRESPONDING_KEYWORD_ARTICLE = News::keyword($KEYWORD);
 
         return view('templates.keyword', ['title' => $KEYWORD . ' - Henry Alexis',
                                             'KEYWORD' => $KEYWORD,
