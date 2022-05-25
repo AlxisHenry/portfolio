@@ -6104,6 +6104,7 @@ q:lang(fr),
 
 body {
   background: #F2F2F2;
+  scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -6818,6 +6819,80 @@ body {
 }
 /* END --- Component --- Underline Section Title responsive */
 /* Text decoration on section titles */
+.to-top-arrow {
+  position: fixed;
+  right: 0;
+  bottom: -100px;
+  -webkit-animation: ArrowBump 585ms forwards;
+          animation: ArrowBump 585ms forwards;
+  width: 75px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.to-top-arrow.reverse-animation {
+  -webkit-animation: ArrowReverseBump 585ms forwards;
+          animation: ArrowReverseBump 585ms forwards;
+}
+.to-top-arrow .block {
+  background-color: #464AA6;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.to-top-arrow .block:hover {
+  cursor: pointer;
+}
+.to-top-arrow .block:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+.to-top-arrow .block .arrow {
+  color: #F2F2F2;
+  font-size: 26px;
+  transform: rotateX(180deg);
+}
+
+@-webkit-keyframes ArrowBump {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes ArrowBump {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@-webkit-keyframes ArrowReverseBump {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -100px;
+  }
+}
+@keyframes ArrowReverseBump {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -100px;
+  }
+}
+/* Arrow for going to the top of the page */
 /* END --- Components */
 /* START --- Templates */
 /* START --- PRESENTATION --- SECTION */

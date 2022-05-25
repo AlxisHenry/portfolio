@@ -32,7 +32,38 @@ const LoadingPosition = (e) => {
     LoadingIndicator.style.height = LoadingState + '%'
 }
 
+const BackToTopArrow = (status) => {
+
+    if (status) {
+        if(document.documentElement.scrollTop < 350) {
+            console.log(status, "Presentation section")
+            status = false
+            console.log("new status", status)
+            return
+        }
+    }
+
+    const Arrow = document.querySelector('.to-top-arrow')
+
+    Arrow.addEventListener('click', () => {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+    })
+
+    if(document.documentElement.scrollTop > 350) {
+        Arrow.classList.remove('hidden')
+        Arrow.classList.remove('reverse-animation')
+    } else {
+        Arrow.classList.add('reverse-animation')
+    }
+
+}
+
 window.addEventListener('load', (e) => {
+
+    let BackToTopState = true
 
     AOS.init({ duration: 1800 })
     Themes()
@@ -40,12 +71,14 @@ window.addEventListener('load', (e) => {
     Menu.Button()
     Menu.Hover()
     Menu.Animation()
+    BackToTopArrow(BackToTopState)
 
 })
 
 window.addEventListener('scroll', (e) => {
 
     LoadingPosition(e)
+    BackToTopArrow()
 
 })
 

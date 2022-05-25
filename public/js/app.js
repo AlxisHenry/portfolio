@@ -58,7 +58,34 @@ var LoadingPosition = function LoadingPosition(e) {
   LoadingIndicator.style.height = LoadingState + '%';
 };
 
+var BackToTopArrow = function BackToTopArrow(status) {
+  if (status) {
+    if (document.documentElement.scrollTop < 350) {
+      console.log(status, "Presentation section");
+      status = false;
+      console.log("new status", status);
+      return;
+    }
+  }
+
+  var Arrow = document.querySelector('.to-top-arrow');
+  Arrow.addEventListener('click', function () {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  if (document.documentElement.scrollTop > 350) {
+    Arrow.classList.remove('hidden');
+    Arrow.classList.remove('reverse-animation');
+  } else {
+    Arrow.classList.add('reverse-animation');
+  }
+};
+
 window.addEventListener('load', function (e) {
+  var BackToTopState = true;
   aos__WEBPACK_IMPORTED_MODULE_0___default().init({
     duration: 1800
   });
@@ -67,9 +94,11 @@ window.addEventListener('load', function (e) {
   _components_burger_menu__WEBPACK_IMPORTED_MODULE_2__.Button();
   _components_burger_menu__WEBPACK_IMPORTED_MODULE_2__.Hover();
   _components_burger_menu__WEBPACK_IMPORTED_MODULE_2__.Animation();
+  BackToTopArrow(BackToTopState);
 });
 window.addEventListener('scroll', function (e) {
   LoadingPosition(e);
+  BackToTopArrow();
 });
 window.addEventListener('resize', function () {
   _components_burger_menu__WEBPACK_IMPORTED_MODULE_2__.Resize();

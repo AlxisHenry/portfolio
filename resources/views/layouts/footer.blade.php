@@ -6,6 +6,8 @@
 
 </footer>
 
+@include('components.to-top-arrow')
+
 <script src="{{ url('js/app.js') }}"></script>
 
 @yield('footer')

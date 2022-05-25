@@ -1,0 +1,57 @@
+.to-top-arrow {
+  position: fixed;
+  right: 0;
+  bottom: -100px;
+  animation: ArrowBump 585ms forwards;
+  width: 75px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.reverse-animation {
+    animation: ArrowReverseBump 585ms forwards;
+  }
+
+  .block {
+    background-color: $MoyBlue;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    box-shadow: 1px 10px 10px $ShadowDark;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(0.98);
+      box-shadow: 3px 2px 5px 1px $ShadowDark;
+    }
+    .arrow {
+      color: $BrokenWhite;
+      font-size: 26px;
+      transform: rotateX(180deg);
+    }
+  }
+}
+
+@keyframes ArrowBump {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes ArrowReverseBump {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -100px;
+  }
+}
