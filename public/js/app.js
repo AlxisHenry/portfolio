@@ -59,7 +59,9 @@ var LoadingPosition = function LoadingPosition(e) {
 };
 
 var BackToTopArrow = function BackToTopArrow(status) {
+  // Back to top arrow
   if (status) {
+    // Test if the user is on presentation section at the loading of the page
     if (document.documentElement.scrollTop < 350) {
       console.log(status, "Presentation section");
       status = false;
@@ -70,11 +72,12 @@ var BackToTopArrow = function BackToTopArrow(status) {
 
   var Arrow = document.querySelector('.to-top-arrow');
   Arrow.addEventListener('click', function () {
+    // Scroll to the top of the page when user click on the button
     window.scroll({
       top: 0,
       behavior: 'smooth'
     });
-  });
+  }); // Animation for show/hide the button
 
   if (document.documentElement.scrollTop > 350) {
     Arrow.classList.remove('hidden');
@@ -85,7 +88,8 @@ var BackToTopArrow = function BackToTopArrow(status) {
 };
 
 window.addEventListener('load', function (e) {
-  var BackToTopState = true;
+  var BackToTopState = true; // Init State of back to top arrow for call the function at the loading of the page
+
   aos__WEBPACK_IMPORTED_MODULE_0___default().init({
     duration: 1800
   });
