@@ -14,12 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('news_articles', function (Blueprint $table) {
-            $table->id('identifier');
+            $table->id('identifier')->index();
             $table->string('title')->default('null');
             $table->string('author')->default('null');
             $table->longText('introduction')->default('null');
             $table->string('UrlArticle')->default('null');
         });
+
     }
 
     /**
