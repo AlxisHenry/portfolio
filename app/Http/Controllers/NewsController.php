@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\NewsArticle;
+use App\Models\NewsImage;
 use Stichoza\GoogleTranslate\GoogleTranslate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -35,18 +37,17 @@ class NewsController extends Controller
 
         $Google = $this->GoogleTranslate();
 
-        $TECH_CARDS = DB::table('news_article')
-                      ->join('news_dates', 'news_article.identifier', '=', 'news_dates.identifier')
-                      ->join('news_images', 'news_article.identifier', '=', 'news_images.identifier')
-                      ->join('news_themes', 'news_article.identifier', '=', 'news_themes.identifier')
-                      ->where('news_themes.ThemePrincipal', '=', ' Technologique ')
+        $TECH_CARDS = NewsArticle::where('news_themes.ThemePrincipal', '=', ' Technologique ')
+                      ->join('news_dates', 'news_articles.identifier', '=', 'news_dates.identifier')
+                      ->join('news_images', 'news_articles.identifier', '=', 'news_images.identifier')
+                      ->join('news_themes', 'news_articles.identifier', '=', 'news_themes.identifier')
+                      ->take(10)
                       ->get();
 
-        $JURI_CARDS = DB::table('news_article')
-                      ->join('news_dates', 'news_article.identifier', '=', 'news_dates.identifier')
-                      ->join('news_images', 'news_article.identifier', '=', 'news_images.identifier')
-                      ->join('news_themes', 'news_article.identifier', '=', 'news_themes.identifier')
-                      ->where('news_themes.ThemePrincipal', '=', 'Juridique')
+        $JURI_CARDS = NewsArticle::where('news_themes.ThemePrincipal', '=', 'Juridique')
+                      ->join('news_dates', 'news_articles.identifier', '=', 'news_dates.identifier')
+                      ->join('news_images', 'news_articles.identifier', '=', 'news_images.identifier')
+                      ->join('news_themes', 'news_articles.identifier', '=', 'news_themes.identifier')
                       ->get();
 
         return view('templates.news', ['title' => 'News - Henry Alexis',
@@ -63,17 +64,16 @@ class NewsController extends Controller
     public function NewsArticle(string $ARTICLE_URL_NAME)
     {
         $Google = $this->GoogleTranslate();
-        $ARTICLE = DB::table('news_article')
-                   ->join('news_dates', 'news_article.identifier', '=', 'news_dates.identifier')
-                   ->join('news_images', 'news_article.identifier', '=', 'news_images.identifier')
-                   ->join('news_themes', 'news_article.identifier', '=', 'news_themes.identifier')
-                   ->where('news_article.UrlArticle', 'like', '%' . $ARTICLE_URL_NAME . '%')
-                   ->get();
+        $ARTICLE = NewsArticle::where('UrlArticle', 'like', "%$ARTICLE_URL_NAME%")
+            ->join('news_dates', 'news_dates.identifier', '=', 'news_articles.identifier')
+            ->join('news_themes', 'news_themes.identifier', '=', 'news_articles.identifier')
+            ->join('news_images', 'news_images.identifier', '=', 'news_articles.identifier')->get();
+
 
         return view('templates.article', ['title' => 'News - Henry Alexis',
                                             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
                                             'navbar' => 'null',
-                                            'ARTICLE' => $ARTICLE,
+                                            'ARTICLE' => $ARTICLE[0],
                                             'unwanted_array' => $this->UnwantedCharacters(),
                                             'Google' => $Google]);
 
@@ -83,13 +83,12 @@ class NewsController extends Controller
 
         $Google = $this->GoogleTranslate();
 
-        $CORRESPONDING_KEYWORD_ARTICLE = DB::table('news_article')
-                                         ->join('news_dates', 'news_article.identifier', '=', 'news_dates.identifier')
-                                         ->join('news_images', 'news_article.identifier', '=', 'news_images.identifier')
-                                         ->join('news_themes', 'news_article.identifier', '=', 'news_themes.identifier')
-                                         ->where('news_themes.Theme', 'like', '%' . $KEYWORD . '%')
-                                         ->limit(10)
-                                         ->get();
+        $CORRESPONDING_KEYWORD_ARTICLE = NewsArticle::where('news_themes.Theme', 'like', '%' . $KEYWORD . '%')
+                                        ->join('news_dates', 'news_articles.identifier', '=', 'news_dates.identifier')
+                                        ->join('news_images', 'news_articles.identifier', '=', 'news_images.identifier')
+                                        ->join('news_themes', 'news_articles.identifier', '=', 'news_themes.identifier')
+                                        ->limit(8)->get();
+
 
         return view('templates.keyword', ['title' => $KEYWORD . ' - Henry Alexis',
                                             'KEYWORD' => $KEYWORD,

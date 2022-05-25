@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class NewsImage extends Model
 {
+
     use HasFactory;
+
+    protected $fillable = ['LinkImage', 'AltImage'];
+
+    protected $table = "news_images";
+    protected $primaryKey = 'identifier';
+
 }

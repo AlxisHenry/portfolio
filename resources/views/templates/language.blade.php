@@ -1,5 +1,15 @@
 <?php
 
+$url = "http://api.mediastack.com/v1/news?access_key=b0ee13d7bcfecd3f63fcc6296f4b4bf6&keywords=api-hacker-hack-javascript-php&countries=us,fr&limit=100";
+$news = json_decode(file_get_contents($url));
+
+foreach ($news as $item) {
+
+    var_dump($item);
+}
+
+
+/*
     $LANGUAGE = ucfirst($LANGUAGE);
 
     if ($LANGUAGE === 'Nodejs') { $LANGUAGE = 'Node.js'; }
@@ -13,4 +23,5 @@
         echo $arr->pageid;
         echo $arr->extract;
     }
+*/
 ?>

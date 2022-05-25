@@ -1,41 +1,42 @@
 @extends('layouts.app')
 
+{{ dd($ARTICLE) }}
+
 @section('content')
+
 
     <section id="__TargetArticle__" class="__target__article__ layout-maxed">
 
         <div class="__article__">
 
-            @foreach($ARTICLE as $card)
-
-                <div class="__article-nb{{$card->identifier}}__" data-article="{{$card->identifier}}" data-url="{{$card->UrlArticle}}">
+                <div class="__article-nb{{$ARTICLE->identifier}}__" data-article="{{$ARTICLE->identifier}}" data-url="{{$ARTICLE->UrlArticle}}">
 
                     <blockquote>
                         <div class="__article__title__">
-                            {{ $Google->translate($card->title) }}
+                            {{ $Google->translate($ARTICLE->title) }}
                         </div>
                     </blockquote>
 
                     <div class="__article__informations__">
-                        <time data-time="{{ date($card->UploadDate) }}"> Published on {{ date('d/m/Y', strtotime(date($card->UploadDate)))  }}</time>, {{ $Google->translate($card->author ?? '') }}
+                        <time data-time="{{ date($ARTICLE->UploadDate) }}"> Published on {{ date('d/m/Y', strtotime(date($ARTICLE->UploadDate)))  }}</time>, {{ $Google->translate($ARTICLE->author ?? '') }}
                     </div>
 
                     <main class="__article__center__presentation__">
                         <figure class="__article__image__">
                             <picture>
-                                <img src="{{ $card->LinkImage }}" alt="{{ $Google->translate(str($card->AltImage)) }}" title="{{ $Google->translate($card->title) }}">
+                                <img src="{{ $ARTICLE->LinkImage }}" alt="{{ $Google->translate(str($ARTICLE->AltImage)) }}" title="{{ $Google->translate($ARTICLE->title) }}">
                             </picture>
                             <figcaption>
-                                {{ $Google->translate($card->AltImage ?? '') }}
+                                {{ $Google->translate($ARTICLE->AltImage ?? '') }}
                             </figcaption>
                         </figure>
                         <div class="__article__right__menu__">
                             <div class="__article_introduction__">
-                                {{ $Google->translate($card->AltImage) ?? $Google->translate('Cet article ne contient pas de description') }}
+                                {{ $Google->translate($ARTICLE->AltImage) ?? $Google->translate('Cet article ne contient pas de description') }}
                             </div>
 
                             <div class="__article_url__">
-                                <a href="{{ $card->UrlArticle ?? ''}}" rel="nofollow noreferrer" target="_blank">
+                                <a href="{{ $ARTICLE->UrlArticle ?? ''}}" rel="nofollow noreferrer" target="_blank">
                                     <button>{{ $Google->translate("Aller à cet article") }}</button>
                                 </a>
                             </div>
@@ -45,7 +46,7 @@
                     <div class="__article_theme__">
                         {{ $Google->translate('Thèmes associés') }}
                         <div class="__keywords__">
-                            @foreach(explode(' ', $card->Theme) as $theme)
+                            @foreach(explode(' ', $ARTICLE->Theme) as $theme)
                                 @if (strlen($theme) > 5)
                                     <a href="/news/word/{{ strtolower(strtr($theme, $unwanted_array)) }}"> <span class="__article_keyword__"> {{ $Google->translate(strtolower($theme) ?? '') }} </span> </a>
                                 @endif
@@ -54,8 +55,6 @@
                     </div>
 
                 </div>
-
-            @endforeach
 
         </div>
 
