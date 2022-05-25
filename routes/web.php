@@ -8,6 +8,7 @@ use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AboutController;
+use App\Http\Middleware\Admin;
 
 /* RouteServiceProvider */
 
@@ -17,7 +18,7 @@ Route::prefix('admin')->group(function() {
 
     // Routes with middleware restrictions
     // todo: edit middleware for the admin pages access
-    Route::middleware('ip')->group(function() {
+    Route::middleware(Admin::class)->group(function() {
 
         Route::controller(AdminController::class)->group(function () {
             Route::get('/', [AdminController::class, 'Admin'])->name('admin');

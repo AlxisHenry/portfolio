@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class Ip
+class Admin
 {
     /**
      * Handle an incoming request.
@@ -16,11 +16,9 @@ class Ip
      */
     public function handle(Request $request, Closure $next)
     {
-
-        if ($request->getClientIp() == '172.21.80.1') {
+        if ($request->session()->previousUrl() == "https://dev.local/admin") {
             return $next($request);
         }
 
-        return abort('404');
     }
 }
