@@ -7367,6 +7367,12 @@ body {
 }
 
 /* Access to a news with url /news/{title} */
+.__keywords__cards__ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
 .__keywords__cards__ .__research__ {
   width: auto;
   display: flex;
@@ -7375,6 +7381,12 @@ body {
   font-size: 38px;
   font-family: "Inconsolata", monospace;
   letter-spacing: 1px;
+}
+.__keywords__cards__ .__keywords__cards__ {
+  background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 /* Access to a keyword of news with url /news/{keyword} */
@@ -7477,6 +7489,11 @@ body {
   }
 
   /* END --- ABOUT --- SECTION RESPONSIVE */
+}
+@media screen and (min-height: 800px) {
+  .__homepage__presentation__ {
+    margin-top: 85px;
+  }
 }
 /* END --- Homepage view Responsive */
 /* Contain all responsive of homepage */
