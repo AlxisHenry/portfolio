@@ -13,6 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
+
         Schema::create('news', function (Blueprint $table) {
             $table->id('identifier');
             $table->string('title')->default('null');
@@ -27,6 +28,7 @@ return new class extends Migration
             $table->string('UpdateDate')->default('null');
             $table->string('UploadDate')->default('null');
         });
+
     }
 
     /**

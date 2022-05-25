@@ -9,6 +9,7 @@ npm install
 sudo chown -R ubuntu:ubuntu /var/www/main
 sudo chown -R ubuntu:www-data /var/www/main/public
 sudo chown -R ubuntu:www-data /var/www/main/storage
+sudo chown -R ubuntu:www-data /var/www/main/bootstrap
 
 # Laravel configuration
 php artisan key:generate
