@@ -36,15 +36,12 @@ class NewsController extends Controller
 
         $Google = $this->GoogleTranslate();
 
-        $TECH_CARDS = News::technology();
-
-        $JURI_CARDS = News::juridique();
+        $news = News::technology();
 
         return view('templates.news', ['title' => 'News - Henry Alexis',
                                          'navbar' => 'news',
                                          'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
-                                         'TECH_CARDS' => $TECH_CARDS,
-                                         'JURI_CARDS' => $JURI_CARDS,
+                                         'news' => $news,
                                          'Google' => $Google]);
     }
 

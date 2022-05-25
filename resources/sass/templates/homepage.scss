@@ -197,9 +197,16 @@
   gap: 82px;
   margin-bottom: 80px;
   // Content
-  .__cards__ {
+  .__board__cards__ {
     max-width: 1000px;
-  }
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;  }
 }
 
 /* END --- BOARD --- SECTION  */
@@ -219,6 +226,14 @@
   // Content
   .__cards__ {
     max-width: 1000px;
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
   }
 }
 

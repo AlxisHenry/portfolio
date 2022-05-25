@@ -4,7 +4,7 @@
     @endslot
 @endcomponent
 
-<div class="__cards__" data-aos="fade-left">
+<div class="__board__cards__" data-aos="fade-left">
 
     @foreach($spoiler_cards as $card)
 

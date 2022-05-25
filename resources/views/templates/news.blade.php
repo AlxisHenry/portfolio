@@ -2,21 +2,12 @@
 
 @section('content')
 
-<section class="__spoiler__cards__ test layout-maxed">
 
-    <div class="__cards__">
+<section class="__news__ test layout-maxed">
 
-        @foreach($TECH_CARDS as $card)
+    <div class="__cards__categories__">
 
-            @include('components.news')
-
-        @endforeach
-
-    </div>
-
-    <div class="__cards__">
-
-        @foreach($JURI_CARDS as $card)
+        @foreach($news as $card)
 
             @include('components.news')
 
