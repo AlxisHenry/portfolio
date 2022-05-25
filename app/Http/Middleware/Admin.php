@@ -16,7 +16,8 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->session()->previousUrl() == "https://dev.local/admin") {
+        // If user is in development environment, open admin panel
+        if ($request->session()->previousUrl() === "http://dev.local/admin") {
             return $next($request);
         }
 
