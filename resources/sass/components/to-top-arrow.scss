@@ -1,3 +1,5 @@
+/* START --- Component --- Back To Top Button */
+
 .to-top-arrow {
   position: fixed;
   right: 0;
@@ -38,6 +40,9 @@
   }
 }
 
+/* END --- Component --- Back To Top Button */
+/* START --- Component --- Back To Top Button Animations */
+
 @keyframes ArrowBump {
   0% {
     bottom: -100px;
@@ -55,3 +60,5 @@
     bottom: -100px;
   }
 }
+
+/* END --- Component --- Back To Top Button Animations */
