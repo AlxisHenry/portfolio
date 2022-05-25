@@ -516,7 +516,7 @@ INSERT INTO news_images (LinkImage, AltImage) VALUES ("https://d1fmx1rbmqrxrr.cl
 INSERT INTO news_themes (Theme, ThemePrincipal) VALUES (" Configuration Mots de Passe","Juridique");
 INSERT INTO news_dates (FullDate, UploadDate) VALUES ("26 janvier 2017","26 janvier 2017");
 INSERT INTO news (title, author, UrlArticle) VALUES ("Twitch : une fuite de données du géant de la diffusion de vidéo en ligne révèle les salaires des streameurs","par Victor Vasseur ","https://www.franceinter.fr/economie/twitch-le-geant-de-la-diffusion-video-en-ligne-victime-d-une-fuite-massive-de-donnees");
-INSERT INTO news_images (LinkImage, AltImage) VALUES ("https://cdn.radiofrance.fr/s3/criser-production/2021/10/f3d0a8f8-70fc-4ab1-ad75-f77da89fc6a1/1136_075_porzycki-twitchph210430_npwdx.webp","La plateforme Twitch n'a pas encore réagit à ce piratage de données.");
+INSERT INTO news_images (LinkImage, AltImage) VALUES ("https://cdn.radiofrance.fr/s3/cruiser-production/2021/10/f3d0a8f8-70fc-4ab1-ad75-f77da89fc6a1/1136_075_porzycki-twitchph210430_npwdx.webp","La plateforme Twitch n'a pas encore réagit à ce piratage de données.");
 INSERT INTO news_themes (Theme, ThemePrincipal) VALUES ("Économie Internet jeux vidéo réseaux sociaux informatique données personnelles"," Technologique ");
 INSERT INTO news_dates (FullDate, UpdateDate, UploadDate) VALUES ("par Victor Vasseur publié le 6 octobre 2021 à 16h59","none","2021-10-06T16:59:11");
 INSERT INTO news (title, author, UrlArticle) VALUES ("Un mini-drone avec des ailes : à quoi ressemble la plus petite machine volante fabriquée par l’Homme","par Victor Vasseur ","https://www.franceinter.fr/sciences/un-mini-drone-avec-des-ailes-a-quoi-ressemble-la-plus-petite-machine-volante-fabriquee-par-l-homme");
