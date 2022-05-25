@@ -2,7 +2,7 @@
 
     <div class="__article__card__content__">
         <div class="__article__image__">
-            <img src="{{ $card->LinkImage }}" alt="{{ $Google->translate(str($card->AltImage)) }}" title="{{ $Google->translate($card->title) }}">
+            <img src="{{ $card->LinkImage }}" alt="{{ $card->AltImage }}" title="{{ $card->title }}">
         </div>
 
         <div class="__article__date__">
@@ -10,7 +10,7 @@
         </div>
 
         <div class="__article__title__">
-            <span>{{ $Google->translate($card->title) }}</span>
+            <span>{{ $card->title }}</span>
         </div>
 
         @include('components.about', ['link' => '/news/' .  explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle))]])

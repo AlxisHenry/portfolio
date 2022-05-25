@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class News extends Model
 {
 
+    use HasFactory;
+
     protected $fillable = ['title', 'author', 'introduction', 'UrlArticle', 'LinkImage', 'AltImage', 'Theme', 'ThemePrincipal', 'FullDate', 'UpdateDate', 'UploadDate'];
     protected $table = "news";
     protected $primaryKey = 'identifier';
@@ -20,13 +22,13 @@ class News extends Model
 
     public function scopeTechnology($query) {
 
-        return $query->where('ThemePrincipal', '=', ' Technologique ')->limit(5)->get();
+        return $query->where('ThemePrincipal', '=', ' Technologique ')->get();
 
     }
 
     public function scopeJuridique($query) {
 
-        return $query->where('ThemePrincipal', '=', 'Juridique')->limit(5)->get();
+        return $query->where('ThemePrincipal', '=', 'Juridique')->get();
 
     }
 
@@ -38,7 +40,7 @@ class News extends Model
 
     public function scopeKeyword($query, $KEYWORD) {
 
-        return $query->where('Theme', 'like', '%' . $KEYWORD . '%')->limit(8)->get();
+        return $query->where('Theme', 'like', '%' . $KEYWORD . '%')->get();
 
     }
 

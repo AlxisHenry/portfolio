@@ -11,31 +11,31 @@
 
                     <blockquote>
                         <div class="__article__title__">
-                            {{ $Google->translate($ARTICLE->title) }}
+                            {{ $ARTICLE->title }}
                         </div>
                     </blockquote>
 
                     <div class="__article__informations__">
-                        <time data-time="{{ date($ARTICLE->UploadDate) }}"> Published on {{ date('d/m/Y', strtotime(date($ARTICLE->UploadDate)))  }}</time>, {{ $Google->translate($ARTICLE->author ?? '') }}
+                        <time data-time="{{ date($ARTICLE->UploadDate) }}"> Published on {{ date('d/m/Y', strtotime(date($ARTICLE->UploadDate)))  }}</time> {{ $ARTICLE->author ? ',' . $ARTICLE->author : '' }}
                     </div>
 
                     <main class="__article__center__presentation__">
                         <figure class="__article__image__">
                             <picture>
-                                <img src="{{ $ARTICLE->LinkImage }}" alt="{{ $Google->translate(str($ARTICLE->AltImage)) }}" title="{{ $Google->translate($ARTICLE->title) }}">
+                                <img src="{{ $ARTICLE->LinkImage }}" alt="{{ $ARTICLE->AltImage }}" title="{{ $ARTICLE->title }}">
                             </picture>
                             <figcaption>
-                                {{ $Google->translate($ARTICLE->AltImage ?? '') }}
+                                {{ $ARTICLE->AltImage ?? '' }}
                             </figcaption>
                         </figure>
                         <div class="__article__right__menu__">
                             <div class="__article_introduction__">
-                                {{ $Google->translate($ARTICLE->AltImage) ?? $Google->translate('Cet article ne contient pas de description') }}
+                                {{ $ARTICLE->AltImage ??'Cet article ne contient pas de description' }}
                             </div>
 
                             <div class="__article_url__">
                                 <a href="{{ $ARTICLE->UrlArticle ?? ''}}" rel="nofollow noreferrer" target="_blank">
-                                    <button>{{ $Google->translate("Aller à cet article") }}</button>
+                                    <button> Aller à cet article </button>
                                 </a>
                             </div>
                         </div>
