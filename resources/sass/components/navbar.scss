@@ -35,12 +35,13 @@
         font-size: 32px;
         color: #595959;
         border-radius: 50%;
-
-        &:hover {
-          cursor: pointer;
-        }
-
       }
+
+      &:active {
+        transform: scale(0.98);
+        box-shadow: 3px 2px 5px 1px $ShadowDark;
+      }
+
     }
 
     .__theme__ {

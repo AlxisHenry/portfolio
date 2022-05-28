@@ -2,11 +2,11 @@
 
 @section('content')
 
-<section class="__spoiler__cards__ __keywords__cards__">
+<section class="__keywords__cards__ layout-maxed">
 
     <div class="__research__">Keyword : {{ $KEYWORD }}</div>
 
-    <div class="__cards__">
+    <div class="__keywords__cards__">
 
         @foreach($CORRESPONDING_KEYWORD_ARTICLE as $card)
 

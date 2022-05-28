@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <section class="__news__ test layout-maxed">
 
     <div class="__cards__categories__">

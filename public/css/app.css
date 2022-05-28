@@ -6256,8 +6256,9 @@ body {
   color: #595959;
   border-radius: 50%;
 }
-.__navbar__ .__navbar__features__ a img:hover {
-  cursor: pointer;
+.__navbar__ .__navbar__features__ a:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 5px 1px rgba(0, 0, 0, 0.1);
 }
 .__navbar__ .__navbar__features__ .__theme__ {
   width: 32px;

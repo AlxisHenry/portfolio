@@ -1,4 +1,8 @@
 .__keywords__cards__ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
   .__research__ {
     width: auto;
     display: flex;
@@ -7,5 +11,11 @@
     font-size: 38px;
     font-family: $iconsolata;
     letter-spacing: 1px;
+  }
+  .__keywords__cards__ {
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
   }
 }
