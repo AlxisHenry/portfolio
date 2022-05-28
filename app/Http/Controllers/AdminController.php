@@ -13,7 +13,7 @@ class AdminController extends Controller
     }
 
     public function Admin() {
-        return 'Admin';
+        return view('templates.admin.dashboard');
     }
 
     public function AdminNews() {
