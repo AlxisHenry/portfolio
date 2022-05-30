@@ -20,6 +20,7 @@ mix.webpackConfig({
 mix.js('resources/js/app.js', 'public/js/app.js');
 mix.js('resources/js/templates/homepage.js', 'public/js/templates/homepage.js');
 mix.js('resources/js/templates/projects.js', 'public/js/templates/projects.js');
+mix.js('resources/js/templates/board.js', 'public/js/templates/board.js');
 mix.js('resources/js/components/project-cards.js', 'public/js/components/project-cards.js')
 mix.js('resources/js/components/burger-menu.js', 'public/js/components/burger-menu.js')
 

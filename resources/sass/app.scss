@@ -31,16 +31,18 @@
 @import 'components/about'; /* About button on all cards  */
 @import 'components/underline-title'; /* Text decoration on section titles */
 @import 'components/to-top-arrow'; /* Arrow for going to the top of the page */
+@import 'components/board-cards'; /* Board Cards for all documentations available on the website */
 
 /* END --- Components */
 
 /* START --- Templates */
 
-@import 'templates/homepage'; /* Access to homepage */
-@import 'templates/projects'; /* Access to all projects */
-@import 'templates/news'; /* Access to all news */
+@import 'templates/homepage'; /* Access to homepage with url /home */
+@import 'templates/projects'; /* Access to all projects with url /projects */
+@import 'templates/news'; /* Access to all news with url /news */
 @import 'templates/news{title}'; /* Access to a news with url /news/{title} */
 @import 'templates/news{keyword}'; /* Access to a keyword of news with url /news/{keyword} */
+@import 'templates/board'; /* Access to board page with url /board */
 
 /* END --- Templates */
 

@@ -29,7 +29,7 @@
     <section id="__spoilerBoard" class="__spoiler__board__">
 
         <!--
-        todo: Section will contain article realized by myself
+        todo: Section will contain available documentations
         -->
 
         @include('components.sections.spoilers.board')
