@@ -1,46 +1,80 @@
 .__documentation__card__ {
   width: 400px;
-  height: 600px;
+  height: 450px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   background-color: white;
   border-radius: 12px;
-
-  .__documentation__card__image__ {
-    width: 300px;
-    height: 250px;
-    figure {
-      img {
-
-      }
-      figcaption {
-
-      }
-    }
-  }
+  position: relative;
 
   .__documentation__card__title__ {
-    time {
-
-    }
-    .author {
-
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 55px;
+    margin-bottom: 20px;
+    .title {
+      margin-left: 20px;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      letter-spacing: 0;
+      color: $black;
+      font-family: $poppins;
     }
   }
 
   .__documentation__card__author__ {
-
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 18px;
+    font-size: 12px;
+    font-family: $poppins;
+    font-style: italic;
+    time {
+      font-weight: bold;
+      font-size: 13px;
+      color: $Orange;
+    }
+    .author {
+      font-size: 13px;
+      font-weight: bold;
+      color: $Orange;
+    }
+    time:hover, .author:hover {
+      text-decoration: underline;
+      text-decoration-color: $Orange;
+      cursor: pointer;
+    }
   }
 
   .__documentation__card__description__ {
+    height: 200px;
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+    .description {
+      margin-top: 30px;
+      font-family: $poppins;
+      font-size: 16px;
+      letter-spacing: 0;
+      font-style: normal;
+      text-decoration: none;
+      text-align: justify;
+    }
 
   }
 
   .__documentation__card__download__ {
-    position: relative;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
     width: 185px;
     height: 70px;
     border: solid 1px black;
+    border-radius: 4px;
     overflow: hidden;
     a {
       position: relative;
@@ -60,11 +94,14 @@
           font-size: 1rem;
           margin-right: 10px;
         }
-        color: black;
+        color: $black;
         text-transform: uppercase;
         font-size: 1.225rem;
         font-weight: bold;
         font-family: $poppins;
+        &.up-animation-color {
+          animation: DownloadUpColorAnimation 1.6s ease-in-out;
+        }
       }
       .__documentation__card__download__animation__ {
         width: 100%;
@@ -89,6 +126,15 @@
       &:hover { cursor: pointer; }
       &:active { transform: scale(0.98); box-shadow: 3px 2px 5px 1px $ShadowDark; }
     }
+  }
+}
+
+@keyframes DownloadUpColorAnimation {
+  0% {
+    color: $black;
+  }
+  100% {
+    color: $white;
   }
 }
 

@@ -9,14 +9,15 @@
 
 var BoardCardsAnimation = function BoardCardsAnimation() {
   var BoardCards = document.querySelectorAll('.__documentation__card__download__');
+  var DownloadAnimationClass = 'up-animation';
   BoardCards.forEach(function (Card) {
     var AnimationBar = Card.children[0].children[1].children[0];
     Card.addEventListener('click', function () {
-      AnimationBar.classList.remove('up-animation');
-      AnimationBar.classList.add('up-animation');
+      AnimationBar.classList.remove(DownloadAnimationClass);
+      AnimationBar.classList.add(DownloadAnimationClass);
       setTimeout(function () {
-        AnimationBar.classList.remove('up-animation');
-      }, 2200);
+        AnimationBar.classList.remove(DownloadAnimationClass);
+      }, 1600);
     });
   });
 };

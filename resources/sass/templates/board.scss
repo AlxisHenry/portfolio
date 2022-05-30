@@ -6,7 +6,9 @@
   .__main__board__cards__ {
     margin-top: 120px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 50px;
   }

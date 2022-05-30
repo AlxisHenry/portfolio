@@ -6,10 +6,8 @@
 
 <div class="__board__cards__" data-aos="fade-left">
 
-    @foreach($spoiler_cards as $card)
-
-        @include('components.news')
-
+    @foreach($Boards as $Board)
+        @include('components.board-cards')
     @endforeach
 
 </div>
