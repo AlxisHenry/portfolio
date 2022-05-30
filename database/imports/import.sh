@@ -5,7 +5,9 @@ echo "Imports Data to News table"
 echo "--------------------------"
 
 echo "Import all data..."
+
 sudo mariadb -e "source /var/www/main/database/imports/__news-import.sql"
+sudo mariadb -e "source /var/www/main/database/imports/__board-import.sql"
 
 echo "."
 echo ".."
