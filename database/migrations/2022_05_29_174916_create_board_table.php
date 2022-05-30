@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('title')->default('null');
             $table->longText('description')->default('null');
             $table->string('author')->default('null');
-            $table->string('image')->default('null');
-            $table->string('documentation')->default('null');
+            $table->string('documentationLink')->default('null');
             $table->date('published_at');
             $table->date('edit_at');
         });
