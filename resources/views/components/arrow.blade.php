@@ -1,5 +1,9 @@
-<div class="__arrow__" data-aos="">
-    <div class="__page__arrow__">
-            <div class="_arrow_"></div>
-    </div>
+<div class="mouse-container text-center text-bold text-smaller">
+
+    Scroll down
+
+    <span class="mouse">
+        <span class="wheel"></span>
+    </span>
+
 </div>

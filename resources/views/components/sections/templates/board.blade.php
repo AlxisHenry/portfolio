@@ -8,7 +8,7 @@
 
     <div class="__main__board__cards__">
 
-        @foreach($Boards as $Board )
+        @foreach($Boards as $Board)
             @include('components.board-cards')
         @endforeach
 

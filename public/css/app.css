@@ -6159,66 +6159,72 @@ body {
 /* END --- Globals */
 /* START --- Components */
 /* START --- Component --- Arrow */
-.__arrow__ {
-  margin-top: 60px;
+.mouse-container {
+  margin-top: 100px;
   width: 100%;
-  height: 100px;
+  height: 80px;
+  gap: 8px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-}
-.__arrow__ .__page__arrow__ {
-  border-radius: 12px;
-  padding: 1.2em;
-  width: 200px;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
+  text-align: center;
 }
-.__arrow__ .__page__arrow__:hover {
+
+.mouse {
+  border: solid 2px black;
+  border-radius: 16px;
+  display: block;
+  height: 26px;
+  position: relative;
+  width: 20px;
+}
+.mouse:hover {
   cursor: pointer;
 }
-.__arrow__ .__page__arrow__:hover ._arrow_ {
-  cursor: pointer;
-  border-color: #0F0F0F;
-}
-.__arrow__ .__page__arrow__ ._arrow_ {
-  border: solid #595959;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  margin-bottom: 4px;
-  padding: 8px;
-  transform: rotate(45deg);
+.mouse .wheel {
+  background: black;
+  border-radius: 100%;
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 4px;
+  -webkit-animation: ani-mouse 2s linear infinite;
+  animation: ani-mouse 2s linear infinite;
 }
 
 /* END --- Component --- Arrow */
-/* START --- Component --- Arrow Animations */
-@-webkit-keyframes bounceArrow {
+@-webkit-keyframes ani-mouse {
   0% {
-    margin-bottom: 4px;
+    top: 29%;
+  }
+  15% {
+    top: 50%;
   }
   50% {
-    margin-bottom: 8px;
+    top: 50%;
   }
   100% {
-    margin-bottom: 4px;
+    top: 29%;
   }
 }
-@keyframes bounceArrow {
+@keyframes ani-mouse {
   0% {
-    margin-bottom: 4px;
+    top: 29%;
+  }
+  15% {
+    top: 50%;
   }
   50% {
-    margin-bottom: 8px;
+    top: 50%;
   }
   100% {
-    margin-bottom: 4px;
+    top: 29%;
   }
 }
-/* END --- Component --- Arrow Animations */
-/* START --- Component --- Arrow Responsive */
-/* END --- Component --- Arrow Responsive */
 /* Arrow use in homepage */
 /* START --- Component --- Navbar */
 .__navbar__ {
@@ -7561,6 +7567,7 @@ body {
   flex-direction: column;
 }
 .__main__board__ .__main__board__cards__ {
+  max-width: 1600px;
   margin-top: 120px;
   display: flex;
   flex-direction: row;
@@ -7571,6 +7578,96 @@ body {
 }
 
 /* Access to board page with url /board */
+form {
+  height: 480px;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+}
+
+form * {
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+}
+
+form h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+::-moz-placeholder {
+  color: #1b1b1b;
+}
+
+:-ms-input-placeholder {
+  color: #1b1b1b;
+}
+
+::placeholder {
+  color: #1b1b1b;
+}
+
+.form-submit {
+  position: relative;
+  left: 15%;
+  background-color: #cdcdfd;
+  margin-top: 50px;
+  width: 70%;
+  text-transform: uppercase;
+  color: #1b1b1b;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form-submit:active {
+  transform: scale(0.99);
+  box-shadow: 3px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 500px) {
+  form {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 450px) {
+  form {
+    width: 275px;
+  }
+}
+/* Login page for access to admin session */
 /* END --- Templates */
 /* START --- Responsive */
 /* START --- Homepage view Responsive */

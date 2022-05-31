@@ -2,6 +2,7 @@ import ScrollReveal from "scrollreveal";
 import anime from "animejs";
 import * as ProjectsCards from "../components/project-cards"
 import * as global from "../main"
+import * as BoardCards from "../components/board-cards"
 
 const writeJob = (job, index) => {
     // Write Job on homepage
@@ -63,11 +64,23 @@ const RevealYears = () => {
     }
 }
 
+const MouseEvent = () => {
+    const mouse = document.querySelector('.mouse')
+
+    mouse.addEventListener('click', () => {
+        window.scroll({
+            top: 860,
+            behavior: 'smooth'
+        });
+    })
+}
+
 window.addEventListener('load', (e) => {
 
     writeName('Henry alexis', 0)
     writeJob('Web Developer', 0)
     HomepageReveal()
+    MouseEvent()
     anime({
         targets: document.querySelector('.years'),
         innerHTML: [2003, 2022],
@@ -77,5 +90,6 @@ window.addEventListener('load', (e) => {
     RevealYears()
     ProjectsCards.InputAnimation(e)
     ProjectsCards.ProjectAnimation(e)
+    BoardCards.BoardCardsAnimation()
 
 })

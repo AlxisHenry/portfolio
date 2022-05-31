@@ -1326,6 +1326,33 @@ anime.random = function (min, max) { return Math.floor(Math.random() * (max - mi
 
 /***/ }),
 
+/***/ "./resources/js/components/board-cards.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/board-cards.js ***!
+  \************************************************/
+/***/ ((module) => {
+
+var BoardCardsAnimation = function BoardCardsAnimation() {
+  var BoardCards = document.querySelectorAll('.__documentation__card__download__');
+  var DownloadAnimationClass = 'up-animation';
+  BoardCards.forEach(function (Card) {
+    var AnimationBar = Card.children[0].children[1].children[0];
+    Card.addEventListener('click', function () {
+      AnimationBar.classList.remove(DownloadAnimationClass);
+      AnimationBar.classList.add(DownloadAnimationClass);
+      setTimeout(function () {
+        AnimationBar.classList.remove(DownloadAnimationClass);
+      }, 1600);
+    });
+  });
+};
+
+module.exports = {
+  BoardCardsAnimation: BoardCardsAnimation
+};
+
+/***/ }),
+
 /***/ "./resources/js/components/project-cards.js":
 /*!**************************************************!*\
   !*** ./resources/js/components/project-cards.js ***!
@@ -3382,6 +3409,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_project_cards__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_project_cards__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../main */ "./resources/js/main.js");
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_main__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_board_cards__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/board-cards */ "./resources/js/components/board-cards.js");
+/* harmony import */ var _components_board_cards__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_board_cards__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -3453,10 +3483,21 @@ var RevealYears = function RevealYears() {
   }
 };
 
+var MouseEvent = function MouseEvent() {
+  var mouse = document.querySelector('.mouse');
+  mouse.addEventListener('click', function () {
+    window.scroll({
+      top: 860,
+      behavior: 'smooth'
+    });
+  });
+};
+
 window.addEventListener('load', function (e) {
   writeName('Henry alexis', 0);
   writeJob('Web Developer', 0);
   HomepageReveal();
+  MouseEvent();
   (0,animejs__WEBPACK_IMPORTED_MODULE_1__["default"])({
     targets: document.querySelector('.years'),
     innerHTML: [2003, 2022],
@@ -3466,6 +3507,7 @@ window.addEventListener('load', function (e) {
   RevealYears();
   _components_project_cards__WEBPACK_IMPORTED_MODULE_2__.InputAnimation(e);
   _components_project_cards__WEBPACK_IMPORTED_MODULE_2__.ProjectAnimation(e);
+  _components_board_cards__WEBPACK_IMPORTED_MODULE_4__.BoardCardsAnimation();
 });
 })();
 
