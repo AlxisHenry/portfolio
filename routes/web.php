@@ -14,13 +14,16 @@ use App\Http\Middleware\Admin;
 
 // Routes to admin views
 
+
 Route::prefix('admin')->group(function() {
+
+    Route::get('/login', [AdminController::class, 'Login'])->name('login');
 
     // Routes with middleware restrictions
     Route::middleware(Admin::class)->group(function() {
 
         Route::controller(AdminController::class)->group(function () {
-            Route::get('/', [AdminController::class, 'Admin'])->name('admin');
+            Route::post('/dashboard', [AdminController::class, 'Admin'])->name('admin_post');
             Route::get('/news', [AdminController::class, 'AdminNews'])->name('admin_news');
             Route::get('/news/{ARTICLE_NAME}', [AdminController::class, 'AdminNewsEdit'])->name('admin_news_edit');
             Route::get('/board', [AdminController::class, 'AdminBoard'])->name('admin_board');
