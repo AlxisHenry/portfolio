@@ -4,6 +4,7 @@
     "/js/templates/projects.js": "/js/templates/projects.js",
     "/js/templates/board.js": "/js/templates/board.js",
     "/js/components/project-cards.js": "/js/components/project-cards.js",
+    "/js/components/loader.js": "/js/components/loader.js",
     "/js/components/burger-menu.js": "/js/components/burger-menu.js",
     "/css/app.css": "/css/app.css"
 }
