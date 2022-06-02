@@ -1,27 +1,9 @@
-# IDE
 /.idea
 /.vscode
-
-# npm
 /node_modules
-
-# Configs
+/vendor
+/vendor/
 .env
 .env.backup
-#.env.example
-/vendor
-
-#/public/hot
-#/public/storage
-#/storage/*.key
-#.phpunit.result.cache
-#Homestead.json
-#Homestead.yaml
-#npm-debug.log
-#yarn-error.log
-
-# public files
 /public/js
 /public/css
-
-/vendor/
