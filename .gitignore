@@ -20,5 +20,8 @@
 #npm-debug.log
 #yarn-error.log
 
+# public files
+/public/js
+/public/css
 
 /vendor/
