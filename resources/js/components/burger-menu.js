@@ -73,7 +73,7 @@ const HoverNavbarMenu = () => {
 
             }))
         NavTitle.forEach(__NavTitle =>
-            __NavTitle.addEventListener('mouseout', () => {
+             __NavTitle.addEventListener('mouseout', () => {
                 const LoadingBar = __NavTitle.children[0].children[1]
                 LoadingBar.classList.add('loading__navbar_animation_down')
             }))

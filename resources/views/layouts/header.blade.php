@@ -30,7 +30,13 @@
     <link rel="manifest" href="{{ url('assets/icons/manifest.json') }}">
     <link rel="mask-icon" href="{{ url('assets/icons/favicon.ico') }}" color="#009af6">
 </head>
-<body>
+
+@if(Route::currentRouteName() === "home")
+    <body class="loader-body">
+    @include('layouts.loader')
+@else
+    <body>
+@endif
 
 @include('components.scrollbar')
 @include('components.cursor')
