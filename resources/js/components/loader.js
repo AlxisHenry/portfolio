@@ -6,15 +6,15 @@ let renderer;
 let clock;
 let holder;
 let particles = [];
-let totalTargets = 3;
+let totalTargets = 6;
 let speed = 0.01;
 
 export const myScene = () => {
     scene=new THREE.Scene();
     let width = window.innerWidth;
     let height = window.innerHeight;
-    camera = new THREE.PerspectiveCamera(120, width/height, 0.1, 1000);
-    camera.position.z = 30;
+    camera = new THREE.PerspectiveCamera(80, width/height, 0.1, 1000);
+    camera.position.z = 50;
     renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
     renderer.setSize( width, height );
     document.getElementById("webgl-container").appendChild(renderer.domElement);
@@ -35,10 +35,10 @@ export const addHolder = () => {
         let geometry = new THREE.BoxGeometry(2,2,2);
         let material = new THREE.MeshPhongMaterial( {color: ranCol, ambient: ranCol } );
         let cube = new THREE.Mesh(geometry, material);
-        cube.position.x = i * 5;
+        cube.position.x = i * 3;
         cube.name = "cubeName" + i;
         let spinner = new THREE.Object3D();
-        spinner.rotation.x = i*2.5*Math.PI;
+        spinner.rotation.x = i*1.3*Math.PI;
         spinner.name = "spinnerName" + i;
         spinner.add(cube);
         holder.add(spinner);
