@@ -16,4 +16,4 @@ php artisan key:generate
 php artisan cache:clear
 php artisan optimize
 php artisan optimize:clear
-npm run prod
+npm run dev
