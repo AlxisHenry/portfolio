@@ -1,5 +1,6 @@
 import ScrollReveal from "scrollreveal";
 import anime from "animejs";
+import { InputAnimation } from "../components/about"
 import * as ProjectsCards from "../components/project-cards"
 import * as global from "../main"
 import * as BoardCards from "../components/board-cards"
@@ -95,7 +96,7 @@ window.addEventListener('load', (e) => {
             round: 1
         })
         RevealYears()
-        ProjectsCards.InputAnimation(e)
+        InputAnimation(e)
         ProjectsCards.ProjectAnimation(e)
         BoardCards.BoardCardsAnimation()
     }, 1800)

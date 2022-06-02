@@ -17,3 +17,9 @@
 </section>
 
 @stop
+
+@section('footer')
+
+    <script src="{{ url('js/templates/news.js') }}"></script>
+
+@endsection
