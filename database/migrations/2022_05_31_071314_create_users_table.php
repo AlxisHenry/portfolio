@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('email')->default('null');
             $table->string('permissions')->default('null')->index();
+            $table->rememberToken();
             $table->date('created_at');
             $table->date('edit_at');
         });
