@@ -1,4 +1,3 @@
-const {isArray} = require("lodash");
 const ExtendsAnimationClass =  '__element__navbar__extends__'
 const ReverseExtendsAnimationClass = '__reverse__element__navbar__extends__'
 const ExtendsNavbar = 'NavbarUpAnimation'
