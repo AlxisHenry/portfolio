@@ -4,6 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class Admin
 {
@@ -14,12 +16,9 @@ class Admin
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
+
     public function handle(Request $request, Closure $next)
     {
-        // If user is in development environment, open admin panel
-        if ($request->session()->previousUrl() === "http://dev.local/admin") {
-            return $next($request);
-        }
-
+        return $next($request);
     }
 }
