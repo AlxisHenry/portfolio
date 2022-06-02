@@ -1,9 +1,9 @@
 import * as ProjectsCards from "../components/project-cards"
-import * as global from "../main"
+import { InputAnimation } from "../components/about"
 
 window.addEventListener('load', (e) => {
 
-    ProjectsCards.InputAnimation(e)
+    InputAnimation(e)
     ProjectsCards.ProjectAnimation(e)
 
 })
