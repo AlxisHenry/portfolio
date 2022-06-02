@@ -1,10 +1,16 @@
+const {isArray} = require("lodash");
 const ExtendsAnimationClass =  '__element__navbar__extends__'
 const ReverseExtendsAnimationClass = '__reverse__element__navbar__extends__'
 const ExtendsNavbar = 'NavbarUpAnimation'
 const ReverseExtendsNavbar = 'NavbarReverseAnimation'
 const Button = document.querySelector('.burger-button')
 const Navbar = document.querySelector('.burger-element')
-const ElementToMoveDuringExtends = document.querySelectorAll('section') // Extends all sections on the page
+const ElementToMoveDuringExtends = Array.from(document.querySelectorAll('section')) // Extends all sections on the page
+const AddElementsToExtendsMethod = (elements) => {elements.forEach((element) => { ElementToMoveDuringExtends.push(element)})}
+const AdditionalsElements = [ // Add additionals elements to extends them
+    document.querySelector('.mouse-container')
+]
+AddElementsToExtendsMethod(AdditionalsElements)
 
 const ButtonAction = () => {
     // Toggle menu
