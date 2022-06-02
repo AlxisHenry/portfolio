@@ -11,7 +11,8 @@
   width: 100%;
   height: 100%;
   z-index: 999;
-  background-color: #F2F2F2;
+  background-color: $DarkBlue;
+  // background-color: $BrokenWhite;
 
   &.disabled {
     transition: opacity 375ms ease-out;
