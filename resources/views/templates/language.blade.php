@@ -1,27 +1,40 @@
-<?php
+@extends('layouts.app')
 
-$url = "http://api.mediastack.com/v1/news?access_key=b0ee13d7bcfecd3f63fcc6296f4b4bf6&keywords=api-hacker-hack-javascript-php&countries=us,fr&limit=100";
-$news = json_decode(file_get_contents($url));
+@section('content')
 
-foreach ($news as $item) {
+    <section class="layout-maxed" style="min-height: 100vh">
 
-    var_dump($item);
-}
+        @foreach($LANGUAGE as $data)
 
+            <h1 class="ml-36 mr-36">{!! $data->title !!}</h1>
 
-/*
-    $LANGUAGE = ucfirst($LANGUAGE);
+            <div class="extract text-justify ml-36 mr-36" data-id="{{ $data->pageid }}" data-ns="{{ $data->ns ?? 'null' }}" data-url="{{ $url }}">
 
-    if ($LANGUAGE === 'Nodejs') { $LANGUAGE = 'Node.js'; }
-    if ($LANGUAGE === 'Bash') { $LANGUAGE = 'Bourne-Againshell'; }
+                <p class="text-justify">
 
-    $url = "https://en.wikipedia.org/w/api.php?action=query&titles=$LANGUAGE&prop=extracts&format=json&exintro=1";
-    $content = json_decode(file_get_contents($url));
-    $array = $content->query->pages;
-    foreach ($array as $arr) {
-        echo explode(' ', $arr->title)[0];
-        echo $arr->pageid;
-        echo $arr->extract;
+                    {!! $data->extract !!}
+
+                </p>
+
+            </div>
+
+        @endforeach
+
+    </section>
+
+@endsection
+
+<style>
+
+    h1 {
+        height: 80px;
+        display: flex;
+        align-items: center;
     }
-*/
-?>
+
+    .extract {
+        margin-top: -225px;
+    }
+
+
+</style>

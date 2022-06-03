@@ -22,17 +22,17 @@
 
     @slot('Languages')
 
-        <a href="/home/language/html">
+        <a href="/language/html">
                                 <span class="_project_language">
                                     HTML
                                 </span>
         </a>
-        <a href="/home/language/css">
+        <a href="/language/css">
                                 <span class="_project_language">
                                     CSS
                                 </span>
         </a>
-        <a href="/home/language/JavaScript">
+        <a href="/language/javascript">
                                 <span class="_project_language">
                                     Javascript
                                 </span>

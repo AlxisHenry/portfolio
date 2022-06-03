@@ -33,7 +33,7 @@ class HomeController extends Controller
         $LANGUAGES = [];
         foreach ($LANGUAGES_SVG as $item) {
             $language_name = explode('.', $item)[1];
-            $LANGUAGES[] = "<a href='/home/language/$language_name'><img src='". url($item) ."' alt='$language_name' title='$language_name' class='language_icon'></a>";
+            $LANGUAGES[] = "<a href='/language/$language_name'><img src='". url($item) ."' alt='$language_name' title='$language_name' class='language_icon'></a>";
         }
         return $LANGUAGES;
 
@@ -55,9 +55,4 @@ class HomeController extends Controller
                                         'Google' => $Google]);
     }
 
-    public function WikiLang(string $LANGUAGE)
-    {
-        $LANGUAGE_TO_SCRAP = '';
-        return view('templates.language', ['title' => 'Language - Henry Alexis', 'LANGUAGE' => $LANGUAGE]);
-    }
 }

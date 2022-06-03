@@ -20,12 +20,12 @@
     @slot('GithubLink', 'https://github.com/AlxisHenry/Snipe-IT')
 
     @slot('Languages')
-        <a href="/home/language/shell">
+        <a href="/language/shell">
                                 <span class="_project_language">
                                     Shell
                                 </span>
         </a>
-        <a href="/home/language/laravel">
+        <a href="/language/laravel">
                                 <span class="_project_language">
                                     Laravel
                                 </span>

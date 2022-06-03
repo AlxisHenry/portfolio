@@ -21,22 +21,22 @@
 
     @slot('Languages')
 
-        <a href="/home/language/PHP">
+        <a href="/language/php">
                                 <span class="_project_language">
                                     Laravel
                                 </span>
         </a>
-        <a href="/home/language/JavaScript">
+        <a href="/language/javascript">
                                 <span class="_project_language">
                                     PHP
                                 </span>
         </a>
-        <a href="/home/language/Windows_PowerShell">
+        <a href="/language/powershell">
                                 <span class="_project_language">
                                     Javascript
                                 </span>
         </a>
-        <a href="/home/language/Windows_PowerShell">
+        <a href="/language/scss">
                                 <span class="_project_language">
                                     SCSS
                                 </span>
