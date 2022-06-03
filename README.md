@@ -2,11 +2,13 @@
 
 -----
 
+
 This project is built on [Laravel 8](https://laravel.com/) as a project during my BTS at the [CCI Campus](https://www.ccicampus.fr/) of Strasbourg. 
 The goal is to learn how to use the [MVC](https://developer.mozilla.org/fr/docs/Glossary/MVC) (Model-View-Controllers) pattern.
 During the project I had to rewrite my portfolio using Laravel. Using the MVC pattern, Eloquent, Routes, and all features of the Framework.
-We need to setup a [CRUD](https://developer.mozilla.org/fr/docs/Glossary/CRUD).
+We need to setup a [CRUD](https://developer.mozilla.org/fr/docs/Glossary/CRUD) features.
 
+[![wakatime](https://wakatime.com/badge/user/b7db3515-75b7-455d-937b-6cf28353dd3f/project/4156fd69-8cdd-4d99-8d4f-b83927b2e7e7.svg)](https://wakatime.com/badge/user/b7db3515-75b7-455d-937b-6cf28353dd3f/project/4156fd69-8cdd-4d99-8d4f-b83927b2e7e7)
 
 -----
 ## Tech uses
