@@ -1,63 +1,45 @@
 <?php
 
 use App\Http\Controllers\LanguagesController;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AboutController;
-use App\Http\Middleware\Admin;
+use App\Http\Middleware\Administrator;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /* RouteServiceProvider */
 
-// Routes to admin views
+// Routes to globals views
 
-Route::prefix('admin')->group(function() {
-    Route::get('/login', [AdminController::class, 'Login'])->name('login');
-    Route::middleware(Admin::class)->group(function() {
-        Route::controller(AdminController::class)->group(function () {
-            Route::post('/dashboard', [AdminController::class, 'Admin'])->name('admin_post');
-            Route::get('/news', [AdminController::class, 'AdminNews'])->name('admin_news');
-            Route::get('/news/{ARTICLE_NAME}', [AdminController::class, 'AdminNewsEdit'])->name('admin_news_edit');
-            Route::get('/board', [AdminController::class, 'AdminBoard'])->name('admin_board');
-            Route::get('/board/{ARTICLE_NAME}', [AdminController::class, 'AdminBoardEdit'])->name('admin_board_edit');
-            Route::get('/laravel', [AdminController::class, 'LaravelWelcome'])->name('laravel_welcome');
-        });
-    });
-});
-
-// Routes to authorized views
-
-Route::get('home', [HomeController::class, 'Home'])->name('home');
-Route::get('language/{LANGUAGE}', [LanguagesController::class, 'WikipediaDefinition'])->name('language');
+Route::get('/', [HomeController::class, 'Home'])->name('home');
 Route::get('about', [AboutController::class, 'About'])->name('about');
+Route::get('projects', [ProjectsController::class, 'Projects'])->name('projects');
+Route::get('projects/{name}', [ProjectsController::class, 'TargetProject'])->name('projects_target');
+Route::get('board', [BoardController::class, 'Board'])->name('board');
+Route::get('board/{name}', [BoardController::class, 'Board'])->name('board_object');
+Route::get('news', [NewsController::class, 'News'])->name('news');
+Route::get('news/{url}', [NewsController::class, 'NewsArticle'])->name('news_article');
+Route::get('news/word/{key}', [NewsController::class, 'NewsKeyword'])->name('news_keyword');
+Route::get('language', [LanguagesController::class, 'ShowLanguageList'])->name('language');
+Route::get('language/{lang}', [LanguagesController::class, 'WikipediaDefinition'])->name('language');
+Route::get('login', [AdminController::class, 'Login'])->name('login');
+Route::redirect('home', '/');
 
-Route::prefix('projects')->group(function () {
-    Route::controller(ProjectsController::class)->group(function () {
-        Route::get('projects', [ProjectsController::class, 'Projects'])->name('projects');
-        Route::get('projects/{PROJECT_NAME}', [ProjectsController::class, 'TargetProject'])->name('projects_target');
-    });
+// Routes to auth views
+
+Route::middleware(Administrator::class)->group(function() {
+    Route::post('admin', [AdminController::class, 'Dashboard'])->name('admin_post');
+    Route::post('admin/news', [AdminController::class, 'News'])->name('admin_news');
+    Route::post('admin/news/{id}', [AdminController::class, 'NewsEditing'])->name('admin_news_edit');
+    Route::post('admin/board', [AdminController::class, 'Board'])->name('admin_board');
+    Route::post('admin/board/{id}', [AdminController::class, 'BoardEditing'])->name('admin_board_edit');
+    Route::post('admin/laravel', [AdminController::class, 'Laravel'])->name('laravel_welcome');
+    Route::post('admin/php', [AdminController::class, 'Environment'])->name('laravel_welcome');
 });
-
-Route::prefix('board')->group(function () {
-    Route::controller(BoardController::class)->group(function () {
-        Route::get('board', [BoardController::class, 'Board'])->name('board');
-        Route::get('board/{ARTICLE_NAME}', [BoardController::class, 'Board'])->name('board_object');
-    });
-});
-
-Route::prefix('news')->group(function () {
-    Route::controller(NewsController::class)->group(function () {
-        Route::get('/', [NewsController::class, 'News'])->name('news');
-        Route::get('/{ARTICLE_URL_NAME}', [NewsController::class, 'NewsArticle'])->name('news_article');
-        Route::get('/word/{KEYWORD}', [NewsController::class, 'NewsKeyword'])->name('news_keyword');
-    });
-});
-
-Route::redirect('/', 'home');
 
 // Testing routes
 
