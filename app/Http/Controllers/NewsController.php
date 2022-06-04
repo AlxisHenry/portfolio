@@ -48,10 +48,10 @@ class NewsController extends Controller
     /**
      * @throws \ErrorException
      */
-    public function NewsArticle(string $ARTICLE_URL_NAME)
+    public function NewsArticle(string $url)
     {
         $Google = $this->GoogleTranslate();
-        $ARTICLE = News::url($ARTICLE_URL_NAME);
+        $ARTICLE = News::url($url);
 
 
         return view('templates.article', ['title' => 'News - Henry Alexis',
@@ -63,11 +63,11 @@ class NewsController extends Controller
 
     }
 
-    public function NewsKeyword(string $KEYWORD) {
+    public function NewsKeyword(string $key) {
 
         $Google = $this->GoogleTranslate();
 
-        $CORRESPONDING_KEYWORD_ARTICLE = News::keyword($KEYWORD);
+        $CORRESPONDING_KEYWORD_ARTICLE = News::keyword($key);
 
         return view('templates.keyword', ['title' => $KEYWORD . ' - Henry Alexis',
                                             'KEYWORD' => $KEYWORD,

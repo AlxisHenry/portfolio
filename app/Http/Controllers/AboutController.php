@@ -15,7 +15,7 @@ class AboutController extends Controller
 
     }
 
-    public function About()
+    public function About(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         return view('templates.about', ['title' => 'About me - Henry Alexis', 'navbar' => 'about', 'og_description' => 'Portfolio Henry Alexis - About me']);
     }

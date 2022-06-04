@@ -17,7 +17,7 @@ class BoardController extends Controller
 
     public function AllBoards(): \Illuminate\Database\Eloquent\Collection
     {
-        return $Board = Board::all();
+        return Board::all();
     }
 
     public function Board(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application

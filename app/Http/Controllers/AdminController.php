@@ -22,7 +22,7 @@ class AdminController extends Controller
         return view('templates.admin.login', ['title' => 'Login - Administration']);
     }
 
-    public function Admin(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function Dashboard(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
 
         if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -48,29 +48,34 @@ class AdminController extends Controller
 
     }
 
-    public function AdminNews(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function News(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         return view('templates.admin.news', ['title' => 'News - Administration']);
     }
 
-    public function AdminNewsEdit(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function NewsEditing(int $id): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         return view('templates.admin.edit-news', ['title' => 'Edit News - Administration']);
     }
 
-    public function AdminBoard(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function Board(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         return view('templates.admin.board', ['title' => 'Board - Administration']);
     }
 
-    public function AdminBoardEdit(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function BoardEditing(int $id): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         return view('templates.admin.edit-board', ['title' => 'Edit Board - Administration']);
     }
 
-    public function LaravelWelcome(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function Laravel(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         return view('welcome');
+    }
+
+    public function Environment(): bool
+    {
+        return phpinfo();
     }
 
 }

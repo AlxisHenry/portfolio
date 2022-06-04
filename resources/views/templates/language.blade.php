@@ -4,7 +4,7 @@
 
     <section class="layout-maxed" style="min-height: 100vh">
 
-        @foreach($LANGUAGE as $data)
+        @foreach($lang as $data)
 
             <h1 class="ml-36 mr-36">{!! $data->title !!}</h1>
 

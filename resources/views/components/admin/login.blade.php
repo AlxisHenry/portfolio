@@ -1,4 +1,4 @@
-<form class="__form-login-admin__" action="/admin/dashboard" method="post">
+<form class="__form-login-admin__" action="admin" method="post">
 
         @csrf
 

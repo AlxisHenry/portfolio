@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use stdClass;
 
 class LanguagesController extends Controller
 {
@@ -11,18 +12,13 @@ class LanguagesController extends Controller
     {
     }
 
-    public function WIKIPEDIA_API_QUERY($LANGUAGE) {
-        $url = "https://en.wikipedia.org/w/api.php?action=query&titles=$LANGUAGE&prop=extracts&format=json&exintro=1";
-        $content = json_decode(file_get_contents($url));
-        return $content->query->pages;
-    }
-
-    public function WikipediaDefinition(string $LANGUAGE): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
+    public function MatchLanguages(string $lang, bool $take): string|array
     {
 
-        $FORMAT_LANGUAGE = match ($LANGUAGE) {
+        $Languages = [
             'html' => 'HTML',
-            'scss','sass' => 'Sass_(stylesheet_language)',
+            'scss' => 'Sass_(stylesheet_language)',
+            'sass' => 'Sass_(stylesheet_language)',
             'go' => 'Go_(programming_language)',
             'css' => 'CSS',
             'react' => 'React_(JavaScript_library)',
@@ -38,17 +34,40 @@ class LanguagesController extends Controller
             'laravel' => 'Laravel',
             'powershell' => 'PowerShell',
             'bash' => 'Bash_(Unix_shell)',
-            default => null
-        };
+        ];
 
-        if($FORMAT_LANGUAGE) {
-            return view('templates.language', ['title' => 'Language',
-                                                    'navbar' => 'null',
-                                                    'url' => 'https://en.wikipedia.org/wiki/' . $FORMAT_LANGUAGE,
-                                                    'LANGUAGE' => $this->WIKIPEDIA_API_QUERY($FORMAT_LANGUAGE)]);
+        if ($take) {
+            return $Languages;
+        } else {
+            return $Languages[$lang];
         }
 
-        return abort(404);
+    }
+
+    public function WIKIPEDIA_API_QUERY(string $lang):stdClass {
+
+        $url = "https://en.wikipedia.org/w/api.php?action=query&titles=$lang&prop=extracts&format=json&exintro=1";
+        $content = json_decode(file_get_contents($url));
+        return $content->query->pages;
+
+    }
+
+    public function WikipediaDefinition(string $lang): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
+    {
+
+        $formatLang = $this->MatchLanguages($lang, 0);
+
+        if($formatLang) {
+
+            return view('templates.language', ['title' => 'What is ' . $lang,
+                                                    'navbar' => 'null',
+                                                    'url' => 'https://en.wikipedia.org/wiki/' . $formatLang,
+                                                    'lang' => $this->WIKIPEDIA_API_QUERY($formatLang)]);
+
+        } else {
+
+            return abort(404);
+        }
 
     }
 
