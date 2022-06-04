@@ -10,7 +10,6 @@
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
-        "laravelcollective/html": "^6.3",
         "stichoza/google-translate-php": "^4.1"
     },
     "require-dev": {
