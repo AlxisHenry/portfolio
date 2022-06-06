@@ -11,7 +11,7 @@
     <meta name="copyright" content="© {{ date("Y") }} Alexis Henry. All Rights Reserved" />
     <meta property="og:type" content="portfolio"/>
     <meta property="og:title" content="{{ $title ?? 'Portfolio - Henry Alexis' }}"/>
-    <meta property="og:image" content="{{ url('assets/icons/favicon.ico') }}"/>
+    <meta property="og:image" content="{{ url('assets/icons/favicon-16x16.ico') }}"/>
     <meta property="og:url" content="{{ Request::url() }}"/>
     <meta property="og:site_name" content="alexishenry.eu">
     <meta property="og:description" content="{{ $og_description ?? 'Portfolio Projects/Board/Home - Henry Alexis' }}"/>
@@ -21,14 +21,15 @@
     <title>{{ $title ?? 'Portfolio - Henry Alexis' }}</title>
     <link rel="stylesheet" href="{{ url('css/app.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/icons/favicon.ico') }}" sizes="16x16">
-    <link rel="icon" href="{{ url('assets/icons/favicon-32x32.png') }}" sizes="32x32">
-    <link rel="icon" href="{{ url('assets/icons/favicon-48x48.png') }}" sizes="48x48">
-    <link rel="icon" href="{{ url('assets/icons/favicon-96x96.png') }}" sizes="96x96">
-    <link rel="icon" href="{{ url('assets/icons/favicon-144x144.png') }}" sizes="144x144">
-    <link rel="apple-touch-icon" href="{{ url('assets/icons/touch-favicon-244x244.png') }}">
-    <link rel="manifest" href="{{ url('assets/icons/manifest.json') }}">
-    <link rel="mask-icon" href="{{ url('assets/icons/favicon.ico') }}" color="#009af6">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('assets/icons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('assets/icons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('assets/icons/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url('assets/icons/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ url('assets/icons/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <link rel="shortcut icon" href="{{ url('assets/icons/favicon.ico') }}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{{ url('assets/icons/browserconfig.xml') }}">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 @if(Route::currentRouteName() === "home")
