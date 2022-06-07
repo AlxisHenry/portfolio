@@ -27,6 +27,20 @@ $iconsolata: 'Inconsolata', monospace;
   visibility: hidden!important;
 }
 
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.all {
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -6,7 +6,7 @@
 
         <div class="_this_project_">
 
-            <figure class="_project_image_">
+            <figure class="unselectable _project_image_">
                 {{ $Image }}
             </figure>
 
