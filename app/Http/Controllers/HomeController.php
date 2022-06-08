@@ -46,10 +46,10 @@ class HomeController extends Controller
         $spoiler_cards = News::spoilers();
         $board_cards = Board::HomeBoard();
 
-        return view('templates.homepage', ['title' => 'Henry Alexis',
+        return view('templates.homepage', ['title' => 'Portfolio - HENRY ALEXIS',
                                         'navbar' => 'home',
                                         'languages' => $this->Languages(),
-                                        'og_description' => 'Portfolio Henry Alexis - Homepage',
+                                        'og_description' => 'Portfolio - HENRY ALEXIS - Homepage',
                                         'spoiler_cards' => $spoiler_cards,
                                         'Boards' =>$board_cards,
                                         'Google' => $Google]);

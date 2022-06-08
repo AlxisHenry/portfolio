@@ -32,7 +32,8 @@ class NewsController extends Controller
         'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'þ'=>'b', 'ÿ'=>'y' );
     }
 
-    public function News() {
+    public function News(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    {
 
         $Google = $this->GoogleTranslate();
 
@@ -48,13 +49,13 @@ class NewsController extends Controller
     /**
      * @throws \ErrorException
      */
-    public function NewsArticle(string $url)
+    public function NewsArticle(string $url): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $Google = $this->GoogleTranslate();
         $ARTICLE = News::url($url);
 
 
-        return view('templates.article', ['title' => 'News - Henry Alexis',
+        return view('templates.article', ['title' => 'News - HENRY ALEXIS',
                                             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
                                             'navbar' => 'null',
                                             'ARTICLE' => $ARTICLE[0],
@@ -63,17 +64,20 @@ class NewsController extends Controller
 
     }
 
-    public function NewsKeyword(string $key) {
+    /**
+     * @throws \ErrorException
+     */
+    public function NewsKeyword(string $key): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    {
 
         $Google = $this->GoogleTranslate();
+        $news_key = News::keyword($key);
 
-        $CORRESPONDING_KEYWORD_ARTICLE = News::keyword($key);
-
-        return view('templates.keyword', ['title' => $KEYWORD . ' - Henry Alexis',
-                                            'KEYWORD' => $KEYWORD,
+        return view('templates.keyword', ['title' => ucfirst($Google->translate($key)) . ' - Henry Alexis',
+                                            'KEYWORD' => $key,
                                             'navbar' => 'null',
                                             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
-                                            'CORRESPONDING_KEYWORD_ARTICLE' => $CORRESPONDING_KEYWORD_ARTICLE,
+                                            'CORRESPONDING_KEYWORD_ARTICLE' => $news_key,
                                             'Google' => $Google]);
 
     }

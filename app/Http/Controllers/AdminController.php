@@ -19,7 +19,7 @@ class AdminController extends Controller
 
     public function Login(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
-        return view('templates.admin.login', ['title' => 'Login - Administration']);
+            return view('templates.admin.login', ['title' => 'Login - Administration']);
     }
 
     public function Dashboard(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application

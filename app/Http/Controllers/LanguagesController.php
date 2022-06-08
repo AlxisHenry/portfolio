@@ -59,7 +59,7 @@ class LanguagesController extends Controller
 
         if($formatLang) {
 
-            return view('templates.language', ['title' => 'What is ' . $lang,
+            return view('templates.language', ['title' => ucfirst($lang) . ' - HENRY ALEXIS',
                                                     'navbar' => 'null',
                                                     'url' => 'https://en.wikipedia.org/wiki/' . $formatLang,
                                                     'lang' => $this->WIKIPEDIA_API_QUERY($formatLang)]);

@@ -14,7 +14,9 @@ class ProjectsController extends Controller
     }
 
     public function Projects() {
-        return view('templates.projects', ['title' => 'Projects - Henry Alexis', 'navbar' => 'projects', 'og_description' => 'Portfolio Henry Alexis - Projects']);
+        return view('templates.projects', ['title' => 'Projects - HENRY ALEXIS',
+                                                'navbar' => 'projects',
+                                                'og_description' => 'Portfolio H - Projects']);
     }
 
 }
