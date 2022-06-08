@@ -38,7 +38,7 @@ Route::middleware(Administrator::class)->group(function() {
     Route::post('admin/board', [AdminController::class, 'Board'])->name('admin_board');
     Route::post('admin/board/{id}', [AdminController::class, 'BoardEditing'])->name('admin_board_edit');
     Route::post('admin/laravel', [AdminController::class, 'Laravel'])->name('laravel_welcome');
-    Route::post('admin/php', [AdminController::class, 'Environment'])->name('laravel_welcome');
+    Route::post('admin/php', [AdminController::class, 'Environment'])->name('phpinfo');
 });
 
 // Testing routes
