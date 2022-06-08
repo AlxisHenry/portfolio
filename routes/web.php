@@ -25,7 +25,7 @@ Route::get('news', [NewsController::class, 'News'])->name('news');
 Route::get('news/{url}', [NewsController::class, 'NewsArticle'])->name('news_article');
 Route::get('news/word/{key}', [NewsController::class, 'NewsKeyword'])->name('news_keyword');
 Route::get('language', [LanguagesController::class, 'ShowLanguageList'])->name('language');
-Route::get('language/{lang}', [LanguagesController::class, 'WikipediaDefinition'])->name('language');
+Route::get('language/{lang}', [LanguagesController::class, 'WikipediaDefinition'])->name('language_lang');
 Route::get('login', [AdminController::class, 'Login'])->name('login');
 Route::redirect('home', '/');
 
