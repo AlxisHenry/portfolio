@@ -20,6 +20,6 @@
 
 @section('footer')
 
-    <script src="{{ url('js/templates/news.js') }}"></script>
+    <script src="{{ url('js/news.js') }}"></script>
 
 @endsection

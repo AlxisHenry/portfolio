@@ -46,6 +46,6 @@
 
 @section('footer')
 
-    <script src="{{ url('js/templates/homepage.js') }}"></script>
+    <script src="{{ url('js/homepage.js') }}"></script>
 
 @stop

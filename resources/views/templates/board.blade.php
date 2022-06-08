@@ -8,6 +8,6 @@
 
 @section('footer')
 
-    <script src="{{ url('js/templates/board.js') }}"></script>
+    <script src="{{ url('js/board.js') }}"></script>
 
 @stop
