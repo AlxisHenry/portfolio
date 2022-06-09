@@ -79,10 +79,6 @@ const MouseEvent = () => {
 
 window.addEventListener('load', (e) => {
 
-    Loader.myScene();
-    Loader.addHolder();
-    Loader.animate();
-
     setTimeout(() => {
         Loader.RemoveLoader()
         writeName('Henry alexis', 0)
@@ -99,12 +95,6 @@ window.addEventListener('load', (e) => {
         InputAnimation(e)
         ProjectsCards.ProjectAnimation(e)
         BoardCards.BoardCardsAnimation()
-    }, 1800)
+    }, 550)
 
 })
-
-window.addEventListener('resize', () => {
-
-    Loader.onWindowResize()
-
-}, false)
