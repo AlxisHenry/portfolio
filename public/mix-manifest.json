@@ -1,11 +1,11 @@
 {
     "/js/app.js": "/js/app.js",
-    "/js/templates/homepage.js": "/js/templates/homepage.js",
-    "/js/templates/projects.js": "/js/templates/projects.js",
-    "/js/templates/board.js": "/js/templates/board.js",
-    "/js/templates/news.js": "/js/templates/news.js",
-    "/js/components/project-cards.js": "/js/components/project-cards.js",
-    "/js/components/loader.js": "/js/components/loader.js",
-    "/js/components/burger-menu.js": "/js/components/burger-menu.js",
+    "/js/homepage.js": "/js/homepage.js",
+    "/js/projects.js": "/js/projects.js",
+    "/js/board.js": "/js/board.js",
+    "/js/news.js": "/js/news.js",
+    "/js/project-cards.js": "/js/project-cards.js",
+    "/js/loader.js": "/js/loader.js",
+    "/js/burger-menu.js": "/js/burger-menu.js",
     "/css/app.css": "/css/app.css"
 }
