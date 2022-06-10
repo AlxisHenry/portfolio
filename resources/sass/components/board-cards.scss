@@ -1,6 +1,8 @@
 .__documentation__card__ {
   width: 400px;
+  max-width: 400px;
   height: 450px;
+  max-height: 450px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -10,12 +12,14 @@
 
   .__documentation__card__title__ {
     width: 100%;
+    min-height: 175px;
+    max-height: 175px;
     display: flex;
+    text-align: justify;
     align-items: center;
-    margin-top: 55px;
-    margin-bottom: 20px;
     .title {
-      margin-left: 20px;
+      margin-left: 16px;
+      margin-right: 16px;
       font-size: 30px;
       font-weight: bold;
       text-decoration: none;
@@ -29,40 +33,30 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 18px;
     font-size: 12px;
     font-family: $poppins;
     font-style: italic;
     time {
       font-weight: bold;
       font-size: 13px;
-      color: $Orange;
     }
     .author {
-      font-size: 13px;
+      margin-right: 16px;
+      font-size: 16px;
       font-weight: bold;
-      color: $Orange;
-    }
-    time:hover, .author:hover {
-      text-decoration: underline;
-      text-decoration-color: $Orange;
-      cursor: pointer;
     }
   }
 
   .__documentation__card__description__ {
-    height: 200px;
-    text-align: justify;
-    margin-left: 20px;
-    margin-right: 20px;
+    height: 140px;
     .description {
-      margin-top: 30px;
+      margin-left: 16px;
+      margin-right: 16px;
       font-family: $poppins;
-      font-size: 16px;
+      font-size: 18px;
       letter-spacing: 0;
       font-style: normal;
       text-decoration: none;
-      text-align: justify;
     }
 
   }
