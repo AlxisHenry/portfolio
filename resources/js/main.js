@@ -1,3 +1,9 @@
+const debug = (status) => {
+    if (!status) {
+        console.log = () => {}
+    }
+}
+
 const elementInViewport = (el) => {
     // Check if el is in viewport
     let top = el.offsetTop;
@@ -20,5 +26,6 @@ const elementInViewport = (el) => {
 }
 
 module.exports = {
+    debug: debug,
     inViewport: elementInViewport
 }
