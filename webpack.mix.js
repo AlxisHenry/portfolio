@@ -25,6 +25,7 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/components/project-cards.js', 'public/js')
     .js('resources/js/components/loader.js', 'public/js')
     .js('resources/js/components/burger-menu.js', 'public/js')
+    .js('resources/js/templates/login.js', 'public/js')
 
 mix.sass('resources/sass/app.scss', 'public/css');
 
