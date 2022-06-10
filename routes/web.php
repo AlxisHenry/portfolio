@@ -20,7 +20,6 @@ Route::get('about', [AboutController::class, 'About'])->name('about');
 Route::get('projects', [ProjectsController::class, 'Projects'])->name('projects');
 Route::get('projects/{name}', [ProjectsController::class, 'TargetProject'])->name('projects_target');
 Route::get('board', [BoardController::class, 'Board'])->name('board');
-Route::get('board/{name}', [BoardController::class, 'Board'])->name('board_object');
 Route::get('news', [NewsController::class, 'News'])->name('news');
 Route::get('news/{url}', [NewsController::class, 'NewsArticle'])->name('news_article');
 Route::get('news/word/{key}', [NewsController::class, 'NewsKeyword'])->name('news_keyword');
@@ -42,7 +41,3 @@ Route::middleware(Administrator::class)->group(function() {
     Route::get('admin/laravel', [AdminController::class, 'Laravel'])->name('laravel_welcome');
     Route::get('admin/php', [AdminController::class, 'Environment'])->name('phpinfo');
 });
-
-// Testing routes
-
-Route::view('/test/downloads', 'test');
