@@ -1,9 +1,9 @@
-<div class="mouse-container text-center text-bold text-smaller">
+<div class="mouse-container text-center text-bold text-bigger">
 
     Scroll down
 
-    <span class="mouse">
-        <span class="wheel"></span>
-    </span>
+    <div class="mouse">
+        <div class="wheel"></div>
+    </div>
 
 </div>
