@@ -1,4 +1,4 @@
-@extends('layouts.admin.app')
+@extends('layouts.app')
 
 @section('content')
 
@@ -10,4 +10,9 @@
 
 @endsection
 
+@section('footer')
+
+    <script src="{{ url('js/login.js') }}"></script>
+
+@endsection
 
