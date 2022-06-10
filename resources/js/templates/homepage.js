@@ -95,6 +95,6 @@ window.addEventListener('load', (e) => {
         InputAnimation(e)
         ProjectsCards.ProjectAnimation(e)
         BoardCards.BoardCardsAnimation()
-    }, 550)
+    }, 800)
 
 })
