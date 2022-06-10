@@ -6,7 +6,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+
+  .__footer__settings__ {
+    position: absolute;
+    left: 19.5px;
+    a i:hover {
+      color: $BrokenLightWhite
+    }
+  }
 
   .__footer__main__ {
     text-align: center;
