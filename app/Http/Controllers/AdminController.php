@@ -19,7 +19,7 @@ class AdminController extends Controller
 
     public function Login(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
-            return view('templates.admin.login', ['title' => 'Login - Administration']);
+            return view('templates.admin.login', ['title' => 'Login - Administration', 'navbar' => 'Login - Administration']);
     }
 
     public function Dashboard(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
@@ -29,7 +29,7 @@ class AdminController extends Controller
             $username = $_POST['username'];
             $password = $_POST['password'];
         } else {
-            return view('templates.admin.login', ['title' => 'Login - Administration', 'status' => false]);
+            return view('templates.admin.login', ['title' => 'Login - Administration', 'navbar' => '','status' => 'false']);
         }
 
         $users = [
@@ -41,9 +41,9 @@ class AdminController extends Controller
 
         if (Auth::attempt($users)) {
             Session::flash('permissions', $permissions[0]['permissions']);
-            return view('templates.admin.dashboard', ['title' => 'Dashboard - Administration', 'status' => true]);
+            return view('templates.admin.dashboard', ['title' => 'Dashboard - Administration', 'status' => 'true']);
         } else {
-            return view('templates.admin.login', ['title' => 'Login - Administration', 'status' => false]);
+            return view('templates.admin.login', ['title' => 'Login - Administration', 'navbar' => '', 'status' => 'false']);
         }
 
     }

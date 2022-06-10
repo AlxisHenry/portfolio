@@ -13,10 +13,16 @@ class ProjectsController extends Controller
 
     }
 
-    public function Projects() {
+    public function Projects(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    {
         return view('templates.projects', ['title' => 'Projects - HENRY ALEXIS',
                                                 'navbar' => 'projects',
-                                                'og_description' => 'Portfolio H - Projects']);
+                                                'og_description' => 'Portfolio HENRY ALEXIS - Projects']);
+    }
+
+    public function TargetProject(string $name): string
+    {
+        return $name;
     }
 
 }
