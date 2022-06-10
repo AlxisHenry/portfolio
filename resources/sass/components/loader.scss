@@ -1,9 +1,9 @@
 .loader-body > *:not(.loader) {
-  display: none;
+  visibility: hidden;
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   top: 0;
   right: 0;
@@ -32,7 +32,7 @@
 
     .circle {
       height:12.5px; width:12.5px; border-radius:50%;
-      background-color: $ShadowDark;
+      background-color: $Dark;
     }
 
     .r1 {
