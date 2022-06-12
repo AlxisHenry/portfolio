@@ -71,4 +71,11 @@ class LanguagesController extends Controller
 
     }
 
+    public function ShowLanguageList() {
+
+        return abort(404);
+
+    }
+
+
 }
