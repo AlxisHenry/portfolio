@@ -12,7 +12,7 @@
 
             @include('components.navbar', ['to' => 'projects','title' => 'projects'])
 
-            @include('components.navbar', ['to' => 'board','title' => 'board'])
+            @include('components.navbar', ['to' => 'board','title' => 'Resources'])
 
             @include('components.navbar', ['to' => 'news','title' => 'news'])
 
