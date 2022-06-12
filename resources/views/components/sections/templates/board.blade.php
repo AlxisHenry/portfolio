@@ -2,7 +2,7 @@
 
     @component('components.underline-title')
         @slot('Title')
-            Board
+            Resources
         @endslot
     @endcomponent
 

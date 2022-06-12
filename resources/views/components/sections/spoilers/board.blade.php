@@ -1,6 +1,6 @@
 @component('components.underline-title')
     @slot('Title')
-        Board
+        Resources
     @endslot
 @endcomponent
 
@@ -12,4 +12,4 @@
 
 </div>
 
-@include('components.more', ['to' => '/board'])
+@include('components.more', ['to' => '/resources'])

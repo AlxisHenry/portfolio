@@ -22,9 +22,9 @@ class BoardController extends Controller
 
     public function Board(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
-        return view('templates.board', ['title' => 'Board - HENRY ALEXIS',
+        return view('templates.board', ['title' => 'Resources - HENRY ALEXIS',
                     'navbar' => 'board',
-                    'og_description' => 'Portfolio - HENRY ALEXIS - Board',
+                    'og_description' => 'Portfolio - HENRY ALEXIS - Resources',
                     'Boards' => $this->AllBoards()]);
     }
 
