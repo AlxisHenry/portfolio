@@ -1,3 +1,18 @@
+/* START --- HOMEPAGE --- GLOBALS */
+
+.homepage-section {
+  margin-top: 210px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 82px;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+/* END --- HOMEPAGE --- GLOBALS */
 /* START --- PRESENTATION --- SECTION */
 
 .__homepage__presentation__ {
@@ -123,16 +138,9 @@
 
 .__spoiler__about__ {
   // Section
-  margin-top: 125px;
-  width: 100%;
   min-height: 700px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
 
-  // Content
   .__about__card__ {
     width: 100%;
     max-width: 1100px;
@@ -157,6 +165,32 @@
         font-family: $poppins;
         letter-spacing: 1px;
       }
+      ._about_contact {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          gap: 20px;
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            a {
+              text-decoration: none;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -166,16 +200,6 @@
 /* START --- PROJECTS --- SECTION */
 
 .__spoiler__projects__ {
-  // Section
-  margin-top: 150px;
-  display: flex;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  justify-content: center;
-  gap: 82px;
-  flex-direction: column;
-  // Content
   ._projects_cards_ {
     display: flex;
     flex-direction: row;
@@ -188,16 +212,6 @@
 /* START --- BOARD --- SECTION */
 
 .__spoiler__board__ {
-  // Section
-  margin-top: 210px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 82px;
-  margin-bottom: 80px;
-  // Content
   .__board__cards__ {
     max-width: 1000px;
     margin-left: 30px;
@@ -215,16 +229,6 @@
 /* START --- CARDS --- SECTION */
 
 .__spoiler__cards__ {
-  // Section
-  margin-top: 210px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 82px;
-  margin-bottom: 80px;
-  // Content
   .__cards__ {
     max-width: 1000px;
     margin-left: 30px;
@@ -239,6 +243,13 @@
 }
 
 /* END --- CARDS --- SECTION */
+
+/* START --- CONTACT --- SECTION */
+
+#__ContactForm {
+}
+
+/* END --- CONTACT --- SECTION*/
 
 /* START --- ANIMATIONS */
 

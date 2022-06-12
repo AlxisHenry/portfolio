@@ -77,6 +77,52 @@ const MouseEvent = () => {
     })
 }
 
+const ScrollToContact = () => {
+    let ScrollToContact = document.querySelector('.to-contact-form')
+    console.log(ScrollToContact)
+    ScrollToContact.addEventListener('click', () => {
+        console.log('scroll to form')
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    })
+}
+
+const CopyMailToClipboard = () => {
+    let mailContainer = document.querySelectorAll('.to-contact-form')[1].children[0]
+
+    // The Copy function check if we use HTTP or HTTPS
+    const Copy = (copyThis) => {
+        // The Clipboard API is only existing with HTTPS
+        if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(copyThis)
+        // The solution is to make a textarea with the data to copy to clipboard
+        let textArea = document.createElement("textarea");
+        textArea.value = copyThis;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-999999px";
+        textArea.style.top = "-999999px";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        return new Promise((res, rej) => {
+            document.execCommand('copy') ? res() : rej();
+            textArea.remove();
+        });
+    }
+
+    mailContainer.addEventListener('click', () => {
+
+        let mail = mailContainer.innerHTML
+
+        if(Copy(mail)) {
+            // todo: Pop-up => successful copy
+        }
+
+    })
+
+}
+
 window.addEventListener('load', (e) => {
 
     setTimeout(() => {
@@ -85,6 +131,8 @@ window.addEventListener('load', (e) => {
         writeJob('Web Developer', 0)
         HomepageReveal()
         MouseEvent()
+        ScrollToContact()
+        CopyMailToClipboard()
         anime({
             targets: document.querySelector('.years'),
             innerHTML: [2003, 2022],

@@ -10,13 +10,13 @@
 
     @include('components.mouse')
 
-    <section id="__spoilerAbout" class="__spoiler__about__">
+    <section id="__spoilerAbout" class="homepage-section __spoiler__about__">
 
         @include('components.sections.spoilers.about')
 
     </section>
 
-    <section id="__spoilerProjects" class="__spoiler__projects__">
+    <section id="__spoilerProjects" class="homepage-section __spoiler__projects__">
 
         <!--
         todo : Optimize responsive of projects cards
@@ -26,19 +26,24 @@
 
     </section>
 
-    <section id="__spoilerBoard" class="__spoiler__board__">
-
-        <!--
-        todo: Section will contain available documentations
-        -->
+    <section id="__spoilerBoard" class="homepage-section __spoiler__board__">
 
         @include('components.sections.spoilers.board')
 
     </section>
 
-    <section id="__spoilerCards" class="__spoiler__cards__">
+    <section id="__spoilerCards" class="homepage-section __spoiler__cards__">
 
         @include('components.sections.spoilers.news')
+
+    </section>
+
+    <section id="__ContactForm" class="homepage-section __contact__form__">
+
+        <!--
+        todo: Contact form
+        -->
+        @include('components.sections.contact')
 
     </section>
 

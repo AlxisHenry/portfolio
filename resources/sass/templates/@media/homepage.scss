@@ -69,7 +69,7 @@
 
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
 
   /* START --- PROJECTS --- SECTION RESPONSIVE */
 
@@ -80,6 +80,21 @@
   }
 
   /* END --- PROJECTS --- SECTION RESPONSIVE */
+  /* START --- ABOUT --- SECTION RESPONSIVE */
+
+  ._about_contact {
+    div {
+      flex-direction: column!important;
+      div {
+        flex-direction: row!important;
+        align-items: flex-start;
+        a {
+        }
+      }
+    }
+  }
+
+  /* END --- ABOUT --- SECTION RESPONSIVE */
 
 }
 
