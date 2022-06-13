@@ -5,6 +5,7 @@ import * as ProjectsCards from "../components/project-cards"
 import * as global from "../main"
 import * as BoardCards from "../components/board-cards"
 import * as Loader from "../components/loader"
+import { CopyToClipboard } from "../components/copied-to-clipboard"
 
 const writeJob = (job, index) => {
     // Write Job on homepage
@@ -89,40 +90,6 @@ const ScrollToContact = () => {
     })
 }
 
-const CopyMailToClipboard = () => {
-    let mailContainer = document.querySelectorAll('.to-contact-form')[1].children[0]
-
-    // The Copy function check if we use HTTP or HTTPS
-    const Copy = (copyThis) => {
-        // The Clipboard API is only existing with HTTPS
-        if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(copyThis)
-        // The solution is to make a textarea with the data to copy to clipboard
-        let textArea = document.createElement("textarea");
-        textArea.value = copyThis;
-        textArea.style.position = "fixed";
-        textArea.style.left = "-999999px";
-        textArea.style.top = "-999999px";
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        return new Promise((res, rej) => {
-            document.execCommand('copy') ? res() : rej();
-            textArea.remove();
-        });
-    }
-
-    mailContainer.addEventListener('click', () => {
-
-        let mail = mailContainer.innerHTML
-
-        if(Copy(mail)) {
-            // todo: Pop-up => successful copy
-        }
-
-    })
-
-}
-
 window.addEventListener('load', (e) => {
 
     setTimeout(() => {
@@ -132,7 +99,7 @@ window.addEventListener('load', (e) => {
         HomepageReveal()
         MouseEvent()
         ScrollToContact()
-        CopyMailToClipboard()
+        CopyToClipboard()
         anime({
             targets: document.querySelector('.years'),
             innerHTML: [2003, 2022],

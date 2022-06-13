@@ -28,32 +28,35 @@
                         <a href="https://www.linkedin.com/in/alexishenry03/" rel="noreferrer nofollow">
                             <img class="test" src="{{ url('assets/svg/contacts/linkedin.svg') }}" alt="Linkedin" title="Linkedin" width="24">
                         </a>
-                        <a href="https://www.linkedin.com/in/alexishenry03/" rel="noreferrer nofollow">
-                            <span>alexishenry03</span>
+                        <a>
+                            <span class="copy-this">alexishenry03</span>
                         </a>
                     </div>
                     <div>
+
                         <a class="to-contact-form">
                             <img class="test" src="{{ url('assets/svg/contacts/mail.svg') }}" alt="Mail" title="Mail" width="20">
                         </a>
-                        <a class="to-contact-form">
-                            <span>alexis.henry150357@gmail.com</span>
+
+                        <a>
+                            <span class="copy-this">alexis.henry150357@gmail.com</span>
                         </a>
+
                     </div>
                     <div>
                         <a href="https://github.com/AlxisHenry03" rel="noreferrer nofollow">
                             <img class="test" src="{{ url('assets/svg/contacts/github-blue.svg') }}" alt="Github" title="Github" width="24">
                         </a>
-                        <a href="https://github.com/AlxisHenry" rel="noreferrer nofollow">
-                            <span>@AlxisHenry</span>
+                        <a>
+                            <span class="copy-this">@AlxisHenry</span>
                         </a>
                     </div>
                     <div>
                         <a href="https://wakatime.com/@AlxisHenry" rel="noreferrer nofollow">
                             <img class="test" src="{{ url('assets/svg/contacts/wakatime.svg') }}" alt="Wakatime" title="Wakatime" width="20">
                         </a>
-                        <a href="https://wakatime.com/@AlxisHenry" rel="noreferrer nofollow">
-                            <span>@AlxisHenry</span>
+                        <a>
+                            <span class="copy-this">@AlxisHenry</span>
                         </a>
                     </div>
               </div>
