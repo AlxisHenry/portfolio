@@ -4,4 +4,5 @@
     @endslot
 @endcomponent
 
-Do you have project ideas ? I can help you to build them.
+You have projects ideas ?
+I can help you to make them.

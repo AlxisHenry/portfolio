@@ -23,7 +23,7 @@ class BoardController extends Controller
     public function Board(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         return view('templates.board', ['title' => 'Resources - HENRY ALEXIS',
-                    'navbar' => 'board',
+                    'navbar' => 'resources',
                     'og_description' => 'Portfolio - HENRY ALEXIS - Resources',
                     'Boards' => $this->AllBoards()]);
     }
