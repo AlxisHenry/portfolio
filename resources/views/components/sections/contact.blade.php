@@ -1,8 +1,14 @@
 @component('components.underline-title')
-    @slot('Title')
-        Contact
+    @slot('Title') Contact
     @endslot
 @endcomponent
 
-You have projects ideas ?
-I can help you to make them.
+@if(Session::has('success'))
+
+    @include('components.contact-form-success')
+
+@else
+
+    @include('components.contact-form')
+
+@endif
