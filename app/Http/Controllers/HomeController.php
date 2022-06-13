@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Stichoza\GoogleTranslate\GoogleTranslate;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -53,6 +54,31 @@ class HomeController extends Controller
                                         'spoiler_cards' => $spoiler_cards,
                                         'Boards' =>$board_cards,
                                         'Google' => $Google]);
+    }
+
+    public function ContactUsForm(Request $request) {
+
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'subject'=>'required',
+            'message' => 'required'
+        ]);
+
+        \Mail::send('mail', array(
+            'name' => $request->get('name'),
+            'email' => $request->get('email'),
+            'phone' => $request->get('phone'),
+            'subject' => $request->get('subject'),
+            'user_query' => $request->get('message'),
+        ), function($message) use ($request){
+            $message->from($request->email);
+            $message->to('digambersingh126@gmail.com', 'Admin')->subject($request->get('subject'));
+        });
+
+        return back()->with('success', 'We have received your message and would like to thank you for writing to us.');
+
     }
 
 }

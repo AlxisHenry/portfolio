@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 // Routes to globals views
 
 Route::get('/', [HomeController::class, 'Home'])->name('home');
+Route::post('/', [HomeController::class, 'Home'])->name('home.contact');
 Route::get('about', [AboutController::class, 'About'])->name('about');
 Route::get('projects', [ProjectsController::class, 'Projects'])->name('projects');
 Route::get('projects/{name}', [ProjectsController::class, 'TargetProject'])->name('projects_target');

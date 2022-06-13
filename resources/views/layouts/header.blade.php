@@ -35,7 +35,7 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 
-@if(Route::currentRouteName() === "home")
+@if(Route::currentRouteName() === "home" || Route::currentRouteName() === 'home.contact')
     <body class="loader-body">
     @include('layouts.loader')
 @else
