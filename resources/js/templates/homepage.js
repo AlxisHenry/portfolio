@@ -6,7 +6,9 @@ import * as global from "../main"
 import * as BoardCards from "../components/board-cards"
 import * as Loader from "../components/loader"
 import {CopyToClipboard} from "../components/copied-to-clipboard"
-import { CountContactAreaLength } from "../components/contact-form"
+import {CountContactAreaLength} from "../components/contact-form"
+import {ScrollToContact} from "../components/to-contact";
+import {ArrowEvent} from "../components/to-about";
 
 const writeJob = (job, index) => {
     // Write Job on homepage
@@ -68,29 +70,6 @@ const RevealYears = () => {
     }
 }
 
-const MouseEvent = () => {
-    const mouse = document.querySelector('.arrow-container')
-
-    mouse.addEventListener('click', () => {
-        window.scroll({
-            top: 890,
-            behavior: 'smooth'
-        });
-    })
-}
-
-const ScrollToContact = () => {
-    let ScrollToContact = document.querySelector('.to-contact-form')
-    console.log(ScrollToContact)
-    ScrollToContact.addEventListener('click', () => {
-        console.log('scroll to form')
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: 'smooth'
-        });
-    })
-}
-
 window.addEventListener('load', (e) => {
 
     setTimeout(() => {
@@ -98,8 +77,8 @@ window.addEventListener('load', (e) => {
         writeName('Henry alexis', 0)
         writeJob('Web Developer', 0)
         HomepageReveal()
-        MouseEvent()
-        ScrollToContact()
+        ArrowEvent(document.querySelector('#__spoilerAbout').offsetTop)
+        ScrollToContact(document.querySelector('#__ContactForm').offsetTop)
         CopyToClipboard()
         CountContactAreaLength()
         anime({

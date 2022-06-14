@@ -21,6 +21,13 @@ const toClipboard = (textToCopy) => {
 
 const CopyToClipboard = () => {
 
+    /*
+
+    todo => Left click => to form
+    todo => Right click => new menu with copy option (only mouse up of the items)
+
+    */
+
     const copyThis = Array.from(document.querySelectorAll('.copy-this'))
     console.log(copyThis)
 
@@ -30,8 +37,16 @@ const CopyToClipboard = () => {
 
     copyThis.forEach((copy) => {
 
-        copy.parentNode.addEventListener('click', (e) => {
+        copy.addEventListener('mouseenter', () => {
+            document.querySelector('.click-to-copy-indicator').classList.remove('invisible')
+        })
 
+        copy.addEventListener('mouseleave', () => {
+            document.querySelector('.click-to-copy-indicator').classList.add('invisible')
+        })
+
+        copy.addEventListener('contextmenu', (e) => {
+            e.preventDefault()
             let valueToCopy = e.target.innerHTML
             console.log(valueToCopy)
             if (!valueToCopy) return
@@ -43,8 +58,8 @@ const CopyToClipboard = () => {
                     setTimeout(() => {
                         indicator.classList.remove('copy-reverse-animation')
                         indicator.classList.add('hidden')
-                    }, 1000)
-                }, 2000)
+                    }, 600)
+                }, 1725)
             }
 
         })
