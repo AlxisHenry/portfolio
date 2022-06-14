@@ -6,59 +6,87 @@
   height: 80px;
   gap: 8px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
   text-align: center;
-
   &:hover {
     cursor: pointer;
   }
-
   span {
-    width: 16px;
-    height: 16px;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-animation: sdb07 2s infinite;
-    animation: sdb07 2s infinite;
-    opacity: 0;
-    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 700;
   }
-
+  .arrow {
+    background-color: yellow;
+    span {
+      position: absolute;
+      width: 20px;
+      margin-left: -10px;
+      height: 20px;
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      opacity: 1;
+      box-sizing: border-box;
+      &.secondary-arrow {
+        margin-top: 12px;
+      }
+    }
+  }
 }
 
-.mouse-container span:nth-of-type(1) {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
+.arrow-container .arrow .primary-arrow {
+  animation: bouncePrimary 2.5s ease-in infinite;
 }
 
-.mouse-container span:nth-of-type(2) {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s
+.arrow-container .arrow .secondary-arrow {
+  animation: bounceSecondary 2.5s ease-in infinite;
 }
 
 /* END --- Component --- Arrow */
 
-@-webkit-keyframes sdb07 {
+@keyframes bouncePrimary {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-45deg) translateX(5px) translateY(-5px);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes bounceSecondary {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-45deg) translateX(5px) translateY(-5px);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes primaryArrow {
   0% {
     opacity: 0;
   }
-  50% {
+  25% {
     opacity: 1;
   }
-  100% {
+  80% {
     opacity: 0;
   }
 }
 
-@keyframes sdb07 {
+@keyframes secondaryArrow {
   0% {
     opacity: 0;
   }
-  50% {
+  10% {
     opacity: 1;
   }
   100% {

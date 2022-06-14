@@ -7,7 +7,7 @@ const Navbar = document.querySelector('.burger-element')
 const ElementToMoveDuringExtends = Array.from(document.querySelectorAll('section')) // Extends all sections on the page
 const AddElementsToExtendsMethod = (elements) => {elements.forEach((element) => { ElementToMoveDuringExtends.push(element)})}
 const AdditionalsElements = [ // Add additionals elements to extends them
-    document.querySelector('.mouse-container')
+    document.querySelector('.arrow-container')
 ]
 AddElementsToExtendsMethod(AdditionalsElements)
 
