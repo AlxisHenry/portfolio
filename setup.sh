@@ -18,4 +18,5 @@ php artisan key:generate
 php artisan cache:clear
 php artisan optimize
 php artisan optimize:clear
+php artisan test
 npm run dev
