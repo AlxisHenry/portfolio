@@ -1,11 +1,12 @@
 import ScrollReveal from "scrollreveal";
 import anime from "animejs";
-import { InputAnimation } from "../components/about"
+import {InputAnimation} from "../components/about"
 import * as ProjectsCards from "../components/project-cards"
 import * as global from "../main"
 import * as BoardCards from "../components/board-cards"
 import * as Loader from "../components/loader"
-import { CopyToClipboard } from "../components/copied-to-clipboard"
+import {CopyToClipboard} from "../components/copied-to-clipboard"
+import { CountContactAreaLength } from "../components/contact-form"
 
 const writeJob = (job, index) => {
     // Write Job on homepage
@@ -100,6 +101,7 @@ window.addEventListener('load', (e) => {
         MouseEvent()
         ScrollToContact()
         CopyToClipboard()
+        CountContactAreaLength()
         anime({
             targets: document.querySelector('.years'),
             innerHTML: [2003, 2022],

@@ -45,10 +45,16 @@
         <div class="last form-section">
 
             <div class="content form-group">
-                <!-- todo Text length with limit (like Twitter) -->
                 <i class="fa-solid fa-asterisk"></i>
-                <textarea name="content" placeholder="Message" class="form-control {{ $errors->has('content') ? 'form-error' : '' }}" rows="4" required="required"></textarea>
-                @if ($errors->has('content'))
+                <textarea name="content" placeholder="Message" class="form-control {{ $errors->has('content') ? 'form-error' : '' }} area-text-form" rows="4" required="required"  maxlength="800"></textarea>
+                <div class="container-length-indicator">
+                    <div class="length-indicator">
+                        <div class="indicator">
+                            <span class="on">0</span>/<span class="limit">800</span>
+                        </div>
+                    </div>
+                </div>
+                @if ($errors->has('content'))<
                     <div class="error">
                         {{ $errors->first('content') }}
                     </div>
@@ -56,7 +62,7 @@
             </div>
 
             <div class="verification form-group">
-                <label for="verification[]"> How much do {{ 4 }} plus {{ 0 }} </label>
+                <label for="verification[]"> Resolve {{ 4 }} + {{ 0 }} </label>
                 <select name="verification[]" class="form-control" required="required">
                     @for($i = 0; $i < 15; $i++)
                         <option value="{{ $i }}">{{ $i }}</option>
@@ -69,7 +75,7 @@
             </div>
 
             <div class="informations form-group">
-                <p class="legal-form">Visit <a href="https://cnil.fr" target="_blank" rel="noreferrer nofollow">cnil.fr</a> for more information on your rights.</p>
+                <p class="legal-form">* Required fields. Visit <a href="https://cnil.fr" target="_blank" rel="noreferrer nofollow">cnil.fr</a> for more information on your rights.</p>
             </div>
 
         </div>
