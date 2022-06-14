@@ -8,7 +8,7 @@
 
     </section>
 
-    @include('components.mouse')
+    @include('components.arrow-container')
 
     <section id="__spoilerAbout" class="homepage-section __spoiler__about__">
 

@@ -69,11 +69,11 @@ const RevealYears = () => {
 }
 
 const MouseEvent = () => {
-    const mouse = document.querySelector('.mouse')
+    const mouse = document.querySelector('.arrow-container')
 
     mouse.addEventListener('click', () => {
         window.scroll({
-            top: 860,
+            top: 890,
             behavior: 'smooth'
         });
     })
