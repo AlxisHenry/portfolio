@@ -75,7 +75,11 @@
             </div>
 
             <div class="informations form-group">
-                <p class="legal-form">* Required fields. Visit <a href="https://cnil.fr" target="_blank" rel="noreferrer nofollow">cnil.fr</a> for more information on your rights.</p>
+                <p class="legal-form">
+                    * Required fields.
+                    Visit <a href="https://cnil.fr" target="_blank" rel="noreferrer nofollow">cnil.fr</a> for more information on your rights.
+                    The legal notice is available by clicking <a href="">here.
+                </p>
             </div>
 
         </div>
