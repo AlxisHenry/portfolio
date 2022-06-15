@@ -41,7 +41,7 @@
     <section id="__ContactForm" class="homepage-section __contact__form__">
 
         <!--
-        todo: Contact form
+        todo: Link contact form to laravel mails
         -->
         @include('components.sections.contact')
 
