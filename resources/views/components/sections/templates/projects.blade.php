@@ -6,6 +6,12 @@
         @endslot
     @endcomponent
 
+    <div class="section-explication">
+        You can get more information about a project by moving the mouse over it.
+        To see all the details of a project, click on the about button.
+        Most of my projects are available on my <a href="https://github.com/AlxisHenry">github</a> profile.
+    </div>
+
     <div class="__main__projects__cards__">
 
         <div class="__main__projects__cards__elements__">

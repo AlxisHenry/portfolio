@@ -6,6 +6,10 @@
         @endslot
     @endcomponent
 
+    <div class="section-explication">
+        On this page are available all the documentations I made during my BTS. Click on the download button to get them in pdf format.
+    </div>
+
     <div class="__main__board__cards__">
 
         @foreach($Boards as $Board)
