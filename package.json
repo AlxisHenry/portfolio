@@ -2,6 +2,8 @@
     "private": true,
     "scripts": {
         "serve": "php artisan serve --host=dev.local",
+        "tests": "php artisan test",
+        "tests-c": "php artisan test --coverage",
         "optimize": "php artisan optimize:clear",
         "dev": "npm run development",
         "development": "mix",
