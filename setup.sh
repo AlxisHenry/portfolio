@@ -20,3 +20,8 @@ php artisan optimize
 php artisan optimize:clear
 php artisan test
 npm run dev
+
+echo "--------------------------------"
+echo "Launch server with npm run serve"
+echo "Will start at http://dev.local !"
+echo "--------------------------------"
