@@ -74,11 +74,15 @@ class NewsController extends Controller
     /**
      * @throws \ErrorException
      */
-    public function NewsKeyword(string $key): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function NewsKeyword(string $key)
     {
 
         $Google = $this->GoogleTranslate();
         $news_key = News::keyword($key);
+
+        if(count($news_key) === 0) {
+            return back()->withInput(array('no-items' => 'No items match...'));
+        }
 
         return view('templates.keyword', ['title' => ucfirst($Google->translate($key)) . ' - Henry Alexis',
                                             'KEYWORD' => $key,
