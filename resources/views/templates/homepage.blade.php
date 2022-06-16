@@ -2,6 +2,15 @@
 
 @section('content')
 
+    @component('components.pop-up')
+        @slot('Icon')
+            <i class="fa-solid fa-check"></i>
+        @endslot
+        @slot('Alert')
+            Copied to the clipboard.
+        @endslot
+    @endcomponent
+
     <section id="__homePresentation" class="__homepage__presentation__">
 
         @include('components.sections.spoilers.presentation')

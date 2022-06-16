@@ -43,5 +43,4 @@
 @endif
 
 @include('components.scrollbar')
-@include('components.copied-to-clipboard')
 @include('components.cursor')

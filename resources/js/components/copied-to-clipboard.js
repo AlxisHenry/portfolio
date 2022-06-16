@@ -54,9 +54,9 @@ const CopyToClipboard = () => {
                 let indicator = document.querySelector('.pop-up-container')
                 indicator.classList.remove('hidden')
                 setTimeout(() => {
-                    indicator.classList.add('copy-reverse-animation')
+                    indicator.classList.add('reverse-animation')
                     setTimeout(() => {
-                        indicator.classList.remove('copy-reverse-animation')
+                        indicator.classList.remove('reverse-animation')
                         indicator.classList.add('hidden')
                     }, 600)
                 }, 1725)

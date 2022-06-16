@@ -2,11 +2,22 @@
 
 @section('content')
 
+<!-- todo : Responsive -->
+
 <section class="__news__ test layout-maxed">
 
     @component('components.underline-title')
         @slot('Title')
             News
+        @endslot
+    @endcomponent
+
+    @component('components.pop-up')
+        @slot('Icon')
+            <i class="fa-solid fa-xmark"></i>
+        @endslot
+        @slot('Alert')
+            Complete the fields.
         @endslot
     @endcomponent
 
@@ -17,10 +28,20 @@
     </div>
 
     <div class="__search__article__">
-        <label>
-            <input type="text" class="__search__input__" placeholder="Search">
-        </label>
-        <div class="__submit__search__"><i class="fa-solid fa-magnifying-glass"></i></div>
+
+        <div class="__contain__search__">
+            <label>
+                <input type="text" class="__search__input__" placeholder="Search">
+            </label>
+            <div class="__submit__search__"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+
+        <div class="no-cards-error {{ old('no-items') ? "" : "invisible" }}">
+           <span>
+               {{ old('no-items') }}
+           </span>
+        </div>
+
     </div>
 
     <div class="__news__container__" data-categories="{{ "technology" }}">
