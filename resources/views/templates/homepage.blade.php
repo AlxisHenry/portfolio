@@ -27,16 +27,15 @@
 
     <section id="__spoilerProjects" class="homepage-section __spoiler__projects__">
 
-        <!--
-        todo : Optimize responsive of projects cards
-        -->
-
         @include('components.sections.spoilers.projects')
 
     </section>
 
     <section id="__spoilerBoard" class="homepage-section __spoiler__board__">
 
+        <!--
+        todo => Responsive of this cards
+        -->
         @include('components.sections.spoilers.board')
 
     </section>
@@ -50,7 +49,7 @@
     <section id="__ContactForm" class="homepage-section __contact__form__">
 
         <!--
-        todo: Link contact form to laravel mails
+        todo => Link contact form to laravel mails
         -->
         @include('components.sections.contact')
 

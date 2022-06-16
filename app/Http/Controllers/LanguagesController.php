@@ -21,6 +21,7 @@ class LanguagesController extends Controller
             'sass' => 'Sass_(stylesheet_language)',
             'go' => 'Go_(programming_language)',
             'css' => 'CSS',
+            'reactjs' => 'React_(JavaScript_library)',
             'react' => 'React_(JavaScript_library)',
             'typescript' => 'TypeScript',
             'swift' => 'Swift_(programming_language)',
@@ -28,20 +29,27 @@ class LanguagesController extends Controller
             'docker' => 'Docker_(software)',
             'vagrant' => 'Vagrant_(software)',
             'javascript' => 'JavaScript',
+            'js' => 'JavaScript',
+            'ts' => 'TypeScript',
             'php' => 'PHP',
             'nodejs' => 'Node.js',
+            'node' => 'Node.js',
             'python' => 'Python_(programming_language)',
+            'py' => 'Python_(programming_language)',
             'laravel' => 'Laravel',
             'powershell' => 'PowerShell',
             'bash' => 'Bash_(Unix_shell)',
+            'sh' => 'Bash_(Unix_shell)',
         ];
 
         if ($take) {
             return $Languages;
         } else {
-            return $Languages[$lang];
+            if(array_key_exists($lang, $Languages)) {
+                return $Languages[$lang];
+            }
+            return '';
         }
-
     }
 
     public function WIKIPEDIA_API_QUERY(string $lang):stdClass {
