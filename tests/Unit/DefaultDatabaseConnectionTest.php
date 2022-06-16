@@ -14,7 +14,7 @@ class DefaultDatabaseConnectionTest extends TestCase
      */
     public function test_environment_database_connection_is_working()
     {
-        $user = User::where('user_id', 1)->first ();
+        $user = User::where('user_id', 1)->first();
         $this->assertSame('admin', $user->username);
     }
 }
