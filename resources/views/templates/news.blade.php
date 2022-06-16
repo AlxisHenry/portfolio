@@ -23,13 +23,33 @@
         <div class="__submit__search__"><i class="fa-solid fa-magnifying-glass"></i></div>
     </div>
 
-    <div class="__news__cards__">
+    <div class="__news__container__" data-categories="{{ "technology" }}">
 
-        @foreach($news as $card)
+        @for($i = 0; $i < count(array_keys($categories)); $i++)
 
-            @include('components.news')
+            <div class="__news__category__" data-category="{{ array_keys($categories)[$i] }}">
 
-        @endforeach
+                <div class="__news__category__title" data-category-title="{{ array_keys($categories)[$i] }}">
+
+                    <h2>
+                        {{ mb_strtoupper($Google->translate(array_keys($categories)[$i])) }}
+                    </h2>
+
+                </div>
+
+                <div class="__news__category__cards__" data-category-cards="{{ array_keys($categories)[$i] }}" data-nb-cards="{{ count($categories[array_keys($categories)[$i]]) }}">
+
+                    @foreach($categories[array_keys($categories)[$i]] as $card)
+
+                        @include('components.news')
+
+                    @endforeach
+
+                </div>
+
+            </div>
+
+        @endfor
 
     </div>
 
