@@ -37,12 +37,19 @@ class NewsController extends Controller
 
         $Google = $this->GoogleTranslate();
 
-        $news = News::technology();
+        $categories = [
+            "pegasus" => News::pegasus(),
+            "technologie" => News::technology(),
+            "économie" => News::economy(),
+            "internet" => News::internet(),
+            "cybersécurité" => News::cyber(),
+            "société" => News::society()
+        ];
 
         return view('templates.news', ['title' => 'News - Henry Alexis',
                                          'navbar' => 'news',
                                          'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
-                                         'news' => $news,
+                                         'categories' => $categories,
                                          'Google' => $Google]);
     }
 
