@@ -46,11 +46,13 @@ class NewsController extends Controller
             "société" => News::society()
         ];
 
-        return view('templates.news', ['title' => 'News - Henry Alexis',
-                                         'navbar' => 'news',
-                                         'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
-                                         'categories' => $categories,
-                                         'Google' => $Google]);
+        return view('templates.news',
+            ['title' => 'News - Henry Alexis',
+             'navbar' => 'news',
+             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
+             'categories' => $categories,
+             'Google' => $Google
+            ]);
     }
 
     /**
@@ -62,12 +64,14 @@ class NewsController extends Controller
         $ARTICLE = News::url($url);
 
 
-        return view('templates.article', ['title' => 'News - HENRY ALEXIS',
-                                            'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
-                                            'navbar' => 'null',
-                                            'ARTICLE' => $ARTICLE[0],
-                                            'unwanted_array' => $this->UnwantedCharacters(),
-                                            'Google' => $Google]);
+        return view('templates.article',
+            ['title' => 'News - HENRY ALEXIS',
+             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
+             'navbar' => 'null',
+             'ARTICLE' => $ARTICLE[0],
+             'unwanted_array' => $this->UnwantedCharacters(),
+             'Google' => $Google
+            ]);
 
     }
 
@@ -78,19 +82,23 @@ class NewsController extends Controller
     {
 
         $Google = $this->GoogleTranslate();
-        $news_key = News::keyword($key);
+        $related_news = News::keyword($key);
 
-        if(count($news_key) === 0) {
-            return back()->withInput(array('no-items' => 'No items match...'));
+        if(count($related_news) === 0) {
+            $no_items = true;
+        } else {
+            $no_items = false;
         }
 
-        return view('templates.keyword', ['title' => ucfirst($Google->translate($key)) . ' - Henry Alexis',
-                                            'KEYWORD' => $key,
-                                            'navbar' => 'null',
-                                            'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
-                                            'CORRESPONDING_KEYWORD_ARTICLE' => $news_key,
-                                            'Google' => $Google]);
-
+        return view('templates.keyword',
+            ['title' => ucfirst($Google->translate($key)) . ' - Henry Alexis',
+             'word' => $key,
+             'items' => $no_items,
+             'navbar' => 'null',
+             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
+             'related_news' => $related_news,
+             'Google' => $Google
+            ]);
     }
 
 }

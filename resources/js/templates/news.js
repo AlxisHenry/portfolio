@@ -18,7 +18,7 @@ const RedirectToKeyword = () => {
 
     submitValue.addEventListener('keyup', (e) => {
         if (e.keyCode === 13) {
-            if (e.target.value.length > 3) {
+            if (e.target.value.length > 2) {
                 submitSearch.click()
             } else {
                 ShowPopup(document.querySelector('.pop-up-container'))
@@ -30,7 +30,7 @@ const RedirectToKeyword = () => {
 
     submitSearch.addEventListener('click', (e) => {
         let value = submitValue.value
-        if (value.length > 3) {
+        if (value.length > 2) {
             document.location.href = `/news/word/${value.toLowerCase()}`
         } else {
             ShowPopup(document.querySelector('.pop-up-container'))

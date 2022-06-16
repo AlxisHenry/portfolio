@@ -76,7 +76,7 @@ class News extends Model
 
     public function scopeKeyword($query, $KEYWORD) {
 
-        return $query->where('Theme', 'like', '%' . $KEYWORD . '%')->get();
+        return $query->where('ThemePrincipal', '=', ' Technologique ')->where('title', 'like', '%'.$KEYWORD.'%')->orWhere('Theme', 'like', '%' . $KEYWORD . '%')->where('ThemePrincipal', '=', ' Technologique ')->get();
 
     }
 

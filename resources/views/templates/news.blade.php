@@ -12,15 +12,6 @@
         @endslot
     @endcomponent
 
-    @component('components.pop-up')
-        @slot('Icon')
-            <i class="fa-solid fa-xmark"></i>
-        @endslot
-        @slot('Alert')
-            Complete the fields.
-        @endslot
-    @endcomponent
-
     <div class="section-explication">
         On this page are available a number of articles retrieved from France Inter.
         I retrieved them using <a href="https://selenium-python.readthedocs.io/">selenium</a>, a <a href="https://www.python.org/">python</a> tool.
