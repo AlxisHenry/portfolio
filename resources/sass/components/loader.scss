@@ -1,17 +1,22 @@
+.loader-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .loader-body > *:not(.loader) {
   visibility: hidden;
 }
 
 .loader {
-  position: fixed;
-  bottom: 0;
-  top: 0;
-  right: 0;
-  left: 0;
+  background-color: $BrokenWhite;
   width: 100%;
   height: 100%;
+  top: 0;
+  position: fixed;
   z-index: 999;
-  background-color: $BrokenWhite;
   display: flex;
   align-items: center;
   justify-content: center;
