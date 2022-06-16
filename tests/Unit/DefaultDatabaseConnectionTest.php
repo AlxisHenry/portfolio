@@ -12,9 +12,9 @@ class DefaultDatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-    public function test_environment_database_connection_is_working()
+    public function test_check_if_user_data_exist()
     {
-        $user = User::where('user_id', 1)->first();
+        $user = User::where('user_id', 1)->first ();
         $this->assertSame('admin', $user->username);
     }
 }
