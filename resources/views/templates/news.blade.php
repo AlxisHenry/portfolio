@@ -2,9 +2,7 @@
 
 @section('content')
 
-<!-- todo : Responsive -->
-
-<section class="__news__ test layout-maxed">
+<section class="__news__ layout-maxed">
 
     @component('components.underline-title')
         @slot('Title')
@@ -27,24 +25,23 @@
             <div class="__submit__search__"><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
 
-        <div class="no-cards-error {{ old('no-items') ? "" : "invisible" }}">
-           <span>
-               {{ old('no-items') }}
-           </span>
+        <div class="show_all {{ $show_all_status ? '' : 'disabled' }}">
+                <a href="{{ $show_all_status ? '/news' : '' }}">show all</a>
         </div>
 
     </div>
 
     <div class="__news__container__" data-categories="{{ "technology" }}">
 
-        @for($i = 0; $i < count(array_keys($categories)); $i++)
+        @if(!$show_all_status)
+            @for($i = 0; $i < count(array_keys($categories)); $i++)
 
             <div class="__news__category__" data-category="{{ array_keys($categories)[$i] }}">
 
                 <div class="__news__category__title" data-category-title="{{ array_keys($categories)[$i] }}">
 
                     <h2>
-                        {{ mb_strtoupper($Google->translate(array_keys($categories)[$i])) }}
+                        {{ mb_strtoupper(array_keys($categories)[$i]) }}
                     </h2>
 
                 </div>
@@ -62,6 +59,35 @@
             </div>
 
         @endfor
+        @else
+            <div class="__news__category__ __news__category__keyword__" data-category="{{ $word }}">
+
+                <div class="__news__category__title" data-category-title="{{ $word }}">
+
+                    <h2> {{ mb_strtoupper($word) }} </h2>
+
+                </div>
+
+                <div class="__news__category__cards__" data-category-cards="{{ $word }}" data-nb-cards="{{ mb_strlen($word) }}">
+
+                    @foreach($related_news as $card)
+
+                        @include('components.news')
+
+                    @endforeach
+
+                    @if($items)
+                        <div class="no-cards-error">
+                            <div>
+                                No items match your search...
+                            </div>
+                        </div>
+                    @endif
+
+                </div>
+
+            </div>
+        @endif
 
     </div>
 

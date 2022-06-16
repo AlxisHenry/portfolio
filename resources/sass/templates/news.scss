@@ -53,25 +53,30 @@
       }
     }
 
-      .no-cards-error {
-        margin-top: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.725rem;
-        background-color: $Clay;
-        box-shadow: 2px 10px 10px $ShadowDark;
-        border-radius: 20px;
+      .show_all {
+        margin-top: 0.725rem;
 
-        span {
-          color: white;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          font-weight: 500;
+        a {
+          font-weight: normal;
+          font-size: 14px;
+          color: $Dark;
+          &:hover {
+            cursor: pointer;
+          }
         }
+
+        &.disabled {
+          a {
+            font-weight: lighter;
+            color: $LightGray;
+            &:hover {
+              color: $LightGray;
+            }
+          }
+        }
+
       }
+
   }
 
   .__news__container__  {

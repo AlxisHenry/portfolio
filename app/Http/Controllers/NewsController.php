@@ -48,6 +48,7 @@ class NewsController extends Controller
 
         return view('templates.news',
             ['title' => 'News - Henry Alexis',
+             'show_all_status' => false,
              'navbar' => 'news',
              'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
              'categories' => $categories,
@@ -90,8 +91,9 @@ class NewsController extends Controller
             $no_items = false;
         }
 
-        return view('templates.keyword',
+        return view('templates.news',
             ['title' => ucfirst($Google->translate($key)) . ' - Henry Alexis',
+             'show_all_status' => true,
              'word' => $key,
              'items' => $no_items,
              'navbar' => 'null',
