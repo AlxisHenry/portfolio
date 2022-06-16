@@ -21,13 +21,6 @@ const toClipboard = (textToCopy) => {
 
 const CopyToClipboard = () => {
 
-    /*
-
-    todo => Left click => to form
-    todo => Right click => new menu with copy option (only mouse up of the items)
-
-    */
-
     const copyThis = Array.from(document.querySelectorAll('.copy-this'))
     console.log(copyThis)
 
