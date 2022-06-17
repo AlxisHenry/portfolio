@@ -16,12 +16,12 @@
     .navbar-button {
       width: 250px;
       height: 100%;
-      a {
+      form {
         width: 100%;
         text-align: center;
         height: 100%;
         text-decoration: none;
-        span {
+        input {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -30,6 +30,9 @@
           font-weight: 600;
           font-size: 20px;
           color: $Dark;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
       &.active-navbar-button {
@@ -39,6 +42,7 @@
       &:hover {
         transition: background-color 300ms ease-in;
         background-color: $LightBlue;
+        cursor: pointer;
       }
 
     }
@@ -63,9 +67,20 @@
     justify-content: flex-start;
     align-items: center;
 
-    span {
-      letter-spacing: 1px;
+    form {
+      width: auto;
       color: $Dark;
+
+      &:hover{
+        cursor: pointer;
+      }
+
+      input {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
     }
 
   }
@@ -81,15 +96,112 @@
     .optional-button {
       display: flex;
       align-self: center;
+      margin-right: 20px;
       justify-content: center;
-      a {
+      form {
         text-decoration: none;
-        span {
+        &:hover {
+          cursor: pointer;
+        }
+        input {
           font-weight: lighter;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }
 
   }
 
+}
+
+.contain-all-projects-list, .contain-all-resources-list, .contain-all-news-list {
+  margin-top: 40px;
+
+  .add-new-resources, .add-new-projects, .add-new-news {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    form {
+      width: 24px;
+      height: 24px;
+      margin-right: 20px;
+      button {
+        width: 24px;
+        height: 24px;
+        i {
+          font-size: 24px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.admin-resources, .admin-projects, .admin-news {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  gap: 20px;
+  width: 100%;
+  border-bottom: solid 1px black;
+
+  div {
+    padding: 12px;
+
+    &.id {
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    &.title {
+      width: 50%;
+    }
+
+  }
+
+  .contain_actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    form {
+      width: 20px;
+      height: 20px;
+      color: $LinkColor;
+      &:hover {
+        color: $Dark;
+        cursor: pointer;
+      }
+      button {
+        width: 20px;
+        height: 20px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .admin-resources, .admin-projects, .admin-news {
+    flex-direction: column;
+    div {
+      padding: 4px;
+    }
+
+  }
 }
