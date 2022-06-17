@@ -32,12 +32,9 @@ Route::redirect('home', '/');
 // Routes to auth views
 
 Route::middleware(Administrator::class)->group(function() {
-    Route::post('admin/projects', [AdminController::class, 'Dashboard'])->name('admin.dashboard');
-    Route::post('admin/projects/{id}', [AdminController::class, 'ProjectsEditing'])->name('admin.projects.editing');
-    Route::get('admin/news', [AdminController::class, 'News'])->name('admin.news');
-    Route::post('admin/news/{id}', [AdminController::class, 'NewsEditing'])->name('admin.news.editing');
-    Route::get('admin/resources', [AdminController::class, 'Board'])->name('admin.board');
-    Route::post('admin/resources/{id}', [AdminController::class, 'BoardEditing'])->name('admin.board.editing');
-    Route::get('admin/laravel', [AdminController::class, 'Laravel'])->name('laravel.welcome');
-    Route::get('admin/php', [AdminController::class, 'Environment'])->name('phpinfo');
+    Route::post('admin/server/laravel', [AdminController::class, 'Laravel'])->name('laravel.welcome');
+    Route::post('admin/server/php', [AdminController::class, 'Environment'])->name('phpinfo');
+    Route::post('admin/{view}', [AdminController::class, 'View'])->name('admin.view');
+    Route::post('admin/{view}/new', [AdminController::class, 'New'])->name('admin.view.new');
+    Route::post('admin/{view}/{id}/{action}', [AdminController::class, 'Action'])->name('admin.view.action');
 });
