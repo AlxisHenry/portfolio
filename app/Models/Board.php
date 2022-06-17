@@ -12,11 +12,11 @@ class Board extends Model
 
     protected $fillable = ['title', 'description', 'author','documentationLink','published_at','edit_at'];
     protected $table = "board";
-    protected $primaryKey = 'board_id';
+    protected $primaryKey = 'identifier';
 
     public function scopeHomeBoard($query) {
 
-        return $query->whereBetween('board_id', [1,2])->get();
+        return $query->whereBetween('identifier', [1,2])->get();
 
     }
 

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('board', function (Blueprint $table) {
-            $table->id('board_id')->index();
+            $table->id('identifier')->index();
             $table->string('title')->default('null');
             $table->longText('description')->default('null');
             $table->string('author')->default('null');
