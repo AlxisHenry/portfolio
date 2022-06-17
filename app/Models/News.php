@@ -68,11 +68,18 @@ class News extends Model
 
     }
 
+    public function scopeAllTechnology($query) {
+
+        return $query->where('ThemePrincipal', '=', ' Technologique ')->get();
+
+    }
+
     public function scopeUrl($query, $ARTICLE_URL_NAME) {
 
         return $query->where('UrlArticle', 'like', "%$ARTICLE_URL_NAME%")->get();
 
     }
+
 
     public function scopeKeyword($query, $KEYWORD) {
 
