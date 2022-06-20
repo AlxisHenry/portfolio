@@ -22,14 +22,11 @@
 
 </section>
 
-<div class="mapouter">
-    <div class="gmap_canvas">
-        <iframe width="1000" height="1450" id="gmap_canvas" src="https://maps.google.com/maps?q=%20All%C3%A9e%20des%20Marquises%20Strasbourg&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-        </iframe>
-        <style>.mapouter{position:relative;text-align:right;height:1450px;width:1000px;}</style>
-        <style>.gmap_canvas {overflow:hidden;background:none!important;height:450px;width:600px;}</style>
-    </div>
-</div>
+<section>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d784.4613127826574!2d7.764601838343562!3d48.598303247727976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c88acb16fd21%3A0x54d59286dbf255d6!2s10%20All.%20des%20Marquises%2C%2067000%20Strasbourg!5e0!3m2!1sfr!2sfr!4v1655580714812!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
 
 @stop
 
