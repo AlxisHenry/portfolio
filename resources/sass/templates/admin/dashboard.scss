@@ -29,7 +29,7 @@
           height: 100%;
           font-weight: 600;
           font-size: 20px;
-          color: $Dark;
+          color: $BrokenWhite;
           &:hover {
             cursor: pointer;
           }
@@ -176,17 +176,21 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    a .fa-download {
+      color: #49bf4D;
+    }
     form {
       width: 20px;
       height: 20px;
-      color: $LinkColor;
       &:hover {
-        color: $Dark;
         cursor: pointer;
       }
       button {
         width: 20px;
         height: 20px;
+        .fa-trash {
+          color: #D63939;
+        }
         &:hover {
           cursor: pointer;
         }

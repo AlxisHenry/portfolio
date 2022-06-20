@@ -4,7 +4,7 @@
 
     <section id="__LoginSection" class="layout-hero">
 
-        @include('components.admin.login')
+        @include('components.sections.login')
 
     </section>
 

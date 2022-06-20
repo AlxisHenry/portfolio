@@ -1,212 +1,82 @@
-<head>
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="{{ url('css/app.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
-</head>
+@extends('templates.admin.layouts.app')
 
-<body>
+@section('content')
 
-<nav id="admin-navbar">
+    <section>
 
-    <div class="navbar-redirections">
+        <div class="contain-all-{{$view}}-list">
 
-        <div class="navbar-button {{ $view === "projects" ? "active-navbar-button" : "" }}">
-            <form method="POST" action="/admin/projects">
-                @csrf
-                <input type="submit" VALUE="Projects">
-            </form>
-        </div>
+            @include('components.admin.redirection.new')
 
-        <div class="navbar-button {{ $view === "resources" ? "active-navbar-button" : "" }}">
-            <form method="POST" action="/admin/resources">
-                @csrf
-                <input type="submit" VALUE="Resources">
-            </form>
-        </div>
+            @foreach($targets as $data)
 
-        <div class="navbar-button {{ $view === "news" ? "active-navbar-button" : "" }}">
-            <form method="POST" action="/admin/news">
-                @csrf
-                <input type="submit" VALUE="News">
-            </form>
-        </div>
-
-    </div>
-
-</nav>
-
-<div class="navbar-indicator">
-
-    <div class="navbar-url" data-navbar-url="{{""}}">
-
-        <form method="POST" action="/admin/{{$view}}">
-            @csrf
-            <input type="submit" VALUE="{{ ucfirst($view) }}">
-        </form>
-        &nbsp;\&nbsp;
-        @if(1 === 2)
-            <form method="POST" action="/admin/{{$view}}/{{$target}}">
-                @csrf
-                <input type="submit" VALUE="{{ "timken" }}">
-            </form>
-        @endif
-
-    </div>
-
-    <div class="optionals-redirection">
-
-        <div class="optional-button">
-            <form method="POST" action="/admin/server/laravel">
-                @csrf
-                <input type="submit" VALUE="Laravel">
-            </form>
-        </div>
-
-        <div class="optional-button">
-            <form method="POST" action="/admin/server/php">
-                @csrf
-                <input type="submit" VALUE="PHP">
-            </form>
-        </div>
-
-        <div class="optional-button">
-            <form method="POST" action="/">
-                @csrf
-                <input type="submit" VALUE="Home">
-            </form>
-        </div>
-
-    </div>
-
-</div>
-
-<section>
-
-    <div class="contain-all-{{$view}}-list">
-
-        <div class="add-new-{{$view}}">
-            <form method="POST" action="/admin/{{$view}}/new">
-                @csrf
-                <button type="submit"
-                        data-action="new"
-                        data-category="{{$view}}"
-                >
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-            </form>
-        </div>
-
-        @foreach($targets as $target)
-
-            <div class="admin-{{$view}}"
-                 data-view="{{$view}}"
-                 data-title="{{$target->title}}"
-                 data-id="{{$target->identifier}}"
-                 data-targets="{{count($targets)}}"
-            >
-
-                <div class="{{$view}}-{{$target->identifier}}-id id">
-                    <span data-id="{{$target->identifier}}">
-                        {{$target->identifier}}
-                    </span>
-                </div>
-
-                @if($view === 'resources' || $view === 'projects')
-                    <div class="{{$view}}-{{$target->identifier}}-title title"
-                         title="Description: {{$target->description}}"
-                    >
-                        <span data-title="{{$target->title}}"
-                              data-description="{{$target->description}}"
-                        >
-                            {{$target->title}}
+                <div class="admin-{{$view}}"
+                     data-view="{{$view}}"
+                     data-title="{{$data->title}}"
+                     data-id="{{$data->identifier}}"
+                     data-targets="{{count($targets)}}">
+                    <div class="{{$view}}-{{$data->identifier}}-id id">
+                        <span data-id="{{$data->identifier}}">
+                            {{$data->identifier}}
                         </span>
                     </div>
-                @elseif($view === 'news')
-                    <div class="{{$view}}-{{$target->identifier}}-title title"
-                         title="Description: {{$target->introduction}}"
-                    >
-                        <span data-title="{{$target->title}}"
-                              data-description="{{$target->introduction}}"
-                        >
-                            {{ substr($target->title, 0, 80) }}...
+
+                    @if($view === 'resources' || $view === 'projects')
+                        <div class="{{$view}}-{{$data->identifier}}-title title"
+                             title="Description: {{$data->description}}">
+                            <span data-title="{{$data->title}}"
+                                  data-description="{{$data->description}}">
+                                {{$data->title}}
+                            </span>
+                        </div>
+                    @elseif($view === 'news')
+                        <div class="{{$view}}-{{$data->identifier}}-title title"
+                             title="Description: {{$data->introduction}}">
+                            <span data-title="{{$data->title}}"
+                                  data-description="{{$data->introduction}}">
+                                {{ substr($data->title, 0, 80) }}...
+                            </span>
+                        </div>
+                    @endif
+
+                    <div class="{{$view}}-{{$data->identifier}}-author">
+                        <span data-author="{{$data->author}}">
+                            {{ substr($data->author, 0, 20) }}...
                         </span>
                     </div>
-                @endif
 
-                <div class="{{$view}}-{{$target->identifier}}-author">
-                    <span data-author="{{$target->author}}">
-                        {{ substr($target->author, 0, 20) }}...
-                    </span>
-                </div>
+                    <div class="{{$view}}-{{$data->identifier}}-published_at">
 
-                <div class="{{$view}}-{{$target->identifier}}-published_at">
-                    @if($view === 'resources' || $view === 'projects')
-                        <time data-published-at="{{$target->published_at}}">
-                            {{$target->published_at}}
-                        </time>
-                    @elseif($view === 'news')
-                        <time data-published-at="{{$target->UploadDate}}">
-                            {{ explode('T', $target->UploadDate)[0] }}
-                            à
-                            {{ substr(explode('T', $target->UploadDate)[1], 0, 5) }}
-                        </time>
-                    @endif
-                </div>
+                        @if($view === 'resources' || $view === 'projects')
+                            <time data-published-at="{{$data->published_at}}">
+                                {{$data->published_at}}
+                            </time>
+                        @elseif($view === 'news')
+                            <time data-published-at="{{$data->UploadDate}}">
+                                {{ explode('T', $data->UploadDate)[0] }}
+                                à
+                                {{ substr(explode('T', $data->UploadDate)[1], 0, 5) }}
+                            </time>
+                        @endif
 
-                <div class="contain_actions">
+                    </div>
 
-                    @if($view === 'resources' || $view === 'projects')
-                        <a style="text-decoration: none"
-                           href="{{$target->LinkImage}}"
-                           title="{{$target->LinkImage}}"
-                           data-download-url="{{$target->LinkImage}}"
-                        >
-                            <i class="fa-solid fa-download"></i>
-                        </a>
-                    @elseif($view === 'news')
-                        <a style="text-decoration: none"
-                           href="{{$target->documentationLink}}"
-                           title="{{$target->documentationLink}}"
-                           data-download-url="{{$target->documentationLink}}"
-                        >
-                            <i class="fa-solid fa-download"></i>
-                        </a>
-                    @endif
+                    <div class="contain_actions">
 
-                    <form method="POST"
-                          data-id="{{$target->identifier}}"
-                          action="/admin/{{$view}}/{{$target->identifier}}/edit"
-                    >
-                        @csrf
-                        <button type="submit"
-                                data-id="{{$target->identifier}}"
-                                data-action="{{$view}}"
-                        >
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </button>
-                    </form>
+                        @include('components.admin.redirection.download')
 
-                    <form method="POST"
-                          data-id="{{$target->identifier}}"
-                          action="/admin/{{$view}}/{{$target->identifier}}/delete"
-                    >
-                        @csrf
-                        <button type="submit"
-                                data-id="{{$target->identifier}}"
-                                data-action="{{$view}}"
-                        >
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </form>
+                        @include('components.admin.redirection.edit')
+
+                        @include('components.admin.form.form_delete')
+
+                    </div>
 
                 </div>
 
-            </div>
+            @endforeach
 
-        @endforeach
+        </div>
 
-    </div>
+    </section>
 
-</section>
-
-</body>
+@endsection

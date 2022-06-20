@@ -6,7 +6,9 @@
 }
 
 .__form-login-admin__ {
-  height: 480px;
+  margin-top: 80px;
+  height: 500px;
+  min-height: 500px;
   width: 500px;
   background-color: rgba(255, 255, 255, 0.13);
   border-radius: 10px;
@@ -50,22 +52,21 @@
 }
 
 .__form-login-admin__ .form-submit {
-  position: relative;
-  left: 15%;
   height: 75px;
-  background-color: #cdcdfd;
+  background-color: $Clay;
   margin-top: 50px;
-  width: 70%;
+  width: 100%;
   text-transform: uppercase;
-  color: $Dark;
+  color: $BrokenWhite ;
   padding: 15px 0;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.5px;
   border-radius: 5px;
   cursor: pointer;
 
   &:active { transform: scale(0.99); box-shadow: 3px 2px 5px 1px $ShadowDark; }
+
 }
 
 
