@@ -31,10 +31,11 @@ Route::redirect('home', '/');
 
 // Routes to auth views
 
+Route::post('admin/{view}', [AdminController::class, 'View'])->name('admin.view');
+
 Route::middleware(Administrator::class)->group(function() {
     Route::post('admin/server/laravel', [AdminController::class, 'Laravel'])->name('laravel.welcome');
     Route::post('admin/server/php', [AdminController::class, 'Environment'])->name('phpinfo');
-    Route::post('admin/{view}', [AdminController::class, 'View'])->name('admin.view');
     Route::post('admin/{view}/new', [AdminController::class, 'New'])->name('admin.view.new');
     Route::post('admin/{view}/{id}/{action}', [AdminController::class, 'Action'])->name('admin.view.action');
 });

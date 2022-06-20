@@ -19,6 +19,25 @@ class Administrator
 
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        if(Session::get('username') && Session::get('password')) {
+
+            $username = Session::get('username');
+            $password = Session::get('password');
+
+            $users = [
+                'username' => $username,
+                'password' => $password
+            ];
+
+            if(Auth::attempt($users)) {
+                return $next($request);
+            } else {
+                return abort('404');
+            }
+
+        } else {
+            return abort('404');
+        }
+
     }
 }

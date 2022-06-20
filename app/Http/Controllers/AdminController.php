@@ -39,10 +39,7 @@ class AdminController extends Controller
                $username = Session::get('username');
                $password = Session::get('password');
            } else {
-               return view('templates.login',
-                   ['title' => 'Login - Administration',
-                       'navbar' => '',
-                       'status' => 'false']);
+               return abort('404');
            }
         }
 
@@ -63,35 +60,56 @@ class AdminController extends Controller
             return abort('404');
         }
 
-
-
         if (Auth::attempt($users)) {
 
             Session::flash('permissions', $permissions[0]['permissions']);
             return view('templates.admin.admin-view',
-                ['title' => 'Dashboard - Administration',
-                 'status' => 'true',
-                 'view' => $view,
-                 'targets' => $all
-                ]);
+                    [
+                        'title' => ucfirst($view) . ' - Administration',
+                        'view' => $view,
+                        'action' => null,
+                        'targets' => $all,
+                        'id_target' => null,
+                        'data_target' => null
+                    ]);
 
         } else {
             return view('templates.login',
                 ['title' => 'Login - Administration',
                  'navbar' => '',
-                 'status' => 'false']);
+                 'status' => 'false'
+                ]);
         }
 
     }
 
-    public function Action(string $view, string $action, int $id): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function Action(string $view, int $id, string $action): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
-        return view('templates.admin.action',
-            ['title' => 'Edit News - Administration',
-             'view' => $view,
-             'type' => $action,
-             'on' => $id,
-             'id_target' => $id
+        $table = $view;
+        $target = '';
+
+        switch ($table) {
+            case 'news':
+                $target = News::byid($id);
+                break;
+            case 'projects':
+                $target = Board::byid($id);
+                break;
+            case 'resources':
+                $target = Board::byid($id);
+                break;
+            default:
+                return abort('404');
+        }
+
+        return view('templates.admin.admin-action',
+            [
+                'title' => ucfirst($action) . ' ' . ucfirst($view) .' - Administration',
+                'view' => $view,
+                'action' => $action,
+                'targets' => null,
+                'id_target' => $id,
+                'data_target' => $target
             ]);
     }
 
