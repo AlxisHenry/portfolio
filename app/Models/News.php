@@ -80,6 +80,12 @@ class News extends Model
 
     }
 
+    public function scopeById($query, $id) {
+
+        return $query->where('identifier', '=', $id)->get();
+
+    }
+
 
     public function scopeKeyword($query, $KEYWORD) {
 
