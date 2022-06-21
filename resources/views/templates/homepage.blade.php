@@ -19,19 +19,19 @@
 
     @include('components.arrow-container')
 
-    <section id="__spoilerAbout" class="homepage-section __spoiler__about__">
+    <section id="__spoilerAbout" class="section __spoiler__about__">
 
         @include('components.sections.spoilers.about')
 
     </section>
 
-    <section id="__spoilerProjects" class="homepage-section __spoiler__projects__">
+    <section id="__spoilerProjects" class="section __spoiler__projects__">
 
         @include('components.sections.spoilers.projects')
 
     </section>
 
-    <section id="__spoilerBoard" class="homepage-section __spoiler__board__">
+    <section id="__spoilerBoard" class="section __spoiler__board__">
 
         <!--
         todo => Responsive of this cards
@@ -40,13 +40,13 @@
 
     </section>
 
-    <section id="__spoilerCards" class="homepage-section __spoiler__cards__">
+    <section id="__spoilerCards" class="section __spoiler__cards__">
 
         @include('components.sections.spoilers.news')
 
     </section>
 
-    <section id="__ContactForm" class="homepage-section __contact__form__">
+    <section id="__ContactForm" class="section __contact__form__">
 
         <!--
         todo => Link contact form to laravel mails

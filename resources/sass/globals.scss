@@ -66,6 +66,18 @@ body {
   margin-right: 80px;
 }
 
+.section {
+  margin-top: 210px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 82px;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
 /* End --- Globals class */
 /* Start --- Navbar extends animation */
 

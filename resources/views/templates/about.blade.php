@@ -2,7 +2,73 @@
 
 @section('content')
 
-<section id="__ContactForm" class="homepage-section __contact__form__">
+<section id="__Skills" class="section homepage-section">
+
+    @component('components.underline-title')
+        @slot('Title')
+            Skills
+        @endslot
+    @endcomponent
+
+    <div class="contain-all-skills">
+
+        <div class="skills-navbar">
+
+            <div class="skill-category selected" data-category="tech">
+                Techs
+                <span></span>
+            </div>
+            <div class="skill-category" data-category="front">
+                Front
+                <span></span>
+            </div>
+            <div class="skill-category" data-category="back">
+                Back
+                <span></span>
+            </div>
+
+        </div>
+
+        <div class="all-skills">
+
+            <div class="category-skills tech-skills">
+
+                @foreach($skills['tech'] as $skill)
+
+                    @include('components.skills', ['svg' => $skill])
+
+                @endforeach
+
+            </div>
+
+            <div class="category-skills front-skills hidden">
+
+                @foreach($skills['front'] as $skill)
+
+                    @include('components.skills', ['svg' => $skill])
+
+                @endforeach
+
+            </div>
+
+            <div class="category-skills back-skills hidden">
+
+                @foreach($skills['back'] as $skill)
+
+                    @include('components.skills', ['svg' => $skill])
+
+                @endforeach
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<section id="__ContactForm" class="section __contact__form__">
 
     @component('components.underline-title')
         @slot('Title')
