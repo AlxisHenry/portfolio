@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('news_dates', function (Blueprint $table) {
             $table->id('identifier');
             $table->string('FullDate')->default('null');
-            $table->string('UpdateDate')->default('null');
-            $table->string('UploadDate')->default('null');
+            $table->string('updated_at')->default('null');
+            $table->string('published_at')->default('null');
         });
     }
 

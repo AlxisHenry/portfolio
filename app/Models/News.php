@@ -10,9 +10,11 @@ class News extends Model
 
     use HasFactory;
 
-    protected $fillable = ['title', 'author', 'introduction', 'UrlArticle', 'LinkImage', 'AltImage', 'Theme', 'ThemePrincipal', 'FullDate', 'UpdateDate', 'UploadDate'];
+    protected $fillable = ['title', 'author', 'introduction', 'UrlArticle', 'LinkImage', 'AltImage', 'Theme', 'ThemePrincipal', 'FullDate', 'updated_at', 'published_at'];
     protected $table = "news";
     protected $primaryKey = 'identifier';
+    public $timestamps = false;
+
 
     public function scopeSpoilers($query) {
 
@@ -82,7 +84,7 @@ class News extends Model
 
     public function scopeById($query, $id) {
 
-        return $query->where('identifier', '=', $id)->get();
+        return $query->where('identifier', '=', $id);
 
     }
 

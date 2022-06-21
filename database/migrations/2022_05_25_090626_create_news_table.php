@@ -25,8 +25,8 @@ return new class extends Migration
             $table->string('Theme')->default('null')->index();
             $table->string('ThemePrincipal')->default('null')->index();
             $table->string('FullDate')->default('null');
-            $table->string('UpdateDate')->default('null');
-            $table->string('UploadDate')->default('null');
+            $table->string('updated_at')->default('null');
+            $table->string('published_at')->default('null');
         });
 
     }

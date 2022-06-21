@@ -19,8 +19,8 @@ return new class extends Migration
             $table->longText('description')->default('null');
             $table->string('author')->default('null');
             $table->string('documentationLink')->default('null');
-            $table->date('published_at');
-            $table->date('edit_at');
+            $table->date('published_at')->useCurrent();
+            $table->date('edit_at')->useCurrent();
         });
     }
 

@@ -13,6 +13,7 @@ class Board extends Model
     protected $fillable = ['title', 'description', 'author','documentationLink','published_at','edit_at'];
     protected $table = "board";
     protected $primaryKey = 'identifier';
+    public $timestamps = false;
 
     public function scopeHomeBoard($query) {
 
@@ -22,7 +23,7 @@ class Board extends Model
 
     public function scopeById($query, $id) {
 
-        return $query->where('identifier', '=', $id)->get();
+        return $query->where('identifier', '=', $id);
 
     }
 
