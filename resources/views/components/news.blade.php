@@ -10,7 +10,7 @@
         </div>
 
         <div class="__article__title__">
-            <span>{{ $card->title }}</span>
+            <span>{{ substr($card->title,0, 75) }}...</span>
         </div>
 
         @include('components.about', ['link' => '/news/' .  explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle))]])
