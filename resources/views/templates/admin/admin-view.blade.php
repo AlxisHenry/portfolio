@@ -52,10 +52,11 @@
                                 {{$data->published_at}}
                             </time>
                         @elseif($view === 'news')
-                            <time data-published-at="{{$data->UploadDate}}">
-                                {{ explode('T', $data->UploadDate)[0] }}
+                            <time data-published-at="{{ $data->published_at }}">
+                                le
+                                {{ explode('T', $data->published_at)[0] }}
                                 à
-                                {{ substr(explode('T', $data->UploadDate)[1], 0, 5) }}
+                                {{ substr(explode('T', $data->published_at)[1], 0, 5) }}
                             </time>
                         @endif
 
@@ -67,7 +68,7 @@
 
                         @include('components.admin.redirection.edit')
 
-                        @include('components.admin.form.form_delete')
+                        @include('components.admin.form.form_delete', ['button' => false])
 
                     </div>
 

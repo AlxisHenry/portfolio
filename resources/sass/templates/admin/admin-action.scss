@@ -1,0 +1,208 @@
+.admin-action-section {
+  margin-top: 12px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .object-deleted {
+    min-width: 200px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    gap: 8px;
+
+    form {
+      button {
+        text-decoration: underline;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    span {
+      font-family: $apple;
+      font-size: 30px;
+
+      span:not(.target) {
+        color: red;
+      }
+
+      .target {
+        font-weight: 600;
+      }
+
+    }
+
+  }
+
+  .contain-action-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-weight: 700;
+    }
+
+    comment {
+      letter-spacing: 0;
+      line-height: normal;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .delete-form {
+      margin-top: 25px;
+      background-color: $Clay;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      border-radius: 8px;
+      padding: 0.825rem;
+      &:active {transform: scale(0.98);box-shadow: 3px 2px 5px 1px $ShadowDark;}
+
+      .delete-form-submit {
+        background-color: $Clay;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+        height: 100%;
+
+        span {
+          color: white;
+          font-family: $apple;
+          font-weight: 500;
+          text-transform: uppercase;
+          &:hover {cursor: pointer;}
+        }
+
+      }
+
+    }
+
+    .action-form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 60px;
+
+      .dup-form {
+        max-width: 900px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+
+        div label {
+          display: flex;
+          flex-direction: column;
+          font-weight: 500;
+          font-size: 16px;
+          margin-top: 18px;
+
+          input {
+            border-bottom: solid 0.5px black;
+            height: 30px;
+            max-height: 30px;
+          }
+
+        }
+
+        &.right-form {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+        &.left-form {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+
+        }
+
+      }
+
+      input[type="submit"] {
+        margin-top: 25px;
+        background-color: $Clay;
+        color: white;
+        padding: 0.825rem;
+        border-radius: 8px;
+        text-transform: uppercase;
+        font-family: $apple;
+        font-weight: 500;
+        max-width: 100%;
+        height: 70px;
+        min-height: 70px;
+        &:hover {cursor: pointer;}
+        &:active {transform: scale(0.98);box-shadow: 3px 2px 5px 1px $ShadowDark;}
+      }
+
+    }
+
+  }
+
+  .callback-message {
+    margin-top: 25px;
+    height: 60px;
+    max-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    form {
+      font-size: 18px;
+
+      button {
+        text-decoration: underline;
+        &:hover {
+          color: gray;
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+
+}
+
+.fa-trash {
+  color: #D63939;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .admin-action-section {
+    div h1 {
+      margin-left: 20px;
+      margin-right: 20px;
+      text-align: center;
+    }
+
+    .dup-form {
+      flex-direction: column!important;
+      gap: 18px!important;
+    }
+
+  }
+
+
+}

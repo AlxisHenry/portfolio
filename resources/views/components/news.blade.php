@@ -6,7 +6,7 @@
         </div>
 
         <div class="__article__date__">
-            <time data-time="{{ date($card->UploadDate) }}"> Published on {{ date('d/m/Y', strtotime(date($card->UploadDate)))  }}</time>
+            <time data-time="{{ date($card->published_at) }}"> Published on {{ date('d/m/Y', strtotime(date($card->published_at)))  }}</time>
         </div>
 
         <div class="__article__title__">

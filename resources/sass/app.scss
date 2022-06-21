@@ -48,8 +48,10 @@
 @import 'templates/news{title}'; /* Access to a news with url /news/{title} */
 @import 'templates/news{keyword}'; /* Access to a keyword of news with url /news/{keyword} */
 @import 'templates/board'; /* Access to board page with url /board */
-@import 'templates/login.scss'; /* Login page for access to admin session */
-@import 'templates/admin/dashboard.scss'; /* Admin --- Dashboard */
+@import 'templates/login'; /* Login page for access to admin session */
+@import 'templates/admin/components/navbar'; /* Admin --- Navbar Component */
+@import 'templates/admin/admin-view'; /* Admin --- View - (url) => /admin/{view} */
+@import 'templates/admin/admin-action'; /* Admin --- Action - (url) => /admin/{view}/{id}/{action} */
 
 /* END --- Templates */
 
@@ -58,5 +60,6 @@
 @import 'templates/@media/homepage'; /* Contain all responsive of homepage */
 @import 'templates/@media/projects'; /* Contain all responsive of projects page */
 @import 'templates/@media/news'; /* Contain all responsive of news pages  */
+@import 'templates/@media/admin'; /* Contain all responsive of admin views  */
 
 /* END --- Responsive */
