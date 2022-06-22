@@ -31,7 +31,9 @@ class CheckNews extends Command
 
         $CountNews = News::count();
 
+        echo "\n";
         echo "Actually\e[1;33m $CountNews news found\e[0m in database\n ";
+        echo "\n";
 
     }
 }

@@ -30,5 +30,9 @@ class CheckResources extends Command
     {
         $CountResources = Board::count();
 
-        echo "Actually\e[1;33m $CountResources resources found\e[0m in database\n ";    }
+        echo "\n";
+        echo "Actually\e[1;33m $CountResources resources found\e[0m in database\n ";
+        echo "\n";
+
+    }
 }

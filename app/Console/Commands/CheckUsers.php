@@ -31,6 +31,9 @@ class CheckUsers extends Command
 
         $CountUsers = User::count();
 
+        echo "\n";
         echo "Actually\e[1;33m $CountUsers user(s) found\e[0m in database\n ";
+        echo "\n";
+
     }
 }

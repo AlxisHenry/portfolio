@@ -30,5 +30,9 @@ class CheckProjects extends Command
     {
         $CountProjects = Projects::count();
 
-        echo "Actually\e[1;33m $CountProjects resources found\e[0m in database\n ";    }
+        echo "\n";
+        echo "Actually\e[1;33m $CountProjects resources found\e[0m in database\n ";
+        echo "\n";
+
+    }
 }

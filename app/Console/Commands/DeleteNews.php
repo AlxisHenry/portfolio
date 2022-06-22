@@ -32,17 +32,24 @@ class DeleteNews extends Command
         $news_to_delete = News::find($this->argument()['id']);
 
         if(!$news_to_delete){
+            echo "\n";
             echo "\e[1;41m                                           \e[0m \n";
             echo "\e[1;41m      The specified id does not exist      \e[0m \n";
             echo "\e[1;41m                                           \e[0m \n";
+            echo "\n";
             return false;
         }
 
         $news_to_delete->delete();
 
-        echo "\e[1;42m                                                   \e[0m \n";
-        echo "\e[1;42m  An element from App\Models\News was deleted. #".$this->argument()['id']."  \e[0m\n";
-        echo "\e[1;42m                                                   \e[0m \n";
+        echo "\n";
+        echo "\e[1;42m                                                    \e[0m\n";
+        echo "\e[1;42m    An element from App\Models\News was deleted.    \e[0m\n";
+        echo "\e[1;42m                                                    \e[0m\n";
+        echo "\n";
+        echo "\e[1;33m  Element #".$this->argument()['id']." was deleted from News\e[0m\n ";
+        echo "\n";
+
         return true;
 
     }

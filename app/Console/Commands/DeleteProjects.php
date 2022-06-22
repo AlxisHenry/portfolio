@@ -31,17 +31,24 @@ class DeleteProjects extends Command
         $project_to_delete = Projects::find($this->argument()['id']);
 
         if(!$project_to_delete){
+            echo "\n";
             echo "\e[1;41m                                           \e[0m \n";
             echo "\e[1;41m      The specified id does not exist      \e[0m \n";
             echo "\e[1;41m                                           \e[0m \n";
+            echo "\n";
             return false;
         }
 
         $project_to_delete->delete();
 
-        echo "\e[1;42m                                                    \e[0m \n";
-        echo "\e[1;42m  An element from App\Models\Projects was deleted. #".$this->argument()['id']."  \e[0m\n";
-        echo "\e[1;42m                                                    \e[0m \n";
+        echo "\n";
+        echo "\e[1;42m                                                        \e[0m\n";
+        echo "\e[1;42m    An element from App\Models\Projects was deleted.    \e[0m\n";
+        echo "\e[1;42m                                                        \e[0m\n";
+        echo "\n";
+        echo "\e[1;33m  Element #".$this->argument()['id']." was deleted from Projects\e[0m\n ";
+        echo "\n";
+
         return true;
 
     }
