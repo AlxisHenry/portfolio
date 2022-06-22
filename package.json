@@ -1,6 +1,7 @@
 {
     "private": true,
     "scripts": {
+        "artisan-dump": "sh /var/www/main/tests/Scripts/artisan_dump.sh",
         "serve": "php artisan serve --host=dev.local",
         "tests": "php artisan test",
         "tests-c": "php artisan test --coverage",
@@ -27,6 +28,7 @@
         "aos": "^2.3.4",
         "parallax-js": "^3.1.0",
         "scrollreveal": "^4.0.9",
-        "typed.js": "^2.0.12"
+        "typed.js": "^2.0.12",
+        "unanime": "^0.0.14"
     }
 }
