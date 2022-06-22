@@ -8,6 +8,7 @@
 
   .__project__card__ {
     border-radius: 8px;
+    box-shadow: 0px -1px 6px 4px $ShadowDark;
     overflow: hidden;
     width: 350px;
     &:hover {
