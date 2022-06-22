@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Tests\TestCase;
 
 class DefaultDatabaseConnectionTest extends TestCase
@@ -12,9 +13,15 @@ class DefaultDatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-    public function test_check_if_user_data_exist()
+    public function testCheckEnvDatabaseConfiguration()
     {
-        $user = User::where('user_id', 1)->first ();
-        $this->assertSame('admin', $user->username);
+        $this->assertNotEmpty(DB::connection()->getDatabaseName());
     }
+
+    public function testCheckIfAdminUsersExist()
+    {
+        $user = User::count();
+        $this->assertNotNull($user);
+    }
+
 }

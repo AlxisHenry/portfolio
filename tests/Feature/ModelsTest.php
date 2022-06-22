@@ -14,22 +14,27 @@ class ModelsTest extends TestCase
      *
      * @return void
      */
-    public function test_model_board_exist()
+    public function testModelBoardWork()
     {
         $board = Board::all();
         $this->assertIsIterable($board);
     }
 
-    public function test_model_news_exist()
+    public function testModelNewsWork()
     {
-        $board = News::all();
-        $this->assertIsIterable($board);
+        $news = News::all();
+        $this->assertIsIterable($news);
     }
 
-    public function test_model_user_exist()
+    public function testModelUsersWork()
     {
-        $board = User::all();
-        $this->assertIsIterable($board);
+        $user = User::all();
+        $this->assertIsIterable($user);
     }
 
+    public function testModelProjectsWork()
+    {
+       // $projects = Projects::all();
+       // $this->assertIsIterable($projects);
+    }
 }
