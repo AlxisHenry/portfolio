@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Board;
 use App\Models\News;
+use App\Models\Projects;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -56,7 +57,7 @@ class AdminController extends Controller
         } elseif ($view === 'resources') {
             $all = Board::all();
         } elseif ($view === 'projects') {
-            $all = Board::all();
+            $all = Projects::all();
         } else {
             return abort('404');
         }
@@ -95,7 +96,7 @@ class AdminController extends Controller
                 $target = News::byid($id);
                 break;
             case 'projects':
-                $target = Board::byid($id);
+                $target = Projects::byid($id);
                 break;
             case 'resources':
                 $target = Board::byid($id);
@@ -128,9 +129,12 @@ class AdminController extends Controller
                             $data_obj->ThemePrincipal = $_POST['theme_principal'];
                             break;
                         case 'projects':
-                            $data_obj = Board::find($id);
+                            $data_obj = Projects::find($id);
                             $data_obj->description = $_POST['description'];
-                            $data_obj->githubLink = $_POST['github_link'];
+                            $data_obj->GithubLink = $_POST['github_link'];
+                            $data_obj->languages = $_POST['languages'];
+                            $data_obj->linkImage = $_POST['link_img'];
+                            $data_obj->url_name = $_POST['url_name'];
                             break;
                         case 'resources':
                             $data_obj = Board::find($id);
@@ -183,10 +187,10 @@ class AdminController extends Controller
                         $link_news = $_POST['link_news'];
                         $link_img = $_POST['link_img'];
                         $themes = $_POST['themes'];
-                        $theme_principal = $_POST['theme_principal'];
-                        $introduction = $_POST['introduction'];
+                            $theme_principal = $_POST['theme_principal'];
+                            $introduction = $_POST['introduction'];
 
-                        News::create([
+                            News::create([
                             'title' => $title,
                             'author' => $author,
                             'introduction' => $introduction,
@@ -210,7 +214,27 @@ class AdminController extends Controller
                             'published_at' => $published_at,
                             'edit_at' => $published_at
                         ]);
+                        break;
+                    case 'projects':
+                        $description = $_POST['description'];
+                        $url_name = $_POST['url_name'];
+                        $github_link = $_POST['github_link'];
+                        $link_img = $_POST['link_img'];
+                        $languages = $_POST['languages'];
 
+                        Projects::create([
+                            'title' => $title,
+                            'url_name' => $url_name,
+                            'description' => $description,
+                            'author' => $author,
+                            'documentationLink' => null,
+                            'GithubLink' => $github_link,
+                            'linkImage' => $link_img,
+                            'languages' => $languages,
+                            'published_at' => $published_at,
+                            'edit_at' => $published_at
+                        ]);
+                        break;
                 }
 
             }

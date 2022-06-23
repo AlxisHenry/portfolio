@@ -18,13 +18,13 @@ return new class extends Migration
             $table->string('title')->default('null');
             $table->string('url_name')->default('null');
             $table->longText('description')->default('null');
-            $table->string('author')->default('null');
-            $table->string('documentationLink')->default('null');
+            $table->string('author')->default('null')->nullable();
+            $table->string('documentationLink')->default('null')->nullable();
             $table->string('GithubLink')->default('null');
             $table->string('linkImage')->default('null');
             $table->string('languages')->default('null');
-            $table->date('published_at')->useCurrent();
-            $table->date('edit_at')->useCurrent();
+            $table->date('published_at')->useCurrent()->nullable();
+            $table->date('edit_at')->useCurrent()->nullable();
         });
     }
 

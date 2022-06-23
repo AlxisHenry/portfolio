@@ -1,4 +1,4 @@
-<form   method="post"
+    <form   method="post"
         @if($type === 'new')
         action="/admin/{{$view}}/new"
         @else
@@ -45,8 +45,8 @@
 
                 @else
 
-                    <label for="github_link">Github <Link>
-                        <input name="github_link" id="github_link" type="text" value="{{$type !== 'new' ? $data->UrlArticle : '' }}" required>
+                    <label for="github_link">Github Link<Link>
+                        <input name="github_link" id="github_link" type="text" value="{{$type !== 'new' ? $data->GithubLink : '' }}" required>
                     </label>
 
                 @endif
@@ -54,6 +54,22 @@
             </div>
 
             <div class="left-form">
+
+                @if($view === 'projects')
+
+                    <label for="link_img">Image file name
+                        <input name="link_img" id="link_img" type="text" value="{{ $type !== 'new' ? $data->linkImage : '' }}" required>
+                    </label>
+
+                    <label for="languages">Languages (4 max)
+                        <input name="languages" id="languages" type="text" placeholder="Lang1,Lang2,Lang3,..." value="{{$type !== 'new' ? $data->languages : '' }}" required>
+                    </label>
+
+                    <label for="url_name">Url name
+                        <input name="url_name" id="url_name" type="text" placeholder="/projects/url_name" value="{{$type !== 'new' ? $data->url_name : '' }}" required>
+                    </label>
+
+                @endif
 
                 @if($view === 'news')
 
@@ -72,8 +88,9 @@
                 @endif
 
                 <label for="published_at">Published at
-                    <input name="published_at" id="published_at" type="text" value="{{ $type !== 'new' ? ($view === 'news' ? $data->published_at : '') : '' }}" placeholder="{{ $type === 'new' ? 'YYYY-MM-DD' : 'YYYY-MM-DDThh:mm:ss' }}" required>
+                    <input name="published_at" id="published_at" type="text" value="{{ $type !== 'new' ? ($view === 'news' ? $data->published_at : '') : '' }}" placeholder="{{ $type === 'new' ? 'YYYY-MM-DD' : 'YYYY-MM-DDThh:mm:ss' }}" {{ $view === 'news' ? "required" : "" }}>
                 </label>
+
             </div>
 
         </div>
