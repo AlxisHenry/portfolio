@@ -21,8 +21,14 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
-        'permissions'
+        'permissions',
+        'created_at',
+        'edit_at'
     ];
+
+    protected $table = "users";
+    protected $primaryKey = 'id';
+    public $timestamps = false;
 
     /**
      * The attributes that should be hidden for serialization.
