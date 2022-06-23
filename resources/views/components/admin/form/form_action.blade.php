@@ -88,7 +88,7 @@
                 @endif
 
                 <label for="published_at">Published at
-                    <input name="published_at" id="published_at" type="text" value="{{ $type !== 'new' ? ($view === 'news' ? $data->published_at : '') : '' }}" placeholder="{{ $type === 'new' ? 'YYYY-MM-DD' : 'YYYY-MM-DDThh:mm:ss' }}" {{ $view === 'news' ? "required" : "" }}>
+                    <input name="published_at" id="published_at" type="text" value="{{ $type !== 'new' ? date('Y/m/d', strtotime(date($data->published_at))) : '' }}" placeholder="YYYY-MM-DD" {{ $view === 'news' ? "required" : "" }}>
                 </label>
 
             </div>

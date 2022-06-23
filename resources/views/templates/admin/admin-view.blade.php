@@ -54,9 +54,7 @@
                         @elseif($view === 'news')
                             <time data-published-at="{{ $data->published_at }}">
                                 le
-                                {{ explode('T', $data->published_at)[0] }}
-                                à
-                                {{ substr(explode('T', $data->published_at)[1], 0, 5) }}
+                                {{ date('d/m/Y', strtotime(date($data->published_at))) }}
                             </time>
                         @endif
 
