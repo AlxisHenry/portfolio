@@ -18,10 +18,10 @@ php artisan key:generate
 php artisan cache:clear
 php artisan optimize
 php artisan optimize:clear
-php artisan test
+npm run tests
 npm run dev
 
-echo "--------------------------------"
-echo "Launch server with npm run serve"
-echo "Will start at http://dev.local !"
-echo "--------------------------------"
+echo "-------------------------------------"
+echo "Launch server with npm run serve     "
+echo "Will start at http://dev.local:8000 !"
+echo "-------------------------------------"
