@@ -1,5 +1,7 @@
-import { CountContactAreaLength } from "../components/contact-form"
-import { InputAnimation } from "../components/about"
+import {CountContactAreaLength} from "../components/contact-form"
+import {InputAnimation} from "../components/about"
+import {CopyToClipboard} from "../components/copied-to-clipboard"
+import {ScrollToContact} from "../components/to-contact";
 
 const Skills = () => {
     // Toggle menu/div of different skills categories
@@ -16,8 +18,22 @@ const Skills = () => {
     })
 }
 
+const MergeFooter = () => {
+
+    const Footer = document.querySelector('.__footer__')
+    const SectionToMerge = document.querySelector('#__MoreInformations')
+
+    if(SectionToMerge) {
+        Footer.style.marginTop = 0;
+    }
+
+}
+
 window.addEventListener('load', (e) => {
+    ScrollToContact(document.querySelector('#__ContactForm').offsetTop)
+    CopyToClipboard()
     CountContactAreaLength()
     InputAnimation(e)
     Skills()
+    MergeFooter()
 })

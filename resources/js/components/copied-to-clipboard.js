@@ -31,11 +31,15 @@ const CopyToClipboard = () => {
     copyThis.forEach((copy) => {
 
         copy.addEventListener('mouseenter', () => {
-            document.querySelector('.click-to-copy-indicator').classList.remove('invisible')
+            if(document.querySelector('.click-to-copy-indicator')) {
+                document.querySelector('.click-to-copy-indicator').classList.remove('invisible')
+            }
         })
 
         copy.addEventListener('mouseleave', () => {
-            document.querySelector('.click-to-copy-indicator').classList.add('invisible')
+            if(document.querySelector('.click-to-copy-indicator')) {
+                document.querySelector('.click-to-copy-indicator').classList.add('invisible')
+            }
         })
 
         copy.addEventListener('contextmenu', (e) => {

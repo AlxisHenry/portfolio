@@ -1,8 +1,13 @@
+#__Skills {
+  margin-top: 0;
+}
+
 .contain-all-skills {
+  padding: 60px;
   margin-right: 12px;
   margin-left: 12px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   min-height: 900px;
   height: auto;
   display: flex;
@@ -12,7 +17,6 @@
 
   .skills-navbar {
     width: 100%;
-    height: 80px;
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -70,12 +74,10 @@
     }
 
     .category-skills .skill {
-      transition: transform 375ms ease-in;
-      transform: scale(1);
       border-radius: 8px;
       box-shadow: 0px -1px 6px 4px $ShadowDark;
-      width: 200px;
-      height: 200px;
+      width: 160px;
+      height: 160px;
       background-color: $BrokenWhite;
       display: flex;
       flex-direction: row;
@@ -95,7 +97,7 @@
         align-items: center;
 
         img {
-          width: 100px;
+          width: 75px;
         }
 
       }
@@ -103,6 +105,81 @@
     }
   }
 
+}
 
+#__MoreInformations {
+  margin-top: 280px;
+  width: 100%;
+  min-height: 620px;
+  height: auto;
+  box-shadow: 0px -1px 6px 4px rgb(0 0 0 / 10%);
+  background-color: $DarkBlue;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-bottom: 0;
+  gap: 0;
+  div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 
+    &.contain-contacts {
+      display: flex;
+      flex-direction: column;
+      div {
+        padding: 20px;
+        a {
+          text-decoration: none;
+          font-size: 20px;
+          padding: 6px;
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+
+    &.contain-map {
+      width: 100%;
+      height: 100%;
+      iframe {
+        border-radius: 8px;
+        height: 400px;
+        width: 500px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .skills-navbar {
+    justify-content: center!important;
+  }
+  .category-skills {
+    justify-content: center!important;
+  }
+  #__MoreInformations {
+    flex-direction: column!important;
+    div div a, div div a span {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .skills-navbar {
+    flex-direction: column!important;
+    align-items: center!important;
+    .contain-map {
+      iframe {
+        height: auto;
+        width: auto;
+      }
+    }
+  }
 }
