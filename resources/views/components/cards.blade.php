@@ -5,7 +5,7 @@
         <div class="_this_project_">
 
             <figure class="unselectable _project_image_">
-                <img src="{{ url('assets/images/'.$project->linkImage) }}" alt="{{$project->title}}" class="">
+                <img src="{{ $project->linkImage }}" alt="{{$project->title}}" class="">
             </figure>
 
             <div class="_project_content_">
