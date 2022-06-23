@@ -38,7 +38,9 @@ class AboutController extends Controller
             'title' => 'About me - HENRY ALEXIS',
             'navbar' => 'about',
             'og_description' => 'Portfolio - HENRY ALEXIS - About me',
-            'skills' => $this->GetAllSkills()
+            'skills' => $this->GetAllSkills(),
+            'animateTiming' => 1800,
+            'resetTiming' => 1800
         ]);
     }
 

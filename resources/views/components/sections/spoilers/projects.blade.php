@@ -6,9 +6,11 @@
 
 <div class="_projects_cards_">
 
-    @include('components.projects.timken')
+    @foreach($Projects as $project)
 
-    @include('components.projects.sport')
+        @include('components.cards')
+
+    @endforeach
 
 </div>
 

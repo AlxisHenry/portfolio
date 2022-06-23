@@ -1,4 +1,4 @@
-<div class="skill">
+<div class="skill" data-aos="slide-up" data-aos-duration="{{ $animateTiming }}">
 
     <div class="skill-part">
 

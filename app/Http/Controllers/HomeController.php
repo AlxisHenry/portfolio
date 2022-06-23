@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Board;
 use App\Models\News;
+use App\Models\Projects;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -46,6 +47,7 @@ class HomeController extends Controller
         $Google = $this->GoogleTranslate();
         $spoiler_cards = News::spoilers();
         $board_cards = Board::HomeBoard();
+        $projects_cards = Projects::GetHomepageProjects();
 
         return view('templates.homepage', ['title' => 'Portfolio - HENRY ALEXIS',
                                         'navbar' => 'home',
@@ -53,6 +55,7 @@ class HomeController extends Controller
                                         'og_description' => 'Portfolio - HENRY ALEXIS - Homepage',
                                         'spoiler_cards' => $spoiler_cards,
                                         'Boards' =>$board_cards,
+                                        'Projects' => $projects_cards,
                                         'Google' => $Google]);
     }
 
