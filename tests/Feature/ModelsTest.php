@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Board;
 use App\Models\News;
+use App\Models\Projects;
 use App\Models\User;
 use Tests\TestCase;
 
@@ -34,7 +35,7 @@ class ModelsTest extends TestCase
 
     public function testModelProjectsWork()
     {
-       // $projects = Projects::all();
-       // $this->assertIsIterable($projects);
+        $projects = Projects::all();
+        $this->assertIsIterable($projects);
     }
 }
