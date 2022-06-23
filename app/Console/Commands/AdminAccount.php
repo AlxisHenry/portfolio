@@ -35,9 +35,9 @@ class AdminAccount extends Command
             $user = User::find($this->argument()['id']);
 
             echo "\n";
-            echo "\e[1;42m                                                     \e[0m \n";
-            echo "\e[1;42m      Good news, we found the user in the database !  \e[0m \n";
-            echo "\e[1;42m                                                     \e[0m \n";
+            echo " \e[1;42m                                                          \e[0m \n";
+            echo " \e[1;42m      Good news, we found the user in the database !      \e[0m \n";
+            echo " \e[1;42m                                                          \e[0m \n";
 
             echo "\n  ";
             echo "   Username => \e[1;33m ". $user->username ." \e[0m\n  ";
