@@ -1,4 +1,4 @@
-<div class="__documentation__card__" data-id="{{ $Board->identifier }}">
+<div class="__documentation__card__" data-id="{{ $Board->identifier }}" data-aos="fade-up">
 
     <div class="__documentation__card__title__" data-title="{{ $Board->title }}" title="Title">
         <span class="title">{{ $Board->title }}</span>

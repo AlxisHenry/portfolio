@@ -145,6 +145,21 @@
 
 @media screen and (max-width: 800px ) {
   .__documentation__card__ {
-    max-width: 310px;
+    max-width: 280px;
+    .__documentation__card__title__ {
+      text-align: center;
+    }
+    .__documentation__card__description__ {
+      .description {
+        font-size: 15px;
+      }
+    }
+    .__documentation__card__author__ {
+      font-size: 10px;
+      time {
+        font-size: 11px;
+      }
+
+    }
   }
 }

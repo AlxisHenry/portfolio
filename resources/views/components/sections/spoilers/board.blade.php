@@ -4,7 +4,7 @@
     @endslot
 @endcomponent
 
-<div class="__board__cards__" data-aos="fade-left">
+<div class="__board__cards__" >
 
     @foreach($Boards as $Board)
         @include('components.board-cards')

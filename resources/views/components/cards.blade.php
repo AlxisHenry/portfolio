@@ -1,6 +1,6 @@
 <div class="__projects__">
 
-    <div class="__project__card__ _project-nb-{{$project->identifier}}_" data-id="{{$project->identifier}}" data-aos="fade-right">
+    <div class="__project__card__ _project-nb-{{$project->identifier}}_" data-id="{{$project->identifier}}" data-aos="fade-up">
 
         <div class="_this_project_">
 
