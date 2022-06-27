@@ -21,7 +21,7 @@
     <meta property="og:video" content="{{ url('assets/cafe.gif') }}">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="fr_FR">
-    <title>{{ $title ?? 'Portfolio - Henry Alexis' }}</title>
+    <title>Error 500 - Henry Alexis</title>
     <link rel="stylesheet" href="{{ url('css/app.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url('assets/icons/apple-touch-icon.png') }}">
@@ -35,12 +35,4 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 
-@if(Route::currentRouteName() === "home" || Route::currentRouteName() === 'home.contact')
-    <body class="loader-body">
-    @include('layouts.loader', ['status' => true])
-@else
-    <body>
-@endif
-
-@include('components.scrollbar')
-@include('components.cursor')
+@include('layouts.loader', ['status' => false])
