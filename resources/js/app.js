@@ -9,7 +9,7 @@ import { debug } from './main'
 window.addEventListener('load', (e) => {
 
     let BackToTopState = true // Init State of back to top arrow for call the function at the loading of the page
-    let status = false
+    let status = true
     debug(status)
     AOS.init({ duration: 1800 })
     Themes()
