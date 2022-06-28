@@ -24,8 +24,11 @@ class AdminController extends Controller
     public function Login(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
             return view('templates.login',
-                ['title' => 'Login - Administration',
-                 'navbar' => 'Login - Administration']);
+                [
+                    'title' => 'Login - Administration',
+                    'navbar' => 'Login - Administration',
+                    'status' => true
+                ]);
     }
 
     public function View(string $view): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
@@ -79,7 +82,7 @@ class AdminController extends Controller
             return view('templates.login',
                 ['title' => 'Login - Administration',
                  'navbar' => '',
-                 'status' => 'false'
+                 'status' => false
                 ]);
         }
 

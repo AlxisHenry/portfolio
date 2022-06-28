@@ -8,6 +8,18 @@
 
     </section>
 
+    @if(!$status)
+
+        <div class="connexion-failed">
+
+           <div>
+               Connexion failed
+           </div>
+
+        </div>
+
+    @endif
+
 @endsection
 
 @section('footer')
