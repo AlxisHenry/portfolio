@@ -31,8 +31,6 @@ const RedirectToKeyword = () => {
     submitSearch.addEventListener('click', (e) => {
         let value = submitValue.value
         if (value.length > 2) {
-            console.log('Store to localstorage')
-            localStorage.setItem('word',value)
             document.location.href = `/news/word/${value.toLowerCase()}`
         } else {
             ShowPopup(document.querySelector('.pop-up-container'))
@@ -42,29 +40,7 @@ const RedirectToKeyword = () => {
 
 }
 
-const InitLastKeyword = () => {
-
-    if (localStorage.getItem('word')) {
-
-        let word = localStorage.getItem('word')
-
-        if ((word.toLocaleString()).length > 2) {
-            let submitValue = document.querySelector('.__search__input__')
-            submitValue.value = word
-        }
-
-    }
-
-    const Show_All = document.querySelector('.show_all a')
-
-    Show_All.addEventListener('click', () => {
-        localStorage.removeItem('word')
-    })
-
-}
-
 window.addEventListener('load', (e) => {
     InputAnimation(e)
     RedirectToKeyword(e)
-    InitLastKeyword()
 })
