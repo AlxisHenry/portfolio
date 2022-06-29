@@ -24,14 +24,15 @@
     <title>{{ $title ?? 'Portfolio - Henry Alexis' }}</title>
     <link rel="stylesheet" href="{{ url('css/app.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('assets/icons/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('assets/icons/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('assets/icons/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ url('assets/icons/site.webmanifest') }}">
     <link rel="mask-icon" href="{{ url('assets/icons/safari-pinned-tab.svg') }}" color="#5bbad5">
     <link rel="shortcut icon" href="{{ url('assets/icons/favicon.ico') }}">
-    <meta name="msapplication-TileColor" content="#da532c">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('assets/icons/favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('assets/icons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="180x180" href="{{ url('assets/icons/mstile-150x150.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('assets/icons/apple-touch-icon-180x180.png') }}">
     <meta name="msapplication-config" content="{{ url('assets/icons/browserconfig.xml') }}">
+    <link rel="manifest" href="{{ url('assets/icons/site.webmanifest') }}">
+    <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 </head>
 
