@@ -35,13 +35,3 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 </head>
-
-@if(Route::currentRouteName() === "home" || Route::currentRouteName() === 'home.contact')
-    <body class="loader-body">
-    @include('layouts.loader', ['status' => true])
-@else
-    <body>
-@endif
-
-@include('components.scrollbar')
-@include('components.cursor')
