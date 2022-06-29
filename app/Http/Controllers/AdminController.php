@@ -31,7 +31,7 @@ class AdminController extends Controller
                 ]);
     }
 
-    public function View(string $view): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function View(string $view)
     {
 
         if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -66,7 +66,7 @@ class AdminController extends Controller
         }
 
         if (Auth::attempt($users)) {
-
+            Session::remove('connect');
             Session::flash('permissions', $permissions[0]['permissions']);
             return view('templates.admin.admin-view',
                     [
@@ -79,11 +79,8 @@ class AdminController extends Controller
                     ]);
 
         } else {
-            return view('templates.login',
-                ['title' => 'Login - Administration',
-                 'navbar' => '',
-                 'status' => false
-                ]);
+            Session::put('connect', false);
+            return back();
         }
 
     }

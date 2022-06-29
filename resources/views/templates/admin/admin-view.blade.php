@@ -1,4 +1,4 @@
-@extends('templates.admin.layouts.app')
+@extends('layouts.admin.app')
 
 @section('content')
 
