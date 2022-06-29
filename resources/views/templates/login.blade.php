@@ -8,17 +8,17 @@
 
     </section>
 
-    @if(!$status)
+    <div class="connexion-failed
+    {{ Illuminate\Support\Facades\Session::get('connect') === false ? "" : "invisible" }}
+    ">
 
-        <div class="connexion-failed">
+        {{ \Illuminate\Support\Facades\Session::remove('connect') }}
 
-           <div>
-               Connexion failed
-           </div>
-
+        <div>
+            Connexion failed
         </div>
 
-    @endif
+    </div>
 
 @endsection
 
