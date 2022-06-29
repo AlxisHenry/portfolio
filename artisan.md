@@ -58,6 +58,12 @@ up                     Bring the application out of maintenance mode
 
 ----
 
+admin:account          Check the admin account informations
+
+admin:pwd              Change the password of an account
+
+----
+
 auth:clear-resets      Flush expired password reset tokens
 
 ----
