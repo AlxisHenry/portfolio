@@ -1,2 +1,0 @@
-use main;
-INSERT INTO users (username, password, email, permissions, created_at, edit_at) VALUES ('admin', '$2y$10$1l1p5ky0NpxJ7S9ixu0TD.ZDOyA23yKn2n5rq4AHwOm1X7Dt1s55q', 'alexis.henry10357@gmail.com', 'administrator', (SELECT NOW()), (SELECT NOW()))
