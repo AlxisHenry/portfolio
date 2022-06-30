@@ -39,12 +39,6 @@ TESTS () {
 composer install
 npm install
 
-# Rights
-sudo chown -R ubuntu:ubuntu /var/www/main
-sudo chown -R ubuntu:www-data /var/www/main/public
-sudo chown -R ubuntu:www-data /var/www/main/storage
-sudo chown -R ubuntu:www-data /var/www/main/bootstrap
-
 while true; do
 	read -p "Configure the database ? (yes/no) " database
 	case $database in
@@ -72,6 +66,12 @@ read -p "Run tests? (yes/no) " tests
         * ) ;;
 	esac
 done;
+
+# Rights
+sudo chown -R ubuntu:ubuntu /var/www/main
+sudo chown -R ubuntu:www-data /var/www/main/public
+sudo chown -R ubuntu:www-data /var/www/main/storage
+sudo chown -R ubuntu:www-data /var/www/main/bootstrap
 
 echo "\n\n"
 echo " \e[1;42m                                               \e[0m";
