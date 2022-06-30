@@ -27,10 +27,16 @@ We need to setup a [CRUD](https://developer.mozilla.org/fr/docs/Glossary/CRUD) f
 
 First, you need to clone the repository from GitHub, with the following command :
 
-`https://github.com/AlxisHenry/CCI-2021-PORTFOLIO.git`
+`git clone https://github.com/AlxisHenry/CCI-2021-PORTFOLIO.git`
 
 At the root of the project, you will see a setup file.
 
 **You just have to launch it.**
+
+> **WARN** :
+- The default admin user is root:root (username: root, password: root),
+- If you want to import default data, your database name need to be "main",
+- If you want to run all tests, be sure your .env is configured and the database,
+- A lot of commands are available in package.json.
 
 If you need to work on the project, I recommend you to work with the ``php artisan serve``.
