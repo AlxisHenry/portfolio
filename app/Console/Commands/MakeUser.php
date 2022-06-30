@@ -20,7 +20,7 @@ class MakeUser extends Command
      *
      * @var string
      */
-    protected $description = 'Create user in the database';
+    protected $description = 'Create a new user';
 
     /**
      * Execute the console command.
