@@ -1,5 +1,15 @@
 clear
 
+if [ -e composer.json ]
+then
+    echo ""
+else
+    echo "\e[1;41m                                                \e[0m";
+    echo "\e[1;41m      YOU NEED TO BE IN THE PROJECT FOLDER      \e[0m";
+    echo "\e[1;41m                                                \e[0m";
+    exit
+fi
+
 DEFAULT_DATA () {
     sh database/imports/import.sh
 }
