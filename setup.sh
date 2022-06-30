@@ -1,3 +1,30 @@
+clear
+
+DEFAULT_DATA () {
+    sh database/imports/import.sh
+}
+
+DB () {
+    php artisan migrate:fresh
+    php artisan make:user root root
+    echo "\e[1;41m                                                               \e[0m";
+    echo "\e[1;41m      FOR IMPORT DEFAULT DATA, UR DB NAME NEED TO BE main      \e[0m";
+    echo "\e[1;41m                                                               \e[0m";
+    while true; do
+    	read -p "Import default data ? [ db_name need to be main ] (yes/no) " import
+    	case $import in
+    		[yes]* ) DEFAULT_DATA; break;;
+        	[no]* ) break;;
+            * ) ;;
+    	esac
+    done;
+}
+
+TESTS () {
+    npm run tests
+}
+
+
 # Dependencies
 composer install
 npm install
@@ -8,20 +35,36 @@ sudo chown -R ubuntu:www-data /var/www/main/public
 sudo chown -R ubuntu:www-data /var/www/main/storage
 sudo chown -R ubuntu:www-data /var/www/main/bootstrap
 
-# Databases configurations
-php artisan migrate:fresh
-sh database/imports/import.sh
+while true; do
+	read -p "Configure the database ? (yes/no) " database
+	case $database in
+		[yes]* ) DB; break;;
+    	[no]* ) break;;
+        * ) ;;
+	esac
+done;
 
 # Laravel configurations
 cp .env.example .env
 php artisan key:generate
 php artisan cache:clear
 php artisan optimize
-php artisan optimize:clear
-npm run tests
 npm run dev
 
-echo "-------------------------------------"
-echo "Launch server with npm run serve     "
-echo "Will start at http://dev.local:8000 !"
-echo "-------------------------------------"
+echo "\e[1;41m                                                        \e[0m";
+echo "\e[1;41m      DOESN'T WORK IF YOU DONT IMPORT DEFAULT DATA      \e[0m";
+echo "\e[1;41m                                                        \e[0m";
+while true; do
+read -p "Run tests? (yes/no) " tests
+	case $tests in
+		[yes]* ) TESTS; break;;
+    	[no]* ) break;;
+        * ) ;;
+	esac
+done;
+
+echo "\n\n"
+echo " \e[1;42m                                               \e[0m";
+echo " \e[1;42m      The default admin user is root:root      \e[0m";
+echo " \e[1;42m                                               \e[0m";
+echo "\n\n"
