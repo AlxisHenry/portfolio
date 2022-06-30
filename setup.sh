@@ -39,6 +39,14 @@ TESTS () {
 composer install
 npm install
 
+# Laravel configurations
+cp .env.example .env
+php artisan key:generate
+php artisan cache:clear
+php artisan optimize
+npm run dev
+
+
 while true; do
 	read -p "Configure the database ? (yes/no) " database
 	case $database in
@@ -47,13 +55,6 @@ while true; do
         * ) ;;
 	esac
 done;
-
-# Laravel configurations
-cp .env.example .env
-php artisan key:generate
-php artisan cache:clear
-php artisan optimize
-npm run dev
 
 echo "\e[1;41m                                                        \e[0m";
 echo "\e[1;41m      DOESN'T WORK IF YOU DONT IMPORT DEFAULT DATA      \e[0m";
