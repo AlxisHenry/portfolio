@@ -26,9 +26,7 @@
     "dependencies": {
         "animejs": "^3.2.1",
         "aos": "^2.3.4",
-        "parallax-js": "^3.1.0",
         "scrollreveal": "^4.0.9",
-        "typed.js": "^2.0.12",
-        "unanime": "^0.0.14"
+        "typed.js": "^2.0.12"
     }
 }
