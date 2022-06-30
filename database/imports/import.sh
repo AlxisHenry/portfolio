@@ -1,26 +1,25 @@
-clear
+echo "\n";
+echo "\e[1;42m                                   \e[0m";
+echo "\e[1;42m    Configure default database     \e[0m";
+echo "\e[1;42m                                   \e[0m";
+echo "\n";
+echo "\e[41m                                               \e[0m";
+echo "\e[41m    Your database name need to be : main  !    \e[0m";
+echo "\e[41m                                               \e[0m";
 
-echo "--------------------------"
-echo "Imports Data to News table"
-echo "--------------------------"
+sleep 2
 
-echo "Import all data..."
-
-sudo mariadb -e "source /var/www/main/database/imports/__news-import.sql"
-sudo mariadb -e "source /var/www/main/database/imports/__board-import.sql"
-sudo mariadb -e "source /var/www/main/database/imports/__users-import.sql"
-sudo mariadb -e "source /var/www/main/database/imports/__projects-import.sql"
-
-echo "."
-echo ".."
-echo "..."
-
-echo "Update News table..."
+echo "\n";
+echo "\e[1;42m                                \e[0m";
+echo "\e[1;42m      Starting import data      \e[0m";
+echo "\e[1;42m                                \e[0m";
 
 sudo mariadb -e "source /var/www/main/database/imports/news.sql"
+sudo mariadb -e "source /var/www/main/database/imports/resources.sql"
+sudo mariadb -e "source /var/www/main/database/imports/projects.sql"
 
-echo "."
-echo ".."
-echo "..."
-
-echo "Importation finished"
+echo "\n";
+echo "\e[1;42m                           \e[0m";
+echo "\e[1;42m      Import finished      \e[0m";
+echo "\e[1;42m                           \e[0m";
+echo "\n";
