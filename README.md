@@ -38,5 +38,6 @@ At the root of the project, you will see a setup file.
 - If you want to import default data, your database name need to be "main",
 - If you want to run all tests, be sure your .env is configured and the database,
 - A lot of commands are available in package.json.
+- For create a user, you can run `php artisan make:user {username} {password}`
 
 If you need to work on the project, I recommend you to work with the ``php artisan serve``.
