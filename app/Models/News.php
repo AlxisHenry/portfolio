@@ -24,55 +24,55 @@ class News extends Model
 
     public function scopeTechnology($query) {
 
-        return $query->where('ThemePrincipal', '=', ' Technologique ')->where('Theme', 'like', '%Techno%')->whereBetween('news.identifier',[160,200])->limit(4)->get();
+        return $query->where('ThemePrincipal', '=', 'Technologique')->where('Theme', 'like', '%Techno%')->whereBetween('news.identifier',[160,200])->limit(4)->get();
 
     }
 
     public function scopeEconomy($query) {
 
-        return $query->where('ThemePrincipal', '=', ' Technologique ')->where('Theme', 'like', '%Economi%')->limit(4)->get();
+        return $query->where('ThemePrincipal', '=', 'Technologique')->where('Theme', 'like', '%Economi%')->limit(4)->get();
 
     }
 
     public function scopeSociety($query) {
 
-        return $query->where('ThemePrincipal', '=', ' Technologique ')->where('Theme', 'like', '%Société%')->limit(4)->get();
+        return $query->where('ThemePrincipal', '=', 'Technologique')->where('Theme', 'like', '%Société%')->limit(4)->get();
 
     }
 
     public function scopePegasus($query) {
 
-        return $query->where('ThemePrincipal', '=', ' Technologique ')->where('Theme', 'like', '%Pegasus%')->limit(4)->get();
+        return $query->where('ThemePrincipal', '=', 'Technologique')->where('Theme', 'like', '%Pegasus%')->limit(4)->get();
 
     }
 
     public function scopeCloud($query) {
 
-        return $query->where('ThemePrincipal', '=', ' Technologique ')->where('Theme', 'like', '%Cloud%')->limit(4)->get();
+        return $query->where('ThemePrincipal', '=', 'Technologique ')->where('Theme', 'like', '%Cloud%')->limit(4)->get();
 
     }
 
     public function scopeAlgo($query) {
 
-        return $query->where('ThemePrincipal', '=', ' Technologique ')->where('Theme', 'like', '%Algo%')->limit(4)->get();
+        return $query->where('ThemePrincipal', '=', 'Technologique')->where('Theme', 'like', '%Algo%')->limit(4)->get();
 
     }
 
     public function scopeInternet($query) {
 
-        return $query->where('ThemePrincipal', '=', ' Technologique ')->where('Theme', 'like', '%Internet%')->whereBetween('news.identifier',[200,250])->limit(4)->get();
+        return $query->where('ThemePrincipal', '=', 'Technologique')->where('Theme', 'like', '%Internet%')->whereBetween('news.identifier',[200,250])->limit(4)->get();
 
     }
 
     public function scopeCyber($query) {
 
-        return $query->where('ThemePrincipal', '=', ' Technologique ')->where('Theme', 'like', '%Cyber%')->whereBetween('news.identifier',[150, 200])->limit(4)->get();
+        return $query->where('ThemePrincipal', '=', 'Technologique')->where('Theme', 'like', '%Cyber%')->whereBetween('news.identifier',[150, 200])->limit(4)->get();
 
     }
 
     public function scopeAllTechnology($query) {
 
-        return $query->where('ThemePrincipal', '=', ' Technologique ')->get();
+        return $query->where('ThemePrincipal', '=', 'Technologique')->get();
 
     }
 
@@ -91,7 +91,7 @@ class News extends Model
 
     public function scopeKeyword($query, $KEYWORD) {
 
-        return $query->where('ThemePrincipal', '=', ' Technologique ')->where('title', 'like', '%'.$KEYWORD.'%')->orWhere('Theme', 'like', '%' . $KEYWORD . '%')->where('ThemePrincipal', '=', ' Technologique ')->get();
+        return $query->where('ThemePrincipal', '=', 'Technologique')->where('title', 'like', '%'.$KEYWORD.'%')->orWhere('Theme', 'like', '%' . $KEYWORD . '%')->where('ThemePrincipal', '=', 'Technologique')->get();
 
     }
 
