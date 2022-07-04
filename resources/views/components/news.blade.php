@@ -13,7 +13,11 @@
             <span>{{ substr($card->title,0, 75) }}...</span>
         </div>
 
-        @include('components.about', ['link' => '/news/' .  explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle))]])
+        @include('components.about',
+            [
+                'link' => '/news/' .  explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle))],
+                'blank' => false
+            ])
 
     </div>
 

@@ -36,7 +36,11 @@
 
                 </div>
 
-                @include('components.about', ['link' => $project->url_name])
+                @include('components.about',
+                    [
+                        'link' => 'https://' . $project->url_name . '.alexishenry.eu',
+                        'blank' => true
+                    ])
 
             </div>
 
