@@ -1,5 +1,9 @@
 
 export const RemoveLoader = () => {
+    // Scroll to top
+    window.scrollTo({
+        top: 0,
+    });
     // Hide loader
     const loader = document.querySelector('.loader')
     const body = document.querySelector('body')
