@@ -68,7 +68,7 @@ class NewsController extends Controller
         return view('templates.article',
             ['title' => 'News - HENRY ALEXIS',
              'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
-             'navbar' => 'null',
+             'navbar' => 'news',
              'ARTICLE' => $ARTICLE[0],
              'unwanted_array' => $this->UnwantedCharacters(),
              'Google' => $Google
@@ -96,7 +96,7 @@ class NewsController extends Controller
              'show_all_status' => true,
              'word' => $key,
              'items' => $no_items,
-             'navbar' => 'null',
+             'navbar' => 'news',
              'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
              'related_news' => $related_news,
              'Google' => $Google
