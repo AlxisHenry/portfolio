@@ -18,9 +18,9 @@
 
     <div class="__search__article__">
 
-        <div class="__contain__search__">
+        <div class="__contain__search__" data-search="{{$word ?? ''}}">
             <label>
-                <input type="text" class="__search__input__" placeholder="Search">
+                <input type="text" class="__search__input__" placeholder="Search" value="{{$word ?? ''}}" data-word="{{$word ?? ''}}">
             </label>
             <div class="__submit__search__"><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
@@ -68,7 +68,7 @@
 
                 </div>
 
-                <div class="__news__category__cards__" data-category-cards="{{ $word }}" data-nb-cards="{{ mb_strlen($word) }}">
+                <div class="__news__category__cards__" data-category-cards="{{ $word }}" data-nb-cards="{{ count($related_news) }}" data-related-word="{{$word}}">
 
                     @foreach($related_news as $card)
 
