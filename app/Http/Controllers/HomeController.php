@@ -59,28 +59,15 @@ class HomeController extends Controller
                                         'Google' => $Google]);
     }
 
-    public function ContactUsForm(Request $request) {
+    public function Contact(Request $request) {
 
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'subject'=>'required',
-            'message' => 'required'
-        ]);
+        if ($request->isMethod('get')) {
+            return back();
+        }
 
-        \Mail::send('mail', array(
-            'name' => $request->get('name'),
-            'email' => $request->get('email'),
-            'phone' => $request->get('phone'),
-            'subject' => $request->get('subject'),
-            'user_query' => $request->get('message'),
-        ), function($message) use ($request){
-            $message->from($request->email);
-            $message->to('digambersingh126@gmail.com', 'Admin')->subject($request->get('subject'));
-        });
+        // todo => Envoyer le mail lors de la validation du formulaire
 
-        return back()->with('success', 'We have received your message and would like to thank you for writing to us.');
+        return back()->with('success', 'Your message has been sent !');
 
     }
 

@@ -1,6 +1,18 @@
-<div class="contact-form-container">
+@isset($success)
 
-    <form class="__contact__form__" method="post" action="{{ route('home.contact') }}">
+    <div class="mail_sent_with_success">
+
+        <img src="{{ url('assets/mail.png') }}" alt="">
+        {{ $success }}
+
+    </div>
+
+@endisset
+
+@empty($success)
+    <div class="contact-form-container">
+
+    <form class="__contact__form__" method="post" action="/contact">
 
         @csrf
 
@@ -18,7 +30,7 @@
 
             <div class="email form-group">
                 <i class="fa-solid fa-asterisk"></i>
-                <input type="text" placeholder="Email" name="email" class="form-control {{ $errors->has('email') ? 'form-error' : '' }}" required="required">
+                <input type="email" placeholder="Email" name="email" class="form-control {{ $errors->has('email') ? 'form-error' : '' }}" required="required">
                 @if ($errors->has('email'))
                     <div class="error">
                         {{ $errors->first('email') }}
@@ -55,14 +67,15 @@
                     </div>
                 </div>
                 @if ($errors->has('content'))<
-                    <div class="error">
-                        {{ $errors->first('content') }}
-                    </div>
+                <div class="error">
+                    {{ $errors->first('content') }}
+                </div>
                 @endif
             </div>
 
             <div class="verification form-group">
                 <label for="verification[]"> Resolve {{ 4 }} + {{ 0 }} </label>
+                <input type="hidden" value="{{4}}">
                 <select name="verification[]" class="form-control" required="required">
                     @for($i = 0; $i < 15; $i++)
                         <option value="{{ $i }}">{{ $i }}</option>
@@ -87,3 +100,4 @@
     </form>
 
 </div>
+@endempty
