@@ -119,6 +119,7 @@
         align-items: center;
         justify-content: flex-start;
         flex-direction: row;
+        flex-wrap: wrap;
         gap: 20px;
         .__article_keyword__ {
           min-width: 50px;

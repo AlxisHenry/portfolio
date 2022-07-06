@@ -22,15 +22,15 @@
                     <main class="__article__center__presentation__">
                         <figure class="__article__image__">
                             <picture>
-                                <img src="{{ $ARTICLE->LinkImage }}" alt="{{ $ARTICLE->AltImage }}" title="{{ $ARTICLE->title }}">
+                                <img src="{{ $ARTICLE->LinkImage }}" alt="{{ $ARTICLE->AltImage === 'null' ? '' : ($ARTICLE->AltImage ?? '') }}" title="{{ $ARTICLE->title }}">
                             </picture>
                             <figcaption>
-                                {{ $ARTICLE->AltImage ?? '' }}
+                                {{ $ARTICLE->AltImage === 'null' ? '' : ($ARTICLE->AltImage ?? '') }}
                             </figcaption>
                         </figure>
                         <div class="__article__right__menu__">
                             <div class="__article_introduction__">
-                                {{ $ARTICLE->AltImage ??'Cet article ne contient pas de description' }}
+                                {{ $ARTICLE->introduction === 'null' ? $ARTICLE->AltImage : ($ARTICLE->introduction ?? '') }}
                             </div>
 
                             <div class="__article_url__">
