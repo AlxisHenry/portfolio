@@ -15,7 +15,10 @@
 
         @include('components.about',
             [
-                'link' => '/news/' .  explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle))],
+                'link' => '/news/' .
+                (strlen(explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle))]) === 0
+                ? explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle)) - 1]
+                : explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle))]),
                 'blank' => false
             ])
 
