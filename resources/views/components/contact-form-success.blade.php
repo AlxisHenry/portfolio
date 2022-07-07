@@ -2,10 +2,14 @@
 
     <div class="alert-success-image">
 
-        <img src="" alt="success-image">
+        <img src="{{ url('assets/mail.png') }}" alt="success-image">
 
     </div>
 
-    {{ Session::get('success') }}
+    <div>
+
+        Your message has been sent !
+
+    </div>
 
 </div>

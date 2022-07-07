@@ -1,16 +1,10 @@
-@isset($success)
+@if(!session('success'))
 
-    <div class="mail_sent_with_success">
+    @include('components.contact-form-success')
 
-        <img src="{{ url('assets/mail.png') }}" alt="">
-        {{ $success }}
+@else
 
-    </div>
-
-@endisset
-
-@empty($success)
-    <div class="contact-form-container">
+<div class="contact-form-container">
 
     <form class="__contact__form__" method="post" action="/contact">
 
@@ -100,4 +94,5 @@
     </form>
 
 </div>
-@endempty
+
+@endif

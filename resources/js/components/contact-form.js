@@ -4,6 +4,10 @@ const CountContactAreaLength = () => {
     const keyCount = document.querySelector(".container-length-indicator .length-indicator .indicator .on")
     const limit = document.querySelector(".container-length-indicator .length-indicator .indicator .limit")
 
+    if (!textArea || !keyCount || !limit) {
+        return
+    }
+
     textArea.addEventListener('keyup', () => {
         let count = textArea.value.length
         keyCount.innerHTML = count.toLocaleString()

@@ -8,6 +8,7 @@ use App\Models\Projects;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use MongoDB\Driver\Session;
 use Stichoza\GoogleTranslate\GoogleTranslate;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Mail;
@@ -56,18 +57,19 @@ class HomeController extends Controller
                                         'spoiler_cards' => $spoiler_cards,
                                         'Boards' =>$board_cards,
                                         'Projects' => $projects_cards,
-                                        'Google' => $Google]);
+                                        'Google' => $Google,
+        ]);
     }
 
     public function Contact(Request $request) {
 
         if ($request->isMethod('get')) {
-            return back();
+            return redirect()->back();
         }
 
-        // todo => Envoyer le mail lors de la validation du formulaire
+         // todo => Envoyer le mail lors de la validation du formulaire
 
-        return back()->with('success', 'Your message has been sent !');
+        return redirect()->back()->with('success', true);
 
     }
 

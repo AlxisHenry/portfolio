@@ -1,0 +1,13 @@
+.alert-success {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  div {
+    font-size: 1.225rem;
+    font-weight: 500;
+  }
+}

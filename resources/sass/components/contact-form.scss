@@ -1,3 +1,7 @@
+#__ContactForm {
+  min-height: 900px;
+}
+
 .contact-form-container {
   max-width: 800px;
   width: 100%;
@@ -5,7 +9,6 @@
   align-items: flex-start;
   justify-content: center;
   height: auto;
-  min-height: 600px;
 
   .__contact__form__ {
     margin-left: 30px;
