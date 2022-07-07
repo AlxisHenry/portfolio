@@ -83,8 +83,10 @@ class HomeController extends Controller
             'verification' => 'required|between:'.$random_number.','.$random_number.'|int'
         ]);
 
+        $elements = $request->all();
+
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate)->withInput()->with('scroll', true);
+            return redirect()->back()->withErrors($validate)->withInput()->with('scroll', true)->with(compact('elements'));
         }
 
         $owner_email = "alexis.henry150357@gmail.com";
