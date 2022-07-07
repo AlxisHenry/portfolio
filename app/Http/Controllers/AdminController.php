@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Board;
+use App\Models\Contact;
 use App\Models\News;
 use App\Models\Projects;
 use App\Models\User;
@@ -33,6 +34,9 @@ class AdminController extends Controller
 
     public function View(string $view, Request $request)
     {
+        if($request->isMethod('GET')) {
+            return back();
+        }
 
         if (isset($_POST['username']) && isset($_POST['password'])) {
             $username = $request->input('username');
@@ -61,6 +65,8 @@ class AdminController extends Controller
             $all = Board::all();
         } elseif ($view === 'projects') {
             $all = Projects::all();
+        } elseif ($view === 'contacts') {
+            $all = Contact::all();
         } else {
             return abort('404');
         }
@@ -100,6 +106,9 @@ class AdminController extends Controller
                 break;
             case 'resources':
                 $target = Board::byid($id);
+                break;
+            case 'contacts':
+                $target = Contact::byid($id);
                 break;
             default:
                 return abort('404');

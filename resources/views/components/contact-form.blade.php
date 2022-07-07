@@ -24,7 +24,7 @@
 
             <div class="name form-group">
                 <i class="fa-solid fa-asterisk"></i>
-                <input type="text" placeholder="First Name" name="name" class="form-control {{ $errors->has('name') ? 'form-error' : '' }}" required="required">
+                <input type="text" id="name" placeholder="First Name" name="name" class="form-control {{ $errors->has('name') ? 'form-error' : '' }}" required="required">
                 @if ($errors->has('name'))
                     <div class="error">
                         {{ $errors->first('name') }}
@@ -34,7 +34,7 @@
 
             <div class="email form-group">
                 <i class="fa-solid fa-asterisk"></i>
-                <input type="email" placeholder="Email" name="email" class="form-control {{ $errors->has('email') ? 'form-error' : '' }}" required="required">
+                <input type="email" id="email" placeholder="Email" name="email" class="form-control {{ $errors->has('email') ? 'form-error' : '' }}" required="required">
                 @if ($errors->has('email'))
                     <div class="error">
                         {{ $errors->first('email') }}
@@ -48,7 +48,7 @@
 
             <div class="object form-group">
                 <i class="fa-solid fa-asterisk"></i>
-                <input type="text" placeholder="Object" name="object" class="form-control {{ $errors->has('object') ? 'form-error' : '' }}" required="required">
+                <input type="text" placeholder="Object"  id="object" name="object" class="form-control {{ $errors->has('object') ? 'form-error' : '' }}" required="required">
                 @if ($errors->has('object'))
                     <div class="error">
                         {{ $errors->first('object') }}
@@ -62,7 +62,7 @@
 
             <div class="content form-group">
                 <i class="fa-solid fa-asterisk"></i>
-                <textarea name="content" placeholder="Message" class="form-control {{ $errors->has('content') ? 'form-error' : '' }} area-text-form" rows="4" required="required"  maxlength="800"></textarea>
+                <textarea name="content" id="content" placeholder="Message" class="form-control {{ $errors->has('content') ? 'form-error' : '' }} area-text-form" rows="4" required="required"  maxlength="800"></textarea>
                 <div class="container-length-indicator">
                     <div class="length-indicator">
                         <div class="indicator">
@@ -73,9 +73,9 @@
             </div>
 
             <div class="verification form-group">
-                <label for="verification[]"> Resolve {{ round($random_number * (2/3)) }} + {{ round($random_number * (1/3)) }} </label>
+                <label for="verification"> Resolve {{ round($random_number * (2/3)) }} + {{ round($random_number * (1/3)) }} </label>
                 <input type="hidden" name="random_number" value="{{ $random_number }}">
-                <select name="verification" class="form-control {{ $errors->has('verification') ? 'form-error' : '' }}" required="required">
+                <select name="verification" id="verification" class="form-control {{ $errors->has('verification') ? 'form-error' : '' }}" required="required">
                     <option selected disabled>Prove you're not a robot !</option>
                     @for($i = round($random_number * 1/2); $i < $random_number + 6; $i++)
                         <option value="{{ $i }}">{{ $i }}</option>

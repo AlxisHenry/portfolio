@@ -19,6 +19,11 @@ class Administrator
 
     public function handle(Request $request, Closure $next)
     {
+
+        if($request->isMethod('get')) {
+            return abort('404');
+        }
+
         if(Session::get('username') && Session::get('password')) {
 
             $username = Session::get('username');

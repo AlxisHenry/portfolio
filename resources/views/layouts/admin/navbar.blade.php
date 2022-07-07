@@ -23,6 +23,13 @@
             </form>
         </div>
 
+        <div class="navbar-button {{ $view === "contacts" ? "active-navbar-button" : "" }}">
+            <form method="POST" action="/admin/contacts" data-url="/admin/contacts">
+                @csrf
+                <input type="submit" VALUE="Contacts">
+            </form>
+        </div>
+
     </div>
 
 </nav>

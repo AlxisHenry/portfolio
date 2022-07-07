@@ -1,6 +1,6 @@
-.contain-all-projects-list, .contain-all-resources-list, .contain-all-news-list {
+.contain-all-projects-list, .contain-all-resources-list, .contain-all-news-list, .contain-all-contacts-list {
   margin-top: 40px;
-  .add-new-resources, .add-new-projects, .add-new-news {
+  .add-new-resources, .add-new-projects, .add-new-news, .add-new-contacts {
     width: 100%;
     display: flex;
     align-items: center;
@@ -23,7 +23,7 @@
   }
 }
 
-.admin-resources, .admin-projects, .admin-news {
+.admin-resources, .admin-projects, .admin-news, .admin-contacts {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
