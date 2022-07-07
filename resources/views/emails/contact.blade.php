@@ -1,12 +1,17 @@
 @component('mail::message')
-# Introduction
+# Auteur du message : {{ $contact['name']  }}
 
-The body of your message.
+Adresse email indiquée par l'utilisateur : {{ $contact['email'] }}
 
-@component('mail::button', ['url' => ''])
-Button Text
+---
+
+## Contenu du message
+
+{{ $contact['content'] }}
+
+@component('mail::button', ['url' => 'https://alexishenry.eu/login'])
+MORE
 @endcomponent
 
-Thanks,<br>
-{{ config('app.name') }}
+Have a nice day.
 @endcomponent
