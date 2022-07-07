@@ -7,11 +7,13 @@ use App\Models\Contact;
 use App\Models\News;
 use App\Models\Projects;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Stichoza\GoogleTranslate\GoogleTranslate;
 use Illuminate\Routing\Controller;
 use App\Random\Random;
+use App\Mail\ContactMailable;
 
 class HomeController extends Controller
 {
@@ -81,12 +83,14 @@ class HomeController extends Controller
             'verification' => 'required|between:'.$random_number.','.$random_number.'|int'
         ]);
 
-
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate)->withInput()->with('scroll', true);
         }
 
+        $owner_email = "alexis.henry150357@gmail.com";
+
         Contact::create($request->all());
+        Mail::to($owner_email)->queue(new ContactMailable($request->all()));
 
         return redirect()->back()->with('success', true)->with('scroll', true);
 
