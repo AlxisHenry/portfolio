@@ -1,4 +1,4 @@
-import {CountContactAreaLength} from "../components/contact-form"
+import {CheckControllerScrollReturn, CountContactAreaLength} from "../components/contact-form"
 import {InputAnimation} from "../components/about"
 import {CopyToClipboard} from "../components/copied-to-clipboard"
 import {ScrollToContact} from "../components/to-contact";
@@ -34,6 +34,7 @@ window.addEventListener('load', (e) => {
     CopyToClipboard()
     CountContactAreaLength()
     InputAnimation(e)
+    CheckControllerScrollReturn()
     Skills()
     MergeFooter()
 })

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Random\Random;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Stichoza\GoogleTranslate\GoogleTranslate;
@@ -34,13 +35,17 @@ class AboutController extends Controller
 
     public function About(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
+
+        $random_number = new Random();
+
         return view('templates.about', [
             'title' => 'About me - HENRY ALEXIS',
             'navbar' => 'about',
             'og_description' => 'Portfolio - HENRY ALEXIS - About me',
             'skills' => $this->GetAllSkills(),
             'animateTiming' => 1800,
-            'resetTiming' => 1800
+            'resetTiming' => 1800,
+            'random_number' => $random_number->GetRandomNumber()
         ]);
     }
 

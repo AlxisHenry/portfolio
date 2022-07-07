@@ -19,6 +19,21 @@ const CountContactAreaLength = () => {
     })
 }
 
+const CheckControllerScrollReturn = (to = document.querySelector('#__ContactForm')) => {
+    console.log("Get Item")
+    if (localStorage.getItem('scroll')) {
+        let scroll = localStorage.getItem('scroll')
+        localStorage.removeItem('scroll')
+        if (scroll) {
+            console.log("SCROLL")
+            window.scrollTo({
+                top: to.offsetTop - 25,
+            });
+        }
+    }
+}
+
 module.exports = {
-    CountContactAreaLength: CountContactAreaLength
+    CountContactAreaLength: CountContactAreaLength,
+    CheckControllerScrollReturn: CheckControllerScrollReturn
 }

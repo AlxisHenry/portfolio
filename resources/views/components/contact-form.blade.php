@@ -1,4 +1,14 @@
-@if(!session('success'))
+@if(session('scroll'))
+
+    <script>
+
+        localStorage.setItem('scroll', true)
+
+    </script>
+
+@endif
+
+@if(session('success'))
 
     @include('components.contact-form-success')
 
@@ -14,7 +24,7 @@
 
             <div class="name form-group">
                 <i class="fa-solid fa-asterisk"></i>
-                <input type="text" placeholder="Name" name="name" class="form-control {{ $errors->has('name') ? 'form-error' : '' }}" required="required">
+                <input type="text" placeholder="First Name" name="name" class="form-control {{ $errors->has('name') ? 'form-error' : '' }}" required="required">
                 @if ($errors->has('name'))
                     <div class="error">
                         {{ $errors->first('name') }}
@@ -60,21 +70,22 @@
                         </div>
                     </div>
                 </div>
-                @if ($errors->has('content'))<
-                <div class="error">
-                    {{ $errors->first('content') }}
-                </div>
-                @endif
             </div>
 
             <div class="verification form-group">
-                <label for="verification[]"> Resolve {{ 4 }} + {{ 0 }} </label>
-                <input type="hidden" value="{{4}}">
-                <select name="verification[]" class="form-control" required="required">
-                    @for($i = 0; $i < 15; $i++)
+                <label for="verification[]"> Resolve {{ round($random_number * (2/3)) }} + {{ round($random_number * (1/3)) }} </label>
+                <input type="hidden" name="random_number" value="{{ $random_number }}">
+                <select name="verification" class="form-control {{ $errors->has('verification') ? 'form-error' : '' }}" required="required">
+                    <option selected disabled>Prove you're not a robot !</option>
+                    @for($i = round($random_number * 1/2); $i < $random_number + 6; $i++)
                         <option value="{{ $i }}">{{ $i }}</option>
                     @endfor
                 </select>
+                @if($errors->has('verification'))
+                    <div class="error">
+                        Please, solve the problem.
+                    </div>
+                @endif
             </div>
 
             <div class="submit form-group">

@@ -6,7 +6,7 @@ import * as global from "../main"
 import * as BoardCards from "../components/board-cards"
 import * as Loader from "../components/loader"
 import {CopyToClipboard} from "../components/copied-to-clipboard"
-import {CountContactAreaLength} from "../components/contact-form"
+import {CheckControllerScrollReturn, CountContactAreaLength} from "../components/contact-form"
 import {ScrollToContact} from "../components/to-contact";
 import {ArrowEvent} from "../components/to-about";
 
@@ -91,6 +91,7 @@ window.addEventListener('load', (e) => {
         InputAnimation(e)
         ProjectsCards.ProjectAnimation(e)
         BoardCards.BoardCardsAnimation()
+        CheckControllerScrollReturn()
     }, 800)
 
 })

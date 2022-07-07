@@ -129,6 +129,18 @@
           transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         }
 
+        .error {
+          font-family: "Libre Franklin", sans-serif;
+          font-size: 13px;
+          margin-top: 6px;
+          margin-bottom: 6px;
+          color: #495057;
+        }
+
+        .form-error {
+          border-color: $Clay;
+        }
+
         .submit-input {
           height: 75px;
           background-color: $Clay;
