@@ -33,6 +33,12 @@ Route::redirect('home', '/');
 
 // Routes to auth views
 
+Route::get('admin/server/laravel', function () { return abort('404'); });
+Route::get('admin/server/php', function () { return abort('404'); });
+Route::get('admin/{view}/new', function () { return abort('404'); });
+Route::get('admin/{view}/{id}/{action}', function () { return abort('404'); });
+Route::get('admin/{view}', function () { return abort('404'); });
+
 Route::post('admin/{view}', [AdminController::class, 'View'])->name('admin.view');
 
 Route::middleware(Administrator::class)->group(function() {
