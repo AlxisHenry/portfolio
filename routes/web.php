@@ -24,7 +24,6 @@ Route::get('resources', [BoardController::class, 'Board'])->name('board');
 Route::get('news', [NewsController::class, 'News'])->name('news');
 Route::get('news/{url}', [NewsController::class, 'NewsArticle'])->name('news.article');
 Route::get('news/word/{key}', [NewsController::class, 'NewsKeyword'])->name('news.keyword');
-Route::get('language', [LanguagesController::class, 'ShowLanguageList'])->name('language');
 Route::get('language/{lang}', [LanguagesController::class, 'WikipediaDefinition'])->name('language.lang');
 Route::get('contact', [HomeController::class, 'Contact'])->name('contact-me-redirection');
 Route::post('contact', [HomeController::class, 'Contact'])->name('contact-me');

@@ -12,7 +12,7 @@ class LanguagesController extends Controller
     {
     }
 
-    public function MatchLanguages(string $lang, bool $take): string|array
+    public function MatchLanguages(bool $take, string $lang = null): string|array
     {
 
         $Languages = [
@@ -63,7 +63,21 @@ class LanguagesController extends Controller
     public function WikipediaDefinition(string $lang): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
 
-        $formatLang = $this->MatchLanguages($lang, 0);
+        if ($lang === 'all') {
+            $all_languages = $this->MatchLanguages(true);
+            $languages = [];
+            foreach ($all_languages as $k => $l) {
+                in_array($l, $languages) ?  : $languages[$k] = $l;
+            }
+            return view('templates.language', [
+                'title' => 'Languages - HENRY ALEXIS',
+                'navbar' => 'null',
+                'show_all_languages' => true,
+                'languages' => $languages
+            ]);
+        }
+
+        $formatLang = $this->MatchLanguages(false, $lang);
 
         if($formatLang) {
 
@@ -78,12 +92,4 @@ class LanguagesController extends Controller
         }
 
     }
-
-    public function ShowLanguageList() {
-
-        return abort(404);
-
-    }
-
-
 }

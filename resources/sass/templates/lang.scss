@@ -1,0 +1,40 @@
+section {
+  &.section-language {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  &.section-specific-lang {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+h1 {
+  &.h1-language {
+    height: 80px;
+    text-decoration: underline;
+    flex: 2;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+
+
+div.contain-all-lang {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 3;
+}
+
+@media screen and (max-width: 500px) {
+  section.section-language {
+    flex-direction: column;
+    align-items: center;
+  }
+}

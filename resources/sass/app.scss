@@ -54,6 +54,7 @@
 @import 'templates/admin/admin-view'; /* Admin --- View - (url) => /admin/{view} */
 @import 'templates/admin/admin-action'; /* Admin --- Action - (url) => /admin/{view}/{id}/{action} */
 @import 'templates/about-me'; /* Access to about-me page with url /about */
+@import 'templates/lang'; /* (url) => /language/{lang} */
 
 /* END --- Templates */
 
