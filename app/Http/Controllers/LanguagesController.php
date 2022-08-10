@@ -52,6 +52,12 @@ class LanguagesController extends Controller
         }
     }
 
+    public function RANDOM_LANG():string
+    {
+        $all_languages = $this->MatchLanguages(true);
+        return array_rand($all_languages);
+    }
+
     public function WIKIPEDIA_API_QUERY(string $lang):stdClass {
 
         $url = "https://en.wikipedia.org/w/api.php?action=query&titles=$lang&prop=extracts&format=json&exintro=1";
@@ -73,7 +79,8 @@ class LanguagesController extends Controller
                 'title' => 'Languages - HENRY ALEXIS',
                 'navbar' => 'null',
                 'show_all_languages' => true,
-                'languages' => $languages
+                'languages' => $languages,
+                'generate' => $this->RANDOM_LANG()
             ]);
         }
 
@@ -81,10 +88,13 @@ class LanguagesController extends Controller
 
         if($formatLang) {
 
-            return view('templates.language', ['title' => ucfirst($lang) . ' - HENRY ALEXIS',
-                                                    'navbar' => 'null',
-                                                    'url' => 'https://en.wikipedia.org/wiki/' . $formatLang,
-                                                    'lang' => $this->WIKIPEDIA_API_QUERY($formatLang)]);
+            return view('templates.language', [
+                'title' => ucfirst($lang) . ' - HENRY ALEXIS',
+                'navbar' => 'null',
+                'url' => 'https://en.wikipedia.org/wiki/' . $formatLang,
+                'lang' => $this->WIKIPEDIA_API_QUERY($formatLang),
+                'generate' => $this->RANDOM_LANG()
+            ]);
 
         } else {
 
