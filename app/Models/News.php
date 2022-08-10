@@ -24,7 +24,7 @@ class News extends Model
 
     public function scopeTechnology($query) {
 
-        return $query->where('ThemePrincipal', '=', 'Technologique')->where('Theme', 'like', '%Techno%')->whereBetween('news.identifier',[160,200])->limit(4)->get();
+        return $query->where('ThemePrincipal', '=', 'Technologique')->where('Theme', 'like', '%Techno%')->whereBetween('news.identifier',[160,200])->limit(8)->get();
 
     }
 
@@ -66,7 +66,7 @@ class News extends Model
 
     public function scopeCyber($query) {
 
-        return $query->where('ThemePrincipal', '=', 'Technologique')->where('Theme', 'like', '%Cyber%')->whereBetween('news.identifier',[150, 200])->limit(4)->get();
+        return $query->where('ThemePrincipal', '=', 'Technologique')->where('Theme', 'like', '%Cyber%')->whereBetween('news.identifier',[150, 200])->limit(8)->get();
 
     }
 
@@ -88,6 +88,9 @@ class News extends Model
 
     }
 
+    public function scopeTechnologyWatch($query) {
+        return $query->where('ThemePrincipal', '=', 'Technologique')->where('Theme', 'like', '%Veille Technologique%')->limit(8)->get();
+    }
 
     public function scopeKeyword($query, $KEYWORD) {
 

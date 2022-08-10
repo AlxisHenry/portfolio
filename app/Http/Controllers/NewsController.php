@@ -38,12 +38,12 @@ class NewsController extends Controller
         $Google = $this->GoogleTranslate();
 
         $categories = [
-            "pegasus" => News::pegasus(),
+            "veille technologique" => News::technologyWatch(),
+            "cybersécurité" => News::cyber(),
             "technologie" => News::technology(),
-            "économie" => News::economy(),
+            "pegasus" => News::pegasus(),
             "internet" => News::internet(),
             "cybersécurité" => News::cyber(),
-            "société" => News::society()
         ];
 
         return view('templates.news',
