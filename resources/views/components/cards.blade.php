@@ -38,7 +38,7 @@
 
                 @include('components.about',
                     [
-                        'link' => 'https://' . $project->url_name . '.alexishenry.eu',
+                        'link' => 'https://' . $project->url_name,
                         'blank' => true
                     ])
 
