@@ -34,6 +34,6 @@
     <link rel="manifest" href="{{ url('assets/icons/site.webmanifest') }}">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <script src="https://analytics.alexishenry.eu/sync.js"></script>
+    <script src="https://analytics.alexishenry.eu/sync.js" data-id="1"></script>
 </head>
 
