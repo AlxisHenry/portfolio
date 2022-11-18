@@ -2,51 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Random\Random;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Stichoza\GoogleTranslate\GoogleTranslate;
+use App\Helpers\Rand;
+use App\Helpers\Skills;
 use Illuminate\Routing\Controller;
 
 class AboutController extends Controller
 {
-
-    public function __construct()
+    public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
-
-    }
-
-    public function GetAllSkills(): array|bool {
-
-        $AllSkills['tech'] = [
-            'bash', 'apache', 'nginx', 'docker', 'vagrant', 'git', 'phpstorm', 'vscode', 'python'
-        ];
-        $AllSkills['front'] = [
-            'javascript', 'vuejs', 'react', 'typescript', 'jquery', 'scss'
-        ];
-        $AllSkills['back'] = [
-            'php', 'nodejs', 'laravel'
-        ];
-
-        return $AllSkills;
-
-
-    }
-
-    public function About(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
-    {
-
-        $random_number = new Random();
-
-        return view('templates.about', [
+        return view('pages.about', [
             'title' => 'About me - HENRY ALEXIS',
             'navbar' => 'about',
             'og_description' => 'Portfolio - HENRY ALEXIS - About me',
-            'skills' => $this->GetAllSkills(),
+            'skills' => Skills::all(),
             'animateTiming' => 1800,
             'resetTiming' => 1800,
-            'random_number' => $random_number->GetRandomNumber()
+            'random_number' => Rand::int(1, 10),
         ]);
     }
-
 }

@@ -8,24 +8,13 @@ use Illuminate\Routing\Controller;
 
 class BoardController extends Controller
 {
-    //
-
-    public function __construct()
+    public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
-
+        return view('pages.board', [
+            'title' => 'Resources - HENRY ALEXIS',
+            'navbar' => 'resources',
+            'og_description' => 'Portfolio - HENRY ALEXIS - Resources',
+            'Boards' => Board::all()
+        ]);
     }
-
-    public function AllBoards(): \Illuminate\Database\Eloquent\Collection
-    {
-        return Board::all();
-    }
-
-    public function Board(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
-    {
-        return view('templates.board', ['title' => 'Resources - HENRY ALEXIS',
-                    'navbar' => 'resources',
-                    'og_description' => 'Portfolio - HENRY ALEXIS - Resources',
-                    'Boards' => $this->AllBoards()]);
-    }
-
 }
