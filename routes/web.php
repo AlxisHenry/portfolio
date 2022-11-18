@@ -1,48 +1,100 @@
 <?php
 
-use App\Http\Controllers\LanguagesController;
-use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Route;
+
+/**
+ * Controllers
+ */
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AboutController;
-use App\Http\Middleware\Administrator;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\AdministrationController;
+use App\Http\Controllers\EnvironmentController;
+use App\Http\Controllers\LegalNoticeController;
 
-/* RouteServiceProvider */
+/**
+ * Middlewares
+ */
+use App\Http\Middleware\ElevatedPermissions;
 
-// Routes to globals views
+Route::get('/', [HomeController::class, 'index'])->name('index');
 
-Route::get('/', [HomeController::class, 'Home'])->name('home');
-Route::post('/', [HomeController::class, 'Home'])->name('home.contact');
-Route::get('about', [AboutController::class, 'About'])->name('about');
-Route::get('projects', [ProjectsController::class, 'Projects'])->name('projects');
-Route::get('projects/{name}', [ProjectsController::class, 'TargetProject'])->name('projects.target');
-Route::get('resources', [BoardController::class, 'Board'])->name('board');
-Route::get('news', [NewsController::class, 'News'])->name('news');
-Route::get('news/{url}', [NewsController::class, 'NewsArticle'])->name('news.article');
-Route::get('news/word/{key}', [NewsController::class, 'NewsKeyword'])->name('news.keyword');
-Route::get('language/{lang}', [LanguagesController::class, 'WikipediaDefinition'])->name('language.lang');
-Route::get('contact', [HomeController::class, 'Contact'])->name('contact-me-redirection');
-Route::post('contact', [HomeController::class, 'Contact'])->name('contact-me');
-Route::get('login', [AdminController::class, 'Login'])->name('login');
+Route::prefix('about')->group(
+    function() {
+        Route::get('/', [AboutController::class, 'index'])->name('about.index');
+    }
+);
+
+Route::prefix('resources')->group(
+    function() {
+        Route::get('/', [BoardController::class, 'index'])->name('board.index');
+    }
+);
+
+Route::prefix('projects')->group(
+    function() {
+        Route::get('/', [ProjectController::class, 'index'])->name('project.index');
+    }
+);
+
+Route::prefix('news')->group(
+    function() {
+        Route::get('/', [NewsController::class, 'index'])->name('news');
+        Route::get('/{url}', [NewsController::class, 'show'])->name('news.article');
+        Route::get('/word/{key}', [NewsController::class, 'keyword'])->name('news.keyword');
+    }
+);
+
+Route::prefix('languages')->group(
+    function() {
+        Route::get('/', [LanguageController::class, 'index'])->name('languages.index');
+        Route::get('/{name}', [LanguageController::class, 'show'])->name('languages.show');
+    }
+);
+
+Route::prefix('contact')->group(
+    function () {
+        Route::get('/', [ContactController::class, 'index'])->name('contact.index');
+        Route::post('/', [ContactController::class, 'send'])->name('contact.send');
+    }
+);
+
+Route::get('legal-notice', [LegalNoticeController::class, 'index'])->name('legal-notice.index');
+
+/**
+ * Redirections
+ */
 Route::redirect('home', '/');
 
-// Routes to auth views
+/**
+ * Authentification
+ */
+Route::get('login', [AdministrationController::class, 'login'])->name('administration.login.get');
+Route::post('login', [AdministrationController::class, 'auth'])->name('administration.login.post');
 
-Route::get('admin/server/laravel', function () { return abort('404'); });
-Route::get('admin/server/php', function () { return abort('404'); });
-Route::get('admin/{view}/new', function () { return abort('404'); });
-Route::get('admin/{view}/{id}/{action}', function () { return abort('404'); });
-Route::get('admin/{view}', function () { return abort('404'); });
-
-Route::post('admin/{view}', [AdminController::class, 'View'])->name('admin.view');
-
-Route::middleware(Administrator::class)->group(function() {
-    Route::post('admin/server/laravel', [AdminController::class, 'Laravel'])->name('laravel.welcome');
-    Route::post('admin/server/php', [AdminController::class, 'Environment'])->name('phpinfo');
-    Route::post('admin/{view}/new', [AdminController::class, 'New'])->name('admin.view.new');
-    Route::post('admin/{view}/{id}/{action}', [AdminController::class, 'Action'])->name('admin.view.action');
-});
+/**
+ * Administration
+ */
+Route::middleware(ElevatedPermissions::class)->group(
+    function() {
+        Route::prefix('admin/{view}')->group(
+            function() {
+                Route::get('/', [AdministrationController::class, 'index'])->name('administration.view');
+                Route::get('/new', [AdministrationController::class, 'create'])->name('administration.view.create');
+                Route::post('/new', [AdministrationController::class, 'store'])->name('administration.view.store');
+                Route::get('/{id}/{action}', [AdministrationController::class, 'show'])->name('administration.view.show');
+                Route::post('/{id}/{action}', [AdministrationController::class, 'update'])->name('administration.view.update');
+            }
+        );
+        Route::prefix('admin/server')->group(
+            function() {
+                Route::get('/laravel', [EnvironmentController::class, 'laravel'])->name('administration.server.laravel');
+                Route::get('/phpinfo', [EnvironmentController::class, 'phpinfo'])->name('administration.server.phpinfo');
+            }
+        );
+    }
+);
