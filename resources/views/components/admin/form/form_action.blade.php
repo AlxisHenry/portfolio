@@ -1,12 +1,15 @@
     <form   method="post"
         @if($type === 'new')
-        action="/admin/{{$view}}/new"
+        action="{{route('administration.view.store', ['view' => $view])}}"
         @else
-        action="/admin/{{$view}}/{{$data->identifier}}/{{$action}}"
-        data-url-action="/admin/{{$view}}/{{$data->identifier}}/{{$action}}"
-        data-id="{{$data->identifier}}"
+        action="{{
+            route('administration.view.update', [
+                'view' => $view, 
+                'id' => $data->identifier,
+                'action' => $action
+            ])
+            }}"
         @endif
-        data-action="{{$action}}"
         class="action-form">
 
     @csrf

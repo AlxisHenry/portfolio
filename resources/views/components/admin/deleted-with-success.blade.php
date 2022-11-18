@@ -6,16 +6,6 @@
         <span>deleted</span>.
     </span>
 
-    <form method="POST" action="/admin/{{$view}}">
-
-        <input type="hidden" name="id" value="{{$data->identifier ?? $data->id}}">
-
-        @csrf
-
-        <button type="submit">
-            Back to {{ucfirst($view)}}
-        </button>
-
-    </form>
+    <a href="{{route('administration.view')}}">Back to {{ucfirst($view)}}</a>
 
 </div>

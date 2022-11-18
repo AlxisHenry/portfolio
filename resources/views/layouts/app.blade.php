@@ -1,5 +1,5 @@
 @include('layouts.header')
-@if(Route::currentRouteName() === "home" || Route::currentRouteName() === 'home.contact')
+@if(Route::currentRouteName() === "index" || Route::currentRouteName() === 'contact.get')
         <body class="loader-body">
         @include('layouts.loader', ['status' => true])
     @else
