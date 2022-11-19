@@ -14,6 +14,10 @@ class LegalNoticeController extends Controller
 {
     public function index()
     {
-        return view('pages.legal-notice', []);
+        return view('pages.legals', [
+            'title' => 'Portfolio - HENRY ALEXIS',
+            'navbar' => '',
+            'og_description' => 'Portfolio - HENRY ALEXIS - Homepage'
+        ]);
     }
 }

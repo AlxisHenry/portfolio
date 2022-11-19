@@ -34,6 +34,14 @@
       cursor: pointer;
     }
 
+    .__footer__main__link__ {
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        color: $LinkColor;
+      }
+    }
+
   }
 
 }
