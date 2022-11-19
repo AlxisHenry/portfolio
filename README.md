@@ -2,23 +2,23 @@
 
 <div align="center">
 
-  <img src="public/static/images/logo.png" alt="logo" width="400" height="auto" />
-  <h1>CCI-APPRO</h1>
+  <img src="public/assets/icons/apple-touch-icon-180x180.png" alt="logo" width="220" height="auto" />
+  <h1>alexishenry.eu</h1>
   
   <p>
-    Application de commande de fournitures
+    My portfolio made with :heart:
   </p>
 
-<a href="https://github.com/CCI-Campus/CCI-Appro/tree/sass/docs"><strong>Voir la documentation »</strong></a>
+<a href="https://alxishenry.github.io/docs"><strong>Documentation »</strong></a>
 
 
 
 <h4>
-    <a href="https://cciappro.alexishenry.eu">Démonstration</a>
+    <a href="https://alexishenry.eu">Go to the site</a>
   <span> · </span>
-    <a href="https://github.com/CCI-Campus/CCI-Appro/issues/">J'ai trouvé un bug </a>
+    <a href="https://github.com/AlxisHenry/alexishenry.eu/issues">Report a bug </a>
   <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">J'ai une idée</a>
+    <a href="https://github.com/AlxisHenry/alexishenry.eu/issues">I have an idea</a>
   </h4>
 </div>
 
