@@ -72,17 +72,22 @@ chmod +x setup.sh && ./setup.sh
 
 **Warnings**
 
-- The default admin user is root:root (username: root, password: root),
+- The default admin user is root:root (username: root, password: root, is_admin: true),
 
 - If you want to import default data, your database name need to be "main",
 
-- If you want to run all tests, be sure your .env is configured and the database,
+- If you want to run all tests, be sure your .env is configured and the database too,
 
-- A lot of commands are available in package.json.
+- To create a new user, you can run php artisan make:user {username} {password} {?is_admin}
 
-- For create a user, you can run php artisan make:user {username} {password} {?admin}
+**Start the application**
 
-**If you want to work on the application, I recommend you to work with the php artisan serve.**
+```bash
+# npm
+npm run start
+# pnpm
+pnpm start
+```
 
 ### :test_tube: Tests
 
