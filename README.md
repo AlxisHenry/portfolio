@@ -1,17 +1,45 @@
-# Alexis - Portfolio
+<a name="readme-top"></a>
 
------
+<div align="center">
+
+  <img src="public/static/images/logo.png" alt="logo" width="400" height="auto" />
+  <h1>CCI-APPRO</h1>
+  
+  <p>
+    Application de commande de fournitures
+  </p>
+
+<a href="https://github.com/CCI-Campus/CCI-Appro/tree/sass/docs"><strong>Voir la documentation »</strong></a>
 
 
-This project is built on [Laravel 8](https://laravel.com/) as a project during my BTS at the [CCI Campus](https://www.ccicampus.fr/) of Strasbourg. 
-The goal is to learn how to use the [MVC](https://developer.mozilla.org/fr/docs/Glossary/MVC) (Model-View-Controllers) pattern.
-During the project I had to rewrite my portfolio using Laravel. Using the MVC pattern, Eloquent, Routes, and all features of the Framework.
-We need to setup a [CRUD](https://developer.mozilla.org/fr/docs/Glossary/CRUD) features.
+
+<h4>
+    <a href="https://cciappro.alexishenry.eu">Démonstration</a>
+  <span> · </span>
+    <a href="https://github.com/CCI-Campus/CCI-Appro/issues/">J'ai trouvé un bug </a>
+  <span> · </span>
+    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">J'ai une idée</a>
+  </h4>
+</div>
+
+<br />
+
+# :notebook_with_decorative_cover: Summary
+
+- [About the project](#star2-about-the-project)
+  * [Techs](#space_invader-techs)
+- [Getting Started](#toolbox-getting-started)
+  * [Installation](#gear-setup)
+  * [Tests](#test_tube-tests)
+- [Authors](#wave-authors)
+
+## :star2: About the project
+
+This project is built on Laravel 8 as a project during my BTS at the CCI Campus of Strasbourg. The goal is to learn how to use the MVC (Model-View-Controllers) pattern. During the project I had to rewrite my portfolio using Laravel. Using the MVC pattern, Eloquent, Routes, and all features of the Framework. We need to setup a CRUD features.
 
 [![wakatime](https://wakatime.com/badge/user/b7db3515-75b7-455d-937b-6cf28353dd3f/project/4156fd69-8cdd-4d99-8d4f-b83927b2e7e7.svg)](https://wakatime.com/badge/user/b7db3515-75b7-455d-937b-6cf28353dd3f/project/4156fd69-8cdd-4d99-8d4f-b83927b2e7e7)
 
------
-## Tech uses
+### :space_invader: Techs
 
 [![Laravel](https://img.shields.io/badge/laravel%20-hotpink.svg?&style=for-the-badge&logo=laravel&logoColor=FF2D20&color=gray)]()
 [![Php](https://img.shields.io/badge/php%20-%23323330.svg?&style=for-the-badge&logo=php&logoColor=8b9ed6&color=gray)]()
@@ -20,24 +48,55 @@ We need to setup a [CRUD](https://developer.mozilla.org/fr/docs/Glossary/CRUD) f
 [![Shell](https://img.shields.io/badge/bash%20-hotpink.svg?&style=for-the-badge&logo=gnu-bash&logoColor=4EAA25&color=gray)]()
 [![PhpStorm](https://img.shields.io/badge/phpstorm%20-hotpink.svg?&style=for-the-badge&logo=phpstorm&logoColor=a247ea&color=gray)]()
 
------
-## Installation
+## :toolbox: Getting Started
 
-**If you want to setup the project, you will need to follow the followings steps**
+### :gear: Setup
 
-First, you need to clone the repository from GitHub, with the following command :
+**Clone the repository**
 
-`git clone https://github.com/AlxisHenry/CCI-2021-PORTFOLIO.git`
+```
+  git clone https://github.com/AlxisHenry/alexishenry.eu.git
+```
 
-At the root of the project, you will see a setup file.
+**Go to the app folder**
 
-**You just have to launch it.**
+```bash
+  cd alexishenry.eu
+```
 
-> **WARN** :
+**Launch the setup script**
+
+```bash
+chmod +x setup.sh && ./setup.sh
+```
+
+**Warnings**
+
 - The default admin user is root:root (username: root, password: root),
-- If you want to import default data, your database name need to be "main",
-- If you want to run all tests, be sure your .env is configured and the database,
-- A lot of commands are available in package.json.
-- For create a user, you can run `php artisan make:user {username} {password}`
 
-If you need to work on the project, I recommend you to work with the ``php artisan serve``.
+- If you want to import default data, your database name need to be "main",
+
+- If you want to run all tests, be sure your .env is configured and the database,
+
+- A lot of commands are available in package.json.
+
+- For create a user, you can run php artisan make:user {username} {password} {?admin}
+
+**If you want to work on the application, I recommend you to work with the php artisan serve.**
+
+### :test_tube: Tests
+
+```bash
+# npm
+npm run tests
+# pnpm
+pnpm tests
+```
+
+## :wave: Authors
+
+* **Alexis Henry** _alias_ [@AlxisHenry](https://github.com/AlxisHenry)
+
+<!-- ## :page_with_curl: Liens utiles -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
