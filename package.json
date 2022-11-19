@@ -1,10 +1,8 @@
 {
     "private": true,
     "scripts": {
-        "artisan-dump": "sh /var/www/main/tests/Scripts/artisan_dump.sh",
-        "serve": "php artisan serve --host=dev.local",
+        "start": "php artisan serve --host=localhost",
         "tests": "php artisan test",
-        "tests-c": "php artisan test --coverage",
         "optimize": "php artisan optimize:clear",
         "dev": "vite",
         "build": "vite build"
