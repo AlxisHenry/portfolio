@@ -3,5 +3,5 @@
     @include('components.sections.templates.projects')
 @endsection
 @section('footer')
-    @vite('resources/js/templates/projects.js')
+    @vite('resources/js/pages/projects.js')
 @stop

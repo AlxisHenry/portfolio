@@ -8,10 +8,10 @@
 
 /* START --- KNACSS framework imports */
 
-@import "KNACSS/__abstracts__";
-@import "KNACSS/__base__";
-@import "KNACSS/__utils__";
-@import "KNACSS/__components__"; /* Contain components like burger menu */
+@import "@knacss/abstracts.scss";
+@import "@knacss/base";
+@import "@knacss/utils";
+@import "@knacss/components"; /* Contain components like burger menu */
 
 /* END --- KNACSS framework imports */
 
@@ -42,28 +42,28 @@
 
 /* END --- Components */
 
-/* START --- Templates */
+/* START --- pages */
 
-@import 'templates/homepage'; /* Access to homepage with url /home */
-@import 'templates/projects'; /* Access to all projects with url /projects */
-@import 'templates/news'; /* Access to all news with url /news */
-@import 'templates/news{title}'; /* Access to a news with url /news/{title} */
-@import 'templates/news{keyword}'; /* Access to a keyword of news with url /news/{keyword} */
-@import 'templates/board'; /* Access to board page with url /board */
-@import 'templates/login'; /* Login page for access to admin session */
-@import 'templates/admin/components/navbar'; /* Admin --- Navbar Component */
-@import 'templates/admin/admin-view'; /* Admin --- View - (url) => /admin/{view} */
-@import 'templates/admin/admin-action'; /* Admin --- Action - (url) => /admin/{view}/{id}/{action} */
-@import 'templates/about-me'; /* Access to about-me page with url /about */
-@import 'templates/lang'; /* (url) => /language/{lang} */
+@import 'pages/homepage'; /* Access to homepage with url /home */
+@import 'pages/projects'; /* Access to all projects with url /projects */
+@import 'pages/news'; /* Access to all news with url /news */
+@import 'pages/news{title}'; /* Access to a news with url /news/{title} */
+@import 'pages/news{keyword}'; /* Access to a keyword of news with url /news/{keyword} */
+@import 'pages/board'; /* Access to board page with url /board */
+@import 'pages/login'; /* Login page for access to admin session */
+@import 'pages/admin/components/navbar'; /* Admin --- Navbar Component */
+@import 'pages/admin/admin-view'; /* Admin --- View - (url) => /admin/{view} */
+@import 'pages/admin/admin-action'; /* Admin --- Action - (url) => /admin/{view}/{id}/{action} */
+@import 'pages/about-me'; /* Access to about-me page with url /about */
+@import 'pages/lang'; /* (url) => /language/{lang} */
 
-/* END --- Templates */
+/* END --- pages */
 
 /* START --- Responsive */
 
-@import 'templates/@media/homepage'; /* Contain all responsive of homepage */
-@import 'templates/@media/projects'; /* Contain all responsive of projects page */
-@import 'templates/@media/news'; /* Contain all responsive of news pages  */
-@import 'templates/@media/admin'; /* Contain all responsive of admin views  */
+@import 'pages/@media/homepage'; /* Contain all responsive of homepage */
+@import 'pages/@media/projects'; /* Contain all responsive of projects page */
+@import 'pages/@media/news'; /* Contain all responsive of news pages  */
+@import 'pages/@media/admin'; /* Contain all responsive of admin views  */
 
 /* END --- Responsive */

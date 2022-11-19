@@ -94,5 +94,5 @@
 @stop
 
 @section('footer')
-    @vite('resources/js/templates/news.js')
+    @vite('resources/js/pages/news.js')
 @endsection

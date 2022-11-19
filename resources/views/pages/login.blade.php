@@ -5,5 +5,5 @@
     </section>
 @endsection
 @section('footer')
-    @vite('resources/js/templates/login.js')
+    @vite('resources/js/pages/login.js')
 @endsection

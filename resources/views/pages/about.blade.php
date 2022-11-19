@@ -137,5 +137,5 @@
 @stop
 
 @section('footer')
-    @vite('resources/js/templates/about-me.js')
+    @vite('resources/js/pages/about-me.js')
 @endsection

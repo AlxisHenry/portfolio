@@ -7,5 +7,5 @@
 @endsection
 
 @section('footer')
-    @vite('resources/js/templates/board.js')
+    @vite('resources/js/pages/board.js')
 @stop

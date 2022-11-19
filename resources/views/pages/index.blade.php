@@ -58,5 +58,5 @@
 @stop
 
 @section('footer')
-    @vite('resources/js/templates/homepage.js')
+    @vite('resources/js/pages/homepage.js')
 @stop
