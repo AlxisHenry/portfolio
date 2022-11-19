@@ -114,7 +114,7 @@ production () {
 }
 
 permissions () {
-    sudo chown -R ubuntu:ubuntu public/ storage/ bootstrap/
+    sudo chown -R $(whoami):www-data public/ storage/ bootstrap/
 }
 
 setup () {

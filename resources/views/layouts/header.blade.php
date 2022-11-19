@@ -22,7 +22,7 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="fr_FR">
     <title>{{ $title ?? 'Portfolio - Henry Alexis' }}</title>
-    <link rel="stylesheet" href="{{ url('css/app.css') }}">
+    @vite('resources/sass/app.scss')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link rel="mask-icon" href="{{ url('assets/icons/safari-pinned-tab.svg') }}" color="#5bbad5">
     <link rel="shortcut icon" href="{{ url('assets/icons/favicon.ico') }}">

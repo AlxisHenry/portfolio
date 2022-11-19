@@ -17,4 +17,7 @@ export default defineConfig({
       "resources/sass/app.scss",
     ]),
   ],
+  server: {
+    port: 5173,
+  }
 });

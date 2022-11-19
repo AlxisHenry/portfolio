@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,10 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (str_starts_with(env('APP_URL'), 'https')) {
-            URL::forceScheme('https');
-        }
-
         view()->composer(['errors.404', 'errors::404'], function ($view) {
             $view->with(['navbar' => 'null']);
         });
