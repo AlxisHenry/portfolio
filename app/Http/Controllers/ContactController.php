@@ -9,19 +9,25 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Routing\Controller;
 use App\Mail\ContactMailable;
 use Illuminate\Http\RedirectResponse;
+use App\Helpers\Rand;
 
 class ContactController extends Controller
 {
 
     public function index(): \Illuminate\View\View
     {
-        return view('pages.contact');
+        return view('pages.contact', [
+            'title' => 'Contact - HENRY ALEXIS',
+            'navbar' => '',
+            'og_description' => 'Portfolio - HENRY ALEXIS - Contact',
+            'random_number' => Rand::int(1, 10)
+        ]);
     }
 
     /**
      * @param Request $request
      */
-    public function submit(Request $request): RedirectResponse
+    public function send(Request $request): RedirectResponse
     {
         $robot = $request->input('random_number');
         $validate = Validator::make($request->all(), [

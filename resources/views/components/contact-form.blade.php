@@ -16,7 +16,7 @@
 
 <div class="contact-form-container">
 
-    <form class="__contact__form__" method="post" action="/contact">
+    <form class="__contact__form__" method="post" action="{{route('contact.send')}}">
 
         @csrf
 

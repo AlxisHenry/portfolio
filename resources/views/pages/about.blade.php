@@ -103,10 +103,10 @@
                     </a>
                 </div>
                 <div>
-                    <a class="to-contact-form">
+                    <a class="" href="{{route('contact.index')}}">
                         <img class="test" src="{{ url('assets/svg/contacts/mail.svg') }}" alt="Mail" title="Mail" width="20">
                     </a>
-                    <a class="to-contact-form">
+                    <a class="" href="{{route('contact.index')}}">
                         <span class="copy-this">alexis.henry150357@gmail.com</span>
                     </a>
                 </div>
