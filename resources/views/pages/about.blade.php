@@ -137,7 +137,5 @@
 @stop
 
 @section('footer')
-
-    <script src="{{ url('js/about-me.js') }}"></script>
-
+    @vite('resources/js/templates/about-me.js')
 @endsection

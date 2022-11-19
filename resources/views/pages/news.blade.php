@@ -71,9 +71,7 @@
                 <div class="__news__category__cards__" data-category-cards="{{ $word }}" data-nb-cards="{{ count($related_news) }}" data-related-word="{{$word}}">
 
                     @foreach($related_news as $card)
-
                         @include('components.news')
-
                     @endforeach
 
                     @if($items)
@@ -96,7 +94,5 @@
 @stop
 
 @section('footer')
-
-    <script src="{{ url('js/news.js') }}"></script>
-
+    @vite('resources/js/templates/news.js')
 @endsection

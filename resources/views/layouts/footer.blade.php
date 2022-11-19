@@ -14,7 +14,7 @@
 
 @include('components.to-top-arrow')
 
-<script src="{{ url('js/app.js') }}"></script>
+@vite(['resources/js/app.js'])
 
 @yield('footer')
 

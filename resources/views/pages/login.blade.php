@@ -24,7 +24,7 @@
 
 @section('footer')
 
-    <script src="{{ url('js/login.js') }}"></script>
+    @vite('resources/js/templates/login.js')
 
 @endsection
 

@@ -7,7 +7,5 @@
 @endsection
 
 @section('footer')
-
-    <script src="{{ url('js/board.js') }}"></script>
-
+    @vite('resources/js/templates/board.js')
 @stop

@@ -1,7 +1,5 @@
-import { BoardCardsAnimation } from "../components/board-cards"
+import { BoardCardsAnimation } from "../components/board-cards";
 
-window.addEventListener('load', () => {
-
-    BoardCardsAnimation()
-
-})
+window.addEventListener("load", () => {
+  BoardCardsAnimation();
+});

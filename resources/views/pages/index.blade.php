@@ -58,7 +58,5 @@
 @stop
 
 @section('footer')
-
-    <script src="{{ url('js/homepage.js') }}"></script>
-
+    @vite('resources/js/templates/homepage.js')
 @stop

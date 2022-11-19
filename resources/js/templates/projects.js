@@ -1,9 +1,7 @@
-import * as ProjectsCards from "../components/project-cards"
-import { InputAnimation } from "../components/about"
+import { ProjectInformations } from "../components/project-cards";
+import { AboutAnimation } from "../components/about";
 
-window.addEventListener('load', (e) => {
-
-    InputAnimation(e)
-    ProjectsCards.ProjectAnimation(e)
-
-})
+window.addEventListener("load", (e) => {
+  AboutAnimation(e);
+  ProjectInformations(e);
+});

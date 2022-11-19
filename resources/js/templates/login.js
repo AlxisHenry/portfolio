@@ -1,7 +1,5 @@
-const CheckFormStatus = () => {
+const CheckFormStatus = () => {};
 
-}
-
-window.addEventListener('load', () => {
-    CheckFormStatus()
-})
+window.addEventListener("load", () => {
+  CheckFormStatus();
+});
