@@ -16,7 +16,7 @@ DEFAULT_DATA () {
 
 DB () {
     php artisan migrate:fresh
-    php artisan make:user root root
+    php artisan make:user root root 1
     echo "\e[1;41m                                                               \e[0m";
     echo "\e[1;41m      FOR IMPORT DEFAULT DATA, UR DB NAME NEED TO BE main      \e[0m";
     echo "\e[1;41m                                                               \e[0m";

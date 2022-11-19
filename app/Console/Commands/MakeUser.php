@@ -13,7 +13,7 @@ class MakeUser extends Command
      *
      * @var string
      */
-    protected $signature = 'make:user {username} {password}';
+    protected $signature = 'make:user {username} {password} {admin=0}';
 
     /**
      * The console command description.
@@ -44,7 +44,8 @@ class MakeUser extends Command
 
         User::create([
             'username' => $this->argument()['username'],
-            'password' => $password
+            'password' => $password,
+            'is_admin' => $this->argument()['admin'] ?? 0,
         ]);
 
         $user = User::where('username', '=' , $this->argument()['username'])->first();
