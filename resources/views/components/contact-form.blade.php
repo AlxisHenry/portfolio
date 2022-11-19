@@ -96,7 +96,7 @@
                 <p class="legal-form">
                     * Required fields.
                     Visit <a href="https://cnil.fr" target="_blank" rel="noreferrer nofollow">cnil.fr</a> for more information on your rights.
-                    The legal notice is available by clicking <a href="">here.</a>
+                    The legal notice is available by clicking <a href="{{route('legal-notice.index')}}">here.</a>
                 </p>
             </div>
 
