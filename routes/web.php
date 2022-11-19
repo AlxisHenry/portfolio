@@ -49,7 +49,7 @@ Route::prefix('news')->group(
     }
 );
 
-Route::prefix('languages')->group(
+Route::prefix('language')->group(
     function() {
         Route::get('/', [LanguageController::class, 'index'])->name('languages.index');
         Route::get('/{name}', [LanguageController::class, 'show'])->name('languages.show');

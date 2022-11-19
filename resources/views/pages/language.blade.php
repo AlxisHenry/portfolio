@@ -36,7 +36,7 @@
 
                 <div class="list_all">
                     <a href="/language/{{$generate}}">Show me a random language !</a>
-                    <a href="/language/all">Show me all languages !</a>
+                    <a href="/language">Show me all languages !</a>
                 </div>
 
             @endforeach

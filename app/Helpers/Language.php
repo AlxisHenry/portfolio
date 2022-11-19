@@ -9,7 +9,7 @@ class Language
     /**
      * @return array
      */
-    public function all(): array 
+    public static function all(): array 
     {
         return [
             'html' => 'HTML',
