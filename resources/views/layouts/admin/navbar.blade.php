@@ -40,6 +40,15 @@
         </div>
 
         <div class="optional-button">
+            <form method="POST" action="{{route('administration.logout.post')}}">
+                @csrf
+                <button type="submit" style="cursor: pointer;">
+                    Logout
+                </button>
+            </form>
+        </div>
+
+        <div class="optional-button">
             <a href="{{route('index')}}">Home</a>
         </div>
 

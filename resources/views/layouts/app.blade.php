@@ -10,3 +10,6 @@
 @include('layouts.navbar')
 @yield('content')
 @include('layouts.footer')
+@if(session('popup'))
+    <x-alert :popup="session('popup')"/>
+@endif

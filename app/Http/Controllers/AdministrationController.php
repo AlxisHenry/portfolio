@@ -9,8 +9,8 @@ use App\Models\Projects;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
 use App\Helpers\Alert;
+use Illuminate\Support\Facades\Session;
 
 class AdministrationController extends Controller
 {
@@ -43,8 +43,16 @@ class AdministrationController extends Controller
                     'popup' => new Alert('success', 'Login successful', 'You have been logged in successfully.')
                 ]
             );
-        Session::put('connect', false);
-        return back();
+        return back()->with(
+            'popup', new Alert('error', 'Login failed', 'Credentials are incorrect.', true)
+        );
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        Session::flush();
+        return redirect()->route('index');
     }
 
     public function index(string $view)

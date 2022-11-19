@@ -75,6 +75,7 @@ Route::redirect('home', '/');
  */
 Route::get('login', [AdministrationController::class, 'login'])->name('administration.login.get');
 Route::post('login', [AdministrationController::class, 'auth'])->name('administration.login.post');
+Route::post('logout', [AdministrationController::class, 'logout'])->name('administration.logout.post');
 
 /**
  * Administration
