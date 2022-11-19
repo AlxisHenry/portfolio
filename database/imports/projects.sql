@@ -1,4 +1,3 @@
-use main;
 INSERT INTO projects (title, url_name, description, author, GithubLink, linkImage, languages, published_at, edit_at)
 VALUES
     ('Inventory Management', 'timken', "Durant mon alternance chez Timken, j'ai réalisé une interface web permettant la gestion du stock de Colmar.", 'Henry Alexis','https://github.com/AlxisHenry/stock-interface-app','https://cdn.discordapp.com/attachments/989537937433710682/989538240321179709/gs-timken.png', 'PHP,javascript,powershell', (SELECT NOW()), (SELECT NOW()) ),
