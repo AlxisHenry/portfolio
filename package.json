@@ -1,11 +1,12 @@
 {
     "private": true,
     "scripts": {
+        "dev": "vite",
+        "build": "vite build",
         "start": "php artisan serve --host=localhost",
         "tests": "php artisan test",
-        "optimize": "php artisan optimize:clear",
-        "dev": "vite",
-        "build": "vite build"
+        "sail": "./vendor/bin/sail",
+        "sail:up": "./vendor/bin/sail up -d"
     },
     "devDependencies": {
         "axios": "^0.25",
