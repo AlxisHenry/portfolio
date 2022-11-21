@@ -16,5 +16,11 @@ export default defineConfig({
       "resources/js/pages/about-me.js",
       "resources/sass/app.scss",
     ]),
-  ]
+  ],
+  server: {
+    cors: false,
+    hmr: {
+      host: "localhost"
+    }
+  }
 });
