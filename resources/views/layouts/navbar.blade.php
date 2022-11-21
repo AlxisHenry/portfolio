@@ -15,9 +15,9 @@
         </a>
         <div class="__theme__">
             <div class="__theme__main__" id="{{$_COOKIE['theme'] ?? "light"}}">
-                <img src="{{ url('assets/svg/themes/'.($_COOKIE['theme'] ?? "dark.svg").'.svg') }}" 
+                <img src="{{ url('assets/svg/themes/'.($_COOKIE['theme'] ?? "light").'.svg') }}" 
                     data-theme="{{$_COOKIE['theme'] ?? "light"}}" 
-                    data-next="{{$_COOKIE['theme'] === "light" ? "dark" : "light"}}">
+                    data-next="{{$_COOKIE['theme'] ?? "light" === "light" ? "dark" : "light"}}">
             </div>
         </div>
     </div>
