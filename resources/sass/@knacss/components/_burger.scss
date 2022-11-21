@@ -12,7 +12,6 @@
  * burger variables (you can change them)
  */
 
-$burger-color : #595959;
 $burger-background : transparent;
 $burger-hover-background : transparent;
 $burger-height : 2rem;
@@ -44,7 +43,7 @@ $burger-padding : 0 ;
   width: $burger-width;
   padding: $burger-padding;
   background-color: $burger-background;
-  background-image: linear-gradient($burger-color, $burger-color);
+  background-image: linear-gradient(var(--burger-color), var(--burger-color));
   background-position: center;
   background-repeat: no-repeat;
   background-origin: content-box;
@@ -58,7 +57,7 @@ $burger-padding : 0 ;
 .burger-button > *::after {
   content: "";
   height: $burger-weight;
-  background: $burger-color;
+  background: var(--burger-color);
   transition: .25s;
   transition-property: transform, top;
   will-change: transform, top;

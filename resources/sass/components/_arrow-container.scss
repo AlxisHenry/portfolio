@@ -18,14 +18,13 @@
     font-weight: 700;
   }
   .arrow {
-    background-color: yellow;
     span {
       position: absolute;
       width: 20px;
       margin-left: -10px;
       height: 20px;
-      border-left: 1px solid black;
-      border-bottom: 1px solid black;
+      border-left: 1px solid var(--contrast);
+      border-bottom: 1px solid var(--contrast);
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
       opacity: 1;

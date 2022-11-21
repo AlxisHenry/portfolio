@@ -21,6 +21,7 @@
 
 /* START --- Components */
 
+@import 'components/loader'; /* Loader */
 @import 'components/arrow-container'; /* Arrow use in homepage */
 @import 'components/navbar'; /* Navbar (burger menu / github icon / theme switch) */
 @import 'components/footer'; /* Footer (Copyright) */
@@ -32,7 +33,6 @@
 @import 'components/underline-title'; /* Text decoration on section titles */
 @import 'components/to-top-arrow'; /* Arrow for going to the top of the page */
 @import 'components/board-cards'; /* Resources Cards for all documentations available on the website */
-@import 'components/loader.scss'; /* Loader */
 @import 'components/cursor'; /* Modified cursor */
 @import 'components/scrollbar'; /* Secondary scrollbar */
 @import 'components/copied-to-clipboard'; /* Copied to clipboard */

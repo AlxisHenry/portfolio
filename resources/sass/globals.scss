@@ -20,6 +20,39 @@ $iconsolata: 'Inconsolata', monospace;
 $apple: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 /* End --- Globals variables */
+/* Start --- Themes */
+
+:root {
+  --primary-color: #F2F2F2;
+  --contrast: #242B40;
+  --burger-color: #595959;
+  --title-color: #212529;
+  --text-color: #212529;
+  --button-background: #F2BC79;
+  --details: #F2BC79;
+  --scrollbar-background: #242B40;
+  --scrollbar-progress: #52B3D9;
+  --links: #6c757d;
+  --links-hover: #000;
+
+  --underline: #464AA6;
+}
+
+[data-theme="dark"] {
+  --primary-color: #242B40;
+  --contrast: #F2F2F2;
+  --burger-color: #F2F2F2;
+  --title-color: #F2F2F2;
+  --text-color: #F2F2F2;
+  --button-background: #464AA6;
+  --details: #464AA6;
+  --scrollbar-background: #F2F2F2;
+  --scrollbar-progress: #464AA6;
+  --links: #464AA6;
+  --links-hover: #787CBF;
+}
+
+/* End --- Themes */
 /* Start --- Globals class */
 
 .hidden {
@@ -49,8 +82,17 @@ $apple: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
   padding: 0;
 }
 
+a {
+  color: var(--links);
+  &:hover {
+    color: var(--links-hover);
+  }
+}
+
 body {
-  background: $BrokenWhite;
+  transition: All 0.5s ease;
+  background: var(--primary-color);
+  color: var(--text-color);
   scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: scroll;

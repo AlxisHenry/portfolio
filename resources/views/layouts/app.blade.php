@@ -1,15 +1,20 @@
 @include('layouts.header')
-@if(Route::currentRouteName() === "index" || Route::currentRouteName() === 'contact.get')
-        <body class="loader-body" data-theme="light">
-        @include('layouts.loader', ['status' => true])
-    @else
-        <body data-theme="light">
+
+<body data-theme="{{$_COOKIE['theme'] ?? "light"}}" class="@if(Route::currentRouteName() === 'index') loader-body @endif">
+
+@if(Route::currentRouteName() === 'index')
+    @include('layouts.loader', ['status' => true])
 @endif
+
 @include('components.scrollbar')
 @include('components.cursor')
+
 @include('layouts.navbar')
+
 @yield('content')
+
 @include('layouts.footer')
+
 @if(session('popup'))
     <x-alert :popup="session('popup')"/>
 @endif

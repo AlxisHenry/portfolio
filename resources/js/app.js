@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import * as Menu from "./components/burger-menu";
 import { BackToTopArrow } from "./components/back-to-top-arrow";
 import { LoadingPosition } from "./components/loading-position";
-import { themeInitialization, themeSwitcher } from "./components/theme";
+import { themeSwitcher } from "./components/theme";
 import { debug } from "./main";
 
 window.addEventListener("load", (e) => {
@@ -11,7 +11,6 @@ window.addEventListener("load", (e) => {
   let status = false;
   debug(status);
   AOS.init({ duration: 1800 });
-  themeInitialization();
   themeSwitcher();
   LoadingPosition(e);
   Menu.ButtonAction();

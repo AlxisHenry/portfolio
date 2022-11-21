@@ -42,7 +42,6 @@
         }
       }
       &.last {
-
         flex-direction: column;
 
         .content {
@@ -99,7 +98,6 @@
             font-weight: lighter;
           }
         }
-
       }
 
       .form-group {
@@ -111,7 +109,7 @@
           font-size: 14px;
           margin-top: 5px;
           margin-left: 5px;
-          color: $Clay;
+          color: var(--details);
         }
 
         .form-control {
@@ -126,7 +124,8 @@
           background-clip: padding-box;
           border: 1px solid #ced4da;
           border-radius: 0.25rem;
-          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          transition: border-color 0.15s ease-in-out,
+            box-shadow 0.15s ease-in-out;
         }
 
         .error {
@@ -138,12 +137,12 @@
         }
 
         .form-error {
-          border-color: $Clay;
+          border-color: var(--button-background);
         }
 
         .submit-input {
           height: 75px;
-          background-color: $Clay;
+          background-color: var(--button-background);
           width: 100%;
           text-transform: uppercase;
           color: $white;
@@ -152,24 +151,20 @@
           letter-spacing: 1.5px;
           border-radius: 5px;
           cursor: pointer;
-          &:active { transform: scale(0.99); box-shadow: 3px 2px 5px 1px $ShadowDark; }
+          &:active {
+            transform: scale(0.99);
+            box-shadow: 3px 2px 5px 1px $ShadowDark;
+          }
         }
-
       }
-
     }
-
   }
 }
 
 @media screen and (max-width: 650px) {
-
   .contact-form-container {
-
     .__contact__form__ {
-
       .form-section {
-
         &.primary {
           gap: 0;
           flex-direction: column;
@@ -184,5 +179,4 @@
       }
     }
   }
-
 }

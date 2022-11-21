@@ -14,8 +14,10 @@
             <img title="Github" src="{{ url('assets/svg/contacts/github.svg') }}" alt="Github Link">
         </a>
         <div class="__theme__">
-            <div class="__theme__main__" id="light">
-                <img src="{{ url('assets/svg/themes/light.svg') }}" data-theme="light" data-next="dark">
+            <div class="__theme__main__" id="{{$_COOKIE['theme'] ?? "light"}}">
+                <img src="{{ url('assets/svg/themes/'.($_COOKIE['theme'] ?? "dark.svg").'.svg') }}" 
+                    data-theme="{{$_COOKIE['theme'] ?? "light"}}" 
+                    data-next="{{$_COOKIE['theme'] === "light" ? "dark" : "light"}}">
             </div>
         </div>
     </div>

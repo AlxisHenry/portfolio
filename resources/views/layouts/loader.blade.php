@@ -1,7 +1,7 @@
 <div class="loader"
     @if(!$status)
         style="flex-direction: column;"
-    @endif
+    @endif  
 >
 
     <div class="circles">
