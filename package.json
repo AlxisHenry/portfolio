@@ -6,7 +6,8 @@
         "start": "php artisan serve --host=localhost",
         "tests": "php artisan test",
         "sail": "./vendor/bin/sail",
-        "sail:up": "./vendor/bin/sail up -d"
+        "sail:up": "./vendor/bin/sail up -d",
+        "sail:db": "bash docker.sh"
     },
     "devDependencies": {
         "axios": "^0.25",
