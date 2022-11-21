@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('board', function (Blueprint $table) {
             $table->id('identifier')->index();
-            $table->string('title')->default('null');
-            $table->longText('description')->default('null');
-            $table->string('author')->default('null');
-            $table->string('documentationLink')->default('null');
+            $table->string('title')->default(null)->nullable();
+            $table->longText('description')->default(null)->nullable();
+            $table->string('author')->default(null)->nullable();
+            $table->string('documentationLink')->default(null)->nullable();
             $table->date('published_at')->useCurrent();
             $table->date('edit_at')->useCurrent();
         });

@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id('identifier')->index();
-            $table->string('title')->default('null');
-            $table->string('url_name')->default('null');
-            $table->longText('description')->default('null');
-            $table->string('author')->default('null')->nullable();
-            $table->string('documentationLink')->default('null')->nullable();
-            $table->string('GithubLink')->default('null');
-            $table->string('linkImage')->default('null');
-            $table->string('languages')->default('null');
+            $table->string('title')->default(null)->nullable();
+            $table->string('url_name')->default(null)->nullable();
+            $table->longText('description')->default(null)->nullable();
+            $table->string('author')->default(null)->nullable();
+            $table->string('documentationLink')->default(null)->nullable();
+            $table->string('GithubLink')->default(null)->nullable();
+            $table->string('linkImage')->default(null)->nullable();
+            $table->string('languages')->default(null)->nullable();
             $table->date('published_at')->useCurrent()->nullable();
             $table->date('edit_at')->useCurrent()->nullable();
         });
