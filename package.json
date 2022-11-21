@@ -7,7 +7,11 @@
         "tests": "php artisan test",
         "sail": "./vendor/bin/sail",
         "sail:up": "./vendor/bin/sail up -d",
-        "sail:db": "bash docker.sh"
+        "sail:db": "bash docker.sh",
+        "sail:down": "./vendor/bin/sail down",
+        "sail:tests": "./vendor/bin/sail artisan test",
+        "sail:dev": "./vendor/bin/sail npm run dev",
+        "sail:build": "./vendor/bin/sail npm run build"
     },
     "devDependencies": {
         "axios": "^0.25",
