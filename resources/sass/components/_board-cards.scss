@@ -9,7 +9,7 @@
   background-color: white;
   border-radius: 12px;
   position: relative;
-  box-shadow: 0px -1px 6px 4px $ShadowDark;
+  box-shadow: 0px -1px 6px 4px var(--shadow);
 
   .__documentation__card__title__ {
     width: 100%;
@@ -59,7 +59,6 @@
       font-style: normal;
       text-decoration: none;
     }
-
   }
 
   .__documentation__card__download__ {
@@ -119,8 +118,13 @@
           }
         }
       }
-      &:hover { cursor: pointer; }
-      &:active { transform: scale(0.98); box-shadow: 3px 2px 5px 1px $ShadowDark; }
+      &:hover {
+        cursor: pointer;
+      }
+      &:active {
+        transform: scale(0.98);
+        box-shadow: 3px 2px 5px 1px var(--shadow);
+      }
     }
   }
 }
@@ -143,7 +147,7 @@
   }
 }
 
-@media screen and (max-width: 800px ) {
+@media screen and (max-width: 800px) {
   .__documentation__card__ {
     max-width: 280px;
     .__documentation__card__title__ {
@@ -159,7 +163,6 @@
       time {
         font-size: 11px;
       }
-
     }
   }
 }

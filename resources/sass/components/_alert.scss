@@ -1,76 +1,75 @@
 .alert-wrapper {
-    position: fixed;
-    bottom: 12px;
-    right: 8px;
-    box-sizing: border-box;
-    height: auto;
-    min-height: 80px;
-    width: 90%;
-    max-width: 340px;
-    border: 1px solid #9aa3a3;
-    border-left-width: 5px;
-    border-radius: 5px;
-    background-color: #f8f8f8;
-    box-shadow: inset 0 2px 0 rgb(255 255 255 / 22%), 0 3px 5px rgb(0 0 0 / 24%);
-	display: flex;
-	flex-direction: column;
+  position: fixed;
+  bottom: 12px;
+  right: 8px;
+  box-sizing: border-box;
+  height: auto;
+  min-height: 80px;
+  width: 90%;
+  max-width: 340px;
+  border: 1px solid #9aa3a3;
+  border-left-width: 5px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  box-shadow: inset 0 2px 0 rgb(255 255 255 / 22%), 0 3px 5px rgb(0 0 0 / 24%);
+  display: flex;
+  flex-direction: column;
 
-    &.alert-success {
-        border-left-color: darkseagreen;
-        gap: 0;
+  &.alert-success {
+    border-left-color: darkseagreen;
+    gap: 0;
+  }
+
+  &.alert-warning {
+    border-left-color: palevioletred;
+  }
+
+  .alert-title {
+    &.title-warning {
+      color: palevioletred;
     }
-
-    &.alert-warning {
-        border-left-color: palevioletred;
+    &.title-success {
+      color: darkseagreen;
     }
+    text-align: left;
+    width: 100%;
+    margin: 8px 0 0 24px;
+    font-weight: bold;
+    font-size: 20px;
+  }
 
-    .alert-title {
-        &.title-warning {
-            color: palevioletred;
-        }
-        &.title-success {
-            color: darkseagreen;
-        }
-        text-align: left;
-        width: 100%;
-        margin: 8px 0 0 24px;
-        font-weight: bold;
-        font-size: 20px;
+  .alert-content {
+    width: 100%;
+    text-align: left;
+    height: 100%;
+    margin: 4px 0 8px 24px;
+    padding: 3px 0;
+    color: inherit;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .alert-close {
+    position: absolute;
+    width: 12px;
+    top: 12px;
+    right: 12px;
+    border-bottom: solid 3px black;
+    &:hover {
+      cursor: pointer;
     }
+  }
 
-    .alert-content {
-        width: 100%;
-        text-align: left;
-		height: 100%;
-        margin: 4px 0 8px 24px;
-        padding: 3px 0;
-        color: inherit;
-        font-size: 14px;
-        line-height: 19px;
-    }
-
-    .alert-close {
-        position: absolute;
-        width: 12px;
-        top: 12px;
-        right: 12px;
-        border-bottom: solid 3px black;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    &.remove-alert {
-        animation: Hide 800ms ease-in forwards;
-    }
-
+  &.remove-alert {
+    animation: Hide 800ms ease-in forwards;
+  }
 }
 
 @keyframes Hide {
-    0% {
-        bottom: 8px;
-    }
-    100% {
-      bottom: -500px;
-    }
+  0% {
+    bottom: 8px;
+  }
+  100% {
+    bottom: -500px;
+  }
 }

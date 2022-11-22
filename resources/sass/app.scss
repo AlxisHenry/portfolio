@@ -1,69 +1,65 @@
-/* Start --- Google fonts */
+/** 
+ * Fonts 
+ */
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Libre+Franklin:wght@200&family=Poppins:wght@200&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Libre+Franklin:wght@200&family=Poppins:wght@200&display=swap');
-
-/* END --- Google fonts */
-
-/* START --- Globals */
-
-/* START --- KNACSS framework imports */
-
+/**
+ * Knacss 
+ */
 @import "@knacss/abstracts.scss";
 @import "@knacss/base";
 @import "@knacss/utils";
-@import "@knacss/components"; /* Contain components like burger menu */
+@import "@knacss/components"; /* Contain knacss components */
 
-/* END --- KNACSS framework imports */
+/**
+ * Utils 
+ */
+@import "utils/variables"; /* Import variables */
+@import "utils/reset"; /* Reset styles */
+@import "utils/globals"; /* Globals class and animations */
 
-@import 'globals'; /* Globals variables, class and animations */
+/**
+ * Components 
+ */
+@import "components/loader"; /* Loader */
+@import "components/arrow-container"; /* Arrow use in homepage */
+@import "components/navbar"; /* Navbar (burger menu / github icon / theme switch) */
+@import "components/footer"; /* Footer (Copyright) */
+@import "components/errors"; /* Style use in errors pages */
+@import "components/more"; /* More button (use on homepage) */
+@import "components/news-cards"; /* Cards contains scrapped news */
+@import "components/cards"; /* Cards contains projects */
+@import "components/about"; /* About button on all cards  */
+@import "components/underline-title"; /* Text decoration on section titles */
+@import "components/to-top-arrow"; /* Arrow for going to the top of the page */
+@import "components/board-cards"; /* Resources Cards for all documentations available on the website */
+@import "components/cursor"; /* Modified cursor */
+@import "components/scrollbar"; /* Secondary scrollbar */
+@import "components/copied-to-clipboard"; /* Copied to clipboard */
+@import "components/contact-form"; /* Contact form */
+@import "components/contact-form-success"; /* Contact form success */
+@import "components/alert"; /* Alerts */
 
-/* END --- Globals */
+/** 
+ * Pages
+ */
+@import "pages/homepage"; /* Access to homepage with url /home */
+@import "pages/projects"; /* Access to all projects with url /projects */
+@import "pages/news"; /* Access to all news with url /news */
+@import "pages/news{title}"; /* Access to a news with url /news/{title} */
+@import "pages/news{keyword}"; /* Access to a keyword of news with url /news/{keyword} */
+@import "pages/board"; /* Access to board page with url /board */
+@import "pages/login"; /* Login page for access to admin session */
+@import "pages/admin/components/navbar"; /* Admin --- Navbar Component */
+@import "pages/admin/admin-view"; /* Admin --- View - (url) => /admin/{view} */
+@import "pages/admin/admin-action"; /* Admin --- Action - (url) => /admin/{view}/{id}/{action} */
+@import "pages/about-me"; /* Access to about-me page with url /about */
+@import "pages/lang"; /* (url) => /language/{lang} */
 
-/* START --- Components */
-
-@import 'components/loader'; /* Loader */
-@import 'components/arrow-container'; /* Arrow use in homepage */
-@import 'components/navbar'; /* Navbar (burger menu / github icon / theme switch) */
-@import 'components/footer'; /* Footer (Copyright) */
-@import 'components/errors'; /* Style use in errors pages */
-@import 'components/more'; /* More button (use on homepage) */
-@import 'components/news-cards'; /* Cards contains scrapped news */
-@import 'components/cards'; /* Cards contains projects */
-@import 'components/about'; /* About button on all cards  */
-@import 'components/underline-title'; /* Text decoration on section titles */
-@import 'components/to-top-arrow'; /* Arrow for going to the top of the page */
-@import 'components/board-cards'; /* Resources Cards for all documentations available on the website */
-@import 'components/cursor'; /* Modified cursor */
-@import 'components/scrollbar'; /* Secondary scrollbar */
-@import 'components/copied-to-clipboard'; /* Copied to clipboard */
-@import 'components/contact-form'; /* Contact form */
-@import 'components/contact-form-success'; /* Contact form success */
-@import 'components/alert'; /* Alerts */
-
-/* END --- Components */
-
-/* START --- pages */
-
-@import 'pages/homepage'; /* Access to homepage with url /home */
-@import 'pages/projects'; /* Access to all projects with url /projects */
-@import 'pages/news'; /* Access to all news with url /news */
-@import 'pages/news{title}'; /* Access to a news with url /news/{title} */
-@import 'pages/news{keyword}'; /* Access to a keyword of news with url /news/{keyword} */
-@import 'pages/board'; /* Access to board page with url /board */
-@import 'pages/login'; /* Login page for access to admin session */
-@import 'pages/admin/components/navbar'; /* Admin --- Navbar Component */
-@import 'pages/admin/admin-view'; /* Admin --- View - (url) => /admin/{view} */
-@import 'pages/admin/admin-action'; /* Admin --- Action - (url) => /admin/{view}/{id}/{action} */
-@import 'pages/about-me'; /* Access to about-me page with url /about */
-@import 'pages/lang'; /* (url) => /language/{lang} */
-
-/* END --- pages */
-
-/* START --- Responsive */
-
-@import 'pages/@media/homepage'; /* Contain all responsive of homepage */
-@import 'pages/@media/projects'; /* Contain all responsive of projects page */
-@import 'pages/@media/news'; /* Contain all responsive of news pages  */
-@import 'pages/@media/admin'; /* Contain all responsive of admin views  */
-
-/* END --- Responsive */
+/** 
+ * Responsive 
+ */
+@import "pages/@media/homepage"; /* Contain all responsive of homepage */
+@import "pages/@media/projects"; /* Contain all responsive of projects page */
+@import "pages/@media/news"; /* Contain all responsive of news pages  */
+@import "pages/@media/admin"; /* Contain all responsive of admin views  */

@@ -1,6 +1,12 @@
-.contain-all-projects-list, .contain-all-resources-list, .contain-all-news-list, .contain-all-contacts-list {
+.contain-all-projects-list,
+.contain-all-resources-list,
+.contain-all-news-list,
+.contain-all-contacts-list {
   margin-top: 40px;
-  .add-new-resources, .add-new-projects, .add-new-news, .add-new-contacts {
+  .add-new-resources,
+  .add-new-projects,
+  .add-new-news,
+  .add-new-contacts {
     width: 100%;
     display: flex;
     align-items: center;
@@ -23,7 +29,10 @@
   }
 }
 
-.admin-resources, .admin-projects, .admin-news, .admin-contacts {
+.admin-resources,
+.admin-projects,
+.admin-news,
+.admin-contacts {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -47,7 +56,6 @@
     &.title {
       width: 50%;
     }
-
   }
 
   .contain_actions {
@@ -57,7 +65,7 @@
     align-items: center;
     gap: 20px;
     a .fa-download {
-      color: #49bf4D;
+      color: #49bf4d;
     }
     form {
       width: 20px;
@@ -72,7 +80,6 @@
           cursor: pointer;
         }
       }
-
     }
   }
 }

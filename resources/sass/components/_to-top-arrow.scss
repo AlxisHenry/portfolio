@@ -1,5 +1,3 @@
-/* START --- Component --- Back To Top Button */
-
 .to-top-arrow {
   position: fixed;
   right: 0;
@@ -24,13 +22,13 @@
     justify-content: center;
     align-items: center;
     border-radius: 2px;
-    box-shadow: 1px 10px 10px $ShadowDark;
+    box-shadow: 1px 10px 10px var(--shadow);
     &:hover {
       cursor: pointer;
     }
     &:active {
       transform: scale(0.98);
-      box-shadow: 3px 2px 5px 1px $ShadowDark;
+      box-shadow: 3px 2px 5px 1px var(--shadow);
     }
     .arrow {
       color: $BrokenWhite;
@@ -39,9 +37,6 @@
     }
   }
 }
-
-/* END --- Component --- Back To Top Button */
-/* START --- Component --- Back To Top Button Animations */
 
 @keyframes ArrowBump {
   0% {
@@ -60,5 +55,3 @@
     bottom: -100px;
   }
 }
-
-/* END --- Component --- Back To Top Button Animations */

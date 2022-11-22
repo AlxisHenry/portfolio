@@ -1,17 +1,10 @@
-/* START --- HOMEPAGE --- GLOBALS */
-
-/* END --- HOMEPAGE --- GLOBALS */
-/* START --- PRESENTATION --- SECTION */
-
 .__homepage__presentation__ {
-  // Section
   width: 100%;
   height: 400px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 
-  // Content
   .__presentation__ {
     margin-left: 20px;
     margin-right: 20px;
@@ -103,7 +96,6 @@
             }
           }
         }
-
       }
       .__main__asset__ {
         height: 400px;
@@ -114,15 +106,10 @@
           height: 300px;
           object-fit: cover;
         }
-
       }
     }
   }
 }
-
-/* END --- PRESENTATION --- SECTION */
-
-/* START --- ABOUT --- SECTION */
 
 .__spoiler__about__ {
   // Section
@@ -188,10 +175,6 @@
   }
 }
 
-/* END --- ABOUT --- SECTION */
-
-/* START --- PROJECTS --- SECTION */
-
 .__spoiler__projects__ {
   ._projects_cards_ {
     display: flex;
@@ -199,10 +182,6 @@
     gap: 100px;
   }
 }
-
-/* END --- PROJECTS --- SECTION  */
-
-/* START --- BOARD --- SECTION */
 
 .__spoiler__board__ {
   .__board__cards__ {
@@ -214,12 +193,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;  }
+    flex-direction: row;
+  }
 }
-
-/* END --- BOARD --- SECTION  */
-
-/* START --- CARDS --- SECTION */
 
 .__spoiler__cards__ {
   .__cards__ {
@@ -234,16 +210,6 @@
     flex-direction: row;
   }
 }
-
-/* END --- CARDS --- SECTION */
-
-/* START --- CONTACT --- SECTION */
-
-
-
-/* END --- CONTACT --- SECTION*/
-
-/* START --- ANIMATIONS */
 
 @keyframes cursor {
   0% {
@@ -305,5 +271,3 @@
     bottom: -400px;
   }
 }
-
-/* END --- ANIMATIONS */

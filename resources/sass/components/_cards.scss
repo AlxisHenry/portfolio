@@ -1,14 +1,11 @@
-/* START --- Component --- Cards */
-
 .__projects__ {
-
   .__more__projects__ {
     margin-top: 25px;
   }
 
   .__project__card__ {
     border-radius: 8px;
-    box-shadow: 0px -1px 6px 4px $ShadowDark;
+    box-shadow: 0px -1px 6px 4px var(--shadow);
     overflow: hidden;
     width: 350px;
     &:hover {
@@ -28,7 +25,7 @@
         justify-content: center;
         align-items: center;
         background-color: $white;
-        box-shadow: 1px 10px 10px $ShadowDark;
+        box-shadow: 1px 10px 10px var(--shadow);
 
         img {
           object-fit: cover;
@@ -41,7 +38,7 @@
         position: absolute;
         width: 350px;
         height: 380px;
-        box-shadow: 0 10px 10px $ShadowDark;
+        box-shadow: 0 10px 10px var(--shadow);
         bottom: -400px;
         background-color: $white;
 
@@ -87,25 +84,17 @@
             margin-left: 12px;
           }
         }
-
       }
-
     }
-
   }
 }
 
-/* END --- Component --- Cards */
-/* START --- Component --- Cards responsive */
-
 @media screen and (max-width: 440px) {
   .__projects__ {
-
     .__project__card__ {
       width: 280px;
 
       ._this_project_ {
-
         ._project_image_ {
           width: 280px;
           img {
@@ -115,12 +104,8 @@
 
         ._project_content_ {
           width: 280px;
-
         }
       }
     }
   }
-
 }
-
-/* END --- Component --- Cards responsive */

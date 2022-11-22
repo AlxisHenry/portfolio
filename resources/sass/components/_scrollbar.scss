@@ -1,19 +1,19 @@
 .__scrollbar__ {
-    position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--scrollbar-background);
+  width: 3px;
+  z-index: 120;
+
+  .__scrollbar__indicator__ {
+    animation: All ease-in 300ms;
+    position: relative;
+    height: 0;
     top: 0;
     left: 0;
-    height: 100%;
-    background-color: var(--scrollbar-background);
     width: 3px;
-    z-index: 120;
-
-    .__scrollbar__indicator__ {
-        animation: All ease-in 300ms;
-        position: relative;
-        height: 0;
-        top: 0;
-        left: 0;
-        width: 3px;
-        background-color: var(--scrollbar-progress);
-    }
+    background-color: var(--scrollbar-progress);
+  }
 }

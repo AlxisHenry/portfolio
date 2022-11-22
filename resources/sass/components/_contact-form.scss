@@ -153,7 +153,7 @@
           cursor: pointer;
           &:active {
             transform: scale(0.99);
-            box-shadow: 3px 2px 5px 1px $ShadowDark;
+            box-shadow: 3px 2px 5px 1px var(--shadow);
           }
         }
       }

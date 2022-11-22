@@ -20,7 +20,7 @@
     justify-content: center;
     padding: 1.125rem;
     background-color: var(--details);
-    box-shadow: 2px 10px 10px $ShadowDark;
+    box-shadow: 2px 10px 10px var(--shadow);
     border-radius: 20px;
 
     span {
@@ -31,13 +31,12 @@
       gap: 8px;
       font-weight: 500;
     }
-
   }
 }
 
 @keyframes bouncePopUp {
   0% {
-    margin-top: -200px
+    margin-top: -200px;
   }
   100% {
     margin-top: 6px;
@@ -46,7 +45,7 @@
 
 @keyframes bouncePopUpReverse {
   0% {
-    margin-top: 6px
+    margin-top: 6px;
   }
   100% {
     margin-top: -200px;

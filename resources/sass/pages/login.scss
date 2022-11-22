@@ -58,7 +58,7 @@
   margin-top: 50px;
   width: 100%;
   text-transform: uppercase;
-  color: $BrokenWhite ;
+  color: $BrokenWhite;
   padding: 15px 0;
   font-size: 24px;
   font-weight: 600;
@@ -66,8 +66,10 @@
   border-radius: 5px;
   cursor: pointer;
 
-  &:active { transform: scale(0.99); box-shadow: 3px 2px 5px 1px $ShadowDark; }
-
+  &:active {
+    transform: scale(0.99);
+    box-shadow: 3px 2px 5px 1px $ShadowDark;
+  }
 }
 
 .connexion-failed {
@@ -85,21 +87,20 @@
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    color: #F2F2F2;
+    color: #f2f2f2;
     font-weight: 600;
     background-color: #e3224a;
   }
-
 }
 
 @media screen and (max-width: 500px) {
   form {
-    width: 400px!important;
+    width: 400px !important;
   }
 }
 
 @media screen and (max-width: 450px) {
   form {
-    width: 275px!important;
+    width: 275px !important;
   }
 }

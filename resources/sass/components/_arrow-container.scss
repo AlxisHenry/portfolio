@@ -1,5 +1,3 @@
-/* START --- Component --- Arrow */
-
 .arrow-container {
   margin-top: 80px;
   width: 100%;
@@ -43,8 +41,6 @@
 .arrow-container .arrow .secondary-arrow {
   animation: bounceSecondary 2.5s ease-in infinite;
 }
-
-/* END --- Component --- Arrow */
 
 @keyframes bouncePrimary {
   0% {

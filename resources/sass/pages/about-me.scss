@@ -57,9 +57,7 @@
         width: 100%;
         height: 4px;
       }
-
     }
-
   }
 
   .all-skills {
@@ -75,7 +73,7 @@
 
     .category-skills .skill {
       border-radius: 8px;
-      box-shadow: 0px -1px 6px 4px $ShadowDark;
+      box-shadow: 0px -1px 6px 4px var(--shadow);
       width: 160px;
       height: 160px;
       background-color: $BrokenWhite;
@@ -90,7 +88,7 @@
       .skill-part {
         flex: 1.8;
         height: 100%;
-        border-right: solid 1px $ShadowDark;
+        border-right: solid 1px var(--shadow);
 
         display: flex;
         justify-content: center;
@@ -99,12 +97,9 @@
         img {
           width: 75px;
         }
-
       }
-
     }
   }
-
 }
 
 #__MoreInformations {
@@ -152,20 +147,20 @@
         width: 500px;
       }
     }
-
   }
 }
 
 @media screen and (max-width: 1000px) {
   .skills-navbar {
-    justify-content: center!important;
+    justify-content: center !important;
   }
   .category-skills {
-    justify-content: center!important;
+    justify-content: center !important;
   }
   #__MoreInformations {
-    flex-direction: column!important;
-    div div a, div div a span {
+    flex-direction: column !important;
+    div div a,
+    div div a span {
       font-size: 15px;
     }
   }
@@ -173,8 +168,8 @@
 
 @media screen and (max-width: 500px) {
   .skills-navbar {
-    flex-direction: column!important;
-    align-items: center!important;
+    flex-direction: column !important;
+    align-items: center !important;
     .contain-map {
       iframe {
         height: auto;

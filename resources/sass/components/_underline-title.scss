@@ -1,5 +1,3 @@
-/* START --- Component --- Underline Section Title */
-
 .__main__section__title__ {
   h1 {
     text-transform: uppercase;
@@ -14,15 +12,10 @@
   }
 }
 
-/* END --- Component --- Underline Section Title */
-/* START --- Component --- Underline Section Title responsive */
-
 @media screen and (max-width: 440px) {
-  .__main__section__title__{
+  .__main__section__title__ {
     h1 {
       font-size: 3rem;
     }
   }
 }
-
-/* END --- Component --- Underline Section Title responsive */

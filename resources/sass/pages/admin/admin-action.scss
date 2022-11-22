@@ -39,9 +39,7 @@
       .target {
         font-weight: 600;
       }
-
     }
-
   }
 
   .contain-action-form {
@@ -72,7 +70,10 @@
       gap: 20px;
       border-radius: 8px;
       padding: 0.825rem;
-      &:active {transform: scale(0.98);box-shadow: 3px 2px 5px 1px $ShadowDark;}
+      &:active {
+        transform: scale(0.98);
+        box-shadow: 3px 2px 5px 1px var(--shadow);
+      }
 
       .delete-form-submit {
         background-color: $Clay;
@@ -88,11 +89,11 @@
           font-family: $apple;
           font-weight: 500;
           text-transform: uppercase;
-          &:hover {cursor: pointer;}
+          &:hover {
+            cursor: pointer;
+          }
         }
-
       }
-
     }
 
     .action-form {
@@ -119,7 +120,6 @@
             height: 30px;
             max-height: 30px;
           }
-
         }
 
         &.right-form {
@@ -131,9 +131,7 @@
           flex: 1;
           display: flex;
           flex-direction: column;
-
         }
-
       }
 
       input[type="submit"] {
@@ -148,12 +146,15 @@
         max-width: 100%;
         height: 70px;
         min-height: 70px;
-        &:hover {cursor: pointer;}
-        &:active {transform: scale(0.98);box-shadow: 3px 2px 5px 1px $ShadowDark;}
+        &:hover {
+          cursor: pointer;
+        }
+        &:active {
+          transform: scale(0.98);
+          box-shadow: 3px 2px 5px 1px var(--shadow);
+        }
       }
-
     }
-
   }
 
   .callback-message {
@@ -176,20 +177,17 @@
         }
       }
     }
-
   }
-
 }
 
 .fa-trash {
-  color: #D63939;
+  color: #d63939;
   &:hover {
     cursor: pointer;
   }
 }
 
 @media screen and (max-width: 800px) {
-
   .admin-action-section {
     div h1 {
       margin-left: 20px;
@@ -198,11 +196,8 @@
     }
 
     .dup-form {
-      flex-direction: column!important;
-      gap: 18px!important;
+      flex-direction: column !important;
+      gap: 18px !important;
     }
-
   }
-
-
 }

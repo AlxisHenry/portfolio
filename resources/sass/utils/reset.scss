@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  transition: All 0.5s ease;
+  background: var(--primary-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+a:not(.main-link) {
+  color: var(--link);
+  &:hover {
+    color: var(--link-hover);
+  }
+}
+
+a.main-link {
+  &:hover {
+  }
+}

@@ -16,7 +16,7 @@ const _switch = () => {
   indicator.src = indicator.src.replace(themeState.previous, themeState.next);
   document.body.dataset.theme = themeState.next;
   store(themeState.next);
-}
+};
 
 const store = (theme) => {
   document.cookie = "theme=" + theme + ";path=/";

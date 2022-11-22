@@ -42,11 +42,8 @@
         background-color: $LightBlue;
         cursor: pointer;
       }
-
     }
-
   }
-
 }
 
 .navbar-indicator {
@@ -69,7 +66,7 @@
       width: auto;
       color: $Dark;
 
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
 
@@ -78,9 +75,7 @@
           cursor: pointer;
         }
       }
-
     }
-
   }
 
   .optionals-redirection {
@@ -109,7 +104,5 @@
         }
       }
     }
-
   }
-
 }

@@ -6,18 +6,19 @@
   width: 100%;
   height: auto;
 
-  .__search__article__    {
+  .__search__article__ {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-      .__contain__search__ {
+    .__contain__search__ {
       margin-top: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      label input, div {
+      label input,
+      div {
         height: calc(2.25rem + 10px);
         padding: 0.375rem 0.75rem;
         font-size: 1rem;
@@ -48,38 +49,36 @@
         }
         &:active {
           transform: scale(1.02);
-          box-shadow: 3px 2px 5px 1px $ShadowDark;
+          box-shadow: 3px 2px 5px 1px var(--shadow);
         }
       }
     }
 
-      .show_all {
-        margin-top: 0.725rem;
+    .show_all {
+      margin-top: 0.725rem;
 
-        a {
-          font-weight: normal;
-          font-size: 14px;
-          color: $Dark;
-          &:hover {
-            cursor: pointer;
-          }
+      a {
+        font-weight: normal;
+        font-size: 14px;
+        color: $Dark;
+        &:hover {
+          cursor: pointer;
         }
-
-        &.disabled {
-          a {
-            font-weight: lighter;
-            color: $LightGray;
-            &:hover {
-              color: $LightGray;
-            }
-          }
-        }
-
       }
 
+      &.disabled {
+        a {
+          font-weight: lighter;
+          color: $LightGray;
+          &:hover {
+            color: $LightGray;
+          }
+        }
+      }
+    }
   }
 
-  .__news__container__  {
+  .__news__container__ {
     width: 100%;
     margin-top: 75px;
     max-width: 1200px;
@@ -106,12 +105,11 @@
         justify-content: flex-start;
 
         h2 {
-          margin-left: 5px!important;
-          display: inline-block!important;
-          font-weight: 700!important;
-          font-size: 1.8rem!important;
+          margin-left: 5px !important;
+          display: inline-block !important;
+          font-weight: 700 !important;
+          font-size: 1.8rem !important;
         }
-
       }
 
       .__news__category__cards__ {
@@ -123,8 +121,6 @@
         flex-direction: row;
         width: 100%;
       }
-
     }
-
   }
 }

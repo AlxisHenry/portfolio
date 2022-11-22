@@ -1,72 +1,65 @@
-/* START --- Component --- News Cards */
-
 .__article__card__ {
-      height: 350px;
-      width: 275px;
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      border-radius: 10px;
-      box-shadow: 0px -1px 6px 4px $ShadowDark;
+  height: 350px;
+  width: 275px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px -1px 6px 4px var(--shadow);
 
-      .__article__card__content__ {
-        position: absolute;
-        width: 275px;
-        height: 350px;
+  .__article__card__content__ {
+    position: absolute;
+    width: 275px;
+    height: 350px;
 
-          .__article__image__ {
-            width: 100%;
+    .__article__image__ {
+      width: 100%;
 
-            img {
-              width: 100%;
-              height: 175px;
-              border-bottom: solid 1px black;
-              border-top-left-radius: 10px;
-              border-top-right-radius: 10px;
-            }
-          }
-
-          .__article__date__ {
-            margin-top: 12px;
-            flex: .5;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            time {
-              font-size: 14px;
-              font-family: $poppins;
-              font-weight: 600;
-            }
-          }
-
-          .__article__title__ {
-            margin-top: 12px;
-            flex: 2px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            span {
-              text-align: center;
-              font-size: 13px;
-              font-family: $poppins;
-              margin-left: 8px;
-              margin-right: 8px;
-              font-weight: 500;
-            }
-          }
-
-          ._up_project_ {
-            bottom: 20px;
-            right: 20px;
-          }
-
+      img {
+        width: 100%;
+        height: 175px;
+        border-bottom: solid 1px black;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
       }
     }
 
-/* END --- Component --- News Cards */
-/* START --- Component --- News Cards Responsive */
-/* END --- Component --- News Cards Responsive */
+    .__article__date__ {
+      margin-top: 12px;
+      flex: 0.5;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      time {
+        font-size: 14px;
+        font-family: $poppins;
+        font-weight: 600;
+      }
+    }
+
+    .__article__title__ {
+      margin-top: 12px;
+      flex: 2px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        text-align: center;
+        font-size: 13px;
+        font-family: $poppins;
+        margin-left: 8px;
+        margin-right: 8px;
+        font-weight: 500;
+      }
+    }
+
+    ._up_project_ {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+}
