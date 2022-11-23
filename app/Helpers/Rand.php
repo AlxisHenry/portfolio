@@ -6,19 +6,47 @@ class Rand
 {
 
     /**
-     * @param int $length
+     * @var string $letters
+     */
+    private string $letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    /**
+     * @var string $specialsCharacters
+     */
+    private string $specialsCharacters = '!@#$%^&*()_+{}|:"<>?';
+
+    /**
+     * @var string $numbers
+     */
+    private string $numbers = '0123456789';
+
+    /**
+     * @return bool
+     */
+    public static function bool(): bool
+    {
+        return (bool) rand(0, 1);
+    }
+
+    /**
+     * @param int $length                   Length of the string to generate
+     * @param bool $withNumbers             Include numbers in the variable
+     * @param bool $withSpecialsCharacters  Include specials characters in the variable
      * 
      * @return string
      */
-    public static function string(int $length = 10): string
+    public static function lorem(int $length = 16, bool $withNumbers = false, bool $withSpecialsCharacters = false): string
     {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        /** @var string $characters */
+        $characters = self::$letters . ($withNumbers ? self::$numbers : '') . ($withSpecialsCharacters ? self::$specialsCharacters : '');
+        /** @var int $charactersLength */
         $charactersLength = strlen($characters);
-        $randomString = '';
-        for ($i = 0; $i < $length; $i++) {
-            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        /** @var string $lorem */
+        $lorem = '';
+        for ($i = 0; $i <= $length; $i++) {
+            $lorem .= $characters[rand(0, $charactersLength - 1)];
         }
-        return $randomString;
+        return $lorem;
     }
 
     /**
@@ -30,7 +58,7 @@ class Rand
     public static function int(int $min = 0, int $max = 10):int 
     {
 
-        return rand($min, $max);
+        return (int) rand($min, $max);
 
     }
 

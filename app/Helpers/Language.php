@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Storage;
 
 class Language
 {
+
     /**
      * @return array
      */
