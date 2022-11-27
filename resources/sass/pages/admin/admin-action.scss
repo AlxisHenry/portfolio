@@ -63,7 +63,7 @@
 
     .delete-form {
       margin-top: 25px;
-      background-color: $Clay;
+      background-color: $clay;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -76,7 +76,7 @@
       }
 
       .delete-form-submit {
-        background-color: $Clay;
+        background-color: $clay;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -136,7 +136,7 @@
 
       input[type="submit"] {
         margin-top: 25px;
-        background-color: $Clay;
+        background-color: $clay;
         color: white;
         padding: 0.825rem;
         border-radius: 8px;
@@ -172,7 +172,7 @@
       button {
         text-decoration: underline;
         &:hover {
-          color: gray;
+          color: $light-gray;
           cursor: pointer;
         }
       }

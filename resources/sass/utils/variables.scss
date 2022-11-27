@@ -1,26 +1,22 @@
-$DarkBlue: #242b40;
-$Blue: #1b208c;
-$FlashBlue: #52b3d9;
-$MoyBlue: #464aa6;
-$LightBlue: #787cbf;
-$LinkColor: #6c757d;
-$Clay: #f2bc79;
-$Orange: #f2c166;
-$LightOrange: #f2d49b;
-$BrokenWhite: #f2f2f2;
-$BrokenLightWhite: #f2f2f0;
-$LightBlack: #181717;
-$LightGray: #595959;
-
 /**
   * Colors
   */
+$primary: #f2f2f2;
 $white: #ffffff;
 $black: #0f0f0f;
+$clay: #f2bc79;
+$orange: #f2c166;
+$blue: #1b208c;
+$ocean: #52b3d9;
 $dark: rgba(0, 0, 0, 1);
+$dark-blue: #242b40;
+$medium-blue: #464aa6;
 $light-white: #f2f2f2;
 $light-gray: #595959;
 $light-black: #181717;
+$light-orange: #f2d49b;
+$light-blue: #787cbf;
+$light-primary: #f2f2f0;
 
 /**
   * Font family
@@ -46,7 +42,6 @@ $apple: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
   --scrollbar-progress: #52b3d9;
   --link: #6c757d;
   --link-hover: #000;
-
   --shadow: rgba(0, 0, 0, 0.1);
   --underline: #464aa6;
 }
@@ -62,7 +57,6 @@ $apple: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
   --scrollbar-background: #f2f2f2;
   --scrollbar-progress: #464aa6;
   --link: #464aa6;
-
   --shadow: rgba(0, 0, 0, 0.1);
   --link-hover: #787cbf;
 }

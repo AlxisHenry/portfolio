@@ -2,7 +2,7 @@
   margin-top: 240px;
   width: 100%;
   height: 45px;
-  background-color: $DarkBlue;
+  background-color: $dark-blue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,14 +12,14 @@
     position: absolute;
     left: 19.5px;
     a i:hover {
-      color: $BrokenLightWhite;
+      color: $light-white;
     }
   }
 
   .__footer__main__ {
     text-align: center;
     width: auto;
-    color: $BrokenLightWhite;
+    color: $light-white;
     margin-right: 12px;
     height: 40px;
     display: flex;
@@ -38,7 +38,7 @@
       text-decoration: none;
       color: inherit;
       &:hover {
-        color: $LinkColor;
+        color: $light-gray;
       }
     }
   }

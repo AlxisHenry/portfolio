@@ -1,5 +1,7 @@
 @media screen and (max-width: 600px) {
-  .admin-resources, .admin-projects, .admin-news {
+  .admin-resources,
+  .admin-projects,
+  .admin-news {
     flex-direction: column;
   }
 }

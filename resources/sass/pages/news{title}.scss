@@ -84,7 +84,7 @@
               border-color: #cdcdfd;
               border-radius: 0.25rem;
               padding: 0.475rem 0.85rem;
-              color: white;
+              color: $white;
               line-height: 1.5;
               text-align: center;
 
@@ -129,7 +129,7 @@
           text-decoration: underline;
           &:hover {
             cursor: pointer;
-            color: gray;
+            color: $light-gray;
           }
         }
       }

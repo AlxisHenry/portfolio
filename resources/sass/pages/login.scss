@@ -20,7 +20,7 @@
 
 .__form-login-admin__ * {
   font-family: $poppins;
-  color: #000000;
+  color: $black;
   letter-spacing: 1px;
   outline: none;
   border: none;
@@ -54,11 +54,11 @@
 
 .__form-login-admin__ .form-submit {
   height: 75px;
-  background-color: $Clay;
+  background-color: $clay;
   margin-top: 50px;
   width: 100%;
   text-transform: uppercase;
-  color: $BrokenWhite;
+  color: $light-white;
   padding: 15px 0;
   font-size: 24px;
   font-weight: 600;
@@ -68,7 +68,7 @@
 
   &:active {
     transform: scale(0.99);
-    box-shadow: 3px 2px 5px 1px $ShadowDark;
+    box-shadow: 3px 2px 5px 1px var(--shadow);
   }
 }
 
@@ -87,7 +87,7 @@
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    color: #f2f2f2;
+    color: $primary;
     font-weight: 600;
     background-color: #e3224a;
   }

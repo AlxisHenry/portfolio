@@ -60,7 +60,7 @@
       a {
         font-weight: normal;
         font-size: 14px;
-        color: $Dark;
+        color: $dark;
         &:hover {
           cursor: pointer;
         }
@@ -69,9 +69,9 @@
       &.disabled {
         a {
           font-weight: lighter;
-          color: $LightGray;
+          color: $light-gray;
           &:hover {
-            color: $LightGray;
+            color: $light-gray;
           }
         }
       }

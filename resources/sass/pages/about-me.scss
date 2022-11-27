@@ -33,27 +33,27 @@
       font-family: $apple;
       font-weight: 700;
       text-align: center;
-      color: $LinkColor;
+      color: $light-gray;
 
       &.selected {
         transition: color 200ms ease-in;
-        color: $MoyBlue;
+        color: $medium-blue;
         span {
-          background-color: $MoyBlue;
+          background-color: $medium-blue;
         }
       }
 
       &:hover {
         transition: color 200ms ease-in;
-        color: $MoyBlue;
+        color: $medium-blue;
         span {
-          background-color: $MoyBlue;
+          background-color: $medium-blue;
         }
         cursor: pointer;
       }
 
       span {
-        background-color: $LinkColor;
+        background-color: $light-gray;
         width: 100%;
         height: 4px;
       }
@@ -76,7 +76,7 @@
       box-shadow: 0px -1px 6px 4px var(--shadow);
       width: 160px;
       height: 160px;
-      background-color: $BrokenWhite;
+      background-color: $light-white;
       display: flex;
       flex-direction: row;
 
@@ -108,7 +108,7 @@
   min-height: 620px;
   height: auto;
   box-shadow: 0px -1px 6px 4px rgb(0 0 0 / 10%);
-  background-color: $DarkBlue;
+  background-color: $dark-blue;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -132,7 +132,7 @@
           font-size: 20px;
           padding: 6px;
           span {
-            color: white;
+            color: $white;
           }
         }
       }

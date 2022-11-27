@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  background-color: white;
+  background-color: $white;
   border-radius: 12px;
   position: relative;
   box-shadow: 0px -1px 6px 4px var(--shadow);
@@ -68,7 +68,7 @@
     right: 20px;
     width: 185px;
     height: 70px;
-    border: solid 1px black;
+    border: solid 1px $black;
     border-radius: 4px;
     overflow: hidden;
     a {
@@ -110,7 +110,7 @@
           width: 60px;
           left: -80px;
           height: 150px;
-          background-color: $LightBlue;
+          background-color: $light-blue;
           opacity: 0.225;
           transform: rotateZ(160deg);
           &.up-animation {

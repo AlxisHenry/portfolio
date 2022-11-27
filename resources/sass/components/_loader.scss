@@ -57,21 +57,21 @@
 @keyframes circle-1 {
   25% {
     transition: All 100ms ease-in;
-    box-shadow: 0 0 18px 0 $LightGray;
+    box-shadow: 0 0 18px 0 $light-gray;
     transform: scale(1.2);
   }
 }
 @keyframes circle-2 {
   50% {
     transition: All 100ms ease-in;
-    box-shadow: 0 0 18px 0 $LightGray;
+    box-shadow: 0 0 18px 0 $light-gray;
     transform: scale(1.2);
   }
 }
 @keyframes circle-3 {
   75% {
     transition: All 100ms ease-in;
-    box-shadow: 0 0 18px 0 $LightGray;
+    box-shadow: 0 0 18px 0 $light-gray;
     transform: scale(1.2);
   }
 }

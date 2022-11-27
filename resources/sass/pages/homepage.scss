@@ -14,12 +14,12 @@
     max-height: 400px;
     height: 400px;
     align-items: center;
-    border-bottom: solid 2px black;
-    box-shadow: 0 20px 10px -15px #111;
-    -webkit-box-shadow: 0 20px 10px -15px #111;
+    border-bottom: solid 2px $black;
+    box-shadow: 0 20px 10px -15px var(--shadow);
+    -webkit-box-shadow: 0 20px 10px -15px var(--shadow);
     .__presentation__separator__ {
       height: 400px;
-      background-color: black;
+      background-color: $black;
     }
     .__main__presentation__ {
       display: flex;
@@ -142,7 +142,7 @@
       }
       .click-to-copy-indicator {
         margin-top: 20px;
-        color: $LightGray;
+        color: $light-gray;
         font-size: smaller;
       }
       ._about_contact {
@@ -234,22 +234,22 @@
 
 @keyframes AnimationAboutBackground {
   from {
-    background-color: white;
+    background-color: $white;
     width: 0;
   }
   to {
-    background-color: black;
+    background-color: $black;
     width: 100%;
   }
 }
 
 @keyframes AnimationAboutBackgroundReverse {
   from {
-    background-color: black;
+    background-color: $black;
     width: 100%;
   }
   to {
-    background-color: white;
+    background-color: $white;
     width: 0;
   }
 }

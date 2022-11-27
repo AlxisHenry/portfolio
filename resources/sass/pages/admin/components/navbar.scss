@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  background-color: $MoyBlue;
+  background-color: $medium-blue;
 
   .navbar-redirections {
     display: flex;
@@ -28,18 +28,18 @@
         height: 100%;
         font-weight: 600;
         font-size: 20px;
-        color: $BrokenWhite;
+        color: $light-white;
         &:hover {
           cursor: pointer;
         }
       }
       &.active-navbar-button {
         transition: background-color 300ms ease-in;
-        background-color: $LightBlue;
+        background-color: $light-blue;
       }
       &:hover {
         transition: background-color 300ms ease-in;
-        background-color: $LightBlue;
+        background-color: $light-blue;
         cursor: pointer;
       }
     }
@@ -64,7 +64,7 @@
 
     a {
       width: auto;
-      color: $Dark;
+      color: $dark;
 
       &:hover {
         cursor: pointer;

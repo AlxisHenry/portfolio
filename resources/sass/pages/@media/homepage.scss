@@ -1,21 +1,15 @@
 /* START --- Homepage view Responsive */
 
-@media screen and (max-width: 1200px){
-
+@media screen and (max-width: 1200px) {
   /* START --- PRESENTATION --- SECTION RESPONSIVE */
 
   .__homepage__presentation__ {
-
     .__presentation__ {
-
       .__presentation__separator__ {
-
       }
 
       .__main__presentation__ {
-
         .__me__ {
-
           .name {
             p {
               span {
@@ -45,32 +39,24 @@
                 &:last-child {
                   width: 2.5rem;
                 }
-
               }
             }
           }
-
         }
         .__main__asset__ {
           display: none;
 
           .__asset__ {
-
           }
-
         }
-
       }
     }
-
   }
 
   /* END --- PRESENTATION --- SECTION RESPONSIVE */
-
 }
 
 @media screen and (max-width: 850px) {
-
   /* START --- PROJECTS --- SECTION RESPONSIVE */
 
   .__spoiler__projects__ {
@@ -84,9 +70,9 @@
 
   ._about_contact {
     div {
-      flex-direction: column!important;
+      flex-direction: column !important;
       div {
-        flex-direction: row!important;
+        flex-direction: row !important;
         align-items: flex-start;
         a {
         }
@@ -95,24 +81,19 @@
   }
 
   /* END --- ABOUT --- SECTION RESPONSIVE */
-
 }
 
-@media screen and (max-width: 600px){
-
+@media screen and (max-width: 600px) {
   /* START --- PRESENTATION --- SECTION RESPONSIVE */
 
   .__homepage__presentation__ {
-
     .__presentation__ {
       margin-top: -65px;
       .__presentation__separator__ {
       }
 
       .__main__presentation__ {
-
         .__me__ {
-
           .name {
             margin-top: 100px;
             p {
@@ -142,7 +123,6 @@
                 &:last-child {
                   width: 120px;
                 }
-
               }
             }
           }
@@ -151,22 +131,16 @@
           display: none;
 
           .__asset__ {
-
           }
-
         }
-
       }
     }
-
   }
 
   /* END --- PRESENTATION --- SECTION RESPONSIVE */
-
 }
 
 @media screen and (max-width: 430px) {
-
   /* START --- PRESENTATION --- SECTION RESPONSIVE */
 
   .__homepage__presentation__ {
@@ -205,20 +179,19 @@
   /* START --- ABOUT --- SECTION RESPONSIVE */
 
   .__spoiler__about__ {
-    .__about__card__  .__about__ ._about_descript_ {
-          text-align: center;
-          font-size: 17px;
-          letter-spacing: 0;
+    .__about__card__ .__about__ ._about_descript_ {
+      text-align: center;
+      font-size: 17px;
+      letter-spacing: 0;
     }
   }
 
   /* END --- ABOUT --- SECTION RESPONSIVE */
-
 }
 
 @media screen and (min-height: 800px) {
   .__homepage__presentation__ {
-      margin-top: 85px;
+    margin-top: 85px;
   }
 }
 

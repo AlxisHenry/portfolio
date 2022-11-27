@@ -14,7 +14,7 @@
   }
 
   .block {
-    background-color: $DarkBlue;
+    background-color: $dark-blue;
     width: 36px;
     height: 36px;
     position: relative;
@@ -31,7 +31,7 @@
       box-shadow: 3px 2px 5px 1px var(--shadow);
     }
     .arrow {
-      color: $BrokenWhite;
+      color: $light-white;
       font-size: 26px;
       transform: rotateX(180deg);
     }
