@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use App\Models\News;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class RoutesTest extends TestCase
@@ -13,63 +12,56 @@ class RoutesTest extends TestCase
      *
      * @return void
      */
-    public function testHomepageIsWorking()
+    public function test_homepage_screen_can_be_rendered()
     {
         $response = $this->get('/');
         $response->assertStatus(200);
     }
 
-    public function testAboutIsWorking()
+    public function test_about_me_screen_can_be_rendered()
     {
         $response = $this->get('/about');
         $response->assertStatus(200);
     }
 
-    public function testResourcesIsWorking()
+    public function test_resources_screen_can_be_rendered()
     {
         $response = $this->get('/resources');
         $response->assertStatus(200);
     }
 
-    public function testNewsIsWorking()
+    public function test_news_screen_can_be_rendered()
     {
         $response = $this->get('/news');
         $response->assertStatus(200);
     }
 
-    public function testTargetNewsIsWorking()
+    public function test_news_show_screen_can_be_rendered()
     {
         $target_news = News::first();
         $response = $this->get('/news/'.explode('/', $target_news->UrlArticle)[array_key_last(explode('/', $target_news->UrlArticle))]);
         $response->assertStatus(200);
     }
 
-    public function testProjectsIsWorking()
+    public function test_projects_screen_can_be_rendered()
     {
         $response = $this->get('/projects');
         $response->assertStatus(200);
     }
 
-    public function testTargetProjectsIsWorking()
-    {
-     //   $target_news = News::first();
-     //   $response = $this->get('/news/'.);
-     //   $response->assertStatus(200);
-    }
-
-    public function testLanguageIsNotFound()
+    public function test_languages_screen_can_be_rendered()
     {
         $response = $this->get('/language');
-        $response->assertStatus(404);
-    }
-
-    public function testTargetLanguageIsWorking()
-    {
-        $response = $this->get('/language/js');
         $response->assertStatus(200);
     }
 
-    public function testLoginIsWorking() {
+    public function test_languages_show_screen_can_be_rendered()
+    {
+        $response = $this->get('/language/css');
+        $response->assertStatus(200);
+    }
+
+    public function test_login_screen_can_be_rendered() {
         $response = $this->get('/login');
         $response->assertStatus(200);
     }

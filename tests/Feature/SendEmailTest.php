@@ -13,23 +13,16 @@ class SendEmailTest extends TestCase
      *
      * @return void
      */
-    public function test_send_email()
+    public function test_assert_email_can_be_send_to_owner_email()
     {
-        $owner_email = "alexis.henry150357@gmail.com";
-
-        $request = [
+        Mail::fake();
+        Mail::to(env('MAIL_OWNER'))->queue(new ContactMailable([
             'name' => 'Alexis',
             'email' => 'alexis150357@gmail.com',
             'object' => 'Object',
             'content' => 'Contenu Test',
-        ];
-
-        Mail::fake();
-
-        Mail::to($owner_email)->queue(new ContactMailable($request));
-
+        ]));
         Mail::assertQueued(ContactMailable::class);
-
     }
 
 }
