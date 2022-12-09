@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Alert;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -42,6 +43,12 @@ class ContactController extends Controller
             return redirect()->back()->withErrors($validate)->withInput()->with('scroll', true)->with(compact('credentials'));
         }
         Contact::create($credentials);
+        if (!env('MAIL_OWNER')) {
+            return redirect()->back()->with([
+                'scroll' => true,
+                'popup' => new Alert('error', 'Mail not sent', 'Sorry, something went wrong.', true)
+            ]);
+        }
         Mail::to(env('MAIL_OWNER'))->queue(new ContactMailable($request->all()));
         return redirect()->back()->with('success', true)->with('scroll', true);
     }
