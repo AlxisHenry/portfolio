@@ -18,7 +18,7 @@ export default defineConfig({
     ]),
   ],
   server: {
-    cors: false,
+    // cors: false,
     hmr: {
       host: "localhost"
     }

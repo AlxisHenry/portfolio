@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="_github_link_">
-                    <a target="_blank" href="{{ $project->GithubLink }}" rel="noreferrer nofollow">
+                    <a target="_blank" href="{{ $project->GithubLink }}" rel="noreferrer nofollow" class="main-link">
                         Available on Github
                     </a>
                 </div>
@@ -26,7 +26,7 @@
 
                     @foreach(explode(',', $project->languages) as $language)
 
-                        <a href="/language/{{strtolower($language)}}">
+                        <a href="/language/{{strtolower($language)}}" class="main-link">
                                 <span class="_project_language">
                                     {{ ucfirst($language) }}
                                 </span>

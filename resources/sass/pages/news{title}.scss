@@ -124,9 +124,8 @@
           max-width: 300px;
           width: 300px;
           font-size: 15px;
-          color: #1f2630;
+          color: var(--text-color);
           line-height: 1;
-          text-decoration: underline;
           &:hover {
             cursor: pointer;
             color: $light-gray;

@@ -46,7 +46,7 @@
                         <div class="__keywords__">
                             @foreach(explode(' ', $ARTICLE->Theme) as $theme)
                                 @if (strlen($theme) > 5)
-                                    <a href="/news/word/{{ strtolower(strtr($theme, $unwanted_array)) }}"> <span class="__article_keyword__"> {{ $Google->translate(strtolower($theme) ?? '') }} </span> </a>
+                                    <a href="/news/word/{{ strtolower(strtr($theme, $unwanted_array)) }}" class="main-link"> <span class="__article_keyword__"> {{ $Google->translate(strtolower($theme) ?? '') }} </span> </a>
                                 @endif
                             @endforeach
                         </div>

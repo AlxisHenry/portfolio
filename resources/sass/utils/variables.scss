@@ -35,6 +35,7 @@ $apple: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
   --contrast: #242b40;
   --burger-color: #595959;
   --title-color: #212529;
+  --subtitle-color: #212529;
   --text-color: #212529;
   --button-background: #f2bc79;
   --details: #f2bc79;
@@ -44,6 +45,7 @@ $apple: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
   --link-hover: #000;
   --shadow: rgba(0, 0, 0, 0.1);
   --underline: #464aa6;
+  --icon-filter-invert: invert(0);
 }
 
 [data-theme="dark"] {
@@ -51,7 +53,9 @@ $apple: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
   --contrast: #f2f2f2;
   --burger-color: #f2f2f2;
   --title-color: #f2f2f2;
+  --subtitle-color: #f2f2f2;
   --text-color: #f2f2f2;
+  --text-color_constrast: #212529;
   --button-background: #464aa6;
   --details: #464aa6;
   --scrollbar-background: #f2f2f2;
@@ -59,4 +63,5 @@ $apple: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
   --link: #464aa6;
   --shadow: rgba(0, 0, 0, 0.1);
   --link-hover: #787cbf;
+  --icon-filter-invert: invert(100%);
 }

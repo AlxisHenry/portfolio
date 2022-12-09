@@ -11,8 +11,11 @@
   .__footer__settings__ {
     position: absolute;
     left: 19.5px;
+    a i {
+      color: var(--text-color)!important;
+    }
     a i:hover {
-      color: $light-white;
+      color: var(--details)!important;
     }
   }
 

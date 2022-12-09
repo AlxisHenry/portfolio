@@ -60,7 +60,7 @@
       a {
         font-weight: normal;
         font-size: 14px;
-        color: $dark;
+        color: var(--text-color)!important;
         &:hover {
           cursor: pointer;
         }
@@ -109,6 +109,7 @@
           display: inline-block !important;
           font-weight: 700 !important;
           font-size: 1.8rem !important;
+          color: var(--subtitle-color)!important;
         }
       }
 
