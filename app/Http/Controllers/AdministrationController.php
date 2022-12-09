@@ -52,7 +52,9 @@ class AdministrationController extends Controller
     {
         Auth::logout();
         Session::flush();
-        return redirect()->route('index');
+        return redirect()->route('index')->with(
+            'popup', new Alert('success', 'Logout successful', 'You have been logged out successfully.')
+        );
     }
 
     public function index(string $view)
