@@ -37,7 +37,7 @@ class AdministrationController extends Controller
 
     public function auth(Request $request)
     {
-        if (Auth::attempt($request->only('username', 'password')))
+        if (Auth::attempt($request->only('username', 'password')) && Auth::user()->is_admin)
             return $this->toScreen(
                 parameters: [
                     'popup' => new Alert('success', 'Login successful', 'You have been logged in successfully.')
