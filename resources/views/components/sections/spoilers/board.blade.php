@@ -4,12 +4,10 @@
     @endslot
 @endcomponent
 
-<div class="__board__cards__" >
-
-    @foreach($Boards as $Board)
+<div class="__board__cards__">
+    @foreach ($Boards as $Board)
         @include('components.board-cards')
     @endforeach
-
 </div>
 
 @include('components.more', ['to' => '/resources'])

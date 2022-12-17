@@ -7,6 +7,7 @@
 @endif
 
 @include('components.scrollbar')
+
 @include('components.cursor')
 
 @include('layouts.navbar')
