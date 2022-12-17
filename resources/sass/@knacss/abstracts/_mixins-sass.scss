@@ -34,7 +34,6 @@ $bp-aliases: (
 
   // If the key doesn't exist in the map
   @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
-    +"Please make sure it is defined in `$bp-aliases` map.";
+    @warn "Unfortunately, no value could be retrieved";
   }
 }
