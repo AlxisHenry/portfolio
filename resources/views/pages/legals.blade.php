@@ -4,7 +4,8 @@
     <section class="__legals__">
         <div class="__legals__content__">
             <h1>Disclaimer</h1>
-            <p>Last updated: {{ $lastUpdated }}</p>
+            <p>Today date: <b>{{ $today }}</b></p>
+            <p>Last updated: <b>{{ $lastUpdated }}</b></p>
             <h1>Interpretation and Definitions</h1>
             <h2>Interpretation</h2>
             <p>The words of which the initial letter is capitalized have meanings defined under the following conditions.
@@ -85,6 +86,8 @@
             <p>Code APE 6202A</p>
             <p>N° TVA : FR 22 424 761 419</p>
             <p>Siège social : 2 rue Kellermann - 59100 Roubaix - France</p>
+            <p>Téléphone : +33 (0) 899 701 761 (1.349 € TTC l’appel, et 0.337 € TTC/mn)</p>
+            <p>Fax : + 33 (0) 3 20 20 09 58<p>
             <p>Michel Paulin, Directeur Général</p>
             <p>OVH SAS, société au capital de 10 174 560 €, RCS Lille Métropole 424 761 419 00045, Code APE 6202A, N° TVA :
                 FR 22 424 761 419, Siège social : 2 rue Kellermann - 59100 Roubaix - France</p>
@@ -98,7 +101,13 @@
                     <p>By visiting this page on our website: <a href="https://alexishenry.eu/contact"
                             rel="external nofollow noopener" target="_blank">https://alexishenry.eu/contact</a></p>
                 </li>
+                <li>
+                    <p>By using our contact form below</p>
+                </li>
             </ul>
         </div>
+    </section>
+    <section id="__ContactForm" class="section __contact__form__">
+        @include('components.sections.contact')
     </section>
 @endsection
