@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Projects;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use SebastianBergmann\CodeCoverage\Report\Xml\Project;
 
 class ProjectController extends Controller
 {
@@ -15,7 +16,7 @@ class ProjectController extends Controller
             'title' => 'Projects - HENRY ALEXIS',
             'navbar' => 'projects',
             'og_description' => 'Portfolio HENRY ALEXIS - Projects',
-            'projects' => Projects::all()
+            'projects' => Projects::orderBy("published_at")->get()
         ]);
     }
 
