@@ -56,9 +56,9 @@ class Language
         return $languages;
     }
 
-    public static function match(string $lang): string
+    public static function match(string $lang): string|bool
     {
-        if (array_key_exists($lang, self::all())) return self::all()[$lang];
+        return array_key_exists($lang, self::all()) ? self::all()[$lang] : false;
     }
 
     public static function random():string
