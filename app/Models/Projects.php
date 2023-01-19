@@ -28,7 +28,7 @@ class Projects extends Model
     
     public function scopeGetHomepageProjects($query) 
     {
-        return $query->whereBetween('identifier', [1,100])->limit(2)->get();
+        return $query->latest()->limit(2)->get();
     }
 
     public function scopeById($query, $id) 
