@@ -15,11 +15,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $i = 1;
-        foreach(Projects::all() as $project) {
-            $project->update([
-                "created_at" => now()->addDays($i),
-                "updated_at" => now()->addDays($i)
+        $d = now();
+        foreach(Projects::all() as $p) {
+            $p->update([
+               "created_at" => $d,
+               "updated_at" => $d
+            ]);
+        }
+        $i = 0;
+        foreach(Projects::orderBy("identifier", "DESC")->get() as $p) {
+            $p->update([
+               "created_at" => $d->subDays($i),
+               "updated_at" => $d->subDays($i)
             ]);
             $i++;
         }
