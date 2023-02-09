@@ -9,25 +9,13 @@
             Copied to the clipboard.
         @endslot
     @endcomponent
-    <section id="__homePresentation" class="__homepage__presentation__">
-        @include('components.sections.spoilers.presentation')
-    </section>
+    @include('sections.spoilers.presentation')
     @include('components.arrow-container')
-    <section id="__spoilerAbout" class="section __spoiler__about__">
-        @include('components.sections.spoilers.about')
-    </section>
-    <section id="__spoilerProjects" class="section __spoiler__projects__">
-        @include('components.sections.spoilers.projects')
-    </section>
-    <section id="__spoilerBoard" class="section __spoiler__board__">
-        @include('components.sections.spoilers.board')
-    </section>
-    <section id="__spoilerCards" class="section __spoiler__cards__">
-        @include('components.sections.spoilers.news')
-    </section>
-    <section id="__ContactForm" class="section __contact__form__">
-        @include('components.sections.contact')
-    </section>
+    @include('sections.spoilers.about')
+    @include('sections.spoilers.projects')
+    @include('sections.spoilers.board')
+    @include('sections.spoilers.news')
+    @include('sections.contact')
 @stop
 
 @section('footer')

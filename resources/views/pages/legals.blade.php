@@ -107,7 +107,5 @@
             </ul>
         </div>
     </section>
-    <section id="__ContactForm" class="section __contact__form__">
-        @include('components.sections.contact')
-    </section>
+    @include('components.sections.contact')
 @endsection
