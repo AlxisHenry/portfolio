@@ -9,6 +9,10 @@
             Copied to the clipboard.
         @endslot
     @endcomponent
+    @include('sections.spoilers.about', [
+        "customCss" => "margin-top: 0;",
+        "animation" => false
+    ])
     <section id="__Skills" class="section">
         @component('components.underline-title')
             @slot('Title')

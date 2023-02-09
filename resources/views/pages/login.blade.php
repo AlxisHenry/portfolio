@@ -2,7 +2,7 @@
 
 @section('content')
     <section id="__LoginSection" class="layout-hero">
-        @include('components.sections.login')
+        @include('sections.login')
     </section>
 @endsection
 
