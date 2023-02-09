@@ -107,5 +107,5 @@
             </ul>
         </div>
     </section>
-    @include('components.sections.contact')
+    @include('sections.contact')
 @endsection
