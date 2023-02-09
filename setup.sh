@@ -4,19 +4,6 @@
 # Setup application in desired environment
 # ========================================
 
-api_request () {
-	RESPONSE=$(curl -s https://api.alexishenry.eu/$1/smtp)
-	RESPONSE_CODE=$(echo $RESPONSE | awk -F 'code' '{print $2}' | sed 's/"://' | awk -F ',' '{print $1}')
-	if [ $RESPONSE_CODE -eq 200 ]
-	then 
-		MAIL_USERNAME=$(echo $RESPONSE | awk -F 'smtp'  '{print $2}' | awk -F 'email' '{print $2}' | cut -d ',' -f 1| sed 's/":"//' | sed 's/"//')
-		MAIL_PASSWORD=$(echo $RESPONSE | awk -F 'smtp'  '{print $2}' | awk -F 'password' '{print $2}' | cut -d ',' -f 1| sed 's/":"//' | sed 's/"//' | sed 's/}}}//')
-		echo -e "\n  The email server has been correctly configured. Response code : [\e[0;33m$RESPONSE_CODE\e[0m]"
-	else
-		echo -e "\n  The provided token isn't correct. Response code : [\e[0;33m$RESPONSE_CODE\e[0m]"
-	fi
-}
-
 env_app () {
 	# SET APP_ENV
 	APP_ENV=$([ "$1" = "dev" ] && echo "local" || echo "production")
@@ -44,25 +31,25 @@ env_db () {
 	# SET DB_PASSWORD
 	echo -e "\n  Password [\e[0;33mnull\e[0m]"
 	printf '> '
-	read DB_PASSWORD # -s to hide the value
+	read DB_PASSWORD
 }
 
 env_mails () {
-	# API KEY
-	echo -e "  Api key for emails [\e[0;33mnull\e[0m]"
+	# SET MAIL_USERNAME
+	echo -e "\n  Username [\e[0;33mnull\e[0m]"
 	printf '> '
-	read API_KEY
-	MAIL_USERNAME=""
-	MAIL_PASSWORD=""
-	api_request $API_KEY;
+	read MAIL_USERNAME
+	echo -e "\n  Password [\e[0;33mnull\e[0m]"
+	printf '> '
+	read MAIL_PASSWORD
 }
 
 env () {
-	echo -e "\n[\e[0;35m APPLICATION CONFIGURATION \e[0m]\n"
+	echo -e "\n[\e[0;35m Application configuration \e[0m]\n"
 	env_app $1;
-	echo -e "\n[\e[0;35m DATABASE CONFIGURATION \e[0m]\n"
+	echo -e "\n[\e[0;35m Database configuration \e[0m]\n"
 	env_db;
-	echo -e "\n[\e[0;35m MAILS CONFIGURATION \e[0m]\n"
+	echo -e "\n[\e[0;35m Emails configuration \e[0m]\n"
 	env_mails;
 	# .ENV VARIABLES
 	ENV="APP_ENV APP_DEBUG APP_URL DB_DATABASE DB_USERNAME DB_PASSWORD MAIL_USERNAME MAIL_PASSWORD"
@@ -79,11 +66,9 @@ base () {
 	php artisan key:generate > /dev/null 2>&1
 	# Link storage to public
 	php artisan storage:link > /dev/null 2>&1
-	# Build assets
-	# npm run build
 	# Configure .env
 	env $1;
-    permissions;
+  permissions;
 }
 
 database () {
@@ -119,9 +104,8 @@ permissions () {
 
 setup () {
 	clear
-	echo -e "\n[\e[0;32m START CCI-APP SETUP \e[0m]"
-	echo -e "\n[\e[0;35m SELECT ENVIRONMENT \e[0m]\n"
-	echo -e "  What environment do you want to install? (dev/prod) [\e[0;33mdev\e[0m]"
+	echo -e "\n[\e[0;32m START SETUP \e[0m]"
+	echo -e "\n  What environment do you want to install? (dev/prod) [\e[0;33mdev\e[0m]"
 	read -p "> " environment
 	case $environment in
 		[dev]* ) development;;
