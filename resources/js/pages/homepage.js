@@ -74,7 +74,7 @@ window.addEventListener("load", (e) => {
   setTimeout(() => {
     RemoveLoader();
     writeName("Henry alexis", 0);
-    writeJob("Web Developer", 0);
+    writeJob("Developer", 0);
     HomepageReveal();
     ArrowEvent(document.querySelector("#__spoilerAbout").offsetTop);
     ScrollToContact(document.querySelector("#__ContactForm").offsetTop);
