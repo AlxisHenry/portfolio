@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Board;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
 class BoardController extends Controller
@@ -14,7 +13,7 @@ class BoardController extends Controller
             'title' => 'Resources - HENRY ALEXIS',
             'navbar' => 'resources',
             'og_description' => 'Portfolio - HENRY ALEXIS - Resources',
-            'Boards' => Board::all()
+            'boards' => Board::orderBy("published_at", "DESC")->get()
         ]);
     }
 }

@@ -9,7 +9,7 @@
         in pdf format.
     </div>
     <div class="__main__board__cards__">
-        @foreach ($Boards as $Board)
+        @foreach ($boards as $board)
             @include('components.board-cards')
         @endforeach
     </div>

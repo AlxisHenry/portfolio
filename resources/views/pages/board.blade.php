@@ -6,4 +6,5 @@
 
 @section('footer')
     @vite('resources/js/pages/board.js')
+    @vite('resources/js/pages/projects.js')
 @stop
