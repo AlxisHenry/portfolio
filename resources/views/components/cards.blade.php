@@ -25,7 +25,7 @@
                     @endforeach
                 </div>
                 @include('components.about', [
-                    'link' => 'https://' . $project->url_name,
+                    'link' => $project->url_name,
                     'blank' => true,
                 ])
             </div>
