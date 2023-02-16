@@ -15,10 +15,9 @@ class Board extends Model
     protected $primaryKey = 'identifier';
     public $timestamps = false;
 
-    public function scopeHomeBoard($query) {
-
-        return $query->whereBetween('identifier', [1,2])->get();
-
+    public function scopeGetHomepageResources($query) 
+    {
+        return $query->orderBy("published_at", "DESC")->limit(2)->get();
     }
 
     public function scopeById($query, $id) {

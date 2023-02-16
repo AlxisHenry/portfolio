@@ -14,7 +14,7 @@ class BoardController extends Controller
             'title' => 'Resources - HENRY ALEXIS',
             'navbar' => 'resources',
             'og_description' => 'Portfolio - HENRY ALEXIS - Resources',
-            'Boards' => Board::all()
+            'boards' => Board::orderBy("published_at", "DESC")->get()
         ]);
     }
 }

@@ -20,7 +20,7 @@ class HomeController extends Controller
             'languages' => Language::links(),
             'og_description' => 'Portfolio - HENRY ALEXIS - Homepage',
             'spoiler_cards' => News::spoilers(),
-            'Boards' => Board::HomeBoard(),
+            'boards' => Board::GetHomepageResources(),
             'Projects' => Projects::GetHomepageProjects(),
             'Google' => Translate::google(),
             'random_number' => Rand::int(1, 10)
