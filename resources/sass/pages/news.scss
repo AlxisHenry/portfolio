@@ -60,7 +60,7 @@
       a {
         font-weight: normal;
         font-size: 14px;
-        color: var(--text-color)!important;
+        color: var(--text-color) !important;
         &:hover {
           cursor: pointer;
         }
@@ -97,30 +97,40 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-
+      
       .__news__category__title {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-
+        
         h2 {
           margin-left: 5px !important;
           display: inline-block !important;
           font-weight: 700 !important;
           font-size: 1.8rem !important;
-          color: var(--subtitle-color)!important;
+          color: var(--subtitle-color) !important;
         }
       }
-
+      
       .__news__category__cards__ {
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
+        overflow: hidden;
+        // max-height: 500px;
         gap: 30px;
         align-items: center;
         flex-direction: row;
         width: 100%;
+      }
+      
+      .__news__category__more__ {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        margin-right: 20px;
+        margin-top: 25px;
       }
     }
   }

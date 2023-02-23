@@ -28,7 +28,7 @@
         </div>
         <div class="__news__container__" data-categories="{{ 'technology' }}">
             @if (!$show_all_status)
-                @for ($i = 0; $i < count(array_keys($categories)); $i++)
+            @for ($i = 0; $i < count(array_keys($categories)); $i++)
                     <div class="__news__category__" data-category="{{ array_keys($categories)[$i] }}">
                         <div class="__news__category__title" data-category-title="{{ array_keys($categories)[$i] }}">
                             <h2>
@@ -40,6 +40,11 @@
                             @foreach ($categories[array_keys($categories)[$i]] as $card)
                                 @include('components.news')
                             @endforeach
+                        </div>
+                        <div class="__news__category__more__">
+                            @include('components.more', [
+                                "to" => "/news/word/" . array_keys($categories)[$i]
+                            ])
                         </div>
                     </div>
                 @endfor
