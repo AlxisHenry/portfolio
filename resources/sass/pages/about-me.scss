@@ -59,7 +59,14 @@
   .all-skills {
     width: 100%;
 
-    .category-skills {
+    .show-more-skills {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+    }
+
+    .category-skills,
+    .category-skills-parts {
       width: 100%;
       display: flex;
       flex-direction: row;

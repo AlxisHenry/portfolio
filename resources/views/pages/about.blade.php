@@ -36,10 +36,28 @@
             </div>
             <div class="all-skills">
                 <div class="category-skills tech-skills">
-                    @foreach ($skills['tech'] as $skill)
+                    @foreach ($chunks[0] as $skill)
                         @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
                     @endforeach
+                    <div class="category-skills-parts" style="display: none;">
+                        @foreach ($chunks as $chunk)
+                            @if($loop->index !== 0)    
+                                @foreach ($chunk as $skill)
+                                    @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
+                                @endforeach
+                            @endif
+                        @endforeach
+                    </div>
                 </div>
+                @if (count($chunks) > 1)
+                    <div class="show-more-skills">
+                        <div class="__more__button__">
+                            <a class="__more__button-action">
+                                <span class="__more__button-text">More</span>
+                            </a>
+                        </div>                        
+                    </div>
+                @endif
                 <div class="category-skills front-skills hidden">
                     @foreach ($skills['front'] as $skill)
                         @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
