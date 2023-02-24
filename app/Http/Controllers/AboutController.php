@@ -17,7 +17,7 @@ class AboutController extends Controller
             'navbar' => 'about',
             'og_description' => 'Portfolio - HENRY ALEXIS - About me',
             'skills' => $skills,
-            'chunks' => array_chunk($skills["tech"], 8),
+            'chunks' => array_chunk($skills["tech"], 4),
             'animateTiming' => 1800,
             'resetTiming' => 1800,
             'random_number' => Rand::int(1, 10),

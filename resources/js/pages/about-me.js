@@ -6,6 +6,26 @@ import { AboutAnimation } from "../components/about";
 import { CopyToClipboard } from "../components/copied-to-clipboard";
 import { ScrollToContact } from "../components/to-contact";
 
+const moreSkills = () => {
+  let parts = document.querySelectorAll(".category-skills-parts .part");
+  let _ = document.querySelector(".show-more-skills");
+  const show = (el) => {
+    el.style.display = "flex";
+  };
+  _.addEventListener("click", () => {
+    for (const part of parts) {
+      console.log(part, part.style.display);
+      if (part.style.display === "none") {
+        show(part);
+        if (parts[parts.length - 1].style.display === "flex") {
+          _.style.display = "none";
+        }
+        return;
+      }
+    }
+  });
+};
+
 const Skills = () => {
   // Toggle menu/div of different skills categories
   const SkillCategory = document.querySelectorAll(".skill-category");
@@ -16,10 +36,10 @@ const Skills = () => {
       let CategoryName = Category.dataset.category;
       console.log(CategoryName);
       document
-        .querySelectorAll(".category-skills")
+        .querySelectorAll(".all-skills .container")
         .forEach((x) => x.classList.add("hidden"));
       document
-        .querySelector(`.${CategoryName}-skills`)
+        .querySelector(`.all-skills .${CategoryName}-skills`)
         .classList.remove("hidden");
     });
   });
@@ -41,4 +61,5 @@ window.addEventListener("load", (e) => {
   CheckControllerScrollReturn();
   Skills();
   MergeFooter();
+  moreSkills();
 });

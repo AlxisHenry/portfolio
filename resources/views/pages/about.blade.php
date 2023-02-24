@@ -35,38 +35,44 @@
                 </div>
             </div>
             <div class="all-skills">
-                <div class="category-skills tech-skills">
-                    @foreach ($chunks[0] as $skill)
-                        @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
-                    @endforeach
-                    <div class="category-skills-parts" style="display: none;">
-                        @foreach ($chunks as $chunk)
-                            @if($loop->index !== 0)    
-                                @foreach ($chunk as $skill)
-                                    @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
-                                @endforeach
-                            @endif
+                <div class="container tech-skills">
+                    <div class="category-skills">
+                        @foreach ([...$chunks[0], ...$chunks[1]] as $skill)
+                            @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
+                        @endforeach
+                        <div class="category-skills-parts">
+                            @foreach (array_slice($chunks, 2) as $chunk)
+                                <div class="part" style="display: none;">
+                                    @foreach ($chunk as $skill)
+                                        @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
+                                    @endforeach
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    @if (count($chunks) > 1)
+                        <div class="show-more-skills">
+                            <div class="__more__button__">
+                                <a class="__more__button-action">
+                                    <span class="__more__button-text">More</span>
+                                </a>
+                            </div>                        
+                        </div>
+                    @endif
+                </div>
+                <div class="container front-skills hidden">
+                    <div class="category-skills">
+                        @foreach ($skills['front'] as $skill)
+                            @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
                         @endforeach
                     </div>
                 </div>
-                @if (count($chunks) > 1)
-                    <div class="show-more-skills">
-                        <div class="__more__button__">
-                            <a class="__more__button-action">
-                                <span class="__more__button-text">More</span>
-                            </a>
-                        </div>                        
+                <div class="container back-skills hidden">
+                    <div class="category-skills">
+                        @foreach ($skills['back'] as $skill)
+                            @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
+                        @endforeach
                     </div>
-                @endif
-                <div class="category-skills front-skills hidden">
-                    @foreach ($skills['front'] as $skill)
-                        @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
-                    @endforeach
-                </div>
-                <div class="category-skills back-skills hidden">
-                    @foreach ($skills['back'] as $skill)
-                        @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
-                    @endforeach
                 </div>
             </div>
         </div>
