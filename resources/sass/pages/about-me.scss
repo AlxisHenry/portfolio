@@ -1,7 +1,5 @@
 .contain-all-skills {
   padding: 60px;
-  margin-right: 12px;
-  margin-left: 12px;
   width: 100%;
   max-width: 900px;
   min-height: 900px;
@@ -59,12 +57,34 @@
   .all-skills {
     width: 100%;
 
-    .category-skills {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 25px;
+    }
+
+    .container .show-more-skills {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+    }
+
+    .category-skills .category-skills-parts,
+    .container .category-skills {
       width: 100%;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 25px;
+    }
+
+    .category-skills .category-skills-parts .part {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 25px;    
     }
 
     .category-skills .skill {
@@ -100,6 +120,7 @@
 
 #__MoreInformations {
   margin-top: 280px;
+  overflow: hidden;
   width: 100%;
   min-height: 620px;
   height: auto;
@@ -147,6 +168,12 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .contain-all-skills .all-skills .container {
+    align-items: center !important;
+  }
+  .contain-all-skills .all-skills .container .category-skills .category-skills-parts .part {
+    justify-content: center!important;
+  }
   .skills-navbar {
     justify-content: center !important;
   }

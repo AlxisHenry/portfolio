@@ -10,11 +10,14 @@ class AboutController extends Controller
 {
     public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
+        $skills = Skills::all();
+        
         return view('pages.about', [
             'title' => 'About me - HENRY ALEXIS',
             'navbar' => 'about',
             'og_description' => 'Portfolio - HENRY ALEXIS - About me',
-            'skills' => Skills::all(),
+            'skills' => $skills,
+            'chunks' => array_chunk($skills["tech"], 4),
             'animateTiming' => 1800,
             'resetTiming' => 1800,
             'random_number' => Rand::int(1, 10),

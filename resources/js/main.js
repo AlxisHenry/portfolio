@@ -3,6 +3,7 @@ export const debug = (status) => {
     console.log = () => {};
   }
 };
+
 export const elementInViewport = (el) => {
   // Check if el is in viewport
   let top = el.offsetTop;

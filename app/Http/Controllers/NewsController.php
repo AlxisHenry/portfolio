@@ -17,14 +17,7 @@ class NewsController extends Controller
             'show_all_status' => false,
             'navbar' => 'news',
             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
-            'categories' => [
-                "veille technologique" => News::technologyWatch(),
-                "cybersécurité" => News::cyber(),
-                "technologie" => News::technology(),
-                "pegasus" => News::pegasus(),
-                "internet" => News::internet(),
-                "cybersécurité" => News::cyber(),
-            ],
+            'categories' => News::categories(),
             'Google' => Translate::google()
         ]);
     }
