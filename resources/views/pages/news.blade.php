@@ -37,13 +37,21 @@
                         </div>
                         <div class="__news__category__cards__" data-category-cards="{{ array_keys($categories)[$i] }}"
                             data-nb-cards="{{ count($categories[array_keys($categories)[$i]]) }}">
-                            @foreach ($categories[array_keys($categories)[$i]] as $card)
-                                @include('components.news')
+                            @foreach ($categories[array_keys($categories)[$i]][1] as $card)
+                                @include('components.news', [
+                                    "link" => (str_contains($card->UrlArticle, "01net") 
+                                        ? $card->UrlArticle 
+                                        : ('/news/' . (strlen(explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle))]) === 0
+                                        ? explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle)) - 1]
+                                        : explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle))]))
+                                    ),
+                                    "blank" => str_contains($card->UrlArticle, "01net") ? true : false
+                                ])
                             @endforeach
                         </div>
                         <div class="__news__category__more__">
                             @include('components.more', [
-                                "to" => "/news/word/" . array_keys($categories)[$i]
+                                "to" => $categories[array_keys($categories)[$i]][0]
                             ])
                         </div>
                     </div>

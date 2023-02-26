@@ -22,15 +22,29 @@ class News extends Model
     public function scopeCategories(): array
     {
         return [
-            "veille technologique" => $this->call('Veille Technologique'),
-            "cybersécurité" => $this->call('Cyber', between: [150, 200]),
-            "google" => $this->call('Google'),
-            "facebook" => $this->call('Facebook'),
-            "technologie" => $this->call('Techno', between: [160, 200]),
-            "pegasus" => $this->call('Pegasus'),
-            "internet" => $this->call('Internet'),
-            "cybersécurité" => $this->call('Cyber'),
-            "economie" => $this->call('Economi')
+            "veille technologique" => $this->group('Veille Technologique'),
+            "cybersécurité" => $this->group('Cyber', null, 4, [150, 200]),
+            "google" => $this->group('Google'),
+            "facebook" => $this->group('Facebook'),
+            "technologie" => $this->group('Techno', null, 4, [160, 200]),
+            "pegasus" => $this->group('Pegasus'),
+            "internet" => $this->group( 'Internet'),
+            "cybersécurité" => $this->group('Cyber'),
+            "economie" => $this->group('Economi')
+        ];
+    }
+
+    private function group(string $name, ?string $link = null, int $limit = 4, ?array $between = null): array
+    {
+        $category = $this->call($name, $limit, $between);
+    
+        if (!$link) {
+            $link = "/news/word/" . strtolower($name);
+        }
+
+        return [
+            $link,
+            $category
         ];
     }
 
