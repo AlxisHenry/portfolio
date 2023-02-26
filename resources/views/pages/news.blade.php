@@ -37,13 +37,13 @@
                         </div>
                         <div class="__news__category__cards__" data-category-cards="{{ array_keys($categories)[$i] }}"
                             data-nb-cards="{{ count($categories[array_keys($categories)[$i]]) }}">
-                            @foreach ($categories[array_keys($categories)[$i]] as $card)
+                            @foreach ($categories[array_keys($categories)[$i]][1] as $card)
                                 @include('components.news')
                             @endforeach
                         </div>
                         <div class="__news__category__more__">
                             @include('components.more', [
-                                "to" => "/news/word/" . array_keys($categories)[$i]
+                                "to" => $categories[array_keys($categories)[$i]][0]
                             ])
                         </div>
                     </div>
