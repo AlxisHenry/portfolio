@@ -17,8 +17,13 @@
             <span>{{ substr($card->title, 0, 80) }}...</span>
         </div>
         @include('components.about', [
-            'link' => $link,
-            'blank' => $blank,
+            'link' => (str_contains($card->UrlArticle, "01net") 
+                    ? $card->UrlArticle 
+                    : ('/news/' . (strlen(explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle))]) === 0
+                    ? explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle)) - 1]
+                    : explode('/', $card->UrlArticle)[array_key_last(explode('/', $card->UrlArticle))]))
+            ),
+            'blank' => str_contains($card->UrlArticle, "01net") ? true : false
         ])
     </div>
 </div>

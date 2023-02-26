@@ -6,6 +6,7 @@ use App\Helpers\Regex;
 use App\Helpers\Translate;
 use App\Models\News;
 use DateTime;
+use Exception;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Date;
 
@@ -16,30 +17,38 @@ class NewsController extends Controller
 
     public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
+        try {
 
-        $content = file_get_contents(self::RSS_URL);
-        $arr = simplexml_load_string($content);
+            $content = file_get_contents(self::RSS_URL);
+            $arr = simplexml_load_string($content);
+            $rss = [];
 
-        $rss = [];
+            foreach ($arr->channel->item as $item) {
+                $date = \Carbon\Carbon::createFromFormat('D, d M Y H:i:s O', (string) $item->pubDate);
+                $date->locale('fr_FR');
+                $news = new News();
+                $news->title = (string) $item->title;
+                $news->LinkImage = (string) $arr->channel->image->url;
+                $news->UrlArticle = (string) $item->link;
+                $news->published_at = $date->format('d-m-y');
+                $rss[] = $news;
+            }
 
-        foreach ($arr->channel->item as $item) {
-            $date = \Carbon\Carbon::createFromFormat('D, d M Y H:i:s O', (string) $item->pubDate);
-            $date->locale('fr_FR');
-            $news = new News();
-            $news->title = (string) $item->title;
-            $news->LinkImage = (string) $arr->channel->image->url;
-            $news->UrlArticle = (string) $item->link;
-            $news->published_at = $date->format('d-m-y');
-            $rss[] = $news;
+            $rss = array_chunk($rss, 4);
+            
+            $categories = [
+                "Flux RSS 01.net" => [
+                    (string) $arr->channel->link,
+                    collect($rss[0])
+                ],  
+            ];
+
+        } catch (Exception $e) {
+            $categories = [];
         }
 
-        $rss = array_chunk($rss, 4);
-        
         $categories = [
-            "Flux RSS 01.net" => [
-                (string) $arr->channel->link,
-                collect($rss[0])
-            ],
+            ...$categories,
             ...News::categories()
         ];
 
