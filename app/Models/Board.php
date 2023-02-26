@@ -15,7 +15,7 @@ class Board extends Model
     protected $primaryKey = 'identifier';
     public $timestamps = false;
 
-    public function scopeGetHomepageResources($query) 
+    public function scopeSpoilers($query) 
     {
         return $query->orderBy("published_at", "DESC")->limit(2)->get();
     }

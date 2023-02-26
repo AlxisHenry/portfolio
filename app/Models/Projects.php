@@ -26,7 +26,7 @@ class Projects extends Model
     
     protected $primaryKey = 'identifier';
     
-    public function scopeGetHomepageProjects($query) 
+    public function scopeSpoilers($query) 
     {
         return $query->latest()->limit(2)->get();
     }
