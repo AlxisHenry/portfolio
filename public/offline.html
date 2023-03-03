@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio - HENRY ALEXIS</title>
+</head>
+<body>
+	<script>
+		const theme = () => {
+			let cookie = document.cookie.split("; ");
+			let theme = cookie.find(row => row.startsWith("theme="));
+			return theme ? theme.split('=')[1] : "";
+		}
+		if (theme() === "dark") {
+			document.body.classList.add("dark");
+		}
+	</script>
+	<style>
+		:root {
+			--bg: #f2f2f2;
+			--text: #212529;
+			--btn: #f2bc79;
+		}
+		body.dark {
+			--bg: #242b40;
+			--text: #f2f2f2;
+			--btn: #464aa6;
+		}
+		body {
+			background-color: var(--bg);
+			color: var(--text);
+			height: 90vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.btn {
+			background-color: var(--btn);
+			color: #f2f2f2;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+	</style>
+	<div class="container">
+		<img src="./assets/disconnected.png" alt="">
+		<h1>It seems that you are offline...</h1>
+		<button class="btn" onclick="window.location.reload()">Refresh</button>
+	</div>
+</body>
+</html>
