@@ -1,13 +1,16 @@
 /* START --- Homepage view Responsive */
 
+@media screen and (max-width: 1300px) {
+  .__homepage__presentation__ .__presentation__ .__main__presentation__ .__main__asset__ {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   /* START --- PRESENTATION --- SECTION RESPONSIVE */
 
   .__homepage__presentation__ {
     .__presentation__ {
-      .__presentation__separator__ {
-      }
-
       .__main__presentation__ {
         .__me__ {
           .name {
@@ -18,7 +21,6 @@
               }
             }
           }
-
           .job {
             p {
               span {
@@ -41,12 +43,6 @@
                 }
               }
             }
-          }
-        }
-        .__main__asset__ {
-          display: none;
-
-          .__asset__ {
           }
         }
       }
@@ -125,12 +121,6 @@
                 }
               }
             }
-          }
-        }
-        .__main__asset__ {
-          display: none;
-
-          .__asset__ {
           }
         }
       }

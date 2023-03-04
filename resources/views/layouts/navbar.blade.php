@@ -11,7 +11,7 @@
     </div>
     <div class="__navbar__features__">
         <a href="https://github.com/AlxisHenry" target="_blank" rel="nofollow noreferrer">
-            <img title="Github" src="{{ url('assets/svg/contacts/github.svg') }}" alt="Github Link">
+            <img title="Github" src="{{ url('assets/svg/socials/github.svg') }}" alt="Github Link">
         </a>
         <div class="__theme__">
             <div class="__theme__main__" id="{{ $_COOKIE['theme'] ?? 'light' }}">

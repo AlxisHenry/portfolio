@@ -89,7 +89,7 @@
         <div class="contain-contacts left-part" data-aos="fade-right">
             <div>
                 <a target="_blank" href="https://www.linkedin.com/in/alexishenry03/" rel="noreferrer nofollow">
-                    <img class="test" src="{{ url('assets/svg/contacts/linkedin.svg') }}" alt="Linkedin" title="Linkedin"
+                    <img class="test" src="{{ url('assets/svg/socials/linkedin.svg') }}" alt="Linkedin" title="Linkedin"
                         width="24">
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/in/alexishenry03/" rel="noreferrer nofollow">
@@ -98,7 +98,7 @@
             </div>
             <div>
                 <a class="" href="{{ route('contact.index') }}">
-                    <img class="test" src="{{ url('assets/svg/contacts/mail.svg') }}" alt="Mail" title="Mail"
+                    <img class="test" src="{{ url('assets/svg/socials/mail.svg') }}" alt="Mail" title="Mail"
                         width="20">
                 </a>
                 <a class="" href="{{ route('contact.index') }}">
@@ -107,7 +107,7 @@
             </div>
             <div>
                 <a target="_blank" href="https://github.com/AlxisHenry" rel="noreferrer nofollow">
-                    <img class="test" src="{{ url('assets/svg/contacts/github-blue.svg') }}" alt="Github" title="Github"
+                    <img class="test" src="{{ url('assets/svg/socials/github-blue.svg') }}" alt="Github" title="Github"
                         width="24">
                 </a>
                 <a target="_blank" href="https://github.com/AlxisHenry" rel="noreferrer nofollow">
@@ -116,7 +116,7 @@
             </div>
             <div>
                 <a target="_blank" href="https://wakatime.com/@AlxisHenry" rel="noreferrer nofollow">
-                    <img class="test" src="{{ url('assets/svg/contacts/wakatime.svg') }}" alt="Wakatime" title="Wakatime"
+                    <img class="test" src="{{ url('assets/svg/socials/wakatime.svg') }}" alt="Wakatime" title="Wakatime"
                         width="20">
                 </a>
                 <a target="_blank" href="https://wakatime.com/@AlxisHenry" rel="noreferrer nofollow">

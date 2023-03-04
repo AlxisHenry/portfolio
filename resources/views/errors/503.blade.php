@@ -1,10 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="error_section flex justify-center align-center" style="width: 100%;">
-        <h1 class="text-center text-bigger text-bold text-36">Sorry the website is actually in maintenance.</h1>
-        <h2 class="text-center text-italic text-24"> We try to do it as soon as possible... </h2>
-        <div class="error_gif flex align-center justify-center"> <img src="{{ url('assets/cafe.gif') }}" alt="Main Logo">
-        </div>
-    </section>
+<style>
+    .container {
+	    display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+    }
+    .container h1 {
+        margin-top: 80px;
+        font-size: 2rem;
+        color: var(--color-text);
+    }
+    </style>
+    <div class="container">
+		<img src="{{ url("/assets/svg/errors/503.svg") }}" style="height: 500px;" alt="Website in maintenance...">
+        <h1>Sorry, the website is in maintenance...</h1>
+    </div>
 @stop

@@ -6,10 +6,17 @@ section {
     gap: 30px;
   }
   &.section-specific-lang {
+    width: 100%;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    .lang-content {
+      display: flex;
+      flex-direction: column;
+      max-width: 800px;
+    }
   }
 }
 

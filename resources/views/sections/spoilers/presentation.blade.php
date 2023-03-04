@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="__main__asset__">
-                <img src="{{ url('assets/cafe.gif') }}" alt="Computer" title="Computer" class="__asset__">
+                <img src="{{ url('assets/me-light.svg') }}">
             </div>
         </div>
     </div>
