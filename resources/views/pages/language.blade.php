@@ -12,16 +12,18 @@
             </div>
         @else
             @foreach ($lang as $data)
-                <h1 class="h1-spe ml-36 mr-36">{!! $data->title !!}</h1>
-                <div class="contain-specific-lang extract text-justify ml-36 mr-36" data-id="{{ $data->pageid }}"
-                    data-ns="{{ $data->ns ?? 'null' }}" data-url="{{ $url }}">
-                    <p class="text-justify">
-                        {!! $data->extract !!}
-                    </p>
-                </div>
-                <div class="list_all">
-                    <a href="/language/{{ $generate }}">Show me a random language !</a>
-                    <a href="/language">Show me all languages !</a>
+                <div class="lang-content">
+                    <h1 class="h1-spe ml-36 mr-36">{!! $data->title !!}</h1>
+                    <div class="contain-specific-lang extract text-justify ml-36 mr-36" data-id="{{ $data->pageid }}"
+                        data-ns="{{ $data->ns ?? 'null' }}" data-url="{{ $url }}">
+                        <p class="text-justify">
+                            {!! $data->extract !!}
+                        </p>
+                    </div>
+                    <div class="list_all">
+                        <a href="/language/{{ $generate }}">Show me a random language !</a>
+                        <a href="/language">Show me all languages !</a>
+                    </div>
                 </div>
             @endforeach
         @endif

@@ -14,9 +14,6 @@
     max-height: 400px;
     height: 400px;
     align-items: center;
-    border-bottom: solid 2px $black;
-    box-shadow: 0 20px 10px -15px var(--shadow);
-    -webkit-box-shadow: 0 20px 10px -15px var(--shadow);
     .__presentation__separator__ {
       height: 400px;
       background-color: $black;
@@ -24,6 +21,7 @@
     .__main__presentation__ {
       display: flex;
       flex-direction: row;
+      gap: 100px;
       .__me__ {
         display: flex;
         flex-direction: column;
@@ -80,18 +78,18 @@
         }
 
         .__language__ {
-          margin-top: 32px;
+          margin-top: 30px;
           display: flex;
           align-items: center;
           justify-content: flex-start;
           gap: 60px;
           a {
             .language_icon {
-              width: 2.2rem;
+              width: 3rem;
             }
             &:last-child {
               .language_icon {
-                width: 3.5rem;
+                width: 4rem;
               }
             }
           }
@@ -102,9 +100,8 @@
         display: flex;
         align-items: end;
 
-        .__asset__ {
-          height: 300px;
-          object-fit: cover;
+        img {
+          margin-bottom: 20px;
         }
       }
     }
