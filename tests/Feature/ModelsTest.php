@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use App\Models\Board;
 use App\Models\News;
 use App\Models\Projects;
+use App\Models\Resource;
 use App\Models\User;
 use Tests\TestCase;
 
@@ -17,7 +17,7 @@ class ModelsTest extends TestCase
      */
     public function testModelBoardWork()
     {
-        $board = Board::all();
+        $board = Resource::all();
         $this->assertIsIterable($board);
     }
 

@@ -2,11 +2,11 @@
 
 @section('content')
     @component('components.pop-up')
-        @slot('Icon')
+        @slot('icon')
             <i class="fa-solid fa-check"></i>
         @endslot
-        @slot('Alert')
-            Copied to the clipboard.
+        @slot('alert')
+            Copied to the clipboard
         @endslot
     @endcomponent
     @include('sections.spoilers.about', [
@@ -15,7 +15,7 @@
     ])
     <section id="__Skills" class="section">
         @component('components.underline-title')
-            @slot('Title')
+            @slot('title')
                 Skills
             @endslot
         @endcomponent
@@ -79,7 +79,7 @@
     </section>
     <section id="__ContactForm" class="section __contact__form__">
         @component('components.underline-title')
-            @slot('Title')
+            @slot('title')
                 Contact
             @endslot
         @endcomponent

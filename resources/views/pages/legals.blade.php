@@ -5,7 +5,7 @@
         <div class="__legals__content__">
             <h1>Disclaimer</h1>
             <p>Today date: <b>{{ $today }}</b></p>
-            <p>Last updated: <b>{{ $lastUpdated }}</b></p>
+            <p>Last updated: <b>{{ $updated_at }}</b></p>
             <h1>Interpretation and Definitions</h1>
             <h2>Interpretation</h2>
             <p>The words of which the initial letter is capitalized have meanings defined under the following conditions.

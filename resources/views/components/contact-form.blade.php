@@ -62,14 +62,14 @@
                     </div>
                 </div>
                 <div class="verification form-group">
-                    <label for="verification"> Resolve {{ round($random_number * (2 / 3)) }} +
-                        {{ round($random_number * (1 / 3)) }} </label>
-                    <input type="hidden" name="random_number" value="{{ $random_number }}">
+                    <label for="verification"> Resolve {{ round($secret * (2 / 3)) }} +
+                        {{ round($secret * (1 / 3)) }} </label>
+                    <input type="hidden" name="secret" value="{{ $secret }}">
                     <select name="verification" id="verification"
                         class="form-control {{ $errors->has('verification') ? 'form-error' : '' }}"
                         required="required">
                         <option selected disabled>Prove you're not a robot !</option>
-                        @for ($i = round(($random_number * 1) / 2); $i < $random_number + 6; $i++)
+                        @for ($i = round(($secret * 1) / 2); $i < $secret + 6; $i++)
                             <option value="{{ $i }}">{{ $i }}</option>
                         @endfor
                     </select>

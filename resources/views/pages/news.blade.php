@@ -3,7 +3,7 @@
 @section('content')
     <section class="__news__ layout-maxed">
         @component('components.underline-title')
-            @slot('Title')
+            @slot('title')
                 News
             @endslot
         @endcomponent
@@ -22,12 +22,12 @@
                 </label>
                 <div class="__submit__search__"><i class="fa-solid fa-magnifying-glass"></i></div>
             </div>
-            <div class="show_all {{ $show_all_status ? '' : 'disabled' }}">
-                <a href="{{ $show_all_status ? '/news' : '' }}">show all</a>
+            <div class="show_all {{ $show ? '' : 'disabled' }}">
+                <a href="{{ $show ? '/news' : '' }}">show all</a>
             </div>
         </div>
         <div class="__news__container__" data-categories="{{ 'technology' }}">
-            @if (!$show_all_status)
+            @if (!$show)
             @for ($i = 0; $i < count(array_keys($categories)); $i++)
                     <div class="__news__category__" data-category="{{ array_keys($categories)[$i] }}">
                         <div class="__news__category__title" data-category-title="{{ array_keys($categories)[$i] }}">

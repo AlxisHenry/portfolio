@@ -1,6 +1,6 @@
 <footer class="__footer__">
     <div class="__footer__settings__">
-        <a href="/login">
+        <a href="/admin/login">
             <i class="fa-solid fa-gear"></i>
         </a>
     </div>

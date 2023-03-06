@@ -20,7 +20,7 @@ class AboutController extends Controller
             'chunks' => array_chunk($skills["tech"], 4),
             'animateTiming' => 1800,
             'resetTiming' => 1800,
-            'random_number' => Rand::int(1, 10),
+            'secret' => Rand::int(1, 10),
         ]);
     }
 }

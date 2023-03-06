@@ -1,12 +1,12 @@
 <section id="__spoilerCards" class="section __spoiler__cards__">
     @component('components.underline-title')
-        @slot('Title')
+        @slot('title')
             News
         @endslot
     @endcomponent
 
     <div class="__cards__" data-aos="fade-right">
-        @foreach ($spoiler_cards as $card)
+        @foreach ($news as $card)
             @include('components.news')
         @endforeach
     </div>

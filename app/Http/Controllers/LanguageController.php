@@ -9,12 +9,12 @@ class LanguageController extends Controller
 {
     public function index()
     {
-        return view('pages.language', [
+        return view('pages.languages', [
             'title' => 'Languages - HENRY ALEXIS',
             'navbar' => 'null',
-            'show_all_languages' => true,
+            'show' => true,
             'languages' => Language::all(),
-            'generate' => Language::random()
+            'random' => Language::random()
         ]);
     }
 
@@ -22,12 +22,12 @@ class LanguageController extends Controller
     {
         $lg = Language::match($language);
         if($lg) {
-            return view('pages.language', [
+            return view('pages.languages', [
                 'title' => ucfirst($language) . ' - HENRY ALEXIS',
                 'navbar' => 'null',
                 'url' => 'https://en.wikipedia.org/wiki/' . $lg,
-                'lang' => Wikipedia::query($lg),
-                'generate' => Language::random()
+                'language' => Wikipedia::query($lg),
+                'random' => Language::random()
             ]);
         }
         return abort(404);

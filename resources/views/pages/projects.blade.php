@@ -3,7 +3,7 @@
 @section('content')
     <section id="__mainProject" class="__main__projects__ layout-maxed">
         @component('components.underline-title')
-            @slot('Title')
+            @slot('title')
                 Projects
             @endslot
         @endcomponent
@@ -15,7 +15,7 @@
         <div class="__main__projects__cards__">
             <div class="__main__projects__cards__elements__">
                 @foreach ($projects as $project)
-                    @include('components.cards')
+                    @include('components.project')
                 @endforeach
             </div>
         </div>

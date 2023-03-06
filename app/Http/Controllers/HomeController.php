@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\Language;
-use App\Models\Board;
 use App\Models\News;
 use App\Models\Projects;
 use Illuminate\Routing\Controller;
 use App\Helpers\Rand;
 use App\Helpers\Translate;
+use App\Models\Resource;
 
 class HomeController extends Controller
 {
@@ -19,11 +19,11 @@ class HomeController extends Controller
             'navbar' => 'home',
             'languages' => Language::links(),
             'og_description' => 'Portfolio - HENRY ALEXIS - Homepage',
-            'spoiler_cards' => News::spoilers(),
-            'boards' => Board::spoilers(),
-            'Projects' => Projects::spoilers(),
-            'Google' => Translate::google(),
-            'random_number' => Rand::int(1, 10)
+            'news' => News::spoilers(),
+            'resources' => Resource::spoilers(),
+            'projects' => Projects::spoilers(),
+            'g' => Translate::google(),
+            'secret' => Rand::int(1, 10)
         ]);
     }
 }

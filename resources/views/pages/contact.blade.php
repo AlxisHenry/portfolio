@@ -3,7 +3,7 @@
 @section('content')
     <section id="__ContactForm" class="section __contact__form__" style="margin-top: 0;">
         @component('components.underline-title')
-            @slot('Title')
+            @slot('title')
                 Contact
             @endslot
         @endcomponent

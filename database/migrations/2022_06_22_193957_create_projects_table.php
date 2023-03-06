@@ -14,17 +14,22 @@ return new class extends Migration
     public function up()
     {
         Schema::create('projects', function (Blueprint $table) {
-            $table->id('identifier')->index();
-            $table->string('title')->default(null)->nullable();
-            $table->string('url_name')->default(null)->nullable();
-            $table->longText('description')->default(null)->nullable();
-            $table->string('author')->default(null)->nullable();
-            $table->string('documentationLink')->default(null)->nullable();
-            $table->string('GithubLink')->default(null)->nullable();
-            $table->string('linkImage')->default(null)->nullable();
-            $table->string('languages')->default(null)->nullable();
-            $table->date('published_at')->useCurrent()->nullable();
-            $table->date('edit_at')->useCurrent()->nullable();
+            $table->id();
+            $table->string('title');
+            $table->string('link');
+            $table->longText('description')
+                ->default(null)
+                ->nullable();
+            $table->string('github')
+                ->default(null)
+                ->nullable();
+            $table->string('image')
+                ->default("https://via.placeholder.com/150");
+            $table->string('languages')
+                ->default(null)
+                ->nullable();
+            $table->timestamp('published_at');
+            $table->timestamps();
         });
     }
 

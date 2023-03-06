@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\BoardController;
+use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\LanguageController;
@@ -22,6 +22,8 @@ use App\Http\Controllers\LegalNoticeController;
  */
 
 use App\Http\Middleware\ElevatedPermissions;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Vite;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
@@ -33,7 +35,7 @@ Route::prefix('about')->group(
 
 Route::prefix('resources')->group(
     function () {
-        Route::get('/', [BoardController::class, 'index'])->name('board.index');
+        Route::get('/', [ResourceController::class, 'index'])->name('resource.index');
     }
 );
 
@@ -51,7 +53,7 @@ Route::prefix('news')->group(
     }
 );
 
-Route::prefix('language')->group(
+Route::prefix('languages')->group(
     function () {
         Route::get('/', [LanguageController::class, 'index'])->name('languages.index');
         Route::get('/{name}', [LanguageController::class, 'show'])->name('languages.show');
@@ -73,31 +75,17 @@ Route::get('legal-notice', [LegalNoticeController::class, 'index'])->name('legal
 Route::redirect('home', '/');
 
 /**
- * Authentification
+ * Service worker
  */
-Route::get('login', [AdministrationController::class, 'login'])->name('administration.login.get');
-Route::post('login', [AdministrationController::class, 'auth'])->name('administration.login.post');
-Route::post('logout', [AdministrationController::class, 'logout'])->name('administration.logout.post');
+Route::get('/sw.js', function () {
+    $serviceWorkerPath = Vite::asset('resources/js/service-worker.ts');
 
-/**
- * Administration
- */
-Route::middleware(ElevatedPermissions::class)->group(
-    function () {
-        Route::prefix('admin/{view}')->group(
-            function () {
-                Route::get('/', [AdministrationController::class, 'index'])->name('administration.view');
-                Route::get('/new', [AdministrationController::class, 'create'])->name('administration.view.create');
-                Route::post('/new', [AdministrationController::class, 'store'])->name('administration.view.store');
-                Route::get('/{id}/{action}', [AdministrationController::class, 'show'])->name('administration.view.show');
-                Route::post('/{id}/{action}', [AdministrationController::class, 'update'])->name('administration.view.update');
-            }
-        );
-        Route::prefix('admin/server')->group(
-            function () {
-                Route::get('/laravel', [EnvironmentController::class, 'laravel'])->name('administration.server.laravel');
-                Route::get('/phpinfo', [EnvironmentController::class, 'phpinfo'])->name('administration.server.phpinfo');
-            }
-        );
-    }
-);
+    $serviceWorkerContent = Http::withOptions([
+        'verify' => ! app()->environment('local'),
+    ])->get($serviceWorkerPath)->body();
+
+    return response($serviceWorkerContent, 200, [
+        'Content-Type' => 'text/javascript',
+        'Cache-Control' => 'public, max-age=3600',
+    ]);
+})->name("sw.js");

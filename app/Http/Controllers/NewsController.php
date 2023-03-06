@@ -54,11 +54,10 @@ class NewsController extends Controller
 
         return view('pages.news', [
             'title' => 'News - Henry Alexis',
-            'show_all_status' => false,
+            'show' => false,
             'navbar' => 'news',
             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
             'categories' => $categories,
-            'Google' => Translate::google()
         ]);
     }
 
@@ -70,7 +69,6 @@ class NewsController extends Controller
             'navbar' => 'news',
             'ARTICLE' => News::url($url)->first(),
             'unwanted_array' => Regex::characters(),
-            'Google' => Translate::google()
         ]);
     }
 
@@ -81,13 +79,12 @@ class NewsController extends Controller
         if(count($newsRelatedToThisKeyword) === 0) $no_items = true;
         return view('pages.news', [
             'title' => Translate::google()->translate($key) . ' - Henry Alexis',
-            'show_all_status' => true,
+            'show' => true,
             'word' => $key,
             'items' => $no_items,
             'navbar' => 'news',
             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
             'related_news' => $newsRelatedToThisKeyword,
-            'Google' => Translate::google()
         ]);
     }
 
