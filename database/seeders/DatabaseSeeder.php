@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Projects;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\News;
+use App\Models\Project;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,22 +13,5 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-        $d = now();
-        foreach(Projects::all() as $p) {
-            $p->update([
-               "created_at" => $d,
-               "updated_at" => $d
-            ]);
-        }
-        $i = 0;
-        foreach(Projects::orderBy("identifier", "DESC")->get() as $p) {
-            $p->update([
-               "created_at" => $d->subDays($i),
-               "updated_at" => $d->subDays($i)
-            ]);
-            $i++;
-        }
-    }
+    public function run() {}
 }

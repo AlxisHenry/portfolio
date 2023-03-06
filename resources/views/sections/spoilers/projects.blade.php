@@ -1,13 +1,13 @@
 <section id="__spoilerProjects" class="section __spoiler__projects__">
     @component('components.underline-title')
-        @slot('Title')
+        @slot('title')
             Projects
         @endslot
     @endcomponent
 
     <div class="_projects_cards_">
-        @foreach ($Projects as $project)
-            @include('components.cards')
+        @foreach ($projects as $project)
+            @include('components.project')
         @endforeach
     </div>
 

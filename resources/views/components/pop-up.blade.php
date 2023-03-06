@@ -1,8 +1,8 @@
 <div class="pop-up-container hidden">
     <div class="pop-up-animation">
         <span>
-            {{ $Icon }}
-            {{ $Alert }}
+            {{ $icon }}
+            {{ $alert }}
         </span>
     </div>
 </div>

@@ -28,9 +28,9 @@ class NewsController extends Controller
                 $date->locale('fr_FR');
                 $news = new News();
                 $news->title = (string) $item->title;
-                $news->LinkImage = (string) $arr->channel->image->url;
-                $news->UrlArticle = (string) $item->link;
-                $news->published_at = $date->format('d-m-y');
+                $news->image = (string) $arr->channel->image->url;
+                $news->url = (string) $item->link;
+                $news->published_at = $date->format('Y/m/d');
                 $rss[] = $news;
             }
 
@@ -54,11 +54,10 @@ class NewsController extends Controller
 
         return view('pages.news', [
             'title' => 'News - Henry Alexis',
-            'show_all_status' => false,
+            'show' => false,
             'navbar' => 'news',
             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
             'categories' => $categories,
-            'Google' => Translate::google()
         ]);
     }
 
@@ -68,26 +67,24 @@ class NewsController extends Controller
             'title' => 'News - HENRY ALEXIS',
             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
             'navbar' => 'news',
-            'ARTICLE' => News::url($url)->first(),
+            'news' => News::url($url),
             'unwanted_array' => Regex::characters(),
-            'Google' => Translate::google()
         ]);
     }
 
-    public function keyword(string $key)
+    public function search(string $key)
     {
         $newsRelatedToThisKeyword = News::keyword($key);
         $no_items = false;
         if(count($newsRelatedToThisKeyword) === 0) $no_items = true;
         return view('pages.news', [
             'title' => Translate::google()->translate($key) . ' - Henry Alexis',
-            'show_all_status' => true,
-            'word' => $key,
+            'show' => true,
+            'search' => $key,
             'items' => $no_items,
             'navbar' => 'news',
             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
             'related_news' => $newsRelatedToThisKeyword,
-            'Google' => Translate::google()
         ]);
     }
 

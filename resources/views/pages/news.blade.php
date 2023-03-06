@@ -3,7 +3,7 @@
 @section('content')
     <section class="__news__ layout-maxed">
         @component('components.underline-title')
-            @slot('Title')
+            @slot('title')
                 News
             @endslot
         @endcomponent
@@ -15,20 +15,19 @@
                 href="https://github.com/AlxisHenry/CCI-2021-PORTFOLIO/tree/v2.1.0/extension">github</a>.
         </div>
         <div class="__search__article__">
-            <div class="__contain__search__" data-search="{{ $word ?? '' }}">
+            <div class="__contain__search__">
                 <label>
-                    <input type="text" class="__search__input__" placeholder="Search" value="{{ $word ?? '' }}"
-                        data-word="{{ $word ?? '' }}">
+                    <input type="text" class="__search__input__" placeholder="Search" value="{{ $search ?? '' }}">
                 </label>
                 <div class="__submit__search__"><i class="fa-solid fa-magnifying-glass"></i></div>
             </div>
-            <div class="show_all {{ $show_all_status ? '' : 'disabled' }}">
-                <a href="{{ $show_all_status ? '/news' : '' }}">show all</a>
+            <div class="show_all {{ $show ? '' : 'disabled' }}">
+                <a href="{{ $show ? '/news' : '' }}">show all</a>
             </div>
         </div>
         <div class="__news__container__" data-categories="{{ 'technology' }}">
-            @if (!$show_all_status)
-            @for ($i = 0; $i < count(array_keys($categories)); $i++)
+            @if (!$show)
+                @for ($i = 0; $i < count(array_keys($categories)); $i++)
                     <div class="__news__category__" data-category="{{ array_keys($categories)[$i] }}">
                         <div class="__news__category__title" data-category-title="{{ array_keys($categories)[$i] }}">
                             <h2>
@@ -49,12 +48,11 @@
                     </div>
                 @endfor
             @else
-                <div class="__news__category__ __news__category__keyword__" data-category="{{ $word }}">
-                    <div class="__news__category__title" data-category-title="{{ $word }}">
-                        <h2> {{ mb_strtoupper($word) }} </h2>
+                <div class="__news__category__ __news__category__keyword__">
+                    <div class="__news__category__title" >
+                        <h2> {{ mb_strtoupper($search) }} </h2>
                     </div>
-                    <div class="__news__category__cards__" data-category-cards="{{ $word }}"
-                        data-nb-cards="{{ count($related_news) }}" data-related-word="{{ $word }}">
+                    <div class="__news__category__cards__">
                         @foreach ($related_news as $card)
                             @include('components.news')
                         @endforeach

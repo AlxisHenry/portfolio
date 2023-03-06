@@ -2,19 +2,26 @@
 
 @section('content')
     @component('components.pop-up')
-        @slot('Icon')
+        @slot('icon')
             <i class="fa-solid fa-check"></i>
         @endslot
-        @slot('Alert')
-            Copied to the clipboard.
+        @slot('alert')
+            Copied to the clipboard
         @endslot
     @endcomponent
+    
     @include('sections.spoilers.presentation')
+
     @include('components.arrow-container')
+
     @include('sections.spoilers.about')
+
     @include('sections.spoilers.projects')
-    @include('sections.spoilers.board')
+
+    @include('sections.spoilers.resources')
+
     @include('sections.spoilers.news')
+
     @include('sections.contact')
 @stop
 

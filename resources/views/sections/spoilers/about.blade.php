@@ -1,6 +1,6 @@
 <section id="__spoilerAbout" class="section __spoiler__about__" style="@isset($customCss) {{ $customCss }} @endif">
     @component('components.underline-title')
-        @slot('Title')
+        @slot('title')
             about me
         @endslot
     @endcomponent

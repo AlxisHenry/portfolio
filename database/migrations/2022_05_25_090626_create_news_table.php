@@ -13,22 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-
         Schema::create('news', function (Blueprint $table) {
-            $table->id('identifier');
-            $table->string('title')->default(null)->nullable();
-            $table->string('author')->default(null)->nullable();
-            $table->longText('introduction')->default(null)->nullable();
-            $table->string('UrlArticle')->default(null)->nullable();
-            $table->string('LinkImage')->default(null)->nullable();
-            $table->string('AltImage')->default(null)->nullable();
-            $table->string('Theme')->default(null)->nullable();
-            $table->string('ThemePrincipal')->default(null)->nullable();
-            $table->string('FullDate')->default(null);
-            $table->string('updated_at')->default(null)->nullable();
-            $table->string('published_at')->default(null)->nullable();
+            $table->id();
+            $table->string('title');
+            $table->string('author');
+            $table->longText('introduction');
+            $table->string('url');
+            $table->string('image');
+            $table->string('alt');
+            $table->string('topics');
+            $table->string('theme');
+            $table->timestamp('published_at');
+            $table->timestamps();
         });
-
     }
 
     /**

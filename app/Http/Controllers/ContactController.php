@@ -21,7 +21,7 @@ class ContactController extends Controller
             'title' => 'Contact - HENRY ALEXIS',
             'navbar' => '',
             'og_description' => 'Portfolio - HENRY ALEXIS - Contact',
-            'random_number' => Rand::int(1, 10)
+            'secret' => Rand::int(1, 10)
         ]);
     }
 
@@ -30,7 +30,7 @@ class ContactController extends Controller
      */
     public function send(Request $request): RedirectResponse
     {
-        $robot = $request->input('random_number');
+        $robot = $request->input('secret');
         $validate = Validator::make($request->all(), [
             'name' => 'required|between:2,60|alpha',
             'email' => 'required|email',

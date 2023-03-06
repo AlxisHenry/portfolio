@@ -39,4 +39,11 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <script src="https://analytics.alexishenry.eu/sync.js" data-id="1"></script>
+    <script type="text/javascript">
+        window.addEventListener("load", () => {
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register('{{ route("sw.js") }}')
+            }
+        })
+    </script>
 </head>
