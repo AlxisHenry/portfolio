@@ -5,18 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Resource extends Model
+class Project extends Model
 {
-
     use HasFactory;
 
     protected $fillable = [
-        'title',
+        'title', 
+        'link', 
         'description', 
-        'author',
-        'link',
+        'github', 
+        'image', 
+        'languages', 
+        'published_at',
     ];
-       
+
     public function scopeSpoilers($query) 
     {
         return $query->latest()->limit(2)->get();

@@ -19,6 +19,6 @@ class ElevatedPermissions
     public function handle(Request $request, Closure $next)
     {   
         if (Auth::user()->is_admin) return $next($request);
-        return redirect()->route('index');
+        return abort(403);
     }
 }

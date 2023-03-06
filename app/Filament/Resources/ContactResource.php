@@ -2,28 +2,29 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\UserResource\Pages;
-use App\Filament\Resources\UserResource\RelationManagers;
-use App\Models\User;
+use App\Filament\Resources\ContactResource\Pages;
+use App\Filament\Resources\ContactResource\RelationManagers;
+use App\Models\Contact;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Filters\TernaryFilter;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\GlobalSearch\Actions\Action;
-use Illuminate\Database\Eloquent\Model;
 
-class UserResource extends Resource
+class ContactResource extends Resource
 {
-    protected static ?string $model = User::class;
-
-    protected static ?string $recordTitleAttribute = 'title';
-
-    protected static ?string $navigationIcon = 'heroicon-o-user';
+    protected static ?string $model = Contact::class;
 
     protected static ?string $navigationGroup = 'Models';
+
+    protected static ?string $navigationIcon = 'heroicon-o-inbox';
+
+    // Remove the New button from the index page
 
     public static function form(Form $form): Form
     {
@@ -32,20 +33,20 @@ class UserResource extends Resource
                 Forms\Components\Card::make([
                     Forms\Components\TextInput::make('name')
                         ->required()
+                        ->disabled()
                         ->maxLength(255),
                     Forms\Components\TextInput::make('email')
                         ->email()
                         ->required()
+                        ->disabled()
                         ->maxLength(255),
-                    Forms\Components\DateTimePicker::make('email_verified_at'),
-                    Forms\Components\TextInput::make('password')
-                        ->password()
-                        ->required()
-                        ->maxLength(255),
+                    Forms\Components\Textarea::make('content')
+                        ->disabled()
+                        ->required(),
                 ])
             ]);
     }
-
+    
     public static function table(Table $table): Table
     {
         return $table
@@ -53,14 +54,15 @@ class UserResource extends Resource
                 Tables\Columns\TextColumn::make('id')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('email')
-                    ->searchable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('email_verified_at')
                     ->sortable()
-                    ->dateTime(),
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('email')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('content')
+                    ->limit(15)
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->sortable()
                     ->dateTime(),
@@ -70,7 +72,6 @@ class UserResource extends Resource
             ])
             ->defaultSort('created_at', 'desc')
             ->filters([
-                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -79,53 +80,21 @@ class UserResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-    
+
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListUsers::route('/'),
-            'create' => Pages\CreateUser::route('/create'),
-            'edit' => Pages\EditUser::route('/{record}/edit'),
+            'index' => Pages\ListContacts::route('/')
         ];
-    }
+    }    
 
-    static function getGloballySearchableAttributes(): array
-    {
-        return ['name', 'email'];
-    }
-
-    static function getGlobalSearchResultDetails(Model $record): array
-    {
-        return [
-            "name" => $record->name,
-            "email" => $record->email
-        ];
-    }
-    
-    static function getGlobalSearchResultUrl(Model $record): string
-    {
-        return UserResource::getUrl('edit', ['record' => $record]);
-    }
-    
     protected static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
     }
-
-    protected function shouldPersistTableFiltersInSession(): bool
-    {
-        return true;
-    }
-
+    
     protected static function getNavigationBadgeColor(): ?string
     {
-        return static::getModel()::count() < 1 ? 'danger' : 'success';
+        return 'warning';
     }
 }

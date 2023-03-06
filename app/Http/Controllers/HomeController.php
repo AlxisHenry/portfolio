@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Helpers\Language;
 use App\Models\News;
-use App\Models\Projects;
 use Illuminate\Routing\Controller;
 use App\Helpers\Rand;
 use App\Helpers\Translate;
+use App\Models\Project;
 use App\Models\Resource;
 
 class HomeController extends Controller
@@ -21,7 +21,7 @@ class HomeController extends Controller
             'og_description' => 'Portfolio - HENRY ALEXIS - Homepage',
             'news' => News::spoilers(),
             'resources' => Resource::spoilers(),
-            'projects' => Projects::spoilers(),
+            'projects' => Project::spoilers(),
             'g' => Translate::google(),
             'secret' => Rand::int(1, 10)
         ]);

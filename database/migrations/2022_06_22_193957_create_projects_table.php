@@ -23,8 +23,7 @@ return new class extends Migration
             $table->string('github')
                 ->default(null)
                 ->nullable();
-            $table->string('image')
-                ->default("https://via.placeholder.com/150");
+            $table->string('image');            
             $table->string('languages')
                 ->default(null)
                 ->nullable();

@@ -16,12 +16,12 @@ use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\AdministrationController;
 use App\Http\Controllers\EnvironmentController;
 use App\Http\Controllers\LegalNoticeController;
+use App\Models\News;
 
 /**
  * Middlewares
  */
 
-use App\Http\Middleware\ElevatedPermissions;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Vite;
 
@@ -49,7 +49,7 @@ Route::prefix('news')->group(
     function () {
         Route::get('/', [NewsController::class, 'index'])->name('news');
         Route::get('/{url}', [NewsController::class, 'show'])->name('news.article');
-        Route::get('/word/{key}', [NewsController::class, 'keyword'])->name('news.keyword');
+        Route::get('/search/{key}', [NewsController::class, 'search'])->name('news.search');
     }
 );
 
@@ -73,6 +73,7 @@ Route::get('legal-notice', [LegalNoticeController::class, 'index'])->name('legal
  * Redirections
  */
 Route::redirect('home', '/');
+Route::redirect('login', '/admin/login')->name("login");
 
 /**
  * Service worker

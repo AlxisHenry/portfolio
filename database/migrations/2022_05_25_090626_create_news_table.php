@@ -21,11 +21,10 @@ return new class extends Migration
             $table->string('url');
             $table->string('image');
             $table->string('alt');
-            $table->string('Theme');
-            $table->string('ThemePrincipal');
-            $table->string('FullDate')->default(null);
-            $table->string('updated_at');
-            $table->string('published_at');
+            $table->string('topics');
+            $table->string('theme');
+            $table->timestamp('published_at');
+            $table->timestamps();
         });
     }
 

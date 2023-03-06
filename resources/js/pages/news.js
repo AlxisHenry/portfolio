@@ -15,7 +15,7 @@ const RedirectToKeyword = () => {
   submitSearch.addEventListener("click", (e) => {
     let value = submitValue.value;
     if (value.length > 2) {
-      document.location.href = `/news/word/${value.toLowerCase()}`;
+      document.location.href = `/news/search/${value.toLowerCase()}`;
     } else {
       e.preventDefault();
     }

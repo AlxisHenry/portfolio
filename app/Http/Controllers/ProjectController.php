@@ -2,21 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Projects;
-use Illuminate\Http\Request;
+use App\Models\Project;
 use Illuminate\Routing\Controller;
-use SebastianBergmann\CodeCoverage\Report\Xml\Project;
 
 class ProjectController extends Controller
 {
 
-    public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function index()
     {
         return view('pages.projects', [
             'title' => 'Projects - HENRY ALEXIS',
             'navbar' => 'projects',
             'og_description' => 'Portfolio HENRY ALEXIS - Projects',
-            'projects' => Projects::latest()->get()
+            'projects' => Project::latest()->get()
         ]);
     }
 
