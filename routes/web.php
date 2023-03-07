@@ -1,11 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/**
- * Controllers
- */
-
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ContactController;
@@ -13,15 +8,7 @@ use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\LanguageController;
-use App\Http\Controllers\AdministrationController;
-use App\Http\Controllers\EnvironmentController;
 use App\Http\Controllers\LegalNoticeController;
-use App\Models\News;
-
-/**
- * Middlewares
- */
-
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Vite;
 
