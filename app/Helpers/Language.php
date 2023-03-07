@@ -51,7 +51,9 @@ class Language
         $languages = [];
         foreach ($files as $file) {
             $language_name = explode('.', $file)[1];
-            $languages[] = "<a href='/language/$language_name'><img src='". url($file) ."' alt='$language_name' title='$language_name' class='language_icon'></a>";
+            $languages[] = "<a href='". route("languages.show", [
+                'name' => $language_name
+            ]) ."'><img src='". url($file) ."' alt='$language_name' title='$language_name' class='language_icon'></a>";
         }
         return $languages;
     }
