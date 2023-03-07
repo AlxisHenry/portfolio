@@ -12,9 +12,11 @@ class LatestProjects extends BaseWidget
 {
     protected static ?int $sort = 2;
 
+    protected int|string|array $columnSpan = 'full';
+
     protected function getTableQuery(): Builder
     {
-        return Project::query()->limit(3);
+        return Project::query()->latest()->limit(5);
     }
 
     protected function isTablePaginationEnabled(): bool 
@@ -27,6 +29,17 @@ class LatestProjects extends BaseWidget
         return [
             Tables\Columns\TextColumn::make('id'),
             Tables\Columns\TextColumn::make('title')
+                ->limit(20),
+            Tables\Columns\TextColumn::make('description')
+                ->limit(20),
+            Tables\Columns\TextColumn::make('link')
+                ->limit(20),
+            Tables\Columns\TextColumn::make('github')
+                ->limit(20),
+            Tables\Columns\TextColumn::make('languages')
+                ->limit(20),
+            Tables\Columns\TextColumn::make('published_at')
+                ->dateTime()
         ];
     }
 }

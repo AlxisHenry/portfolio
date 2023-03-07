@@ -23,9 +23,7 @@ class ContactResource extends Resource
     protected static ?string $navigationGroup = 'Models';
 
     protected static ?string $navigationIcon = 'heroicon-o-inbox';
-
-    // Remove the New button from the index page
-
+    
     public static function form(Form $form): Form
     {
         return $form
