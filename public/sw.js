@@ -2,6 +2,12 @@ const BASE = location.protocol + "//" + location.host;
 const PREFIX = "portfolio";
 const CACHED_FILES = [`${BASE}/assets/disconnected.png`];
 
+function debug(status) {
+  if (!status) {
+    console.log = () => {};
+  }
+}(false);
+
 self.addEventListener("install", (e) => {
   self.skipWaiting();
   e.waitUntil(
