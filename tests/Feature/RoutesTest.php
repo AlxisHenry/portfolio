@@ -51,18 +51,24 @@ class RoutesTest extends TestCase
 
     public function test_languages_screen_can_be_rendered()
     {
-        $response = $this->get('/language');
+        $response = $this->get('/languages');
         $response->assertStatus(200);
     }
 
     public function test_languages_show_screen_can_be_rendered()
     {
-        $response = $this->get('/language/css');
+        $response = $this->get('/languages/css');
         $response->assertStatus(200);
     }
 
-    public function test_login_screen_can_be_rendered() {
+    public function test_login_route_redirect_to_login_page() {
         $response = $this->get('/login');
+        $response->assertStatus(302);
+    }
+
+    public function test_login_screen_can_be_rendered()
+    {
+        $response = $this->get('/admin/login');
         $response->assertStatus(200);
     }
 }
