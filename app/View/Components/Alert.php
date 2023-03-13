@@ -3,8 +3,6 @@
 namespace App\View\Components;
 
 use App\Helpers\Alert as HelpersAlert;
-use Closure;
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class Alert extends Component
@@ -27,11 +25,7 @@ class Alert extends Component
         $this->delay = $popup->delay;
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     * @return View|Closure|string
-     */
-    public function render(): View|string|Closure
+    public function render()
     {
         return view('components.alert');
     }

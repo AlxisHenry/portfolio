@@ -45,6 +45,7 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessFilament(): bool
     {
+        // @phpstan-ignore-next-line
         return ($this->email === env("MAIL_OWNER"));
     }
 

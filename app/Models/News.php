@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class News extends Model
 {
@@ -35,7 +36,6 @@ class News extends Model
             "technologie" => $this->group('Techno', null, 4, [160, 200]),
             "pegasus" => $this->group('Pegasus'),
             "internet" => $this->group( 'Internet'),
-            "cybersécurité" => $this->group('Cyber'),
             "economie" => $this->group('Economi')
         ];
     }
@@ -54,7 +54,7 @@ class News extends Model
         ];
     }
 
-    private function call(?string $like = null, int $limit = 4, ?array $between = null)
+    private function call(?string $like = null, int $limit = 4, ?array $between = null): Collection
     {
         $conditions = [
             ['theme', '=', 'Technologique']
@@ -64,6 +64,7 @@ class News extends Model
             $conditions[] = ['topics', 'like', "%$like%"];
         }
 
+        // @phpstan-ignore-next-line
         $news = News::where($conditions)->orderBy("published_at", "DESC");
 
         if (is_array($between)) {
@@ -73,15 +74,18 @@ class News extends Model
         return $news->limit($limit)->get();
     }
 
-    public function scopeSpoilers($query) {
+    public function scopeSpoilers(Builder $query): Collection
+    {
         return $query->whereBetween("id", [160,165])->get();
     }
 
-    public function scopeUrl($query, $news) {
+    public function scopeUrl(Builder $query, string $news): ?object
+    {
         return $query->where('url', 'like', "%$news%")->first();
     }
 
-    public function scopeKeyword($query, $keyword) {
+    public function scopeKeyword(Builder $query, string $keyword): Collection
+    {
         return $query->where('theme', '=', 'Technologique')
                      ->where('title', 'like', '%'.$keyword.'%')
                      ->orWhere('topics', 'like', '%' . $keyword . '%')

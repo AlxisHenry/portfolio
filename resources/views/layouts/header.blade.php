@@ -42,7 +42,7 @@
     <script type="text/javascript">
         window.addEventListener("load", () => {
             if ("serviceWorker" in navigator) {
-                navigator.serviceWorker.register('{{ route("sw.js") }}')
+                navigator.serviceWorker.register('/sw.js')
             }
         })
     </script>

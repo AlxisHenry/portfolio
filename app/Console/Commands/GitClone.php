@@ -30,10 +30,21 @@ class GitClone extends Git
      */
     public function handle(): void
     {
-        $branch = $this->option('branch') ?? false;
+        /**
+         * @var string $branch
+         */
+        $branch = $this->option('branch') ?? "";
+ 
+        /**
+         * @var string $repository
+         */
         $repository = $this->argument('repository');
+        
+        /**
+         * @var string $name
+         */
         $name = $this->option('name') ?? basename($repository, '.git');
-
+        
         if (is_dir(self::ROOT ."/". $name)) {
             $choice = $this->choice("The directory $name already exists. Do you want to overwrite it?", ['Yes, overwrite it!', 'No, are you crazy?'], 1);
             if ($choice === 'No, are you crazy?') {

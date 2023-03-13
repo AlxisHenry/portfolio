@@ -16,6 +16,7 @@ class LatestContacts extends BaseWidget
 
     protected function getTableQuery(): Builder
     {
+        // @phpstan-ignore-next-line
         return Contact::query()->latest()->limit(5);
     }
 

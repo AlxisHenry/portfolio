@@ -43,8 +43,8 @@ class StatsOverview extends BaseWidget
     protected function createdThisMonth(string $table): int
     {
         return DB::table($table)
-            ->whereMonth('created_at', now()->month)
-            ->whereYear('created_at', now()->year)
+            ->whereMonth('created_at', (string) now()->month)
+            ->whereYear('created_at', (string) now()->year)
             ->count();
     }
 

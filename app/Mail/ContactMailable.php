@@ -12,7 +12,6 @@ class ContactMailable extends Mailable
 {
     use Queueable, SerializesModels;
 
-
     private string $name;
     private string $email;
     private string $object;
@@ -23,7 +22,7 @@ class ContactMailable extends Mailable
      *
      * @return void
      */
-    public function __construct($request)
+    public function __construct(array $request)
     {
         $this->name = $request['name'];
         $this->email = $request['email'];

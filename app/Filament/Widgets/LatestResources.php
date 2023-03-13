@@ -16,6 +16,7 @@ class LatestResources extends BaseWidget
 
     protected function getTableQuery(): Builder
     {
+        // @phpstan-ignore-next-line
         return Resource::query()->latest()->limit(5);
     }
 
