@@ -18,8 +18,6 @@ deploy: ## Déploie une nouvelle version du site
 install: ## Réalise les installations nécessaires
 	$(artisan) down
 	composer install --no-dev --optimize-autoloader
-	pnpm install
-	pnpm run build
 	$(artisan) migrate
 	$(artisan) optimize:clear
 	sudo service php8.1-fpm reload
@@ -28,3 +26,11 @@ install: ## Réalise les installations nécessaires
 .PHONY: rollback
 rollback: ## Annule la dernière migration
 	$(artisan) migrate:rollback
+
+# -----------------------------------
+# Dépendances
+# -----------------------------------
+
+public/build: package.json
+	npm install
+	npm run build
