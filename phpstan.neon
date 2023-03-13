@@ -1,0 +1,13 @@
+parameters:
+	level: 8
+	paths:
+		- app/
+		- resources/
+		- public/
+	checkMissingIterableValueType: false
+	checkGenericClassInNonGenericObjectType: false
+	excludePaths:
+		- app/View/*
+		- app/Http/Kernel.php
+		- app/Http/Controllers/*
+		- app/Http/Middleware/*
