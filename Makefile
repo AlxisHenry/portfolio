@@ -15,7 +15,7 @@ deploy: ## Déploie une nouvelle version du site
 	ssh -A $(server) 'cd $(domain) && git pull origin main && make install'
 
 .PHONY: install
-install: ## Réalise les installations nécessaires
+install: public/assets/build ## Réalise les installations nécessaires
 	$(artisan) down
 	composer install --no-dev --optimize-autoloader
 	$(artisan) migrate
@@ -31,6 +31,6 @@ rollback: ## Annule la dernière migration
 # Dépendances
 # -----------------------------------
 
-public/build: package.json
+public/assets/build: package.json
 	npm install
 	npm run build
