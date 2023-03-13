@@ -61,19 +61,3 @@ Route::get('legal-notice', [LegalNoticeController::class, 'index'])->name('legal
  */
 Route::redirect('home', '/');
 Route::redirect('login', '/admin/login')->name("login");
-
-/**
- * Service worker
- */
-Route::get('/sw.js', function () {
-    $serviceWorkerPath = Vite::asset('resources/js/service-worker.ts');
-
-    $serviceWorkerContent = Http::withOptions([
-        'verify' => ! app()->environment('local'),
-    ])->get($serviceWorkerPath)->body();
-
-    return response($serviceWorkerContent, 200, [
-        'Content-Type' => 'text/javascript',
-        'Cache-Control' => 'public, max-age=3600',
-    ]);
-})->name("sw.js");
