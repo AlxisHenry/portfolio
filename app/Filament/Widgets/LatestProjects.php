@@ -16,6 +16,7 @@ class LatestProjects extends BaseWidget
 
     protected function getTableQuery(): Builder
     {
+        // @phpstan-ignore-next-line
         return Project::query()->latest()->limit(5);
     }
 

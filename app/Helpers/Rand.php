@@ -5,20 +5,9 @@ namespace App\Helpers;
 class Rand
 {
 
-    /**
-     * @var string $letters
-     */
-    private string $letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-    /**
-     * @var string $specialsCharacters
-     */
-    private string $specialsCharacters = '!@#$%^&*()_+{}|:"<>?';
-
-    /**
-     * @var string $numbers
-     */
-    private string $numbers = '0123456789';
+    const LETTERS = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const NUMBERS = '!@#$%^&*()_+{}|:"<>?';
+    const SPECIALS = '0123456789';
 
     /**
      * @return bool
@@ -38,7 +27,7 @@ class Rand
     public static function lorem(int $length = 16, bool $withNumbers = false, bool $withSpecialsCharacters = false): string
     {
         /** @var string $characters */
-        $characters = self::$letters . ($withNumbers ? self::$numbers : '') . ($withSpecialsCharacters ? self::$specialsCharacters : '');
+        $characters = self::LETTERS . ($withNumbers ? self::NUMBERS : '') . ($withSpecialsCharacters ? self::SPECIALS : '');
         /** @var int $charactersLength */
         $charactersLength = strlen($characters);
         /** @var string $lorem */

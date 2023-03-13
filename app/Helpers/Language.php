@@ -51,9 +51,12 @@ class Language
         $languages = [];
         foreach ($files as $file) {
             $language_name = explode('.', $file)[1];
-            $languages[] = "<a href='". route("languages.show", [
-                'name' => $language_name
-            ]) ."'><img src='". url($file) ."' alt='$language_name' title='$language_name' class='language_icon'></a>";
+            $route = route("languages.show", [ 'name' => $language_name ]);
+            $file = url($file);
+            if (!is_string($file)) {
+                throw new \Exception("The file is not a string but an instance of " . get_class($file) . " instead.");
+            }
+            $languages[] = "<a href='$route'><img src='$file' alt='$language_name' title='$language_name' class='language_icon'></a>";
         }
         return $languages;
     }
@@ -63,9 +66,14 @@ class Language
         return array_key_exists($lang, self::all()) ? self::all()[$lang] : false;
     }
 
-    public static function random():string
+    public static function random(): string
     {
-        return array_rand(self::all());
+        $r = array_rand(self::all());
+        if (!is_string($r)) {
+            throw new \Exception("The random language is not a string.");
+        } else {
+            return $r;
+        }
     }
 
 }

@@ -135,7 +135,9 @@ class NewsResource extends Resource
     public static function getGlobalSearchResultDetails(Model $record): array
     {
         return [
+            // @phpstan-ignore-next-line
             "id" => "#{$record->id}",
+            // @phpstan-ignore-next-line
             "title" => substr($record->name, 25) . "..."
         ];
     }

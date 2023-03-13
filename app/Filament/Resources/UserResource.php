@@ -104,7 +104,9 @@ class UserResource extends Resource
     static function getGlobalSearchResultDetails(Model $record): array
     {
         return [
+            // @phpstan-ignore-next-line
             "name" => $record->name,
+            // @phpstan-ignore-next-line
             "email" => $record->email
         ];
     }

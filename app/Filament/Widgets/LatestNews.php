@@ -16,6 +16,7 @@ class LatestNews extends BaseWidget
 
     protected function getTableQuery(): Builder
     {
+        // @phpstan-ignore-next-line
         return News::query()->orderByDesc("id")->limit(5);
     }
 

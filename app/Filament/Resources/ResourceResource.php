@@ -109,7 +109,9 @@ class ResourceResource extends Resource
     public static function getGlobalSearchResultDetails(Model $record): array
     {
         return [
+            // @phpstan-ignore-next-line
             "title" => $record->title,
+            // @phpstan-ignore-next-line
             "description" => substr($record->description, 0, 30) . '...'
         ];
     }

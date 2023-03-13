@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Collection;
 
 class Resource extends Model
 {
@@ -17,7 +19,7 @@ class Resource extends Model
         'link',
     ];
        
-    public function scopeSpoilers($query) 
+    public function scopeSpoilers(Builder $query): Collection
     {
         return $query->latest()->limit(2)->get();
     }

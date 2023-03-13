@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Collection;
 
 class Project extends Model
 {
@@ -19,7 +21,7 @@ class Project extends Model
         'published_at',
     ];
 
-    public function scopeSpoilers($query) 
+    public function scopeSpoilers(Builder $query): Collection
     {
         return $query->latest()->limit(2)->get();
     }

@@ -13,7 +13,7 @@ class ResourceController extends Controller
             'title' => 'Resources - HENRY ALEXIS',
             'navbar' => 'resources',
             'og_description' => 'Portfolio - HENRY ALEXIS - Resources',
-            'resources' => Resource::latest()->get()
+            'resources' => Resource::latest()->get() 
         ]);
     }
 }
