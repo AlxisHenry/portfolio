@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Builder;
 class News extends Model
 {
 
+    const RSS_URL = "https://www.01net.com/actualites/technos/feed/";
+
     use HasFactory;
 
     protected $fillable = [
@@ -28,8 +30,39 @@ class News extends Model
 
     public function scopeCategories(): array
     {
+        try {
+
+            $content = file_get_contents(self::RSS_URL);
+            $arr = simplexml_load_string($content);
+            $rss = [];
+
+            foreach ($arr->channel->item as $item) {
+                $date = \Carbon\Carbon::createFromFormat('D, d M Y H:i:s O', (string) $item->pubDate);
+                $date->locale('fr_FR');
+                $news = new News();
+                $news->title = (string) $item->title;
+                $news->image = (string) $arr->channel->image->url;
+                $news->url = (string) $item->link;
+                $news->published_at = $date->format('Y/m/d');
+                $rss[] = $news;
+            }
+
+            $rss = array_chunk($rss, 4);
+            
+            $categories = [
+                "Flux RSS 01.net" => [
+                    (string) $arr->channel->link,
+                    collect($rss[0])
+                ],  
+            ];
+
+        } catch (\Exception $e) {
+            $categories = [];
+        }
+
         return [
             "veille technologique" => $this->group('Veille Technologique'),
+            ...$categories,
             "cybersécurité" => $this->group('Cyber', null, 4, [150, 200]),
             "google" => $this->group('Google'),
             "facebook" => $this->group('Facebook'),
@@ -76,7 +109,7 @@ class News extends Model
 
     public function scopeSpoilers(Builder $query): Collection
     {
-        return $query->whereBetween("id", [160,165])->get();
+        return $query->latest()->limit(6)->get();
     }
 
     public function scopeUrl(Builder $query, string $news): ?object
