@@ -1,6 +1,6 @@
 @include('layouts.header')
 
-<body data-theme="{{$_COOKIE['theme'] ?? "light"}}" class="@if(Route::currentRouteName() === 'index') loader-body @endif">
+<body data-theme="{{ $theme }}" class="@if(Route::currentRouteName() === 'index') loader-body @endif">
 
 @if(Route::currentRouteName() === 'index')
     @include('layouts.loader', ['status' => true])

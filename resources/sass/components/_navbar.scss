@@ -39,6 +39,27 @@
       }
     }
 
+    .__lang__ {
+      width: 33px;
+      height: 33px;
+      display: flex;
+      align-items: center;
+      border-radius: 50%;
+      .__lang__main__ {
+        height: 33px;
+        width: 33px;
+        border-radius: 50%;
+        img {
+          filter: none;
+          width: 33px;
+          height: 33px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
     .__theme__ {
       width: 33px;
       height: 33px;
@@ -98,7 +119,7 @@
     right: 0;
     margin-left: -1000px;
 
-    .nav-active .nav-content .nav-title .nav-title_letter {
+    .nav-active .nav-content .nav-title {
       color: $ocean;
       cursor: pointer;
     }
@@ -120,7 +141,7 @@
         }
       }
 
-      &:hover .nav-content .nav-title .nav-title_letter {
+      &:hover .nav-content .nav-title {
         color: $ocean;
         transition: color 1s;
       }
@@ -141,14 +162,13 @@
 
       .nav-content {
         .nav-title {
-          .nav-title_letter {
-            font-size: 40px;
-            color: $light-white;
-            text-transform: uppercase;
-            font-weight: lighter;
-            font-family: $iconsolata;
-            min-width: 20px;
-          }
+          font-size: 40px;
+          color: $light-white;
+          text-transform: uppercase;
+          font-weight: lighter;
+          font-family: $iconsolata;
+          min-width: 20px;
+          letter-spacing: 4px;
         }
       }
     }
@@ -211,6 +231,7 @@
     .__navbar__features__ {
       margin-right: 20px;
       a,
+      .__lang__,
       .__theme__ {
         margin-top: -40px;
       }

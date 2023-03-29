@@ -9,8 +9,8 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LegalNoticeController;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Vite;
+use App\Http\Controllers\LocalizationController;
+use DebugBar\DataCollector\LocalizationCollector;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
@@ -55,6 +55,8 @@ Route::prefix('contact')->group(
 );
 
 Route::get('legal-notice', [LegalNoticeController::class, 'index'])->name('legal-notice.index');
+
+Route::get('lang/{locale}', [LocalizationController::class, 'setLocale'])->name('lang');
 
 /**
  * Redirections

@@ -13,30 +13,20 @@ import {
 import { ScrollToContact } from "../components/to-contact";
 import { ArrowEvent } from "../components/to-about";
 
-const writeJob = (job, index) => {
-  // Write Job on homepage
-  const Job = document.querySelector(".job p");
-  if (index < job.length) {
+const write = (e, i = 0) => {
+  const $ = document.querySelector(`.${e} p`);
+  console.log(e, $)
+  const value = $.dataset.value;
+  if (i < value.length) {
     setTimeout(() => {
-      Job.innerHTML += `<span>${job[index]}</span>`;
-      writeJob(job, index + 1);
+      $.innerHTML += `<span>${value[i]}</span>`;
+      write(e, i + 1);
     }, 125);
   } else {
-    Job.classList.add("disabled-animation-writer");
+    $.classList.add("disabled-animation-writer");
   }
 };
-const writeName = (name, index) => {
-  // Write Name on homepage
-  const Name = document.querySelector(".name p");
-  if (index < name.length) {
-    setTimeout(() => {
-      Name.innerHTML += `<span>${name[index]}</span>`;
-      writeName(name, index + 1);
-    }, 125);
-  } else {
-    Name.classList.add("disabled-animation-writer");
-  }
-};
+
 const HomepageReveal = () => {
   // Animation on languages icons
   const LanguagesIcons = document.querySelectorAll(".language_icon");
@@ -47,6 +37,7 @@ const HomepageReveal = () => {
     Icon++;
   }
 };
+
 const RevealYears = () => {
   // Try to make a good animation on years in about me spoiler (ok but have some bugs)
   const years = document.querySelector(".years");
@@ -73,8 +64,8 @@ const RevealYears = () => {
 window.addEventListener("load", (e) => {
   setTimeout(() => {
     RemoveLoader();
-    writeName("Henry alexis", 0);
-    writeJob("Web Developer", 0);
+    write("name");
+    write("job");
     HomepageReveal();
     ArrowEvent(document.querySelector("#__spoilerAbout").offsetTop);
     ScrollToContact(document.querySelector("#__ContactForm").offsetTop);
