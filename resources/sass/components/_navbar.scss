@@ -41,19 +41,19 @@
 
     .__lang__ {
       margin-left: -3px;
-      width: 33px;
-      height: 33px;
+      width: 35px;
+      height: 35px;
       display: flex;
       align-items: center;
       border-radius: 50%;
       .__lang__main__ {
-        height: 33px;
-        width: 33px;
+        height: 35px;
+        width: 35px;
         border-radius: 50%;
         img {
           filter: none;
-          width: 33px;
-          height: 33px;
+          width: 35px;
+          height: 35px;
           &:hover {
             cursor: pointer;
           }
