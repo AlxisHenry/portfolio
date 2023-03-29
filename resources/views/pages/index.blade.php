@@ -6,7 +6,7 @@
             <i class="fa-solid fa-check"></i>
         @endslot
         @slot('alert')
-            Copied to the clipboard
+            {{ __('labels.copied') }}
         @endslot
     @endcomponent
     

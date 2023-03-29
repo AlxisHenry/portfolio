@@ -3,6 +3,6 @@
         <img src="{{ url('assets/mail.png') }}" alt="success-image">
     </div>
     <div>
-        Your message has been sent !
+        {{ __('labels.contact.send') }}
     </div>
 </div>

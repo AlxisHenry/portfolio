@@ -4,15 +4,15 @@
     <section class="__news__ layout-maxed">
         @component('components.underline-title')
             @slot('title')
-                News
+                {{ __('titles.news') }}
             @endslot
         @endcomponent
         <div class="section-explication">
-            On this page are available a number of articles retrieved from France Inter.
-            I retrieved them using <a href="https://selenium-python.readthedocs.io/">selenium</a>, a <a
-                href="https://www.python.org/">python</a> tool.
-            The source code is available on <a
-                href="https://github.com/AlxisHenry/CCI-2021-PORTFOLIO/tree/v2.1.0/extension">github</a>.
+            {!! __('paragraphs.news', [
+                'route' => route('news.search', [
+                    'key' => "Veille technologique"
+                ])
+            ]) !!}
         </div>
         <div class="__search__article__">
             <div class="__contain__search__">

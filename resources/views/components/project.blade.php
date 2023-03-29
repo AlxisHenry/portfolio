@@ -13,7 +13,7 @@
                 @if($project->github)
                     <div class="_github_link_">
                         <a target="_blank" href="{{ $project->github }}" rel="noreferrer nofollow" class="main-link">
-                            Available on Github
+                            {{ __('labels.availableOnGithub') }}
                         </a>
                     </div>
                 @endif

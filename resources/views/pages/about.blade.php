@@ -6,7 +6,7 @@
             <i class="fa-solid fa-check"></i>
         @endslot
         @slot('alert')
-            Copied to the clipboard
+            {{ __('labels.copied') }}       
         @endslot
     @endcomponent
     @include('sections.spoilers.about', [
@@ -16,7 +16,7 @@
     <section id="__Skills" class="section">
         @component('components.underline-title')
             @slot('title')
-                Skills
+                {{ __('titles.skills') }}
             @endslot
         @endcomponent
         <div class="contain-all-skills">

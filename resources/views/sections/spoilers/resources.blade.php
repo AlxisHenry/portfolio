@@ -1,7 +1,7 @@
 <section id="__spoilerBoard" class="section __spoiler__board__">
     @component('components.underline-title')
         @slot('title')
-            Resources
+            {{ __('titles.resources') }}
         @endslot
     @endcomponent
 

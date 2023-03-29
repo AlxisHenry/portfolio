@@ -4,10 +4,10 @@
         <div class="__main__presentation__">
             <div class="__me__">
                 <div class="name">
-                    <p><span> </span></p>
+                    <p data-value='HENRY ALEXIS'><span> </span></p>
                 </div>
                 <div class="job">
-                    <p><span> </span></p>
+                    <p data-value='{{__('titles.job')}}'><span> </span></p>
                 </div>
                 <div class="__language__">
                     @foreach ($languages as $lang)

@@ -3,21 +3,27 @@
         <i></i>
     </button>
     <div class="burger-element">
-        @include('components.navbar', ['to' => 'home', 'title' => 'Home'])
-        @include('components.navbar', ['to' => 'about', 'title' => 'about me'])
+        @include('components.navbar', ['to' => 'home', 'title' => 'home'])
+        @include('components.navbar', ['to' => 'about', 'title' => 'about'])
         @include('components.navbar', ['to' => 'projects', 'title' => 'projects'])
-        @include('components.navbar', ['to' => 'resources', 'title' => 'Resources'])
+        @include('components.navbar', ['to' => 'resources', 'title' => 'resources'])
         @include('components.navbar', ['to' => 'news', 'title' => 'news'])
     </div>
     <div class="__navbar__features__">
         <a href="https://github.com/AlxisHenry" target="_blank" rel="nofollow noreferrer">
             <img title="Github" src="{{ url('assets/svg/socials/github.svg') }}" alt="Github Link">
         </a>
+        <div class="__lang__">
+            <div class="__lang__main__">
+                <a href="{{ route('lang', ['locale' => App::getLocale() === "fr" ? "en" : "fr"]) }}">
+                    <img src="{{ url('assets/svg/langs/'. ( App::getLocale() === "fr" ? "en" : "fr" ) .'.svg') }}" alt="Language">
+                </a>
+            </div>
+        </div>
         <div class="__theme__">
-            <div class="__theme__main__" id="{{ $_COOKIE['theme'] ?? 'light' }}">
-                <img src="{{ url('assets/svg/themes/' . ($_COOKIE['theme'] ?? 'light') . '.svg') }}"
-                    data-theme="{{ $_COOKIE['theme'] ?? 'light' }}"
-                    data-next="{{ ($_COOKIE['theme'] ?? 'light') === 'light' ? 'dark' : 'light' }}">
+            <div class="__theme__main__" id="{{ $theme ?? 'light' }}">
+                <img src="{{ url('assets/svg/themes/' . $theme . '.svg') }}" data-theme="{{ $theme }}"
+                    data-next="{{ $theme === 'light' ? 'dark' : 'light' }}">
             </div>
         </div>
     </div>
