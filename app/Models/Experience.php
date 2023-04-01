@@ -14,6 +14,7 @@ class Experience extends Model
         'title',
 		'company',
 		'city',
+		'description',
 		'image',
 		'started_at',
 		'ended_at',

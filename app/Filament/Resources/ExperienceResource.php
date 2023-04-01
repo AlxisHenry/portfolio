@@ -40,6 +40,10 @@ class ExperienceResource extends Resource
                 Forms\Components\TextInput::make('started_at')
                     ->required(),
                 Forms\Components\TextInput::make('ended_at'),
+                Forms\Components\Card::make([
+                    Forms\Components\MarkdownEditor::make('description')
+                        ->required(),
+                ]),
                 Forms\Components\Toggle::make('is_current'),
             ]);
     }
@@ -56,9 +60,16 @@ class ExperienceResource extends Resource
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('company')
+                    ->limit(15)
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('image')
+                    ->limit(10)
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('description')
+                    ->limit(20)
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('city')
                     ->limit(20)
                     ->sortable(),
                 Tables\Columns\TextColumn::make('started_at')
@@ -86,7 +97,7 @@ class ExperienceResource extends Resource
             'edit' => Pages\EditExperience::route('/{record}/edit'),
         ];
     }
-    
+
     public static function getGloballySearchableAttributes(): array
     {
         return [
@@ -106,7 +117,7 @@ class ExperienceResource extends Resource
     {
         return static::getModel()::count();
     }
-    
+
     protected static function getNavigationBadgeColor(): ?string
     {
         return static::getModel()::count() < 1 ? 'danger' : 'success';

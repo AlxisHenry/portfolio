@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('company');
             $table->string('city');
+            $table->text('description');
             $table->string('image');
             $table->year('started_at');
             $table->year('ended_at')

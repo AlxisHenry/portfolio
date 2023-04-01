@@ -6,12 +6,12 @@
             <i class="fa-solid fa-check"></i>
         @endslot
         @slot('alert')
-            {{ __('labels.copied') }}       
+            {{ __('labels.copied') }}
         @endslot
     @endcomponent
     @include('sections.spoilers.about', [
-        "customCss" => "margin-top: 0;",
-        "animation" => false
+        'customCss' => 'margin-top: 0;',
+        'animation' => false,
     ])
     <section id="__Skills" class="section">
         @component('components.underline-title')
@@ -38,13 +38,19 @@
                 <div class="container tech-skills">
                     <div class="category-skills">
                         @foreach ([...$chunks[0], ...$chunks[1]] as $skill)
-                            @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
+                            @include('components.skills', [
+                                'svg' => $skill,
+                                'timing' => $animateTiming + 120,
+                            ])
                         @endforeach
                         <div class="category-skills-parts">
                             @foreach (array_slice($chunks, 2) as $chunk)
                                 <div class="part" style="display: none;">
                                     @foreach ($chunk as $skill)
-                                        @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
+                                        @include('components.skills', [
+                                            'svg' => $skill,
+                                            'timing' => $animateTiming + 120,
+                                        ])
                                     @endforeach
                                 </div>
                             @endforeach
@@ -56,25 +62,52 @@
                                 <a class="__more__button-action">
                                     <span class="__more__button-text">More</span>
                                 </a>
-                            </div>                        
+                            </div>
                         </div>
                     @endif
                 </div>
                 <div class="container front-skills hidden">
                     <div class="category-skills">
                         @foreach ($skills['front'] as $skill)
-                            @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
+                            @include('components.skills', [
+                                'svg' => $skill,
+                                'timing' => $animateTiming + 120,
+                            ])
                         @endforeach
                     </div>
                 </div>
                 <div class="container back-skills hidden">
                     <div class="category-skills">
                         @foreach ($skills['back'] as $skill)
-                            @include('components.skills', ['svg' => $skill, 'timing' => $animateTiming + 120])
+                            @include('components.skills', [
+                                'svg' => $skill,
+                                'timing' => $animateTiming + 120,
+                            ])
                         @endforeach
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="__Experiences" class="section">
+        @component('components.underline-title')
+            @slot('title')
+                {{ __('Experiences') }}
+            @endslot
+        @endcomponent
+        <div class="timeline">
+            @foreach ($experiences as $key => $experience)
+                <div class="container {{ $key&1 ? "right" : "left" }}">
+                    <div class="content">
+                        <h2>{{ $experience->title }}</h2>
+                        <span>{{ $experience->company }}</span>
+                        <span>{{ $experience->started_at }} - {{ $experience->is_current ? "aujourd'hui" : $experience->ended_at }}</span>
+                        <p>
+                            {!! Str::markdown($experience->description) !!}
+                        </p>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </section>
     <section id="__ContactForm" class="section __contact__form__">
