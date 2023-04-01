@@ -2,22 +2,25 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ExperienceResource\Pages;
-use App\Models\Experience;
+use App\Filament\Resources\HobbyResource\Pages;
+use App\Filament\Resources\HobbyResource\RelationManagers;
+use App\Models\Hobby;
+use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Filament\Forms;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ExperienceResource extends Resource
+class HobbyResource extends Resource
 {
-    protected static ?string $model = Experience::class;
+    protected static ?string $model = Hobby::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
+    protected static ?string $navigationIcon = 'heroicon-o-heart';
 
-    protected static ?string $recordTitleAttribute = 'title';
+    protected static ?string $recordTitleAttribute = 'name';
 
     protected static ?string $navigationGroup = 'Models';
 
@@ -25,51 +28,37 @@ class ExperienceResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('company')
+                Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('image')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('city')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('started_at')
+                Forms\Components\Textarea::make('description')
                     ->required(),
-                Forms\Components\TextInput::make('ended_at'),
-                Forms\Components\Toggle::make('is_current'),
+                Forms\Components\TextInput::make('position'),
             ]);
     }
 
     public static function table(Table $table): Table
     {
-
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('title')
+                Tables\Columns\TextColumn::make('name')
                     ->limit(20)
-                    ->searchable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('company')
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('image')
-                    ->limit(20)
+                    ->limit(12),
+                Tables\Columns\TextColumn::make('description')
+                    ->limit(60)
                     ->sortable(),
-                Tables\Columns\TextColumn::make('started_at')
-                    ->limit(20)
+                Tables\Columns\TextColumn::make('position')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('ended_at')
-                    ->limit(20)
-                    ->sortable(),
-                Tables\Columns\ToggleColumn::make('is_current')
             ])
-            ->defaultSort('created_at', 'desc')
+            ->defaultSort('position', 'asc')
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
@@ -81,27 +70,28 @@ class ExperienceResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListExperiences::route('/'),
-            'create' => Pages\CreateExperience::route('/create'),
-            'edit' => Pages\EditExperience::route('/{record}/edit'),
+            'index' => Pages\ListHobbies::route('/'),
+            'create' => Pages\CreateHobby::route('/create'),
+            'edit' => Pages\EditHobby::route('/{record}/edit'),
         ];
     }
-    
+
     public static function getGloballySearchableAttributes(): array
     {
         return [
-            "title", "company"
+            "name"
         ];
     }
 
     public static function getGlobalSearchResultDetails(Model $record): array
     {
         return [
-            'title' => $record->title,
-            'company' => $record->company,
+            'id' => $record->id,
+            'name' => $record->name,
+            'position' => $record->position,
         ];
     }
-
+    
     protected static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();

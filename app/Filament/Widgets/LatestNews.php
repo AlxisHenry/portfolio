@@ -12,8 +12,6 @@ class LatestNews extends BaseWidget
 {
     protected static ?int $sort = 4;
 
-    protected int|string|array $columnSpan = 'full';
-
     protected function getTableQuery(): Builder
     {
         // @phpstan-ignore-next-line

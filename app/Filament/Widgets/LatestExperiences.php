@@ -2,20 +2,22 @@
 
 namespace App\Filament\Widgets;
 
-use App\Models\Resource;
+use App\Models\Experience;
 use Closure;
 use Filament\Tables;
 use Filament\Widgets\TableWidget as BaseWidget;
 use Illuminate\Database\Eloquent\Builder;
 
-class LatestResources extends BaseWidget
+class LatestExperiences extends BaseWidget
 {
-    protected static ?int $sort = 3;
-    
+    protected static ?int $sort = 6;
+
+    protected int|string|array $columnSpan = 'full';
+
     protected function getTableQuery(): Builder
     {
         // @phpstan-ignore-next-line
-        return Resource::query()->latest()->limit(5);
+        return Experience::query()->orderByDesc("id")->limit(5);
     }
 
     protected function isTablePaginationEnabled(): bool 
@@ -29,15 +31,11 @@ class LatestResources extends BaseWidget
             Tables\Columns\TextColumn::make('id'),
             Tables\Columns\TextColumn::make('title')
                 ->limit(20),
-            Tables\Columns\TextColumn::make('description')
-                ->limit(20),
-            Tables\Columns\TextColumn::make('author')
-                ->limit(20),
-            Tables\Columns\TextColumn::make('link')
-                ->limit(20),
-            Tables\Columns\TextColumn::make('created_at')
+            Tables\Columns\TextColumn::make('company'),
+            Tables\Columns\TextColumn::make('city'),
+            Tables\Columns\TextColumn::make('started_at')
                 ->dateTime(),
-            Tables\Columns\TextColumn::make('updated_at')
+            Tables\Columns\TextColumn::make('ended_at')
                 ->dateTime()
         ];
     }

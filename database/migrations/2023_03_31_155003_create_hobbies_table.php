@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('image');
             $table->longText('description');
-            $table->integer('position');
+            $table->integer('position')->default(0);
             $table->timestamps();
         });
     }

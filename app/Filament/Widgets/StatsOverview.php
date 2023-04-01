@@ -70,7 +70,9 @@ class StatsOverview extends BaseWidget
             'contacts',
             'news',
             'projects',
-            'resources'
+            'resources',
+            'experiences',
+            'hobbies',
         ]);
     }
     
