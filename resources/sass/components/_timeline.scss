@@ -1,0 +1,108 @@
+.timeline {
+  margin-top: 90px;
+  position: relative;
+  max-width: 960px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: var(--details);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+
+.timeline .container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline .container::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: -20px;
+  background-color: #FFF;
+  border: solid 3px var(--details);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline .left {
+  left: 0;
+}
+
+.timeline .right {
+  left: 50%;
+}
+
+.timeline .left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #fff;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.timeline .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #fff;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.timeline .right::after {
+  left: -14.5px;
+}
+
+.timeline .content {
+  padding: 20px 30px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 8px;
+}
+
+.timeline .content * {
+  color: var(--text-color_constrast);
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+  .timeline .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .timeline .container::before {
+    left: 60px;
+    border: medium solid #fff;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff transparent transparent;
+  }
+  .timeline .left::after,
+  .timeline .right::after {
+    left: 16px;
+  }
+  .timeline .right {
+    left: 0%;
+  }
+}

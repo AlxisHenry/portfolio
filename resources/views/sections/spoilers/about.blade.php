@@ -4,7 +4,7 @@
             {{ __('titles.about') }}
         @endslot
     @endcomponent
-    <div class="__about__card__ aos-init" @if($animation ?? true) data-aos="fade-right" @endif>
+    <div class="__about__card__ aos-init" @if ($animation ?? true) data-aos="fade-right" @endif>
         <div class="__about__">
             <div class="_about_descript_">
                 {!! __('paragraphs.about') !!}
@@ -55,6 +55,9 @@
             </div>
         </div>
     </div>
-
-    @include('components.more', ['to' => '/about'])
+    @if ($more)
+        @include('components.more', ['to' => '/about'])
+    @else
+        <div class="__more__button__"></div>
+    @endif
 </section>

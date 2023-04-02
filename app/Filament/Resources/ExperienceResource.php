@@ -2,22 +2,22 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ProjectResource\Pages;
-use App\Models\Project;
-use Filament\Forms;
+use App\Filament\Resources\ExperienceResource\Pages;
+use App\Models\Experience;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Forms;
 use Illuminate\Database\Eloquent\Model;
 
-class ProjectResource extends Resource
+class ExperienceResource extends Resource
 {
-    protected static ?string $model = Project::class;
+    protected static ?string $model = Experience::class;
+
+    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
 
     protected static ?string $recordTitleAttribute = 'title';
-
-    protected static ?string $navigationIcon = 'heroicon-o-code';
 
     protected static ?string $navigationGroup = 'Models';
 
@@ -28,25 +28,29 @@ class ProjectResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('link')
+                Forms\Components\TextInput::make('company')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('github')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('image')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('languages')
+                Forms\Components\TextInput::make('city')
+                    ->required()
                     ->maxLength(255),
-                Forms\Components\DateTimePicker::make('published_at')
+                Forms\Components\TextInput::make('started_at')
                     ->required(),
-                Forms\Components\Textarea::make('description'),
-
+                Forms\Components\TextInput::make('ended_at'),
+                Forms\Components\Card::make([
+                    Forms\Components\MarkdownEditor::make('description')
+                        ->required(),
+                ]),
+                Forms\Components\Toggle::make('is_current'),
             ]);
     }
 
     public static function table(Table $table): Table
     {
+
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')
@@ -55,38 +59,28 @@ class ProjectResource extends Resource
                     ->limit(20)
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('description')
-                    ->limit(20)
+                Tables\Columns\TextColumn::make('company')
+                    ->limit(15)
                     ->searchable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('link')
-                    ->limit(20)
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('github')
-                    ->limit(20)
                     ->sortable(),
                 Tables\Columns\TextColumn::make('image')
+                    ->limit(10)
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('description')
                     ->limit(20)
                     ->sortable(),
-                Tables\Columns\TextColumn::make('languages')
+                Tables\Columns\TextColumn::make('city')
                     ->limit(20)
-                    ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('published_at')
-                    ->sortable()
-                    ->dateTime(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->sortable()
-                    ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->sortable()
-                    ->dateTime()
+                Tables\Columns\TextColumn::make('started_at')
+                    ->limit(20)
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('ended_at')
+                    ->limit(20)
+                    ->sortable(),
+                Tables\Columns\ToggleColumn::make('is_current')
             ])
             ->defaultSort('created_at', 'desc')
-            ->filters([
-                // Filters on some language
-   
-            ])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
@@ -94,50 +88,36 @@ class ProjectResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-    
+
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListProjects::route('/'),
-            'create' => Pages\CreateProject::route('/create'),
-            'edit' => Pages\EditProject::route('/{record}/edit'),
+            'index' => Pages\ListExperiences::route('/'),
+            'create' => Pages\CreateExperience::route('/create'),
+            'edit' => Pages\EditExperience::route('/{record}/edit'),
         ];
     }
 
     public static function getGloballySearchableAttributes(): array
     {
         return [
-            "title", "description", "languages"
+            "title", "company"
         ];
     }
 
     public static function getGlobalSearchResultDetails(Model $record): array
     {
         return [
-            // @phpstan-ignore-next-line
-            "title" => $record->title,
-            // @phpstan-ignore-next-line
-            "description" => substr($record->description, 0, 30) . '...'
+            'title' => $record->title,
+            'company' => $record->company,
         ];
-    }
-    
-    public static function getGlobalSearchResultUrl(Model $record): ?string
-    {
-        return ProjectResource::getUrl('edit', ['record' => $record]);
     }
 
     protected static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
     }
-    
+
     protected static function getNavigationBadgeColor(): ?string
     {
         return static::getModel()::count() < 1 ? 'danger' : 'success';

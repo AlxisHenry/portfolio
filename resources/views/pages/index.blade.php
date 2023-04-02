@@ -14,7 +14,9 @@
 
     @include('components.arrow-container')
 
-    @include('sections.spoilers.about')
+    @include('sections.spoilers.about', [
+        'more' => true,
+    ])
 
     @include('sections.spoilers.projects')
 
