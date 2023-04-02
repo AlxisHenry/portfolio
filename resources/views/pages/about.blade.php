@@ -12,7 +12,7 @@
     @include('sections.spoilers.about', [
         'customCss' => 'margin-top: 0;',
         'animation' => false,
-        'more' => false
+        'more' => false,
     ])
     <section id="__Skills" class="section">
         @component('components.underline-title')
@@ -90,27 +90,29 @@
             </div>
         </div>
     </section>
-    <section id="__Experiences" class="section">
-        @component('components.underline-title')
-            @slot('title')
-                {{ __('Experiences') }}
-            @endslot
-        @endcomponent
-        <div class="timeline">
-            @foreach ($experiences as $key => $experience)
-                <div class="container {{ $key&1 ? "right" : "left" }}">
-                    <div class="content">
-                        <h2>{{ $experience->title }}</h2>
-                        <span>{{ $experience->company }}</span>
-                        <span>{{ $experience->started_at }} - {{ $experience->is_current ? "aujourd'hui" : $experience->ended_at }}</span>
-                        <p>
+    @if (count($experiences ?? []) > 0)
+        <section id="__Experiences" class="section">
+            @component('components.underline-title')
+                @slot('title')
+                    {{ __('Experiences') }}
+                @endslot
+            @endcomponent
+            <div class="timeline">
+                @foreach ($experiences as $key => $experience)
+                    <div class="container {{ $key & 1 ? 'right' : 'left' }}">
+                        <div class="content">
+                            <h2 class="title">{{ $experience->title }}</h2>
+                            <span class="company">{{ $experience->company }}</span>
+                            <div class="period">{{ $experience->started_at }} -
+                                {{ $experience->is_current ? "aujourd'hui" : $experience->ended_at }}</div>
+                            <p></p>
                             {!! Str::markdown($experience->description) !!}
-                        </p>
+                        </div>
                     </div>
-                </div>
-            @endforeach
-        </div>
-    </section>
+                @endforeach
+            </div>
+        </section>
+    @endif
     <section id="__ContactForm" class="section __contact__form__">
         @component('components.underline-title')
             @slot('title')

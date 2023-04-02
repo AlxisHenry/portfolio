@@ -2,6 +2,8 @@
   margin-top: 90px;
   position: relative;
   max-width: 960px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .timeline::after {
@@ -19,6 +21,7 @@
   position: relative;
   background-color: inherit;
   width: 50%;
+  min-width: 280px;
 }
 
 .timeline .container::after {
@@ -26,7 +29,7 @@
   position: absolute;
   width: 35px;
   height: 35px;
-  right: -20px;
+  right: -20.5px;
   background-color: #FFF;
   border: solid 3px var(--details);
   top: 15px;
@@ -72,18 +75,50 @@
   left: -14.5px;
 }
 
-.timeline .content {
+.timeline .container .content {
   padding: 20px 30px;
   background-color: #fff;
   position: relative;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline .container .content .title {
+  font-size: 1.35rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: var(--text-color_constrast);
+}
+
+.timeline .container .content .company {
+  margin-top: -10px;
+  font-size: 1.25rem;
+}
+
+.timeline .container .content .period {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-weight: 600;
+  background-color: var(--details);
+  border-radius: 9999px;
+  color: rgb(255 255 255 / 1);
+  margin-top: 12px;
+  max-width: fit-content;
+  margin-left: -3px;
+}
+
+.timeline .container .content .description {
+font-size: 100px;
 }
 
 .timeline .content * {
   color: var(--text-color_constrast);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .timeline::after {
     left: 31px;
   }
@@ -104,5 +139,11 @@
   }
   .timeline .right {
     left: 0%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #__Experiences > div.__main__section__title__ > h1 {
+    font-size: 3rem;
   }
 }
