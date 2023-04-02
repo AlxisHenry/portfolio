@@ -12,6 +12,7 @@
     @include('sections.spoilers.about', [
         'customCss' => 'margin-top: 0;',
         'animation' => false,
+        'more' => false
     ])
     <section id="__Skills" class="section">
         @component('components.underline-title')

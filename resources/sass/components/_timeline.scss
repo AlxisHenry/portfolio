@@ -1,8 +1,9 @@
 .timeline {
+  margin-top: 90px;
   position: relative;
   max-width: 960px;
-  margin: 0 auto;
 }
+
 .timeline::after {
   content: "";
   position: absolute;
@@ -12,30 +13,35 @@
   bottom: 0;
   left: 50%;
 }
+
 .timeline .container {
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
 }
+
 .timeline .container::after {
   content: "";
   position: absolute;
   width: 35px;
   height: 35px;
-  right: -17px;
+  right: -20px;
   background-color: #FFF;
   border: solid 3px var(--details);
   top: 15px;
   border-radius: 50%;
   z-index: 1;
 }
+
 .timeline .left {
   left: 0;
 }
+
 .timeline .right {
   left: 50%;
 }
+
 .timeline .left::before {
   content: " ";
   height: 0;
@@ -48,6 +54,7 @@
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #fff;
 }
+
 .timeline .right::before {
   content: " ";
   height: 0;
@@ -60,9 +67,11 @@
   border-width: 10px 10px 10px 0;
   border-color: transparent #fff transparent transparent;
 }
+
 .timeline .right::after {
-  left: -12px;
+  left: -14.5px;
 }
+
 .timeline .content {
   padding: 20px 30px;
   background-color: #fff;
@@ -91,7 +100,7 @@
   }
   .timeline .left::after,
   .timeline .right::after {
-    left: 15px;
+    left: 16px;
   }
   .timeline .right {
     left: 0%;
