@@ -3,7 +3,6 @@ import anime from "animejs";
 import { AboutAnimation } from "../components/about";
 import { ProjectInformations } from "../components/project-cards";
 import { debug, elementInViewport } from "../main";
-import { BoardCardsAnimation } from "../components/board-cards";
 import { RemoveLoader } from "../components/loader";
 import { CopyToClipboard } from "../components/copied-to-clipboard";
 import {
