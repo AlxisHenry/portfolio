@@ -22,7 +22,8 @@ return new class extends Migration
             $table->year('ended_at')
                 ->default(null)
                 ->nullable();
-            $table->boolean('is_current')->default(false);
+            $table->boolean('is_current')
+                ->default(false);
             $table->timestamps();
         });
     }

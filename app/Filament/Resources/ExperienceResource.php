@@ -40,11 +40,12 @@ class ExperienceResource extends Resource
                 Forms\Components\TextInput::make('started_at')
                     ->required(),
                 Forms\Components\TextInput::make('ended_at'),
+                Forms\Components\Toggle::make('is_current'),
                 Forms\Components\Card::make([
                     Forms\Components\MarkdownEditor::make('description')
                         ->required(),
                 ]),
-                Forms\Components\Toggle::make('is_current'),
+                Forms\Components\Toggle::make('is_active'),
             ]);
     }
 
@@ -78,7 +79,9 @@ class ExperienceResource extends Resource
                 Tables\Columns\TextColumn::make('ended_at')
                     ->limit(20)
                     ->sortable(),
-                Tables\Columns\ToggleColumn::make('is_current')
+                Tables\Columns\ToggleColumn::make('is_current'),
+                Tables\Columns\ToggleColumn::make('is_active')
+                    ->sortable()
             ])
             ->defaultSort('created_at', 'desc')
             ->actions([

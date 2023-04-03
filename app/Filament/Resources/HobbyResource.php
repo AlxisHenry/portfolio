@@ -34,9 +34,12 @@ class HobbyResource extends Resource
                 Forms\Components\TextInput::make('image')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('description')
-                    ->required(),
                 Forms\Components\TextInput::make('position'),
+                Forms\Components\Card::make([
+                    Forms\Components\MarkdownEditor::make('description')
+                        ->required(),
+                ]),
+                Forms\Components\Toggle::make('is_active'),
             ]);
     }
 
@@ -57,6 +60,8 @@ class HobbyResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('position')
                     ->sortable(),
+                Tables\Columns\ToggleColumn::make('is_active')
+                    ->sortable()
             ])
             ->defaultSort('position', 'asc')
             ->actions([
@@ -91,12 +96,12 @@ class HobbyResource extends Resource
             'position' => $record->position,
         ];
     }
-    
+
     protected static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
     }
-    
+
     protected static function getNavigationBadgeColor(): ?string
     {
         return static::getModel()::count() < 1 ? 'danger' : 'success';

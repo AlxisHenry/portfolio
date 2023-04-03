@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('alt');
             $table->string('topics');
             $table->string('theme');
-            $table->timestamp('published_at');
+            $table->dateTime('published_at');
             $table->timestamps();
         });
     }

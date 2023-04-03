@@ -19,11 +19,12 @@ class Project extends Model
         'image', 
         'languages', 
         'published_at',
+        'is_active'
     ];
 
     public function scopeSpoilers(Builder $query): Collection
     {
-        return $query->latest()->limit(2)->get();
+        return $query->where('is_active', true)->latest()->limit(2)->get();
     }
 
 }

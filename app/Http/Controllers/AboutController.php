@@ -13,8 +13,8 @@ class AboutController extends Controller
     public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $skills = Skills::all();
-        $experiences = Experience::orderBy('started_at', 'asc')->get();
-        $hobbies = Hobby::orderBy('position', 'desc')->get();
+        $experiences = Experience::where('is_active', true)->orderBy('started_at', 'asc')->get();
+        $hobbies = Hobby::where('is_active', true)->orderBy('position', 'desc')->get();
         
         return view('pages.about', [
             'title' => 'About me - HENRY ALEXIS',

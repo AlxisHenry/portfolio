@@ -26,11 +26,17 @@ class NewsController extends Controller
 
     public function show(string $url): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {        
+        $news = News::url($url);
+
+        if (!$news->is_active) {
+            return abort(403);
+        }
+
         return view('pages.article', [
             'title' => 'News - HENRY ALEXIS',
             'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
             'navbar' => 'news',
-            'news' => News::url($url),
+            'news' => $news,
             'unwanted_array' => Regex::characters(),
         ]);
     }

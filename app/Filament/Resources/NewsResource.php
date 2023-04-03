@@ -21,7 +21,7 @@ class NewsResource extends Resource
     protected static ?string $recordTitleAttribute = 'title';
 
     protected static ?string $navigationIcon = 'heroicon-o-rss';
-    
+
     protected static ?string $navigationGroup = 'Models';
 
     public static function form(Form $form): Form
@@ -51,8 +51,11 @@ class NewsResource extends Resource
                     ->maxLength(255),
                 Forms\Components\DatePicker::make('published_at')
                     ->required(),
-                Forms\Components\Textarea::make('introduction')
-                    ->required(),
+                Forms\Components\Card::make([
+                    Forms\Components\MarkdownEditor::make('introduction')
+                        ->required(),
+                ]),
+                Forms\Components\Toggle::make('is_active'),
             ]);
     }
 
@@ -90,6 +93,8 @@ class NewsResource extends Resource
                 Tables\Columns\TextColumn::make('published_at')
                     ->dateTime()
                     ->sortable(),
+                Tables\Columns\ToggleColumn::make('is_active')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable(),
@@ -108,14 +113,14 @@ class NewsResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -123,7 +128,7 @@ class NewsResource extends Resource
             'create' => Pages\CreateNews::route('/create'),
             'edit' => Pages\EditNews::route('/{record}/edit'),
         ];
-    }    
+    }
 
     public static function getGloballySearchableAttributes(): array
     {
@@ -141,7 +146,7 @@ class NewsResource extends Resource
             "title" => substr($record->name, 25) . "..."
         ];
     }
-    
+
     public static function getGlobalSearchResultUrl(Model $record): ?string
     {
         return NewsResource::getUrl('edit', ['record' => $record]);

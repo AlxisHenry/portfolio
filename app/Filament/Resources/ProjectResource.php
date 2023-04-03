@@ -40,8 +40,12 @@ class ProjectResource extends Resource
                     ->maxLength(255),
                 Forms\Components\DateTimePicker::make('published_at')
                     ->required(),
-                Forms\Components\Textarea::make('description'),
-
+                Forms\Components\Card::make([
+                    Forms\Components\MarkdownEditor::make('description')
+                        ->required(),
+                ]),
+                Forms\Components\Toggle::make('is_active')
+                    ->label('Active'),
             ]);
     }
 
@@ -75,6 +79,8 @@ class ProjectResource extends Resource
                 Tables\Columns\TextColumn::make('published_at')
                     ->sortable()
                     ->dateTime(),
+                Tables\Columns\ToggleColumn::make('is_active')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->sortable()
                     ->dateTime(),
@@ -85,7 +91,7 @@ class ProjectResource extends Resource
             ->defaultSort('created_at', 'desc')
             ->filters([
                 // Filters on some language
-   
+
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -94,14 +100,14 @@ class ProjectResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -127,7 +133,7 @@ class ProjectResource extends Resource
             "description" => substr($record->description, 0, 30) . '...'
         ];
     }
-    
+
     public static function getGlobalSearchResultUrl(Model $record): ?string
     {
         return ProjectResource::getUrl('edit', ['record' => $record]);
@@ -137,7 +143,7 @@ class ProjectResource extends Resource
     {
         return static::getModel()::count();
     }
-    
+
     protected static function getNavigationBadgeColor(): ?string
     {
         return static::getModel()::count() < 1 ? 'danger' : 'success';
