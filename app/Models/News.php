@@ -15,18 +15,18 @@ class News extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 
+        'title',
         'author',
-        'introduction', 
-        'url', 
+        'introduction',
+        'url',
         'image',
-        'alt', 
-        'topics', 
-        'theme', 
+        'alt',
+        'topics',
+        'theme',
         'published_at',
         'is_active'
     ];
-    
+
     protected $table = "news";
 
     public function scopeCategories(): array
@@ -49,14 +49,13 @@ class News extends Model
             }
 
             $rss = array_chunk($rss, 4);
-            
+
             $categories = [
                 "Flux RSS 01.net" => [
                     (string) $arr->channel->link,
                     collect($rss[0])
-                ],  
+                ],
             ];
-
         } catch (\Exception $e) {
             $categories = [];
         }
@@ -69,7 +68,7 @@ class News extends Model
             "facebook" => $this->group('Facebook'),
             "technologie" => $this->group('Techno', null, 4, [160, 200]),
             "pegasus" => $this->group('Pegasus'),
-            "internet" => $this->group( 'Internet'),
+            "internet" => $this->group('Internet'),
             "economie" => $this->group('Economi')
         ];
     }
@@ -77,7 +76,7 @@ class News extends Model
     private function group(string $name, ?string $link = null, int $limit = 4, ?array $between = null): array
     {
         $category = $this->call($name, $limit, $between);
-    
+
         if (!$link) {
             $link = "/news/search/" . strtolower($name);
         }
@@ -91,6 +90,7 @@ class News extends Model
     private function call(?string $like = null, int $limit = 4, ?array $between = null): Collection
     {
         $conditions = [
+            ['is_active', true],
             ['theme', '=', 'Technologique']
         ];
 
@@ -104,13 +104,13 @@ class News extends Model
         if (is_array($between)) {
             $news = $news->whereBetween('id', $between);
         }
-        
+
         return $news->limit($limit)->get();
     }
 
     public function scopeSpoilers(Builder $query): Collection
     {
-        return $query->latest()->limit(6)->get();
+        return $query->where('is_active', true)->latest()->limit(6)->get();
     }
 
     public function scopeUrl(Builder $query, string $news): ?object
@@ -120,12 +120,14 @@ class News extends Model
 
     public function scopeKeyword(Builder $query, string $keyword): Collection
     {
-        return $query->where('theme', '=', 'Technologique')
-                     ->where('title', 'like', '%'.$keyword.'%')
-                     ->orWhere('topics', 'like', '%' . $keyword . '%')
-                     ->orderBy("published_at", "DESC")
-                     ->get();
+        return $query
+            ->where('title', 'like', '%' . $keyword . '%')
+            ->orWhere('topics', 'like', '%' . $keyword . '%')
+            ->where([
+                ['is_active', true],
+                ['theme', '=', 'Technologique']
+            ])
+            ->orderBy("published_at", "DESC")
+            ->get();
     }
-
-
 }

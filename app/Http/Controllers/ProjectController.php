@@ -14,7 +14,7 @@ class ProjectController extends Controller
             'title' => 'Projects - HENRY ALEXIS',
             'navbar' => 'projects',
             'og_description' => 'Portfolio HENRY ALEXIS - Projects',
-            'projects' => Project::latest()->get()
+            'projects' => Project::where('is_active', true)->latest()->get()
         ]);
     }
 

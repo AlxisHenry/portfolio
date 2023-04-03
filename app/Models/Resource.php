@@ -22,7 +22,7 @@ class Resource extends Model
        
     public function scopeSpoilers(Builder $query): Collection
     {
-        return $query->latest()->limit(2)->get();
+        return $query->where('is_active', true)->latest()->limit(2)->get();
     }
 
 }
