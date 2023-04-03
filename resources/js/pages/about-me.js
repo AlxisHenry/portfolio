@@ -5,7 +5,6 @@ import {
 import { AboutAnimation } from "../components/about";
 import { CopyToClipboard } from "../components/copied-to-clipboard";
 import { ScrollToContact } from "../components/to-contact";
-import ParallaxElement from "../components/ParallaxElement";
 
 const moreSkills = () => {
   let parts = document.querySelectorAll(".category-skills-parts .part");
