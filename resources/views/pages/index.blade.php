@@ -16,6 +16,7 @@
 
     @include('sections.spoilers.about', [
         'more' => true,
+        'scroll' => false
     ])
 
     @include('sections.spoilers.projects')

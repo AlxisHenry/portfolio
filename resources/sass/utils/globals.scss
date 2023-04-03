@@ -72,6 +72,25 @@
   }
 }
 
-.h1-spe, .h1-language {
-  color: var(--text-color)!important;
+.h1-spe,
+.h1-language {
+  color: var(--text-color) !important;
+}
+
+.parallax-wrapper {
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+}
+
+.parallax-container {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+  position: relative;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  transition: transform 0.6s 1s;
+  &.active {
+    transition: none;
+  }
 }

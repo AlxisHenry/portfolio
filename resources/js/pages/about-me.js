@@ -5,6 +5,7 @@ import {
 import { AboutAnimation } from "../components/about";
 import { CopyToClipboard } from "../components/copied-to-clipboard";
 import { ScrollToContact } from "../components/to-contact";
+import ParallaxElement from "../components/ParallaxElement";
 
 const moreSkills = () => {
   let parts = document.querySelectorAll(".category-skills-parts .part");
@@ -53,6 +54,15 @@ const MergeFooter = () => {
   }
 };
 
+const SetParallaxTiltEffect = () => {
+  document.querySelectorAll(".skill-wrapper").forEach((element) => {
+    new ParallaxElement({
+      element: element,
+      tiltEffect: ["normal", "reverse"][Math.floor(Math.random() * 2)],
+    })
+  });
+}
+
 window.addEventListener("load", (e) => {
   ScrollToContact(document.querySelector("#__ContactForm").offsetTop);
   CopyToClipboard();
@@ -62,4 +72,5 @@ window.addEventListener("load", (e) => {
   Skills();
   MergeFooter();
   moreSkills();
+  SetParallaxTiltEffect();
 });

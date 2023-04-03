@@ -13,6 +13,7 @@
         'customCss' => 'margin-top: 0;',
         'animation' => false,
         'more' => false,
+        'scroll' => true
     ])
     <section id="__Skills" class="section">
         @component('components.underline-title')
@@ -99,7 +100,7 @@
             @endcomponent
             <div class="timeline">
                 @foreach ($experiences as $key => $experience)
-                    <div class="container {{ $key & 1 ? 'right' : 'left' }}">
+                    <div class="container {{ $key & 1 ? 'right' : 'left' }}" data-aos="fade-up">
                         <div class="content">
                             <h2 class="title">{{ $experience->title }}</h2>
                             <span class="company">{{ $experience->company }}</span>

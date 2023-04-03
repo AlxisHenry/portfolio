@@ -5,6 +5,7 @@ import { BackToTopArrow } from "./components/back-to-top-arrow";
 import { LoadingPosition } from "./components/loading-position";
 import { themeSwitcher } from "./components/theme";
 import { debug } from "./main";
+import { setParallaxEffect } from "./components/ParallaxElement";
 
 window.addEventListener("load", (e) => {
   let BackToTopState = true; // Init State of back to top arrow for call the function at the loading of the page
@@ -17,6 +18,7 @@ window.addEventListener("load", (e) => {
   Menu.HoverNavbarMenu();
   Menu.NavbarAnimation();
   BackToTopArrow(BackToTopState);
+  setParallaxEffect();
 });
 
 window.addEventListener("scroll", (e) => {
