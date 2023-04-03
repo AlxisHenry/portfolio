@@ -24,6 +24,7 @@ class News extends Model
         'topics', 
         'theme', 
         'published_at',
+        'is_active'
     ];
     
     protected $table = "news";

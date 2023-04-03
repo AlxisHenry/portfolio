@@ -17,6 +17,7 @@ class Resource extends Model
         'description', 
         'author',
         'link',
+        'is_active'
     ];
        
     public function scopeSpoilers(Builder $query): Collection

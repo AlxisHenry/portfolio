@@ -19,6 +19,7 @@ class Project extends Model
         'image', 
         'languages', 
         'published_at',
+        'is_active'
     ];
 
     public function scopeSpoilers(Builder $query): Collection

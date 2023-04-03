@@ -17,6 +17,7 @@ class Hobby extends Model
         'image', 
         'description',
         'position',
+        'is_active'
     ];
 
 }

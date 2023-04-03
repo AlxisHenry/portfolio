@@ -28,19 +28,20 @@ class ResourceResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('title')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('author')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('link')
+                    ->required()
+                    ->maxLength(255),
                 Forms\Components\Card::make([
-                    Forms\Components\TextInput::make('title')
-                        ->required()
-                        ->maxLength(255),
-                    Forms\Components\Textarea::make('description')
+                    Forms\Components\MarkdownEditor::make('description')
                         ->required(),
-                    Forms\Components\TextInput::make('author')
-                        ->required()
-                        ->maxLength(255),
-                    Forms\Components\TextInput::make('link')
-                        ->required()
-                        ->maxLength(255),
-                ])
+                ]),
+                Forms\Components\Toggle::make('is_active'),
             ]);
     }
 
@@ -64,6 +65,8 @@ class ResourceResource extends Resource
                 Tables\Columns\TextColumn::make('link')
                     ->limit(20)
                     ->sortable(),
+                Tables\Columns\ToggleColumn::make('is_active')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->sortable()
                     ->dateTime(),
@@ -82,14 +85,14 @@ class ResourceResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -98,7 +101,7 @@ class ResourceResource extends Resource
             'edit' => Pages\EditResource::route('/{record}/edit'),
         ];
     }
-    
+
     public static function getGloballySearchableAttributes(): array
     {
         return [
@@ -115,17 +118,17 @@ class ResourceResource extends Resource
             "description" => substr($record->description, 0, 30) . '...'
         ];
     }
-    
+
     public static function getGlobalSearchResultUrl(Model $record): string
     {
         return ResourceResource::getUrl('edit', ['record' => $record]);
     }
-    
+
     protected static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
     }
-    
+
     protected static function getNavigationBadgeColor(): ?string
     {
         return static::getModel()::count() < 1 ? 'danger' : 'success';
