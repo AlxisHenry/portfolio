@@ -34,6 +34,7 @@ class News extends Model
         try {
 
             $content = file_get_contents(self::RSS_URL);
+            // @phpstan-ignore-next-line
             $arr = simplexml_load_string($content);
             $rss = [];
 
