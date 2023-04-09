@@ -11,3 +11,6 @@ parameters:
 		- app/Http/Kernel.php
 		- app/Http/Controllers/*
 		- app/Http/Middleware/*
+		- app/Filament/*
+		- app/Http/Resources/*
+		- app/Models/*
