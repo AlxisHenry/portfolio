@@ -25,7 +25,7 @@
     <meta property="og:video" content="{{ url('assets/cafe.gif') }}">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="fr_FR">
-    <meta name="description" content="Hey, moi c'est Alexis, développeur junior depuis 2022, situé à Strasbourg, France  Je suis actuellement en deuxième année de BTS au CCI Campus de Strasbourg. Grâce à mes deux années d'alternance, j'ai acquis de solides compétences. Après mon diplôme, je vais continuer mes études par un Master dans l'école Epitech Technology" />
+    <meta name="description" content="Hey, moi c'est Alexis, développeur junior depuis 2022, situé à Strasbourg, en France. Après mon diplôme, je vais continuer mes études par un Master dans d'Epitech Technology" />
     <title>{{ $title ?? 'Portfolio - Henry Alexis' }}</title>
     @vite('resources/sass/app.scss')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
