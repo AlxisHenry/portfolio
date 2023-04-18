@@ -10,7 +10,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Portfolio Henry Alexis BTS SIO Web Developer" />
     <meta name="keywords"
         content="powershell, bash, linux, sysadmin, devops, symfony, freelance, github,geek, windows,veille technologique, veille juridique, technologie, juridique, scrapping, laravel 8, grafikart, mangaflix, learn dev, portfolio, web, developer, laravel, php, python, html, css, webdeveloper, bts, sio, services, informatique, organisations, strasbourg, france, modern, fiver, profesional, henry, alexis, network, system, reseau, systeme, portfolio bts, bts-sio portfolio, cci campus bts sio, cci campus strasbourg, cci campus, full stack, front end, back end, javascript, Alexis Henry, Alexis, Henry" />
     <meta name="googlebot" content="index,follow,nosnippet" />
@@ -25,7 +24,7 @@
     <meta property="og:video" content="{{ url('assets/cafe.gif') }}">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="fr_FR">
-    <meta name="description" content="Hey, moi c'est Alexis, développeur junior depuis 2022, situé à Strasbourg, en France. Après mon diplôme, je vais continuer mes études par un Master dans d'Epitech Technology" />
+    <meta name="description" content="Hey, moi c'est Alexis, développeur junior depuis 2022, situé à Strasbourg, en France." />
     <title>{{ $title ?? 'Portfolio - Henry Alexis' }}</title>
     @vite('resources/sass/app.scss')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
