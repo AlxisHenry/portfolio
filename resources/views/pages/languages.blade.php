@@ -7,7 +7,9 @@
             <h1 class="h1-language ml-36 mr-36"> All languages </h1>
             <div class="contain-all-lang">
                 @foreach ($languages as $language => $name)
-                    <a href="/languages/{{ $language }}"> {{ $name }} </a>
+                    <a href="{{ route('languages.show', [
+                        'name' => strtolower($language),
+                    ]) }}"> {{ $name }} </a>
                 @endforeach
             </div>
         @else
@@ -21,8 +23,10 @@
                         </p>
                     </div>
                     <div class="list_all">
-                        <a href="/languages/{{ $random }}">Show me a random language !</a>
-                        <a href="/languages">Show me all languages !</a>
+                        <a href="{{ route('languages.show', [
+                            'name' => $random,
+                        ]) }}">Show me a random language !</a>
+                        <a href="{{ route('languages.index') }}">Show me all languages !</a>
                     </div>
                 </div>
             @endforeach

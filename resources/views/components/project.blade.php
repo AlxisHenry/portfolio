@@ -19,7 +19,9 @@
                 @endif
                 <div class="_language_use_">
                     @foreach (explode(',', $project->languages) as $language)
-                        <a href="/language/{{ strtolower($language) }}" class="main-link">
+                        <a href="{{ route('languages.show', [
+                            'name' => strtolower($language),
+                        ]) }}" class="main-link">
                             <span class="_project_language">
                                 {{ ucfirst($language) }}
                             </span>
