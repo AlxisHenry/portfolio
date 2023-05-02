@@ -1,6 +1,31 @@
 .__legals__ {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    
+    .legals-h1 {
+        margin: 1rem 0;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--title-color);
+    }
+
+    .legals-h2 {
+        margin: 1rem 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--title-color);
+    }
+
+    .legals-h3 {
+        margin: 1rem 0;
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--title-color);
+    }
+
     .__legals__content__ {
         margin: 0 1rem;
         max-width: 800px;

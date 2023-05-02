@@ -1,3 +1,3 @@
-@include('layouts.header', ['title' => 'Error 500 - HENRY Alexis'])
+@include('layouts.header', ['title' => '500'])
 
 @include('layouts.loader', ['status' => false])

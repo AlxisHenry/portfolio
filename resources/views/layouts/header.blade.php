@@ -16,14 +16,14 @@
     <meta name="robots" content="index,follow" />
     <meta name="copyright" content="© {{ date('Y') }} Alexis Henry. All Rights Reserved." />
     <meta property="og:type" content="portfolio" />
-    <meta property="og:title" content="{{ $title }} - HENRY Alexis" />
+    <meta property="og:title" content="{{ $title ?? $exception->getStatusCode() }}" />
     <meta property="og:image" content="{{ url('assets/icons/favicon-16x16.ico') }}" />
     <meta property="og:url" content="{{ Request::url() }}" />
     <meta property="og:site_name" content="alexishenry.eu">
     <meta property="og:locale" content="en_EN">
     <meta property="og:locale:alternate" content="fr_FR">
     <meta name="description" content="Je suis un développeur web junior situé à Strasbourg, spécialisée dans le développement d'applications web et mobiles. Je réalise un Master au sein d'Epitech." />
-    <title>{{ $title }}&nbsp;- HENRY Alexis</title>
+    <title>{{ $title ?? $exception->getStatusCode() }}&nbsp;- HENRY Alexis</title>
     @vite('resources/sass/app.scss')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="mask-icon" href="{{ url('assets/icons/safari-pinned-tab.svg') }}" color="#5bbad5">
