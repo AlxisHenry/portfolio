@@ -17,9 +17,8 @@ class AboutController extends Controller
         $hobbies = Hobby::where('is_active', true)->orderBy('position', 'desc')->get();
         
         return view('pages.about', [
-            'title' => 'About me - HENRY ALEXIS',
+            'title' => 'About me',
             'navbar' => 'about',
-            'og_description' => 'Portfolio - HENRY ALEXIS - About me',
             'skills' => $skills,
             'experiences' => $experiences,
             'hobbies' => $hobbies,

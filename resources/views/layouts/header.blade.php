@@ -22,7 +22,7 @@
     <meta property="og:site_name" content="alexishenry.eu">
     <meta property="og:locale" content="en_EN">
     <meta property="og:locale:alternate" content="fr_FR">
-    <meta name="description" content="Je suis un développeur web junior sur Strasbourg , spécialisée dans le développement d'applications web et mobiles." />
+    <meta name="description" content="Je suis un développeur web junior situé à Strasbourg, spécialisée dans le développement d'applications web et mobiles. Je réalise un Master au sein d'Epitech." />
     <title>{{ $title }}&nbsp;- HENRY Alexis</title>
     @vite('resources/sass/app.scss')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
