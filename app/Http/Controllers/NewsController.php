@@ -16,10 +16,9 @@ class NewsController extends Controller
     public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         return view('pages.news', [
-            'title' => 'News - Henry Alexis',
+            'title' => 'News',
             'show' => false,
             'navbar' => 'news',
-            'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
             'categories' => News::categories(),
         ]);
     }
@@ -33,8 +32,7 @@ class NewsController extends Controller
         }
 
         return view('pages.article', [
-            'title' => 'News - HENRY ALEXIS',
-            'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
+            'title' => 'News',
             'navbar' => 'news',
             'news' => $news,
             'unwanted_array' => Regex::characters(),
@@ -47,12 +45,11 @@ class NewsController extends Controller
         $no_items = false;
         if(count($newsRelatedToThisKeyword) === 0) $no_items = true;
         return view('pages.news', [
-            'title' => Translate::google()->translate($key) . ' - Henry Alexis',
+            'title' => $key,
             'show' => true,
             'search' => $key,
             'items' => $no_items,
             'navbar' => 'news',
-            'og_description' => 'Portfolio Henry Alexis - News Articles France Inter / CNIL',
             'related_news' => $newsRelatedToThisKeyword,
         ]);
     }

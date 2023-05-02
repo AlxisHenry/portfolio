@@ -11,9 +11,8 @@ class ProjectController extends Controller
     public function index()
     {
         return view('pages.projects', [
-            'title' => 'Projects - HENRY ALEXIS',
+            'title' => 'Projects',
             'navbar' => 'projects',
-            'og_description' => 'Portfolio HENRY ALEXIS - Projects',
             'projects' => Project::where('is_active', true)->latest()->get()
         ]);
     }

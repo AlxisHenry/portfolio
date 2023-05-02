@@ -10,7 +10,7 @@ class LanguageController extends Controller
     public function index()
     {
         return view('pages.languages', [
-            'title' => 'Languages - HENRY ALEXIS',
+            'title' => 'Languages',
             'navbar' => 'null',
             'show' => true,
             'languages' => Language::all(),
@@ -23,7 +23,7 @@ class LanguageController extends Controller
         $lg = Language::match($language);
         if($lg) {
             return view('pages.languages', [
-                'title' => ucfirst($language) . ' - HENRY ALEXIS',
+                'title' => ucfirst($language),
                 'navbar' => 'null',
                 'url' => 'https://en.wikipedia.org/wiki/' . $lg,
                 'language' => Wikipedia::query($lg),

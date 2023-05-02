@@ -11,21 +11,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="keywords"
-        content="powershell, bash, linux, sysadmin, devops, symfony, freelance, github,geek, windows,veille technologique, veille juridique, technologie, juridique, scrapping, laravel 8, grafikart, mangaflix, learn dev, portfolio, web, developer, laravel, php, python, html, css, webdeveloper, bts, sio, services, informatique, organisations, strasbourg, france, modern, fiver, profesional, henry, alexis, network, system, reseau, systeme, portfolio bts, bts-sio portfolio, cci campus bts sio, cci campus strasbourg, cci campus, full stack, front end, back end, javascript, Alexis Henry, Alexis, Henry" />
+        content="powershell,bash,linux,sysadmin,devops,symfony,freelance,github,geek,windows,veille technologique,veille juridique,technologie,juridique,scrapping,laravel 8,grafikart,mangaflix,learn dev,portfolio,web,developer,laravel,php,python,html,css,webdeveloper,bts,sio,services,informatique,organisations,strasbourg,france,modern,fiver,profesional,henry,alexis,network,system,reseau,systeme,portfolio bts,bts-sio portfolio,cci campus bts sio,cci campus strasbourg,cci campus,full stack,front end,back end,javascript,Alexis Henry,Alexis,Henry" />
     <meta name="googlebot" content="index,follow,nosnippet" />
-    <meta name="robots" content="index, follow" />
-    <meta name="copyright" content="© {{ date('Y') }} Alexis Henry. All Rights Reserved" />
+    <meta name="robots" content="index,follow" />
+    <meta name="copyright" content="© {{ date('Y') }} Alexis Henry. All Rights Reserved." />
     <meta property="og:type" content="portfolio" />
-    <meta property="og:title" content="{{ $title ?? 'Portfolio - Henry Alexis' }}" />
+    <meta property="og:title" content="{{ $title }} - HENRY Alexis" />
     <meta property="og:image" content="{{ url('assets/icons/favicon-16x16.ico') }}" />
     <meta property="og:url" content="{{ Request::url() }}" />
     <meta property="og:site_name" content="alexishenry.eu">
-    <meta property="og:description" content="{{ $og_description ?? 'Portfolio Projects/Board/Home - Henry Alexis' }}" />
-    <meta property="og:video" content="{{ url('assets/cafe.gif') }}">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:locale" content="en_EN">
     <meta property="og:locale:alternate" content="fr_FR">
-    <meta name="description" content="Hey, moi c'est Alexis, développeur junior depuis 2022, situé à Strasbourg, en France." />
-    <title>{{ $title ?? 'Portfolio - Henry Alexis' }}</title>
+    <meta name="description" content="Je suis un développeur web junior sur Strasbourg , spécialisée dans le développement d'applications web et mobiles." />
+    <title>{{ $title }}&nbsp;- HENRY Alexis</title>
     @vite('resources/sass/app.scss')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="mask-icon" href="{{ url('assets/icons/safari-pinned-tab.svg') }}" color="#5bbad5">

@@ -10,9 +10,8 @@ class ResourceController extends Controller
     public function index()
     {
         return view('pages.resources', [
-            'title' => 'Resources - HENRY ALEXIS',
+            'title' => 'Resources',
             'navbar' => 'resources',
-            'og_description' => 'Portfolio - HENRY ALEXIS - Resources',
             'resources' => Resource::where('is_active', true)->latest()->get() 
         ]);
     }

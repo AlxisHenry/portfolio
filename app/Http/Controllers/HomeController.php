@@ -15,10 +15,9 @@ class HomeController extends Controller
     public function index()
     {
         return view('pages.index', [
-            'title' => 'Portfolio - HENRY ALEXIS',
+            'title' => 'Portfolio',
             'navbar' => 'home',
             'languages' => Language::links(),
-            'og_description' => 'Portfolio - HENRY ALEXIS - Homepage',
             'news' => News::spoilers(),
             'resources' => Resource::spoilers(),
             'projects' => Project::spoilers(),

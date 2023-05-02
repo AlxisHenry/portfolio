@@ -18,9 +18,8 @@ class ContactController extends Controller
     public function index(): \Illuminate\View\View
     {
         return view('pages.contact', [
-            'title' => 'Contact - HENRY ALEXIS',
+            'title' => 'Contact',
             'navbar' => '',
-            'og_description' => 'Portfolio - HENRY ALEXIS - Contact',
             'secret' => Rand::int(1, 10)
         ]);
     }
