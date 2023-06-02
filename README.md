@@ -1,18 +1,11 @@
 <a name="readme-top"></a>
 
 <div align="center">
-
-  <img src="public/assets/icons/apple-touch-icon-180x180.png" alt="logo" width="220" height="auto" />
   <h1>alexishenry.eu</h1>
-  
   <p>
     My portfolio made with :heart:
   </p>
-
 <a href="https://alxishenry.github.io/docs"><strong>Documentation »</strong></a>
-
-
-
 <h4>
     <a href="https://alexishenry.eu">Go to the site</a>
   <span> · </span>
